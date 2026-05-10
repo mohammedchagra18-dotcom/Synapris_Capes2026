@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Synapris — CAPES SVT 2009</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="katexLoaded=true; if(pendingRender){pendingRender();}"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#0f1f3d;--primary-mid:#1a3c6e;--accent:#f0a500;--accent-dark:#d4900a;--green:#2e7d32;--green-light:#e8f5e9;--red:#c62828;--red-light:#ffebee;--orange:#ef6c00;--white:#ffffff;--gray-light:#f5f7fa;--gray:#90a4ae;--sky-deep:#3b82f6;--sky-card:#eff6ff;--sky-border:#93c5fd;--shadow:0 4px 20px rgba(15,31,61,0.10);--shadow-sm:0 2px 8px rgba(15,31,61,0.08);--radius:12px;--font-ar:'Amiri',serif;--font-heading:'Inter',sans-serif;--font-fr:'Source Sans 3',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{font-family:var(--font-fr);font-size:16px;line-height:1.6;background:linear-gradient(140deg,#e8f0f8 0%,#f0f4f8 45%,#fdf8f0 100%);color:#1a1a2e;display:flex;flex-direction:column}
+    .site-header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-mid) 100%);color:var(--white);padding:10px 16px;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.30)}
+    .header-grid{display:grid;grid-template-columns:110px 1fr 240px;gap:10px;align-items:center}
+    .header-col1{display:flex;flex-direction:column;align-items:center;gap:4px}
+    .logo-square{width:90px;height:90px;border-radius:16px;background:#ffffff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:36px;font-weight:800;color:var(--primary);border:3px solid var(--white);box-shadow:0 0 0 4px rgba(255,255,255,0.20);overflow:hidden}
+    .logo-square img{width:100%;height:100%;object-fit:cover}
+    .header-col1 .verset{font-family:var(--font-ar);font-size:13px;font-weight:700;color:rgba(255,255,255,0.95);text-align:center;font-style:italic;line-height:1.3}
+    .header-col2{background:var(--accent);border-radius:10px;padding:10px 12px;text-align:center}
+    .header-col2 .concours-ar{font-family:var(--font-ar);font-size:18px;font-weight:800;color:#0f1f3d;line-height:1.4;margin-bottom:4px}
+    .header-col2 .specialite{font-family:var(--font-ar);font-size:14px;color:#0f1f3d;font-weight:700}
+    .header-col3{text-align:center}
+    .header-col3 .accroche{font-family:var(--font-heading);font-size:12px;font-weight:600;color:var(--accent);margin-bottom:2px}
+    .header-col3 .marque{font-size:15px;font-weight:800;color:var(--white);letter-spacing:1px}
+    .header-col3 .marque span{color:var(--accent)}
+    .header-col3 .session{font-size:9px;color:rgba(255,255,255,0.70);margin-bottom:6px}
+    .header-col3 .titre-epreuve{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.30)}
+    .methode-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:6px 14px;display:flex;align-items:center;justify-content:center;gap:14px;font-size:12px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
+    .methode-bar .step{display:flex;align-items:center;gap:4px}.methode-bar .step-icon{font-size:15px}
+    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:4px 14px;display:flex;align-items:center;gap:10px;font-size:10px;color:var(--gray);flex-shrink:0;flex-wrap:wrap}
+    .mini-bar .mb-progress{flex:1;min-width:60px;display:flex;align-items:center;gap:6px}
+    .mb-progress-bar{flex:1;height:4px;background:#e0e5ec;border-radius:3px;overflow:hidden}
+    .mb-progress-fill{height:100%;background:linear-gradient(90deg,var(--sky-deep),var(--accent));border-radius:3px;transition:width .4s ease}
+    .mb-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:10px;font-weight:600;font-size:9px;white-space:nowrap}
+    .mb-badge.mode-badge{background:#e8f0fb;color:var(--sky-deep)}.mb-badge.client-badge{background:#fff3e0;color:var(--accent-dark)}
+    .main-scroll{flex:1;overflow-y:auto;padding:10px 0 6px}
+    .main-content{max-width:1060px;margin:0 auto;padding:0 14px 16px}
+    .page{display:none}.page.active{display:block;animation:fadeIn .3s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 22px;margin-bottom:14px;border-left:5px solid var(--primary)}
+    .card.sky{border-left-color:var(--sky-deep);background:#fafcff}
+    .card-title{font-size:17px;font-weight:700;color:var(--primary);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+    .btn{font-family:var(--font-fr);font-size:13px;font-weight:600;padding:8px 16px;border:none;border-radius:8px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:5px}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover:not(:disabled){background:var(--primary-mid)}
+    .btn-sky{background:var(--sky-deep);color:var(--white)}.btn-sky:hover:not(:disabled){background:#2563eb}
+    .btn-green{background:var(--green);color:var(--white)}.btn-green:hover:not(:disabled){background:#388e3c}
+    .btn-gold{background:var(--accent);color:var(--primary);font-weight:700}.btn-gold:hover:not(:disabled){background:var(--accent-dark)}
+    .btn-gray{background:#6c757d;color:var(--white)}.btn-gray:hover:not(:disabled){background:#5a6268}
+    .btn-outline-white{border:2px solid var(--white);color:var(--white);background:transparent;font-size:11px;padding:6px 12px}.btn-outline-white:hover{background:rgba(255,255,255,0.10)}
+    .btn-whatsapp{background:#25d366;color:var(--white)}.btn-whatsapp:hover{background:#1ebe57}
+    .btn-block{display:flex;width:100%;margin-top:10px;font-size:14px;padding:10px}
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:0 0 12px}
+    .mode-card{background:#f8faff;border:2px solid var(--sky-border);border-radius:var(--radius);padding:16px 10px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+    .mode-card.locked{opacity:.5;cursor:not-allowed;filter:grayscale(30%)}
+    .mode-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--sky-deep);transform:scaleX(0);transform-origin:center;transition:transform .2s}
+    .mode-card:hover::after,.mode-card.selected::after{transform:scaleX(1)}
+    .mode-card:not(.locked):hover,.mode-card:not(.locked).selected{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--sky-deep)}
+    .mode-card.exam-card::after{background:var(--red)}.mode-card.exam-card:not(.locked):hover,.mode-card.exam-card:not(.locked).selected{border-color:var(--red);background:#fff5f5}
+    .mode-icon{font-size:30px;display:block;margin-bottom:4px}.mode-name{font-size:14px;font-weight:700;color:var(--primary)}
+    .mode-desc{font-size:10px;color:var(--gray);margin-top:2px;line-height:1.4}
+    .question-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+    .q-left{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;border:1.5px solid var(--sky-border)}
+    .q-right{min-height:120px}
+    .question-statement{font-size:14px;color:#1a1a2e;line-height:1.7;margin-bottom:10px;padding:10px 14px;background:#f8faff;border-radius:10px;border-left:4px solid var(--accent);user-select:text}
+    .choices-grid{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+    .choice-btn{font-family:var(--font-fr);font-size:13px;padding:9px 12px;border:2px solid var(--sky-border);border-radius:10px;background:var(--white);color:#1a1a2e;cursor:pointer;transition:all .15s;text-align:left;display:flex;align-items:flex-start;gap:8px;width:100%}
+    .choice-btn:hover:not(:disabled){background:#f0f6ff;border-color:var(--sky-deep)}
+    .choice-btn.selected{background:#e8f0ff;border-color:var(--sky-deep);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
+    .choice-btn.correct{background:var(--green-light);border-color:var(--green);color:var(--green);font-weight:600}
+    .choice-btn.wrong{background:var(--red-light);border-color:var(--red);color:var(--red)}
+    .choice-btn:disabled{cursor:default}
+    .choice-letter{width:24px;height:24px;border-radius:50%;background:var(--primary);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;flex-shrink:0;margin-top:1px}
+    .choice-btn.correct .choice-letter{background:var(--green)}.choice-btn.wrong .choice-letter{background:var(--red)}.choice-btn.selected .choice-letter{background:var(--sky-deep)}
+    .choice-text{flex:1}
+    .validate-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .nav-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}
+    .feedback-placeholder{background:#f8faff;border:2px dashed var(--sky-border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:120px;padding:18px 12px;text-align:center;color:var(--gray)}
+    .feedback-placeholder .ph-icon{font-size:30px;margin-bottom:6px}.feedback-placeholder .ph-text{font-size:12px}
+    .feedback-box{display:none;animation:fadeIn .3s ease}.feedback-box.visible{display:block}
+    .feedback-header{display:flex;align-items:center;gap:8px;padding:8px 14px;font-size:14px;font-weight:700;border-radius:10px 10px 0 0;border:2px solid transparent;border-bottom:none}
+    .feedback-box.correct .feedback-header{background:var(--green-light);color:var(--green);border-color:var(--green)}
+    .feedback-box.wrong .feedback-header{background:var(--red-light);color:var(--red);border-color:var(--red)}
+    .feedback-body{padding:12px 16px;background:#fafcff;border:2px solid #dbeafe;border-top:none;border-radius:0 0 10px 10px;font-size:12px;line-height:1.6;user-select:text}
+    .feedback-box.correct .feedback-body{border-color:var(--green)}.feedback-box.wrong .feedback-body{border-color:var(--red)}
+    .feedback-label{font-weight:700;color:var(--primary);font-size:9px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;margin-top:8px}.feedback-label:first-child{margin-top:0}
+    .feedback-text{color:#333;font-size:12px;margin-bottom:4px}
+    .correction-block{background:#f0f6ff;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.7;border-left:3px solid var(--sky-deep);margin-bottom:6px;user-select:text}
+    .astuce-box{background:#fffdf5;border-radius:8px;padding:8px 10px;border-left:3px solid var(--accent);font-size:12px;user-select:text;margin-bottom:6px}
+    .astuce-box .astuce-title{font-weight:700;color:var(--orange);font-size:9px;text-transform:uppercase;margin-bottom:2px}
+    .revision-layout{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:start}
+    .revision-sidebar{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden;border:1px solid #e0e5ec}
+    .revision-sidebar .rev-tab{display:block;width:100%;text-align:left;padding:10px 12px;border:none;background:transparent;cursor:pointer;font-family:var(--font-fr);font-size:12px;font-weight:600;color:var(--primary);border-bottom:1px solid #e0e8f0;transition:all .15s}
+    .revision-sidebar .rev-tab:hover{background:#f0f6ff}
+    .revision-sidebar .rev-tab.active{background:var(--sky-card);border-left:4px solid var(--sky-deep);color:var(--sky-deep)}
+    .revision-content{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 20px;border:1px solid #e0e5ec;min-height:340px}
+    .rev-title{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+    .rev-block{background:#f8faff;border-radius:10px;padding:12px 16px;margin-bottom:12px;border-left:3px solid var(--sky-deep)}
+    .rev-block h4{font-size:14px;color:var(--primary);margin-bottom:6px}
+    .rev-block ul{list-style:none;padding-left:0}.rev-block ul li{font-size:12px;color:#333;padding:2px 0;line-height:1.5}.rev-block ul li::before{content:"▸ ";color:var(--sky-deep)}
+    .rev-block.def-block{border-left-color:var(--green);background:#f8faf8}
+    .rev-block.piege-block{border-left-color:var(--red);background:#fffafa}
+    .programme-accordeon .accordeon-niveau{border:1px solid #e0e8f0;border-radius:10px;margin-bottom:10px;overflow:hidden}
+    .accordeon-niveau .niveau-header{display:flex;align-items:center;gap:8px;padding:12px 14px;cursor:pointer;font-weight:700;font-size:14px;color:var(--primary);background:linear-gradient(135deg,var(--accent),#f5c542);border:none;width:100%;text-align:left;font-family:var(--font-fr);transition:background .15s}
+    .accordeon-niveau .niveau-header:hover{background:var(--accent-dark);color:var(--primary)}
+    .accordeon-niveau .niveau-header::after{content:"▾";margin-left:auto;transition:transform .2s}
+    .accordeon-niveau.open .niveau-header{background:var(--accent);color:var(--primary)}
+    .accordeon-niveau.open .niveau-header::after{transform:rotate(180deg)}
+    .accordeon-niveau .niveau-body{display:none;padding:8px 14px 14px;background:#fafcff}
+    .accordeon-niveau.open .niveau-body{display:block}
+    .theme-block{margin-bottom:10px;padding-left:8px;border-left:2px solid var(--sky-border)}
+    .theme-block .theme-name{font-weight:700;font-size:13px;color:var(--primary);margin-bottom:4px}
+    .chapitre-item{margin-bottom:6px;padding-left:12px}
+    .chapitre-item .chapitre-name{font-weight:600;font-size:12px;color:var(--sky-deep);margin-bottom:2px}
+    .fiche-link{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:var(--sky-deep);text-decoration:none;font-weight:600;margin-right:8px}.fiche-link:hover{text-decoration:underline}
+    .fiche-lock{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:var(--gray);font-weight:600;margin-right:8px}
+    .pack-promo{background:linear-gradient(135deg,var(--accent),#f5c542);border-radius:10px;padding:14px 16px;text-align:center;margin-top:16px;color:var(--primary)}
+    .pack-promo h4{font-size:16px;margin-bottom:4px}.pack-promo p{font-size:12px;margin-bottom:8px;color:var(--primary-mid)}
+    .btn-home-rev{margin-top:10px}
+    .score-card{text-align:center;padding:20px 14px;background:linear-gradient(135deg,var(--primary),var(--primary-mid));border-radius:var(--radius);color:var(--white);margin-bottom:12px;box-shadow:var(--shadow)}
+    .score-badge{font-size:38px;margin-bottom:4px;display:block}.score-pct{font-size:34px;font-weight:700;color:var(--accent);display:block}
+    .score-label{font-size:12px;opacity:.8;margin-top:1px}.score-sub{font-size:15px;margin-top:4px;display:block}
+    .result-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:10px;overflow:hidden;font-size:11px;margin-top:4px}
+    .result-table th{background:var(--primary);color:var(--white);padding:7px 9px;text-align:left;font-weight:700;font-size:10px}
+    .result-table td{padding:6px 9px;border-bottom:1px solid #e0e8f0}.result-table tr:nth-child(even) td{background:#f8faff}
+    .r-ok{color:var(--green);font-weight:700}.r-ko{color:var(--red);font-weight:700}
+    .hidden{display:none!important}
+    .timer-wrap{text-align:center;margin-bottom:8px}
+    .timer-badge{display:inline-flex;align-items:center;gap:5px;background:#f8faff;border:2px solid var(--sky-border);border-radius:8px;padding:4px 12px;font-size:16px;font-weight:700;color:var(--primary);transition:all .3s}
+    .timer-badge.warning{background:#fff8f0;border-color:var(--orange);color:var(--orange)}
+    .timer-badge.danger{background:var(--red-light);border-color:var(--red);color:var(--red);animation:pulse .8s infinite}
+    .perq-timer{font-size:10px;color:var(--gray);margin-left:6px;font-weight:600}.perq-timer.warning{color:var(--orange)}.perq-timer.danger{color:var(--red)}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+    .site-footer{background:var(--primary);color:rgba(255,255,255,0.70);padding:10px 14px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:10px}
+    .site-footer .footer-info strong{color:var(--accent);font-weight:600}
+    .site-footer .footer-buttons{display:flex;gap:6px;flex-wrap:wrap}
+    .key-form{background:var(--white);border-radius:var(--radius);padding:16px 20px;text-align:center;margin-top:14px;border:2px solid var(--accent);box-shadow:var(--shadow)}
+    .key-form h4{font-size:14px;color:var(--primary);margin-bottom:10px}
+    .key-form .key-input{width:100%;max-width:320px;padding:10px 14px;border:2px solid var(--sky-border);border-radius:8px;font-size:15px;text-align:center;font-family:var(--font-fr);letter-spacing:1px;margin-bottom:8px;outline:none;transition:border-color .2s}
+    .key-form .key-input:focus{border-color:var(--accent)}
+    .key-form .key-error{color:var(--red);font-size:12px;font-weight:600;margin-bottom:6px;display:none}
+    @media(max-width:480px){body{font-size:14px}.site-header{padding:6px 8px}.header-grid{grid-template-columns:60px 1fr 120px;gap:5px}.logo-square{width:50px;height:50px;font-size:20px;border-radius:10px}.header-col1 .verset{font-size:8px}.header-col2{padding:5px 6px}.header-col2 .concours-ar{font-size:11px}.header-col2 .specialite{font-size:9px}.header-col3 .accroche{font-size:9px}.header-col3 .marque{font-size:11px}.header-col3 .session{font-size:7px}.header-col3 .titre-epreuve{font-size:16px}.methode-bar{padding:4px 6px;gap:6px;font-size:9px}.methode-bar .step-icon{font-size:12px}.mini-bar{padding:3px 8px;gap:6px;font-size:9px}.main-content{padding:0 6px 10px}.mode-grid{gap:5px}.mode-card{padding:10px 5px}.mode-icon{font-size:22px}.mode-name{font-size:11px}.mode-desc{font-size:8px}.question-layout{grid-template-columns:1fr 1fr;gap:6px}.q-left{padding:10px}.question-statement{font-size:12px;padding:8px 10px}.choice-btn{font-size:11px;padding:7px 8px}.revision-layout{grid-template-columns:110px 1fr;gap:6px}.revision-sidebar .rev-tab{font-size:10px;padding:7px 8px}.revision-content{padding:12px}.btn{font-size:11px;padding:6px 10px}.btn-block{font-size:12px;padding:8px}.site-footer{padding:8px 10px;flex-direction:column;text-align:center;font-size:9px}.site-footer .footer-buttons{justify-content:center}}
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <header class="site-header">
+    <div class="header-grid">
+      <div class="header-col1"><div class="logo-square"><img src="images/logo.png" alt="Synapris" onerror="this.style.display='none';this.parentElement.textContent='S'" /></div><div class="verset">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</div></div>
+      <div class="header-col2"><div class="concours-ar">المناظــرة الخارجية بالاختبارات لانتداب أساتذة<br>التعليم الثانوي و التعليم التقني و التعليم الفني<br>(دورة 2026)</div><div class="specialite">اختصاص : علوم الحياة و الأرض</div></div>
+      <div class="header-col3"><div class="accroche">✨ Votre réussite commence ici</div><div class="marque"><span>SYNAPRIS</span> — CAPES SVT</div><div class="session">Session 2026 · Éclairer l'intelligence</div><div class="titre-epreuve">QCM_SVT_2009</div></div>
+    </div>
+  </header>
+  <div class="methode-bar"><div class="step"><span class="step-icon">❌</span> Osez l'erreur</div><div class="step"><span class="step-icon">💡</span> Comprenez avec le feedback</div><div class="step"><span class="step-icon">⏱️</span> Testez-vous en mode Examen</div></div>
+  <div class="mini-bar" id="mini-bar"><div class="mb-progress"><span id="mb-q-counter">—</span><div class="mb-progress-bar"><div class="mb-progress-fill" id="mb-progress-fill" style="width:0%"></div></div></div><span class="mb-badge mode-badge" id="mb-mode-badge" style="display:none;">—</span><span class="mb-badge client-badge" id="mb-client-badge" style="display:none;">🔑 —</span></div>
+  <div class="main-scroll" id="main-scroll">
+    <div id="main-app" style="display:block;"><div class="main-content">
+      <div id="page-home" class="page active"><div class="card sky"><div class="card-title">🔒 Accès Protégé</div><div class="mode-grid"><div class="mode-card locked" id="mode-train" onclick="selectMode('train')"><span class="mode-icon">📝</span><div class="mode-name">Mode Entraînement</div><div class="mode-desc">Feedback immédiat · Correction détaillée</div></div><div class="mode-card locked" id="mode-revision" onclick="selectMode('revision')"><span class="mode-icon">📖</span><div class="mode-name">Mode Révision rapide</div><div class="mode-desc">Résumés · Définitions · Confusions</div></div><div class="mode-card exam-card locked" id="mode-exam" onclick="selectMode('exam')"><span class="mode-icon">⏱️</span><div class="mode-name">Mode Examen</div><div class="mode-desc">Chronomètre 60 min · 2 min/question</div></div></div><div class="key-form" id="key-form"><h4>🔑 Entrez votre clé d'accès pour débloquer les modes</h4><input type="text" class="key-input" id="key-input-home" placeholder="Ex: SYN-GENIE-1001" autocomplete="off" /><div class="key-error" id="key-error-home">❌ Clé invalide. Veuillez réessayer.</div><button class="btn btn-gold btn-block" id="btn-unlock-home" onclick="unlockFromHome()">🔓 Débloquer l'accès</button><p style="margin-top:10px;font-size:11px;">🛒 Pas de clé ? <a href="../../commander.html" style="color:var(--accent);font-weight:700;">Commander le Pack</a></p></div><button class="btn btn-gold btn-block" id="btn-start" style="display:none;" onclick="startQuiz()">🚀 Démarrer le quiz</button></div></div>
+      <div id="page-question" class="page"><div class="timer-wrap hidden" id="timer-wrap"><div class="timer-badge" id="timer-badge">⏱ 60:00</div><span class="perq-timer" id="perq-timer">⚡ 2:00</span></div><div class="question-layout"><div class="q-left"><div class="question-statement" id="q-statement"></div><div class="choices-grid" id="q-choices"></div><div class="validate-row"><button class="btn btn-sky hidden" id="btn-validate" disabled onclick="validateAnswer()">✔ Valider</button><button class="btn btn-gold hidden" id="btn-correction" onclick="showCorrection()">💡 Correction</button></div></div><div class="q-right"><div class="feedback-placeholder" id="feedback-placeholder"><div class="ph-icon">💬</div><div class="ph-text">Feedback après validation</div></div><div class="feedback-box" id="feedback-box"><div class="feedback-header" id="feedback-header"><span id="badge-icon"></span><span id="feedback-result-text"></span></div><div class="feedback-body" id="feedback-body"></div></div></div></div><div class="nav-row"><button class="btn btn-primary" id="btn-prev" onclick="prevQuestion()" disabled>← Précédent</button><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button><button class="btn btn-green" id="btn-next" onclick="nextQuestion()">Suivant →</button></div></div>
+      <div id="page-revision" class="page"><div class="revision-layout"><div class="revision-sidebar" id="revision-sidebar"></div><div class="revision-content" id="revision-content"></div></div><div class="btn-home-rev"><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button></div></div>
+      <div id="page-results" class="page"><div class="score-card"><span class="score-badge" id="result-badge">🏆</span><span class="score-pct" id="result-pct">—</span><span class="score-label">Score final</span><span class="score-sub" id="result-sub"></span></div><div class="card"><div class="card-title">📊 Résultats par thème</div><div id="result-themes"></div></div><div class="card"><div class="card-title">📋 Récapitulatif</div><table class="result-table"><thead><tr><th>N°</th><th>Question</th><th>Thème</th><th>Résultat</th></tr></thead><tbody id="result-tbody"></tbody></table><button class="btn btn-gold btn-block" id="btn-retry-failed" onclick="retryFailed()" style="display:none;margin-top:8px;">🔁 Retravailler les erreurs</button><button class="btn btn-gold btn-block" style="margin-top:6px;" onclick="goHome()">🏠 Retour à l'accueil</button></div></div>
+    </div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-info">© 2026 <strong>Synapris</strong> — Éclairer l'intelligence · Tous droits réservés</div>
+    <div class="footer-buttons"><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a><a href="../../commander.html" class="btn btn-outline-white">📦 Voir les offres</a></div>
+  </footer>
+  <script>
+    // ═══════════════ CONFIGURATION ═══════════════
+    const FICHE_TYPE = 'protege';
+    const QUESTIONS_GRATUITES = 15;
+    const VALID_CODES = [
+      'SYN-MAESTRO-7777','SYN-GENIE-1001','SYN-GENIE-1002','SYN-GENIE-1003','SYN-GENIE-1004','SYN-GENIE-1005',
+      'SYN-GENIE-1006','SYN-GENIE-1007','SYN-GENIE-1008','SYN-GENIE-1009','SYN-GENIE-1010'
+    ];
+    let licenceOk = false;
+
+    // ═══════════════ QUESTIONS 2009 ═══════════════
+    const questionsData = [
+  {
+    id: 1, statement: "Un faciès marin profond est caractérisé par :",
+    choices: ["Du calcaire à nummulites", "Des tests de globigérines", "Des argiles bleues, rouges et vertes", "Des coquilles de mollusques"],
+    correct: [1], theme: "Géologie", chapitre: "Stratigraphie et faciès", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les globigérines sont des micro-organismes planctoniques vivant en haute mer. Leur accumulation au fond caractérise un faciès pélagique profond. Les nummulites et mollusques sont benthiques de plate-forme littorale.",
+    phenomene: "Les fossiles pélagiques (pleine mer) indiquent la profondeur du milieu de dépôt.",
+    correction_detaillee: { juste: "B : Les tests de globigérines caractérisent un faciès marin profond (pélagique).", faux: { "A": "Les nummulites sont des organismes benthiques de plate-forme littorale peu profonde.", "C": "Les argiles colorées sont un critère lithologique insuffisant pour définir la profondeur seule.", "D": "Les coquilles de mollusques indiquent un milieu littoral ou de plate-forme." } },
+    erreur_frequente: "Confondre les Nummulites (littoral) avec les Globigérines (profond).",
+    astuce_fr: "Globigérines = Global (océan ouvert/profond).",
+    astuce_ar: "الغلوبيجيرين هي غبار البحار العميقة الذي يخبرنا عن أسرار المحيطات الغابرة."
+  },
+  {
+    id: 2, statement: "Un faciès continental est caractérisé par :",
+    choices: ["Des tests de nummulites", "Des coquilles d'escargots, du bois silicifié et des empreintes de feuilles", "Des roches conglomératiques, des grès et sables, des calcaires et coquilles", "Des sables, argiles et calcaires"],
+    correct: [1], theme: "Géologie", chapitre: "Stratigraphie et faciès", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Un milieu continental est caractérisé par des restes d'êtres vivants terrestres. Le bois silicifié et les empreintes de feuilles prouvent une sédimentation hors de la mer.",
+    phenomene: "Les fossiles de faciès renseignent sur le milieu de dépôt (continental vs marin).",
+    correction_detaillee: { juste: "B : Coquilles d'escargots, bois silicifié et empreintes de feuilles sont des indicateurs terrestres.", faux: { "A": "Les nummulites sont exclusivement marines.", "C": "Les calcaires et coquilles sont majoritairement marins.", "D": "Ces sédiments peuvent être marins ou continentaux, pas spécifiques." } },
+    erreur_frequente: "Penser que le sable ne se trouve qu'au bord de la mer.",
+    astuce_fr: "Feuilles et bois = terre ferme (continental).",
+    astuce_ar: "الأوراق المتحجرة هي شهود اليابسة التي حُفظت في أرشيف الأرض."
+  },
+  {
+    id: 3, statement: "Le jurassique est une période du :",
+    choices: ["Quaternaire", "Tertiaire", "Secondaire", "Primaire"],
+    correct: [2], theme: "Géologie", chapitre: "Échelle des temps géologiques", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Le Jurassique est la période centrale de l'ère Secondaire (Mésozoïque), située entre le Trias et le Crétacé. Ère Secondaire = Trias, Jurassique, Crétacé.",
+    phenomene: "Le Jurassique correspond à l'apogée des dinosaures.",
+    correction_detaillee: { juste: "C : Le Jurassique appartient à l'ère Secondaire (Mésozoïque).", faux: { "A": "Le Quaternaire est l'ère la plus récente.", "B": "Le Tertiaire est l'ère des mammifères.", "D": "Le Primaire (Paléozoïque) est l'ère des trilobites." } },
+    erreur_frequente: "Confondre les ères (Primaire, Secondaire) avec les systèmes (Jurassique).",
+    astuce_fr: "Jurassique = Jeu de dinosaures du Secondaire.",
+    astuce_ar: "العصر الجوراسي هو قلب الحقبة الثانية، زمن سيادة الزواحف العملاقة."
+  },
+  {
+    id: 4, statement: "Les gisements de phosphate ne sont exploitables que lorsque la teneur en P₂O₅ est :",
+    choices: ["Égale ou supérieure à 10%", "Égale ou supérieure à 25%", "Égale ou supérieure à 50%", "Égale ou supérieure à 75%"],
+    correct: [1], theme: "Géologie", chapitre: "Ressources naturelles et phosphates", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Le minerai de phosphate doit présenter une concentration minimale (teneur de coupure) pour être économiquement rentable, généralement autour de 25-30% en Tunisie.",
+    phenomene: "La teneur de coupure détermine la rentabilité économique de l'exploitation minière.",
+    correction_detaillee: { juste: "B : Une teneur ≥ 25% est requise pour une exploitation rentable.", faux: { "A": "10% est trop pauvre, pas rentable.", "C": "50% est une teneur très rare dans le minerai brut naturel.", "D": "75% est une teneur de produit enrichi, pas du minerai brut." } },
+    erreur_frequente: "Confondre la teneur du minerai brut avec celle du produit enrichi.",
+    astuce_fr: "Quart de roche (25%) = Profit de poche.",
+    astuce_ar: "نسبة 25% هي عتبة الربح؛ ما دونها رمل، وما فوقها كنز."
+  },
+  {
+    id: 5, statement: "Le phosphate tunisien est d'âge :",
+    choices: ["Pléistocène", "Miocène", "Pliocène", "Éocène"],
+    correct: [3], theme: "Géologie", chapitre: "Ressources naturelles et phosphates", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les grands gisements tunisiens (Bassin de Gafsa) se sont formés à l'Yprésien (Éocène inférieur). Formation Metlaoui = Éocène = Phosphates.",
+    phenomene: "Sédimentation phosphatée à l'Éocène dans des bassins protégés.",
+    correction_detaillee: { juste: "D : Le phosphate tunisien est d'âge Éocène (Yprésien).", faux: { "A": "Le Pléistocène est trop récent (Quaternaire).", "B": "Le Miocène est postérieur aux dépôts phosphatés majeurs.", "C": "Le Pliocène est trop récent." } },
+    erreur_frequente: "Confondre avec le Miocène ou le Pléistocène.",
+    astuce_fr: "Phosphate = Éocène.",
+    astuce_ar: "الإيوسين هو العصر الذهبي الذي تخرّجت منه كنوز الفسفاط التونسي."
+  },
+  {
+    id: 6, statement: "Le minerai de phosphate riche en P₂O₅ est obtenu par :",
+    choices: ["Lavage à l'eau du phosphate naturel", "Extraction-concassage-broyage du phosphate naturel", "Lavage à l'eau du minerai de phosphate", "Extraction-concassage-broyage du minerai de phosphate"],
+    correct: [0, 2], theme: "Géologie", chapitre: "Valorisation industrielle des phosphates", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Le lavage est l'étape physique qui élimine la gangue argileuse et les impuretés pour augmenter le pourcentage de phosphore. Le broyage seul ne change pas la concentration chimique.",
+    phenomene: "L'enrichissement par lavage augmente la teneur en P₂O₅ du minerai.",
+    correction_detaillee: { juste: "A et C : Le lavage à l'eau enrichit le minerai en éliminant les impuretés.", faux: { "B": "L'extraction-concassage-broyage ne change pas la teneur chimique.", "D": "Le broyage seul n'augmente pas la concentration." } },
+    erreur_frequente: "Croire que broyer une roche augmente sa teneur en éléments chimiques.",
+    astuce_fr: "On lave pour qu'il brille (teneur haute).",
+    astuce_ar: "الغسيل هو تطهير المعدن من الطين ليرتفع شأنه (تركيزه)."
+  },
+  {
+    id: 7, statement: "Le phosphogypse est un déchet solide provenant :",
+    choices: ["Du lavage à l'eau du phosphate naturel", "De l'action de l'acide sulfurique sur le minerai de phosphate", "De l'action de l'acide chlorhydrique sur le minerai de phosphate", "De l'action de l'acide sulfurique sur le phosphate naturel"],
+    correct: [1], theme: "Géologie", chapitre: "Impact environnemental de l'industrie phosphatée", niveau_scolaire: "2ème Sc",
+    rappel_cours: "La fabrication de l'acide phosphorique par attaque sulfurique du phosphate génère du gypse résiduel (phosphogypse). Phosphate + Acide Sulfurique → Acide Phosphorique + Phosphogypse.",
+    phenomene: "Le phosphogypse est un polluant majeur en Tunisie, sous-produit de l'industrie phosphatée.",
+    correction_detaillee: { juste: "B : Le phosphogypse provient de l'attaque sulfurique du minerai de phosphate.", faux: { "A": "Le lavage produit des boues de lavage, pas du phosphogypse.", "C": "L'acide chlorhydrique n'est pas le procédé standard utilisé en Tunisie.", "D": "Le terme 'minerai' est plus précis industriellement que 'phosphate naturel'." } },
+    erreur_frequente: "Confondre le lavage (physique) et l'attaque acide (chimique).",
+    astuce_fr: "Soufre + Phos = Phospho-gypse.",
+    astuce_ar: "الفسفو-جبس هو ثمن التطور الصناعي الذي تدفعه البيئة."
+  },
+  {
+    id: 8, statement: "Une bactérie peut se diviser toutes les 20 minutes si les conditions sont favorables. À partir d'une seule bactérie mise en culture, le nombre de bactéries obtenues après deux heures est :",
+    choices: ["16", "64", "256", "1024"],
+    correct: [1], theme: "Immunologie", chapitre: "Multiplication bactérienne", niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Croissance exponentielle par bipartition. En 2h (120 min), il y a 120/20 = 6 générations. Le nombre est 2⁶ = 64. Formule N = 2ⁿ.",
+    phenomene: "La croissance bactérienne est exponentielle en conditions favorables.",
+    correction_detaillee: { juste: "B : 64 bactéries (2⁶ = 64 après 6 générations).", faux: { "A": "16 = 2⁴ (4 générations, 80 min).", "C": "256 = 2⁸ (8 générations, 160 min).", "D": "1024 = 2¹⁰ (10 générations, 200 min)." } },
+    erreur_frequente: "Multiplier 20 par 2 au lieu d'utiliser les puissances de 2.",
+    astuce_fr: "2, 4, 8, 16, 32, 64 (6 étapes de 20 min).",
+    astuce_ar: "البكتيريا هي جيش يتضاعف بالانقسام، فمن الواحد تولد أمم في ساعات."
+  },
+  {
+    id: 9, statement: "La maladie causée par le bacille de Koch est :",
+    choices: ["La rougeole", "La grippe", "Le tétanos", "La tuberculose"],
+    correct: [3], theme: "Immunologie", chapitre: "Maladies infectieuses et agents pathogènes", niveau_scolaire: "1ère Sc",
+    rappel_cours: "Le Bacille de Koch (BK) ou Mycobacterium tuberculosis est une bactérie aérobie qui détruit les tissus pulmonaires. BK = Tuberculose.",
+    phenomene: "Le bacille de Koch est l'agent responsable de la tuberculose pulmonaire.",
+    correction_detaillee: { juste: "D : Le bacille de Koch cause la tuberculose.", faux: { "A": "La rougeole est causée par un virus.", "B": "La grippe est causée par le virus Influenza.", "C": "Le tétanos est causé par le bacille de Nicolaïer." } },
+    erreur_frequente: "Confondre les deux bacilles majeurs (Koch et Nicolaïer).",
+    astuce_fr: "Koch = Kof (toux en arabe) = Tuberculose.",
+    astuce_ar: "عصيات كوخ هي أعداء الرئة التي لا يقتلها إلا نور الشمس."
+  },
+  {
+    id: 10, statement: "La sérothérapie est :",
+    choices: ["Un traitement préventif destiné à protéger l'organisme contre un agent infectieux donné", "Un traitement préventif permettant à un organisme d'acquérir une résistance", "Une méthode curative fondée sur l'injection de sérums contenant des anticorps", "Une méthode permettant à un organisme de fabriquer des anticorps spécifiques"],
+    correct: [2], theme: "Immunologie", chapitre: "Vaccination et sérothérapie", niveau_scolaire: "1ère Sc",
+    rappel_cours: "La sérothérapie est une immunité passive et immédiate. On injecte des anticorps spécifiques pour guérir une infection en cours. Vaccin = Préventif (Antigène). Sérum = Curatif (Anticorps).",
+    phenomene: "Immunité passive artificielle : injection d'anticorps préformés pour un traitement curatif immédiat.",
+    correction_detaillee: { juste: "C : La sérothérapie est curative, par injection d'anticorps.", faux: { "A": "Ceci définit la vaccination (préventive).", "B": "Ceci définit la vaccination.", "D": "La fabrication d'anticorps est le mécanisme de la vaccination, pas de la sérothérapie." } },
+    erreur_frequente: "Croire que le sérum protège à vie (il est temporaire).",
+    astuce_fr: "Sérum = Sauvetage (immédiat/curatif).",
+    astuce_ar: "المصل هو سلاح جاهز نمدّ به الجسم حين تشتد الحرب (المرض)."
+  },
+  {
+    id: 11, statement: "La transfusion sanguine peut s'effectuer entre :",
+    choices: ["Un donneur du groupe AB et un receveur du groupe A", "Un donneur du groupe A et un receveur du groupe AB", "Un donneur du groupe AB et un receveur du groupe B", "Un donneur du groupe B et un receveur du groupe AB"],
+    correct: [1, 3], theme: "Immunologie", chapitre: "Groupes sanguins et transfusion", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le groupe AB est receveur universel car il ne possède ni anticorps anti-A ni anti-B. On vérifie que les anticorps du receveur n'attaquent pas les antigènes du donneur.",
+    phenomene: "La compatibilité transfusionnelle dépend de l'absence d'anticorps chez le receveur contre les antigènes du donneur.",
+    correction_detaillee: { juste: "B et D : AB receveur universel accepte A et B.", faux: { "A": "Le receveur A possède des anticorps anti-B qui agglutineraient les globules AB.", "C": "Le receveur B possède des anticorps anti-A qui agglutineraient les globules AB." } },
+    erreur_frequente: "Inverser le rôle du donneur universel (O) et du receveur universel (AB).",
+    astuce_fr: "AB = Accepte Beaucoup.",
+    astuce_ar: "فصيلة AB هي الضيف الذي يقبل كل الهدايا ولا يرفض أحداً."
+  },
+  {
+    id: 12, statement: "Le potentiel postsynaptique excitateur correspond à :",
+    choices: ["Une entrée de Na⁺ dans le neurone postsynaptique", "Une entrée de Cl⁻ dans le neurone postsynaptique", "Une hyperpolarisation de la membrane postsynaptique", "Une dépolarisation de la membrane postsynaptique"],
+    correct: [0, 3], theme: "Neurophysiologie", chapitre: "Transmission synaptique", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le PPSE est une dépolarisation locale par entrée de Na⁺. PPSE = Na⁺ entrant (excitateur). PPSI = Cl⁻ entrant (inhibiteur/hyperpolarisation).",
+    phenomene: "Le PPSE rapproche le potentiel de membrane du seuil de déclenchement du PA.",
+    correction_detaillee: { juste: "A : Entrée de Na⁺ dépolarisante. D : Le PPSE correspond à une dépolarisation.", faux: { "B": "L'entrée de Cl⁻ produit un PPSI (inhibiteur).", "C": "L'hyperpolarisation caractérise le PPSI." } },
+    erreur_frequente: "Croire qu'un PPSE est un potentiel d'action (c'est un potentiel gradué).",
+    astuce_fr: "Excitateur = Entrée de Na⁺.",
+    astuce_ar: "التنبيه هو فتح نوافذ الصوديوم ليدخل الضوء (الشحنات الموجبة) إلى الخلية."
+  },
+  {
+    id: 13, statement: "Des pathogènes submicroscopiques composés d'un génome d'acide nucléique enfermé dans une enveloppe protéique qui ne se répliquent que dans une cellule vivante, sont des :",
+    choices: ["Bactéries", "Virus", "Champignons", "Algues"],
+    correct: [1], theme: "Immunologie", chapitre: "Diversité du monde microbien", niveau_scolaire: "1ère Sc",
+    rappel_cours: "Les virus sont des entités acellulaires à parasitisme intracellulaire obligatoire. Ils ne possèdent pas de métabolisme propre et doivent pirater la machinerie d'une cellule hôte.",
+    phenomene: "Les virus sont des parasites obligatoires, incapables de se multiplier hors d'une cellule.",
+    correction_detaillee: { juste: "B : Les virus correspondent à cette description (acellulaires, parasitisme obligatoire).", faux: { "A": "Les bactéries sont des organismes cellulaires autonomes.", "C": "Les champignons sont des eucaryotes cellulaires.", "D": "Les algues sont des eucaryotes photosynthétiques." } },
+    erreur_frequente: "Classer les virus parmi les bactéries.",
+    astuce_fr: "Virus = Voleur de vie (besoin d'un hôte).",
+    astuce_ar: "الفيروس قرصان لا يملك بيتاً، بل يستولي على غرف الخلايا ليتكاثر."
+  },
+  {
+    id: 14, statement: "L'hormone suivante n'intervient pas dans le métabolisme du glucose :",
+    choices: ["La cortisone", "Le glucagon", "L'aldostérone", "L'insuline"],
+    correct: [2], theme: "Nutrition", chapitre: "Régulation de la glycémie", niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "L'aldostérone est une hormone minéralocorticoïde qui régule la réabsorption du sodium, sans effet direct sur le glucose. Régulateurs du glucose = Insuline, Glucagon, Cortisol.",
+    phenomene: "L'aldostérone agit sur l'équilibre hydrosodé, pas sur la glycémie.",
+    correction_detaillee: { juste: "C : L'aldostérone n'intervient pas dans le métabolisme du glucose.", faux: { "A": "La cortisone (glucocorticoïde) est hyperglycémiante.", "B": "Le glucagon est hyperglycémiant.", "D": "L'insuline est hypoglycémiante." } },
+    erreur_frequente: "Oublier que la cortisone agit sur le sucre.",
+    astuce_fr: "Aldostérone = Alimentation en Sel (Na⁺).",
+    astuce_ar: "الألدوسترون هو حارس الأملاح، لا شأن له بمخازن السكر."
+  },
+  {
+    id: 15, statement: "Dans une coupe de sol en zone humide, on rencontre dans l'ordre, de bas en haut :",
+    choices: ["L'horizon d'accumulation - l'horizon de lessivage - la roche mère", "La roche mère - l'horizon de lessivage - l'horizon d'accumulation", "L'horizon d'accumulation - la roche mère - l'horizon de lessivage", "La roche mère - l'horizon d'accumulation - l'horizon de lessivage"],
+    correct: [3], theme: "Géologie", chapitre: "Pédologie et sols", niveau_scolaire: "1ère Sc",
+    rappel_cours: "De bas en haut : Roche mère (C) → Accumulation (B) → Lessivage (A). Le lessivage entraîne les éléments de la surface vers la profondeur.",
+    phenomene: "L'altération part de la roche mère. Le lessivage transporte les éléments vers le bas.",
+    correction_detaillee: { juste: "D : Roche mère → Accumulation → Lessivage (de bas en haut).", faux: { "A": "L'accumulation ne peut pas être sous la roche mère.", "B": "L'accumulation est au-dessus de la roche mère, pas le lessivage.", "C": "La roche mère est à la base, pas au milieu." } },
+    erreur_frequente: "Inverser le sens 'bas en haut' et 'haut en bas'.",
+    astuce_fr: "Roche → Dépôt (B) → Lavage (A).",
+    astuce_ar: "التربة مراتب، تبدأ من صخر الأرض لتنتهي بفتات السماء."
+  },
+  {
+    id: 16, statement: "Dans les fibres myélinisées, la conduction de l'influx nerveux est :",
+    choices: ["Plus lente", "De type saltatoire", "En relation avec l'amplitude du potentiel d'action", "D'autant plus lente quand le diamètre de la fibre est plus grand"],
+    correct: [1], theme: "Neurophysiologie", chapitre: "Message nerveux et propagation", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La gaine de myéline isole et accélère la conduction par propagation saltatoire (saut de nœud de Ranvier en nœud de Ranvier). Le PA obéit à la loi du tout ou rien (amplitude constante).",
+    phenomene: "La myélinisation augmente considérablement la vitesse de conduction nerveuse.",
+    correction_detaillee: { juste: "B : Conduction saltatoire dans les fibres myélinisées.", faux: { "A": "La conduction est plus rapide, pas plus lente.", "C": "L'amplitude du PA est constante (loi du tout ou rien).", "D": "Plus le diamètre est grand, plus la conduction est rapide." } },
+    erreur_frequente: "Croire que la myéline ralentit le signal à cause de l'épaisseur.",
+    astuce_fr: "Myéline = Maximum de vitesse par Sauts.",
+    astuce_ar: "النخاعين هو بساط السرعة الذي يقفز عليه السيال العصبي ليصل في لمح البصر."
+  },
+  {
+    id: 17, statement: "En allant du continent africain vers la dorsale médio-atlantique, on constate :",
+    choices: ["Une augmentation de l'épaisseur des sédiments", "Une diminution de l'âge des sédiments", "Une alternance d'inversions magnétiques", "Une augmentation de l'âge de la croûte océanique"],
+    correct: [1, 2], theme: "Géologie", chapitre: "Tectonique des plaques et expansion océanique", niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "La croûte est créée au niveau de la dorsale (âge zéro). En s'en approchant, les roches deviennent plus jeunes. Les anomalies magnétiques sont symétriques.",
+    phenomene: "Accrétion océanique : création continue de croûte à la dorsale.",
+    correction_detaillee: { juste: "B : L'âge des sédiments diminue vers la dorsale. C : Alternance d'inversions magnétiques.", faux: { "A": "L'épaisseur diminue vers la dorsale.", "D": "L'âge de la croûte diminue vers la dorsale." } },
+    erreur_frequente: "Penser que la dorsale est le bord du continent.",
+    astuce_fr: "Dorsale = Bébé terre (jeune/mince).",
+    astuce_ar: "قاع المحيط بساط متحرك؛ يولد شاباً عند الفتحة، ويشيخ كلما اقترب من الشاطئ."
+  },
+  {
+    id: 18, statement: "Chez la drosophile (croisement souches mutantes), les résultats en F2 (proportions mâles/femelles différentes) montrent que :",
+    choices: ["Les deux gènes sont autosomaux et liés", "Les deux gènes sont autosomaux et indépendants", "Le gène A/a est autosomal et le gène B/b est lié au sexe", "Les deux gènes sont liés au sexe"],
+    correct: [2], theme: "Génétique", chapitre: "Hérédité liée au sexe", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Si un caractère apparaît différemment chez les mâles et les femelles en F2, l'un des gènes est porté par un chromosome sexuel (X). Résultats non mendéliens = Gène lié au sexe.",
+    phenomene: "La transmission liée au sexe produit des proportions phénotypiques différentes selon le sexe.",
+    correction_detaillee: { juste: "C : Un gène autosomal et un gène lié au sexe expliquent les différences mâles/femelles.", faux: { "A": "Des gènes autosomaux donneraient les mêmes proportions dans les deux sexes.", "B": "L'indépendance n'explique pas la différence entre sexes.", "D": "Si les deux étaient liés au sexe, les proportions seraient différentes." } },
+    erreur_frequente: "Oublier de regarder la ligne mâle/femelle dans les tableaux de résultats.",
+    astuce_fr: "Sexe pas pareil = X au bout du doigt.",
+    astuce_ar: "الوراثة الجنسية هي لعبة تبادل الأدوار؛ فالابن يرث عين أمه، والبنت تلبس ثوب أبيها."
+  },
+  {
+    id: 19, statement: "Chez l'Homme, pour un gène autosomal à 3 allèles, le nombre de génotypes possibles est :",
+    choices: ["3 homozygotes et 4 hétérozygotes", "3 homozygotes et 3 hétérozygotes", "3 homozygotes et 6 hétérozygotes", "2 homozygotes et 4 hétérozygotes"],
+    correct: [1], theme: "Génétique", chapitre: "Polyallélisme et génétique humaine", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Pour n allèles : n homozygotes + n(n-1)/2 hétérozygotes. Pour 3 allèles : 3 homozygotes + 3×2/2 = 3 hétérozygotes. Total = 6 génotypes.",
+    phenomene: "Le polyallélisme augmente le nombre de génotypes possibles dans une population.",
+    correction_detaillee: { juste: "B : 3 homozygotes + 3 hétérozygotes = 6 génotypes.", faux: { "A": "4 hétérozygotes est incorrect (formule n(n-1)/2).", "C": "6 hétérozygotes correspond à 4 allèles.", "D": "2 homozygotes est incorrect." } },
+    erreur_frequente: "Confondre nombre de phénotypes et nombre de génotypes.",
+    astuce_fr: "3 Allèles = 3 + 3 (Homo + Hétéro).",
+    astuce_ar: "الأنماط الوراثية هي أرشيف الدم، وكلما زادت الحروف (الأليلات) تعقدت الحكاية."
+  },
+  {
+    id: 20, statement: "L'autofécondation d'un hybride H de Maïs donne 450 grains pourpres, 150 jaunes, 150 rouges et 50 blancs. Ces résultats montrent que :",
+    choices: ["Le génotype de l'hybride H est homozygote", "Le génotype de l'hybride H est hétérozygote", "Les gènes intervenant sont indépendants", "Les gènes intervenant sont liés"],
+    correct: [1, 2], theme: "Génétique", chapitre: "Dihybridisme et brassage génétique", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Les proportions 450:150:150:50 (total 800) correspondent à 9:3:3:1. C'est la signature de deux gènes indépendants chez un double hétérozygote avec dominance absolue.",
+    phenomene: "Le ratio 9:3:3:1 en F2 indique deux gènes indépendants portés par un hybride hétérozygote.",
+    correction_detaillee: { juste: "B : L'hybride H est hétérozygote (double hétérozygote). C : Les gènes sont indépendants (ratio 9:3:3:1).", faux: { "A": "Un homozygote donnerait 100% de descendants identiques.", "D": "Des gènes liés donneraient une majorité de phénotypes parentaux." } },
+    erreur_frequente: "Ne pas diviser par le total pour trouver le ratio en 16èmes.",
+    astuce_fr: "9331 = Indépendance et Liberté.",
+    astuce_ar: "قانون مندل الثاني هو رقصة الصبغيات الحرة؛ كل صفة تختار مسارها بكرامة."
+  },
+  {
+    id: 21, statement: "Chez les oiseaux, l'incubation dure de :",
+    choices: ["5 jours à 1 mois", "15 jours à 1 mois", "10 jours à 3 mois", "10 jours à 21 jours"],
+    correct: [1], theme: "Reproduction et santé", chapitre: "Reproduction chez les oiseaux", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Le développement embryonnaire des oiseaux se déroule hors du corps maternel (oviparité). La durée d'incubation varie de deux semaines à un mois pour la majorité des espèces communes.",
+    phenomene: "L'incubation maintient l'œuf à ~38°C pour permettre le développement du germe.",
+    correction_detaillee: { juste: "B : 15 jours à 1 mois pour la majorité des oiseaux.", faux: { "A": "5 jours est trop court.", "C": "3 mois est trop long (concerne certains reptiles).", "D": "Trop restrictif (ne cite que le poulet)." } },
+    erreur_frequente: "Penser que les 21 jours de la poule sont la règle pour tous les oiseaux.",
+    astuce_fr: "Un petit mois pour faire un petit piaf.",
+    astuce_ar: "الحضانة هي صبر الأم حتى ينطق الحجر (البيضة) بالحياة."
+  },
+  {
+    id: 22, statement: "Chez les mammifères, le nombre de petits par portée varie de :",
+    choices: ["1 à 6", "1 à 10", "1 à 14", "1 à 18"],
+    correct: [3], theme: "Reproduction et santé", chapitre: "Reproduction chez les mammifères", niveau_scolaire: "2ème Sc",
+    rappel_cours: "La prolificité dépend de l'espèce. Certains rongeurs ou suidés peuvent atteindre jusqu'à 18 petits par portée. La viviparité implique une gestation utérine.",
+    phenomene: "Le nombre de petits par portée varie considérablement selon l'espèce de mammifère.",
+    correction_detaillee: { juste: "D : 1 à 18 petits par portée (de l'Homme au Porc).", faux: { "A": "6 est une limite inférieure à la réalité (rat, porc).", "B": "10 est insuffisant pour les espèces très prolifiques.", "C": "14 est encore en dessous du maximum observé." } },
+    erreur_frequente: "Se baser uniquement sur les mammifères domestiques de grande taille.",
+    astuce_fr: "Mammifères : du solo au groupe de dix-huit.",
+    astuce_ar: "الثدييات درجات؛ فمنها من تلد واحداً كالملوك، ومنها من تلد جيشاً كالفئران."
+  },
+  {
+    id: 23, statement: "Le développement embryonnaire est caractérisé par les stades successifs suivants :",
+    choices: ["Morula → Gastrula → Blastula", "Morula → Blastula → Gastrula", "Gastrula → Morula → Blastula", "Blastula → Gastrula → Morula"],
+    correct: [1], theme: "Reproduction et santé", chapitre: "Développement embryonnaire", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Après fécondation : segmentation → Morula (cellules pleines) → Blastula (sphère creuse) → Gastrula (mise en place des feuillets). Ordre immuable.",
+    phenomene: "La morphogenèse suit une séquence invariable : Morula → Blastula → Gastrula.",
+    correction_detaillee: { juste: "B : Morula → Blastula → Gastrula (ordre correct).", faux: { "A": "La gastrula ne peut pas précéder la blastula.", "C": "La gastrula est le stade final, pas le premier.", "D": "La blastula ne peut pas précéder la morula." } },
+    erreur_frequente: "Inverser les stades Blastula et Gastrula.",
+    astuce_fr: "Moi Beau Gosse (Morula, Blastula, Gastrula).",
+    astuce_ar: "الجنين يبدأ ككتلة (مضغة)، ثم كرة جوفاء، ثم بناء ذو غرف."
+  },
+  {
+    id: 24, statement: "Dans des conditions de laboratoire, la drosophile Drosophila melanogaster a un cycle de reproduction de :",
+    choices: ["2 semaines", "3 semaines", "4 semaines", "5 semaines"],
+    correct: [0], theme: "Génétique", chapitre: "La drosophile comme modèle biologique", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "À 25°C, le cycle complet (œuf → larve → nymphe → adulte) dure environ 10 à 14 jours. Ce cycle court permet d'étudier de nombreuses générations en peu de temps.",
+    phenomene: "La drosophile est un modèle génétique idéal grâce à son cycle de reproduction rapide (~2 semaines).",
+    correction_detaillee: { juste: "A : 2 semaines (10-14 jours à 25°C).", faux: { "B": "3 semaines est trop long pour ce modèle.", "C": "4 semaines est trop long.", "D": "5 semaines est trop long." } },
+    erreur_frequente: "Penser que toutes les mouches vivent des mois.",
+    astuce_fr: "Deux semaines pour une pluie de mouches.",
+    astuce_ar: "ذبابة الخل هي ساعة الوراثة؛ تنجز جيلها في أسبوعين."
+  },
+  {
+    id: 25, statement: "La méiose produit des cellules filles :",
+    choices: ["À n chromosomes à partir de cellules mères à 2n chromosomes", "À 2n chromosomes à partir de cellules mères à n chromosomes", "À 2n chromosomes à partir de cellules mères à 4n chromosomes", "À 2n chromosomes à partir de cellules mères à 2n chromosomes"],
+    correct: [0], theme: "Génétique", chapitre: "Méiose et reproduction sexuée", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La méiose est une division réductionnelle qui divise par deux le stock chromosomique : 2n → n. Elle produit des cellules haploïdes (gamètes).",
+    phenomene: "La méiose réduit le nombre de chromosomes de moitié pour maintenir le caryotype après fécondation.",
+    correction_detaillee: { juste: "A : 2n → n (division réductionnelle).", faux: { "B": "Impossible (n → 2n serait une duplication).", "C": "4n → 2n est un cas particulier de polyploïdie.", "D": "2n → 2n définit la mitose, pas la méiose." } },
+    erreur_frequente: "Confondre méiose (réduction) et mitose (conformité).",
+    astuce_fr: "Méiose = Moitié.",
+    astuce_ar: "الانقسام المنصف هو نصف الحقيقة الوراثية التي تبحث عن نصفها الآخر."
+  },
+  {
+    id: 26, statement: "Chez les angiospermes, les plantes portant à la fois des fleurs mâles et des fleurs femelles sont dites :",
+    choices: ["Dioïques", "Hermaphrodites", "Monoïques", "Polygames"],
+    correct: [2], theme: "Biologie cellulaire", chapitre: "Reproduction chez les Angiospermes", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Monoïque = une seule plante porte des fleurs mâles ET des fleurs femelles séparées (ex: Maïs). Dioïque = pieds mâles et femelles séparés. Hermaphrodite = sexes dans la même fleur.",
+    phenomene: "La monoécie permet la fécondation croisée tout en gardant les deux sexes sur le même pied.",
+    correction_detaillee: { juste: "C : Monoïques = fleurs mâles et femelles sur le même pied.", faux: { "A": "Dioïques = pieds mâles et femelles séparés.", "B": "Hermaphrodites = étamines et pistil dans la même fleur.", "D": "Polygames = plusieurs combinaisons sur le même pied ou des pieds différents." } },
+    erreur_frequente: "Confondre monoïque (le pied) et hermaphrodite (la fleur).",
+    astuce_fr: "Mono-ïque = Une seule maison pour deux chambres.",
+    astuce_ar: "النبات أحادي المسكن هو بيت واحد يسكنه الذكر والأنثى في غرفتين منفصلتين."
+  },
+  {
+    id: 27, statement: "Chez les angiospermes, la double fécondation conduit à la formation de :",
+    choices: ["L'oosphère", "L'oosphère fécondé et de l'albumen", "L'albumen", "Pollen binucléé"],
+    correct: [1], theme: "Biologie cellulaire", chapitre: "Reproduction chez les Angiospermes", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Un premier noyau reproducteur féconde l'oosphère (→ zygote 2n) tandis qu'un second féconde les noyaux polaires (→ albumen 3n, tissu de réserve).",
+    phenomene: "La double fécondation est une spécificité des Angiospermes : zygote + albumen.",
+    correction_detaillee: { juste: "B : L'oosphère fécondé (zygote) ET l'albumen (tissu nourricier).", faux: { "A": "L'oosphère seule est le gamète femelle avant fécondation.", "C": "L'albumen seul est incomplet.", "D": "Le pollen binucléé est l'agent fécondant, pas le produit." } },
+    erreur_frequente: "Oublier la formation de l'albumen (3n).",
+    astuce_fr: "Un pour le bébé, un pour le manger.",
+    astuce_ar: "الإخصاب المضاعف هو غرس البذرة وبناء مخزن طعامها في آن واحد."
+  },
+  {
+    id: 28, statement: "Le code génétique utilise 64 codons dont :",
+    choices: ["2 codons stop", "3 codons stop", "4 codons stop", "5 codons stop"],
+    correct: [1], theme: "Génétique", chapitre: "Code génétique et expression", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Sur les 64 codons possibles, 61 codent pour des acides aminés et 3 sont des codons STOP (UAA, UAG, UGA) qui signalent la fin de la traduction.",
+    phenomene: "Les codons stop terminent la synthèse protéique sur le ribosome.",
+    correction_detaillee: { juste: "B : 3 codons stop (UAA, UAG, UGA).", faux: { "A": "2 est incorrect.", "C": "4 est incorrect.", "D": "5 est incorrect." } },
+    erreur_frequente: "Croire que tous les codons correspondent à un acide aminé.",
+    astuce_fr: "Trois feux rouges (Stop) sur la route du gène.",
+    astuce_ar: "شفرة الحياة فيها 61 حرفاً وثلاث نقاط للنهاية."
+  },
+  {
+    id: 29, statement: "Un codon est formé de :",
+    choices: ["2 ribonucléotides", "3 ribonucléotides", "4 ribonucléotides", "5 ribonucléotides"],
+    correct: [1], theme: "Génétique", chapitre: "Code génétique et expression", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le codon est l'unité de base du code génétique, constitué d'une séquence de 3 nucléotides (triplet) sur l'ARNm. Système de lecture par triplets.",
+    phenomene: "Chaque codon de 3 nucléotides spécifie un acide aminé ou un signal stop.",
+    correction_detaillee: { juste: "B : Un codon = 3 ribonucléotides (triplet).", faux: { "A": "2 nucléotides ne suffisent pas (16 combinaisons < 20 acides aminés).", "C": "4 nucléotides seraient redondants.", "D": "5 nucléotides n'existent pas dans le code génétique." } },
+    erreur_frequente: "Confondre base azotée et nucléotide.",
+    astuce_fr: "Codon = Trio de lettres.",
+    astuce_ar: "الرامزة هي كلمة من ثلاثة أحرف في لغة الخلية."
+  },
+  {
+    id: 30, statement: "Un seul acide aminé peut être codé par :",
+    choices: ["4 codons différents", "5 codons différents", "6 codons différents", "8 codons différents"],
+    correct: [0, 2], theme: "Génétique", chapitre: "Code génétique et expression", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le code génétique est dégénéré : plusieurs codons peuvent coder le même acide aminé. Maximum = 6 codons (Sérine, Arginine, Leucine). Certains n'en ont que 4 (Valine, Proline...).",
+    phenomene: "La redondance du code génétique protège contre les mutations ponctuelles.",
+    correction_detaillee: { juste: "A et C : 4 ou 6 codons selon l'acide aminé.", faux: { "B": "5 codons n'existe pas dans le code standard.", "D": "8 codons n'existe pas dans le code standard." } },
+    erreur_frequente: "Penser qu'à un codon correspond plusieurs acides aminés (c'est l'inverse).",
+    astuce_fr: "Plusieurs clés pour la même serrure.",
+    astuce_ar: "في كتاب الوراثة، قد تجد عدة أسماء لمعنى واحد (الحمض الأميني)."
+  },
+  {
+    id: 31, statement: "Dans une cellule normale, lors de l'expression des gènes :",
+    choices: ["L'ADN est traduit en ARNm qui est transcrit en protéines", "L'ADN est transcrit en ARNm qui est traduit en protéines", "L'ARNm est traduit en ADN qui est transcrit en protéines", "L'ARNm est transcrit en ADN qui est traduit en protéines"],
+    correct: [1], theme: "Génétique", chapitre: "Expression génétique", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le dogme central : ADN (noyau) → transcription → ARNm → traduction → Protéines (cytoplasme). L'ADN est transcrit, l'ARNm est traduit.",
+    phenomene: "Le flux de l'information génétique va de l'ADN vers l'ARN puis vers les protéines.",
+    correction_detaillee: { juste: "B : ADN transcrit en ARNm, ARNm traduit en protéines.", faux: { "A": "L'ADN est transcrit, pas traduit. L'ARNm est traduit, pas transcrit.", "C": "L'ARNm n'est pas traduit en ADN (sauf rétrovirus).", "D": "L'ARNm n'est pas transcrit en ADN." } },
+    erreur_frequente: "Inverser les termes transcription et traduction.",
+    astuce_fr: "Écrire (transcrire) puis Agir (traduire).",
+    astuce_ar: "النواة ترسل رسالة (ARNm) ليقوم العمال (الريبوزومات) بالبناء."
+  },
+  {
+    id: 32, statement: "Les auxines sont des hormones végétales qui :",
+    choices: ["Stimulent les divisions cellulaires dans les tissus cultivés in vitro", "Provoquent l'élongation cellulaire dans des fragments excisés de tige et de coléoptile", "Influencent l'initiation des racines", "Interviennent dans le développement des fleurs et des fruits"],
+    correct: [1, 2], theme: "Nutrition", chapitre: "Physiologie végétale et hormones", niveau_scolaire: "2ème Sc",
+    rappel_cours: "L'auxine (AIA) stimule l'élongation cellulaire (auxèse) et favorise la rhizogenèse (apparition de racines). Les cytokinines stimulent les divisions cellulaires.",
+    phenomene: "L'auxine est l'hormone de croissance principale, produite par l'apex des tiges.",
+    correction_detaillee: { juste: "B : Élongation cellulaire. C : Initiation des racines (rhizogenèse).", faux: { "A": "Les cytokinines stimulent les divisions cellulaires, pas l'auxine.", "D": "Les gibbérellines et l'éthylène agissent plus sur les fleurs et fruits." } },
+    erreur_frequente: "Confondre division (mitose, cytokinines) et élongation (grandissement, auxine).",
+    astuce_fr: "Auxine = Allonge et enracine.",
+    astuce_ar: "الأكسين هو مداد الخلايا لتطول، وسر الجذور لتنبت."
+  },
+  {
+    id: 33, statement: "Une cellule végétale totipotente :",
+    choices: ["Est capable de régénérer une plante entière", "Possède tout le potentiel morphogénétique du zygote", "Est incapable de se diviser par mitose", "A un protoplasme fortement modifié"],
+    correct: [0, 1], theme: "Biologie cellulaire", chapitre: "Biotechnologie végétale et totipotence", niveau_scolaire: "1ère Sc",
+    rappel_cours: "La totipotence est la capacité d'une cellule différenciée à se dédifférencier pour régénérer une plante entière. Elle conserve tout le programme génétique du zygote.",
+    phenomene: "La totipotence est exploitée dans le microbouturage et le clonage végétal.",
+    correction_detaillee: { juste: "A : Régénération d'une plante entière. B : Potentiel morphogénétique complet du zygote.", faux: { "C": "Elle doit se diviser activement pour régénérer.", "D": "Son protoplasme redevient juvénile lors de la dédifférenciation." } },
+    erreur_frequente: "Croire que seules les graines peuvent donner une plante.",
+    astuce_fr: "Toti-potente = Tout est possible.",
+    astuce_ar: "الخلية الشاملة هي بذرة خفية داخل كل ورقة وغصن."
+  },
+  {
+    id: 34, statement: "Les caroténoïdes sont des pigments qui :",
+    choices: ["Activent la fixation de l'azote atmosphérique", "Collectent de la lumière qui peut être utilisée dans la photosynthèse", "Ont un rôle important dans la floraison", "Protègent la chlorophylle contre une destruction par un excès de lumière"],
+    correct: [1, 3], theme: "Nutrition", chapitre: "Photosynthèse et pigments", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Pigments accessoires jaunes/orangés, les caroténoïdes absorbent des longueurs d'onde que la chlorophylle capte mal et protègent l'appareil photosynthétique contre la photo-oxydation.",
+    phenomene: "Les caroténoïdes élargissent le spectre d'absorption et protègent la chlorophylle.",
+    correction_detaillee: { juste: "B : Collecte de lumière (pigments accessoires). D : Protection contre l'excès de lumière.", faux: { "A": "La fixation d'azote est le rôle des bactéries symbiotiques.", "C": "La floraison est régulée par le phytocrome." } },
+    erreur_frequente: "Penser qu'ils ne sont là que pour la couleur d'automne.",
+    astuce_fr: "Carotte (carotène) = Collecte et Protège.",
+    astuce_ar: "اليخضور يحتاج إلى مساعدين يجمعون له الضوء ويحرسونه من حر الشمس."
+  },
+  {
+    id: 35, statement: "Chez les végétaux supérieurs, la respiration cellulaire permet de :",
+    choices: ["Générer de l'énergie sous forme d'ATP", "Synthétiser la chlorophylle", "Satisfaire les besoins en eau de la cellule", "Produire des squelettes carbonés nécessaires à la biosynthèse d'autres molécules"],
+    correct: [0, 3], theme: "Nutrition", chapitre: "Respiration cellulaire et métabolisme", niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "L'oxydation du glucose produit de l'ATP (énergie) et libère des molécules carbonées intermédiaires servant de base aux biosynthèses (squelettes carbonés).",
+    phenomene: "La respiration produit de l'énergie ET des précurseurs pour les biosynthèses.",
+    correction_detaillee: { juste: "A : Production d'ATP. D : Production de squelettes carbonés pour les biosynthèses.", faux: { "B": "La chlorophylle est synthétisée par des voies spécifiques, pas par la respiration.", "C": "La respiration produit de l'eau métabolique mais ce n'est pas son rôle principal." } },
+    erreur_frequente: "Oublier que la respiration sert aussi à construire d'autres molécules.",
+    astuce_fr: "Brûler pour Bouger (ATP) et Bâtir (squelettes).",
+    astuce_ar: "التنفس هو حرق السكر لتشغيل محركات الخلية وبناء أجزائها."
+  },
+  {
+    id: 36, statement: "Des assemblages d'acides aminés par des liaisons peptidiques forment :",
+    choices: ["Des glucides", "Des polypeptides", "Des protéines", "Des lipides"],
+    correct: [1, 2], theme: "Nutrition", chapitre: "Biochimie des protéines", niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Les acides aminés se lient par liaisons peptidiques pour former des chaînes appelées polypeptides, qui deviennent des protéines au-delà d'une certaine taille et structure.",
+    phenomene: "La séquence d'acides aminés (structure primaire) détermine la fonction de la protéine.",
+    correction_detaillee: { juste: "B : Les polypeptides sont des chaînes d'acides aminés. C : Les protéines sont des assemblages fonctionnels de polypeptides.", faux: { "A": "Les glucides sont des assemblages de sucres (oses).", "D": "Les lipides sont des esters d'acides gras et de glycérol." } },
+    erreur_frequente: "Oublier que polypeptide est le nom générique de la chaîne avant la fonction finale.",
+    astuce_fr: "Acides aminés → Peptides → Protéines.",
+    astuce_ar: "الأحماض الأمينية هي خرز في عقد يسمى البروتين."
+  },
+  {
+    id: 37, statement: "Chez l'être humain :",
+    choices: ["Le métabolisme inclut la synthèse et la dégradation des molécules organiques", "L'anabolisme est la dégradation des molécules organiques", "Le catabolisme est la synthèse des molécules organiques", "Il y a égalité des vitesses anaboliques et cataboliques"],
+    correct: [0], theme: "Nutrition", chapitre: "Métabolisme général", niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Métabolisme = Anabolisme (construction/synthèse) + Catabolisme (dégradation/énergie). L'équilibre est dynamique, jamais statique.",
+    phenomene: "Le métabolisme est l'ensemble des réactions biochimiques de l'organisme.",
+    correction_detaillee: { juste: "A : Le métabolisme = synthèse (anabolisme) + dégradation (catabolisme).", faux: { "B": "L'anabolisme est la synthèse, pas la dégradation.", "C": "Le catabolisme est la dégradation, pas la synthèse.", "D": "L'équilibre est dynamique et varie selon l'âge et l'activité." } },
+    erreur_frequente: "Confondre catabolisme (casser) et anabolisme (assembler).",
+    astuce_fr: "Anabolisme = Assembler.",
+    astuce_ar: "الأيض هو ميزان الجسم؛ بناء وهدم في حركة لا تهدأ."
+  },
+  {
+    id: 38, statement: "Les interneurones :",
+    choices: ["Ont un rôle d'intégration et de modification du signal", "Se localisent en totalité en dehors du système nerveux central", "Représentent 1% des neurones", "Englobent des groupes de neurones afférents et efférents dans des circuits réflexes"],
+    correct: [0], theme: "Neurophysiologie", chapitre: "Intégration nerveuse et réflexes", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Les interneurones sont situés exclusivement dans le SNC. Ils font le lien entre neurones sensitifs et moteurs. Ils représentent 99% des neurones et jouent un rôle clé dans l'intégration.",
+    phenomene: "Les interneurones sont les neurones de traitement de l'information dans le SNC.",
+    correction_detaillee: { juste: "A : Rôle d'intégration et de modification du signal.", faux: { "B": "Ils sont exclusivement DANS le SNC.", "C": "Ils représentent 99% des neurones, pas 1%.", "D": "Ils ne sont pas les neurones afférents/efférents mais leurs connecteurs." } },
+    erreur_frequente: "Penser qu'ils sont minoritaires alors qu'ils constituent l'essentiel du traitement de l'information.",
+    astuce_fr: "Inter-neurone = Intermédiaire intelligent.",
+    astuce_ar: "العصبونات البينية هي الموزع الذكي الذي يحلل الرسائل قبل التنفيذ."
+  },
+  {
+    id: 39, statement: "Chez l'Homme, pendant la respiration, les évènements suivants se font par diffusion :",
+    choices: ["La ventilation ou échange d'air entre l'atmosphère et les alvéoles", "L'échange d'O₂ et de CO₂ entre gaz alvéolaire et sang dans les capillaires pulmonaires", "L'échange d'O₂ et de CO₂ entre sang des capillaires tissulaires et cellules", "Le transport d'O₂ et de CO₂ dans la circulation pulmonaire et systémique"],
+    correct: [1, 2], theme: "Nutrition", chapitre: "Échanges gazeux respiratoires", niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Le passage de l'O₂ et du CO₂ à travers les barrières alvéolo-capillaires et les membranes cellulaires est un transport passif par diffusion, suivant les gradients de pressions partielles.",
+    phenomene: "La diffusion ne nécessite pas d'énergie (ATP), contrairement à la ventilation.",
+    correction_detaillee: { juste: "B : Échanges alvéolo-capillaires par diffusion. C : Échanges tissu-cellules par diffusion.", faux: { "A": "La ventilation est un phénomène mécanique (convection).", "D": "Le transport sanguin se fait par flux de masse (pompe cardiaque)." } },
+    erreur_frequente: "Croire que tout le trajet de l'air est de la diffusion.",
+    astuce_fr: "Diffusion = Traverser le mur (membrane).",
+    astuce_ar: "انتشار الغازات هو تسلل هادئ من الزحام (ضغط عالٍ) إلى الفراغ (ضغط منخفض)."
+  },
+  {
+    id: 40, statement: "Les potentiels d'action :",
+    choices: ["Sont des modifications intenses et rapides du potentiel de membrane", "Peuvent être générés par les membranes plasmiques des cellules nerveuses et musculaires", "Assurent la transmission de l'information seulement sur de petites distances", "Sont des potentiels locaux qui disparaissent de 1 à 2 mm de leur site d'origine"],
+    correct: [0, 1], theme: "Neurophysiologie", chapitre: "Potentiel d'action et cellules excitables", niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le PA est une inversion brusque et transitoire du potentiel membranaire, généré par les cellules excitables (neurones, muscles). Il se propage sans atténuation sur de longues distances.",
+    phenomene: "Le PA obéit à la loi du tout ou rien et se propage de façon régénérative.",
+    correction_detaillee: { juste: "A : Modification intense et rapide du potentiel. B : Généré par cellules nerveuses ET musculaires.", faux: { "C": "Le PA assure la transmission sur de LONGUES distances.", "D": "Ceci définit les potentiels locaux (gradués), pas le PA." } },
+    erreur_frequente: "Confondre Potentiel d'Action (propagable) et Potentiel de Récepteur (local).",
+    astuce_fr: "PA = Signal Rapide qui voyage loin.",
+    astuce_ar: "جهد الفعل هو صرخة الخلية التي تنتقل بسرعة البرق عبر الألياف."
+  },
+  {
+    id: 41, statement: "En Tunisie, le nombre d'étages bioclimatiques différents est :",
+    choices: ["3", "4", "5", "6"],
+    correct: [2], theme: "Écologie", chapitre: "Étages bioclimatiques de Tunisie", niveau_scolaire: "2ème Sc",
+    rappel_cours: "La classification d'Emberger définit 5 étages en Tunisie : Humide, Sub-humide, Semi-aride, Aride et Saharien. Chaque étage possède une végétation caractéristique.",
+    phenomene: "Les étages bioclimatiques sont déterminés par le quotient pluviothermique Q₂.",
+    correction_detaillee: { juste: "C : 5 étages (Humide, Sub-humide, Semi-aride, Aride, Saharien).", faux: { "A": "3 est incomplet.", "B": "4 est incomplet.", "D": "6 est parfois cité mais le programme officiel en compte 5." } },
+    erreur_frequente: "Confondre les étages bioclimatiques avec les types de sols.",
+    astuce_fr: "5 doigts pour 5 climats du Nord au Sud.",
+    astuce_ar: "مناخ تونس خمسة أثواب، تلبسها الأرض من بلل الشمال إلى جفاف الصحراء."
+  },
+  {
+    id: 42, statement: "En Tunisie, l'évapotranspiration varie de :",
+    choices: ["1200 mm à 1800 mm", "400 mm à 1200 mm", "600 mm à 1600 mm", "800 mm à 1400 mm"],
+    correct: [2], theme: "Écologie", chapitre: "Bioclimatologie et facteurs climatiques", niveau_scolaire: "2ème Sc",
+    rappel_cours: "L'ETP est la somme de l'évaporation du sol et de la transpiration des plantes. En Tunisie, elle varie de 600 mm (Nord) à 1600 mm (Sud saharien).",
+    phenomene: "L'évapotranspiration est un indicateur crucial du stress hydrique des écosystèmes.",
+    correction_detaillee: { juste: "C : 600 à 1600 mm (Nord au Sud).", faux: { "A": "Fourchette trop élevée pour le minimum.", "B": "Maximum trop bas (1200 mm).", "D": "Minimum trop élevé et maximum trop bas." } },
+    erreur_frequente: "Inverser les valeurs du Nord (basse ETP) et du Sud (haute ETP).",
+    astuce_fr: "600 au frais, 1600 au foyer.",
+    astuce_ar: "التبخر هو عطش الأرض؛ يشتد كلما اتجهنا نحو شمس الجنوب."
+  },
+  {
+    id: 43, statement: "En Tunisie, la famille botanique la plus riche en espèces est celle des :",
+    choices: ["Fabacées (Papilionacées)", "Astéracées (Composées)", "Poacées (Graminées)", "Brassicacées (Crucifères)"],
+    correct: [1], theme: "Écologie", chapitre: "Biodiversité végétale tunisienne", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les Astéracées (Composées) représentent la famille la plus diversifiée dans le monde et en Tunisie, grâce à leur grande capacité d'adaptation à divers milieux.",
+    phenomene: "Les Astéracées dominent par leur nombre d'espèces et leur répartition dans tous les étages.",
+    correction_detaillee: { juste: "B : Les Astéracées (Composées) sont la famille la plus riche.", faux: { "A": "Les Fabacées sont importantes mais comptent moins d'espèces.", "C": "Les Poacées dominent visuellement les steppes mais sont moins nombreuses en espèces.", "D": "Les Brassicacées sont moins diversifiées." } },
+    erreur_frequente: "Croire que les Poacées (Graminées) sont les plus nombreuses car elles dominent visuellement.",
+    astuce_fr: "Astéracées = As de la diversité.",
+    astuce_ar: "الفصيلة النجمية (Composées) هي عرش النباتات في تونس، وأكثرها ذريّة وتنوعاً."
+  },
+  {
+    id: 44, statement: "Dans la flore de Tunisie, les espèces endémiques sont de l'ordre de :",
+    choices: ["2%", "15%", "10%", "40%"],
+    correct: [0], theme: "Écologie", chapitre: "Biogéographie et conservation", niveau_scolaire: "2ème Sc",
+    rappel_cours: "L'endémisme désigne des espèces présentes exclusivement dans une zone donnée. En Tunisie, le taux est faible (environ 2%) par rapport à des zones isolées comme les îles Canaries.",
+    phenomene: "Une espèce endémique est une priorité absolue pour la conservation.",
+    correction_detaillee: { juste: "A : 2% d'espèces endémiques en Tunisie.", faux: { "B": "15% est trop élevé pour la Tunisie.", "C": "10% correspond à des zones comme Madagascar.", "D": "40% correspond aux îles isolées (Canaries, Galapagos)." } },
+    erreur_frequente: "Confondre espèce rare et espèce endémique.",
+    astuce_fr: "Deux (2) pour l'exclusivité.",
+    astuce_ar: "النباتات المتوطنة هي بصمة المكان؛ نادرة الوجود (2%) ولكنها فريدة الهوية."
+  },
+  {
+    id: 45, statement: "En Tunisie, le nombre d'espèces végétales très rares est de l'ordre de :",
+    choices: ["1%", "5%", "15%", "20%"],
+    correct: [2], theme: "Écologie", chapitre: "Biodiversité et menaces", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Environ 15% de la flore tunisienne est classée comme très rare ou menacée, recensée dans le Livre Rouge de la flore tunisienne.",
+    phenomene: "La rareté est liée à la fragmentation de l'habitat et à la surexploitation.",
+    correction_detaillee: { juste: "C : 15% d'espèces très rares.", faux: { "A": "1% sous-estime largement la fragilité de la flore.", "B": "5% est encore sous-estimé.", "D": "20% est légèrement surestimé." } },
+    erreur_frequente: "Penser que la rareté ne concerne que les fleurs spectaculaires.",
+    astuce_fr: "Une plante sur sept (15%) crie au secours.",
+    astuce_ar: "النباتات النادرة هي يتامى الطبيعة؛ 15% من نباتاتنا مهددة بالنسيان."
+  },
+  {
+    id: 46, statement: "En Tunisie, les mammifères sauvages sont représentés par :",
+    choices: ["10 espèces", "52 espèces", "78 espèces", "124 espèces"],
+    correct: [2], theme: "Écologie", chapitre: "Diversité de la faune sauvage", niveau_scolaire: "2ème Sc",
+    rappel_cours: "On compte environ 78 à 80 espèces de mammifères sauvages en Tunisie, incluant les grands mammifères (gazelles, sangliers) et les petits (rongeurs, chauves-souris).",
+    phenomene: "La diversité des mammifères est limitée par l'aridité mais reste riche en petites espèces.",
+    correction_detaillee: { juste: "C : 78 espèces de mammifères sauvages.", faux: { "A": "10 est dérisoire.", "B": "52 est incomplet.", "D": "124 est trop élevé pour le territoire tunisien." } },
+    erreur_frequente: "Oublier de compter les chauves-souris dans les mammifères.",
+    astuce_fr: "Sept-huit (78) bêtes à poils dans le gîte.",
+    astuce_ar: "ثدييات تونس ثمانية وسبعون نوعاً؛ من غزال الفلاة إلى خفاش الكهوف."
+  },
+  {
+    id: 47, statement: "La flore marine de Tunisie est composée de :",
+    choices: ["100 espèces", "200 espèces", "300 espèces", "400 espèces"],
+    correct: [3], theme: "Écologie", chapitre: "Écosystèmes marins tunisiens", niveau_scolaire: "2ème Sc",
+    rappel_cours: "La mer Méditerranée bordant la Tunisie offre une grande diversité d'algues et de phanérogames marines, totalisant environ 400 espèces recensées.",
+    phenomene: "La Posidonia oceanica est l'espèce phare de la flore marine tunisienne.",
+    correction_detaillee: { juste: "D : 400 espèces de flore marine.", faux: { "A": "100 est largement sous-estimé.", "B": "200 est encore sous-estimé.", "C": "300 est proche mais insuffisant." } },
+    erreur_frequente: "Confondre les algues avec les plantes à fleurs marines.",
+    astuce_fr: "400 sous les mers.",
+    astuce_ar: "غابة البحر التونسي تضم 400 صنف من الأعشاب والتحالب التي تمنحنا الأكسجين."
+  },
+  {
+    id: 48, statement: "En mer méditerranée, les espèces considérées dangereuses sont :",
+    choices: ["Sargassum muticum", "Posidonia oceanica", "Cytosina crinitia", "Caulerpa taxifolia"],
+    correct: [3], theme: "Écologie", chapitre: "Espèces invasives et équilibre biologique", niveau_scolaire: "2ème Sc",
+    rappel_cours: "Caulerpa taxifolia est une algue invasive (algue tueuse) qui étouffe la biodiversité locale en remplaçant les herbiers de Posidonie. Posidonia est une espèce protégée et bénéfique.",
+    phenomene: "Les espèces dangereuses sont souvent des espèces introduites qui rompent l'équilibre trophique.",
+    correction_detaillee: { juste: "D : Caulerpa taxifolia, algue invasive dangereuse.", faux: { "A": "Sargassum muticum est une algue autochtone non invasive.", "B": "Posidonia oceanica est une espèce protégée et bénéfique.", "C": "Cytosina crinitia n'est pas classée comme dangereuse." } },
+    erreur_frequente: "Penser que dangereux signifie toxique pour l'homme plutôt que pour l'écosystème.",
+    astuce_fr: "Taxifolia = Toxique pour l'habitat.",
+    astuce_ar: "كاليربا هي العشب القاتل؛ غازية غريبة تخنق كنوزنا البحرية."
+  },
+  {
+    id: 49, statement: "Le pourcentage des oiseaux ovipares est de :",
+    choices: ["50%", "70%", "90%", "100%"],
+    correct: [3], theme: "Reproduction et santé", chapitre: "Reproduction chez les oiseaux", niveau_scolaire: "2ème Sc",
+    rappel_cours: "L'oviparité est un caractère partagé par 100% de la classe des Oiseaux. Aucune espèce d'oiseau connue n'est vivipare. Tous pondent des œufs à coquille calcaire.",
+    phenomene: "L'oviparité est une caractéristique universelle de la classe des Oiseaux.",
+    correction_detaillee: { juste: "D : 100% des oiseaux sont ovipares.", faux: { "A": "50% est incorrect (aucun oiseau vivipare).", "B": "70% est incorrect.", "C": "90% est incorrect." } },
+    erreur_frequente: "Vouloir nuancer une règle qui est absolue en biologie animale.",
+    astuce_fr: "Oiseau = Œuf. Point barre.",
+    astuce_ar: "الطيور أمة واحدة في التكاثر؛ مائة بالمائة تضع بيضاً ولا تلد."
+  },
+  {
+    id: 50, statement: "Chez les oiseaux, le nombre d'œufs pondus par nid varie de :",
+    choices: ["1 à 20", "1 à 5", "1 à 10", "1 à 15"],
+    correct: [0], theme: "Écologie", chapitre: "Dynamique des populations et reproduction", niveau_scolaire: "2ème Sc",
+    rappel_cours: "La fécondité varie selon les espèces. Certains pondent 1 œuf (Puffin, Albatros) tandis que d'autres (Gallinacés comme la perdrix) peuvent en pondre jusqu'à 20.",
+    phenomene: "La taille de la ponte dépend de la survie des oisillons et des ressources alimentaires.",
+    correction_detaillee: { juste: "A : 1 à 20 œufs par nid.", faux: { "B": "5 est trop limité (la perdrix pond plus).", "C": "10 est insuffisant pour les espèces très prolifiques.", "D": "15 est en dessous du maximum observé." } },
+    erreur_frequente: "Se limiter à l'exemple du pigeon (2 œufs) ou de la poule.",
+    astuce_fr: "De l'unité (1) à la vingtaine (20).",
+    astuce_ar: "أعشاش الطيور أرزاق؛ فمنها بيضة يتيمة، ومنها عشرون فرخاً يملأ الدنيا شقشقة."
+  }
+];
+
+    // ═══════════════ VARIABLES ═══════════════
+    let mode=null,currentQ=0,activeSet=[],userAnswers=[],validated=[],examTimer=null,examSeconds=0,perQTimer=null,perQSeconds=0;
+    const TOTAL_EXAM_SEC=3600,PER_Q_SEC=120;
+
+    // ═══════════════ PROTEGE INIT ═══════════════
+    document.addEventListener('DOMContentLoaded',()=>{
+      if(FICHE_TYPE==='protege'){lockModes();}
+    });
+
+    function lockModes(){
+      document.querySelectorAll('.mode-card').forEach(c=>c.classList.add('locked'));
+      document.getElementById('btn-start').style.display='none';
+    }
+    function unlockModes(){
+      document.querySelectorAll('.mode-card').forEach(c=>c.classList.remove('locked'));
+      document.getElementById('btn-start').style.display='inline-flex';
+      document.getElementById('key-form').style.display='none';
+    }
+    function unlockFromHome(){
+      const code=document.getElementById('key-input-home').value.trim();
+      if(VALID_CODES.includes(code)){
+        licenceOk=true;
+        document.getElementById('mb-client-badge').style.display='inline-flex';
+        document.getElementById('mb-client-badge').textContent='🔑 '+code;
+        unlockModes();
+      }else{
+        document.getElementById('key-error-home').style.display='block';
+      }
+    }
+
+    function startQuiz(e){
+      if(!licenceOk&&FICHE_TYPE==='protege')return;
+      if(mode==='revision'){showPage('page-revision');buildRevisionSidebar();return;}
+      currentQ=0;activeSet=e||questionsData.map((_,i)=>i);userAnswers=new Array(activeSet.length).fill(null);validated=new Array(activeSet.length).fill(false);
+      if(FICHE_TYPE==='semi'&&!licenceOk&&activeSet.length>QUESTIONS_GRATUITES){activeSet=activeSet.slice(0,QUESTIONS_GRATUITES);}
+      showPage('page-question');document.getElementById('btn-validate').classList.add('hidden');document.getElementById('btn-correction').classList.add('hidden');
+      if(mode==='exam'){examSeconds=TOTAL_EXAM_SEC;perQSeconds=PER_Q_SEC;document.getElementById('timer-wrap').classList.remove('hidden');document.getElementById('perq-timer').classList.remove('hidden');startExamTimer();startPerQTimer();}
+      else{document.getElementById('timer-wrap').classList.add('hidden');document.getElementById('perq-timer').classList.add('hidden');if(examTimer)clearInterval(examTimer);if(perQTimer)clearInterval(perQTimer);document.getElementById('btn-validate').classList.remove('hidden');}
+      updateMiniBar();renderQuestion();
+    }
+    function showPage(e){document.querySelectorAll('#main-app .page').forEach(p=>p.classList.remove('active'));document.getElementById(e).classList.add('active');document.getElementById('main-scroll').scrollTop=0;}
+    function goHome(){if(examTimer)clearInterval(examTimer);if(perQTimer)clearInterval(perQTimer);showPage('page-home');}
+    function updateMiniBar(){const e=currentQ+1,t=activeSet.length;document.getElementById('mb-q-counter').textContent=`Q${e}/${t}`;document.getElementById('mb-progress-fill').style.width=(e/t*100)+'%';}
+    function selectMode(e){if(FICHE_TYPE==='protege'&&!licenceOk)return;mode=e;['train','revision','exam'].forEach(x=>document.getElementById('mode-'+x)?.classList.remove('selected'));document.getElementById('mode-'+e).classList.add('selected');const t=document.getElementById('btn-start');t.disabled=false;t.innerHTML=e==='train'?'📝 Mode Entraînement':e==='revision'?'📖 Mode Révision':'⏱️ Mode Examen (60 min)';document.getElementById('mb-mode-badge').style.display='inline-flex';document.getElementById('mb-mode-badge').textContent=e==='train'?'📝 Entraînement':e==='revision'?'📖 Révision':'⏱️ Examen';}
+    function renderQuestion(){const e=currentQ,t=activeSet[e],n=questionsData[t],o=activeSet.length;document.getElementById('q-statement').innerHTML=`❓ <strong>Q${n.id}.</strong> ${n.statement}`;document.getElementById('mb-q-counter').textContent=`Q${e+1}/${o}`;document.getElementById('mb-progress-fill').style.width=((e+1)/o*100)+'%';const s=document.getElementById('q-choices');s.innerHTML='';const a=Array.isArray(n.correct)?n.correct:[n.correct];['A','B','C','D','E'].forEach((o,i)=>{if(i<n.choices.length){const r=document.createElement('button');r.className='choice-btn';if(validated[e]){if(a.includes(i))r.classList.add('correct');else if(userAnswers[e]&&userAnswers[e].includes(i))r.classList.add('wrong');}else if(userAnswers[e]&&userAnswers[e].includes(i))r.classList.add('selected');r.innerHTML=`<span class="choice-letter">${o}</span><span class="choice-text">${n.choices[i]}</span>`;if(validated[e])r.disabled=true;else r.onclick=()=>selectChoice(i);s.appendChild(r);}});const i=userAnswers[e]&&userAnswers[e].length>0;if(mode==='train'){document.getElementById('btn-validate').classList.remove('hidden');document.getElementById('btn-validate').disabled=(!i||validated[e]);const t=document.getElementById('btn-correction');(validated[e])?t.classList.remove('hidden'):t.classList.add('hidden');}const c=document.getElementById('feedback-box'),d=document.getElementById('feedback-placeholder');c.className='feedback-box';if(validated[e]&&mode==='train'){d.style.display='none';buildFeedback(n,userAnswers[e]);}else{c.style.display='none';d.style.display='flex';}document.getElementById('btn-prev').disabled=(e===0);const l=document.getElementById('btn-next');if(e===o-1){l.innerHTML='🏁 Terminer';l.className='btn btn-gold';}else{l.innerHTML='Suivant →';l.className='btn btn-green';}if(window.renderMathInElement)renderMathInElement(document.getElementById('q-statement'),{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});if(mode==='exam'){perQSeconds=PER_Q_SEC;updatePerQTimerDisplay();}}
+    function selectChoice(e){if(validated[currentQ])return;userAnswers[currentQ]||(userAnswers[currentQ]=[]);const t=userAnswers[currentQ].indexOf(e);t>-1?userAnswers[currentQ].splice(t,1):userAnswers[currentQ].push(e);renderQuestion();}
+    function arraysEqual(e,t){if(!e||!t)return false;if(e.length!==t.length)return false;const n=[...e].sort(),o=[...t].sort();return n.every((e,t)=>e===o[t]);}
+    function validateAnswer(){if(!userAnswers[currentQ]||userAnswers[currentQ].length===0)return;validated[currentQ]=true;renderQuestion();}
+    function buildFeedback(e,t){const n=document.getElementById('feedback-box'),o=document.getElementById('feedback-placeholder');o.style.display='none';const s=Array.isArray(e.correct)?e.correct:[e.correct],a=arraysEqual(t,s);n.classList.add('visible',a?'correct':'wrong');n.style.display='block';document.getElementById('badge-icon').textContent=a?'✅':'❌';document.getElementById('feedback-result-text').textContent=a?'Bonne réponse !':'Réponse incorrecte';const i=['A','B','C','D','E'],c=s.map(t=>i[t]+'. '+e.choices[t]).join(' ; ');let d='';for(let t=0;t<e.choices.length;t++){if(!s.includes(t)&&e.correction_detaillee?.faux){const n=i[t];if(e.correction_detaillee.faux[n])d+=`<div style="margin-bottom:2px;"><strong style="color:var(--red);">${n} :</strong> ${e.correction_detaillee.faux[n]}</div>`;}}document.getElementById('feedback-body').innerHTML=`<div class="feedback-label">📚 THÈME</div><div class="feedback-text">${e.theme}</div><div class="feedback-label">📘 NIVEAU</div><div class="feedback-text">${e.niveau_scolaire}</div><div class="feedback-label">📖 CHAPITRE</div><div class="feedback-text">${e.chapitre}</div><div class="feedback-label">📚 RAPPEL DE COURS</div><div class="feedback-text">${e.rappel_cours||e.phenomene}</div><div class="feedback-label">🔬 PHÉNOMÈNE</div><div class="feedback-text">${e.phenomene}</div><div class="feedback-label">✅ CORRECTION</div><div class="correction-block"><strong>Réponse(s) :</strong> ${c}<br>${e.correction_detaillee?.juste||''}</div><div class="feedback-label">❌ LES AUTRES SONT FAUX</div><div class="correction-block">${d}</div><div class="feedback-label">⚠️ ERREUR FRÉQUENTE</div><div class="feedback-text">${e.erreur_frequente}</div><div class="astuce-box"><div class="astuce-title">💡 Astuce (FR)</div>${e.astuce_fr}</div><div class="astuce-box"><div class="astuce-title">💡 استعارة عربية</div>${e.astuce_ar}</div>`;}
+    function showCorrection(){buildFeedback(questionsData[activeSet[currentQ]],userAnswers[currentQ]);}
+    function prevQuestion(){if(currentQ>0){currentQ--;renderQuestion();if(mode==='exam'){perQSeconds=PER_Q_SEC;updatePerQTimerDisplay();}}}
+    function nextQuestion(){if(currentQ<activeSet.length-1){currentQ++;renderQuestion();if(mode==='exam'){perQSeconds=PER_Q_SEC;updatePerQTimerDisplay();}}else{finishQuiz();}}
+    function finishQuiz(){if(examTimer)clearInterval(examTimer);if(perQTimer)clearInterval(perQTimer);showPage('page-results');renderResults();document.getElementById('timer-wrap').classList.add('hidden');document.getElementById('perq-timer').classList.add('hidden');}
+    function renderResults(){let e=0;const t=document.getElementById('result-tbody');t.innerHTML='';const n={};activeSet.forEach((t,o)=>{const s=questionsData[t],a=Array.isArray(s.correct)?s.correct:[s.correct],i=arraysEqual(userAnswers[o],a);i&&e++;const c=s.statement.length>40?s.statement.substring(0,40)+'…':s.statement;t.innerHTML+=`<tr><td><strong>Q${s.id}</strong></td><td style="font-size:10px;">${c}</td><td style="font-size:10px;">${s.theme}</td><td class="${i?'r-ok':'r-ko'}">${i?'✅':'❌'}</td></tr>`;n[s.theme]||(n[s.theme]={total:0,correct:0});n[s.theme].total++;i&&n[s.theme].correct++;});const o=Math.round(e/activeSet.length*100);document.getElementById('result-pct').textContent=o+'%';document.getElementById('result-sub').textContent=`${e} / ${activeSet.length} bonnes réponses`;document.getElementById('result-badge').textContent=o>=80?'🏆':o>=50?'👍':'💪';document.getElementById('btn-retry-failed').style.display=activeSet.some((e,t)=>!arraysEqual(userAnswers[t],Array.isArray(questionsData[e].correct)?questionsData[e].correct:[questionsData[e].correct]))?'flex':'none';document.getElementById('result-themes').innerHTML='<table class="result-table"><thead><tr><th>Thème</th><th>Score</th><th>%</th></tr></thead><tbody>'+Object.entries(n).map(([e,t])=>{const n=Math.round(t.correct/t.total*100);return`<tr><td>${n>=80?'🟢':n>=50?'🟡':'🔴'} ${e}</td><td>${t.correct}/${t.total}</td><td>${n}%</td></tr>`;}).join('')+'</tbody></table>';}
+    function retryFailed(){const e=activeSet.filter((e,t)=>!arraysEqual(userAnswers[t],Array.isArray(questionsData[e].correct)?questionsData[e].correct:[questionsData[e].correct]));if(e.length>0)startQuiz(e);}
+    function startExamTimer(){updateExamTimerDisplay();examTimer=setInterval(()=>{examSeconds--;updateExamTimerDisplay();if(examSeconds<=0){clearInterval(examTimer);clearInterval(perQTimer);finishQuiz();}},1000);}
+    function updateExamTimerDisplay(){const e=Math.floor(examSeconds/60),t=examSeconds%60,n=document.getElementById('timer-badge');n.textContent=`⏱ ${String(e).padStart(2,'0')}:${String(t).padStart(2,'0')}`;n.className='timer-badge';if(examSeconds<=300)n.classList.add('danger');else if(examSeconds<=900)n.classList.add('warning');}
+    function startPerQTimer(){updatePerQTimerDisplay();perQTimer=setInterval(()=>{perQSeconds--;updatePerQTimerDisplay();if(perQSeconds<=0){clearInterval(perQTimer);if(mode==='exam'){validated[currentQ]=true;nextQuestion();}}},1000);}
+    function updatePerQTimerDisplay(){const e=Math.floor(perQSeconds/60),t=perQSeconds%60,n=document.getElementById('perq-timer');n.textContent=`⚡ ${String(e).padStart(1,'0')}:${String(t).padStart(2,'0')}`;n.className='perq-timer';if(perQSeconds<=30)n.classList.add('danger');else if(perQSeconds<=60)n.classList.add('warning');}
+    document.addEventListener('keydown',e=>{const t=document.querySelector('#main-app .page.active');if(!t||t.id!=='page-question')return;const n=e.key.toUpperCase();if(['A','B','C','D','E'].includes(n)&&!validated[currentQ])selectChoice(['A','B','C','D','E'].indexOf(n));if(e.key==='Enter'){if(mode==='train'){const e=document.getElementById('btn-validate');if(!e.disabled)validateAnswer();}}if(e.key==='ArrowRight')nextQuestion();if(e.key==='ArrowLeft')prevQuestion();});
+
+    // ═══════════════ RÉVISION ═══════════════
+    const themeIcons={"Géologie":"🌍","Écologie":"🌿","Immunologie":"🦠","Nutrition":"🍎","Biologie cellulaire":"🔬","Génétique":"🧬","Reproduction et santé":"🧬","Neurophysiologie":"🧠","Amélioration production végétale":"🌱","Microbes et organisme":"🦠","Découvrir gérer environnement":"🌍","Exploitation ressources géologiques":"⛏️","Gestion écosystèmes":"🌿","Êtres vivants":"🔬","Nutrition et santé":"🍎","Dynamique globe et évolution":"🌋","Évolution biologique":"🦎","Immunité":"🦠"};
+    const themeMapping={"Exploitation ressources géologiques":"Géologie","Gestion écosystèmes":"Écologie","Nutrition et santé":"Nutrition","Êtres vivants":"Biologie cellulaire","Reproduction et santé":"Reproduction et santé","Immunité":"Immunologie","Dynamique globe et évolution":"Géologie","Amélioration production végétale":"Nutrition","Microbes et organisme":"Immunologie","Découvrir gérer environnement":"Géologie","Évolution biologique":"Génétique","Géologie":"Géologie","Écologie":"Écologie","Immunologie":"Immunologie","Nutrition":"Nutrition","Biologie cellulaire":"Biologie cellulaire","Génétique":"Génétique","Neurophysiologie":"Neurophysiologie"};
+    const resumesThemes = {
+  "Géologie":{notions:["Structure du globe","Tectonique des plaques","Stratigraphie et fossiles","Ressources tunisiennes","Géologie tunisienne","Minéralogie"],definitions:["Fossile stratigraphique","Accrétion","Flysch"],confusions:["Fossile stratigraphique ≠ fossile de faciès","Granite ≠ basalte","Texture ≠ structure des sols"]},
+  "Biologie cellulaire":{notions:["Cellule eucaryote vs procaryote","Virus","Chloroplaste"],definitions:["Procaryote","Rétrovirus"],confusions:["Procaryote ≠ eucaryote","Virus ≠ bactérie"]},
+  "Génétique":{notions:["Méiose et brassage","Chromosomes","Code génétique","Polyallélisme","Hérédité liée au sexe","Dihybridisme"],definitions:["Crossing-over","Codominance","Test-cross","Épistasie"],confusions:["Méiose ≠ mitose ≠ fécondation","Génotype ≠ phénotype"]},
+  "Immunologie":{notions:["Groupes sanguins","Vaccination vs sérothérapie","Multiplication bactérienne"],definitions:["Agglutination","Sérothérapie"],confusions:["O donneur ≠ O receveur","Vaccin ≠ sérum"]},
+  "Neurophysiologie":{notions:["PPSE et PPSI","Conduction saltatoire","Potentiel d'action","Interneurones"],definitions:["PPSE","PPSI","PA"],confusions:["PPSE ≠ PPSI","PA ≠ potentiel local"]},
+  "Nutrition":{notions:["Photosynthèse","Respiration","Hormones et glycémie","Auxines","Caroténoïdes"],definitions:["VO₂ Max","Insuline","Auxine"],confusions:["Phase claire ≠ phase sombre","Auxine ≠ cytokinine"]},
+  "Reproduction et santé":{notions:["Oviparité","Incubation","Embryogenèse","Méiose"],definitions:["Incubation","Morula/Blastula/Gastrula"],confusions:["Blastula ≠ gastrula"]},
+  "Écologie":{notions:["Étages bioclimatiques","Biodiversité tunisienne","Espèces endémiques","Flore marine"],definitions:["Étage bioclimatique","Endémisme"],confusions:["Espèce rare ≠ endémique","Poacées abondantes ≠ Astéracées diverses"]}
+};
+    const fichesCours = {
+  "1ère":[{theme:"Amélioration production végétale",chapitre:"Nutrition minérale",url:"https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch1_Nutrition_Minerale.html",ouvert:false},{theme:"Amélioration production végétale",chapitre:"Nutrition carbonée",url:"https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch2_Nutrition_carbonee.html",ouvert:false},{theme:"Amélioration production végétale",chapitre:"Multiplication végétative",url:"https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch3_Multiplication_vegetative.html",ouvert:false},{theme:"Microbes et organisme",chapitre:"Diversité du monde microbien",url:"https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème2__microbes_et_organisme/fiche_cours_P2Ch1_Diversite_monde_microbien.html",ouvert:false},{theme:"Microbes et organisme",chapitre:"Maladies infectieuses",url:"https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème2__microbes_et_organisme/fiche_cours_P2Ch2_Maladies_infectieuses.html",ouvert:true}],
+  "2ème":[],"3ème":[],"4ème":[]
+};
+
+    function buildRevisionSidebar(){const sb=document.getElementById('revision-sidebar');sb.innerHTML='';const bp=document.createElement('button');bp.className='rev-tab active';bp.textContent='📚 Prog. Officiel';bp.onclick=()=>{sb.querySelectorAll('.rev-tab').forEach(b=>b.classList.remove('active'));bp.classList.add('active');showProgrammeOfficiel();};sb.appendChild(bp);const tt=new Set();Object.values(fichesCours).flat().forEach(f=>tt.add(f.theme));tt.forEach(th=>{const b=document.createElement('button');b.className='rev-tab';b.textContent=(themeIcons[th]||'📌')+' '+th;b.onclick=()=>{sb.querySelectorAll('.rev-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');showRevisionTheme(th);};sb.appendChild(b);});showProgrammeOfficiel();}
+    function showProgrammeOfficiel(){const c=document.getElementById('revision-content');let h='<div class="rev-title">📚 Programme Officiel SVT</div><div class="programme-accordeon">';Object.entries(fichesCours).forEach(([niv,fs])=>{const nl=niv==="1ère"?"1ère année":niv==="2ème"?"2ème année":niv==="3ème"?"3ème année":"4ème année";h+=`<div class="accordeon-niveau open"><button class="niveau-header">📘 ${nl}</button><div class="niveau-body">`;const tm=new Map();fs.forEach(f=>{if(!tm.has(f.theme))tm.set(f.theme,[]);tm.get(f.theme).push(f);});tm.forEach((ft,nm)=>{h+=`<div class="theme-block"><div class="theme-name">${themeIcons[nm]||'📌'} ${nm}</div>`;ft.forEach(f=>{h+=`<div class="chapitre-item"><div class="chapitre-name">${f.chapitre}</div>`;if(f.ouvert){h+=`<a href="${f.url}" target="_blank" class="fiche-link">🔗 Gratuit</a>`;}else{h+=`<span class="fiche-lock">🔒 Pack</span>`;}h+=`</div>`;});h+='</div>';});h+='</div></div>';});h+=`<div class="pack-promo"><h4>🛒 Pack Cours + QCM SVT — 30 DT</h4><p>Toutes les fiches + QCM</p><a href="../../commander.html" class="btn btn-gold">Commander</a></div></div>`;c.innerHTML=h;document.querySelectorAll('.niveau-header').forEach(b=>{b.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});}
+    function showRevisionTheme(th){const c=document.getElementById('revision-content');const mt=themeMapping[th]||th;const rd=resumesThemes[mt];let h=`<div class="rev-title">${themeIcons[th]||'📌'} ${th}</div>`;if(rd){h+=`<div class="rev-block"><h4>📘 NOTIONS ESSENTIELLES</h4><ul>${rd.notions.map(n=>'<li>'+n+'</li>').join('')}</ul></div>`;h+=`<div class="rev-block def-block"><h4>📖 DÉFINITIONS CLÉS</h4><ul>${rd.definitions.map(d=>'<li>'+d+'</li>').join('')}</ul></div>`;h+=`<div class="rev-block piege-block"><h4>⚠️ CONFUSIONS FRÉQUENTES</h4><ul>${rd.confusions.map(p=>'<li>'+p+'</li>').join('')}</ul></div>`;}Object.entries(fichesCours).forEach(([niv,fs])=>{const ft=fs.filter(f=>f.theme===th);if(ft.length>0){const nl=niv==="1ère"?"1ère":niv==="2ème"?"2ème":niv==="3ème"?"3ème":"4ème";h+=`<div class="rev-block"><h4>📘 ${nl} année — Fiches</h4>`;ft.forEach(f=>{h+=`<div style="margin-bottom:4px">${f.chapitre} : `;if(f.ouvert){h+=`<a href="${f.url}" target="_blank" class="fiche-link">🔗 Gratuit</a>`;}else{h+=`<span class="fiche-lock">🔒 Pack</span>`;}h+=`</div>`;});h+=`</div>`;}});h+=`<div class="pack-promo"><h4>🛒 Pack Cours + QCM SVT — 30 DT</h4><p>Toutes les fiches + QCM</p><a href="../../commander.html" class="btn btn-gold">Commander</a></div>`;c.innerHTML=h;}
+  </script>
+</body>
+</html>
