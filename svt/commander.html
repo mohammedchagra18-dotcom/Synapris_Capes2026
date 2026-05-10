@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Synapris - Fiches QCM interactives et cours de SVT pour le CAPES Tunisie. Préparez-vous efficacement avec nos packs d'entraînement.">
+    <title>Synapris — Offres SVT</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f1f3d;
+            --primary-mid: #1a3c6e;
+            --accent: #f0a500;
+            --accent-dark: #d4900a;
+            --green: #2e7d32;
+            --green-light: #e8f5e9;
+            --white: #ffffff;
+            --gray: #6c757d;
+            --gray-light: #f5f7fa;
+            --sky: #3b82f6;
+            --sky-light: #eff6ff;
+            --sky-border: #93c5fd;
+            --shadow: 0 4px 20px rgba(15,31,61,0.10);
+            --shadow-lg: 0 8px 40px rgba(15,31,61,0.15);
+            --radius: 16px;
+            --font-ar: 'Amiri', serif;
+            --font-heading: 'Inter', sans-serif;
+            --font-fr: 'Source Sans 3', sans-serif;
+        }
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{
+            font-family:var(--font-fr);
+            font-size:16px;
+            line-height:1.7;
+            color:#1a1a2e;
+            background:linear-gradient(160deg,#e8f0f8 0%,#f0f4f8 30%,#fdf8f0 100%);
+            min-height:100vh;
+        }
+
+        .site-header{
+            background:linear-gradient(135deg,var(--primary) 0%,var(--primary-mid) 100%);
+            color:var(--white);padding:12px 20px;
+            box-shadow:0 2px 16px rgba(0,0,0,0.30);
+        }
+        .header-grid{display:grid;grid-template-columns:100px 1fr 200px;gap:12px;align-items:center;max-width:1000px;margin:0 auto}
+        .header-col1{display:flex;flex-direction:column;align-items:center;gap:4px}
+        .logo-square{width:80px;height:80px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:30px;font-weight:800;color:var(--primary);border:3px solid var(--white);box-shadow:0 0 0 4px rgba(255,255,255,0.20);overflow:hidden}
+        .logo-square img{width:100%;height:100%;object-fit:cover}
+        .header-col1 .verset{font-family:var(--font-ar);font-size:11px;font-weight:700;color:rgba(255,255,255,0.90);text-align:center;font-style:italic;line-height:1.3}
+        .header-col2{background:var(--accent);border-radius:10px;padding:10px 14px;text-align:center}
+        .header-col2 .concours-ar{font-family:var(--font-ar);font-size:15px;font-weight:800;color:var(--primary);line-height:1.4}
+        .header-col3{text-align:center}
+        .header-col3 .marque{font-size:14px;font-weight:800;color:var(--white);letter-spacing:1px}
+        .header-col3 .marque span{color:var(--accent)}
+        .header-col3 .titre-page{font-size:20px;font-weight:800;color:var(--accent);letter-spacing:2px}
+
+        .hero{text-align:center;padding:50px 20px 40px;max-width:700px;margin:0 auto}
+        .hero .highlight{display:inline-block;background:linear-gradient(135deg,var(--accent),#f5c542);color:var(--primary);padding:4px 14px;border-radius:20px;font-weight:700;font-size:13px;margin-bottom:20px}
+        .hero .slogan{font-family:var(--font-ar);font-size:28px;font-weight:800;color:var(--primary);margin-bottom:8px;line-height:1.5}
+        .hero .slogan-sub{font-size:15px;color:var(--gray);margin-bottom:24px;line-height:1.6}
+        .btn-scroll{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:var(--white);padding:12px 28px;border-radius:30px;text-decoration:none;font-weight:700;font-size:15px;transition:all .3s;box-shadow:0 4px 16px rgba(15,31,61,0.30)}
+        .btn-scroll:hover{background:var(--primary-mid);transform:translateY(-2px);box-shadow:0 6px 24px rgba(15,31,61,0.40)}
+
+        .offres-section{max-width:900px;margin:0 auto;padding:20px 20px 50px}
+        .offres-title{text-align:center;font-family:var(--font-heading);font-size:26px;font-weight:800;color:var(--primary);margin-bottom:12px}
+        .offres-subtitle{text-align:center;font-size:13px;color:var(--gray);margin-bottom:30px}
+        .offres-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;perspective:1000px}
+
+        .flip-card{min-height:520px;cursor:pointer}
+        .flip-card-inner{position:relative;width:100%;height:100%;min-height:520px;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);transform-style:preserve-3d}
+        .flip-card.flipped .flip-card-inner{transform:rotateY(180deg)}
+        .flip-card-front,.flip-card-back{position:absolute;width:100%;height:100%;min-height:520px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px 22px;display:flex;flex-direction:column}
+        .flip-card-front{background:var(--white);border:2px solid #e0e8f0;text-align:center;z-index:2}
+        .flip-card-back{background:linear-gradient(160deg,#f8faff 0%,#f0f4f8 100%);border:2px solid var(--sky-border);transform:rotateY(180deg);overflow-y:auto;text-align:left}
+        .flip-card.premium .flip-card-front{border-color:var(--accent);border-width:3px}
+        .flip-card.premium .flip-card-back{border-color:var(--accent);border-width:3px}
+
+        .badge-premium{position:absolute;top:14px;right:-30px;background:var(--accent);color:var(--primary);font-size:10px;font-weight:800;padding:4px 40px;transform:rotate(45deg);letter-spacing:1px;z-index:3}
+
+        .offre-icon{font-size:40px;margin-bottom:8px}
+        .offre-name{font-family:var(--font-heading);font-size:20px;font-weight:800;color:var(--primary);margin-bottom:4px}
+        .offre-price{font-size:36px;font-weight:800;color:var(--accent-dark);margin-bottom:6px}
+        .offre-price span{font-size:16px;color:var(--gray)}
+        .offre-desc{font-size:13px;color:var(--gray);margin-bottom:14px;line-height:1.5}
+        .offre-features{list-style:none;text-align:left;font-size:13px;margin-bottom:16px;flex:1}
+        .offre-features li{padding:5px 0;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;gap:8px}
+        .offre-features li:last-child{border-bottom:none}
+        .feat-incl{color:var(--green);font-weight:600}
+        .feat-excl{color:#aaa}
+        .flip-hint{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--sky);font-weight:600;cursor:pointer;padding:8px 16px;border:2px dashed var(--sky-border);border-radius:20px;margin-top:auto;transition:all .2s}
+        .flip-hint:hover{background:var(--sky-light);border-color:var(--sky)}
+
+        .back-title{font-family:var(--font-heading);font-size:16px;font-weight:700;color:var(--primary);margin-bottom:14px;text-align:center;padding-bottom:8px;border-bottom:2px solid var(--accent)}
+        .back-section{margin-bottom:12px}
+        .back-section-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:6px}
+        .back-link{display:flex;align-items:center;gap:6px;padding:6px 8px;font-size:11px;color:var(--primary);text-decoration:none;border-radius:6px;transition:all .15s;font-weight:600}
+        .back-link:hover{background:var(--sky-light);color:var(--sky)}
+        .link-icon{font-size:13px;flex-shrink:0}
+        .back-flip-hint{display:flex;align-items:center;justify-content:center;gap:4px;font-size:10px;color:var(--gray);margin-top:auto;padding-top:8px;cursor:pointer}
+
+        .btn-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:#25d366;color:var(--white);border:none;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;cursor:pointer;transition:all .3s;font-family:var(--font-fr);margin-top:auto}
+        .btn-whatsapp:hover{background:#1ebe57;transform:scale(1.02)}
+
+        .pourquoi-section{max-width:700px;margin:0 auto;padding:30px 20px 50px;text-align:center}
+        .pourquoi-title{font-family:var(--font-heading);font-size:22px;font-weight:800;color:var(--primary);margin-bottom:24px}
+        .pourquoi-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+        .pourquoi-item{background:var(--white);border-radius:12px;padding:18px 14px;box-shadow:var(--shadow)}
+        .pourquoi-item .pi-icon{font-size:28px;margin-bottom:6px}
+        .pourquoi-item .pi-title{font-weight:700;font-size:13px;color:var(--primary);margin-bottom:4px}
+        .pourquoi-item .pi-desc{font-size:11px;color:var(--gray);line-height:1.4}
+
+        .etapes-section{max-width:600px;margin:0 auto;padding:20px 20px 50px;text-align:center}
+        .etapes-title{font-family:var(--font-heading);font-size:22px;font-weight:800;color:var(--primary);margin-bottom:24px}
+        .etape{display:flex;align-items:center;gap:14px;background:var(--white);border-radius:12px;padding:16px 18px;margin-bottom:10px;box-shadow:var(--shadow);text-align:left}
+        .etape-num{width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;flex-shrink:0}
+        .etape-text{font-size:14px;font-weight:600;color:var(--primary)}
+
+        .contact-section{max-width:500px;margin:0 auto;padding:30px 20px 50px;text-align:center}
+        .contact-card{background:linear-gradient(135deg,var(--primary),var(--primary-mid));color:var(--white);border-radius:var(--radius);padding:30px 20px;box-shadow:var(--shadow-lg)}
+        .contact-card h3{font-size:20px;margin-bottom:8px}
+        .contact-card p{font-size:13px;opacity:.85;margin-bottom:16px}
+        .contact-card .btn-whatsapp{width:auto;display:inline-flex}
+
+        .site-footer{background:var(--primary);color:rgba(255,255,255,0.70);padding:12px 20px;text-align:center;font-size:11px}
+        .site-footer strong{color:var(--accent);font-weight:600}
+
+        @media(max-width:700px){
+            .header-grid{grid-template-columns:60px 1fr 100px;gap:6px}
+            .logo-square{width:50px;height:50px;font-size:20px;border-radius:10px}
+            .header-col1 .verset{font-size:7px}
+            .header-col2{padding:6px 8px}
+            .header-col2 .concours-ar{font-size:10px}
+            .header-col3 .marque{font-size:10px}
+            .header-col3 .titre-page{font-size:14px}
+            .hero .slogan{font-size:20px}
+            .offres-grid{grid-template-columns:1fr}
+            .pourquoi-grid{grid-template-columns:1fr 1fr}
+            .flip-card,.flip-card-inner,.flip-card-front,.flip-card-back{min-height:480px}
+            .badge-premium{font-size:8px;top:10px;right:-35px;padding:3px 35px}
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-grid">
+            <div class="header-col1">
+                <div class="logo-square"><img src="images/logo.png" alt="Synapris" onerror="this.style.display='none';this.parentElement.textContent='S'"></div>
+                <div class="verset">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</div>
+            </div>
+            <div class="header-col2">
+                <div class="concours-ar">CAPES SVT — دورة 2026<br>علوم الحياة و الأرض</div>
+            </div>
+            <div class="header-col3">
+                <div class="marque"><span>SYNAPRIS</span> — CAPES SVT</div>
+                <div class="titre-page">NOS OFFRES</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="highlight">✨ Votre réussite commence ici</div>
+        <div class="slogan">Éclairer l'intelligence,<br>une question à la fois</div>
+        <p class="slogan-sub">Préparez le CAPES SVT 2026 avec des QCM interactifs et des fiches de cours<br>conçus par un enseignant tunisien, pour les candidats tunisiens.</p>
+        <a href="#offres" class="btn-scroll">🚀 Voir les offres ▼</a>
+    </section>
+
+    <section class="offres-section" id="offres">
+        <h2 class="offres-title">🎯 Choisissez votre pack</h2>
+        <p class="offres-subtitle">👆 Cliquez sur une carte pour voir le détail des fiches incluses</p>
+        <div class="offres-grid">
+
+            <!-- PACK QCM -->
+            <div class="flip-card" id="flip-qcm">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="offre-icon">📝</div>
+                        <div class="offre-name">Pack QCM</div>
+                        <div class="offre-price">15 <span>DT</span></div>
+                        <p class="offre-desc">Tous les QCM pour vous entraîner.</p>
+                        <ul class="offre-features">
+                            <li><span class="feat-incl">✅</span> 5 QCM CAPES (2007-2015)</li>
+                            <li><span class="feat-incl">✅</span> 2 QCM Manuels (3★ et 2★)</li>
+                            <li><span class="feat-incl">✅</span> Corrections détaillées</li>
+                            <li><span class="feat-incl">✅</span> Mode Entraînement + Examen</li>
+                            <li><span class="feat-incl">✅</span> Accès illimité à vie</li>
+                            <li><span class="feat-excl">❌</span> Fiches de cours</li>
+                        </ul>
+                        <div class="flip-hint" onclick="event.stopPropagation();document.getElementById('flip-qcm').classList.toggle('flipped')">🔍 Voir le détail des fiches</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="back-title">📝 Fiches QCM incluses</div>
+                        <div class="back-section">
+                            <div class="back-section-title">📋 CAPES Officiel (5 fiches)</div>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/capes_2007.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM CAPES 2007 (accès libre)</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/Capes_2008_V1.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM CAPES 2008</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/capes_2009_V2.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM CAPES 2009</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/capes_2014_V2.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM CAPES 2014</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/capes_2015_V1.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM CAPES 2015</a>
+                        </div>
+                        <div class="back-section">
+                            <div class="back-section-title">📚 Manuels scolaires (2 fiches)</div>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/manuels_3etoiles.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM Manuels 3★ (Difficile)</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/manuels_2etoiles.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM Manuels 2★ (Moyen)</a>
+                        </div>
+                        <div class="back-flip-hint" onclick="event.stopPropagation();document.getElementById('flip-qcm').classList.toggle('flipped')">↩ Retourner la carte</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PACK COMPLET -->
+            <div class="flip-card premium" id="flip-full">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="badge-premium">👑 RECOMMANDÉ</div>
+                        <div class="offre-icon">👑</div>
+                        <div class="offre-name">Pack Complet</div>
+                        <div class="offre-price">30 <span>DT</span></div>
+                        <p class="offre-desc">QCM + tous les cours SVT. La formule complète.</p>
+                        <ul class="offre-features">
+                            <li><span class="feat-incl">✅</span> 5 QCM CAPES (2007-2015)</li>
+                            <li><span class="feat-incl">✅</span> 2 QCM Manuels (3★ et 2★)</li>
+                            <li><span class="feat-incl">✅</span> Corrections détaillées</li>
+                            <li><span class="feat-incl">✅</span> Mode Entraînement + Examen</li>
+                            <li><span class="feat-incl">✅</span> <strong>+ Tous les cours SVT</strong></li>
+                            <li><span class="feat-incl">✅</span> Accès illimité à vie</li>
+                        </ul>
+                        <div class="flip-hint" onclick="event.stopPropagation();document.getElementById('flip-full').classList.toggle('flipped')">🔍 Voir le détail des fiches</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="back-title">📚 Toutes les fiches incluses</div>
+                        <div class="back-section">
+                            <div class="back-section-title">📋 QCM CAPES Officiel</div>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/capes_2007.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM CAPES 2007 (accès libre)</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/Capes_2008_V1.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM CAPES 2008</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/capes_2009_V2.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM CAPES 2009</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/capes_2014_V2.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM CAPES 2014</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/capes_2015_V1.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM CAPES 2015</a>
+                        </div>
+                        <div class="back-section">
+                            <div class="back-section-title">📚 QCM Manuels scolaires</div>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/manuels_3etoiles.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM Manuels 3★ (Difficile)</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/svt/manuels_2etoiles.html" target="_blank" class="back-link"><span class="link-icon">🔗</span> QCM Manuels 2★ (Moyen)</a>
+                        </div>
+                        <div class="back-section">
+                            <div class="back-section-title">📖 Cours SVT — Programme complet</div>
+                            <a href="https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch1_Nutrition_Minerale.html" target="_blank" class="back-link"><span class="link-icon">📖</span> 1ère — Nutrition minérale</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch2_Nutrition_carbonee.html" target="_blank" class="back-link"><span class="link-icon">📖</span> 1ère — Nutrition carbonée</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch2_Stratigraphie_Tectonique/Fiche_T1Ch2_Stratigraphie_Tectonique.html" target="_blank" class="back-link"><span class="link-icon">📖</span> 2ème — Stratigraphie</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch9_Regulation_Glycemie/Fiche__T1Ch9_Glycemie.html" target="_blank" class="back-link"><span class="link-icon">📖</span> 3ème — Régulation glycémie</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme4_Neurophysiologie/Ch1&Ch2_ReflexeMyotatique_TissuNerveux/Fiche__T4_Ch1&2_V2.html" target="_blank" class="back-link"><span class="link-icon">📖</span> 4ème — Neurophysiologie</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme3_Etres_vivants/Ch1_Cellule/Fiche__T3Ch1_Cellule.html" target="_blank" class="back-link"><span class="link-icon">📖</span> 2ème — La cellule</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme2_Genetique/T2Ch1&2/Fiche__T2P1Ch1&2_genes_expression.html" target="_blank" class="back-link"><span class="link-icon">📖</span> 3ème — Gènes et expression</a>
+                            <a href="https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme5_Immunite/Chapitres1&2__Soi_NonSoi_Immunité_specifique/Fiche_T5Ch1&2_V2.html" target="_blank" class="back-link"><span class="link-icon">📖</span> 4ème — Immunité</a>
+                            <span class="back-link" style="font-size:10px;color:var(--sky);font-style:italic;cursor:default">... et toutes les autres fiches du programme</span>
+                        </div>
+                        <div class="back-flip-hint" onclick="event.stopPropagation();document.getElementById('flip-full').classList.toggle('flipped')">↩ Retourner la carte</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="pourquoi-section">
+        <h2 class="pourquoi-title">🌟 Pourquoi choisir Synapris ?</h2>
+        <div class="pourquoi-grid">
+            <div class="pourquoi-item"><div class="pi-icon">🎯</div><div class="pi-title">Programme tunisien</div><div class="pi-desc">Conçu pour le CAPES SVT, par un enseignant qui connaît vos besoins.</div></div>
+            <div class="pourquoi-item"><div class="pi-icon">⚡</div><div class="pi-title">Feedback instantané</div><div class="pi-desc">Correction immédiate avec explication pour chaque question.</div></div>
+            <div class="pourquoi-item"><div class="pi-icon">⏱️</div><div class="pi-title">Mode Examen</div><div class="pi-desc">Chronomètre 60 minutes pour simuler les conditions réelles.</div></div>
+            <div class="pourquoi-item"><div class="pi-icon">📱</div><div class="pi-title">PC & Mobile</div><div class="pi-desc">Fonctionne partout, sans installation.</div></div>
+            <div class="pourquoi-item"><div class="pi-icon">💰</div><div class="pi-title">Prix accessible</div><div class="pi-desc">15 à 30 DT seulement, accès illimité à vie.</div></div>
+            <div class="pourquoi-item"><div class="pi-icon">🔑</div><div class="pi-title">Accès immédiat</div><div class="pi-desc">Clé personnelle livrée par WhatsApp après commande.</div></div>
+        </div>
+    </section>
+
+    <section class="etapes-section">
+        <h2 class="etapes-title">📖 Comment ça marche ?</h2>
+        <div class="etape"><div class="etape-num">1</div><div class="etape-text">Choisissez votre pack ci-dessus</div></div>
+        <div class="etape"><div class="etape-num">2</div><div class="etape-text">Contactez-moi sur WhatsApp pour commander</div></div>
+        <div class="etape"><div class="etape-num">3</div><div class="etape-text">Recevez votre clé d'accès personnelle</div></div>
+        <div class="etape"><div class="etape-num">4</div><div class="etape-text">Révisez, progressez et réussissez votre CAPES ! 🏆</div></div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-card">
+            <h3>💬 Une question ?</h3>
+            <p>Je suis disponible sur WhatsApp pour vous aider à choisir le pack qui vous convient.</p>
+            <a href="https://wa.me/21620002520?text=Bonjour%20Synapris%2C%20j'ai%20une%20question%20sur%20les%20packs%20SVT." class="btn-whatsapp" target="_blank">📞 +216 20 002 520</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>© 2026 <strong>Synapris</strong> — Éclairer l'intelligence · Tous droits réservés</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A' || e.target.closest('a')) return;
+                this.classList.toggle('flipped');
+            });
+        });
+    </script>
+
+</body>
+</html>
