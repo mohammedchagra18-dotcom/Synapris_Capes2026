@@ -1,0 +1,428 @@
+[
+  {
+    "id": 1,
+    "statement": "Le basalte se distingue du granite par :",
+    "choices": ["Sa structure microlithique", "Sa cristallisation lente et progressive", "Sa composition minéralogique", "Sa lave riche en silice"],
+    "correct": [0, 2],
+    "theme": "Géologie",
+    "chapitre": "Structure et composition du globe",
+    "niveau_scolaire": "3ème Sc.Exp",
+    "rappel_cours": "Le basalte est volcanique (refroidissement rapide, structure microlithique). Le granite est plutonique (refroidissement lent, structure grenue).",
+    "phenomene": "Basalte = volcanique = microlithique. Granite = plutonique = grenu.",
+    "correction_detaillee": {
+      "juste": "A : Structure microlithique. C : Composition minéralogique différente.",
+      "faux": {
+        "A": "Structure microlithique : correct.",
+        "B": "Cristallisation rapide pour le basalte.",
+        "D": "Le basalte est pauvre en silice."
+      }
+    },
+    "erreur_frequente": "Confondre structure et composition.",
+    "astuce_fr": "Basalte = Volcan = Rapide. Granite = Pluton = Lent.",
+    "astuce_ar": "البازلت كالعجينة التي جمدت فجأة، والغرانيت كالحلوى التي نضجت على نار هادئة."
+  },
+  {
+    "id": 2,
+    "statement": "Le strombe (Strombus bubonius) est un fossile caractéristique :",
+    "choices": ["De l'ère tertiaire", "De l'ère quaternaire", "D'un faciès marin littoral", "D'un faciès continental"],
+    "correct": [1, 2],
+    "theme": "Géologie",
+    "chapitre": "Stratigraphie",
+    "niveau_scolaire": "2ème Sc",
+    "rappel_cours": "Strombus bubonius est un fossile du Quaternaire marin littoral en Tunisie.",
+    "phenomene": "Marqueur bio-stratigraphique du Quaternaire et paléoécologique (mer chaude littorale).",
+    "correction_detaillee": {
+      "juste": "B : Quaternaire (Eutyrrhénien). C : Faciès marin littoral chaud.",
+      "faux": {
+        "A": "Tertiaire plus ancien.",
+        "D": "Mollusque marin, pas continental."
+      }
+    },
+    "erreur_frequente": "Confondre Strombe (Quaternaire) et Nummulites (Tertiaire).",
+    "astuce_fr": "Strombe = Sable (littoral) et Système Quaternaire.",
+    "astuce_ar": "السترمب هو ساعة الزمن الرابع وبوصلة البحار الدافئة."
+  },
+  {
+    "id": 3,
+    "statement": "Le moteur des mouvements des plaques est :",
+    "choices": ["La montée du magma", "La gravité universelle", "La convection thermique dans le manteau", "L'expansion océanique"],
+    "correct": [2],
+    "theme": "Géologie",
+    "chapitre": "Tectonique des plaques",
+    "niveau_scolaire": "3ème Sc.Exp",
+    "rappel_cours": "La chaleur interne crée des courants de convection dans l'asthénosphère, moteur de la tectonique.",
+    "phenomene": "Convection thermique = moteur des plaques.",
+    "correction_detaillee": {
+      "juste": "C : Convection dans le manteau supérieur.",
+      "faux": {
+        "A": "Conséquence, pas moteur.",
+        "B": "Force secondaire.",
+        "D": "Conséquence."
+      }
+    },
+    "erreur_frequente": "Croire que la lave pousse les continents.",
+    "astuce_fr": "Convection = Convecteur qui fait bouger les plaques.",
+    "astuce_ar": "تيارات الحمل هي المرجل الذي يغلي تحت الأرض ليحرك القارات."
+  },
+  {
+    "id": 4,
+    "statement": "Le pétrole est une roche :",
+    "choices": ["Carbonatée", "Carbonée", "Sédimentaire", "Métamorphique"],
+    "correct": [1, 2],
+    "theme": "Géologie",
+    "chapitre": "Ressources naturelles",
+    "niveau_scolaire": "2ème Sc",
+    "rappel_cours": "Le pétrole est une roche sédimentaire carbonée issue de la transformation de matière organique en milieu anaérobie.",
+    "phenomene": "Pétrole = roche sédimentaire carbonée liquide.",
+    "correction_detaillee": {
+      "juste": "B : Carbonée. C : Sédimentaire.",
+      "faux": {
+        "A": "Carbonatée = calcaire.",
+        "D": "Pas métamorphique."
+      }
+    },
+    "erreur_frequente": "Oublier que le pétrole, bien que liquide, est classé comme roche.",
+    "astuce_fr": "Pétrole = Sédiment Carboné (SC pour Super Carburant).",
+    "astuce_ar": "النفط هو عصير الحياة الغابرة الذي حُفظ في أقبية الرسوبيات."
+  },
+  {
+    "id": 5,
+    "statement": "Parmi les structures suivantes, celle(s) due(s) à une compression :",
+    "choices": ["Faille normale", "Faille inverse", "Fossé d'effondrement", "Chaîne de montagnes"],
+    "correct": [1, 3],
+    "theme": "Géologie",
+    "chapitre": "Tectonique",
+    "niveau_scolaire": "2ème Sc",
+    "rappel_cours": "Compression = raccourcissement = faille inverse + chaînes. Distension = étirement = faille normale + fossé.",
+    "phenomene": "Compression = inverse + montagnes.",
+    "correction_detaillee": {
+      "juste": "B : Faille inverse. D : Chaîne de montagnes.",
+      "faux": {
+        "A": "Faille normale = distension.",
+        "C": "Fossé = distension."
+      }
+    },
+    "erreur_frequente": "Inverser faille normale et faille inverse.",
+    "astuce_fr": "Inverse = Impact (choc/compression).",
+    "astuce_ar": "الصدع المعكوس هو رد فعل الأرض على الضغط، كالسجاد الذي يتجعد عند دفعه."
+  },
+  {
+    "id": 6,
+    "statement": "La photophosphorylation signifie la production d'ATP :",
+    "choices": ["Par l'action de la lumière sur l'ADP", "Par l'oxydation d'une molécule d'eau", "Au cours du transport des électrons dans la chaîne photosynthétique", "Par l'action de la lumière sur la chlorophylle"],
+    "correct": [2],
+    "theme": "Nutrition",
+    "chapitre": "Photosynthèse",
+    "niveau_scolaire": "4ème Sc.Exp",
+    "rappel_cours": "ATP produit lors du transfert d'électrons dans la chaîne photosynthétique des thylakoïdes.",
+    "phenomene": "Photophosphorylation = ATP grâce à la lumière via la chaîne photosynthétique.",
+    "correction_detaillee": {
+      "juste": "C : Transport des électrons dans la chaîne photosynthétique.",
+      "faux": {
+        "A": "Pas direct sur ADP.",
+        "B": "Source des électrons, pas la phosphorylation.",
+        "D": "Absorption, pas synthèse."
+      }
+    },
+    "erreur_frequente": "Confondre avec phosphorylation oxydative (respiration).",
+    "astuce_fr": "Photo-phosphorylation = Lumière + ATP (la pile de la cellule).",
+    "astuce_ar": "الضوء هو الوقود الذي يشحن بطاريات الخلية (ATP)."
+  },
+  {
+    "id": 7,
+    "statement": "Le système HLA ou CMH :",
+    "choices": ["Est un ensemble d'antigènes spécifiques", "Concerne les globules rouges", "Est un groupe de gènes du chromosome 6", "N'intervient pas dans l'immunité"],
+    "correct": [0, 2],
+    "theme": "Immunologie",
+    "chapitre": "Soi/Non-soi",
+    "niveau_scolaire": "4ème Sc.Exp",
+    "rappel_cours": "CMH = gènes chromosome 6. HLA = protéines = marqueurs du soi sur cellules nucléées.",
+    "phenomene": "HLA distingue le soi du non-soi.",
+    "correction_detaillee": {
+      "juste": "A : Antigènes spécifiques. C : Gènes chromosome 6.",
+      "faux": {
+        "B": "ABO = globules rouges.",
+        "D": "Base de la reconnaissance immunitaire."
+      }
+    },
+    "erreur_frequente": "Penser que HLA est sur les hématies.",
+    "astuce_fr": "Humain Leucocyte Antigène (sur globules blancs, pas rouges).",
+    "astuce_ar": "نظام HLA هو البصمة البيولوجية التي تفرق بين الصديق والعدو."
+  },
+  {
+    "id": 8,
+    "statement": "La décroissance de la biomasse s'explique par :",
+    "choices": ["Production primaire limitée", "Rendement énergétique qui diminue", "Herbivores consomment plus", "Faible matière vivante élaborée"],
+    "correct": [1, 3],
+    "theme": "Écologie",
+    "chapitre": "Relations trophiques",
+    "niveau_scolaire": "2ème Sc",
+    "rappel_cours": "Règle des 10% : ~10% de l'énergie passe au niveau suivant, le reste perdu en chaleur.",
+    "phenomene": "Perte d'énergie à chaque niveau trophique.",
+    "correction_detaillee": {
+      "juste": "B : Rendement diminue. D : Faible matière élaborée.",
+      "faux": {
+        "A": "Pas limitée en soi.",
+        "C": "Faux."
+      }
+    },
+    "erreur_frequente": "Croire que l'énergie se multiplie en montant dans la chaîne.",
+    "astuce_fr": "90% de perte à chaque étage.",
+    "astuce_ar": "الطاقة في الطبيعة كالغربال، كلما ارتفعنا ضاع الكثير وبقي القليل."
+  },
+  {
+    "id": 9,
+    "statement": "La niche écologique désigne :",
+    "choices": ["Conditions physicochimiques", "Habitat", "Fonction d'une population", "Niveau trophique"],
+    "correct": [2],
+    "theme": "Écologie",
+    "chapitre": "Écosystèmes",
+    "niveau_scolaire": "2ème Sc",
+    "rappel_cours": "Niche = rôle fonctionnel (profession). Habitat = lieu de vie (adresse).",
+    "phenomene": "Niche = fonction.",
+    "correction_detaillee": {
+      "juste": "C : Fonction dans la biocénose.",
+      "faux": {
+        "A": "Biotope.",
+        "B": "Habitat.",
+        "D": "Aspect restrictif."
+      }
+    },
+    "erreur_frequente": "Confondre niche (rôle) et habitat (lieu).",
+    "astuce_fr": "Niche = Nature de la fonction.",
+    "astuce_ar": "الموطن هو العنوان، والمتحد البيئي هو الوظيفة."
+  },
+  {
+    "id": 10,
+    "statement": "La relation légumineuses-bactéries fixatrices d'azote :",
+    "choices": ["Parasitisme", "Symbiose", "Mutualisme", "Commensalisme"],
+    "correct": [1, 2],
+    "theme": "Écologie",
+    "chapitre": "Interactions",
+    "niveau_scolaire": "2ème Sc",
+    "rappel_cours": "Rhizobium + légumineuse = mutualisme symbiotique (+/+).",
+    "phenomene": "Bénéfice réciproque = symbiose mutualiste.",
+    "correction_detaillee": {
+      "juste": "B : Symbiose. C : Mutualisme.",
+      "faux": {
+        "A": "+/-",
+        "D": "+/0"
+      }
+    },
+    "erreur_frequente": "Croire que les bactéries volent les nutriments.",
+    "astuce_fr": "L'union fait la force (azote contre sucre).",
+    "astuce_ar": "التعايش هو عقد مقايضة؛ الغذاء مقابل النيتروجين."
+  },
+  {
+    "id": 11,
+    "statement": "Le glycogène et l'amidon sont :",
+    "choices": ["Des polysaccharides constitués de glucose", "Des sucres réducteurs", "Des macromolécules de réserve des cellules animales", "Constitués de polymères linéaires"],
+    "correct": [0],
+    "theme": "Nutrition",
+    "chapitre": "Biochimie des glucides",
+    "niveau_scolaire": "3ème Sc.Exp",
+    "rappel_cours": "Glycogène (animal) et amidon (végétal) = polysaccharides de glucose ramifiés.",
+    "phenomene": "Polyosides de réserve énergétique.",
+    "correction_detaillee": {
+      "juste": "A : Polymères de glucose.",
+      "faux": {
+        "B": "Non réducteurs.",
+        "C": "Amidon = végétal.",
+        "D": "Ramifiés."
+      }
+    },
+    "erreur_frequente": "Penser que l'amidon est une petite molécule simple.",
+    "astuce_fr": "Amidon et Glycogène : Giga-molécules de Glucose.",
+    "astuce_ar": "النشا للزرع والغليكوجين للضرع؛ كلاهما مخازن طاقة من سكر العنب."
+  },
+  {
+    "id": 12,
+    "statement": "Les protéines :",
+    "choices": ["Sont des molécules informatives", "Sont constituées de séquences d'acides aminés", "Ne se rencontrent que dans les cellules animales", "Peuvent accomplir des fonctions enzymatiques"],
+    "correct": [1, 3],
+    "theme": "Biologie cellulaire",
+    "chapitre": "Biochimie des protéines",
+    "niveau_scolaire": "3ème Sc.Exp",
+    "rappel_cours": "Protéines = polymères d'acides aminés. Fonctions variées : enzymes, structure. ADN/ARN = molécules informatives.",
+    "phenomene": "Les protéines sont le produit de l'expression génétique.",
+    "correction_detaillee": {
+      "juste": "B : Séquences d'acides aminés. D : Fonctions enzymatiques.",
+      "faux": {
+        "A": "ADN/ARN = informatif.",
+        "C": "Existent chez tous les êtres vivants."
+      }
+    },
+    "erreur_frequente": "Confondre acide aminé et protéine.",
+    "astuce_fr": "Protéine = Perles (acides aminés) sur un fil.",
+    "astuce_ar": "البروتينات هي لبنات البناء وأدوات العمل في كل خلية حية."
+  },
+  {
+    "id": 13,
+    "statement": "Les enzymes :",
+    "choices": ["Sont des protéines catalytiques avec site actif", "Sont spécifiques à un substrat", "N'interviennent que dans les réactions d'hydrolyse", "Fonctionnent indépendamment du pH et température"],
+    "correct": [0, 1],
+    "theme": "Nutrition",
+    "chapitre": "Enzymologie",
+    "niveau_scolaire": "3ème Sc.Exp",
+    "rappel_cours": "Enzymes = biocatalyseurs protéiques, spécifiques, sensibles au pH et température.",
+    "phenomene": "Catalyse spécifique avec site actif.",
+    "correction_detaillee": {
+      "juste": "A : Protéines + site actif. B : Spécificité.",
+      "faux": {
+        "C": "Synthèses aussi.",
+        "D": "Très sensibles."
+      }
+    },
+    "erreur_frequente": "Croire que toutes les enzymes travaillent à pH neutre.",
+    "astuce_fr": "Enzyme = Expert spécifique (un seul substrat, un seul pH).",
+    "astuce_ar": "الإنزيم هو المقص المتخصص؛ لا يقطع إلا ما صُنع من أجله."
+  },
+  {
+    "id": 14,
+    "statement": "La cellule végétale est caractérisée par :",
+    "choices": ["La membrane plasmique", "Le noyau", "La paroi pectocellulosique", "Les chloroplastes"],
+    "correct": [2, 3],
+    "theme": "Biologie cellulaire",
+    "chapitre": "Unité du vivant",
+    "niveau_scolaire": "2ème Sc",
+    "rappel_cours": "Cellule végétale = paroi pectocellulosique + chloroplastes. Membrane et noyau = communs.",
+    "phenomene": "Paroi + chloroplastes = spécifiques végétaux.",
+    "correction_detaillee": {
+      "juste": "C : Paroi. D : Chloroplastes.",
+      "faux": {
+        "A": "Commune.",
+        "B": "Commun."
+      }
+    },
+    "erreur_frequente": "Oublier que les plantes ont aussi une membrane sous la paroi.",
+    "astuce_fr": "Végétal = Vert (chloroplastes) et Verrouillé (paroi).",
+    "astuce_ar": "الخلية النباتية قلعة حصينة (جدار) بداخلها معامل شمسية (بلاستيدات)."
+  },
+  {
+    "id": 15,
+    "statement": "Les nucléotides sont des constituants de base :",
+    "choices": ["Des protides", "De l'ADN", "Des lipides", "De l'ARN"],
+    "correct": [1, 3],
+    "theme": "Biologie cellulaire",
+    "chapitre": "Acides nucléiques",
+    "niveau_scolaire": "2ème Sc",
+    "rappel_cours": "Nucléotides (phosphate+sucre+base) = monomères ADN et ARN.",
+    "phenomene": "ADN et ARN = polymères de nucléotides.",
+    "correction_detaillee": {
+      "juste": "B : ADN. D : ARN.",
+      "faux": {
+        "A": "Protides = acides aminés.",
+        "C": "Lipides = acides gras."
+      }
+    },
+    "erreur_frequente": "Confondre nucléotide et acide aminé.",
+    "astuce_fr": "Nucléotide = Nouveau Plan (ADN) ou Nouveau Message (ARN).",
+    "astuce_ar": "النكليوتيدات هي أحرف الأبجدية التي تُكتب بها أسرار الحياة."
+  },
+  {
+    "id": 16,
+    "statement": "Les mitochondries sont des centrales énergétiques car :",
+    "choices": ["Elles contiennent l'ATP en grande quantité", "Elles ont une double membrane", "La fibre musculaire en contient beaucoup", "Les enzymes de Krebs et chaîne respiratoire y sont"],
+    "correct": [3],
+    "theme": "Biologie cellulaire",
+    "chapitre": "Respiration cellulaire",
+    "niveau_scolaire": "3ème Sc.Exp",
+    "rappel_cours": "Mitochondries : enzymes Krebs (matrice) + chaîne respiratoire (crêtes) = ATP.",
+    "phenomene": "Localisation enzymatique justifie le rôle énergétique.",
+    "correction_detaillee": {
+      "juste": "D : Enzymes de Krebs et chaîne respiratoire.",
+      "faux": {
+        "A": "Produit, pas stocké.",
+        "B": "Fait structural.",
+        "C": "Conséquence."
+      }
+    },
+    "erreur_frequente": "Penser que l'ATP est stocké comme le glycogène.",
+    "astuce_fr": "Crêtes = Courant (électrons) = Centrales (ATP).",
+    "astuce_ar": "المتقدرة هي فرن الخلية الذي يحرق الغلوكوز ليولد طاقة الحركة."
+  },
+  {
+    "id": 17,
+    "statement": "L'organite bien associé à sa fonction :",
+    "choices": ["Noyau – information génétique", "Golgi – synthèse des protéines", "Chloroplastes – respiration", "Mitochondries – photosynthèse"],
+    "correct": [0],
+    "theme": "Biologie cellulaire",
+    "chapitre": "Ultrastructure",
+    "niveau_scolaire": "2ème Sc",
+    "rappel_cours": "Noyau=ADN. Golgi=maturation. Chloroplaste=photosynthèse. Mitochondrie=respiration.",
+    "phenomene": "Compartimentation fonctionnelle.",
+    "correction_detaillee": {
+      "juste": "A : Noyau = information génétique.",
+      "faux": {
+        "B": "Golgi = maturation/stockage.",
+        "C": "Chloroplastes = photosynthèse.",
+        "D": "Mitochondries = respiration."
+      }
+    },
+    "erreur_frequente": "Inverser chloroplaste/respiration et mitochondrie/photosynthèse.",
+    "astuce_fr": "Noyau = Notaire. Mitochondrie = Moteur.",
+    "astuce_ar": "النواة هي المكتبة المركزية التي تحفظ وثائق الخلق والنمو."
+  },
+  {
+    "id": 18,
+    "statement": "La méiose :",
+    "choices": ["Rétablit la diploïdie", "Répartit les chromosomes homologues", "Intervient dans la formation des gamètes", "L'ovocyte I donne 4 ovules"],
+    "correct": [1, 2],
+    "theme": "Génétique",
+    "chapitre": "Reproduction sexuée",
+    "niveau_scolaire": "4ème Sc.Exp",
+    "rappel_cours": "Méiose = 2n→n, sépare homologues, produit gamètes. Fécondation rétablit 2n.",
+    "phenomene": "Division réductionnelle pour la reproduction.",
+    "correction_detaillee": {
+      "juste": "B : Ségrégation homologues. C : Formation gamètes.",
+      "faux": {
+        "A": "Fécondation rétablit.",
+        "D": "1 ovule + globules polaires."
+      }
+    },
+    "erreur_frequente": "Confondre méiose (réduction) et mitose (conservation).",
+    "astuce_fr": "Méiose = Moitié (division par deux).",
+    "astuce_ar": "الانقسام المنصف هو جسر العبور من جيل إلى جيل."
+  },
+  {
+    "id": 19,
+    "statement": "Le crossing-over :",
+    "choices": ["Se produit à la fécondation", "Se produit en prophase I", "Est source de variabilité génétique", "Donne des chromatides remaniées"],
+    "correct": [1, 2, 3],
+    "theme": "Génétique",
+    "chapitre": "Brassage génétique",
+    "niveau_scolaire": "4ème Sc.Exp",
+    "rappel_cours": "Crossing-over = prophase I, échange segments homologues, chromatides remaniées, variabilité.",
+    "phenomene": "Brassage intrachromosomique.",
+    "correction_detaillee": {
+      "juste": "B : Prophase I. C : Variabilité. D : Chromatides remaniées.",
+      "faux": {
+        "A": "Fécondation = union, pas échange."
+      }
+    },
+    "erreur_frequente": "Situer le crossing-over à la fécondation.",
+    "astuce_fr": "Crossing-over = Croisement = Échange de gènes.",
+    "astuce_ar": "العبور هو تبادل قطع النسيج الوراثي لصناعة أثواب فريدة."
+  },
+  {
+    "id": 20,
+    "statement": "La cellule procaryote se distingue de l'eucaryote par :",
+    "choices": ["Absence d'organites sauf ribosomes", "Absence de noyau", "Présence de mitochondries", "Présence d'une membrane cytoplasmique"],
+    "correct": [0, 1],
+    "theme": "Biologie cellulaire",
+    "chapitre": "Classification",
+    "niveau_scolaire": "2ème Sc",
+    "rappel_cours": "Procaryote = pas de noyau, pas d'organites membraneux, ADN libre.",
+    "phenomene": "Procaryote = pas de noyau.",
+    "correction_detaillee": {
+      "juste": "A : Pas d'organites sauf ribosomes. B : Pas de noyau.",
+      "faux": {
+        "C": "Pas de mitochondries.",
+        "D": "Commune aux deux."
+      }
+    },
+    "erreur_frequente": "Croire que les bactéries n'ont pas d'ADN.",
+    "astuce_fr": "Procaryote = Pas (de noyau).",
+    "astuce_ar": "بدائيات النوى هي بيوت من طراز قديم، كل أثاثها في غرفة واحدة."
+  }
+]
