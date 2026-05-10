@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Synapris — Manuels SVT 2 Étoiles</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="katexLoaded=true; if(pendingRender){pendingRender();}"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#0f1f3d;--primary-mid:#1a3c6e;--accent:#f0a500;--accent-dark:#d4900a;--green:#2e7d32;--green-light:#e8f5e9;--red:#c62828;--red-light:#ffebee;--orange:#ef6c00;--white:#ffffff;--gray-light:#f5f7fa;--gray:#90a4ae;--sky-deep:#3b82f6;--sky-card:#eff6ff;--sky-border:#93c5fd;--shadow:0 4px 20px rgba(15,31,61,0.10);--shadow-sm:0 2px 8px rgba(15,31,61,0.08);--radius:12px;--font-ar:'Amiri',serif;--font-heading:'Inter',sans-serif;--font-fr:'Source Sans 3',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{font-family:var(--font-fr);font-size:16px;line-height:1.6;background:linear-gradient(140deg,#e8f0f8 0%,#f0f4f8 45%,#fdf8f0 100%);color:#1a1a2e;display:flex;flex-direction:column}
+    .site-header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-mid) 100%);color:var(--white);padding:10px 16px;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.30)}
+    .header-grid{display:grid;grid-template-columns:110px 1fr 240px;gap:10px;align-items:center}
+    .header-col1{display:flex;flex-direction:column;align-items:center;gap:4px}
+    .logo-square{width:90px;height:90px;border-radius:16px;background:#ffffff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:36px;font-weight:800;color:var(--primary);border:3px solid var(--white);box-shadow:0 0 0 4px rgba(255,255,255,0.20);overflow:hidden}
+    .logo-square img{width:100%;height:100%;object-fit:cover}
+    .header-col1 .verset{font-family:var(--font-ar);font-size:13px;font-weight:700;color:rgba(255,255,255,0.95);text-align:center;font-style:italic;line-height:1.3}
+    .header-col2{background:var(--accent);border-radius:10px;padding:10px 12px;text-align:center}
+    .header-col2 .concours-ar{font-family:var(--font-ar);font-size:18px;font-weight:800;color:#0f1f3d;line-height:1.4;margin-bottom:4px}
+    .header-col2 .specialite{font-family:var(--font-ar);font-size:14px;color:#0f1f3d;font-weight:700}
+    .header-col3{text-align:center}
+    .header-col3 .accroche{font-family:var(--font-heading);font-size:12px;font-weight:600;color:var(--accent);margin-bottom:2px}
+    .header-col3 .marque{font-size:15px;font-weight:800;color:var(--white);letter-spacing:1px}
+    .header-col3 .marque span{color:var(--accent)}
+    .header-col3 .session{font-size:9px;color:rgba(255,255,255,0.70);margin-bottom:6px}
+    .header-col3 .titre-epreuve{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.30)}
+    .stars-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:10px;margin-top:2px}
+    .methode-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:6px 14px;display:flex;align-items:center;justify-content:center;gap:14px;font-size:12px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
+    .methode-bar .step{display:flex;align-items:center;gap:4px}.methode-bar .step-icon{font-size:15px}
+    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:4px 14px;display:flex;align-items:center;gap:10px;font-size:10px;color:var(--gray);flex-shrink:0;flex-wrap:wrap}
+    .mini-bar .mb-progress{flex:1;min-width:60px;display:flex;align-items:center;gap:6px}
+    .mb-progress-bar{flex:1;height:4px;background:#e0e5ec;border-radius:3px;overflow:hidden}
+    .mb-progress-fill{height:100%;background:linear-gradient(90deg,var(--sky-deep),var(--accent));border-radius:3px;transition:width .4s ease}
+    .mb-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:10px;font-weight:600;font-size:9px;white-space:nowrap}
+    .mb-badge.mode-badge{background:#e8f0fb;color:var(--sky-deep)}.mb-badge.client-badge{background:#fff3e0;color:var(--accent-dark)}
+    .main-scroll{flex:1;overflow-y:auto;padding:10px 0 6px}
+    .main-content{max-width:1060px;margin:0 auto;padding:0 14px 16px}
+    .page{display:none}.page.active{display:block;animation:fadeIn .3s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 22px;margin-bottom:14px;border-left:5px solid var(--primary)}
+    .card.sky{border-left-color:var(--sky-deep);background:#fafcff}
+    .card-title{font-size:17px;font-weight:700;color:var(--primary);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+    .btn{font-family:var(--font-fr);font-size:13px;font-weight:600;padding:8px 16px;border:none;border-radius:8px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:5px}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover:not(:disabled){background:var(--primary-mid)}
+    .btn-sky{background:var(--sky-deep);color:var(--white)}.btn-sky:hover:not(:disabled){background:#2563eb}
+    .btn-green{background:var(--green);color:var(--white)}.btn-green:hover:not(:disabled){background:#388e3c}
+    .btn-gold{background:var(--accent);color:var(--primary);font-weight:700}.btn-gold:hover:not(:disabled){background:var(--accent-dark)}
+    .btn-gray{background:#6c757d;color:var(--white)}.btn-gray:hover:not(:disabled){background:#5a6268}
+    .btn-outline-white{border:2px solid var(--white);color:var(--white);background:transparent;font-size:11px;padding:6px 12px}.btn-outline-white:hover{background:rgba(255,255,255,0.10)}
+    .btn-whatsapp{background:#25d366;color:var(--white)}.btn-whatsapp:hover{background:#1ebe57}
+    .btn-block{display:flex;width:100%;margin-top:10px;font-size:14px;padding:10px}
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 12px;max-width:500px;margin-left:auto;margin-right:auto}
+    .mode-card{background:#f8faff;border:2px solid var(--sky-border);border-radius:var(--radius);padding:16px 10px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+    .mode-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--sky-deep);transform:scaleX(0);transform-origin:center;transition:transform .2s}
+    .mode-card:hover::after,.mode-card.selected::after{transform:scaleX(1)}
+    .mode-card:hover,.mode-card.selected{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--sky-deep)}
+    .mode-card.exam-card::after{background:var(--red)}.mode-card.exam-card:hover,.mode-card.exam-card.selected{border-color:var(--red);background:#fff5f5}
+    .mode-icon{font-size:30px;display:block;margin-bottom:4px}.mode-name{font-size:14px;font-weight:700;color:var(--primary)}
+    .mode-desc{font-size:10px;color:var(--gray);margin-top:2px;line-height:1.4}
+    .question-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+    .q-left{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;border:1.5px solid var(--sky-border)}
+    .q-right{min-height:120px}
+    .question-statement{font-size:14px;color:#1a1a2e;line-height:1.7;margin-bottom:10px;padding:10px 14px;background:#f8faff;border-radius:10px;border-left:4px solid var(--accent);user-select:text}
+    .choices-grid{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+    .choice-btn{font-family:var(--font-fr);font-size:13px;padding:9px 12px;border:2px solid var(--sky-border);border-radius:10px;background:var(--white);color:#1a1a2e;cursor:pointer;transition:all .15s;text-align:left;display:flex;align-items:flex-start;gap:8px;width:100%}
+    .choice-btn:hover:not(:disabled){background:#f0f6ff;border-color:var(--sky-deep)}
+    .choice-btn.selected{background:#e8f0ff;border-color:var(--sky-deep);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
+    .choice-btn.correct{background:var(--green-light);border-color:var(--green);color:var(--green);font-weight:600}
+    .choice-btn.wrong{background:var(--red-light);border-color:var(--red);color:var(--red)}
+    .choice-btn:disabled{cursor:default}
+    .choice-letter{width:24px;height:24px;border-radius:50%;background:var(--primary);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;flex-shrink:0;margin-top:1px}
+    .choice-btn.correct .choice-letter{background:var(--green)}.choice-btn.wrong .choice-letter{background:var(--red)}.choice-btn.selected .choice-letter{background:var(--sky-deep)}
+    .choice-text{flex:1}
+    .validate-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .nav-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}
+    .feedback-placeholder{background:#f8faff;border:2px dashed var(--sky-border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:120px;padding:18px 12px;text-align:center;color:var(--gray)}
+    .feedback-placeholder .ph-icon{font-size:30px;margin-bottom:6px}.feedback-placeholder .ph-text{font-size:12px}
+    .feedback-box{display:none;animation:fadeIn .3s ease}.feedback-box.visible{display:block}
+    .feedback-header{display:flex;align-items:center;gap:8px;padding:8px 14px;font-size:14px;font-weight:700;border-radius:10px 10px 0 0;border:2px solid transparent;border-bottom:none}
+    .feedback-box.correct .feedback-header{background:var(--green-light);color:var(--green);border-color:var(--green)}
+    .feedback-box.wrong .feedback-header{background:var(--red-light);color:var(--red);border-color:var(--red)}
+    .feedback-body{padding:12px 16px;background:#fafcff;border:2px solid #dbeafe;border-top:none;border-radius:0 0 10px 10px;font-size:12px;line-height:1.6;user-select:text}
+    .feedback-box.correct .feedback-body{border-color:var(--green)}.feedback-box.wrong .feedback-body{border-color:var(--red)}
+    .feedback-label{font-weight:700;color:var(--primary);font-size:10px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;margin-top:8px}.feedback-label:first-child{margin-top:0}
+    .feedback-text{color:#333;font-size:12px;margin-bottom:4px}
+    .correction-block{background:#f0f6ff;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.7;border-left:3px solid var(--sky-deep);margin-bottom:6px;user-select:text}
+    .hidden{display:none!important}
+    .timer-wrap{text-align:center;margin-bottom:8px}
+    .timer-badge{display:inline-flex;align-items:center;gap:5px;background:#f8faff;border:2px solid var(--sky-border);border-radius:8px;padding:4px 12px;font-size:16px;font-weight:700;color:var(--primary);transition:all .3s}
+    .timer-badge.warning{background:#fff8f0;border-color:var(--orange);color:var(--orange)}
+    .timer-badge.danger{background:var(--red-light);border-color:var(--red);color:var(--red);animation:pulse .8s infinite}
+    .perq-timer{font-size:10px;color:var(--gray);margin-left:6px;font-weight:600}.perq-timer.warning{color:var(--orange)}.perq-timer.danger{color:var(--red)}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+    .site-footer{background:var(--primary);color:rgba(255,255,255,0.70);padding:10px 14px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:10px}
+    .site-footer .footer-info strong{color:var(--accent);font-weight:600}
+    .site-footer .footer-buttons{display:flex;gap:6px;flex-wrap:wrap}
+    .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,31,61,0.75);display:flex;align-items:center;justify-content:center;z-index:1000;animation:fadeIn .3s ease}
+    .modal-box{background:var(--white);border-radius:var(--radius);padding:28px 24px;max-width:480px;width:90%;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.30);border-top:5px solid var(--accent)}
+    .modal-box h3{font-family:var(--font-heading);font-size:20px;color:var(--primary);margin-bottom:8px}
+    .modal-box p{font-size:13px;color:#555;margin-bottom:16px;line-height:1.5}
+    .modal-box .key-input{width:100%;padding:12px 14px;border:2px solid var(--sky-border);border-radius:8px;font-size:16px;text-align:center;font-family:var(--font-fr);letter-spacing:1px;margin-bottom:12px;outline:none;transition:border-color .2s}
+    .modal-box .key-input:focus{border-color:var(--accent)}
+    .modal-box .modal-error{color:var(--red);font-size:12px;font-weight:600;margin-bottom:8px;display:none}
+    .modal-box .modal-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+    @media(max-width:480px){body{font-size:14px}.site-header{padding:6px 8px}.header-grid{grid-template-columns:60px 1fr 120px;gap:5px}.logo-square{width:50px;height:50px;font-size:20px;border-radius:10px}.header-col1 .verset{font-size:8px}.header-col2{padding:5px 6px}.header-col2 .concours-ar{font-size:11px}.header-col2 .specialite{font-size:9px}.header-col3 .accroche{font-size:9px}.header-col3 .marque{font-size:11px}.header-col3 .session{font-size:7px}.header-col3 .titre-epreuve{font-size:16px}.methode-bar{padding:4px 6px;gap:6px;font-size:9px}.methode-bar .step-icon{font-size:12px}.mini-bar{padding:3px 8px;gap:6px;font-size:9px}.main-content{padding:0 6px 10px}.mode-grid{gap:5px}.mode-card{padding:10px 5px}.mode-icon{font-size:22px}.mode-name{font-size:11px}.mode-desc{font-size:8px}.question-layout{grid-template-columns:1fr 1fr;gap:6px}.q-left{padding:10px}.question-statement{font-size:12px;padding:8px 10px}.choice-btn{font-size:11px;padding:7px 8px}.btn{font-size:11px;padding:6px 10px}.btn-block{font-size:12px;padding:8px}.site-footer{padding:8px 10px;flex-direction:column;text-align:center;font-size:9px}.site-footer .footer-buttons{justify-content:center}}
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <header class="site-header">
+    <div class="header-grid">
+      <div class="header-col1"><div class="logo-square"><img src="images/logo.png" alt="Synapris" onerror="this.style.display='none';this.parentElement.textContent='S'" /></div><div class="verset">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</div></div>
+      <div class="header-col2"><div class="concours-ar">المناظــرة الخارجية بالاختبارات لانتداب أساتذة<br>التعليم الثانوي و التعليم التقني و التعليم الفني<br>(دورة 2026)</div><div class="specialite">اختصاص : علوم الحياة و الأرض</div></div>
+      <div class="header-col3"><div class="accroche">✨ Votre réussite commence ici</div><div class="marque"><span>SYNAPRIS</span> — Manuels SVT</div><div class="session">Session 2026 · Éclairer l'intelligence</div><div class="titre-epreuve">MANUELS_2ETOILES</div><div class="stars-badge">⭐⭐ Niveau Moyen</div></div>
+    </div>
+  </header>
+  <div class="methode-bar"><div class="step"><span class="step-icon">❌</span> Osez l'erreur</div><div class="step"><span class="step-icon">💡</span> Comprenez avec le feedback</div><div class="step"><span class="step-icon">⏱️</span> Testez-vous en mode Examen</div></div>
+  <div class="mini-bar" id="mini-bar"><div class="mb-progress"><span id="mb-q-counter">—</span><div class="mb-progress-bar"><div class="mb-progress-fill" id="mb-progress-fill" style="width:0%"></div></div></div><span class="mb-badge mode-badge" id="mb-mode-badge" style="display:none;">—</span><span class="mb-badge client-badge" id="mb-client-badge" style="display:none;">🔑 —</span></div>
+  <div class="main-scroll" id="main-scroll">
+    <div id="main-app" style="display:block;"><div class="main-content">
+      <div id="page-home" class="page active"><div class="card sky"><div class="card-title">🎯 Manuels 2 Étoiles — Choisissez votre mode</div><div class="mode-grid"><div class="mode-card" id="mode-train" onclick="selectMode('train')"><span class="mode-icon">📝</span><div class="mode-name">Mode Entraînement</div><div class="mode-desc">Feedback immédiat · Explication concise</div></div><div class="mode-card exam-card" id="mode-exam" onclick="selectMode('exam')"><span class="mode-icon">⏱️</span><div class="mode-name">Mode Examen</div><div class="mode-desc">Chronomètre 60 min · 2 min/question</div></div></div><button class="btn btn-sky btn-block" id="btn-start" disabled onclick="startQuiz()">⏳ Chargement...</button></div></div>
+      <div id="page-question" class="page"><div class="timer-wrap hidden" id="timer-wrap"><div class="timer-badge" id="timer-badge">⏱ 60:00</div><span class="perq-timer" id="perq-timer">⚡ 2:00</span></div><div class="question-layout"><div class="q-left"><div class="question-statement" id="q-statement"></div><div class="choices-grid" id="q-choices"></div><div class="validate-row"><button class="btn btn-sky hidden" id="btn-validate" disabled onclick="validateAnswer()">✔ Valider</button><button class="btn btn-gold hidden" id="btn-correction" onclick="showCorrection()">💡 Correction</button></div></div><div class="q-right"><div class="feedback-placeholder" id="feedback-placeholder"><div class="ph-icon">💬</div><div class="ph-text">Feedback après validation</div></div><div class="feedback-box" id="feedback-box"><div class="feedback-header" id="feedback-header"><span id="badge-icon"></span><span id="feedback-result-text"></span></div><div class="feedback-body" id="feedback-body"></div></div></div></div><div class="nav-row"><button class="btn btn-primary" id="btn-prev" onclick="prevQuestion()" disabled>← Précédent</button><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button><button class="btn btn-green" id="btn-next" onclick="nextQuestion()">Suivant →</button></div></div>
+      <div id="page-results" class="page"><div class="score-card"><span class="score-badge" id="result-badge">🏆</span><span class="score-pct" id="result-pct">—</span><span class="score-label">Score final</span><span class="score-sub" id="result-sub"></span></div><div class="card"><div class="card-title">📊 Résultats par thème</div><div id="result-themes"></div></div><div class="card"><div class="card-title">📋 Récapitulatif</div><table class="result-table"><thead><tr><th>N°</th><th>Question</th><th>Thème</th><th>Résultat</th></tr></thead><tbody id="result-tbody"></tbody></table><button class="btn btn-gold btn-block" id="btn-retry-failed" onclick="retryFailed()" style="display:none;margin-top:8px;">🔁 Retravailler les erreurs</button><button class="btn btn-gold btn-block" style="margin-top:6px;" onclick="goHome()">🏠 Retour à l'accueil</button></div></div>
+    </div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-info">© 2026 <strong>Synapris</strong> — Éclairer l'intelligence · Tous droits réservés</div>
+    <div class="footer-buttons"><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a><a href="../../commander.html" class="btn btn-outline-white">📦 Voir les offres</a></div>
+  </footer>
+  <script>
+    // ═══════════════ CONFIGURATION ═══════════════
+    const FICHE_TYPE = 'semi';
+    const QUESTIONS_GRATUITES = 15;
+    const VALID_CODES = [
+      'SYN-MAESTRO-7777',
+      'SYN-GENIE-1001','SYN-GENIE-1002','SYN-GENIE-1003','SYN-GENIE-1004','SYN-GENIE-1005',
+      'SYN-GENIE-1006','SYN-GENIE-1007','SYN-GENIE-1008','SYN-GENIE-1009','SYN-GENIE-1010'
+    ];
+    let licenceOk = false;
+
+    // ═════════ INIT AUTO MODE ENTRAÎNEMENT ═════════
+    let mode = 'train';
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('mode-train').classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
+      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+      document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
+    });
+
+    // ═══════════════ QUESTIONS MANUELS 2 ÉTOILES ═══════════════
+    const questionsData = [
+  {
+    id: 51,
+    statement: "La HCG sécrétée par le trophoblaste lors de la nidation a pour cible :",
+    choices: ["l'utérus", "le corps jaune", "l'hypophyse", "les follicules"],
+    correct: [1],
+    theme: "Reproduction et santé",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "La HCG (Hormone Chorionique Gonadotrope) cible le corps jaune pour le maintenir actif. Elle possède une analogie structurale avec la LH, ce qui lui permet de se fixer sur les récepteurs du corps jaune. Sans HCG, le corps jaune dégénérerait et la progestérone chuterait."
+  },
+  {
+    id: 52,
+    statement: "Le pic de LH déclenchant l'ovulation est la conséquence d'un :",
+    choices: ["rétrocontrôle négatif", "rétrocontrôle positif de l'oestradiol à forte dose", "arrêt de sécrétion de GnRH"],
+    correct: [1],
+    theme: "Reproduction et santé",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "À forte concentration, l'œstradiol exerce un rétrocontrôle positif sur l'hypophyse, déclenchant le pic de LH. C'est une exception dans l'organisme où une hormone stimule sa propre sécrétion. Le rétrocontrôle négatif freinerait la LH."
+  },
+  {
+    id: 53,
+    statement: "Les spermatocytes II sont des cellules :",
+    choices: ["diploïdes", "haploïdes à chromosomes simples", "haploïdes à chromosomes dédoublés"],
+    correct: [2],
+    theme: "Reproduction et santé",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Après la première division de méiose, les spermatocytes II sont haploïdes (n chromosomes) mais chaque chromosome est encore dédoublé (2 chromatides). La deuxième division produira des spermatides à chromosomes simples."
+  },
+  {
+    id: 54,
+    statement: "Chez la femme, la méiose s'achève uniquement si :",
+    choices: ["l'ovulation a lieu", "le corps jaune dégénère", "il y a pénétration d'un spermatozoïde"],
+    correct: [2],
+    theme: "Reproduction et santé",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "L'ovocyte II est bloqué en métaphase II. Seule la pénétration du spermatozoïde déclenche l'achèvement de la méiose avec l'expulsion du 2ème globule polaire. Sans fécondation, la méiose reste inachevée."
+  },
+  {
+    id: 55,
+    statement: "La pilule combinée empêche la grossesse car ses hormones :",
+    choices: ["détruisent les gamètes", "bloquent l'ovulation par inhibition du complexe H-H", "empêchent les règles"],
+    correct: [1],
+    theme: "Reproduction et santé",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Les œstroprogestatifs de la pilule exercent un rétrocontrôle négatif sur le complexe hypothalamo-hypophysaire, bloquant le pic de LH et donc l'ovulation. Il n'y a pas d'ovule à féconder. Les règles persistent sous pilule."
+  },
+  {
+    id: 56,
+    statement: "Pour un individu de génotype Ab // aB, des gamètes de type AB proviennent :",
+    choices: ["d'un brassage interchromosomique", "d'un crossing-over (brassage intrachromosomique)", "d'une mutation"],
+    correct: [1],
+    theme: "Génétique",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Le génotype Ab//aB produit normalement des gamètes parentaux Ab et aB. Les gamètes AB (et ab) sont recombinés, résultant d'un crossing-over entre les deux gènes en prophase I de méiose. C'est le brassage intrachromosomique."
+  },
+  {
+    id: 57,
+    statement: "Si deux gènes sont distants de 30 cM, le pourcentage de gamètes recombinés est de :",
+    choices: ["70 %", "15 %", "30 %", "60 %"],
+    correct: [2],
+    theme: "Génétique",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "La distance en centimorgan (cM) correspond directement au pourcentage de gamètes recombinés. 30 cM = 30% de gamètes recombinés. Chaque type recombiné = 15%. Les gamètes parentaux = 70% (35% chaque type)."
+  },
+  {
+    id: 58,
+    statement: "Un codon stop de l'ARNm (ex: UAA) correspond à :",
+    choices: ["l'acide aminé méthionine", "aucun acide aminé", "une liaison peptidique"],
+    correct: [1],
+    theme: "Génétique",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Les codons stop (UAA, UAG, UGA) ne codent pour aucun acide aminé. Ils signalent l'arrêt de la traduction au ribosome. La méthionine est codée par le codon initiateur AUG. La liaison peptidique lie les acides aminés."
+  },
+  {
+    id: 59,
+    statement: "La transcriptase réverse est une enzyme qui permet de passer :",
+    choices: ["de l'ADN à l'ARN", "de l'ARN à l'ADN", "de l'ARN à la protéine"],
+    correct: [1],
+    theme: "Génétique",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "La transcriptase réverse (ou rétrotranscriptase) catalyse la synthèse d'ADN à partir d'une matrice ARN. C'est caractéristique des rétrovirus comme le VIH. La transcription classique va de l'ADN vers l'ARN."
+  },
+  {
+    id: 60,
+    statement: "L'électrophorèse de l'ADN permet de séparer les fragments selon :",
+    choices: ["leur couleur", "leur taille (nombre de paires de bases)", "leur fonction"],
+    correct: [1],
+    theme: "Génétique",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "L'électrophorèse sur gel sépare les fragments d'ADN selon leur taille (masse moléculaire). Les petits fragments migrent plus vite que les grands. La comparaison avec un marqueur de taille permet d'estimer le nombre de paires de bases."
+  },
+  {
+    id: 61,
+    statement: "L'ouverture des canaux voltage-dépendants à Na+ provoque :",
+    choices: ["la repolarisation", "l'hyperpolarisation", "la dépolarisation du potentiel d'action"],
+    correct: [2],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "L'ouverture des canaux Na+ voltage-dépendants provoque une entrée massive d'ions sodium, rendant l'intérieur de la cellule positif : c'est la dépolarisation. La repolarisation est due à la sortie de K+. L'hyperpolarisation est un excès de sortie de K+."
+  },
+  {
+    id: 62,
+    statement: "La phase d'hyperpolarisation du PA est due à :",
+    choices: ["une sortie prolongée d'ions K+", "une entrée de Na+", "l'arrêt de la pompe Na+/K+"],
+    correct: [0],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "L'hyperpolarisation résulte d'une sortie prolongée des ions K+ après la repolarisation. Le potentiel devient temporairement plus négatif que le potentiel de repos. La pompe Na+/K+ rétablit ensuite les gradients ioniques."
+  },
+  {
+    id: 63,
+    statement: "Le potentiel de récepteur d'un corpuscule de Pacini est un phénomène :",
+    choices: ["qui obéit à la loi du tout ou rien", "dont l'amplitude est proportionnelle à l'intensité de pression", "propagable sur de longues distances"],
+    correct: [1],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Le potentiel de récepteur est gradué : son amplitude est proportionnelle à l'intensité du stimulus. Il ne suit pas la loi du tout ou rien (réservée au potentiel d'action). Il n'est pas propagable sur de longues distances."
+  },
+  {
+    id: 64,
+    statement: "Une synapse inhibitrice se caractérise par :",
+    choices: ["l'ouverture de canaux à Cl- ou K+", "un PPSE", "une dépolarisation postsynaptique"],
+    correct: [0],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Une synapse inhibitrice libère un neurotransmetteur qui ouvre des canaux Cl- (entrée) ou K+ (sortie), produisant un PPSI (hyperpolarisation). Le PPSE et la dépolarisation caractérisent une synapse excitatrice."
+  },
+  {
+    id: 65,
+    statement: "L'intégration neuronale consiste en :",
+    choices: ["une multiplication des messages", "une sommation spatio-temporelle des PPS", "une réduction de la vitesse"],
+    correct: [1],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "L'intégration neuronale est la sommation des PPSE et PPSI au niveau du cône axonique. La sommation spatiale additionne des signaux de différentes synapses, la sommation temporelle des signaux rapprochés dans le temps d'une même synapse."
+  },
+  {
+    id: 66,
+    statement: "La période réfractaire de la fibre nerveuse assure :",
+    choices: ["l'augmentation de l'amplitude", "le sens unique de propagation du message", "l'arrêt du métabolisme"],
+    correct: [1],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "La période réfractaire empêche la réouverture immédiate des canaux Na+, forçant le PA à se propager dans un seul sens. L'amplitude est constante (loi du tout ou rien). Le métabolisme continue pendant cette période."
+  },
+  {
+    id: 67,
+    statement: "L'acétylcholine dans la fente synaptique est éliminée par :",
+    choices: ["simple diffusion", "une enzyme : l'acétylcholinestérase", "fixation sur l'élément présynaptique"],
+    correct: [1],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "L'acétylcholinestérase dégrade rapidement l'acétylcholine dans la fente synaptique en choline et acétate. La choline est recaptée par l'élément présynaptique. Cette dégradation enzymatique permet d'arrêter le signal."
+  },
+  {
+    id: 68,
+    statement: "Les molécules du CMH de classe I sont présentes sur la membrane :",
+    choices: ["uniquement des globules rouges", "de toutes les cellules nucléées de l'organisme", "uniquement des LB"],
+    correct: [1],
+    theme: "Immunologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Le CMH de classe I est présent sur toutes les cellules nucléées. Il permet aux LTc de reconnaître le soi. Les globules rouges (non nucléés) n'expriment pas le CMH I. Les LB expriment également le CMH II."
+  },
+  {
+    id: 69,
+    statement: "La maturation des lymphocytes T (acquisition de l'immunocompétence) a lieu dans :",
+    choices: ["la moelle osseuse", "le thymus", "la rate"],
+    correct: [1],
+    theme: "Immunologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Les lymphocytes T naissent dans la moelle osseuse mais maturent dans le thymus, où ils apprennent à distinguer le soi du non-soi. La rate est un organe lymphoïde secondaire (rencontre avec l'antigène)."
+  },
+  {
+    id: 70,
+    statement: "Les interleukines sécrétées par les LT4 (LTa) servent à :",
+    choices: ["détruire directement l'antigène", "activer la multiplication et la différenciation des LB et LT8", "fabriquer des anticorps"],
+    correct: [1],
+    theme: "Immunologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Les interleukines sont des cytokines qui activent la prolifération et la différenciation des LB (→ plasmocytes) et des LT8 (→ LTc). Les LT4 sont des cellules auxiliaires, pas effectrices. Les anticorps sont produits par les plasmocytes."
+  },
+  {
+    id: 71,
+    statement: "Un individu séropositif pour le VIH possède :",
+    choices: ["des virus uniquement dans ses urines", "des anticorps anti-VIH dans son sang", "une immunité renforcée"],
+    correct: [1],
+    theme: "Immunologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "La séropositivité signifie la présence d'anticorps anti-VIH dans le sang. L'individu est infecté mais peut être asymptomatique. Le VIH est présent dans le sang, pas dans les urines. L'immunité est affaiblie, pas renforcée."
+  },
+  {
+    id: 72,
+    statement: "La dégranulation des mastocytes lors de l'allergie libère :",
+    choices: ["des anticorps", "de l'histamine", "des gènes"],
+    correct: [1],
+    theme: "Immunologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Lors du second contact avec l'allergène, les IgE fixés sur les mastocytes provoquent leur dégranulation et la libération d'histamine. L'histamine est le principal médiateur de l'inflammation allergique (vasodilatation, prurit, œdème)."
+  },
+  {
+    id: 73,
+    statement: "La discontinuité de Mohorovicic (Moho) sépare :",
+    choices: ["la croûte du manteau", "le manteau du noyau", "la lithosphère de l'asthénosphère"],
+    correct: [0],
+    theme: "Géologie",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "Le Moho est la limite entre la croûte terrestre et le manteau supérieur. Il se situe à 30-35 km sous les continents et 7-10 km sous les océans. La discontinuité de Gutenberg sépare le manteau du noyau."
+  },
+  {
+    id: 74,
+    statement: "Les ondes sismiques S ne se propagent pas dans :",
+    choices: ["les granites", "les milieux liquides (noyau externe)", "les péridotites"],
+    correct: [1],
+    theme: "Géologie",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "Les ondes S (ondes de cisaillement) ne se propagent que dans les solides. Elles s'arrêtent au noyau externe liquide, créant une zone d'ombre. Les ondes P se propagent dans tous les milieux. Cette propriété a permis de découvrir le noyau externe liquide."
+  },
+  {
+    id: 75,
+    statement: "Au niveau d'une dorsale océanique, il y a :",
+    choices: ["collision", "accrétion (formation de croûte)", "subduction"],
+    correct: [1],
+    theme: "Géologie",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "Les dorsales sont des zones d'accrétion où la remontée de magma crée de la nouvelle croûte océanique. La subduction est la plongée d'une plaque sous une autre. La collision est la rencontre de deux plaques continentales."
+  },
+  {
+    id: 76,
+    statement: "L'Islande est un exemple de :",
+    choices: ["volcanisme de subduction", "dorsale émergée (rift)", "fosse océanique"],
+    correct: [1],
+    theme: "Géologie",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "L'Islande est située sur la dorsale médio-atlantique, émergeant au-dessus de l'océan. C'est un rift volcanique actif où les plaques eurasiatique et nord-américaine s'écartent. Le volcanisme de subduction caractérise la ceinture de feu du Pacifique."
+  },
+  {
+    id: 77,
+    statement: "La vitesse de subduction d'une plaque est d'environ :",
+    choices: ["9 cm par an", "90 cm par an", "1 mm par an"],
+    correct: [0],
+    theme: "Géologie",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "La vitesse de déplacement des plaques est de quelques centimètres par an (environ 2 à 10 cm/an). 9 cm/an est un ordre de grandeur réaliste. 90 cm/an serait excessif. 1 mm/an est trop lent."
+  },
+  {
+    id: 78,
+    statement: "L'Archaeopteryx possède des caractères de :",
+    choices: ["reptile et oiseau", "reptile et mammifère", "poisson et amphibien"],
+    correct: [0],
+    theme: "Génétique",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "L'Archaeopteryx est un fossile transitionnel présentant des caractères reptiliens (dents, queue osseuse, doigts griffus) et aviaires (plumes, ailes). Il illustre l'évolution des dinosaures théropodes vers les oiseaux."
+  },
+  {
+    id: 79,
+    statement: "Les principes de la stratigraphie incluent :",
+    choices: ["la superposition et la continuité", "la radioactivité seule", "l'érosion éolienne"],
+    correct: [0],
+    theme: "Géologie",
+    niveau_scolaire: "2ème Sc",
+    explication: "Les principes fondamentaux de la stratigraphie sont la superposition (les couches inférieures sont plus anciennes) et la continuité (une même couche a le même âge partout). La radioactivité sert à la datation absolue, pas à la stratigraphie relative."
+  },
+  {
+    id: 80,
+    statement: "Le basalte est une roche :",
+    choices: ["magmatique de surface", "sédimentaire", "métamorphique"],
+    correct: [0],
+    theme: "Géologie",
+    niveau_scolaire: "2ème Sc",
+    explication: "Le basalte est une roche magmatique volcanique (de surface), à structure microlithique, refroidie rapidement. Il constitue la croûte océanique. Les roches sédimentaires se forment par dépôt. Les roches métamorphiques par transformation sous pression/température."
+  },
+  {
+    id: 81,
+    statement: "La réabsorption de l'eau est régulée principalement par l'hormone :",
+    choices: ["Insuline", "ADH (Vasopressine)", "Glucagon"],
+    correct: [1],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "L'ADH (hormone antidiurétique ou vasopressine) augmente la perméabilité à l'eau du tube collecteur via les aquaporines. L'insuline régule la glycémie. Le glucagon est hyperglycémiant."
+  },
+  {
+    id: 82,
+    statement: "Une glucosurie (sucre dans les urines) apparaît si la glycémie dépasse :",
+    choices: ["0,8 g/l", "1,2 g/l", "1,8 g/l"],
+    correct: [2],
+    theme: "Nutrition",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "Le seuil rénal du glucose est d'environ 1,8 g/L. Au-delà, les transporteurs de glucose sont saturés et le glucose apparaît dans l'urine. C'est un signe de diabète sucré. La glycémie normale est de 0,8 à 1,2 g/L."
+  },
+  {
+    id: 83,
+    statement: "Les îlots de Langerhans sont responsables de la fonction :",
+    choices: ["exocrine du pancréas", "endocrine (régulation glycémie)", "digestive"],
+    correct: [1],
+    theme: "Nutrition",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "Les îlots de Langerhans sont la partie endocrine du pancréas, sécrétant insuline (cellules β) et glucagon (cellules α). La fonction exocrine (suc pancréatique) est assurée par les acini. La régulation glycémique est la fonction endocrine."
+  },
+  {
+    id: 84,
+    statement: "Le glycogène est un polymère de stockage situé dans :",
+    choices: ["le sang", "le foie et les muscles", "le pancréas"],
+    correct: [1],
+    theme: "Nutrition",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "Le glycogène est stocké principalement dans le foie (réserve mobilisable pour la glycémie) et les muscles (réserve pour la contraction). Le sang transporte le glucose, pas le glycogène. Le pancréas sécrète les hormones."
+  },
+  {
+    id: 85,
+    statement: "La dégradation du glucose en acide pyruvique s'appelle :",
+    choices: ["le cycle de Krebs", "la glycolyse", "la fermentation"],
+    correct: [1],
+    theme: "Nutrition",
+    niveau_scolaire: "3ème Sc.Exp",
+    explication: "La glycolyse dégrade le glucose (6C) en 2 molécules d'acide pyruvique (3C) dans le cytoplasme. Le cycle de Krebs oxyde l'acétyl-CoA dans la mitochondrie. La fermentation transforme le pyruvate en lactate ou éthanol."
+  },
+  {
+    id: 86,
+    statement: "Le bilan énergétique est nul au \"point de compensation\" quand :",
+    choices: ["Photosynthèse > Respiration", "Photosynthèse = Respiration", "la plante meurt"],
+    correct: [1],
+    theme: "Nutrition",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Au point de compensation lumineuse, la photosynthèse compense exactement la respiration : la production d'O₂ égale la consommation d'O₂. Le bilan net de CO₂ est nul. C'est le minimum lumineux pour la survie de la plante."
+  },
+  {
+    id: 87,
+    statement: "Le cycle de l'azote dans le sol permet la :",
+    choices: ["fossilisation", "minéralisation de la matière organique", "combustion"],
+    correct: [1],
+    theme: "Écologie",
+    niveau_scolaire: "2ème Sc",
+    explication: "Le cycle de l'azote transforme la matière organique azotée en azote minéral (NH₄⁺, NO₃⁻) utilisable par les plantes. Cette minéralisation est réalisée par les décomposeurs du sol. La fossilisation concerne la conservation des restes."
+  },
+  {
+    id: 88,
+    statement: "Une nappe phréatique est dite \"libre\" si :",
+    choices: ["elle est sous pression entre deux couches imperméables", "sa surface est en contact avec la zone aérée du sol", "elle ne contient pas de sels"],
+    correct: [1],
+    theme: "Géologie",
+    niveau_scolaire: "2ème Sc",
+    explication: "Une nappe libre est en contact direct avec l'atmosphère du sol, sa surface (surface piézométrique) fluctuant librement. Une nappe captive est emprisonnée entre deux couches imperméables et peut être sous pression (artésienne)."
+  },
+  {
+    id: 89,
+    statement: "Le pétrole se forme à partir de la transformation du :",
+    choices: ["granite", "kérogène (matière organique)", "phosphate"],
+    correct: [1],
+    theme: "Géologie",
+    niveau_scolaire: "2ème Sc",
+    explication: "Le pétrole provient de la transformation lente du kérogène, matière organique issue du plancton accumulée dans des bassins sédimentaires anoxiques. La maturation thermique transforme le kérogène en hydrocarbures. Le granite est une roche magmatique."
+  },
+  {
+    id: 90,
+    statement: "En Tunisie, l'étage bioclimatique le plus sec est le :",
+    choices: ["Saharien", "Humide", "Semi-aride"],
+    correct: [0],
+    theme: "Écologie",
+    niveau_scolaire: "2ème Sc",
+    explication: "L'étage saharien est le plus sec de Tunisie (< 100 mm de pluie par an). L'étage humide (> 800 mm) se trouve au Nord. Le semi-aride (200-350 mm) couvre le Centre. Le gradient pluviométrique diminue du Nord au Sud."
+  },
+  {
+    id: 91,
+    statement: "La conduction saltatoire du message nerveux se fait dans les fibres :",
+    choices: ["très fines", "sans myéline", "myélinisées"],
+    correct: [2],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "La conduction saltatoire se produit dans les fibres myélinisées : le PA saute d'un nœud de Ranvier à l'autre. C'est plus rapide que la conduction continue des fibres amyélinisées. Les fibres fines sont plutôt amyélinisées."
+  },
+  {
+    id: 92,
+    statement: "Le complexe acto-myosine est rompu par la fixation de :",
+    choices: ["Ca2+", "ATP", "Glycogène"],
+    correct: [1],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "L'ATP se fixe sur la myosine pour rompre le complexe acto-myosine et permettre un nouveau cycle de contraction. Le Ca2+ lève l'inhibition de la troponine. L'absence d'ATP cause la rigidité cadavérique."
+  },
+  {
+    id: 93,
+    statement: "La chaleur retardée du muscle est due à :",
+    choices: ["la respiration cellulaire", "la phase de contraction", "la phosphocréatine"],
+    correct: [0],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Après la contraction, la chaleur retardée provient de la respiration cellulaire qui oxyde les substrats pour régénérer l'ATP et la phosphocréatine. La chaleur initiale est due aux réactions biochimiques de la contraction."
+  },
+  {
+    id: 94,
+    statement: "Les nerfs X (pneumogastriques) sont des nerfs :",
+    choices: ["cardioaccélérateurs", "cardiomodérateurs", "sensitifs uniquement"],
+    correct: [1],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Les nerfs X (pneumogastriques ou vagues) sont des nerfs parasympathiques cardiomodérateurs. Ils ralentissent le cœur via l'acétylcholine. Les nerfs sympathiques sont cardioaccélérateurs via la noradrénaline."
+  },
+  {
+    id: 95,
+    statement: "L'adrénaline est sécrétée par la :",
+    choices: ["corticosurrénale", "médullosurrénale", "thyroïde"],
+    correct: [1],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "L'adrénaline est sécrétée par la médullosurrénale (partie centrale de la glande surrénale). La corticosurrénale sécrète le cortisol et l'aldostérone. La thyroïde sécrète la thyroxine (T3/T4)."
+  },
+  {
+    id: 96,
+    statement: "La loi de \"tout ou rien\" s'applique :",
+    choices: ["au nerf entier", "à la fibre nerveuse isolée", "au potentiel de récepteur"],
+    correct: [1],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "La loi du tout ou rien s'applique à la fibre nerveuse isolée : le PA a une amplitude constante quel que soit le stimulus supraliminaire. Le nerf entier répond de manière graduée (recrutement de fibres). Le potentiel de récepteur est gradué."
+  },
+  {
+    id: 97,
+    statement: "Le pont de Varole et le bulbe rachidien font partie du :",
+    choices: ["cervelet", "tronc cérébral", "cortex"],
+    correct: [1],
+    theme: "Neurophysiologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Le tronc cérébral comprend le bulbe rachidien, le pont de Varole (protubérance annulaire) et le mésencéphale. Le cervelet est situé en arrière du tronc cérébral. Le cortex est la surface des hémisphères cérébraux."
+  },
+  {
+    id: 98,
+    statement: "L'immunité innée fait intervenir :",
+    choices: ["les anticorps", "la phagocytose et l'inflammation", "les lymphocytes T mémoire"],
+    correct: [1],
+    theme: "Immunologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "L'immunité innée (non spécifique) repose sur les barrières physiques, la phagocytose (macrophages, granulocytes) et l'inflammation. Les anticorps et les lymphocytes mémoire relèvent de l'immunité adaptative spécifique."
+  },
+  {
+    id: 99,
+    statement: "Le sérum antitétanique apporte une protection :",
+    choices: ["immédiate et durable", "immédiate et temporaire", "lente et durable"],
+    correct: [1],
+    theme: "Immunologie",
+    niveau_scolaire: "4ème Sc.Exp",
+    explication: "Le sérum contient des anticorps préformés : protection immédiate mais temporaire (immunité passive). La vaccination apporte une protection lente à s'installer mais durable (immunité active avec mémoire)."
+  },
+  {
+    id: 100,
+    statement: "La totipotence d'une cellule végétale permet de :",
+    choices: ["produire des fleurs rouges", "régénérer une plante entière par culture in vitro", "fixer l'azote"],
+    correct: [1],
+    theme: "Reproduction et santé",
+    niveau_scolaire: "1ère Sc",
+    explication: "La totipotence est la capacité d'une cellule végétale à régénérer un organisme entier par culture in vitro (micropropagation). Cette propriété est utilisée pour la multiplication végétative rapide et l'assainissement des plants."
+  }
+];
+
+    // ═══════════════ VARIABLES ═══════════════
+    let currentQ=0,activeSet=[],userAnswers=[],validated=[],examTimer=null,examSeconds=0,perQTimer=null,perQSeconds=0;
+    const TOTAL_EXAM_SEC=3600,PER_Q_SEC=120;
+
+    function startQuiz(e){
+      currentQ=0;activeSet=e||questionsData.map((_,i)=>i);userAnswers=new Array(activeSet.length).fill(null);validated=new Array(activeSet.length).fill(false);
+      if(FICHE_TYPE==='semi'&&!licenceOk&&activeSet.length>QUESTIONS_GRATUITES){activeSet=activeSet.slice(0,QUESTIONS_GRATUITES);}
+      showPage('page-question');document.getElementById('btn-validate').classList.add('hidden');document.getElementById('btn-correction').classList.add('hidden');
+      if(mode==='exam'){examSeconds=TOTAL_EXAM_SEC;perQSeconds=PER_Q_SEC;document.getElementById('timer-wrap').classList.remove('hidden');document.getElementById('perq-timer').classList.remove('hidden');startExamTimer();startPerQTimer();}
+      else{document.getElementById('timer-wrap').classList.add('hidden');document.getElementById('perq-timer').classList.add('hidden');if(examTimer)clearInterval(examTimer);if(perQTimer)clearInterval(perQTimer);document.getElementById('btn-validate').classList.remove('hidden');}
+      updateMiniBar();renderQuestion();
+    }
+    function showPage(e){document.querySelectorAll('#main-app .page').forEach(p=>p.classList.remove('active'));document.getElementById(e).classList.add('active');document.getElementById('main-scroll').scrollTop=0;}
+    function goHome(){if(examTimer)clearInterval(examTimer);if(perQTimer)clearInterval(perQTimer);showPage('page-home');}
+    function updateMiniBar(){const e=currentQ+1,t=activeSet.length;document.getElementById('mb-q-counter').textContent=`Q${e}/${t}`;document.getElementById('mb-progress-fill').style.width=(e/t*100)+'%';}
+    function selectMode(e){mode=e;['train','exam'].forEach(x=>document.getElementById('mode-'+x)?.classList.remove('selected'));document.getElementById('mode-'+e).classList.add('selected');const t=document.getElementById('btn-start');t.disabled=false;t.innerHTML=e==='train'?'📝 Mode Entraînement':'⏱️ Mode Examen (60 min)';document.getElementById('mb-mode-badge').style.display='inline-flex';document.getElementById('mb-mode-badge').textContent=e==='train'?'📝 Entraînement':'⏱️ Examen';}
+    function renderQuestion(){const e=currentQ,t=activeSet[e],n=questionsData[t],o=activeSet.length;document.getElementById('q-statement').innerHTML=`❓ <strong>Q${n.id}.</strong> ${n.statement}`;document.getElementById('mb-q-counter').textContent=`Q${e+1}/${o}`;document.getElementById('mb-progress-fill').style.width=((e+1)/o*100)+'%';const s=document.getElementById('q-choices');s.innerHTML='';const a=Array.isArray(n.correct)?n.correct:[n.correct];['A','B','C','D'].forEach((o,i)=>{if(i<n.choices.length){const r=document.createElement('button');r.className='choice-btn';if(validated[e]){if(a.includes(i))r.classList.add('correct');else if(userAnswers[e]&&userAnswers[e].includes(i))r.classList.add('wrong');}else if(userAnswers[e]&&userAnswers[e].includes(i))r.classList.add('selected');r.innerHTML=`<span class="choice-letter">${o}</span><span class="choice-text">${n.choices[i]}</span>`;if(validated[e])r.disabled=true;else r.onclick=()=>selectChoice(i);s.appendChild(r);}});const i=userAnswers[e]&&userAnswers[e].length>0;if(mode==='train'){document.getElementById('btn-validate').classList.remove('hidden');document.getElementById('btn-validate').disabled=(!i||validated[e]);const t=document.getElementById('btn-correction');(validated[e])?t.classList.remove('hidden'):t.classList.add('hidden');}const c=document.getElementById('feedback-box'),d=document.getElementById('feedback-placeholder');c.className='feedback-box';if(validated[e]&&mode==='train'){d.style.display='none';buildFeedback(n,userAnswers[e]);}else{c.style.display='none';d.style.display='flex';}document.getElementById('btn-prev').disabled=(e===0);const l=document.getElementById('btn-next');if(e===o-1){l.innerHTML='🏁 Terminer';l.className='btn btn-gold';}else{l.innerHTML='Suivant →';l.className='btn btn-green';}if(window.renderMathInElement)renderMathInElement(document.getElementById('q-statement'),{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});if(mode==='exam'){perQSeconds=PER_Q_SEC;updatePerQTimerDisplay();}}
+    function selectChoice(e){if(validated[currentQ])return;userAnswers[currentQ]||(userAnswers[currentQ]=[]);const t=userAnswers[currentQ].indexOf(e);t>-1?userAnswers[currentQ].splice(t,1):userAnswers[currentQ].push(e);renderQuestion();}
+    function arraysEqual(e,t){if(!e||!t)return false;if(e.length!==t.length)return false;const n=[...e].sort(),o=[...t].sort();return n.every((e,t)=>e===o[t]);}
+    function validateAnswer(){if(!userAnswers[currentQ]||userAnswers[currentQ].length===0)return;validated[currentQ]=true;renderQuestion();}
+    function buildFeedback(e,t){const n=document.getElementById('feedback-box'),o=document.getElementById('feedback-placeholder');o.style.display='none';const s=Array.isArray(e.correct)?e.correct:[e.correct],a=arraysEqual(t,s);n.classList.add('visible',a?'correct':'wrong');n.style.display='block';document.getElementById('badge-icon').textContent=a?'✅':'❌';document.getElementById('feedback-result-text').textContent=a?'Bonne réponse !':'Réponse incorrecte';const i=['A','B','C','D'],c=s.map(t=>i[t]+'. '+e.choices[t]).join(' ; ');document.getElementById('feedback-body').innerHTML=`<div class="feedback-label">📚 THÈME</div><div class="feedback-text">${e.theme}</div><div class="feedback-label">📘 NIVEAU</div><div class="feedback-text">${e.niveau_scolaire}</div><div class="feedback-label">💡 EXPLICATION</div><div class="correction-block">${e.explication}</div><div class="feedback-label">✅ RÉPONSE(S)</div><div class="correction-block"><strong>${c}</strong></div>`;}
+    function showCorrection(){buildFeedback(questionsData[activeSet[currentQ]],userAnswers[currentQ]);}
+    function prevQuestion(){if(currentQ>0){currentQ--;renderQuestion();if(mode==='exam'){perQSeconds=PER_Q_SEC;updatePerQTimerDisplay();}}}
+    function nextQuestion(){
+      if(currentQ<activeSet.length-1){currentQ++;renderQuestion();if(mode==='exam'){perQSeconds=PER_Q_SEC;updatePerQTimerDisplay();}}
+      else{
+        if(FICHE_TYPE==='semi'&&!licenceOk&&activeSet.length===QUESTIONS_GRATUITES){
+          showLicenceModal();
+        }else{
+          finishQuiz();
+        }
+      }
+    }
+    function showLicenceModal(){
+      const overlay=document.createElement('div');overlay.className='modal-overlay';overlay.id='licence-modal';
+      overlay.innerHTML=`
+        <div class="modal-box">
+          <h3>🎉 Félicitations !</h3>
+          <p>Vous avez terminé les <strong>15 questions gratuites</strong>.<br>Débloquez les <strong>35 questions restantes</strong> avec votre clé d'accès.</p>
+          <input type="text" class="key-input" id="key-input" placeholder="Ex: SYN-GENIE-1001" autocomplete="off" />
+          <div class="modal-error" id="modal-error">❌ Clé invalide. Veuillez réessayer.</div>
+          <div class="modal-actions">
+            <button class="btn btn-gold" id="btn-unlock">🔑 Débloquer</button>
+            <button class="btn btn-gray" id="btn-see-results">📊 Voir mes résultats</button>
+          </div>
+          <p style="margin-top:12px;font-size:11px;">🛒 Pas de clé ? <a href="../../commander.html" style="color:var(--accent);font-weight:700;">Commander le Pack</a></p>
+        </div>
+      `;
+      document.body.appendChild(overlay);
+      document.getElementById('btn-unlock').addEventListener('click',()=>{
+        const code=document.getElementById('key-input').value.trim();
+        if(VALID_CODES.includes(code)){
+          licenceOk=true;
+          document.getElementById('mb-client-badge').style.display='inline-flex';
+          document.getElementById('mb-client-badge').textContent='🔑 '+code;
+          overlay.remove();
+          activeSet=questionsData.map((_,i)=>i);
+          currentQ=QUESTIONS_GRATUITES-1;
+          validated=new Array(activeSet.length).fill(false);
+          userAnswers=new Array(activeSet.length).fill(null);
+          startQuiz(activeSet);
+        }else{
+          document.getElementById('modal-error').style.display='block';
+        }
+      });
+      document.getElementById('btn-see-results').addEventListener('click',()=>{overlay.remove();finishQuiz();});
+    }
+    function finishQuiz(){if(examTimer)clearInterval(examTimer);if(perQTimer)clearInterval(perQTimer);showPage('page-results');renderResults();document.getElementById('timer-wrap').classList.add('hidden');document.getElementById('perq-timer').classList.add('hidden');}
+    function renderResults(){let e=0;const t=document.getElementById('result-tbody');t.innerHTML='';const n={};activeSet.forEach((t,o)=>{const s=questionsData[t],a=Array.isArray(s.correct)?s.correct:[s.correct],i=arraysEqual(userAnswers[o],a);i&&e++;const c=s.statement.length>40?s.statement.substring(0,40)+'…':s.statement;t.innerHTML+=`<tr><td><strong>Q${s.id}</strong></td><td style="font-size:10px;">${c}</td><td style="font-size:10px;">${s.theme}</td><td class="${i?'r-ok':'r-ko'}">${i?'✅':'❌'}</td></tr>`;n[s.theme]||(n[s.theme]={total:0,correct:0});n[s.theme].total++;i&&n[s.theme].correct++;});const o=Math.round(e/activeSet.length*100);document.getElementById('result-pct').textContent=o+'%';document.getElementById('result-sub').textContent=`${e} / ${activeSet.length} bonnes réponses`;document.getElementById('result-badge').textContent=o>=80?'🏆':o>=50?'👍':'💪';document.getElementById('btn-retry-failed').style.display=activeSet.some((e,t)=>!arraysEqual(userAnswers[t],Array.isArray(questionsData[e].correct)?questionsData[e].correct:[questionsData[e].correct]))?'flex':'none';document.getElementById('result-themes').innerHTML='<table class="result-table"><thead><tr><th>Thème</th><th>Score</th><th>%</th></tr></thead><tbody>'+Object.entries(n).map(([e,t])=>{const n=Math.round(t.correct/t.total*100);return`<tr><td>${n>=80?'🟢':n>=50?'🟡':'🔴'} ${e}</td><td>${t.correct}/${t.total}</td><td>${n}%</td></tr>`;}).join('')+'</tbody></table>';}
+    function retryFailed(){const e=activeSet.filter((e,t)=>!arraysEqual(userAnswers[t],Array.isArray(questionsData[e].correct)?questionsData[e].correct:[questionsData[e].correct]));if(e.length>0)startQuiz(e);}
+    function startExamTimer(){updateExamTimerDisplay();examTimer=setInterval(()=>{examSeconds--;updateExamTimerDisplay();if(examSeconds<=0){clearInterval(examTimer);clearInterval(perQTimer);finishQuiz();}},1000);}
+    function updateExamTimerDisplay(){const e=Math.floor(examSeconds/60),t=examSeconds%60,n=document.getElementById('timer-badge');n.textContent=`⏱ ${String(e).padStart(2,'0')}:${String(t).padStart(2,'0')}`;n.className='timer-badge';if(examSeconds<=300)n.classList.add('danger');else if(examSeconds<=900)n.classList.add('warning');}
+    function startPerQTimer(){updatePerQTimerDisplay();perQTimer=setInterval(()=>{perQSeconds--;updatePerQTimerDisplay();if(perQSeconds<=0){clearInterval(perQTimer);if(mode==='exam'){validated[currentQ]=true;nextQuestion();}}},1000);}
+    function updatePerQTimerDisplay(){const e=Math.floor(perQSeconds/60),t=perQSeconds%60,n=document.getElementById('perq-timer');n.textContent=`⚡ ${String(e).padStart(1,'0')}:${String(t).padStart(2,'0')}`;n.className='perq-timer';if(perQSeconds<=30)n.classList.add('danger');else if(perQSeconds<=60)n.classList.add('warning');}
+    document.addEventListener('keydown',e=>{const t=document.querySelector('#main-app .page.active');if(!t||t.id!=='page-question')return;const n=e.key.toUpperCase();if(['A','B','C','D'].includes(n)&&!validated[currentQ])selectChoice(['A','B','C','D'].indexOf(n));if(e.key==='Enter'){if(mode==='train'){const e=document.getElementById('btn-validate');if(!e.disabled)validateAnswer();}}if(e.key==='ArrowRight')nextQuestion();if(e.key==='ArrowLeft')prevQuestion();});
+  </script>
+</body>
+</html>
