@@ -173,7 +173,1080 @@
     let licenceOk = (FICHE_TYPE === 'public');
 
     // ═══════════════ QUESTIONS (MORCEAU 2 À COLLER ICI) ═══════════════
-    const questionsData = MORCEAU_2_QUESTIONS;
+    const questionsData = [
+  {
+    id: 1,
+    statement: "Le basalte se distingue du granite par :",
+    choices: ["Sa structure microlithique", "Sa cristallisation lente et progressive", "Sa composition minéralogique", "Sa lave riche en silice"],
+    correct: [0, 2],
+    theme: "Géologie",
+    chapitre: "Structure et composition du globe",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Le basalte est une roche volcanique à refroidissement rapide (structure microlithique, cristaux fins et verre). Le granite est une roche plutonique à refroidissement lent (structure grenue, gros cristaux visibles). Le basalte est pauvre en silice (roche basique) alors que le granite est riche en silice (roche acide).",
+    phenomene: "La vitesse de refroidissement du magma détermine la structure de la roche : rapide = microlithique (basalte), lente = grenue (granite).",
+    correction_detaillee: {
+      juste: "A : Le basalte a une structure microlithique due au refroidissement rapide en surface. C : La composition minéralogique diffère (basalte basique pauvre en quartz, granite acide riche en quartz).",
+      faux: {
+        "B": "Le basalte a une cristallisation rapide, pas lente (c'est le granite qui refroidit lentement en profondeur).",
+        "D": "Le basalte est pauvre en silice (environ 50% SiO₂), contrairement au granite (environ 70% SiO₂)."
+      }
+    },
+    erreur_frequente: "Confondre structure (microlithique/grenue) et composition (basique/acide). Les deux critères sont distincts.",
+    astuce_fr: "Basalte = Volcan = Refroidissement RAPIDE = Petits cristaux. Granite = Pluton = Refroidissement LENT = Gros cristaux.",
+    astuce_ar: "البازلت كالعجينة التي جمدت فجأة، والغرانيت كالحلوى التي نضجت على نار هادئة. البازلت بركاني سريع التبريد، الجرانيت بلوتوني بطيء التبريد."
+  },
+  {
+    id: 2,
+    statement: "Le strombe (Strombus bubonius) est un fossile caractéristique :",
+    choices: ["De l'ère tertiaire", "De l'ère quaternaire", "D'un faciès marin littoral", "D'un faciès continental"],
+    correct: [1, 2],
+    theme: "Géologie",
+    chapitre: "Stratigraphie et paléontologie",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Strombus bubonius est un gastéropode fossile caractéristique du Quaternaire marin (Eutyrrhénien) en Tunisie. On le trouve notamment dans les dépôts de plages anciennes (falaise de Sidi Mhareb à Monastir). C'est à la fois un fossile stratigraphique (indique l'âge) et un fossile de faciès (indique le milieu).",
+    phenomene: "Le strombe est un marqueur bio-stratigraphique du Quaternaire et un indicateur paléoécologique de mer chaude littorale.",
+    correction_detaillee: {
+      juste: "B : Le strombe caractérise l'ère quaternaire (Eutyrrhénien, environ 120 000 ans). C : Il indique un faciès marin littoral (mer chaude et peu profonde).",
+      faux: {
+        "A": "L'ère tertiaire est plus ancienne (66 à 2,6 millions d'années). Le strombe est un fossile récent du Quaternaire.",
+        "D": "Le strombe est un mollusque marin, il ne peut pas caractériser un faciès continental."
+      }
+    },
+    erreur_frequente: "Confondre le strombe (Quaternaire) avec les nummulites (Éocène/Tertiaire). Les deux sont des fossiles marins mais d'âges très différents.",
+    astuce_fr: "Strombe = Sable (littoral) et Système Quaternaire. Un coquillage de plage récent.",
+    astuce_ar: "السترمب هو ساعة الزمن الرابع وبوصلة البحار الدافئة. صدفة شاطئية تعود للعصر الرباعي."
+  },
+  {
+    id: 3,
+    statement: "Le moteur des mouvements des plaques est :",
+    choices: ["La montée du magma vers la surface", "La gravité universelle", "La convection thermique dans la couche supérieure du manteau", "L'expansion océanique"],
+    correct: [2],
+    theme: "Géologie",
+    chapitre: "Tectonique des plaques",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "La chaleur interne du globe (désintégration d'éléments radioactifs) crée des courants de convection dans l'asthénosphère (manteau supérieur ductile). Ces mouvements de matière entraînent les plaques lithosphériques rigides sus-jacentes, comme un tapis roulant.",
+    phenomene: "Les courants de convection sont le moteur thermique principal de la tectonique des plaques. La matière chaude monte au niveau des dorsales, la matière froide plonge au niveau des zones de subduction.",
+    correction_detaillee: {
+      juste: "C : La convection thermique dans l'asthénosphère est le moteur principal reconnu par le modèle de la tectonique des plaques.",
+      faux: {
+        "A": "La montée du magma est une conséquence de la convection, pas le moteur premier.",
+        "B": "La gravité joue un rôle (traction de la plaque plongeante) mais n'est pas le moteur thermique global.",
+        "D": "L'expansion océanique est une conséquence de la divergence des plaques, pas la cause."
+      }
+    },
+    erreur_frequente: "Penser que c'est la lave qui pousse les continents. En réalité, c'est la convection du manteau qui déplace les plaques.",
+    astuce_fr: "Convection = Convecteur (chauffage) qui fait bouger l'air/les plaques. Chaleur interne = moteur.",
+    astuce_ar: "تيارات الحمل هي المرجل الذي يغلي تحت الأرض ليحرك القارات. الحرارة الباطنية هي المحرك الأساسي."
+  },
+  {
+    id: 4,
+    statement: "Le pétrole est une roche :",
+    choices: ["Carbonatée", "Carbonée", "Sédimentaire", "Métamorphique"],
+    correct: [1, 2],
+    theme: "Géologie",
+    chapitre: "Ressources naturelles",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Le pétrole est une roche sédimentaire carbonée formée par l'accumulation et la transformation de matière organique (plancton, algues) en milieu anaérobie (sans oxygène). Il se forme dans une roche mère (argiles noires) puis migre vers une roche magasin (grès, calcaires poreux).",
+    phenomene: "Le pétrole est classé comme une roche sédimentaire carbonée liquide. Sa genèse implique : dépôt de matière organique → enfouissement → transformation thermique → migration.",
+    correction_detaillee: {
+      juste: "B : Le pétrole est une roche carbonée (riche en carbone organique). C : C'est une roche sédimentaire (formée par dépôt et transformation).",
+      faux: {
+        "A": "Les roches carbonatées sont les calcaires (CaCO₃), pas le pétrole.",
+        "D": "Le pétrole n'est pas une roche métamorphique (il n'a pas subi de transformation par haute pression/température)."
+      }
+    },
+    erreur_frequente: "Oublier que le pétrole, bien que liquide, est classé géologiquement comme une roche. Ne pas confondre carbonée et carbonatée.",
+    astuce_fr: "Pétrole = Sédiment Carboné (SC pour Super Carburant). Liquide ≠ pas une roche.",
+    astuce_ar: "النفط هو عصير الحياة الغابرة الذي حُفظ في أقبية الرسوبيات. صخر رسوبي كربوني سائل."
+  },
+  {
+    id: 5,
+    statement: "Parmi les structures géologiques suivantes, celle(s) due(s) à une compression de la croûte terrestre est (sont) :",
+    choices: ["Faille normale", "Faille inverse", "Fossé d'effondrement", "Chaîne de montagnes"],
+    correct: [1, 3],
+    theme: "Géologie",
+    chapitre: "Tectonique et accidents tectoniques",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "La compression résulte de forces convergentes qui raccourcissent la croûte terrestre. Elle produit des failles inverses (chevauchantes), des plis et des chaînes de montagnes (orogenèse). La distension (forces divergentes) produit des failles normales et des fossés d'effondrement (rifts).",
+    phenomene: "Compression = raccourcissement = failles inverses + plis + montagnes. Distension = étirement = failles normales + fossés.",
+    correction_detaillee: {
+      juste: "B : La faille inverse résulte d'une compression (le toit monte par rapport au mur). D : Les chaînes de montagnes se forment par compression (orogenèse).",
+      faux: {
+        "A": "La faille normale résulte d'une distension (le toit descend par rapport au mur).",
+        "C": "Le fossé d'effondrement (rift) résulte d'une distension."
+      }
+    },
+    erreur_frequente: "Inverser les types de failles : normale (distension) et inverse (compression). Le nom 'inverse' peut prêter à confusion.",
+    astuce_fr: "Inverse = Impact (choc/compression). Normale = écartement (distension).",
+    astuce_ar: "الصدع المعكوس هو رد فعل الأرض على الضغط، كالسجاد الذي يتجعد عند دفعه. الضغط يقصر، التمدد يطيل."
+  },
+  {
+    id: 6,
+    statement: "La photophosphorylation signifie la production d'ATP :",
+    choices: ["Par l'action de la lumière sur l'ADP", "Par l'oxydation d'une molécule d'eau dans le chloroplaste", "Au cours du transport des électrons dans la chaîne photosynthétique au niveau du chloroplaste", "Par l'action de la lumière sur la chlorophylle"],
+    correct: [2],
+    theme: "Nutrition",
+    chapitre: "Photosynthèse",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La photophosphorylation est la synthèse d'ATP dans les thylakoïdes du chloroplaste, couplée au transfert d'électrons excités par la lumière le long de la chaîne photosynthétique. Les électrons proviennent de la photolyse de l'eau (H₂O → ½O₂ + 2H⁺ + 2e⁻).",
+    phenomene: "Phase photochimique (claire) : l'énergie lumineuse excite les électrons de la chlorophylle qui circulent dans la chaîne photosynthétique, permettant la phosphorylation de l'ADP en ATP.",
+    correction_detaillee: {
+      juste: "C : L'ATP est produit lors du transport des électrons dans la chaîne photosynthétique (photophosphorylation).",
+      faux: {
+        "A": "La lumière n'agit pas directement sur l'ADP. Le mécanisme implique le transport d'électrons.",
+        "B": "La photolyse de l'eau libère des électrons et de l'O₂, mais la phosphorylation est distincte.",
+        "D": "La lumière excite la chlorophylle (absorption), mais l'ATP est produit par la chaîne de transport."
+      }
+    },
+    erreur_frequente: "Confondre photophosphorylation (lumière → ATP dans le chloroplaste) et phosphorylation oxydative (respiration → ATP dans la mitochondrie).",
+    astuce_fr: "Photo = lumière. Phosphorylation = ATP. La chaîne photosynthétique produit l'ATP grâce à la lumière.",
+    astuce_ar: "الضوء هو الوقود الذي يشحن بطاريات الخلية (ATP). الفوتوفسفرة = ضوء + إنتاج ATP."
+  },
+  {
+    id: 7,
+    statement: "Le système HLA ou CMH (complexe majeur d'histocompatibilité) :",
+    choices: ["Est un ensemble d'antigènes membranaires spécifiques à l'individu", "Concerne les globules rouges", "Est un groupe de gènes du chromosome 6 codant la synthèse de glycoprotéines de surface", "N'intervient pas dans la réaction immunitaire"],
+    correct: [0, 2],
+    theme: "Immunologie",
+    chapitre: "Le Soi et le Non-Soi",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le CMH désigne les gènes situés sur le chromosome 6 qui codent pour les protéines membranaires HLA (Human Leukocyte Antigen). Ces protéines sont présentes sur toutes les cellules nucléées et constituent la 'carte d'identité' biologique de l'individu. Elles permettent au système immunitaire de distinguer le soi du non-soi.",
+    phenomene: "Les molécules HLA sont les marqueurs du soi. Le CMH est le groupe de gènes qui les code. Ils sont essentiels à la reconnaissance immunitaire.",
+    correction_detaillee: {
+      juste: "A : Les HLA sont des antigènes membranaires spécifiques à chaque individu (sauf vrais jumeaux). C : Les gènes du CMH sont situés sur le chromosome 6.",
+      faux: {
+        "B": "Les globules rouges n'ont pas de noyau et ne portent pas de HLA. Ils portent les antigènes ABO et Rhésus.",
+        "D": "Le CMH/HLA est fondamental dans la réaction immunitaire (présentation de l'antigène, reconnaissance)."
+      }
+    },
+    erreur_frequente: "Confondre HLA (chromosome 6, globules blancs) et groupes sanguins ABO (chromosome 9, globules rouges).",
+    astuce_fr: "CMH = GÈNES sur chromosome 6. HLA = PROTÉINES = marqueurs du soi. Humain Leucocyte Antigène.",
+    astuce_ar: "نظام HLA هو البصمة البيولوجية التي تفرق بين الصديق والعدو. CMH = جينات، HLA = بروتينات."
+  },
+  {
+    id: 8,
+    statement: "Dans un écosystème, le nombre et la masse des individus des différents niveaux trophiques décroît des producteurs aux consommateurs, car :",
+    choices: ["La production primaire est limitée", "En passant d'un niveau trophique à un niveau trophique suivant, le rendement énergétique diminue", "Les herbivores consomment plus d'énergie que les carnivores", "En passant d'un niveau trophique à un autre, la quantité de matière vivante élaborée à partir de l'énergie disponible est faible"],
+    correct: [1, 3],
+    theme: "Écologie",
+    chapitre: "Relations trophiques et flux d'énergie",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "À chaque niveau trophique, environ 90% de l'énergie est perdue sous forme de chaleur (respiration) ou de déchets (excrétion). Seulement ~10% de l'énergie est transférée au niveau suivant. Cela explique la forme pyramidale des pyramides écologiques.",
+    phenomene: "Le rendement énergétique diminue à chaque transfert trophique (règle des 10%). La biomasse diminue en conséquence.",
+    correction_detaillee: {
+      juste: "B : Le rendement énergétique diminue d'un niveau à l'autre (pertes par respiration, chaleur). D : La quantité de matière vivante élaborée au niveau suivant est faible (~10% de l'énergie disponible).",
+      faux: {
+        "A": "La production primaire n'est pas limitée en soi, c'est le transfert qui est peu efficace.",
+        "C": "Les herbivores ne consomment pas plus d'énergie que les carnivores en valeur absolue."
+      }
+    },
+    erreur_frequente: "Croire que l'énergie se multiplie en montant dans la chaîne alimentaire, ou que la production primaire limitée explique tout.",
+    astuce_fr: "Règle des 10% : seul 1/10 de l'énergie passe au niveau suivant. Pyramide = base large, sommet étroit.",
+    astuce_ar: "الطاقة في الطبيعة كالغربال، كلما ارتفعنا ضاع الكثير وبقي القليل. 10% فقط ينتقل للمستوى التالي."
+  },
+  {
+    id: 9,
+    statement: "Dans un écosystème, la niche écologique désigne :",
+    choices: ["L'ensemble des conditions physicochimiques du milieu", "L'habitat d'une population", "La fonction d'une population dans une biocénose", "Le niveau trophique d'une population"],
+    correct: [2],
+    theme: "Écologie",
+    chapitre: "Écosystèmes",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "La niche écologique est le rôle fonctionnel d'une espèce dans son écosystème : ce qu'elle mange, comment elle se reproduit, ses interactions avec les autres espèces, sa période d'activité. L'habitat est son adresse, la niche est sa profession.",
+    phenomene: "Niche = fonction (profession). Habitat = lieu de vie (adresse). Deux espèces peuvent partager le même habitat mais avoir des niches différentes.",
+    correction_detaillee: {
+      juste: "C : La niche écologique est la fonction d'une population dans la biocénose (son rôle trophique, ses interactions).",
+      faux: {
+        "A": "Les conditions physicochimiques définissent le biotope, pas la niche.",
+        "B": "L'habitat est le lieu de vie, pas la niche.",
+        "D": "Le niveau trophique est un aspect de la niche, mais ne la définit pas entièrement."
+      }
+    },
+    erreur_frequente: "Confondre niche (fonction) et habitat (lieu). Penser que deux espèces ne peuvent pas coexister si elles ont la même niche.",
+    astuce_fr: "Niche = Nature de la fonction. Habitat = Adresse. Niche = Profession.",
+    astuce_ar: "الموطن هو العنوان، والمتحد البيئي هو الوظيفة. المحراب البيئي = مهنة الكائن الحي."
+  },
+  {
+    id: 10,
+    statement: "La relation biologique existant entre les légumineuses et les bactéries fixatrices d'azote est :",
+    choices: ["Un parasitisme", "Une symbiose", "Un mutualisme", "Un commensalisme"],
+    correct: [1, 2],
+    theme: "Écologie",
+    chapitre: "Interactions biologiques",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les bactéries Rhizobium vivent dans les nodosités des racines de légumineuses. Elles fixent l'azote atmosphérique (N₂ → NH₄⁺) pour la plante, qui en échange leur fournit des sucres issus de la photosynthèse. C'est une relation à bénéfice réciproque (+/+).",
+    phenomene: "Mutualisme = bénéfice réciproque (+/+). Symbiose = association étroite et durable. Ici, les deux termes s'appliquent : c'est une symbiose mutualiste.",
+    correction_detaillee: {
+      juste: "B : C'est une symbiose (association étroite et durable entre les deux organismes). C : C'est un mutualisme (bénéfice réciproque : azote contre sucres).",
+      faux: {
+        "A": "Le parasitisme est une relation (+/-) où l'un profite au détriment de l'autre.",
+        "D": "Le commensalisme est une relation (+/0) où l'un profite sans nuire à l'autre."
+      }
+    },
+    erreur_frequente: "Penser que symbiose et mutualisme sont exclusifs. Une symbiose peut être mutualiste (bénéfique pour les deux).",
+    astuce_fr: "L'union fait la force (azote contre sucre). Gagnant-Gagnant = mutualisme symbiotique.",
+    astuce_ar: "التعايش هو عقد مقايضة؛ الغذاء مقابل النيتروجين. رابح-رابح = تعايش تبادلي."
+  },
+  {
+    id: 11,
+    statement: "Le glycogène et l'amidon sont :",
+    choices: ["Des polysaccharides constitués de glucose", "Des sucres réducteurs", "Des macromolécules de réserve des cellules animales", "Constitués de polymères linéaires sans chaînes ramifiées"],
+    correct: [0],
+    theme: "Nutrition",
+    chapitre: "Biochimie des glucides",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Le glycogène (animal) et l'amidon (végétal) sont des polysaccharides de réserve formés de chaînes de glucose ramifiées (amylopectine pour l'amidon, structure très ramifiée pour le glycogène). Ce sont des macromolécules non réductrices.",
+    phenomene: "Ce sont des polymères de glucose servant de réserve énergétique. L'amidon colore en bleu à l'eau iodée, le glycogène en brun acajou.",
+    correction_detaillee: {
+      juste: "A : Ce sont des polysaccharides (polyosides) constitués uniquement de glucose.",
+      faux: {
+        "B": "Les polyosides ne sont pas des sucres réducteurs (contrairement au glucose ou au maltose).",
+        "C": "Seul le glycogène est animal. L'amidon est exclusivement végétal.",
+        "D": "Ils sont ramifiés (amylopectine de l'amidon, glycogène très ramifié)."
+      }
+    },
+    erreur_frequente: "Penser qu'ils sont linéaires ou que l'amidon est aussi présent chez les animaux.",
+    astuce_fr: "Glycogène = Animal (foie, muscle). Amidon = Végétal (pomme de terre, riz). Tous deux = glucose ramifié.",
+    astuce_ar: "النشا للزرع والغليكوجين للضرع؛ كلاهما مخازن طاقة من سكر العنب. عديدات سكريات = جلوكوز متفرع."
+  },
+  {
+    id: 12,
+    statement: "Les protéines :",
+    choices: ["Sont des molécules informatives", "Sont constituées de séquences d'acides aminés", "Ne se rencontrent que dans les cellules animales", "Peuvent accomplir des fonctions enzymatiques"],
+    correct: [1, 3],
+    theme: "Biologie cellulaire",
+    chapitre: "Biochimie des protéines",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Les protéines sont des polymères d'acides aminés reliés par des liaisons peptidiques. Elles assurent de nombreuses fonctions : enzymes (catalyse), structure (collagène, kératine), transport (hémoglobine), défense (anticorps). Les molécules informatives sont l'ADN et l'ARN.",
+    phenomene: "Les protéines sont le produit de l'expression génétique, pas le support de l'information. Elles existent chez tous les êtres vivants.",
+    correction_detaillee: {
+      juste: "B : Les protéines sont constituées de séquences d'acides aminés (structure primaire). D : Certaines protéines sont des enzymes (catalyseurs biologiques).",
+      faux: {
+        "A": "Les molécules informatives sont l'ADN et l'ARN. Les protéines sont le produit de leur expression.",
+        "C": "Les protéines existent chez tous les êtres vivants (animaux, végétaux, bactéries, champignons)."
+      }
+    },
+    erreur_frequente: "Confondre acide aminé (monomère) et protéine (polymère). Penser que les protéines sont informatives.",
+    astuce_fr: "ADN = Information (archive). ARN = Message (copie). Protéine = Action (enzyme, structure).",
+    astuce_ar: "البروتينات هي لبنات البناء وأدوات العمل في كل خلية حية. ADN = معلومة، بروتين = عمل."
+  },
+  {
+    id: 13,
+    statement: "Les enzymes :",
+    choices: ["Sont des protéines à propriétés catalytiques et possédant un site actif", "Sont spécifiques à un substrat ou d'un type de réaction", "N'interviennent que dans les réactions d'hydrolyse", "Fonctionnent indépendamment du pH du milieu et de sa température"],
+    correct: [0, 1],
+    theme: "Nutrition",
+    chapitre: "Enzymologie",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Les enzymes sont des biocatalyseurs protéiques. Elles possèdent un site actif spécifique qui reconnaît un substrat particulier (modèle clé-serrure). Leur activité dépend fortement des conditions physicochimiques : chaque enzyme a un pH et une température optimaux.",
+    phenomene: "Les enzymes accélèrent les réactions sans être consommées. Spécificité enzyme-substrat. Elles interviennent dans les hydrolyses ET les synthèses.",
+    correction_detaillee: {
+      juste: "A : Les enzymes sont des protéines catalytiques possédant un site actif. B : Elles sont spécifiques d'un substrat ou d'un type de réaction.",
+      faux: {
+        "C": "Les enzymes interviennent aussi dans les réactions de synthèse (ex: ADN polymérase), pas seulement d'hydrolyse.",
+        "D": "L'activité enzymatique dépend fortement du pH et de la température (dénaturation à haute température)."
+      }
+    },
+    erreur_frequente: "Croire que toutes les enzymes fonctionnent à pH neutre ou à 37°C. La pepsine gastrique fonctionne à pH très acide.",
+    astuce_fr: "Enzyme = Expert spécifique (un seul substrat, un seul pH optimal). Une serrure pour une clé.",
+    astuce_ar: "الإنزيم هو المقص المتخصص؛ لا يقطع إلا ما صُنع من أجله. مفتاح وقفل لكل إنزيم."
+  },
+  {
+    id: 14,
+    statement: "La cellule végétale est caractérisée par :",
+    choices: ["La membrane plasmique", "Le noyau", "La paroi pectocellulosique", "Les chloroplastes"],
+    correct: [2, 3],
+    theme: "Biologie cellulaire",
+    chapitre: "Unité du vivant",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "La cellule végétale se distingue de la cellule animale par la présence d'une paroi pectocellulosique rigide (constituée de cellulose) et de chloroplastes (organites de la photosynthèse). La membrane plasmique et le noyau sont communs à toutes les cellules eucaryotes.",
+    phenomene: "Paroi + chloroplastes = caractéristiques exclusives des cellules végétales. Membrane + noyau = communs aux eucaryotes.",
+    correction_detaillee: {
+      juste: "C : La paroi pectocellulosique est spécifique aux cellules végétales. D : Les chloroplastes sont spécifiques aux cellules végétales.",
+      faux: {
+        "A": "La membrane plasmique existe aussi chez les cellules animales.",
+        "B": "Le noyau existe chez toutes les cellules eucaryotes (animales et végétales)."
+      }
+    },
+    erreur_frequente: "Oublier que la membrane plasmique existe aussi chez les végétaux (sous la paroi). Confondre paroi et membrane.",
+    astuce_fr: "Végétal = Vert (chloroplastes) et Verrouillé (paroi). Le reste = commun animal/végétal.",
+    astuce_ar: "الخلية النباتية قلعة حصينة (جدار) بداخلها معامل شمسية (بلاستيدات). الجدار والبلاستيدات = نباتي فقط."
+  },
+  {
+    id: 15,
+    statement: "Les nucléotides sont des constituants de base :",
+    choices: ["Des protides", "De l'ADN", "Des lipides", "De l'ARN"],
+    correct: [1, 3],
+    theme: "Biologie cellulaire",
+    chapitre: "Acides nucléiques",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les nucléotides sont les monomères de l'ADN et de l'ARN. Chaque nucléotide est constitué d'un groupement phosphate, d'un sucre (désoxyribose pour l'ADN, ribose pour l'ARN) et d'une base azotée (A, T, C, G pour l'ADN ; A, U, C, G pour l'ARN).",
+    phenomene: "ADN et ARN = polynucléotides. Protides = polymères d'acides aminés. Lipides = esters d'acides gras.",
+    correction_detaillee: {
+      juste: "B : L'ADN est un polymère de désoxyribonucléotides. D : L'ARN est un polymère de ribonucléotides.",
+      faux: {
+        "A": "Les protides (protéines) sont constitués d'acides aminés, pas de nucléotides.",
+        "C": "Les lipides sont constitués d'acides gras et de glycérol, pas de nucléotides."
+      }
+    },
+    erreur_frequente: "Confondre nucléotide (ADN/ARN) et acide aminé (protéines). Ce sont des monomères différents.",
+    astuce_fr: "Nucléotide = brique de l'ADN et ARN. Acide aminé = brique des protéines.",
+    astuce_ar: "النكليوتيدات هي أحرف الأبجدية التي تُكتب بها أسرار الحياة. ADP = سكر + فوسفات + قاعدة."
+  },
+  {
+    id: 16,
+    statement: "Dans la cellule vivante, les mitochondries sont considérées comme des « centrales productrices d'énergie », car :",
+    choices: ["Elles contiennent de l'ATP en grande quantité", "Elles sont entourées d'une double membrane", "La fibre musculaire contient un grand nombre de mitochondries", "Les enzymes intervenant dans le cycle de Krebs et la chaîne de cytochromes sont localisées au niveau de la membrane interne de la mitochondrie"],
+    correct: [3],
+    theme: "Biologie cellulaire",
+    chapitre: "Respiration cellulaire",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Les mitochondries abritent les enzymes du cycle de Krebs dans leur matrice et les enzymes de la chaîne respiratoire (cytochromes) sur leur membrane interne (crêtes). C'est là que se déroule la phosphorylation oxydative qui produit l'essentiel de l'ATP cellulaire.",
+    phenomene: "La localisation précise des enzymes de la respiration dans les mitochondries justifie leur rôle de centrale énergétique.",
+    correction_detaillee: {
+      juste: "D : Les enzymes du cycle de Krebs (matrice) et de la chaîne respiratoire (membrane interne) sont localisées dans la mitochondrie, permettant la production d'ATP.",
+      faux: {
+        "A": "L'ATP n'est pas stocké en grande quantité dans la mitochondrie. Il est produit puis consommé rapidement.",
+        "B": "La double membrane est une caractéristique structurale, pas l'explication de la production d'énergie.",
+        "C": "La présence de nombreuses mitochondries dans le muscle est une conséquence des besoins énergétiques, pas la cause."
+      }
+    },
+    erreur_frequente: "Penser que les mitochondries stockent l'ATP, alors qu'elles le produisent en continu.",
+    astuce_fr: "Mitochondrie = Usine à ATP. Krebs (matrice) + Chaîne respiratoire (crêtes) = Production.",
+    astuce_ar: "المتقدرة هي فرن الخلية الذي يحرق الغلوكوز ليولد طاقة الحركة. كريبس + السلسلة التنفسية = ATP."
+  },
+  {
+    id: 17,
+    statement: "L'organite est bien associé à sa fonction dans le(s) cas suivant(s) :",
+    choices: ["Noyau – information génétique", "Appareil de Golgi – synthèse des protéines", "Chloroplastes – respiration cellulaire", "Mitochondries – photosynthèse"],
+    correct: [0],
+    theme: "Biologie cellulaire",
+    chapitre: "Ultrastructure cellulaire",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Chaque organite a une fonction spécifique : le noyau contient l'ADN (information génétique), l'appareil de Golgi assure la maturation et le transport des protéines, les chloroplastes réalisent la photosynthèse, les mitochondries assurent la respiration cellulaire.",
+    phenomene: "Compartimentation fonctionnelle : chaque organite possède un équipement enzymatique dédié à une tâche précise.",
+    correction_detaillee: {
+      juste: "A : Le noyau contient l'ADN, support de l'information génétique.",
+      faux: {
+        "B": "L'appareil de Golgi assure la maturation et le transport des protéines. La synthèse est assurée par les ribosomes.",
+        "C": "Les chloroplastes réalisent la photosynthèse, pas la respiration.",
+        "D": "Les mitochondries assurent la respiration cellulaire, pas la photosynthèse."
+      }
+    },
+    erreur_frequente: "Inverser les fonctions : chloroplaste/respiration et mitochondrie/photosynthèse. Confondre synthèse et maturation des protéines.",
+    astuce_fr: "Noyau = Notaire (garde l'info). Mitochondrie = Moteur. Chloroplaste = Panneau solaire. Golgi = Postier.",
+    astuce_ar: "النواة هي المكتبة المركزية. الميتوكندري = محرك. البلاستيدات = ألواح شمسية. غولجي = مكتب البريد."
+  },
+  {
+    id: 18,
+    statement: "La méiose :",
+    choices: ["Rétablit la diploïdie de l'espèce", "Répartit les chromosomes homologues dans deux cellules filles", "Intervient dans la formation des gamètes", "Permet à l'ovocyte I de donner 4 ovules (chez la femme)"],
+    correct: [1, 2],
+    theme: "Génétique",
+    chapitre: "Reproduction sexuée et méiose",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La méiose est une division réductionnelle qui fait passer le stock chromosomique de 2n à n. Elle sépare les chromosomes homologues (anaphase I) et les chromatides (anaphase II). Elle produit les gamètes. C'est la fécondation qui rétablit la diploïdie. Chez la femme, l'ovocyte I donne 1 ovule fonctionnel et 3 globules polaires.",
+    phenomene: "Méiose = division réductionnelle produisant des cellules haploïdes (gamètes). Fécondation = rétablissement de la diploïdie.",
+    correction_detaillee: {
+      juste: "B : La méiose sépare les chromosomes homologues (anaphase I). C : Elle intervient dans la formation des gamètes (spermatozoïdes, ovules).",
+      faux: {
+        "A": "C'est la fécondation qui rétablit la diploïdie, pas la méiose.",
+        "D": "Chez la femme, l'ovocyte I donne 1 ovule et 3 globules polaires (et non 4 ovules)."
+      }
+    },
+    erreur_frequente: "Confondre méiose (réduction) et fécondation (rétablissement). Penser que l'ovogenèse produit 4 ovules.",
+    astuce_fr: "Méiose = Moitié (division par deux : 2n → n). Fécondation = n + n → 2n.",
+    astuce_ar: "الانقسام المنصف هو جسر العبور من جيل إلى جيل. ميوز = 2n → n. إخصاب = n + n → 2n."
+  },
+  {
+    id: 19,
+    statement: "Le crossing-over :",
+    choices: ["Se produit au moment de la fécondation", "Se produit à la prophase de la première division méiotique", "Est à l'origine d'une variabilité génétique des gamètes", "Donne des chromatides remaniées"],
+    correct: [1, 2, 3],
+    theme: "Génétique",
+    chapitre: "Brassage génétique",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le crossing-over (enjambement) se produit en prophase I de la méiose. Il consiste en un échange réciproque de segments entre chromosomes homologues (entre chromatides non-sœurs). Il produit des chromatides remaniées (recombinées) et augmente la variabilité génétique des gamètes.",
+    phenomene: "Crossing-over = brassage intrachromosomique. Échange de segments entre chromosomes homologues en prophase I.",
+    correction_detaillee: {
+      juste: "B : Le crossing-over a lieu en prophase I de la méiose. C : Il crée de la variabilité génétique. D : Il produit des chromatides remaniées.",
+      faux: {
+        "A": "Le crossing-over se produit pendant la méiose (formation des gamètes), pas lors de la fécondation (union des gamètes)."
+      }
+    },
+    erreur_frequente: "Situer le crossing-over à la fécondation ou en mitose. Oublier qu'il ne se produit qu'entre chromosomes homologues.",
+    astuce_fr: "Crossing-over = Croisement = Échange de gènes en prophase I. Brassage intrachromosomique.",
+    astuce_ar: "العبور هو تبادل قطع النسيج الوراثي لصناعة أثواب فريدة. يحدث في الطور التمهيدي الأول."
+  },
+  {
+    id: 20,
+    statement: "La cellule procaryote se distingue de la cellule eucaryote par :",
+    choices: ["L'absence d'organites cellulaires à l'exception des ribosomes", "L'absence d'un noyau cellulaire", "La présence de mitochondries", "La présence d'une membrane cytoplasmique"],
+    correct: [0, 1],
+    theme: "Biologie cellulaire",
+    chapitre: "Classification du vivant",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les procaryotes (bactéries) n'ont pas de noyau délimité par une enveloppe nucléaire. Leur ADN est libre dans le cytoplasme. Ils ne possèdent pas d'organites membraneux (mitochondries, RE, Golgi). Seuls les ribosomes sont présents. La membrane cytoplasmique est commune à toutes les cellules.",
+    phenomene: "Procaryote = pas de noyau, pas d'organites membraneux. Le ribosome est le seul organite universel.",
+    correction_detaillee: {
+      juste: "A : Absence d'organites membraneux, seuls les ribosomes sont présents. B : Absence de noyau individualisé.",
+      faux: {
+        "C": "Les procaryotes n'ont pas de mitochondries. La respiration se fait au niveau de la membrane plasmique.",
+        "D": "La membrane cytoplasmique existe chez tous les types cellulaires (procaryotes et eucaryotes)."
+      }
+    },
+    erreur_frequente: "Croire que les bactéries n'ont ni ADN ni ribosomes. Elles possèdent les deux, mais pas de noyau.",
+    astuce_fr: "PROcaryote = Pas (de noyau). EUcaryote = Vrai noyau. Le ribosome est universel.",
+    astuce_ar: "بدائيات النوى هي بيوت من طراز قديم، كل أثاثها في غرفة واحدة. لا نواة، لا عضيات غشائية."
+  },
+        {
+    id: 21,
+    statement: "Chez un ascomycète, le croisement d'une souche aux spores noires par une souche aux spores blanches a donné 400 spores noires, 400 spores blanches, 100 spores roses et 100 spores jaunes. Le déterminisme génétique est :",
+    choices: ["2 gènes liés distants de 20 cmgs", "2 gènes indépendants", "Un seul gène situé à 20 cmgs du centromère", "Un seul gène très proche du centromère"],
+    correct: [0],
+    theme: "Génétique",
+    chapitre: "Brassage génétique et distance génétique",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Chez les ascomycètes, l'analyse des spores permet de déterminer la disposition des gènes. La distance entre deux gènes liés est calculée par le pourcentage de recombinés : (nombre de spores recombinées / nombre total de spores) × 100. Ici, les spores roses et jaunes sont les recombinées (100 + 100 = 200 sur 1000 total = 20%).",
+    phenomene: "La fréquence de recombinaison de 20% indique que les deux gènes sont liés et distants de 20 centimorgans (cM).",
+    correction_detaillee: {
+      juste: "A : 2 gènes liés distants de 20 cM. Les recombinés (roses + jaunes = 200/1000 = 20%) donnent directement la distance génétique.",
+      faux: {
+        "B": "Si les gènes étaient indépendants, on observerait 4 types de spores en proportions égales (250 de chaque), ce qui n'est pas le cas.",
+        "C": "L'analyse porte sur deux gènes entre eux, pas sur la distance gène-centromère.",
+        "D": "Un gène très proche du centromère donnerait un taux de recombinaison très faible, pas 20%."
+      }
+    },
+    erreur_frequente: "Oublier d'additionner les deux types de recombinés (roses et jaunes) avant de diviser par le total. Ne pas reconnaître les phénotypes parentaux (noir et blanc) et recombinés (rose et jaune).",
+    astuce_fr: "Recombinés sur total, la distance est ton Graal. (100+100)/1000 × 100 = 20 cM.",
+    astuce_ar: "المسافة بين الجينات تُقاس بمدى ابتعاد الأبناء عن صفات الآباء. (الوردي + الأصفر) ÷ الكل × 100 = 20 سنتيمورغان."
+  },
+  {
+    id: 22,
+    statement: "Le croisement de deux souches de Neurospora a donné 3 types d'asques octosporés (Type I: 4+/4- ; Type II: 8- ; Type III: 2+/6-). On conclut que :",
+    choices: ["Les 2 souches diffèrent par 2 gènes liés", "Les 2 souches diffèrent par 2 gènes indépendants", "Les 2 souches sont l'une (+) et l'autre (-)", "Les souches sont toutes les deux (-)"],
+    correct: [2],
+    theme: "Génétique",
+    chapitre: "Analyse de tétrades chez Neurospora",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Chez Neurospora, le croisement d'une souche (+) avec une souche (-) produit des asques avec différentes proportions de spores (+) et (-) selon la survenue de crossing-over. Les types parentaux sont 4+/4- (sans crossing-over) et 8- (avec crossing-over entre le gène et le centromère).",
+    phenomene: "La présence de spores (+) et (-) dans les asques indique un croisement entre deux souches de signes opposés.",
+    correction_detaillee: {
+      juste: "C : Les souches parentales sont l'une (+) et l'autre (-), ce qui explique la ségrégation des signes dans les asques.",
+      faux: {
+        "A": "Les données ne montrent pas l'intervention de deux gènes liés.",
+        "B": "Pas de preuve de deux gènes indépendants dans cette analyse.",
+        "D": "Si les deux souches étaient (-), tous les asques seraient de type 8- exclusivement."
+      }
+    },
+    erreur_frequente: "Confondre types d'asques et types de spores. Ne pas reconnaître que la présence de spores (+) indique un parent (+).",
+    astuce_fr: "Des spores (+) dans la descendance = un parent était (+). Pas de (+) = les deux parents (-).",
+    astuce_ar: "وجود أبواغ (+) في الأكياس يعني أن أحد الأبوين كان (+). نوع الآباء يحدد أنواع الأكياس."
+  },
+  {
+    id: 23,
+    statement: "Une population animale diploïde (A et a) est composée de 450 (A/A), 300 (A/a) et 50 (a/a). On déduit que :",
+    choices: ["La population n'est pas en équilibre Hardy-Weinberg", "Les fréquences sont pA = 1/2 et qa = 1/2", "Les fréquences sont pA = 3/4 et qa = 1/4", "Les fréquences sont pA = 1/4 et qa = 3/4"],
+    correct: [2],
+    theme: "Génétique",
+    chapitre: "Génétique des populations et équilibre de Hardy-Weinberg",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Pour une population de N = 800 individus (2N = 1600 allèles) : fréquence de A : p = (2×450 + 300) / 1600 = 1200/1600 = 0,75 = 3/4. Fréquence de a : q = 1 - p = 0,25 = 1/4. Si la population est en équilibre, p² = 9/16 (×800 = 450), 2pq = 6/16 (×800 = 300), q² = 1/16 (×800 = 50). Les effectifs correspondent exactement.",
+    phenomene: "La population est en équilibre de Hardy-Weinberg avec p = 3/4 et q = 1/4.",
+    correction_detaillee: {
+      juste: "C : pA = 3/4 et qa = 1/4. La population est en équilibre (les effectifs observés correspondent aux proportions théoriques p², 2pq, q²).",
+      faux: {
+        "A": "La population EST en équilibre de Hardy-Weinberg.",
+        "B": "Calcul erroné des fréquences alléliques.",
+        "D": "Valeurs inversées."
+      }
+    },
+    erreur_frequente: "Calculer p comme la fréquence du phénotype [A] sans tenir compte des hétérozygotes. Oublier de multiplier par 2 le nombre d'homozygotes.",
+    astuce_fr: "p = (2×homozygotes + hétérozygotes) / (2×total). Compte les ALLÈLES, pas les individus.",
+    astuce_ar: "التوازن الوراثي هو الميزان الذي يحفظ هوية الشعوب عبر الأجيال. p = (2×AA + Aa) ÷ (2×N)."
+  },
+  {
+    id: 24,
+    statement: "Un hybride H autofécondé donne 450 fleurs violettes, 150 jaunes et 200 bleues. La couleur est contrôlée par :",
+    choices: ["2 gènes liés distants de 20 cM", "2 gènes indépendants avec épistasie", "1 gène avec absence de dominance", "L'hybride H est un hétérozygote"],
+    correct: [1],
+    theme: "Génétique",
+    chapitre: "Dihybridisme et épistasie",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Les proportions 450:150:200 (total 800) peuvent être simplifiées en 9:3:4. Ces proportions indiquent une épistasie récessive : un gène masque l'expression de l'autre à l'état homozygote récessif. Le rapport 9:3:4 est caractéristique de l'épistasie récessive.",
+    phenomene: "Deux gènes indépendants interagissent : l'un est épistasique sur l'autre (épistasie récessive, rapport 9:3:4).",
+    correction_detaillee: {
+      juste: "B : 2 gènes indépendants avec épistasie (proportions 9:3:4).",
+      faux: {
+        "A": "Des gènes liés montreraient une majorité de phénotypes parentaux, pas cette distribution.",
+        "C": "1 gène avec codominance donnerait 1:2:1 (3 phénotypes en proportions 1/4, 1/2, 1/4).",
+        "D": "Un simple hétérozygote autofécondé donnerait 3:1 (2 phénotypes seulement)."
+      }
+    },
+    erreur_frequente: "Ne pas reconnaître les proportions caractéristiques de l'épistasie (9:3:4 ou 9:7 ou 12:3:1). Simplifier le total à 800 aide à identifier le rapport.",
+    astuce_fr: "450:150:200 = 9:3:4 (÷50). 9:3:4 = épistasie récessive. 800 = 16 × 50.",
+    astuce_ar: "النسب 9:3:4 تدل على تفوق جيني (إبيستاسي متنحي). 450:150:200 = 9:3:4 × 50."
+  },
+  {
+    id: 25,
+    statement: "Le nombre de génotypes possibles pour les groupes sanguins (systèmes ABO et Rh) est :",
+    choices: ["9", "18", "27", "36"],
+    correct: [1],
+    theme: "Génétique",
+    chapitre: "Génétique humaine et polyallélisme",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le système ABO possède 3 allèles (A, B, O). Le nombre de génotypes diploïdes pour n allèles est donné par n(n+1)/2 = 3×4/2 = 6 génotypes. Le système Rhésus possède 2 allèles (+, -) soit 2×3/2 = 3 génotypes. Le nombre total de combinaisons est le produit : 6 × 3 = 18 génotypes.",
+    phenomene: "Polyallélisme ABO (3 allèles → 6 génotypes) × Rhésus (2 allèles → 3 génotypes) = 18 génotypes combinés.",
+    correction_detaillee: {
+      juste: "B : 18 génotypes (6 pour ABO × 3 pour Rhésus).",
+      faux: {
+        "A": "9 correspond à l'addition (6+3) au lieu de la multiplication.",
+        "C": "27 = 3×9, calcul erroné.",
+        "D": "36 = double comptage ou confusion avec le nombre de croisements possibles."
+      }
+    },
+    erreur_frequente: "Additionner au lieu de multiplier. Confondre nombre de phénotypes (8 : A+, A-, B+, B-, AB+, AB-, O+, O-) et nombre de génotypes (18).",
+    astuce_fr: "ABO : 3 allèles → 6 génotypes. Rh : 2 allèles → 3 génotypes. Total = 6 × 3 = 18. On MULTIPLIE !",
+    astuce_ar: "فصائل الدم حكاية يكتبها 18 نمطاً وراثياً مختلفاً. ABO : 6 أنماط. Rh : 3 أنماط. المجموع = 6 × 3 = 18."
+  },
+  {
+    id: 26,
+    statement: "Les molécules informatives cellulaires sont :",
+    choices: ["Les protides", "Les glucides", "Les lipides", "Les acides nucléiques"],
+    correct: [3],
+    theme: "Biologie cellulaire",
+    chapitre: "Information génétique",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "L'ADN (acide désoxyribonucléique) et l'ARN (acide ribonucléique) sont les acides nucléiques. L'ADN est le support universel de l'information génétique. L'ARN est un intermédiaire (messager) dans l'expression des gènes. Les protéines, glucides et lipides ne sont pas des molécules informatives.",
+    phenomene: "Seuls les acides nucléiques (ADN et ARN) portent l'information génétique. Les protéines sont le produit de cette information.",
+    correction_detaillee: {
+      juste: "D : Les acides nucléiques (ADN et ARN) sont les molécules informatives de la cellule.",
+      faux: {
+        "A": "Les protides (protéines) sont le produit de l'expression génétique, pas le support de l'information.",
+        "B": "Les glucides sont des molécules énergétiques ou structurales.",
+        "C": "Les lipides sont des molécules de réserve énergétique ou structurales (membranes)."
+      }
+    },
+    erreur_frequente: "Penser que les protéines sont informatives car elles déterminent les caractères. En réalité, c'est l'ADN qui code pour les protéines.",
+    astuce_fr: "ADN = Archive (information). ARN = Copie (message). Protéine = Produit fini (action).",
+    astuce_ar: "الأحماض النووية هي الرسالة، والبروتينات هي الترجمة. ADN = أرشيف. ARN = رسالة. بروتين = منتج."
+  },
+  {
+    id: 27,
+    statement: "Chez une femelle mammifère ovariectomisée, on constate :",
+    choices: ["Augmentation de LH", "Diminution de FSH", "Augmentation d'œstradiol", "Diminution de progestérone"],
+    correct: [0, 3],
+    theme: "Reproduction et santé",
+    chapitre: "Régulation hormonale du cycle ovarien",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "L'ovariectomie (ablation des ovaires) supprime la production d'œstrogènes et de progestérone. La levée du rétrocontrôle négatif exercé par ces hormones sur le complexe hypothalamo-hypophysaire provoque une augmentation massive de la sécrétion de GnRH, FSH et LH.",
+    phenomene: "Sans ovaires → plus d'œstrogènes ni progestérone → plus de frein sur l'hypophyse → LH et FSH augmentent fortement.",
+    correction_detaillee: {
+      juste: "A : La LH augmente (levée du rétrocontrôle négatif). D : La progestérone diminue (elle n'est plus produite par les ovaires).",
+      faux: {
+        "B": "La FSH augmente également (même mécanisme que la LH), elle ne diminue pas.",
+        "C": "L'œstradiol diminue (il est produit par les ovaires, qui sont retirés)."
+      }
+    },
+    erreur_frequente: "Penser que l'ablation des ovaires arrête l'hypophyse. C'est l'inverse : sans le frein ovarien, l'hypophyse s'emballe.",
+    astuce_fr: "Plus de frein (ovaire) = le moteur (hypophyse) s'emballe. Ovariectomie = ↑ LH, ↑ FSH, ↓ œstrogènes, ↓ progestérone.",
+    astuce_ar: "إذا غاب الحارس (المبيض) تمردت الهرمونات (LH و FSH). بدون مبيض = زيادة LH و FSH."
+  },
+  {
+    id: 28,
+    statement: "Au début de la grossesse (1er mois) :",
+    choices: ["Le cycle sexuel est suspendu", "Seul le cycle utérin est suspendu", "Le placenta sécrète les hormones", "Le corps jaune régresse"],
+    correct: [0, 2],
+    theme: "Reproduction et santé",
+    chapitre: "Grossesse et hormones",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Dès le début de la grossesse, le trophoblaste puis le placenta sécrètent l'HCG (hormone chorionique gonadotrophique). Cette hormone maintient le corps jaune qui continue de produire œstrogènes et progestérone. Ces hormones suspendent le cycle menstruel (pas d'ovulation, pas de règles).",
+    phenomene: "HCG → maintien du corps jaune → œstrogènes + progestérone → suspension du cycle menstruel.",
+    correction_detaillee: {
+      juste: "A : Le cycle sexuel est suspendu (plus d'ovulation, plus de règles). C : Le placenta (trophoblaste) sécrète l'HCG et d'autres hormones.",
+      faux: {
+        "B": "Tout le cycle est suspendu (ovarien et utérin), pas seulement le cycle utérin.",
+        "D": "Le corps jaune ne régresse PAS, il est maintenu par l'HCG et devient corps jaune gravidique."
+      }
+    },
+    erreur_frequente: "Penser que le corps jaune régresse en début de grossesse. Au contraire, il est maintenu et devient corps jaune gravidique.",
+    astuce_fr: "HCG = Hormone de sauvetage du corps jaune. HCG → corps jaune maintenu → grossesse continue.",
+    astuce_ar: "هرمون الحمل HCG ينقذ الجسم الأصفر لتستمر الحمل. HCG = هرمون منقذ الجسم الأصفر."
+  },
+  {
+    id: 29,
+    statement: "Au cours de la fécondation se produit :",
+    choices: ["Achèvement de la division réductionnelle", "Achèvement de la division équationnelle", "Expulsion du 1er globule polaire", "Caryogamie"],
+    correct: [1, 3],
+    theme: "Reproduction et santé",
+    chapitre: "Fécondation",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "L'ovocyte II est bloqué en métaphase de la deuxième division méiotique (division équationnelle). La pénétration du spermatozoïde déclenche la reprise et l'achèvement de cette division équationnelle avec expulsion du 2ème globule polaire. Ensuite a lieu la caryogamie (fusion des deux pronoyaux mâle et femelle).",
+    phenomene: "La fécondation déclenche l'achèvement de la division équationnelle de l'ovocyte II, suivie de la caryogamie.",
+    correction_detaillee: {
+      juste: "B : Achèvement de la division équationnelle (l'ovocyte II termine sa 2ème division). D : Caryogamie (fusion des pronoyaux mâle et femelle).",
+      faux: {
+        "A": "La division réductionnelle est déjà achevée au moment de l'ovulation (expulsion du 1er globule polaire).",
+        "C": "Le 1er globule polaire est expulsé lors de la 1ère division méiotique, avant l'ovulation."
+      }
+    },
+    erreur_frequente: "Confondre division réductionnelle (achevée avant ovulation) et division équationnelle (achevée lors de la fécondation).",
+    astuce_fr: "Ovocyte II = bloqué en méta II. Fécondation = fin de la méiose + fusion des noyaux (caryogamie).",
+    astuce_ar: "البويضة تنتظر الإخصاب لتكمل انقسامها وتتحد نواتها مع نواة الحيوان المنوي. إكمال الانقسام + karyogamie."
+  },
+  {
+    id: 30,
+    statement: "La LH possède des récepteurs au niveau des :",
+    choices: ["Cellules de Sertoli", "Cellules de Leydig", "Cellules du corps jaune", "Cellules germinales"],
+    correct: [1, 2],
+    theme: "Reproduction et santé",
+    chapitre: "Endocrinologie de la reproduction",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La LH (hormone lutéinisante) possède des récepteurs spécifiques sur les cellules de Leydig (testicules) où elle stimule la production de testostérone, et sur les cellules du corps jaune (ovaire) où elle stimule la production de progestérone. Les cellules de Sertoli ont des récepteurs à la FSH.",
+    phenomene: "Spécificité hormonale : LH cible les cellules de Leydig (homme) et les cellules du corps jaune (femme).",
+    correction_detaillee: {
+      juste: "B : Les cellules de Leydig possèdent des récepteurs à la LH. C : Les cellules du corps jaune possèdent des récepteurs à la LH.",
+      faux: {
+        "A": "Les cellules de Sertoli possèdent des récepteurs à la FSH, pas à la LH.",
+        "D": "Les cellules germinales ne sont pas des cibles directes de la LH."
+      }
+    },
+    erreur_frequente: "Attribuer la LH exclusivement au cycle féminin. Confondre les cibles de FSH (Sertoli) et LH (Leydig).",
+    astuce_fr: "LH pour LEYDIG et LUTÉAL (corps jaune). FSH pour SERTOLI (Soutien).",
+    astuce_ar: "هرمون LH هو المفتاح الذي يفتح أقفال خلايا ليدينغ والجسم الأصفر. LH = Leydig + Lutéal."
+  },
+        {
+    id: 31,
+    statement: "La testostérone :",
+    choices: ["Est sécrétée par les spermatogonies", "Est à l'origine des caractères sexuels secondaires chez le mâle", "Exerce un rétrocontrôle négatif sur le complexe hypothalamo-hypophysaire", "Intervient dans la spermatogenèse"],
+    correct: [1, 2, 3],
+    theme: "Reproduction et santé",
+    chapitre: "Fonction reproductrice masculine",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La testostérone est sécrétée par les cellules interstitielles de Leydig (et non par les spermatogonies). Elle est responsable des caractères sexuels secondaires (pilosité, mue de la voix, développement musculaire). Elle stimule la spermatogenèse (avec la FSH). Elle exerce un rétrocontrôle négatif sur l'hypothalamus et l'hypophyse, freinant la sécrétion de GnRH et de LH.",
+    phenomene: "Testostérone = hormone masculine produite par les cellules de Leydig, aux multiples rôles : caractères sexuels, spermatogenèse, rétrocontrôle.",
+    correction_detaillee: {
+      juste: "B : Développe les caractères sexuels secondaires. C : Rétrocontrôle négatif sur l'axe hypothalamo-hypophysaire. D : Intervient dans la spermatogenèse.",
+      faux: {
+        "A": "La testostérone est sécrétée par les cellules de Leydig, pas par les spermatogonies (cellules germinales)."
+      }
+    },
+    erreur_frequente: "Penser que la testostérone est produite par les spermatogonies ou les cellules de Sertoli. Elle est produite par les cellules de Leydig.",
+    astuce_fr: "Testostérone = Leydig. Spermatogonies = futures spermatozoïdes. Leydig = endocrine, Sertoli = soutien.",
+    astuce_ar: "التستوستيرون من خلايا ليدينغ، ليس من المنسليات. ليدينغ = هرمون، سيرتولي = دعم."
+  },
+  {
+    id: 32,
+    statement: "Parmi les réactions suivantes, celle qui correspond à la fermentation alcoolique est :",
+    choices: ["C₆H₁₂O₆ + 6O₂ → 6H₂O + 6CO₂", "CaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂", "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂", "C₅H₁₀O₅ + H₂O → C₃H₇COOH + 2CO₂ + 2H₂"],
+    correct: [2],
+    theme: "Nutrition",
+    chapitre: "Métabolisme énergétique et fermentations",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "La fermentation alcoolique transforme le glucose en éthanol et dioxyde de carbone en absence d'oxygène : C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ + énergie (2 ATP). Cette fermentation est réalisée par les levures (Saccharomyces).",
+    phenomene: "Fermentation alcoolique = dégradation anaérobie du glucose en éthanol et CO₂, avec production d'ATP.",
+    correction_detaillee: {
+      juste: "C : Glucose → Éthanol + CO₂ (fermentation alcoolique, équation équilibrée).",
+      faux: {
+        "A": "C'est l'équation de la respiration cellulaire aérobie (avec O₂).",
+        "B": "C'est la réaction de dissolution du calcaire (karstification).",
+        "D": "C'est une autre fermentation (butyrique ou autre), pas la fermentation alcoolique."
+      }
+    },
+    erreur_frequente: "Confondre respiration (avec O₂) et fermentation (sans O₂). Ne pas reconnaître l'équation équilibrée de la fermentation alcoolique.",
+    astuce_fr: "Fermentation = PAS d'O₂. Respiration = O₂ consommé. Alcoolique = éthanol (C₂H₅OH).",
+    astuce_ar: "التخمر لا يحتاج أكسجين. التنفس يحتاج أكسجين. التخمر الكحولي = إيثانول + CO₂."
+  },
+  {
+    id: 33,
+    statement: "L'insuline est une hormone :",
+    choices: ["Hyperglycémiante", "Hypoglycémiante", "Sécrétée par le foie", "Qui trouve des récepteurs au niveau des cellules hépatiques"],
+    correct: [1, 3],
+    theme: "Nutrition",
+    chapitre: "Régulation de la glycémie",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "L'insuline est une hormone hypoglycémiante sécrétée par les cellules β des îlots de Langerhans du pancréas. Elle abaisse la glycémie en favorisant l'entrée du glucose dans les cellules cibles (foie, muscles, tissu adipeux) et en stimulant la glycogénogenèse.",
+    phenomene: "Insuline = hormone hypoglycémiante produite par le pancréas, agissant sur le foie, les muscles et le tissu adipeux.",
+    correction_detaillee: {
+      juste: "B : L'insuline est hypoglycémiante (elle abaisse la glycémie). D : Elle agit sur les cellules hépatiques (foie), musculaires et adipeuses.",
+      faux: {
+        "A": "Le glucagon est hyperglycémiant, pas l'insuline.",
+        "C": "L'insuline est sécrétée par le pancréas (cellules β), pas par le foie."
+      }
+    },
+    erreur_frequente: "Inverser les rôles de l'insuline (hypoglycémiante) et du glucagon (hyperglycémiant).",
+    astuce_fr: "Insuline = baisse la glycémie. Glucagon = monte la glycémie. Pancréas produit les deux.",
+    astuce_ar: "الأنسولين يخفض السكر. الجلوكاجون يرفع السكر. البنكرياس ينتج كليهما."
+  },
+  {
+    id: 34,
+    statement: "Les lymphocytes B :",
+    choices: ["Produisent des anticorps", "Portent des récepteurs membranaires TCR", "Produisent l'interleukine 2", "Acquièrent leur maturité dans la moelle osseuse"],
+    correct: [0, 3],
+    theme: "Immunologie",
+    chapitre: "Immunité spécifique à médiation humorale",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Les lymphocytes B (LB) naissent et maturent dans la moelle osseuse (B = Bone marrow). Ils se différencient en plasmocytes qui produisent des anticorps spécifiques. Les TCR sont les récepteurs des lymphocytes T. L'interleukine 2 est principalement produite par les lymphocytes T auxiliaires (LT4).",
+    phenomene: "LB = immunité humorale = production d'anticorps. Maturation dans la moelle osseuse.",
+    correction_detaillee: {
+      juste: "A : Les LB se différencient en plasmocytes qui produisent des anticorps. D : Les LB maturent dans la moelle osseuse.",
+      faux: {
+        "B": "Les TCR (T-Cell Receptor) sont les récepteurs des lymphocytes T, pas des LB.",
+        "C": "L'interleukine 2 est principalement produite par les LT4, pas par les LB."
+      }
+    },
+    erreur_frequente: "Confondre maturation des LB (moelle osseuse) et des LT (thymus). Attribuer les TCR aux LB.",
+    astuce_fr: "B comme Bone (moelle osseuse) et Bouclier (anticorps). LB = Anticorps. LT = TCR.",
+    astuce_ar: "الخلايا البائية هي مصانع الأسلحة (المضادات) التي تنضج في النخاع. B = نخاع + مضادات."
+  },
+  {
+    id: 35,
+    statement: "Les cellules T auxiliaires (LT4) :",
+    choices: ["Portent les marqueurs HLA de classe II", "Sécrètent l'interleukine 1", "Activent seulement les lymphocytes T", "Produisent des anticorps"],
+    correct: [0],
+    theme: "Immunologie",
+    chapitre: "Immunité spécifique et coopération cellulaire",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Les LT4 portent les molécules HLA de classe II et reconnaissent l'antigène présenté par les cellules présentatrices (macrophages, LB). Ils sécrètent l'IL2 qui active à la fois les LB et les LTc. Ils ne produisent pas d'anticorps. L'IL1 est produite par les macrophages.",
+    phenomene: "LT4 = chefs d'orchestre de la réponse immunitaire. Ils activent LB et LTc via l'IL2.",
+    correction_detaillee: {
+      juste: "A : Les LT4 portent les HLA de classe II (CMH II).",
+      faux: {
+        "B": "L'IL1 est sécrétée par les macrophages, pas par les LT4.",
+        "C": "Les LT4 activent aussi les lymphocytes B (via l'IL2).",
+        "D": "Les anticorps sont produits par les plasmocytes (issus des LB), pas par les LT4."
+      }
+    },
+    erreur_frequente: "Confondre IL1 (macrophage) et IL2 (LT4). Penser que les LT4 ne stimulent que les LT.",
+    astuce_fr: "LT4 = Chef d'orchestre (active tout le monde : LB et LTc). HLA II = carte de chef.",
+    astuce_ar: "الخلايا التائية المساعدة هي قائد الأوركسترا المناعية. HLA II = بطاقة القائد."
+  },
+  {
+    id: 36,
+    statement: "La maturation des lymphocytes T a lieu dans :",
+    choices: ["La moelle osseuse", "Le thymus", "Les ganglions lymphatiques", "La rate"],
+    correct: [1],
+    theme: "Immunologie",
+    chapitre: "Organes lymphoïdes et maturation",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Les lymphocytes T naissent dans la moelle osseuse mais migrent vers le thymus où ils subissent leur maturation (acquisition de l'immunocompétence : apprentissage à reconnaître le HLA du soi). Les ganglions lymphatiques et la rate sont des organes lymphoïdes secondaires où se déroule la réponse immunitaire.",
+    phenomene: "Naissance dans la moelle osseuse → maturation dans le thymus. T pour Thymus.",
+    correction_detaillee: {
+      juste: "B : La maturation des LT a lieu dans le thymus.",
+      faux: {
+        "A": "La moelle osseuse est le lieu de naissance des LT, pas de maturation.",
+        "C": "Les ganglions sont des organes lymphoïdes secondaires (réponse immunitaire).",
+        "D": "La rate est un organe lymphoïde secondaire."
+      }
+    },
+    erreur_frequente: "Confondre lieu de naissance (moelle) et lieu de maturation (thymus pour LT, moelle pour LB).",
+    astuce_fr: "T pour Thymus. B pour Bone (moelle). LT = Thymus. LB = Bone marrow.",
+    astuce_ar: "الغدة الزعترية هي المدرسة التي يتخرج منها مقاتلو التاء (LT). T = thymus."
+  },
+  {
+    id: 37,
+    statement: "Le message nerveux sensitif :",
+    choices: ["Est constitué d'un seul potentiel d'action", "Est constitué d'une série de potentiels d'action", "Est codé en modulation de fréquence", "Est centrifuge"],
+    correct: [1, 2],
+    theme: "Neurophysiologie",
+    chapitre: "Message nerveux",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le message nerveux est constitué d'une série de potentiels d'action (PA) dont la fréquence est proportionnelle à l'intensité du stimulus (codage en modulation de fréquence). Un message sensitif est centripète (va de la périphérie vers le centre nerveux). Un message moteur est centrifuge.",
+    phenomene: "Codage de l'intensité du stimulus en fréquence de PA. Message sensitif = centripète.",
+    correction_detaillee: {
+      juste: "B : Le message nerveux est une série de PA. C : L'intensité est codée en modulation de fréquence.",
+      faux: {
+        "A": "Un seul PA ne peut pas coder l'intensité d'un stimulus.",
+        "D": "Centrifuge = moteur (du centre vers la périphérie). Le message sensitif est centripète."
+      }
+    },
+    erreur_frequente: "Penser qu'un seul PA code l'information. Confondre centrifuge (moteur) et centripète (sensitif).",
+    astuce_fr: "Fréquence = Intensité. Plus c'est fort, plus ça pulse. Sensitif = centripète (vers centre).",
+    astuce_ar: "شدة التنبيه تُرمز بعدد النبضات في الثانية. حسي = جابذ مركزي (نحو المركز)."
+  },
+  {
+    id: 38,
+    statement: "Au cours de la respiration, l'inspiration s'effectue par le mécanisme suivant :",
+    choices: ["Élévation des côtes et contraction du diaphragme", "Abaissement des côtes et relâchement du diaphragme", "Élévation des côtes et remontée du diaphragme", "Abaissement des côtes et abaissement du diaphragme"],
+    correct: [0],
+    theme: "Neurophysiologie",
+    chapitre: "Respiration et ventilation pulmonaire",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "L'inspiration est un phénomène ACTIF : les muscles intercostaux se contractent (élèvent les côtes) et le diaphragme se contracte (s'abaisse). Cela augmente le volume de la cage thoracique, diminue la pression intrapulmonaire, et l'air entre dans les poumons.",
+    phenomene: "Inspiration = contraction du diaphragme (il s'abaisse) + élévation des côtes = augmentation du volume pulmonaire.",
+    correction_detaillee: {
+      juste: "A : Élévation des côtes et contraction du diaphragme (qui s'abaisse en se contractant).",
+      faux: {
+        "B": "C'est le mécanisme de l'expiration (passive au repos).",
+        "C": "Le diaphragme s'abaisse en se contractant, il ne remonte pas.",
+        "D": "Mélange incorrect de mouvements."
+      }
+    },
+    erreur_frequente: "Confondre contraction du diaphragme (il s'abaisse) et relâchement (il remonte).",
+    astuce_fr: "Inspire = diaphragme descend (se contracte). Expire = diaphragme remonte (se relâche).",
+    astuce_ar: "الشهيق: ينزل الحجاب الحاجز (ينقبض). الزفير: يرتفع الحجاب الحاجز (يرتخي)."
+  },
+  {
+    id: 39,
+    statement: "Un vaccin protège contre une infection parce qu'il peut provoquer la formation dans l'organisme :",
+    choices: ["D'antigènes", "D'anticorps", "D'antibiotiques", "D'interférons"],
+    correct: [1],
+    theme: "Immunologie",
+    chapitre: "Vaccination et mémoire immunitaire",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Un vaccin contient un antigène (microbe atténué ou inactivé) qui stimule le système immunitaire pour produire des anticorps spécifiques et des lymphocytes mémoire. Ainsi, lors d'un contact ultérieur avec le vrai pathogène, la réponse est rapide et efficace.",
+    phenomene: "Vaccination = injection d'antigène → production d'anticorps + cellules mémoire → protection durable.",
+    correction_detaillee: {
+      juste: "B : Le vaccin induit la production d'anticorps par les plasmocytes.",
+      faux: {
+        "A": "Le vaccin contient l'antigène, il ne fait pas produire des antigènes par l'organisme.",
+        "C": "Les antibiotiques sont des médicaments contre les bactéries, ils n'ont rien à voir avec la vaccination.",
+        "D": "Les interférons sont des molécules antivirales non spécifiques, pas le mécanisme principal du vaccin."
+      }
+    },
+    erreur_frequente: "Penser que le vaccin contient des anticorps prêts à l'emploi (c'est le sérum). Confondre vaccination et sérothérapie.",
+    astuce_fr: "Vaccin = Apprendre à fabriquer ses propres anticorps. Sérum = Recevoir des anticorps tout faits.",
+    astuce_ar: "اللقاح يعلم الجسم كيف يصنع السلاح. المصل يعطيه السلاح جاهزاً. لقاح = تعليم، مصل = تزويد."
+  },
+  {
+    id: 40,
+    statement: "L'aldostérone est une hormone :",
+    choices: ["Sécrétée par la médullosurrénale", "Qui favorise la rétention du sodium au niveau du tube distal du néphron", "Qui agit sur le métabolisme des glucides", "Dont la sécrétion est stimulée par l'ACTH"],
+    correct: [1, 3],
+    theme: "Nutrition",
+    chapitre: "Milieu intérieur et homéostasie",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "L'aldostérone est une hormone minéralocorticoïde sécrétée par la corticosurrénale (zone glomérulée). Elle favorise la réabsorption du sodium (et d'eau) au niveau du tube contourné distal du néphron. Sa sécrétion est stimulée par l'ACTH hypophysaire et par l'angiotensine II.",
+    phenomene: "Aldostérone = hormone antidiurétique sodée. Elle retient le sodium (et l'eau), augmentant la volémie et la pression artérielle.",
+    correction_detaillee: {
+      juste: "B : Favorise la rétention du sodium au tube distal. D : La sécrétion est stimulée par l'ACTH.",
+      faux: {
+        "A": "Elle est sécrétée par la corticosurrénale, pas la médullosurrénale (qui sécrète l'adrénaline).",
+        "C": "Elle agit sur l'équilibre hydrosodé, pas sur le métabolisme des glucides (rôle du cortisol)."
+      }
+    },
+    erreur_frequente: "Confondre aldostérone (sodium) et ADH (eau). Confondre corticosurrénale et médullosurrénale.",
+    astuce_fr: "Aldo retient le Sel (Sodium). ADH retient l'Eau. Cortico = aldostérone. Médullo = adrénaline.",
+    astuce_ar: "الألدوسترون هو حارس الأملاح الذي يحافظ على توازن مياه الجسم. ألدوسترون = صوديوم. ADH = ماء."
+  },
+        {
+    id: 41,
+    statement: "Des tests de détermination de groupes sanguins par mélange de sérums et de gouttes de sang d'un individu donnent les résultats suivants : Goutte de sang + sérum anti-A → pas d'agglutination. Goutte de sang + sérum anti-B → agglutination. Goutte de sang + sérum anti-Rh → agglutination. D'après ces résultats, le groupe sanguin de cet individu est :",
+    choices: ["A+", "B-", "B+", "AB-", "O-"],
+    correct: [2],
+    theme: "Immunologie",
+    chapitre: "Groupes sanguins et transfusion",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "L'agglutination se produit lorsque l'anticorps (agglutinine) rencontre son antigène (agglutinogène) correspondant sur les hématies. Anti-B qui agglutine = présence de l'antigène B. Anti-Rh qui agglutine = présence de l'antigène Rh (Rh+). Anti-A qui n'agglutine pas = absence de l'antigène A. Donc le groupe est B+.",
+    phenomene: "Agglutination = reconnaissance antigène-anticorps. Présence d'agglutination = présence de l'antigène correspondant.",
+    correction_detaillee: {
+      juste: "C : B+. Agglutination avec anti-B (donc antigène B présent) et avec anti-Rh (donc Rh+). Pas d'agglutination avec anti-A (donc pas d'antigène A).",
+      faux: {
+        "A": "A+ aurait une agglutination avec anti-A.",
+        "B": "B- n'aurait pas d'agglutination avec anti-Rh.",
+        "D": "AB- aurait une agglutination avec anti-A et anti-B.",
+        "E": "O- n'aurait aucune agglutination."
+      }
+    },
+    erreur_frequente: "Confondre agglutinine (anticorps du sérum test) et agglutinogène (antigène sur le globule rouge). Interpréter l'absence d'agglutination comme une absence de réaction.",
+    astuce_fr: "Là où ça colle (agglutine), l'antigène est présent. Anti-B colle = B présent. Anti-Rh colle = Rh+.",
+    astuce_ar: "الارتصاص هو توقيع الدم؛ فإذا حضر الضد (الآنتي) بان المستضد. التصاق = وجود المستضد."
+  },
+  {
+    id: 42,
+    statement: "Un individu O+ peut recevoir du sang du groupe :",
+    choices: ["O-", "A-", "AB-", "B+"],
+    correct: [0],
+    theme: "Immunologie",
+    chapitre: "Règles de transfusion sanguine",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le groupe O possède des anticorps anti-A et anti-B dans son plasma. Il ne peut donc recevoir que du sang dépourvu d'antigènes A et B (type O exclusivement). Un receveur Rh+ peut recevoir du sang Rh+ ou Rh-. Donc O+ peut recevoir O- et O+.",
+    phenomene: "O = receveur exclusif (ne reçoit que du O). Rh+ peut recevoir Rh+ ou Rh-.",
+    correction_detaillee: {
+      juste: "A : O- ne possède aucun antigène A, B, ni Rh. Il est compatible avec un receveur O+.",
+      faux: {
+        "B": "A- possède l'antigène A qui serait attaqué par les anticorps anti-A du receveur O.",
+        "C": "AB- possède les antigènes A et B.",
+        "D": "B+ possède l'antigène B."
+      }
+    },
+    erreur_frequente: "Oublier qu'un receveur Rh+ peut recevoir du sang Rh-. Penser que O peut recevoir de tout le monde (c'est le donneur universel, pas le receveur).",
+    astuce_fr: "O est DONNEUR universel, mais RECEVEUR exclusif (que du O). Rh+ accepte Rh+ et Rh-.",
+    astuce_ar: "فصيلة O كريمة في العطاء (مانح عام)، لكنها عزيزة النفس في الأخذ (لا تقبل إلا O)."
+  },
+  {
+    id: 43,
+    statement: "Durant la phase lumineuse de la photosynthèse :",
+    choices: ["Oxydation de l'eau", "Réduction du CO₂", "Synthèse d'ATP", "Synthèse de glucose"],
+    correct: [0, 2],
+    theme: "Nutrition",
+    chapitre: "Photosynthèse : phase claire et phase sombre",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La phase lumineuse (phase claire ou photochimique) se déroule dans les thylakoïdes. Elle comprend : la photolyse de l'eau (oxydation : H₂O → ½O₂ + 2H⁺ + 2e⁻) et la photophosphorylation (synthèse d'ATP). La réduction du CO₂ et la synthèse de glucose appartiennent à la phase sombre (cycle de Calvin, dans le stroma).",
+    phenomene: "Phase claire = dans les thylakoïdes = photolyse de l'eau + synthèse d'ATP. Phase sombre = dans le stroma = fixation du CO₂ + synthèse de glucose.",
+    correction_detaillee: {
+      juste: "A : Oxydation de l'eau (photolyse). C : Synthèse d'ATP (photophosphorylation).",
+      faux: {
+        "B": "La réduction du CO₂ a lieu dans la phase sombre (cycle de Calvin).",
+        "D": "La synthèse de glucose a lieu dans la phase sombre."
+      }
+    },
+    erreur_frequente: "Attribuer la fixation du CO₂ à la phase claire. Les deux phases ont des lieux et des produits différents.",
+    astuce_fr: "Phase CLAIRE = LUMIÈRE = Eau cassée + ATP produit. Phase SOMBRE = CO₂ fixé + Glucose produit.",
+    astuce_ar: "الطور الضوئي = أكسدة الماء + إنتاج ATP. الطور المظلم = تثبيت CO₂ + إنتاج الجلوكوز."
+  },
+  {
+    id: 44,
+    statement: "L'oxygène de la respiration sert à :",
+    choices: ["L'oxydation du glucose", "La formation du CO₂", "La formation de l'eau", "La synthèse d'ATP"],
+    correct: [2],
+    theme: "Nutrition",
+    chapitre: "Respiration cellulaire",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Dans la chaîne respiratoire mitochondriale, l'oxygène est l'accepteur final des électrons et des protons H⁺. Il est réduit en eau selon : ½O₂ + 2H⁺ + 2e⁻ → H₂O. Le CO₂ provient du carbone du glucose (oxydé dans le cycle de Krebs). L'ATP est produit par l'ATP-synthétase.",
+    phenomene: "O₂ respiré → H₂O (et non CO₂). Le CO₂ expiré vient du glucose, pas de l'O₂.",
+    correction_detaillee: {
+      juste: "C : L'oxygène forme de l'eau en acceptant les électrons et les protons en fin de chaîne respiratoire.",
+      faux: {
+        "A": "Le glucose est oxydé par des enzymes (déshydrogénases), pas directement par l'O₂.",
+        "B": "Le CO₂ provient du carbone du glucose (décarboxylations du cycle de Krebs).",
+        "D": "L'ATP est produit par l'ATP-synthétase (phosphorylation oxydative), pas directement par l'O₂."
+      }
+    },
+    erreur_frequente: "Croire que l'oxygène qu'on respire devient le CO₂ qu'on expire. En réalité, l'O₂ devient H₂O, et le CO₂ vient du glucose.",
+    astuce_fr: "Oxygène respiré → EAU (H₂O). CO₂ expiré → vient du GLUCOSE. L'O₂ est l'éponge finale.",
+    astuce_ar: "الأكسجين المستنشق يتحول إلى ماء (H₂O). ثاني أكسيد الكربون يأتي من الجلوكوز، ليس من الأكسجين."
+  },
+  {
+    id: 45,
+    statement: "L'ordre des enveloppes terrestres (de l'extérieur vers l'intérieur) est :",
+    choices: ["Lithosphère, asthénosphère, mésosphère, noyau externe, noyau interne", "Mésosphère, lithosphère, asthénosphère, noyau, graine", "Asthénosphère, lithosphère, mésosphère, noyau, graine", "Lithosphère, mésosphère, asthénosphère, noyau, graine"],
+    correct: [0],
+    theme: "Géologie",
+    chapitre: "Structure du globe terrestre",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "De l'extérieur vers l'intérieur : lithosphère (croûte + manteau supérieur rigide, ~100 km) → asthénosphère (manteau supérieur ductile) → mésosphère (manteau inférieur solide) → noyau externe (liquide) → noyau interne ou graine (solide). Les discontinuités majeures sont Moho (croûte/manteau), Gutenberg (manteau/noyau), Lehmann (noyau externe/interne).",
+    phenomene: "Structure concentrique de la Terre : densité et rigidité croissantes vers le centre.",
+    correction_detaillee: {
+      juste: "A : Ordre correct : lithosphère → asthénosphère → mésosphère → noyau externe → noyau interne.",
+      faux: {
+        "B": "La mésosphère ne peut pas être au-dessus de la lithosphère.",
+        "C": "L'asthénosphère est SOUS la lithosphère, pas au-dessus.",
+        "D": "La mésosphère est sous l'asthénosphère, pas au-dessus."
+      }
+    },
+    erreur_frequente: "Placer l'asthénosphère au-dessus de la lithosphère. Inverser l'ordre des couches.",
+    astuce_fr: "L'Astre (Asthéno) est toujours sous la Pierre (Litho). Litho = croûte rigide. Asthéno = manteau ductile.",
+    astuce_ar: "الأرض طبقات كالبصلة؛ قشرة صلبة (ليثوسفير) فوق باطن يغلي (أستينوسفير)."
+  },
+  {
+    id: 46,
+    statement: "Les phénomènes au niveau d'une dorsale océanique sont :",
+    choices: ["La subduction", "L'accrétion", "Les failles transformantes", "La collision"],
+    correct: [1, 2],
+    theme: "Géologie",
+    chapitre: "Tectonique des plaques et dorsales",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Au niveau d'une dorsale océanique (zone de divergence), le magma remonte et crée de la nouvelle lithosphère océanique : c'est l'accrétion. Les dorsales sont segmentées par des failles transformantes qui décalent les tronçons de la dorsale. La subduction et la collision sont des phénomènes de convergence.",
+    phenomene: "Dorsale = divergence = accrétion (création de lithosphère) + failles transformantes (segmentation).",
+    correction_detaillee: {
+      juste: "B : Accrétion (création de nouvelle croûte océanique par remontée magmatique). C : Failles transformantes (décrochements qui segmentent la dorsale).",
+      faux: {
+        "A": "La subduction est un phénomène de convergence (disparition de lithosphère).",
+        "D": "La collision est un phénomène de convergence (formation de chaînes de montagnes)."
+      }
+    },
+    erreur_frequente: "Associer subduction et dorsale. Ce sont des phénomènes opposés : dorsale = divergence, subduction = convergence.",
+    astuce_fr: "La dorsale CRÉE (accrétion) et DÉCALE (failles transformantes). Subduction = disparition.",
+    astuce_ar: "الظهر المحيطي هو ورشة بناء الأرض الجديدة. يبني (توسع) ويقطع (فوالق)."
+  },
+  {
+    id: 47,
+    statement: "La formation d'un océan résulte de :",
+    choices: ["Distension, effondrement, expansion océanique", "Compression, subduction, collision", "Collision, orogenèse, plissement", "Subduction, fusion, volcanisme"],
+    correct: [0],
+    theme: "Géologie",
+    chapitre: "Cycle de Wilson et formation des océans",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "La formation d'un océan suit le cycle de Wilson : 1) distension continentale (rift) → 2) effondrement (fossé d'effondrement) → 3) expansion océanique (formation d'une dorsale et de croûte océanique). Exemple : le rift est-africain est un stade précoce, l'océan Atlantique est un stade mature.",
+    phenomene: "Ouverture océanique = distension → rift → expansion. Fermeture = subduction → collision.",
+    correction_detaillee: {
+      juste: "A : Distension → effondrement → expansion océanique (succession correcte du cycle de Wilson).",
+      faux: {
+        "B": "Compression, subduction et collision caractérisent la FERMETURE d'un océan.",
+        "C": "Collision et orogenèse sont des stades de fermeture.",
+        "D": "Subduction et fusion sont des processus de convergence."
+      }
+    },
+    erreur_frequente: "Confondre ouverture (distension, expansion) et fermeture (subduction, collision) d'un océan.",
+    astuce_fr: "Océan = OUVERTURE. Distension = étirement → rift → océan. Compression = FERMETURE.",
+    astuce_ar: "المحيط يبدأ بتمدد القشرة ثم هبوطها ثم توسعها. فتح = تباعد. غلق = تصادم."
+  },
+  {
+    id: 48,
+    statement: "La chaîne atlasique tunisienne est une chaîne :",
+    choices: ["De subduction", "De collision", "D'âge secondaire", "D'âge mio-pliocène"],
+    correct: [1, 3],
+    theme: "Géologie",
+    chapitre: "Orogenèse et chaînes de montagnes",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "La chaîne atlasique tunisienne (Dorsale tunisienne) résulte de la collision entre les plaques africaine et eurasiatique. Les sédiments qui la composent sont d'âge secondaire (Crétacé) mais la surrection (formation de la montagne) date du Mio-Pliocène (Tertiaire récent).",
+    phenomene: "L'Atlas tunisien est une chaîne de collision intracontinentale d'âge Mio-Pliocène, appartenant à la chaîne alpine.",
+    correction_detaillee: {
+      juste: "B : Chaîne de collision (résultat de l'affrontement Afrique/Eurasie). D : La surrection date du Mio-Pliocène.",
+      faux: {
+        "A": "C'est une chaîne de collision, pas de subduction (la subduction a précédé la collision).",
+        "C": "L'âge secondaire est celui du dépôt des sédiments, pas de la formation de la montagne."
+      }
+    },
+    erreur_frequente: "Confondre âge des roches (Secondaire/Crétacé) et âge de la surrection (Tertiaire/Mio-Pliocène).",
+    astuce_fr: "L'Atlas est un accident RÉCENT (Mio-Pliocène) sur des roches ANCIENNES (Secondaire).",
+    astuce_ar: "جبال الأطلس هي تجاعيد الأرض الناتجة عن صدام القارات. الصخور قديمة، والجبل حديث."
+  },
+  {
+    id: 49,
+    statement: "Les nummulites sont des fossiles :",
+    choices: ["Foraminifères", "D'âge éocène", "D'âge jurassique", "De milieux profonds"],
+    correct: [0, 1],
+    theme: "Géologie",
+    chapitre: "Paléontologie et fossiles stratigraphiques",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les nummulites sont des foraminifères (protozoaires à coquille calcaire) caractéristiques de l'Éocène (Tertiaire, Cénozoïque). Elles indiquent un milieu marin de plateforme peu profonde (et non profond). Ce sont d'excellents fossiles stratigraphiques pour dater les roches éocènes.",
+    phenomene: "Nummulites = foraminifères de l'Éocène, vivant en mer peu profonde. Utilisées pour la datation des roches.",
+    correction_detaillee: {
+      juste: "A : Ce sont des foraminifères (leur coquille calcaire présente des loges). B : Âge éocène (Tertiaire).",
+      faux: {
+        "C": "Le Jurassique est plus ancien (Secondaire/Mésozoïque).",
+        "D": "Les nummulites vivaient en milieu marin peu profond (plateforme continentale), pas en milieu profond."
+      }
+    },
+    erreur_frequente: "Confondre nummulites (Éocène) et ammonites (Jurassique/Crétacé). Les deux sont des fossiles mais d'âges très différents.",
+    astuce_fr: "Nummulites = Éocène = Tertiaire. Ammonites = Jurassique/Crétacé = Secondaire.",
+    astuce_ar: "النوموليتات هي عملات الإيوسين الذهبية. فورامينيفيرات العصر الإيوسيني."
+  },
+  {
+    id: 50,
+    statement: "Les phosphates tunisiens :",
+    choices: ["Se sont formés en milieu marin très profond", "Sont d'âge éocène", "Renferment de l'apatite", "Sont d'origine purement chimique"],
+    correct: [1, 2],
+    theme: "Géologie",
+    chapitre: "Ressources naturelles et géologie de la Tunisie",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les phosphates tunisiens se sont formés à l'Éocène inférieur (Yprésien) dans des mers peu profondes riches en matière organique, par upwelling (remontée d'eaux profondes riches en phosphates). Le minéral principal est l'apatite (phosphate de calcium : Ca₅(PO₄)₃(OH,F,Cl)). Les principaux gisements sont à Gafsa (bassin de Metlaoui) et au Kef.",
+    phenomene: "Phosphates = sédimentation en plateforme peu profonde à l'Éocène, minéral principal = apatite.",
+    correction_detaillee: {
+      juste: "B : Âge éocène inférieur (Yprésien). C : Minéral principal = apatite (phosphate de calcium).",
+      faux: {
+        "A": "Milieu de dépôt peu profond (plateforme continentale), pas très profond.",
+        "D": "Origine biochimique et organique (liée à l'upwelling et à l'activité biologique), pas purement chimique."
+      }
+    },
+    erreur_frequente: "Penser que le phosphate est d'origine volcanique ou de milieu profond. Confondre âge éocène et crétacé.",
+    astuce_fr: "Phosphate tunisien = Éocène de Gafsa et Apatite. Mer peu profonde, origine organique.",
+    astuce_ar: "فسفاط تونس هو ذهب الإيوسين المترسب في البحار الضحلة. أباتيت = معدن الفوسفات."
+  }
+];
+    
 
     // ═══════════════ VARIABLES ═══════════════
     let mode=null,currentQ=0,activeSet=[],userAnswers=[],validated=[],examTimer=null,examSeconds=0,perQTimer=null,perQSeconds=0;
