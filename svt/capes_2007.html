@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Synapris — CAPES SVT 2008</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="katexLoaded=true; if(pendingRender){pendingRender();}"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#0f1f3d;--primary-mid:#1a3c6e;--accent:#f0a500;--accent-dark:#d4900a;--green:#2e7d32;--green-light:#e8f5e9;--red:#c62828;--red-light:#ffebee;--orange:#ef6c00;--white:#ffffff;--gray-light:#f5f7fa;--gray:#90a4ae;--sky-deep:#3b82f6;--sky-card:#eff6ff;--sky-border:#93c5fd;--shadow:0 4px 20px rgba(15,31,61,0.10);--shadow-sm:0 2px 8px rgba(15,31,61,0.08);--radius:12px;--font-ar:'Amiri',serif;--font-heading:'Inter',sans-serif;--font-fr:'Source Sans 3',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{font-family:var(--font-fr);font-size:16px;line-height:1.6;background:linear-gradient(140deg,#e8f0f8 0%,#f0f4f8 45%,#fdf8f0 100%);color:#1a1a2e;display:flex;flex-direction:column}
+    .site-header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-mid) 100%);color:var(--white);padding:10px 16px;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.30)}
+    .header-grid{display:grid;grid-template-columns:110px 1fr 240px;gap:10px;align-items:center}
+    .header-col1{display:flex;flex-direction:column;align-items:center;gap:4px}
+    .logo-square{width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#f5c542);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:30px;font-weight:800;color:var(--primary);border:3px solid var(--white);box-shadow:0 0 0 4px rgba(255,255,255,0.20);overflow:hidden}
+    .logo-square img{width:100%;height:100%;object-fit:cover}
+    .header-col1 .verset{font-family:var(--font-ar);font-size:9px;color:rgba(255,255,255,0.85);text-align:center;font-style:italic;line-height:1.3}
+    .header-col2{background:var(--accent);border-radius:10px;padding:8px 10px;text-align:center}
+    .header-col2 .concours-ar{font-family:var(--font-ar);font-size:14px;font-weight:700;color:var(--primary);line-height:1.4;margin-bottom:2px}
+    .header-col2 .specialite{font-family:var(--font-ar);font-size:11px;color:var(--primary-mid);font-weight:700}
+    .header-col3{text-align:center}
+    .header-col3 .accroche{font-family:var(--font-heading);font-size:12px;font-weight:600;color:var(--accent);margin-bottom:2px}
+    .header-col3 .marque{font-size:15px;font-weight:800;color:var(--white);letter-spacing:1px}
+    .header-col3 .marque span{color:var(--accent)}
+    .header-col3 .session{font-size:9px;color:rgba(255,255,255,0.70);margin-bottom:6px}
+    .header-col3 .titre-epreuve{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.30)}
+    .methode-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:6px 14px;display:flex;align-items:center;justify-content:center;gap:14px;font-size:12px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
+    .methode-bar .step{display:flex;align-items:center;gap:4px}.methode-bar .step-icon{font-size:15px}
+    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:4px 14px;display:flex;align-items:center;gap:10px;font-size:10px;color:var(--gray);flex-shrink:0;flex-wrap:wrap}
+    .mini-bar .mb-progress{flex:1;min-width:60px;display:flex;align-items:center;gap:6px}
+    .mb-progress-bar{flex:1;height:4px;background:#e0e5ec;border-radius:3px;overflow:hidden}
+    .mb-progress-fill{height:100%;background:linear-gradient(90deg,var(--sky-deep),var(--accent));border-radius:3px;transition:width .4s ease}
+    .mb-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:10px;font-weight:600;font-size:9px;white-space:nowrap}
+    .mb-badge.mode-badge{background:#e8f0fb;color:var(--sky-deep)}.mb-badge.client-badge{background:#fff3e0;color:var(--accent-dark)}
+    .main-scroll{flex:1;overflow-y:auto;padding:10px 0 6px}
+    .main-content{max-width:1060px;margin:0 auto;padding:0 14px 16px}
+    .page{display:none}.page.active{display:block;animation:fadeIn .3s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 22px;margin-bottom:14px;border-left:5px solid var(--primary)}
+    .card.sky{border-left-color:var(--sky-deep);background:#fafcff}
+    .card-title{font-size:17px;font-weight:700;color:var(--primary);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+    .btn{font-family:var(--font-fr);font-size:13px;font-weight:600;padding:8px 16px;border:none;border-radius:8px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:5px}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover:not(:disabled){background:var(--primary-mid)}
+    .btn-sky{background:var(--sky-deep);color:var(--white)}.btn-sky:hover:not(:disabled){background:#2563eb}
+    .btn-green{background:var(--green);color:var(--white)}.btn-green:hover:not(:disabled){background:#388e3c}
+    .btn-gold{background:var(--accent);color:var(--primary);font-weight:700}.btn-gold:hover:not(:disabled){background:var(--accent-dark)}
+    .btn-gray{background:#6c757d;color:var(--white)}.btn-gray:hover:not(:disabled){background:#5a6268}
+    .btn-outline-white{border:2px solid var(--white);color:var(--white);background:transparent;font-size:11px;padding:6px 12px}.btn-outline-white:hover{background:rgba(255,255,255,0.10)}
+    .btn-whatsapp{background:#25d366;color:var(--white)}.btn-whatsapp:hover{background:#1ebe57}
+    .btn-block{display:flex;width:100%;margin-top:10px;font-size:14px;padding:10px}
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:0 0 12px}
+    .mode-card{background:#f8faff;border:2px solid var(--sky-border);border-radius:var(--radius);padding:16px 10px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+    .mode-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--sky-deep);transform:scaleX(0);transform-origin:center;transition:transform .2s}
+    .mode-card:hover::after,.mode-card.selected::after{transform:scaleX(1)}
+    .mode-card:hover,.mode-card.selected{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--sky-deep)}
+    .mode-card.exam-card::after{background:var(--red)}.mode-card.exam-card:hover,.mode-card.exam-card.selected{border-color:var(--red);background:#fff5f5}
+    .mode-icon{font-size:30px;display:block;margin-bottom:4px}.mode-name{font-size:14px;font-weight:700;color:var(--primary)}
+    .mode-desc{font-size:10px;color:var(--gray);margin-top:2px;line-height:1.4}
+    .question-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+    .q-left{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;border:1.5px solid var(--sky-border)}
+    .q-right{min-height:120px}
+    .question-statement{font-size:14px;color:#1a1a2e;line-height:1.7;margin-bottom:10px;padding:10px 14px;background:#f8faff;border-radius:10px;border-left:4px solid var(--accent);user-select:text}
+    .choices-grid{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+    .choice-btn{font-family:var(--font-fr);font-size:13px;padding:9px 12px;border:2px solid var(--sky-border);border-radius:10px;background:var(--white);color:#1a1a2e;cursor:pointer;transition:all .15s;text-align:left;display:flex;align-items:flex-start;gap:8px;width:100%}
+    .choice-btn:hover:not(:disabled){background:#f0f6ff;border-color:var(--sky-deep)}
+    .choice-btn.selected{background:#e8f0ff;border-color:var(--sky-deep);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
+    .choice-btn.correct{background:var(--green-light);border-color:var(--green);color:var(--green);font-weight:600}
+    .choice-btn.wrong{background:var(--red-light);border-color:var(--red);color:var(--red)}
+    .choice-btn:disabled{cursor:default}
+    .choice-letter{width:24px;height:24px;border-radius:50%;background:var(--primary);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;flex-shrink:0;margin-top:1px}
+    .choice-btn.correct .choice-letter{background:var(--green)}.choice-btn.wrong .choice-letter{background:var(--red)}.choice-btn.selected .choice-letter{background:var(--sky-deep)}
+    .choice-text{flex:1}
+    .validate-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .nav-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}
+    .feedback-placeholder{background:#f8faff;border:2px dashed var(--sky-border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:120px;padding:18px 12px;text-align:center;color:var(--gray)}
+    .feedback-placeholder .ph-icon{font-size:30px;margin-bottom:6px}.feedback-placeholder .ph-text{font-size:12px}
+    .feedback-box{display:none;animation:fadeIn .3s ease}.feedback-box.visible{display:block}
+    .feedback-header{display:flex;align-items:center;gap:8px;padding:8px 14px;font-size:14px;font-weight:700;border-radius:10px 10px 0 0;border:2px solid transparent;border-bottom:none}
+    .feedback-box.correct .feedback-header{background:var(--green-light);color:var(--green);border-color:var(--green)}
+    .feedback-box.wrong .feedback-header{background:var(--red-light);color:var(--red);border-color:var(--red)}
+    .feedback-body{padding:12px 16px;background:#fafcff;border:2px solid #dbeafe;border-top:none;border-radius:0 0 10px 10px;font-size:12px;line-height:1.6;user-select:text}
+    .feedback-box.correct .feedback-body{border-color:var(--green)}.feedback-box.wrong .feedback-body{border-color:var(--red)}
+    .feedback-label{font-weight:700;color:var(--primary);font-size:9px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;margin-top:8px}.feedback-label:first-child{margin-top:0}
+    .feedback-text{color:#333;font-size:12px;margin-bottom:4px}
+    .correction-block{background:#f0f6ff;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.7;border-left:3px solid var(--sky-deep);margin-bottom:6px;user-select:text}
+    .astuce-box{background:#fffdf5;border-radius:8px;padding:8px 10px;border-left:3px solid var(--accent);font-size:12px;user-select:text;margin-bottom:6px}
+    .astuce-box .astuce-title{font-weight:700;color:var(--orange);font-size:9px;text-transform:uppercase;margin-bottom:2px}
+    .revision-layout{display:grid;grid-template-columns:200px 1fr;gap:14px;align-items:start}
+    .revision-sidebar{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden;border:1px solid #e0e5ec}
+    .revision-sidebar .rev-tab{display:block;width:100%;text-align:left;padding:10px 12px;border:none;background:transparent;cursor:pointer;font-family:var(--font-fr);font-size:12px;font-weight:600;color:var(--primary);border-bottom:1px solid #e0e8f0;transition:all .15s}
+    .revision-sidebar .rev-tab:hover{background:#f0f6ff}
+    .revision-sidebar .rev-tab.active{background:var(--sky-card);border-left:4px solid var(--sky-deep);color:var(--sky-deep)}
+    .revision-content{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 20px;border:1px solid #e0e5ec;min-height:340px}
+    .rev-title{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+    .rev-block{background:#f8faff;border-radius:10px;padding:12px 16px;margin-bottom:12px;border-left:3px solid var(--sky-deep)}
+    .rev-block h4{font-size:14px;color:var(--primary);margin-bottom:6px}
+    .rev-block ul{list-style:none;padding-left:0}.rev-block ul li{font-size:12px;color:#333;padding:2px 0;line-height:1.5}.rev-block ul li::before{content:"▸ ";color:var(--sky-deep)}
+    .rev-block.def-block{border-left-color:var(--green);background:#f8faf8}
+    .rev-block.piege-block{border-left-color:var(--red);background:#fffafa}
+    .programme-accordeon .accordeon-niveau{border:1px solid #e0e8f0;border-radius:10px;margin-bottom:10px;overflow:hidden}
+    .accordeon-niveau .niveau-header{display:flex;align-items:center;gap:8px;padding:12px 14px;cursor:pointer;font-weight:700;font-size:14px;color:var(--primary);background:linear-gradient(135deg,var(--accent),#f5c542);border:none;width:100%;text-align:left;font-family:var(--font-fr);transition:background .15s}
+    .accordeon-niveau .niveau-header:hover{background:var(--accent-dark);color:var(--primary)}
+    .accordeon-niveau .niveau-header::after{content:"▾";margin-left:auto;transition:transform .2s}
+    .accordeon-niveau.open .niveau-header{background:var(--accent);color:var(--primary)}
+    .accordeon-niveau.open .niveau-header::after{transform:rotate(180deg)}
+    .accordeon-niveau .niveau-body{display:none;padding:8px 14px 14px;background:#fafcff}
+    .accordeon-niveau.open .niveau-body{display:block}
+    .theme-block{margin-bottom:10px;padding-left:8px;border-left:2px solid var(--sky-border)}
+    .theme-block .theme-name{font-weight:700;font-size:13px;color:var(--primary);margin-bottom:4px}
+    .chapitre-item{margin-bottom:6px;padding-left:12px}
+    .chapitre-item .chapitre-name{font-weight:600;font-size:12px;color:var(--sky-deep);margin-bottom:2px}
+    .fiche-link{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:var(--sky-deep);text-decoration:none;font-weight:600;margin-right:8px}.fiche-link:hover{text-decoration:underline}
+    .fiche-lock{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:var(--gray);font-weight:600;margin-right:8px}
+    .pack-promo{background:linear-gradient(135deg,var(--accent),#f5c542);border-radius:10px;padding:14px 16px;text-align:center;margin-top:16px;color:var(--primary)}
+    .pack-promo h4{font-size:16px;margin-bottom:4px}.pack-promo p{font-size:12px;margin-bottom:8px;color:var(--primary-mid)}
+    .btn-home-rev{margin-top:10px}
+    .score-card{text-align:center;padding:20px 14px;background:linear-gradient(135deg,var(--primary),var(--primary-mid));border-radius:var(--radius);color:var(--white);margin-bottom:12px;box-shadow:var(--shadow)}
+    .score-badge{font-size:38px;margin-bottom:4px;display:block}.score-pct{font-size:34px;font-weight:700;color:var(--accent);display:block}
+    .score-label{font-size:12px;opacity:.8;margin-top:1px}.score-sub{font-size:15px;margin-top:4px;display:block}
+    .result-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:10px;overflow:hidden;font-size:11px;margin-top:4px}
+    .result-table th{background:var(--primary);color:var(--white);padding:7px 9px;text-align:left;font-weight:700;font-size:10px}
+    .result-table td{padding:6px 9px;border-bottom:1px solid #e0e8f0}.result-table tr:nth-child(even) td{background:#f8faff}
+    .r-ok{color:var(--green);font-weight:700}.r-ko{color:var(--red);font-weight:700}
+    .hidden{display:none!important}
+    .timer-wrap{text-align:center;margin-bottom:8px}
+    .timer-badge{display:inline-flex;align-items:center;gap:5px;background:#f8faff;border:2px solid var(--sky-border);border-radius:8px;padding:4px 12px;font-size:16px;font-weight:700;color:var(--primary);transition:all .3s}
+    .timer-badge.warning{background:#fff8f0;border-color:var(--orange);color:var(--orange)}
+    .timer-badge.danger{background:var(--red-light);border-color:var(--red);color:var(--red);animation:pulse .8s infinite}
+    .perq-timer{font-size:10px;color:var(--gray);margin-left:6px;font-weight:600}.perq-timer.warning{color:var(--orange)}.perq-timer.danger{color:var(--red)}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+    .site-footer{background:var(--primary);color:rgba(255,255,255,0.70);padding:10px 14px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:10px}
+    .site-footer .footer-info strong{color:var(--accent);font-weight:600}
+    .site-footer .footer-buttons{display:flex;gap:6px;flex-wrap:wrap}
+    @media(max-width:480px){body{font-size:14px}.site-header{padding:6px 8px}.header-grid{grid-template-columns:60px 1fr 120px;gap:5px}.logo-square{width:44px;height:44px;font-size:18px;border-radius:10px}.header-col1 .verset{font-size:7px}.header-col2{padding:5px 6px}.header-col2 .concours-ar{font-size:10px}.header-col2 .specialite{font-size:8px}.header-col3 .accroche{font-size:9px}.header-col3 .marque{font-size:11px}.header-col3 .session{font-size:7px}.header-col3 .titre-epreuve{font-size:16px}.methode-bar{padding:4px 6px;gap:6px;font-size:9px}.methode-bar .step-icon{font-size:12px}.mini-bar{padding:3px 8px;gap:6px;font-size:9px}.main-content{padding:0 6px 10px}.mode-grid{gap:5px}.mode-card{padding:10px 5px}.mode-icon{font-size:22px}.mode-name{font-size:11px}.mode-desc{font-size:8px}.question-layout{grid-template-columns:1fr 1fr;gap:6px}.q-left{padding:10px}.question-statement{font-size:12px;padding:8px 10px}.choice-btn{font-size:11px;padding:7px 8px}.revision-layout{grid-template-columns:110px 1fr;gap:6px}.revision-sidebar .rev-tab{font-size:10px;padding:7px 8px}.revision-content{padding:12px}.btn{font-size:11px;padding:6px 10px}.btn-block{font-size:12px;padding:8px}.site-footer{padding:8px 10px;flex-direction:column;text-align:center;font-size:9px}.site-footer .footer-buttons{justify-content:center}}
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <header class="site-header">
+    <div class="header-grid">
+      <div class="header-col1"><div class="logo-square"><img src="images/logo.png" alt="Synapris" onerror="this.style.display='none';this.parentElement.textContent='S'" /></div><div class="verset">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</div></div>
+      <div class="header-col2"><div class="concours-ar">المناظــرة الخارجية بالاختبارات لانتداب أساتذة<br>التعليم الثانوي و التعليم التقني و التعليم الفني<br>(دورة 2026)</div><div class="specialite">اختصاص : علوم الحياة و الأرض</div></div>
+      <div class="header-col3"><div class="accroche">✨ Votre réussite commence ici</div><div class="marque"><span>SYNAPRIS</span> — CAPES SVT</div><div class="session">Session 2026 · Éclairer l'intelligence</div><div class="titre-epreuve">QCM_SVT_2008</div></div>
+    </div>
+  </header>
+  <div class="methode-bar"><div class="step"><span class="step-icon">❌</span> Osez l'erreur</div><div class="step"><span class="step-icon">💡</span> Comprenez avec le feedback</div><div class="step"><span class="step-icon">⏱️</span> Testez-vous en mode Examen</div></div>
+  <div class="mini-bar" id="mini-bar"><div class="mb-progress"><span id="mb-q-counter">—</span><div class="mb-progress-bar"><div class="mb-progress-fill" id="mb-progress-fill" style="width:0%"></div></div></div><span class="mb-badge mode-badge" id="mb-mode-badge" style="display:none;">—</span><span class="mb-badge client-badge" id="mb-client-badge" style="display:none;">🔑 —</span></div>
+  <div class="main-scroll" id="main-scroll">
+    <div id="main-app" style="display:block;"><div class="main-content">
+      <div id="page-home" class="page active"><div class="card sky"><div class="card-title">🎯 Choisissez votre mode</div><div class="mode-grid"><div class="mode-card" id="mode-train" onclick="selectMode('train')"><span class="mode-icon">📝</span><div class="mode-name">Mode Entraînement</div><div class="mode-desc">Feedback immédiat · Correction détaillée</div></div><div class="mode-card" id="mode-revision" onclick="selectMode('revision')"><span class="mode-icon">📖</span><div class="mode-name">Mode Révision rapide</div><div class="mode-desc">Résumés · Définitions · Confusions</div></div><div class="mode-card exam-card" id="mode-exam" onclick="selectMode('exam')"><span class="mode-icon">⏱️</span><div class="mode-name">Mode Examen</div><div class="mode-desc">Chronomètre 60 min · 2 min/question</div></div></div><button class="btn btn-sky btn-block" id="btn-start" disabled>⏳ Chargement...</button></div></div>
+      <div id="page-question" class="page"><div class="timer-wrap hidden" id="timer-wrap"><div class="timer-badge" id="timer-badge">⏱ 60:00</div><span class="perq-timer" id="perq-timer">⚡ 2:00</span></div><div class="question-layout"><div class="q-left"><div class="question-statement" id="q-statement"></div><div class="choices-grid" id="q-choices"></div><div class="validate-row"><button class="btn btn-sky hidden" id="btn-validate" disabled onclick="validateAnswer()">✔ Valider</button><button class="btn btn-gold hidden" id="btn-correction" onclick="showCorrection()">💡 Correction</button></div></div><div class="q-right"><div class="feedback-placeholder" id="feedback-placeholder"><div class="ph-icon">💬</div><div class="ph-text">Feedback après validation</div></div><div class="feedback-box" id="feedback-box"><div class="feedback-header" id="feedback-header"><span id="badge-icon"></span><span id="feedback-result-text"></span></div><div class="feedback-body" id="feedback-body"></div></div></div></div><div class="nav-row"><button class="btn btn-primary" id="btn-prev" onclick="prevQuestion()" disabled>← Précédent</button><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button><button class="btn btn-green" id="btn-next" onclick="nextQuestion()">Suivant →</button></div></div>
+      <div id="page-revision" class="page"><div class="revision-layout"><div class="revision-sidebar" id="revision-sidebar"></div><div class="revision-content" id="revision-content"></div></div><div class="btn-home-rev"><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button></div></div>
+      <div id="page-results" class="page"><div class="score-card"><span class="score-badge" id="result-badge">🏆</span><span class="score-pct" id="result-pct">—</span><span class="score-label">Score final</span><span class="score-sub" id="result-sub"></span></div><div class="card"><div class="card-title">📊 Résultats par thème</div><div id="result-themes"></div></div><div class="card"><div class="card-title">📋 Récapitulatif</div><table class="result-table"><thead><tr><th>N°</th><th>Question</th><th>Thème</th><th>Résultat</th></tr></thead><tbody id="result-tbody"></tbody></table><button class="btn btn-gold btn-block" id="btn-retry-failed" onclick="retryFailed()" style="display:none;margin-top:8px;">🔁 Retravailler les erreurs</button><button class="btn btn-gold btn-block" style="margin-top:6px;" onclick="goHome()">🏠 Retour à l'accueil</button></div></div>
+    </div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-info">© 2026 <strong>Synapris</strong> — Éclairer l'intelligence · Tous droits réservés</div>
+    <div class="footer-buttons"><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a><a href="../../commander.html" class="btn btn-outline-white">📦 Voir les offres</a></div>
+  </footer>
+  <script>
+    // ═══════════════ CONFIGURATION ═══════════════
+    const FICHE_TYPE = 'public'; // 'public', 'semi', 'protege'
+    const QUESTIONS_GRATUITES = 15;
+    const VALID_CODES = ['SYNAPRIS-2026','CLI001-SVT','CLI002-SVT','CLI003-SVT'];
+    let licenceOk = (FICHE_TYPE === 'public');
+
+    // ═══════════════ QUESTIONS (MORCEAU 2) ═══════════════
+    const questionsData = [
+  {
+    id: 1,
+    statement: "Le basalte se distingue du granite par :",
+    choices: ["Sa structure microlithique", "Sa cristallisation lente et progressive", "Sa composition minéralogique", "Sa lave riche en silice"],
+    correct: [0, 2],
+    theme: "Géologie",
+    chapitre: "Structure et composition du globe",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Le basalte est une roche volcanique à refroidissement rapide (structure microlithique, cristaux fins et verre). Le granite est une roche plutonique à refroidissement lent (structure grenue, gros cristaux visibles). Le basalte est pauvre en silice (roche basique) alors que le granite est riche en silice (roche acide).",
+    phenomene: "La vitesse de refroidissement du magma détermine la structure de la roche : rapide = microlithique (basalte), lente = grenue (granite).",
+    correction_detaillee: {
+      juste: "A : Le basalte a une structure microlithique due au refroidissement rapide en surface. C : La composition minéralogique diffère (basalte basique pauvre en quartz, granite acide riche en quartz).",
+      faux: {
+        "B": "Le basalte a une cristallisation rapide, pas lente (c'est le granite qui refroidit lentement en profondeur).",
+        "D": "Le basalte est pauvre en silice (environ 50% SiO₂), contrairement au granite (environ 70% SiO₂)."
+      }
+    },
+    erreur_frequente: "Confondre structure (microlithique/grenue) et composition (basique/acide). Les deux critères sont distincts.",
+    astuce_fr: "Basalte = Volcan = Refroidissement RAPIDE = Petits cristaux. Granite = Pluton = Refroidissement LENT = Gros cristaux.",
+    astuce_ar: "البازلت كالعجينة التي جمدت فجأة، والغرانيت كالحلوى التي نضجت على نار هادئة. البازلت بركاني سريع التبريد، الجرانيت بلوتوني بطيء التبريد."
+  },
+  {
+    id: 2,
+    statement: "Le strombe (Strombus bubonius) est un fossile caractéristique :",
+    choices: ["De l'ère tertiaire", "De l'ère quaternaire", "D'un faciès marin littoral", "D'un faciès continental"],
+    correct: [1, 2],
+    theme: "Géologie",
+    chapitre: "Stratigraphie et paléontologie",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Strombus bubonius est un gastéropode fossile caractéristique du Quaternaire marin (Eutyrrhénien) en Tunisie. On le trouve notamment dans les dépôts de plages anciennes (falaise de Sidi Mhareb à Monastir). C'est à la fois un fossile stratigraphique (indique l'âge) et un fossile de faciès (indique le milieu).",
+    phenomene: "Le strombe est un marqueur bio-stratigraphique du Quaternaire et un indicateur paléoécologique de mer chaude littorale.",
+    correction_detaillee: {
+      juste: "B : Le strombe caractérise l'ère quaternaire (Eutyrrhénien, environ 120 000 ans). C : Il indique un faciès marin littoral (mer chaude et peu profonde).",
+      faux: {
+        "A": "L'ère tertiaire est plus ancienne (66 à 2,6 millions d'années). Le strombe est un fossile récent du Quaternaire.",
+        "D": "Le strombe est un mollusque marin, il ne peut pas caractériser un faciès continental."
+      }
+    },
+    erreur_frequente: "Confondre le strombe (Quaternaire) avec les nummulites (Éocène/Tertiaire). Les deux sont des fossiles marins mais d'âges très différents.",
+    astuce_fr: "Strombe = Sable (littoral) et Système Quaternaire. Un coquillage de plage récent.",
+    astuce_ar: "السترمب هو ساعة الزمن الرابع وبوصلة البحار الدافئة. صدفة شاطئية تعود للعصر الرباعي."
+  },
+  {
+    id: 3,
+    statement: "Le moteur des mouvements des plaques est :",
+    choices: ["La montée du magma vers la surface", "La gravité universelle", "La convection thermique dans la couche supérieure du manteau", "L'expansion océanique"],
+    correct: [2],
+    theme: "Géologie",
+    chapitre: "Tectonique des plaques",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "La chaleur interne du globe (désintégration d'éléments radioactifs) crée des courants de convection dans l'asthénosphère (manteau supérieur ductile). Ces mouvements de matière entraînent les plaques lithosphériques rigides sus-jacentes, comme un tapis roulant.",
+    phenomene: "Les courants de convection sont le moteur thermique principal de la tectonique des plaques. La matière chaude monte au niveau des dorsales, la matière froide plonge au niveau des zones de subduction.",
+    correction_detaillee: {
+      juste: "C : La convection thermique dans l'asthénosphère est le moteur principal reconnu par le modèle de la tectonique des plaques.",
+      faux: {
+        "A": "La montée du magma est une conséquence de la convection, pas le moteur premier.",
+        "B": "La gravité joue un rôle (traction de la plaque plongeante) mais n'est pas le moteur thermique global.",
+        "D": "L'expansion océanique est une conséquence de la divergence des plaques, pas la cause."
+      }
+    },
+    erreur_frequente: "Penser que c'est la lave qui pousse les continents. En réalité, c'est la convection du manteau qui déplace les plaques.",
+    astuce_fr: "Convection = Convecteur (chauffage) qui fait bouger l'air/les plaques. Chaleur interne = moteur.",
+    astuce_ar: "تيارات الحمل هي المرجل الذي يغلي تحت الأرض ليحرك القارات. الحرارة الباطنية هي المحرك الأساسي."
+  },
+  {
+    id: 4,
+    statement: "Le pétrole est une roche :",
+    choices: ["Carbonatée", "Carbonée", "Sédimentaire", "Métamorphique"],
+    correct: [1, 2],
+    theme: "Géologie",
+    chapitre: "Ressources naturelles",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Le pétrole est une roche sédimentaire carbonée formée par l'accumulation et la transformation de matière organique (plancton, algues) en milieu anaérobie (sans oxygène). Il se forme dans une roche mère (argiles noires) puis migre vers une roche magasin (grès, calcaires poreux).",
+    phenomene: "Le pétrole est classé comme une roche sédimentaire carbonée liquide. Sa genèse implique : dépôt de matière organique → enfouissement → transformation thermique → migration.",
+    correction_detaillee: {
+      juste: "B : Le pétrole est une roche carbonée (riche en carbone organique). C : C'est une roche sédimentaire (formée par dépôt et transformation).",
+      faux: {
+        "A": "Les roches carbonatées sont les calcaires (CaCO₃), pas le pétrole.",
+        "D": "Le pétrole n'est pas une roche métamorphique (il n'a pas subi de transformation par haute pression/température)."
+      }
+    },
+    erreur_frequente: "Oublier que le pétrole, bien que liquide, est classé géologiquement comme une roche. Ne pas confondre carbonée et carbonatée.",
+    astuce_fr: "Pétrole = Sédiment Carboné (SC pour Super Carburant). Liquide ≠ pas une roche.",
+    astuce_ar: "النفط هو عصير الحياة الغابرة الذي حُفظ في أقبية الرسوبيات. صخر رسوبي كربوني سائل."
+  },
+  {
+    id: 5,
+    statement: "Parmi les structures géologiques suivantes, celle(s) due(s) à une compression de la croûte terrestre est (sont) :",
+    choices: ["Faille normale", "Faille inverse", "Fossé d'effondrement", "Chaîne de montagnes"],
+    correct: [1, 3],
+    theme: "Géologie",
+    chapitre: "Tectonique et accidents tectoniques",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "La compression résulte de forces convergentes qui raccourcissent la croûte terrestre. Elle produit des failles inverses (chevauchantes), des plis et des chaînes de montagnes (orogenèse). La distension (forces divergentes) produit des failles normales et des fossés d'effondrement (rifts).",
+    phenomene: "Compression = raccourcissement = failles inverses + plis + montagnes. Distension = étirement = failles normales + fossés.",
+    correction_detaillee: {
+      juste: "B : La faille inverse résulte d'une compression (le toit monte par rapport au mur). D : Les chaînes de montagnes se forment par compression (orogenèse).",
+      faux: {
+        "A": "La faille normale résulte d'une distension (le toit descend par rapport au mur).",
+        "C": "Le fossé d'effondrement (rift) résulte d'une distension."
+      }
+    },
+    erreur_frequente: "Inverser les types de failles : normale (distension) et inverse (compression). Le nom 'inverse' peut prêter à confusion.",
+    astuce_fr: "Inverse = Impact (choc/compression). Normale = écartement (distension).",
+    astuce_ar: "الصدع المعكوس هو رد فعل الأرض على الضغط، كالسجاد الذي يتجعد عند دفعه. الضغط يقصر، التمدد يطيل."
+  },
+  {
+    id: 6,
+    statement: "La photophosphorylation signifie la production d'ATP :",
+    choices: ["Par l'action de la lumière sur l'ADP", "Par l'oxydation d'une molécule d'eau dans le chloroplaste", "Au cours du transport des électrons dans la chaîne photosynthétique au niveau du chloroplaste", "Par l'action de la lumière sur la chlorophylle"],
+    correct: [2],
+    theme: "Nutrition",
+    chapitre: "Photosynthèse",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La photophosphorylation est la synthèse d'ATP dans les thylakoïdes du chloroplaste, couplée au transfert d'électrons excités par la lumière le long de la chaîne photosynthétique. Les électrons proviennent de la photolyse de l'eau (H₂O → ½O₂ + 2H⁺ + 2e⁻).",
+    phenomene: "Phase photochimique (claire) : l'énergie lumineuse excite les électrons de la chlorophylle qui circulent dans la chaîne photosynthétique, permettant la phosphorylation de l'ADP en ATP.",
+    correction_detaillee: {
+      juste: "C : L'ATP est produit lors du transport des électrons dans la chaîne photosynthétique (photophosphorylation).",
+      faux: {
+        "A": "La lumière n'agit pas directement sur l'ADP. Le mécanisme implique le transport d'électrons.",
+        "B": "La photolyse de l'eau libère des électrons et de l'O₂, mais la phosphorylation est distincte.",
+        "D": "La lumière excite la chlorophylle (absorption), mais l'ATP est produit par la chaîne de transport."
+      }
+    },
+    erreur_frequente: "Confondre photophosphorylation (lumière → ATP dans le chloroplaste) et phosphorylation oxydative (respiration → ATP dans la mitochondrie).",
+    astuce_fr: "Photo = lumière. Phosphorylation = ATP. La chaîne photosynthétique produit l'ATP grâce à la lumière.",
+    astuce_ar: "الضوء هو الوقود الذي يشحن بطاريات الخلية (ATP). الفوتوفسفرة = ضوء + إنتاج ATP."
+  },
+  {
+    id: 7,
+    statement: "Le système HLA ou CMH (complexe majeur d'histocompatibilité) :",
+    choices: ["Est un ensemble d'antigènes membranaires spécifiques à l'individu", "Concerne les globules rouges", "Est un groupe de gènes du chromosome 6 codant la synthèse de glycoprotéines de surface", "N'intervient pas dans la réaction immunitaire"],
+    correct: [0, 2],
+    theme: "Immunologie",
+    chapitre: "Le Soi et le Non-Soi",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le CMH désigne les gènes situés sur le chromosome 6 qui codent pour les protéines membranaires HLA (Human Leukocyte Antigen). Ces protéines sont présentes sur toutes les cellules nucléées et constituent la 'carte d'identité' biologique de l'individu. Elles permettent au système immunitaire de distinguer le soi du non-soi.",
+    phenomene: "Les molécules HLA sont les marqueurs du soi. Le CMH est le groupe de gènes qui les code. Ils sont essentiels à la reconnaissance immunitaire.",
+    correction_detaillee: {
+      juste: "A : Les HLA sont des antigènes membranaires spécifiques à chaque individu (sauf vrais jumeaux). C : Les gènes du CMH sont situés sur le chromosome 6.",
+      faux: {
+        "B": "Les globules rouges n'ont pas de noyau et ne portent pas de HLA. Ils portent les antigènes ABO et Rhésus.",
+        "D": "Le CMH/HLA est fondamental dans la réaction immunitaire (présentation de l'antigène, reconnaissance)."
+      }
+    },
+    erreur_frequente: "Confondre HLA (chromosome 6, globules blancs) et groupes sanguins ABO (chromosome 9, globules rouges).",
+    astuce_fr: "CMH = GÈNES sur chromosome 6. HLA = PROTÉINES = marqueurs du soi. Humain Leucocyte Antigène.",
+    astuce_ar: "نظام HLA هو البصمة البيولوجية التي تفرق بين الصديق والعدو. CMH = جينات، HLA = بروتينات."
+  },
+  {
+    id: 8,
+    statement: "Dans un écosystème, le nombre et la masse des individus des différents niveaux trophiques décroît des producteurs aux consommateurs, car :",
+    choices: ["La production primaire est limitée", "En passant d'un niveau trophique à un niveau trophique suivant, le rendement énergétique diminue", "Les herbivores consomment plus d'énergie que les carnivores", "En passant d'un niveau trophique à un autre, la quantité de matière vivante élaborée à partir de l'énergie disponible est faible"],
+    correct: [1, 3],
+    theme: "Écologie",
+    chapitre: "Relations trophiques et flux d'énergie",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "À chaque niveau trophique, environ 90% de l'énergie est perdue sous forme de chaleur (respiration) ou de déchets (excrétion). Seulement ~10% de l'énergie est transférée au niveau suivant. Cela explique la forme pyramidale des pyramides écologiques.",
+    phenomene: "Le rendement énergétique diminue à chaque transfert trophique (règle des 10%). La biomasse diminue en conséquence.",
+    correction_detaillee: {
+      juste: "B : Le rendement énergétique diminue d'un niveau à l'autre (pertes par respiration, chaleur). D : La quantité de matière vivante élaborée au niveau suivant est faible (~10% de l'énergie disponible).",
+      faux: {
+        "A": "La production primaire n'est pas limitée en soi, c'est le transfert qui est peu efficace.",
+        "C": "Les herbivores ne consomment pas plus d'énergie que les carnivores en valeur absolue."
+      }
+    },
+    erreur_frequente: "Croire que l'énergie se multiplie en montant dans la chaîne alimentaire, ou que la production primaire limitée explique tout.",
+    astuce_fr: "Règle des 10% : seul 1/10 de l'énergie passe au niveau suivant. Pyramide = base large, sommet étroit.",
+    astuce_ar: "الطاقة في الطبيعة كالغربال، كلما ارتفعنا ضاع الكثير وبقي القليل. 10% فقط ينتقل للمستوى التالي."
+  },
+  {
+    id: 9,
+    statement: "Dans un écosystème, la niche écologique désigne :",
+    choices: ["L'ensemble des conditions physicochimiques du milieu", "L'habitat d'une population", "La fonction d'une population dans une biocénose", "Le niveau trophique d'une population"],
+    correct: [2],
+    theme: "Écologie",
+    chapitre: "Écosystèmes",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "La niche écologique est le rôle fonctionnel d'une espèce dans son écosystème : ce qu'elle mange, comment elle se reproduit, ses interactions avec les autres espèces, sa période d'activité. L'habitat est son adresse, la niche est sa profession.",
+    phenomene: "Niche = fonction (profession). Habitat = lieu de vie (adresse). Deux espèces peuvent partager le même habitat mais avoir des niches différentes.",
+    correction_detaillee: {
+      juste: "C : La niche écologique est la fonction d'une population dans la biocénose (son rôle trophique, ses interactions).",
+      faux: {
+        "A": "Les conditions physicochimiques définissent le biotope, pas la niche.",
+        "B": "L'habitat est le lieu de vie, pas la niche.",
+        "D": "Le niveau trophique est un aspect de la niche, mais ne la définit pas entièrement."
+      }
+    },
+    erreur_frequente: "Confondre niche (fonction) et habitat (lieu). Penser que deux espèces ne peuvent pas coexister si elles ont la même niche.",
+    astuce_fr: "Niche = Nature de la fonction. Habitat = Adresse. Niche = Profession.",
+    astuce_ar: "الموطن هو العنوان، والمتحد البيئي هو الوظيفة. المحراب البيئي = مهنة الكائن الحي."
+  },
+  {
+    id: 10,
+    statement: "La relation biologique existant entre les légumineuses et les bactéries fixatrices d'azote est :",
+    choices: ["Un parasitisme", "Une symbiose", "Un mutualisme", "Un commensalisme"],
+    correct: [1, 2],
+    theme: "Écologie",
+    chapitre: "Interactions biologiques",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les bactéries Rhizobium vivent dans les nodosités des racines de légumineuses. Elles fixent l'azote atmosphérique (N₂ → NH₄⁺) pour la plante, qui en échange leur fournit des sucres issus de la photosynthèse. C'est une relation à bénéfice réciproque (+/+).",
+    phenomene: "Mutualisme = bénéfice réciproque (+/+). Symbiose = association étroite et durable. Ici, les deux termes s'appliquent : c'est une symbiose mutualiste.",
+    correction_detaillee: {
+      juste: "B : C'est une symbiose (association étroite et durable entre les deux organismes). C : C'est un mutualisme (bénéfice réciproque : azote contre sucres).",
+      faux: {
+        "A": "Le parasitisme est une relation (+/-) où l'un profite au détriment de l'autre.",
+        "D": "Le commensalisme est une relation (+/0) où l'un profite sans nuire à l'autre."
+      }
+    },
+    erreur_frequente: "Penser que symbiose et mutualisme sont exclusifs. Une symbiose peut être mutualiste (bénéfique pour les deux).",
+    astuce_fr: "L'union fait la force (azote contre sucre). Gagnant-Gagnant = mutualisme symbiotique.",
+    astuce_ar: "التعايش هو عقد مقايضة؛ الغذاء مقابل النيتروجين. رابح-رابح = تعايش تبادلي."
+  },
+  {
+    id: 11,
+    statement: "Le glycogène et l'amidon sont :",
+    choices: ["Des polysaccharides constitués de glucose", "Des sucres réducteurs", "Des macromolécules de réserve des cellules animales", "Constitués de polymères linéaires sans chaînes ramifiées"],
+    correct: [0],
+    theme: "Nutrition",
+    chapitre: "Biochimie des glucides",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Le glycogène (animal) et l'amidon (végétal) sont des polysaccharides de réserve formés de chaînes de glucose ramifiées (amylopectine pour l'amidon, structure très ramifiée pour le glycogène). Ce sont des macromolécules non réductrices.",
+    phenomene: "Ce sont des polymères de glucose servant de réserve énergétique. L'amidon colore en bleu à l'eau iodée, le glycogène en brun acajou.",
+    correction_detaillee: {
+      juste: "A : Ce sont des polysaccharides (polyosides) constitués uniquement de glucose.",
+      faux: {
+        "B": "Les polyosides ne sont pas des sucres réducteurs (contrairement au glucose ou au maltose).",
+        "C": "Seul le glycogène est animal. L'amidon est exclusivement végétal.",
+        "D": "Ils sont ramifiés (amylopectine de l'amidon, glycogène très ramifié)."
+      }
+    },
+    erreur_frequente: "Penser qu'ils sont linéaires ou que l'amidon est aussi présent chez les animaux.",
+    astuce_fr: "Glycogène = Animal (foie, muscle). Amidon = Végétal (pomme de terre, riz). Tous deux = glucose ramifié.",
+    astuce_ar: "النشا للزرع والغليكوجين للضرع؛ كلاهما مخازن طاقة من سكر العنب. عديدات سكريات = جلوكوز متفرع."
+  },
+  {
+    id: 12,
+    statement: "Les protéines :",
+    choices: ["Sont des molécules informatives", "Sont constituées de séquences d'acides aminés", "Ne se rencontrent que dans les cellules animales", "Peuvent accomplir des fonctions enzymatiques"],
+    correct: [1, 3],
+    theme: "Biologie cellulaire",
+    chapitre: "Biochimie des protéines",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Les protéines sont des polymères d'acides aminés reliés par des liaisons peptidiques. Elles assurent de nombreuses fonctions : enzymes (catalyse), structure (collagène, kératine), transport (hémoglobine), défense (anticorps). Les molécules informatives sont l'ADN et l'ARN.",
+    phenomene: "Les protéines sont le produit de l'expression génétique, pas le support de l'information. Elles existent chez tous les êtres vivants.",
+    correction_detaillee: {
+      juste: "B : Les protéines sont constituées de séquences d'acides aminés (structure primaire). D : Certaines protéines sont des enzymes (catalyseurs biologiques).",
+      faux: {
+        "A": "Les molécules informatives sont l'ADN et l'ARN. Les protéines sont le produit de leur expression.",
+        "C": "Les protéines existent chez tous les êtres vivants (animaux, végétaux, bactéries, champignons)."
+      }
+    },
+    erreur_frequente: "Confondre acide aminé (monomère) et protéine (polymère). Penser que les protéines sont informatives.",
+    astuce_fr: "ADN = Information (archive). ARN = Message (copie). Protéine = Action (enzyme, structure).",
+    astuce_ar: "البروتينات هي لبنات البناء وأدوات العمل في كل خلية حية. ADN = معلومة، بروتين = عمل."
+  },
+  {
+    id: 13,
+    statement: "Les enzymes :",
+    choices: ["Sont des protéines à propriétés catalytiques et possédant un site actif", "Sont spécifiques à un substrat ou d'un type de réaction", "N'interviennent que dans les réactions d'hydrolyse", "Fonctionnent indépendamment du pH du milieu et de sa température"],
+    correct: [0, 1],
+    theme: "Nutrition",
+    chapitre: "Enzymologie",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Les enzymes sont des biocatalyseurs protéiques. Elles possèdent un site actif spécifique qui reconnaît un substrat particulier (modèle clé-serrure). Leur activité dépend fortement des conditions physicochimiques : chaque enzyme a un pH et une température optimaux.",
+    phenomene: "Les enzymes accélèrent les réactions sans être consommées. Spécificité enzyme-substrat. Elles interviennent dans les hydrolyses ET les synthèses.",
+    correction_detaillee: {
+      juste: "A : Les enzymes sont des protéines catalytiques possédant un site actif. B : Elles sont spécifiques d'un substrat ou d'un type de réaction.",
+      faux: {
+        "C": "Les enzymes interviennent aussi dans les réactions de synthèse (ex: ADN polymérase), pas seulement d'hydrolyse.",
+        "D": "L'activité enzymatique dépend fortement du pH et de la température (dénaturation à haute température)."
+      }
+    },
+    erreur_frequente: "Croire que toutes les enzymes fonctionnent à pH neutre ou à 37°C. La pepsine gastrique fonctionne à pH très acide.",
+    astuce_fr: "Enzyme = Expert spécifique (un seul substrat, un seul pH optimal). Une serrure pour une clé.",
+    astuce_ar: "الإنزيم هو المقص المتخصص؛ لا يقطع إلا ما صُنع من أجله. مفتاح وقفل لكل إنزيم."
+  },
+  {
+    id: 14,
+    statement: "La cellule végétale est caractérisée par :",
+    choices: ["La membrane plasmique", "Le noyau", "La paroi pectocellulosique", "Les chloroplastes"],
+    correct: [2, 3],
+    theme: "Biologie cellulaire",
+    chapitre: "Unité du vivant",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "La cellule végétale se distingue de la cellule animale par la présence d'une paroi pectocellulosique rigide (constituée de cellulose) et de chloroplastes (organites de la photosynthèse). La membrane plasmique et le noyau sont communs à toutes les cellules eucaryotes.",
+    phenomene: "Paroi + chloroplastes = caractéristiques exclusives des cellules végétales. Membrane + noyau = communs aux eucaryotes.",
+    correction_detaillee: {
+      juste: "C : La paroi pectocellulosique est spécifique aux cellules végétales. D : Les chloroplastes sont spécifiques aux cellules végétales.",
+      faux: {
+        "A": "La membrane plasmique existe aussi chez les cellules animales.",
+        "B": "Le noyau existe chez toutes les cellules eucaryotes (animales et végétales)."
+      }
+    },
+    erreur_frequente: "Oublier que la membrane plasmique existe aussi chez les végétaux (sous la paroi). Confondre paroi et membrane.",
+    astuce_fr: "Végétal = Vert (chloroplastes) et Verrouillé (paroi). Le reste = commun animal/végétal.",
+    astuce_ar: "الخلية النباتية قلعة حصينة (جدار) بداخلها معامل شمسية (بلاستيدات). الجدار والبلاستيدات = نباتي فقط."
+  },
+  {
+    id: 15,
+    statement: "Les nucléotides sont des constituants de base :",
+    choices: ["Des protides", "De l'ADN", "Des lipides", "De l'ARN"],
+    correct: [1, 3],
+    theme: "Biologie cellulaire",
+    chapitre: "Acides nucléiques",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les nucléotides sont les monomères de l'ADN et de l'ARN. Chaque nucléotide est constitué d'un groupement phosphate, d'un sucre (désoxyribose pour l'ADN, ribose pour l'ARN) et d'une base azotée (A, T, C, G pour l'ADN ; A, U, C, G pour l'ARN).",
+    phenomene: "ADN et ARN = polynucléotides. Protides = polymères d'acides aminés. Lipides = esters d'acides gras.",
+    correction_detaillee: {
+      juste: "B : L'ADN est un polymère de désoxyribonucléotides. D : L'ARN est un polymère de ribonucléotides.",
+      faux: {
+        "A": "Les protides (protéines) sont constitués d'acides aminés, pas de nucléotides.",
+        "C": "Les lipides sont constitués d'acides gras et de glycérol, pas de nucléotides."
+      }
+    },
+    erreur_frequente: "Confondre nucléotide (ADN/ARN) et acide aminé (protéines). Ce sont des monomères différents.",
+    astuce_fr: "Nucléotide = brique de l'ADN et ARN. Acide aminé = brique des protéines.",
+    astuce_ar: "النكليوتيدات هي أحرف الأبجدية التي تُكتب بها أسرار الحياة. ADP = سكر + فوسفات + قاعدة."
+  },
+  {
+    id: 16,
+    statement: "Dans la cellule vivante, les mitochondries sont considérées comme des « centrales productrices d'énergie », car :",
+    choices: ["Elles contiennent de l'ATP en grande quantité", "Elles sont entourées d'une double membrane", "La fibre musculaire contient un grand nombre de mitochondries", "Les enzymes intervenant dans le cycle de Krebs et la chaîne de cytochromes sont localisées au niveau de la membrane interne de la mitochondrie"],
+    correct: [3],
+    theme: "Biologie cellulaire",
+    chapitre: "Respiration cellulaire",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Les mitochondries abritent les enzymes du cycle de Krebs dans leur matrice et les enzymes de la chaîne respiratoire (cytochromes) sur leur membrane interne (crêtes). C'est là que se déroule la phosphorylation oxydative qui produit l'essentiel de l'ATP cellulaire.",
+    phenomene: "La localisation précise des enzymes de la respiration dans les mitochondries justifie leur rôle de centrale énergétique.",
+    correction_detaillee: {
+      juste: "D : Les enzymes du cycle de Krebs (matrice) et de la chaîne respiratoire (membrane interne) sont localisées dans la mitochondrie, permettant la production d'ATP.",
+      faux: {
+        "A": "L'ATP n'est pas stocké en grande quantité dans la mitochondrie. Il est produit puis consommé rapidement.",
+        "B": "La double membrane est une caractéristique structurale, pas l'explication de la production d'énergie.",
+        "C": "La présence de nombreuses mitochondries dans le muscle est une conséquence des besoins énergétiques, pas la cause."
+      }
+    },
+    erreur_frequente: "Penser que les mitochondries stockent l'ATP, alors qu'elles le produisent en continu.",
+    astuce_fr: "Mitochondrie = Usine à ATP. Krebs (matrice) + Chaîne respiratoire (crêtes) = Production.",
+    astuce_ar: "المتقدرة هي فرن الخلية الذي يحرق الغلوكوز ليولد طاقة الحركة. كريبس + السلسلة التنفسية = ATP."
+  },
+  {
+    id: 17,
+    statement: "L'organite est bien associé à sa fonction dans le(s) cas suivant(s) :",
+    choices: ["Noyau – information génétique", "Appareil de Golgi – synthèse des protéines", "Chloroplastes – respiration cellulaire", "Mitochondries – photosynthèse"],
+    correct: [0],
+    theme: "Biologie cellulaire",
+    chapitre: "Ultrastructure cellulaire",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Chaque organite a une fonction spécifique : le noyau contient l'ADN (information génétique), l'appareil de Golgi assure la maturation et le transport des protéines, les chloroplastes réalisent la photosynthèse, les mitochondries assurent la respiration cellulaire.",
+    phenomene: "Compartimentation fonctionnelle : chaque organite possède un équipement enzymatique dédié à une tâche précise.",
+    correction_detaillee: {
+      juste: "A : Le noyau contient l'ADN, support de l'information génétique.",
+      faux: {
+        "B": "L'appareil de Golgi assure la maturation et le transport des protéines. La synthèse est assurée par les ribosomes.",
+        "C": "Les chloroplastes réalisent la photosynthèse, pas la respiration.",
+        "D": "Les mitochondries assurent la respiration cellulaire, pas la photosynthèse."
+      }
+    },
+    erreur_frequente: "Inverser les fonctions : chloroplaste/respiration et mitochondrie/photosynthèse. Confondre synthèse et maturation des protéines.",
+    astuce_fr: "Noyau = Notaire (garde l'info). Mitochondrie = Moteur. Chloroplaste = Panneau solaire. Golgi = Postier.",
+    astuce_ar: "النواة هي المكتبة المركزية. الميتوكندري = محرك. البلاستيدات = ألواح شمسية. غولجي = مكتب البريد."
+  },
+  {
+    id: 18,
+    statement: "La méiose :",
+    choices: ["Rétablit la diploïdie de l'espèce", "Répartit les chromosomes homologues dans deux cellules filles", "Intervient dans la formation des gamètes", "Permet à l'ovocyte I de donner 4 ovules (chez la femme)"],
+    correct: [1, 2],
+    theme: "Génétique",
+    chapitre: "Reproduction sexuée et méiose",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La méiose est une division réductionnelle qui fait passer le stock chromosomique de 2n à n. Elle sépare les chromosomes homologues (anaphase I) et les chromatides (anaphase II). Elle produit les gamètes. C'est la fécondation qui rétablit la diploïdie. Chez la femme, l'ovocyte I donne 1 ovule fonctionnel et 3 globules polaires.",
+    phenomene: "Méiose = division réductionnelle produisant des cellules haploïdes (gamètes). Fécondation = rétablissement de la diploïdie.",
+    correction_detaillee: {
+      juste: "B : La méiose sépare les chromosomes homologues (anaphase I). C : Elle intervient dans la formation des gamètes (spermatozoïdes, ovules).",
+      faux: {
+        "A": "C'est la fécondation qui rétablit la diploïdie, pas la méiose.",
+        "D": "Chez la femme, l'ovocyte I donne 1 ovule et 3 globules polaires (et non 4 ovules)."
+      }
+    },
+    erreur_frequente: "Confondre méiose (réduction) et fécondation (rétablissement). Penser que l'ovogenèse produit 4 ovules.",
+    astuce_fr: "Méiose = Moitié (division par deux : 2n → n). Fécondation = n + n → 2n.",
+    astuce_ar: "الانقسام المنصف هو جسر العبور من جيل إلى جيل. ميوز = 2n → n. إخصاب = n + n → 2n."
+  },
+  {
+    id: 19,
+    statement: "Le crossing-over :",
+    choices: ["Se produit au moment de la fécondation", "Se produit à la prophase de la première division méiotique", "Est à l'origine d'une variabilité génétique des gamètes", "Donne des chromatides remaniées"],
+    correct: [1, 2, 3],
+    theme: "Génétique",
+    chapitre: "Brassage génétique",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le crossing-over (enjambement) se produit en prophase I de la méiose. Il consiste en un échange réciproque de segments entre chromosomes homologues (entre chromatides non-sœurs). Il produit des chromatides remaniées (recombinées) et augmente la variabilité génétique des gamètes.",
+    phenomene: "Crossing-over = brassage intrachromosomique. Échange de segments entre chromosomes homologues en prophase I.",
+    correction_detaillee: {
+      juste: "B : Le crossing-over a lieu en prophase I de la méiose. C : Il crée de la variabilité génétique. D : Il produit des chromatides remaniées.",
+      faux: {
+        "A": "Le crossing-over se produit pendant la méiose (formation des gamètes), pas lors de la fécondation (union des gamètes)."
+      }
+    },
+    erreur_frequente: "Situer le crossing-over à la fécondation ou en mitose. Oublier qu'il ne se produit qu'entre chromosomes homologues.",
+    astuce_fr: "Crossing-over = Croisement = Échange de gènes en prophase I. Brassage intrachromosomique.",
+    astuce_ar: "العبور هو تبادل قطع النسيج الوراثي لصناعة أثواب فريدة. يحدث في الطور التمهيدي الأول."
+  },
+  {
+    id: 20,
+    statement: "La cellule procaryote se distingue de la cellule eucaryote par :",
+    choices: ["L'absence d'organites cellulaires à l'exception des ribosomes", "L'absence d'un noyau cellulaire", "La présence de mitochondries", "La présence d'une membrane cytoplasmique"],
+    correct: [0, 1],
+    theme: "Biologie cellulaire",
+    chapitre: "Classification du vivant",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les procaryotes (bactéries) n'ont pas de noyau délimité par une enveloppe nucléaire. Leur ADN est libre dans le cytoplasme. Ils ne possèdent pas d'organites membraneux (mitochondries, RE, Golgi). Seuls les ribosomes sont présents. La membrane cytoplasmique est commune à toutes les cellules.",
+    phenomene: "Procaryote = pas de noyau, pas d'organites membraneux. Le ribosome est le seul organite universel.",
+    correction_detaillee: {
+      juste: "A : Absence d'organites membraneux, seuls les ribosomes sont présents. B : Absence de noyau individualisé.",
+      faux: {
+        "C": "Les procaryotes n'ont pas de mitochondries. La respiration se fait au niveau de la membrane plasmique.",
+        "D": "La membrane cytoplasmique existe chez tous les types cellulaires (procaryotes et eucaryotes)."
+      }
+    },
+    erreur_frequente: "Croire que les bactéries n'ont ni ADN ni ribosomes. Elles possèdent les deux, mais pas de noyau.",
+    astuce_fr: "PROcaryote = Pas (de noyau). EUcaryote = Vrai noyau. Le ribosome est universel.",
+    astuce_ar: "بدائيات النوى هي بيوت من طراز قديم، كل أثاثها في غرفة واحدة. لا نواة، لا عضيات غشائية."
+  },
+  {
+    id: 21,
+    statement: "Chez un ascomycète, le croisement d'une souche aux spores noires par une souche aux spores blanches a donné 400 spores noires, 400 spores blanches, 100 spores roses et 100 spores jaunes. Le déterminisme génétique est :",
+    choices: ["2 gènes liés distants de 20 cmgs", "2 gènes indépendants", "Un seul gène situé à 20 cmgs du centromère", "Un seul gène très proche du centromère"],
+    correct: [0],
+    theme: "Génétique",
+    chapitre: "Brassage génétique et distance génétique",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Chez les ascomycètes, l'analyse des spores permet de déterminer la disposition des gènes. La distance entre deux gènes liés est calculée par le pourcentage de recombinés : (nombre de spores recombinées / nombre total de spores) × 100. Ici, les spores roses et jaunes sont les recombinées (100 + 100 = 200 sur 1000 total = 20%).",
+    phenomene: "La fréquence de recombinaison de 20% indique que les deux gènes sont liés et distants de 20 centimorgans (cM).",
+    correction_detaillee: {
+      juste: "A : 2 gènes liés distants de 20 cM. Les recombinés (roses + jaunes = 200/1000 = 20%) donnent directement la distance génétique.",
+      faux: {
+        "B": "Si les gènes étaient indépendants, on observerait 4 types de spores en proportions égales (250 de chaque), ce qui n'est pas le cas.",
+        "C": "L'analyse porte sur deux gènes entre eux, pas sur la distance gène-centromère.",
+        "D": "Un gène très proche du centromère donnerait un taux de recombinaison très faible, pas 20%."
+      }
+    },
+    erreur_frequente: "Oublier d'additionner les deux types de recombinés (roses et jaunes) avant de diviser par le total. Ne pas reconnaître les phénotypes parentaux (noir et blanc) et recombinés (rose et jaune).",
+    astuce_fr: "Recombinés sur total, la distance est ton Graal. (100+100)/1000 × 100 = 20 cM.",
+    astuce_ar: "المسافة بين الجينات تُقاس بمدى ابتعاد الأبناء عن صفات الآباء. (الوردي + الأصفر) ÷ الكل × 100 = 20 سنتيمورغان."
+  },
+  {
+    id: 22,
+    statement: "Le croisement de deux souches de Neurospora a donné 3 types d'asques octosporés (Type I: 4+/4- ; Type II: 8- ; Type III: 2+/6-). On conclut que :",
+    choices: ["Les 2 souches diffèrent par 2 gènes liés", "Les 2 souches diffèrent par 2 gènes indépendants", "Les 2 souches sont l'une (+) et l'autre (-)", "Les souches sont toutes les deux (-)"],
+    correct: [2],
+    theme: "Génétique",
+    chapitre: "Analyse de tétrades chez Neurospora",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Chez Neurospora, le croisement d'une souche (+) avec une souche (-) produit des asques avec différentes proportions de spores (+) et (-) selon la survenue de crossing-over. Les types parentaux sont 4+/4- (sans crossing-over) et 8- (avec crossing-over entre le gène et le centromère).",
+    phenomene: "La présence de spores (+) et (-) dans les asques indique un croisement entre deux souches de signes opposés.",
+    correction_detaillee: {
+      juste: "C : Les souches parentales sont l'une (+) et l'autre (-), ce qui explique la ségrégation des signes dans les asques.",
+      faux: {
+        "A": "Les données ne montrent pas l'intervention de deux gènes liés.",
+        "B": "Pas de preuve de deux gènes indépendants dans cette analyse.",
+        "D": "Si les deux souches étaient (-), tous les asques seraient de type 8- exclusivement."
+      }
+    },
+    erreur_frequente: "Confondre types d'asques et types de spores. Ne pas reconnaître que la présence de spores (+) indique un parent (+).",
+    astuce_fr: "Des spores (+) dans la descendance = un parent était (+). Pas de (+) = les deux parents (-).",
+    astuce_ar: "وجود أبواغ (+) في الأكياس يعني أن أحد الأبوين كان (+). نوع الآباء يحدد أنواع الأكياس."
+  },
+  {
+    id: 23,
+    statement: "Une population animale diploïde (A et a) est composée de 450 (A/A), 300 (A/a) et 50 (a/a). On déduit que :",
+    choices: ["La population n'est pas en équilibre Hardy-Weinberg", "Les fréquences sont pA = 1/2 et qa = 1/2", "Les fréquences sont pA = 3/4 et qa = 1/4", "Les fréquences sont pA = 1/4 et qa = 3/4"],
+    correct: [2],
+    theme: "Génétique",
+    chapitre: "Génétique des populations et équilibre de Hardy-Weinberg",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Pour une population de N = 800 individus (2N = 1600 allèles) : fréquence de A : p = (2×450 + 300) / 1600 = 1200/1600 = 0,75 = 3/4. Fréquence de a : q = 1 - p = 0,25 = 1/4. Si la population est en équilibre, p² = 9/16 (×800 = 450), 2pq = 6/16 (×800 = 300), q² = 1/16 (×800 = 50). Les effectifs correspondent exactement.",
+    phenomene: "La population est en équilibre de Hardy-Weinberg avec p = 3/4 et q = 1/4.",
+    correction_detaillee: {
+      juste: "C : pA = 3/4 et qa = 1/4. La population est en équilibre (les effectifs observés correspondent aux proportions théoriques p², 2pq, q²).",
+      faux: {
+        "A": "La population EST en équilibre de Hardy-Weinberg.",
+        "B": "Calcul erroné des fréquences alléliques.",
+        "D": "Valeurs inversées."
+      }
+    },
+    erreur_frequente: "Calculer p comme la fréquence du phénotype [A] sans tenir compte des hétérozygotes. Oublier de multiplier par 2 le nombre d'homozygotes.",
+    astuce_fr: "p = (2×homozygotes + hétérozygotes) / (2×total). Compte les ALLÈLES, pas les individus.",
+    astuce_ar: "التوازن الوراثي هو الميزان الذي يحفظ هوية الشعوب عبر الأجيال. p = (2×AA + Aa) ÷ (2×N)."
+  },
+  {
+    id: 24,
+    statement: "Un hybride H autofécondé donne 450 fleurs violettes, 150 jaunes et 200 bleues. La couleur est contrôlée par :",
+    choices: ["2 gènes liés distants de 20 cM", "2 gènes indépendants avec épistasie", "1 gène avec absence de dominance", "L'hybride H est un hétérozygote"],
+    correct: [1],
+    theme: "Génétique",
+    chapitre: "Dihybridisme et épistasie",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Les proportions 450:150:200 (total 800) peuvent être simplifiées en 9:3:4. Ces proportions indiquent une épistasie récessive : un gène masque l'expression de l'autre à l'état homozygote récessif. Le rapport 9:3:4 est caractéristique de l'épistasie récessive.",
+    phenomene: "Deux gènes indépendants interagissent : l'un est épistasique sur l'autre (épistasie récessive, rapport 9:3:4).",
+    correction_detaillee: {
+      juste: "B : 2 gènes indépendants avec épistasie (proportions 9:3:4).",
+      faux: {
+        "A": "Des gènes liés montreraient une majorité de phénotypes parentaux, pas cette distribution.",
+        "C": "1 gène avec codominance donnerait 1:2:1 (3 phénotypes en proportions 1/4, 1/2, 1/4).",
+        "D": "Un simple hétérozygote autofécondé donnerait 3:1 (2 phénotypes seulement)."
+      }
+    },
+    erreur_frequente: "Ne pas reconnaître les proportions caractéristiques de l'épistasie (9:3:4 ou 9:7 ou 12:3:1). Simplifier le total à 800 aide à identifier le rapport.",
+    astuce_fr: "450:150:200 = 9:3:4 (÷50). 9:3:4 = épistasie récessive. 800 = 16 × 50.",
+    astuce_ar: "النسب 9:3:4 تدل على تفوق جيني (إبيستاسي متنحي). 450:150:200 = 9:3:4 × 50."
+  },
+  {
+    id: 25,
+    statement: "Le nombre de génotypes possibles pour les groupes sanguins (systèmes ABO et Rh) est :",
+    choices: ["9", "18", "27", "36"],
+    correct: [1],
+    theme: "Génétique",
+    chapitre: "Génétique humaine et polyallélisme",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le système ABO possède 3 allèles (A, B, O). Le nombre de génotypes diploïdes pour n allèles est donné par n(n+1)/2 = 3×4/2 = 6 génotypes. Le système Rhésus possède 2 allèles (+, -) soit 2×3/2 = 3 génotypes. Le nombre total de combinaisons est le produit : 6 × 3 = 18 génotypes.",
+    phenomene: "Polyallélisme ABO (3 allèles → 6 génotypes) × Rhésus (2 allèles → 3 génotypes) = 18 génotypes combinés.",
+    correction_detaillee: {
+      juste: "B : 18 génotypes (6 pour ABO × 3 pour Rhésus).",
+      faux: {
+        "A": "9 correspond à l'addition (6+3) au lieu de la multiplication.",
+        "C": "27 = 3×9, calcul erroné.",
+        "D": "36 = double comptage ou confusion avec le nombre de croisements possibles."
+      }
+    },
+    erreur_frequente: "Additionner au lieu de multiplier. Confondre nombre de phénotypes (8 : A+, A-, B+, B-, AB+, AB-, O+, O-) et nombre de génotypes (18).",
+    astuce_fr: "ABO : 3 allèles → 6 génotypes. Rh : 2 allèles → 3 génotypes. Total = 6 × 3 = 18. On MULTIPLIE !",
+    astuce_ar: "فصائل الدم حكاية يكتبها 18 نمطاً وراثياً مختلفاً. ABO : 6 أنماط. Rh : 3 أنماط. المجموع = 6 × 3 = 18."
+  },
+  {
+    id: 26,
+    statement: "Les molécules informatives cellulaires sont :",
+    choices: ["Les protides", "Les glucides", "Les lipides", "Les acides nucléiques"],
+    correct: [3],
+    theme: "Biologie cellulaire",
+    chapitre: "Information génétique",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "L'ADN (acide désoxyribonucléique) et l'ARN (acide ribonucléique) sont les acides nucléiques. L'ADN est le support universel de l'information génétique. L'ARN est un intermédiaire (messager) dans l'expression des gènes. Les protéines, glucides et lipides ne sont pas des molécules informatives.",
+    phenomene: "Seuls les acides nucléiques (ADN et ARN) portent l'information génétique. Les protéines sont le produit de cette information.",
+    correction_detaillee: {
+      juste: "D : Les acides nucléiques (ADN et ARN) sont les molécules informatives de la cellule.",
+      faux: {
+        "A": "Les protides (protéines) sont le produit de l'expression génétique, pas le support de l'information.",
+        "B": "Les glucides sont des molécules énergétiques ou structurales.",
+        "C": "Les lipides sont des molécules de réserve énergétique ou structurales (membranes)."
+      }
+    },
+    erreur_frequente: "Penser que les protéines sont informatives car elles déterminent les caractères. En réalité, c'est l'ADN qui code pour les protéines.",
+    astuce_fr: "ADN = Archive (information). ARN = Copie (message). Protéine = Produit fini (action).",
+    astuce_ar: "الأحماض النووية هي الرسالة، والبروتينات هي الترجمة. ADN = أرشيف. ARN = رسالة. بروتين = منتج."
+  },
+  {
+    id: 27,
+    statement: "Chez une femelle mammifère ovariectomisée, on constate :",
+    choices: ["Augmentation de LH", "Diminution de FSH", "Augmentation d'œstradiol", "Diminution de progestérone"],
+    correct: [0, 3],
+    theme: "Reproduction et santé",
+    chapitre: "Régulation hormonale du cycle ovarien",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "L'ovariectomie (ablation des ovaires) supprime la production d'œstrogènes et de progestérone. La levée du rétrocontrôle négatif exercé par ces hormones sur le complexe hypothalamo-hypophysaire provoque une augmentation massive de la sécrétion de GnRH, FSH et LH.",
+    phenomene: "Sans ovaires → plus d'œstrogènes ni progestérone → plus de frein sur l'hypophyse → LH et FSH augmentent fortement.",
+    correction_detaillee: {
+      juste: "A : La LH augmente (levée du rétrocontrôle négatif). D : La progestérone diminue (elle n'est plus produite par les ovaires).",
+      faux: {
+        "B": "La FSH augmente également (même mécanisme que la LH), elle ne diminue pas.",
+        "C": "L'œstradiol diminue (il est produit par les ovaires, qui sont retirés)."
+      }
+    },
+    erreur_frequente: "Penser que l'ablation des ovaires arrête l'hypophyse. C'est l'inverse : sans le frein ovarien, l'hypophyse s'emballe.",
+    astuce_fr: "Plus de frein (ovaire) = le moteur (hypophyse) s'emballe. Ovariectomie = ↑ LH, ↑ FSH, ↓ œstrogènes, ↓ progestérone.",
+    astuce_ar: "إذا غاب الحارس (المبيض) تمردت الهرمونات (LH و FSH). بدون مبيض = زيادة LH و FSH."
+  },
+  {
+    id: 28,
+    statement: "Au début de la grossesse (1er mois) :",
+    choices: ["Le cycle sexuel est suspendu", "Seul le cycle utérin est suspendu", "Le placenta sécrète les hormones", "Le corps jaune régresse"],
+    correct: [0, 2],
+    theme: "Reproduction et santé",
+    chapitre: "Grossesse et hormones",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Dès le début de la grossesse, le trophoblaste puis le placenta sécrètent l'HCG (hormone chorionique gonadotrophique). Cette hormone maintient le corps jaune qui continue de produire œstrogènes et progestérone. Ces hormones suspendent le cycle menstruel (pas d'ovulation, pas de règles).",
+    phenomene: "HCG → maintien du corps jaune → œstrogènes + progestérone → suspension du cycle menstruel.",
+    correction_detaillee: {
+      juste: "A : Le cycle sexuel est suspendu (plus d'ovulation, plus de règles). C : Le placenta (trophoblaste) sécrète l'HCG et d'autres hormones.",
+      faux: {
+        "B": "Tout le cycle est suspendu (ovarien et utérin), pas seulement le cycle utérin.",
+        "D": "Le corps jaune ne régresse PAS, il est maintenu par l'HCG et devient corps jaune gravidique."
+      }
+    },
+    erreur_frequente: "Penser que le corps jaune régresse en début de grossesse. Au contraire, il est maintenu et devient corps jaune gravidique.",
+    astuce_fr: "HCG = Hormone de sauvetage du corps jaune. HCG → corps jaune maintenu → grossesse continue.",
+    astuce_ar: "هرمون الحمل HCG ينقذ الجسم الأصفر لتستمر الحمل. HCG = هرمون منقذ الجسم الأصفر."
+  },
+  {
+    id: 29,
+    statement: "Au cours de la fécondation se produit :",
+    choices: ["Achèvement de la division réductionnelle", "Achèvement de la division équationnelle", "Expulsion du 1er globule polaire", "Caryogamie"],
+    correct: [1, 3],
+    theme: "Reproduction et santé",
+    chapitre: "Fécondation",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "L'ovocyte II est bloqué en métaphase de la deuxième division méiotique (division équationnelle). La pénétration du spermatozoïde déclenche la reprise et l'achèvement de cette division équationnelle avec expulsion du 2ème globule polaire. Ensuite a lieu la caryogamie (fusion des deux pronoyaux mâle et femelle).",
+    phenomene: "La fécondation déclenche l'achèvement de la division équationnelle de l'ovocyte II, suivie de la caryogamie.",
+    correction_detaillee: {
+      juste: "B : Achèvement de la division équationnelle (l'ovocyte II termine sa 2ème division). D : Caryogamie (fusion des pronoyaux mâle et femelle).",
+      faux: {
+        "A": "La division réductionnelle est déjà achevée au moment de l'ovulation (expulsion du 1er globule polaire).",
+        "C": "Le 1er globule polaire est expulsé lors de la 1ère division méiotique, avant l'ovulation."
+      }
+    },
+    erreur_frequente: "Confondre division réductionnelle (achevée avant ovulation) et division équationnelle (achevée lors de la fécondation).",
+    astuce_fr: "Ovocyte II = bloqué en méta II. Fécondation = fin de la méiose + fusion des noyaux (caryogamie).",
+    astuce_ar: "البويضة تنتظر الإخصاب لتكمل انقسامها وتتحد نواتها مع نواة الحيوان المنوي. إكمال الانقسام + karyogamie."
+  },
+  {
+    id: 30,
+    statement: "La LH possède des récepteurs au niveau des :",
+    choices: ["Cellules de Sertoli", "Cellules de Leydig", "Cellules du corps jaune", "Cellules germinales"],
+    correct: [1, 2],
+    theme: "Reproduction et santé",
+    chapitre: "Endocrinologie de la reproduction",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La LH (hormone lutéinisante) possède des récepteurs spécifiques sur les cellules de Leydig (testicules) où elle stimule la production de testostérone, et sur les cellules du corps jaune (ovaire) où elle stimule la production de progestérone. Les cellules de Sertoli ont des récepteurs à la FSH.",
+    phenomene: "Spécificité hormonale : LH cible les cellules de Leydig (homme) et les cellules du corps jaune (femme).",
+    correction_detaillee: {
+      juste: "B : Les cellules de Leydig possèdent des récepteurs à la LH. C : Les cellules du corps jaune possèdent des récepteurs à la LH.",
+      faux: {
+        "A": "Les cellules de Sertoli possèdent des récepteurs à la FSH, pas à la LH.",
+        "D": "Les cellules germinales ne sont pas des cibles directes de la LH."
+      }
+    },
+    erreur_frequente: "Attribuer la LH exclusivement au cycle féminin. Confondre les cibles de FSH (Sertoli) et LH (Leydig).",
+    astuce_fr: "LH pour LEYDIG et LUTÉAL (corps jaune). FSH pour SERTOLI (Soutien).",
+    astuce_ar: "هرمون LH هو المفتاح الذي يفتح أقفال خلايا ليدينغ والجسم الأصفر. LH = Leydig + Lutéal."
+  },
+  {
+    id: 31,
+    statement: "La testostérone :",
+    choices: ["Est sécrétée par les spermatogonies", "Est à l'origine des caractères sexuels secondaires chez le mâle", "Exerce un rétrocontrôle négatif sur le complexe hypothalamo-hypophysaire", "Intervient dans la spermatogenèse"],
+    correct: [1, 2, 3],
+    theme: "Reproduction et santé",
+    chapitre: "Fonction reproductrice masculine",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La testostérone est sécrétée par les cellules interstitielles de Leydig (et non par les spermatogonies). Elle est responsable des caractères sexuels secondaires (pilosité, mue de la voix, développement musculaire). Elle stimule la spermatogenèse (avec la FSH). Elle exerce un rétrocontrôle négatif sur l'hypothalamus et l'hypophyse, freinant la sécrétion de GnRH et de LH.",
+    phenomene: "Testostérone = hormone masculine produite par les cellules de Leydig, aux multiples rôles : caractères sexuels, spermatogenèse, rétrocontrôle.",
+    correction_detaillee: {
+      juste: "B : Développe les caractères sexuels secondaires. C : Rétrocontrôle négatif sur l'axe hypothalamo-hypophysaire. D : Intervient dans la spermatogenèse.",
+      faux: {
+        "A": "La testostérone est sécrétée par les cellules de Leydig, pas par les spermatogonies (cellules germinales)."
+      }
+    },
+    erreur_frequente: "Penser que la testostérone est produite par les spermatogonies ou les cellules de Sertoli. Elle est produite par les cellules de Leydig.",
+    astuce_fr: "Testostérone = Leydig. Spermatogonies = futures spermatozoïdes. Leydig = endocrine, Sertoli = soutien.",
+    astuce_ar: "التستوستيرون من خلايا ليدينغ، ليس من المنسليات. ليدينغ = هرمون، سيرتولي = دعم."
+  },
+  {
+    id: 32,
+    statement: "Parmi les réactions suivantes, celle qui correspond à la fermentation alcoolique est :",
+    choices: ["C₆H₁₂O₆ + 6O₂ → 6H₂O + 6CO₂", "CaCO₃ + CO₂ + H₂O → Ca(HCO₃)₂", "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂", "C₅H₁₀O₅ + H₂O → C₃H₇COOH + 2CO₂ + 2H₂"],
+    correct: [2],
+    theme: "Nutrition",
+    chapitre: "Métabolisme énergétique et fermentations",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "La fermentation alcoolique transforme le glucose en éthanol et dioxyde de carbone en absence d'oxygène : C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ + énergie (2 ATP). Cette fermentation est réalisée par les levures (Saccharomyces).",
+    phenomene: "Fermentation alcoolique = dégradation anaérobie du glucose en éthanol et CO₂, avec production d'ATP.",
+    correction_detaillee: {
+      juste: "C : Glucose → Éthanol + CO₂ (fermentation alcoolique, équation équilibrée).",
+      faux: {
+        "A": "C'est l'équation de la respiration cellulaire aérobie (avec O₂).",
+        "B": "C'est la réaction de dissolution du calcaire (karstification).",
+        "D": "C'est une autre fermentation (butyrique ou autre), pas la fermentation alcoolique."
+      }
+    },
+    erreur_frequente: "Confondre respiration (avec O₂) et fermentation (sans O₂). Ne pas reconnaître l'équation équilibrée de la fermentation alcoolique.",
+    astuce_fr: "Fermentation = PAS d'O₂. Respiration = O₂ consommé. Alcoolique = éthanol (C₂H₅OH).",
+    astuce_ar: "التخمر لا يحتاج أكسجين. التنفس يحتاج أكسجين. التخمر الكحولي = إيثانول + CO₂."
+  },
+  {
+    id: 33,
+    statement: "L'insuline est une hormone :",
+    choices: ["Hyperglycémiante", "Hypoglycémiante", "Sécrétée par le foie", "Qui trouve des récepteurs au niveau des cellules hépatiques"],
+    correct: [1, 3],
+    theme: "Nutrition",
+    chapitre: "Régulation de la glycémie",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "L'insuline est une hormone hypoglycémiante sécrétée par les cellules β des îlots de Langerhans du pancréas. Elle abaisse la glycémie en favorisant l'entrée du glucose dans les cellules cibles (foie, muscles, tissu adipeux) et en stimulant la glycogénogenèse.",
+    phenomene: "Insuline = hormone hypoglycémiante produite par le pancréas, agissant sur le foie, les muscles et le tissu adipeux.",
+    correction_detaillee: {
+      juste: "B : L'insuline est hypoglycémiante (elle abaisse la glycémie). D : Elle agit sur les cellules hépatiques (foie), musculaires et adipeuses.",
+      faux: {
+        "A": "Le glucagon est hyperglycémiant, pas l'insuline.",
+        "C": "L'insuline est sécrétée par le pancréas (cellules β), pas par le foie."
+      }
+    },
+    erreur_frequente: "Inverser les rôles de l'insuline (hypoglycémiante) et du glucagon (hyperglycémiant).",
+    astuce_fr: "Insuline = baisse la glycémie. Glucagon = monte la glycémie. Pancréas produit les deux.",
+    astuce_ar: "الأنسولين يخفض السكر. الجلوكاجون يرفع السكر. البنكرياس ينتج كليهما."
+  },
+  {
+    id: 34,
+    statement: "Les lymphocytes B :",
+    choices: ["Produisent des anticorps", "Portent des récepteurs membranaires TCR", "Produisent l'interleukine 2", "Acquièrent leur maturité dans la moelle osseuse"],
+    correct: [0, 3],
+    theme: "Immunologie",
+    chapitre: "Immunité spécifique à médiation humorale",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Les lymphocytes B (LB) naissent et maturent dans la moelle osseuse (B = Bone marrow). Ils se différencient en plasmocytes qui produisent des anticorps spécifiques. Les TCR sont les récepteurs des lymphocytes T. L'interleukine 2 est principalement produite par les lymphocytes T auxiliaires (LT4).",
+    phenomene: "LB = immunité humorale = production d'anticorps. Maturation dans la moelle osseuse.",
+    correction_detaillee: {
+      juste: "A : Les LB se différencient en plasmocytes qui produisent des anticorps. D : Les LB maturent dans la moelle osseuse.",
+      faux: {
+        "B": "Les TCR (T-Cell Receptor) sont les récepteurs des lymphocytes T, pas des LB.",
+        "C": "L'interleukine 2 est principalement produite par les LT4, pas par les LB."
+      }
+    },
+    erreur_frequente: "Confondre maturation des LB (moelle osseuse) et des LT (thymus). Attribuer les TCR aux LB.",
+    astuce_fr: "B comme Bone (moelle osseuse) et Bouclier (anticorps). LB = Anticorps. LT = TCR.",
+    astuce_ar: "الخلايا البائية هي مصانع الأسلحة (المضادات) التي تنضج في النخاع. B = نخاع + مضادات."
+  },
+  {
+    id: 35,
+    statement: "Les cellules T auxiliaires (LT4) :",
+    choices: ["Portent les marqueurs HLA de classe II", "Sécrètent l'interleukine 1", "Activent seulement les lymphocytes T", "Produisent des anticorps"],
+    correct: [0],
+    theme: "Immunologie",
+    chapitre: "Immunité spécifique et coopération cellulaire",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Les LT4 portent les molécules HLA de classe II et reconnaissent l'antigène présenté par les cellules présentatrices (macrophages, LB). Ils sécrètent l'IL2 qui active à la fois les LB et les LTc. Ils ne produisent pas d'anticorps. L'IL1 est produite par les macrophages.",
+    phenomene: "LT4 = chefs d'orchestre de la réponse immunitaire. Ils activent LB et LTc via l'IL2.",
+    correction_detaillee: {
+      juste: "A : Les LT4 portent les HLA de classe II (CMH II).",
+      faux: {
+        "B": "L'IL1 est sécrétée par les macrophages, pas par les LT4.",
+        "C": "Les LT4 activent aussi les lymphocytes B (via l'IL2).",
+        "D": "Les anticorps sont produits par les plasmocytes (issus des LB), pas par les LT4."
+      }
+    },
+    erreur_frequente: "Confondre IL1 (macrophage) et IL2 (LT4). Penser que les LT4 ne stimulent que les LT.",
+    astuce_fr: "LT4 = Chef d'orchestre (active tout le monde : LB et LTc). HLA II = carte de chef.",
+    astuce_ar: "الخلايا التائية المساعدة هي قائد الأوركسترا المناعية. HLA II = بطاقة القائد."
+  },
+  {
+    id: 36,
+    statement: "La maturation des lymphocytes T a lieu dans :",
+    choices: ["La moelle osseuse", "Le thymus", "Les ganglions lymphatiques", "La rate"],
+    correct: [1],
+    theme: "Immunologie",
+    chapitre: "Organes lymphoïdes et maturation",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Les lymphocytes T naissent dans la moelle osseuse mais migrent vers le thymus où ils subissent leur maturation (acquisition de l'immunocompétence : apprentissage à reconnaître le HLA du soi). Les ganglions lymphatiques et la rate sont des organes lymphoïdes secondaires où se déroule la réponse immunitaire.",
+    phenomene: "Naissance dans la moelle osseuse → maturation dans le thymus. T pour Thymus.",
+    correction_detaillee: {
+      juste: "B : La maturation des LT a lieu dans le thymus.",
+      faux: {
+        "A": "La moelle osseuse est le lieu de naissance des LT, pas de maturation.",
+        "C": "Les ganglions sont des organes lymphoïdes secondaires (réponse immunitaire).",
+        "D": "La rate est un organe lymphoïde secondaire."
+      }
+    },
+    erreur_frequente: "Confondre lieu de naissance (moelle) et lieu de maturation (thymus pour LT, moelle pour LB).",
+    astuce_fr: "T pour Thymus. B pour Bone (moelle). LT = Thymus. LB = Bone marrow.",
+    astuce_ar: "الغدة الزعترية هي المدرسة التي يتخرج منها مقاتلو التاء (LT). T = thymus."
+  },
+  {
+    id: 37,
+    statement: "Le message nerveux sensitif :",
+    choices: ["Est constitué d'un seul potentiel d'action", "Est constitué d'une série de potentiels d'action", "Est codé en modulation de fréquence", "Est centrifuge"],
+    correct: [1, 2],
+    theme: "Neurophysiologie",
+    chapitre: "Message nerveux",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le message nerveux est constitué d'une série de potentiels d'action (PA) dont la fréquence est proportionnelle à l'intensité du stimulus (codage en modulation de fréquence). Un message sensitif est centripète (va de la périphérie vers le centre nerveux). Un message moteur est centrifuge.",
+    phenomene: "Codage de l'intensité du stimulus en fréquence de PA. Message sensitif = centripète.",
+    correction_detaillee: {
+      juste: "B : Le message nerveux est une série de PA. C : L'intensité est codée en modulation de fréquence.",
+      faux: {
+        "A": "Un seul PA ne peut pas coder l'intensité d'un stimulus.",
+        "D": "Centrifuge = moteur (du centre vers la périphérie). Le message sensitif est centripète."
+      }
+    },
+    erreur_frequente: "Penser qu'un seul PA code l'information. Confondre centrifuge (moteur) et centripète (sensitif).",
+    astuce_fr: "Fréquence = Intensité. Plus c'est fort, plus ça pulse. Sensitif = centripète (vers centre).",
+    astuce_ar: "شدة التنبيه تُرمز بعدد النبضات في الثانية. حسي = جابذ مركزي (نحو المركز)."
+  },
+  {
+    id: 38,
+    statement: "Au cours de la respiration, l'inspiration s'effectue par le mécanisme suivant :",
+    choices: ["Élévation des côtes et contraction du diaphragme", "Abaissement des côtes et relâchement du diaphragme", "Élévation des côtes et remontée du diaphragme", "Abaissement des côtes et abaissement du diaphragme"],
+    correct: [0],
+    theme: "Neurophysiologie",
+    chapitre: "Respiration et ventilation pulmonaire",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "L'inspiration est un phénomène ACTIF : les muscles intercostaux se contractent (élèvent les côtes) et le diaphragme se contracte (s'abaisse). Cela augmente le volume de la cage thoracique, diminue la pression intrapulmonaire, et l'air entre dans les poumons.",
+    phenomene: "Inspiration = contraction du diaphragme (il s'abaisse) + élévation des côtes = augmentation du volume pulmonaire.",
+    correction_detaillee: {
+      juste: "A : Élévation des côtes et contraction du diaphragme (qui s'abaisse en se contractant).",
+      faux: {
+        "B": "C'est le mécanisme de l'expiration (passive au repos).",
+        "C": "Le diaphragme s'abaisse en se contractant, il ne remonte pas.",
+        "D": "Mélange incorrect de mouvements."
+      }
+    },
+    erreur_frequente: "Confondre contraction du diaphragme (il s'abaisse) et relâchement (il remonte).",
+    astuce_fr: "Inspire = diaphragme descend (se contracte). Expire = diaphragme remonte (se relâche).",
+    astuce_ar: "الشهيق: ينزل الحجاب الحاجز (ينقبض). الزفير: يرتفع الحجاب الحاجز (يرتخي)."
+  },
+  {
+    id: 39,
+    statement: "Un vaccin protège contre une infection parce qu'il peut provoquer la formation dans l'organisme :",
+    choices: ["D'antigènes", "D'anticorps", "D'antibiotiques", "D'interférons"],
+    correct: [1],
+    theme: "Immunologie",
+    chapitre: "Vaccination et mémoire immunitaire",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Un vaccin contient un antigène (microbe atténué ou inactivé) qui stimule le système immunitaire pour produire des anticorps spécifiques et des lymphocytes mémoire. Ainsi, lors d'un contact ultérieur avec le vrai pathogène, la réponse est rapide et efficace.",
+    phenomene: "Vaccination = injection d'antigène → production d'anticorps + cellules mémoire → protection durable.",
+    correction_detaillee: {
+      juste: "B : Le vaccin induit la production d'anticorps par les plasmocytes.",
+      faux: {
+        "A": "Le vaccin contient l'antigène, il ne fait pas produire des antigènes par l'organisme.",
+        "C": "Les antibiotiques sont des médicaments contre les bactéries, ils n'ont rien à voir avec la vaccination.",
+        "D": "Les interférons sont des molécules antivirales non spécifiques, pas le mécanisme principal du vaccin."
+      }
+    },
+    erreur_frequente: "Penser que le vaccin contient des anticorps prêts à l'emploi (c'est le sérum). Confondre vaccination et sérothérapie.",
+    astuce_fr: "Vaccin = Apprendre à fabriquer ses propres anticorps. Sérum = Recevoir des anticorps tout faits.",
+    astuce_ar: "اللقاح يعلم الجسم كيف يصنع السلاح. المصل يعطيه السلاح جاهزاً. لقاح = تعليم، مصل = تزويد."
+  },
+  {
+    id: 40,
+    statement: "L'aldostérone est une hormone :",
+    choices: ["Sécrétée par la médullosurrénale", "Qui favorise la rétention du sodium au niveau du tube distal du néphron", "Qui agit sur le métabolisme des glucides", "Dont la sécrétion est stimulée par l'ACTH"],
+    correct: [1, 3],
+    theme: "Nutrition",
+    chapitre: "Milieu intérieur et homéostasie",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "L'aldostérone est une hormone minéralocorticoïde sécrétée par la corticosurrénale (zone glomérulée). Elle favorise la réabsorption du sodium (et d'eau) au niveau du tube contourné distal du néphron. Sa sécrétion est stimulée par l'ACTH hypophysaire et par l'angiotensine II.",
+    phenomene: "Aldostérone = hormone antidiurétique sodée. Elle retient le sodium (et l'eau), augmentant la volémie et la pression artérielle.",
+    correction_detaillee: {
+      juste: "B : Favorise la rétention du sodium au tube distal. D : La sécrétion est stimulée par l'ACTH.",
+      faux: {
+        "A": "Elle est sécrétée par la corticosurrénale, pas la médullosurrénale (qui sécrète l'adrénaline).",
+        "C": "Elle agit sur l'équilibre hydrosodé, pas sur le métabolisme des glucides (rôle du cortisol)."
+      }
+    },
+    erreur_frequente: "Confondre aldostérone (sodium) et ADH (eau). Confondre corticosurrénale et médullosurrénale.",
+    astuce_fr: "Aldo retient le Sel (Sodium). ADH retient l'Eau. Cortico = aldostérone. Médullo = adrénaline.",
+    astuce_ar: "الألدوسترون هو حارس الأملاح الذي يحافظ على توازن مياه الجسم. ألدوسترون = صوديوم. ADH = ماء."
+  },
+  {
+    id: 41,
+    statement: "Des tests de détermination de groupes sanguins par mélange de sérums et de gouttes de sang d'un individu donnent les résultats suivants : Goutte de sang + sérum anti-A → pas d'agglutination. Goutte de sang + sérum anti-B → agglutination. Goutte de sang + sérum anti-Rh → agglutination. D'après ces résultats, le groupe sanguin de cet individu est :",
+    choices: ["A+", "B-", "B+", "AB-", "O-"],
+    correct: [2],
+    theme: "Immunologie",
+    chapitre: "Groupes sanguins et transfusion",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "L'agglutination se produit lorsque l'anticorps (agglutinine) rencontre son antigène (agglutinogène) correspondant sur les hématies. Anti-B qui agglutine = présence de l'antigène B. Anti-Rh qui agglutine = présence de l'antigène Rh (Rh+). Anti-A qui n'agglutine pas = absence de l'antigène A. Donc le groupe est B+.",
+    phenomene: "Agglutination = reconnaissance antigène-anticorps. Présence d'agglutination = présence de l'antigène correspondant.",
+    correction_detaillee: {
+      juste: "C : B+. Agglutination avec anti-B (donc antigène B présent) et avec anti-Rh (donc Rh+). Pas d'agglutination avec anti-A (donc pas d'antigène A).",
+      faux: {
+        "A": "A+ aurait une agglutination avec anti-A.",
+        "B": "B- n'aurait pas d'agglutination avec anti-Rh.",
+        "D": "AB- aurait une agglutination avec anti-A et anti-B.",
+        "E": "O- n'aurait aucune agglutination."
+      }
+    },
+    erreur_frequente: "Confondre agglutinine (anticorps du sérum test) et agglutinogène (antigène sur le globule rouge). Interpréter l'absence d'agglutination comme une absence de réaction.",
+    astuce_fr: "Là où ça colle (agglutine), l'antigène est présent. Anti-B colle = B présent. Anti-Rh colle = Rh+.",
+    astuce_ar: "الارتصاص هو توقيع الدم؛ فإذا حضر الضد (الآنتي) بان المستضد. التصاق = وجود المستضد."
+  },
+  {
+    id: 42,
+    statement: "Un individu O+ peut recevoir du sang du groupe :",
+    choices: ["O-", "A-", "AB-", "B+"],
+    correct: [0],
+    theme: "Immunologie",
+    chapitre: "Règles de transfusion sanguine",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "Le groupe O possède des anticorps anti-A et anti-B dans son plasma. Il ne peut donc recevoir que du sang dépourvu d'antigènes A et B (type O exclusivement). Un receveur Rh+ peut recevoir du sang Rh+ ou Rh-. Donc O+ peut recevoir O- et O+.",
+    phenomene: "O = receveur exclusif (ne reçoit que du O). Rh+ peut recevoir Rh+ ou Rh-.",
+    correction_detaillee: {
+      juste: "A : O- ne possède aucun antigène A, B, ni Rh. Il est compatible avec un receveur O+.",
+      faux: {
+        "B": "A- possède l'antigène A qui serait attaqué par les anticorps anti-A du receveur O.",
+        "C": "AB- possède les antigènes A et B.",
+        "D": "B+ possède l'antigène B."
+      }
+    },
+    erreur_frequente: "Oublier qu'un receveur Rh+ peut recevoir du sang Rh-. Penser que O peut recevoir de tout le monde (c'est le donneur universel, pas le receveur).",
+    astuce_fr: "O est DONNEUR universel, mais RECEVEUR exclusif (que du O). Rh+ accepte Rh+ et Rh-.",
+    astuce_ar: "فصيلة O كريمة في العطاء (مانح عام)، لكنها عزيزة النفس في الأخذ (لا تقبل إلا O)."
+  },
+  {
+    id: 43,
+    statement: "Durant la phase lumineuse de la photosynthèse :",
+    choices: ["Oxydation de l'eau", "Réduction du CO₂", "Synthèse d'ATP", "Synthèse de glucose"],
+    correct: [0, 2],
+    theme: "Nutrition",
+    chapitre: "Photosynthèse : phase claire et phase sombre",
+    niveau_scolaire: "4ème Sc.Exp",
+    rappel_cours: "La phase lumineuse (phase claire ou photochimique) se déroule dans les thylakoïdes. Elle comprend : la photolyse de l'eau (oxydation : H₂O → ½O₂ + 2H⁺ + 2e⁻) et la photophosphorylation (synthèse d'ATP). La réduction du CO₂ et la synthèse de glucose appartiennent à la phase sombre (cycle de Calvin, dans le stroma).",
+    phenomene: "Phase claire = dans les thylakoïdes = photolyse de l'eau + synthèse d'ATP. Phase sombre = dans le stroma = fixation du CO₂ + synthèse de glucose.",
+    correction_detaillee: {
+      juste: "A : Oxydation de l'eau (photolyse). C : Synthèse d'ATP (photophosphorylation).",
+      faux: {
+        "B": "La réduction du CO₂ a lieu dans la phase sombre (cycle de Calvin).",
+        "D": "La synthèse de glucose a lieu dans la phase sombre."
+      }
+    },
+    erreur_frequente: "Attribuer la fixation du CO₂ à la phase claire. Les deux phases ont des lieux et des produits différents.",
+    astuce_fr: "Phase CLAIRE = LUMIÈRE = Eau cassée + ATP produit. Phase SOMBRE = CO₂ fixé + Glucose produit.",
+    astuce_ar: "الطور الضوئي = أكسدة الماء + إنتاج ATP. الطور المظلم = تثبيت CO₂ + إنتاج الجلوكوز."
+  },
+  {
+    id: 44,
+    statement: "L'oxygène de la respiration sert à :",
+    choices: ["L'oxydation du glucose", "La formation du CO₂", "La formation de l'eau", "La synthèse d'ATP"],
+    correct: [2],
+    theme: "Nutrition",
+    chapitre: "Respiration cellulaire",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Dans la chaîne respiratoire mitochondriale, l'oxygène est l'accepteur final des électrons et des protons H⁺. Il est réduit en eau selon : ½O₂ + 2H⁺ + 2e⁻ → H₂O. Le CO₂ provient du carbone du glucose (oxydé dans le cycle de Krebs). L'ATP est produit par l'ATP-synthétase.",
+    phenomene: "O₂ respiré → H₂O (et non CO₂). Le CO₂ expiré vient du glucose, pas de l'O₂.",
+    correction_detaillee: {
+      juste: "C : L'oxygène forme de l'eau en acceptant les électrons et les protons en fin de chaîne respiratoire.",
+      faux: {
+        "A": "Le glucose est oxydé par des enzymes (déshydrogénases), pas directement par l'O₂.",
+        "B": "Le CO₂ provient du carbone du glucose (décarboxylations du cycle de Krebs).",
+        "D": "L'ATP est produit par l'ATP-synthétase (phosphorylation oxydative), pas directement par l'O₂."
+      }
+    },
+    erreur_frequente: "Croire que l'oxygène qu'on respire devient le CO₂ qu'on expire. En réalité, l'O₂ devient H₂O, et le CO₂ vient du glucose.",
+    astuce_fr: "Oxygène respiré → EAU (H₂O). CO₂ expiré → vient du GLUCOSE. L'O₂ est l'éponge finale.",
+    astuce_ar: "الأكسجين المستنشق يتحول إلى ماء (H₂O). ثاني أكسيد الكربون يأتي من الجلوكوز، ليس من الأكسجين."
+  },
+  {
+    id: 45,
+    statement: "L'ordre des enveloppes terrestres (de l'extérieur vers l'intérieur) est :",
+    choices: ["Lithosphère, asthénosphère, mésosphère, noyau externe, noyau interne", "Mésosphère, lithosphère, asthénosphère, noyau, graine", "Asthénosphère, lithosphère, mésosphère, noyau, graine", "Lithosphère, mésosphère, asthénosphère, noyau, graine"],
+    correct: [0],
+    theme: "Géologie",
+    chapitre: "Structure du globe terrestre",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "De l'extérieur vers l'intérieur : lithosphère (croûte + manteau supérieur rigide, ~100 km) → asthénosphère (manteau supérieur ductile) → mésosphère (manteau inférieur solide) → noyau externe (liquide) → noyau interne ou graine (solide). Les discontinuités majeures sont Moho (croûte/manteau), Gutenberg (manteau/noyau), Lehmann (noyau externe/interne).",
+    phenomene: "Structure concentrique de la Terre : densité et rigidité croissantes vers le centre.",
+    correction_detaillee: {
+      juste: "A : Ordre correct : lithosphère → asthénosphère → mésosphère → noyau externe → noyau interne.",
+      faux: {
+        "B": "La mésosphère ne peut pas être au-dessus de la lithosphère.",
+        "C": "L'asthénosphère est SOUS la lithosphère, pas au-dessus.",
+        "D": "La mésosphère est sous l'asthénosphère, pas au-dessus."
+      }
+    },
+    erreur_frequente: "Placer l'asthénosphère au-dessus de la lithosphère. Inverser l'ordre des couches.",
+    astuce_fr: "L'Astre (Asthéno) est toujours sous la Pierre (Litho). Litho = croûte rigide. Asthéno = manteau ductile.",
+    astuce_ar: "الأرض طبقات كالبصلة؛ قشرة صلبة (ليثوسفير) فوق باطن يغلي (أستينوسفير)."
+  },
+  {
+    id: 46,
+    statement: "Les phénomènes au niveau d'une dorsale océanique sont :",
+    choices: ["La subduction", "L'accrétion", "Les failles transformantes", "La collision"],
+    correct: [1, 2],
+    theme: "Géologie",
+    chapitre: "Tectonique des plaques et dorsales",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "Au niveau d'une dorsale océanique (zone de divergence), le magma remonte et crée de la nouvelle lithosphère océanique : c'est l'accrétion. Les dorsales sont segmentées par des failles transformantes qui décalent les tronçons de la dorsale. La subduction et la collision sont des phénomènes de convergence.",
+    phenomene: "Dorsale = divergence = accrétion (création de lithosphère) + failles transformantes (segmentation).",
+    correction_detaillee: {
+      juste: "B : Accrétion (création de nouvelle croûte océanique par remontée magmatique). C : Failles transformantes (décrochements qui segmentent la dorsale).",
+      faux: {
+        "A": "La subduction est un phénomène de convergence (disparition de lithosphère).",
+        "D": "La collision est un phénomène de convergence (formation de chaînes de montagnes)."
+      }
+    },
+    erreur_frequente: "Associer subduction et dorsale. Ce sont des phénomènes opposés : dorsale = divergence, subduction = convergence.",
+    astuce_fr: "La dorsale CRÉE (accrétion) et DÉCALE (failles transformantes). Subduction = disparition.",
+    astuce_ar: "الظهر المحيطي هو ورشة بناء الأرض الجديدة. يبني (توسع) ويقطع (فوالق)."
+  },
+  {
+    id: 47,
+    statement: "La formation d'un océan résulte de :",
+    choices: ["Distension, effondrement, expansion océanique", "Compression, subduction, collision", "Collision, orogenèse, plissement", "Subduction, fusion, volcanisme"],
+    correct: [0],
+    theme: "Géologie",
+    chapitre: "Cycle de Wilson et formation des océans",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "La formation d'un océan suit le cycle de Wilson : 1) distension continentale (rift) → 2) effondrement (fossé d'effondrement) → 3) expansion océanique (formation d'une dorsale et de croûte océanique). Exemple : le rift est-africain est un stade précoce, l'océan Atlantique est un stade mature.",
+    phenomene: "Ouverture océanique = distension → rift → expansion. Fermeture = subduction → collision.",
+    correction_detaillee: {
+      juste: "A : Distension → effondrement → expansion océanique (succession correcte du cycle de Wilson).",
+      faux: {
+        "B": "Compression, subduction et collision caractérisent la FERMETURE d'un océan.",
+        "C": "Collision et orogenèse sont des stades de fermeture.",
+        "D": "Subduction et fusion sont des processus de convergence."
+      }
+    },
+    erreur_frequente: "Confondre ouverture (distension, expansion) et fermeture (subduction, collision) d'un océan.",
+    astuce_fr: "Océan = OUVERTURE. Distension = étirement → rift → océan. Compression = FERMETURE.",
+    astuce_ar: "المحيط يبدأ بتمدد القشرة ثم هبوطها ثم توسعها. فتح = تباعد. غلق = تصادم."
+  },
+  {
+    id: 48,
+    statement: "La chaîne atlasique tunisienne est une chaîne :",
+    choices: ["De subduction", "De collision", "D'âge secondaire", "D'âge mio-pliocène"],
+    correct: [1, 3],
+    theme: "Géologie",
+    chapitre: "Orogenèse et chaînes de montagnes",
+    niveau_scolaire: "3ème Sc.Exp",
+    rappel_cours: "La chaîne atlasique tunisienne (Dorsale tunisienne) résulte de la collision entre les plaques africaine et eurasiatique. Les sédiments qui la composent sont d'âge secondaire (Crétacé) mais la surrection (formation de la montagne) date du Mio-Pliocène (Tertiaire récent).",
+    phenomene: "L'Atlas tunisien est une chaîne de collision intracontinentale d'âge Mio-Pliocène, appartenant à la chaîne alpine.",
+    correction_detaillee: {
+      juste: "B : Chaîne de collision (résultat de l'affrontement Afrique/Eurasie). D : La surrection date du Mio-Pliocène.",
+      faux: {
+        "A": "C'est une chaîne de collision, pas de subduction (la subduction a précédé la collision).",
+        "C": "L'âge secondaire est celui du dépôt des sédiments, pas de la formation de la montagne."
+      }
+    },
+    erreur_frequente: "Confondre âge des roches (Secondaire/Crétacé) et âge de la surrection (Tertiaire/Mio-Pliocène).",
+    astuce_fr: "L'Atlas est un accident RÉCENT (Mio-Pliocène) sur des roches ANCIENNES (Secondaire).",
+    astuce_ar: "جبال الأطلس هي تجاعيد الأرض الناتجة عن صدام القارات. الصخور قديمة، والجبل حديث."
+  },
+  {
+    id: 49,
+    statement: "Les nummulites sont des fossiles :",
+    choices: ["Foraminifères", "D'âge éocène", "D'âge jurassique", "De milieux profonds"],
+    correct: [0, 1],
+    theme: "Géologie",
+    chapitre: "Paléontologie et fossiles stratigraphiques",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les nummulites sont des foraminifères (protozoaires à coquille calcaire) caractéristiques de l'Éocène (Tertiaire, Cénozoïque). Elles indiquent un milieu marin de plateforme peu profonde (et non profond). Ce sont d'excellents fossiles stratigraphiques pour dater les roches éocènes.",
+    phenomene: "Nummulites = foraminifères de l'Éocène, vivant en mer peu profonde. Utilisées pour la datation des roches.",
+    correction_detaillee: {
+      juste: "A : Ce sont des foraminifères (leur coquille calcaire présente des loges). B : Âge éocène (Tertiaire).",
+      faux: {
+        "C": "Le Jurassique est plus ancien (Secondaire/Mésozoïque).",
+        "D": "Les nummulites vivaient en milieu marin peu profond (plateforme continentale), pas en milieu profond."
+      }
+    },
+    erreur_frequente: "Confondre nummulites (Éocène) et ammonites (Jurassique/Crétacé). Les deux sont des fossiles mais d'âges très différents.",
+    astuce_fr: "Nummulites = Éocène = Tertiaire. Ammonites = Jurassique/Crétacé = Secondaire.",
+    astuce_ar: "النوموليتات هي عملات الإيوسين الذهبية. فورامينيفيرات العصر الإيوسيني."
+  },
+  {
+    id: 50,
+    statement: "Les phosphates tunisiens :",
+    choices: ["Se sont formés en milieu marin très profond", "Sont d'âge éocène", "Renferment de l'apatite", "Sont d'origine purement chimique"],
+    correct: [1, 2],
+    theme: "Géologie",
+    chapitre: "Ressources naturelles et géologie de la Tunisie",
+    niveau_scolaire: "2ème Sc",
+    rappel_cours: "Les phosphates tunisiens se sont formés à l'Éocène inférieur (Yprésien) dans des mers peu profondes riches en matière organique, par upwelling (remontée d'eaux profondes riches en phosphates). Le minéral principal est l'apatite (phosphate de calcium : Ca₅(PO₄)₃(OH,F,Cl)). Les principaux gisements sont à Gafsa (bassin de Metlaoui) et au Kef.",
+    phenomene: "Phosphates = sédimentation en plateforme peu profonde à l'Éocène, minéral principal = apatite.",
+    correction_detaillee: {
+      juste: "B : Âge éocène inférieur (Yprésien). C : Minéral principal = apatite (phosphate de calcium).",
+      faux: {
+        "A": "Milieu de dépôt peu profond (plateforme continentale), pas très profond.",
+        "D": "Origine biochimique et organique (liée à l'upwelling et à l'activité biologique), pas purement chimique."
+      }
+    },
+    erreur_frequente: "Penser que le phosphate est d'origine volcanique ou de milieu profond. Confondre âge éocène et crétacé.",
+    astuce_fr: "Phosphate tunisien = Éocène de Gafsa et Apatite. Mer peu profonde, origine organique.",
+    astuce_ar: "فسفاط تونس هو ذهب الإيوسين المترسب في البحار الضحلة. أباتيت = معدن الفوسفات."
+  }
+];
+
+    // ═══════════════ VARIABLES ═══════════════
+    let mode=null,currentQ=0,activeSet=[],userAnswers=[],validated=[],examTimer=null,examSeconds=0,perQTimer=null,perQSeconds=0;
+    const TOTAL_EXAM_SEC=3600,PER_Q_SEC=120;
+
+    function startQuiz(e){
+      if(mode==='revision'){showPage('page-revision');buildRevisionSidebar();return;}
+      currentQ=0;activeSet=e||questionsData.map((_,i)=>i);userAnswers=new Array(activeSet.length).fill(null);validated=new Array(activeSet.length).fill(false);
+      if(FICHE_TYPE==='semi'&&!licenceOk&&activeSet.length>QUESTIONS_GRATUITES){activeSet=activeSet.slice(0,QUESTIONS_GRATUITES);}
+      showPage('page-question');document.getElementById('btn-validate').classList.add('hidden');document.getElementById('btn-correction').classList.add('hidden');
+      if(mode==='exam'){examSeconds=TOTAL_EXAM_SEC;perQSeconds=PER_Q_SEC;document.getElementById('timer-wrap').classList.remove('hidden');document.getElementById('perq-timer').classList.remove('hidden');startExamTimer();startPerQTimer();}
+      else{document.getElementById('timer-wrap').classList.add('hidden');document.getElementById('perq-timer').classList.add('hidden');if(examTimer)clearInterval(examTimer);if(perQTimer)clearInterval(perQTimer);document.getElementById('btn-validate').classList.remove('hidden');}
+      updateMiniBar();renderQuestion();
+    }
+    function showPage(e){document.querySelectorAll('#main-app .page').forEach(p=>p.classList.remove('active'));document.getElementById(e).classList.add('active');document.getElementById('main-scroll').scrollTop=0;}
+    function goHome(){if(examTimer)clearInterval(examTimer);if(perQTimer)clearInterval(perQTimer);showPage('page-home');}
+    function updateMiniBar(){const e=currentQ+1,t=activeSet.length;document.getElementById('mb-q-counter').textContent=`Q${e}/${t}`;document.getElementById('mb-progress-fill').style.width=(e/t*100)+'%';}
+    function selectMode(e){mode=e;['train','revision','exam'].forEach(x=>document.getElementById('mode-'+x)?.classList.remove('selected'));document.getElementById('mode-'+e).classList.add('selected');const t=document.getElementById('btn-start');t.disabled=false;t.innerHTML=e==='train'?'📝 Mode Entraînement':e==='revision'?'📖 Mode Révision':'⏱️ Mode Examen (60 min)';document.getElementById('mb-mode-badge').style.display='inline-flex';document.getElementById('mb-mode-badge').textContent=e==='train'?'📝 Entraînement':e==='revision'?'📖 Révision':'⏱️ Examen';}
+    function renderQuestion(){const e=currentQ,t=activeSet[e],n=questionsData[t],o=activeSet.length;document.getElementById('q-statement').innerHTML=`❓ <strong>Q${n.id}.</strong> ${n.statement}`;document.getElementById('mb-q-counter').textContent=`Q${e+1}/${o}`;document.getElementById('mb-progress-fill').style.width=((e+1)/o*100)+'%';const s=document.getElementById('q-choices');s.innerHTML='';const a=Array.isArray(n.correct)?n.correct:[n.correct];['A','B','C','D','E'].forEach((o,i)=>{if(i<n.choices.length){const r=document.createElement('button');r.className='choice-btn';if(validated[e]){if(a.includes(i))r.classList.add('correct');else if(userAnswers[e]&&userAnswers[e].includes(i))r.classList.add('wrong');}else if(userAnswers[e]&&userAnswers[e].includes(i))r.classList.add('selected');r.innerHTML=`<span class="choice-letter">${o}</span><span class="choice-text">${n.choices[i]}</span>`;if(validated[e])r.disabled=true;else r.onclick=()=>selectChoice(i);s.appendChild(r);}});const i=userAnswers[e]&&userAnswers[e].length>0;if(mode==='train'){document.getElementById('btn-validate').classList.remove('hidden');document.getElementById('btn-validate').disabled=(!i||validated[e]);const t=document.getElementById('btn-correction');(validated[e])?t.classList.remove('hidden'):t.classList.add('hidden');}const c=document.getElementById('feedback-box'),d=document.getElementById('feedback-placeholder');c.className='feedback-box';if(validated[e]&&mode==='train'){d.style.display='none';buildFeedback(n,userAnswers[e]);}else{c.style.display='none';d.style.display='flex';}document.getElementById('btn-prev').disabled=(e===0);const l=document.getElementById('btn-next');if(e===o-1){l.innerHTML='🏁 Terminer';l.className='btn btn-gold';}else{l.innerHTML='Suivant →';l.className='btn btn-green';}if(window.renderMathInElement)renderMathInElement(document.getElementById('q-statement'),{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});if(mode==='exam'){perQSeconds=PER_Q_SEC;updatePerQTimerDisplay();}}
+    function selectChoice(e){if(validated[currentQ])return;userAnswers[currentQ]||(userAnswers[currentQ]=[]);const t=userAnswers[currentQ].indexOf(e);t>-1?userAnswers[currentQ].splice(t,1):userAnswers[currentQ].push(e);renderQuestion();}
+    function arraysEqual(e,t){if(!e||!t)return false;if(e.length!==t.length)return false;const n=[...e].sort(),o=[...t].sort();return n.every((e,t)=>e===o[t]);}
+    function validateAnswer(){if(!userAnswers[currentQ]||userAnswers[currentQ].length===0)return;validated[currentQ]=true;renderQuestion();}
+    function buildFeedback(e,t){const n=document.getElementById('feedback-box'),o=document.getElementById('feedback-placeholder');o.style.display='none';const s=Array.isArray(e.correct)?e.correct:[e.correct],a=arraysEqual(t,s);n.classList.add('visible',a?'correct':'wrong');n.style.display='block';document.getElementById('badge-icon').textContent=a?'✅':'❌';document.getElementById('feedback-result-text').textContent=a?'Bonne réponse !':'Réponse incorrecte';const i=['A','B','C','D','E'],c=s.map(t=>i[t]+'. '+e.choices[t]).join(' ; ');let d='';for(let t=0;t<e.choices.length;t++){if(!s.includes(t)&&e.correction_detaillee?.faux){const n=i[t];if(e.correction_detaillee.faux[n])d+=`<div style="margin-bottom:2px;"><strong style="color:var(--red);">${n} :</strong> ${e.correction_detaillee.faux[n]}</div>`;}}document.getElementById('feedback-body').innerHTML=`<div class="feedback-label">📚 THÈME</div><div class="feedback-text">${e.theme}</div><div class="feedback-label">📘 NIVEAU</div><div class="feedback-text">${e.niveau_scolaire}</div><div class="feedback-label">📖 CHAPITRE</div><div class="feedback-text">${e.chapitre}</div><div class="feedback-label">📚 RAPPEL DE COURS</div><div class="feedback-text">${e.rappel_cours||e.phenomene}</div><div class="feedback-label">🔬 PHÉNOMÈNE</div><div class="feedback-text">${e.phenomene}</div><div class="feedback-label">✅ CORRECTION</div><div class="correction-block"><strong>Réponse(s) :</strong> ${c}<br>${e.correction_detaillee?.juste||''}</div><div class="feedback-label">❌ LES AUTRES SONT FAUX</div><div class="correction-block">${d}</div><div class="feedback-label">⚠️ ERREUR FRÉQUENTE</div><div class="feedback-text">${e.erreur_frequente}</div><div class="astuce-box"><div class="astuce-title">💡 Astuce (FR)</div>${e.astuce_fr}</div><div class="astuce-box"><div class="astuce-title">💡 استعارة عربية</div>${e.astuce_ar}</div>`;}
+    function showCorrection(){buildFeedback(questionsData[activeSet[currentQ]],userAnswers[currentQ]);}
+    function prevQuestion(){if(currentQ>0){currentQ--;renderQuestion();if(mode==='exam'){perQSeconds=PER_Q_SEC;updatePerQTimerDisplay();}}}
+    function nextQuestion(){if(currentQ<activeSet.length-1){currentQ++;renderQuestion();if(mode==='exam'){perQSeconds=PER_Q_SEC;updatePerQTimerDisplay();}}else finishQuiz();}
+    function finishQuiz(){if(examTimer)clearInterval(examTimer);if(perQTimer)clearInterval(perQTimer);showPage('page-results');renderResults();document.getElementById('timer-wrap').classList.add('hidden');document.getElementById('perq-timer').classList.add('hidden');}
+    function renderResults(){let e=0;const t=document.getElementById('result-tbody');t.innerHTML='';const n={};activeSet.forEach((t,o)=>{const s=questionsData[t],a=Array.isArray(s.correct)?s.correct:[s.correct],i=arraysEqual(userAnswers[o],a);i&&e++;const c=s.statement.length>40?s.statement.substring(0,40)+'…':s.statement;t.innerHTML+=`<tr><td><strong>Q${s.id}</strong></td><td style="font-size:10px;">${c}</td><td style="font-size:10px;">${s.theme}</td><td class="${i?'r-ok':'r-ko'}">${i?'✅':'❌'}</td></tr>`;n[s.theme]||(n[s.theme]={total:0,correct:0});n[s.theme].total++;i&&n[s.theme].correct++;});const o=Math.round(e/activeSet.length*100);document.getElementById('result-pct').textContent=o+'%';document.getElementById('result-sub').textContent=`${e} / ${activeSet.length} bonnes réponses`;document.getElementById('result-badge').textContent=o>=80?'🏆':o>=50?'👍':'💪';document.getElementById('btn-retry-failed').style.display=activeSet.some((e,t)=>!arraysEqual(userAnswers[t],Array.isArray(questionsData[e].correct)?questionsData[e].correct:[questionsData[e].correct]))?'flex':'none';document.getElementById('result-themes').innerHTML='<table class="result-table"><thead><tr><th>Thème</th><th>Score</th><th>%</th></tr></thead><tbody>'+Object.entries(n).map(([e,t])=>{const n=Math.round(t.correct/t.total*100);return`<tr><td>${n>=80?'🟢':n>=50?'🟡':'🔴'} ${e}</td><td>${t.correct}/${t.total}</td><td>${n}%</td></tr>`;}).join('')+'</tbody></table>';}
+    function retryFailed(){const e=activeSet.filter((e,t)=>!arraysEqual(userAnswers[t],Array.isArray(questionsData[e].correct)?questionsData[e].correct:[questionsData[e].correct]));if(e.length>0)startQuiz(e);}
+    function startExamTimer(){updateExamTimerDisplay();examTimer=setInterval(()=>{examSeconds--;updateExamTimerDisplay();if(examSeconds<=0){clearInterval(examTimer);clearInterval(perQTimer);finishQuiz();}},1000);}
+    function updateExamTimerDisplay(){const e=Math.floor(examSeconds/60),t=examSeconds%60,n=document.getElementById('timer-badge');n.textContent=`⏱ ${String(e).padStart(2,'0')}:${String(t).padStart(2,'0')}`;n.className='timer-badge';if(examSeconds<=300)n.classList.add('danger');else if(examSeconds<=900)n.classList.add('warning');}
+    function startPerQTimer(){updatePerQTimerDisplay();perQTimer=setInterval(()=>{perQSeconds--;updatePerQTimerDisplay();if(perQSeconds<=0){clearInterval(perQTimer);if(mode==='exam'){validated[currentQ]=true;nextQuestion();}}},1000);}
+    function updatePerQTimerDisplay(){const e=Math.floor(perQSeconds/60),t=perQSeconds%60,n=document.getElementById('perq-timer');n.textContent=`⚡ ${String(e).padStart(1,'0')}:${String(t).padStart(2,'0')}`;n.className='perq-timer';if(perQSeconds<=30)n.classList.add('danger');else if(perQSeconds<=60)n.classList.add('warning');}
+    document.addEventListener('keydown',e=>{const t=document.querySelector('#main-app .page.active');if(!t||t.id!=='page-question')return;const n=e.key.toUpperCase();if(['A','B','C','D','E'].includes(n)&&!validated[currentQ])selectChoice(['A','B','C','D','E'].indexOf(n));if(e.key==='Enter'){if(mode==='train'){const e=document.getElementById('btn-validate');if(!e.disabled)validateAnswer();}}if(e.key==='ArrowRight')nextQuestion();if(e.key==='ArrowLeft')prevQuestion();});
+
+    // ═══════════════ RÉVISION ═══════════════
+    const themeIcons={"Géologie":"🌍","Écologie":"🌿","Immunologie":"🦠","Nutrition":"🍎","Biologie cellulaire":"🔬","Génétique":"🧬","Reproduction et santé":"🧬","Neurophysiologie":"🧠","Amélioration production végétale":"🌱","Microbes et organisme":"🦠","Découvrir gérer environnement":"🌍","Exploitation ressources géologiques":"⛏️","Gestion écosystèmes":"🌿","Êtres vivants":"🔬","Nutrition et santé":"🍎","Dynamique globe et évolution":"🌋","Évolution biologique":"🦎","Immunité":"🦠"};
+    const themeMapping={"Exploitation ressources géologiques":"Géologie","Gestion écosystèmes":"Écologie","Nutrition et santé":"Nutrition","Êtres vivants":"Biologie cellulaire","Reproduction et santé":"Reproduction et santé","Immunité":"Immunologie","Dynamique globe et évolution":"Géologie","Amélioration production végétale":"Nutrition","Microbes et organisme":"Immunologie","Découvrir gérer environnement":"Géologie","Évolution biologique":"Génétique","Géologie":"Géologie","Écologie":"Écologie","Immunologie":"Immunologie","Nutrition":"Nutrition","Biologie cellulaire":"Biologie cellulaire","Génétique":"Génétique","Neurophysiologie":"Neurophysiologie"};
+
+    // ═══════════════ RÉSUMÉS DES THÈMES (MORCEAU 3 À COLLER ICI) ═══════════════
+    const resumesThemes = {
+  "Géologie": {
+    notions: [
+      "Structure du globe terrestre : croûte (continentale 30-70 km, océanique 5-10 km), manteau (asthénosphère ductile 100-670 km, mésosphère solide 670-2900 km), noyau externe liquide (2900-5150 km), noyau interne solide ou graine (5150-6371 km).",
+      "Discontinuités sismiques majeures : Moho (croûte-manteau, ~30 km sous continents, ~7 km sous océans), Gutenberg (manteau-noyau, 2900 km), Lehmann (noyau externe-interne, 5150 km).",
+      "Ondes sismiques P (primaires, compression, vitesse ~6-13 km/s, traversent solides et liquides) et S (secondaires, cisaillement, vitesse ~3,5-7 km/s, ne traversent PAS les liquides). Leur étude a permis de découvrir la structure interne du globe.",
+      "Roches magmatiques : basalte (roche volcanique microlithique, refroidissement rapide en surface, pauvre en silice ~50% SiO₂, riche en ferromagnésiens) vs granite (roche plutonique grenue, refroidissement lent en profondeur, riche en silice ~70% SiO₂, quartz + feldspaths).",
+      "Tectonique des plaques : la lithosphère rigide est divisée en plaques qui se déplacent sur l'asthénosphère ductile. Moteur : courants de convection dans le manteau (chaleur interne + désintégration radioactive).",
+      "Divergence (dorsales océaniques) : accrétion = création de lithosphère océanique par remontée magmatique. Failles transformantes segmentent les dorsales. Expansion océanique : l'âge et l'épaisseur des sédiments augmentent en s'éloignant de la dorsale.",
+      "Convergence : subduction (lithosphère océanique plonge sous une autre plaque → fosse océanique, volcanisme andésitique, séismes profonds plan de Wadati-Benioff). Collision continentale (orogenèse = formation de chaînes de montagnes, exemple : Alpes, Himalaya, Atlas).",
+      "Stratigraphie : principes de superposition (couche en dessous = plus ancienne), continuité (même couche = même âge), horizontalité originelle, recoupement. Fossiles stratigraphiques : bonne extension géographique, courte extension temporelle, abondance.",
+      "Ressources naturelles tunisiennes : pétrole (roche sédimentaire carbonée, bassin de Ghadamès, golfe de Gabès). Phosphates (Éocène inférieur Yprésien, bassin de Gafsa-Metlaoui, minéral = apatite). Eaux souterraines (nappe libre phréatique, nappe captive profonde).",
+      "Chaîne atlasique tunisienne : chaîne de collision intracontinentale (plaque africaine vs eurasiatique). Sédiments d'âge secondaire (Crétacé) plissés au Mio-Pliocène. Orientation NE-SW. Fait partie de la chaîne alpine."
+    ],
+    definitions: [
+      "Faille normale : structure tectonique résultant d'une distension (le toit descend par rapport au mur). Faille inverse : structure résultant d'une compression (le toit monte par rapport au mur).",
+      "Pendage : angle d'inclinaison d'une couche géologique par rapport au plan horizontal, mesuré en degrés.",
+      "Nappe aquifère : formation géologique perméable contenant de l'eau souterraine exploitable. Nappe libre (surface piézométrique = surface de la nappe). Nappe captive (emprisonnée entre deux couches imperméables, eau sous pression = artésianisme).",
+      "Accrétion : processus de création de lithosphère océanique au niveau d'une dorsale par refroidissement du magma.",
+      "Fossile stratigraphique : espèce fossile ayant une grande extension géographique et une courte durée de vie, utilisée pour dater les couches géologiques (ex : ammonites, nummulites)."
+    ],
+    confusions: [
+      "Faille normale (distension = étirement) ≠ faille inverse (compression = raccourcissement). Le nom 'inverse' ne signifie pas 'anormale'.",
+      "Ondes P (compression, traversent tout, plus rapides) ≠ ondes S (cisaillement, ne traversent pas les liquides, plus lentes). L'absence d'ondes S dans le noyau externe prouve sa liquidité.",
+      "Âge des roches (Secondaire/Crétacé pour l'Atlas) ≠ âge de la surrection/orogenèse (Mio-Pliocène/Tertiaire). Les roches se sont déposées bien avant d'être plissées.",
+      "Nappe libre (proche de la surface, alimentée par infiltration) ≠ nappe captive (profonde, entre deux couches imperméables, sous pression).",
+      "Structure microlithique (cristaux fins + verre volcanique, basalte) ≠ structure grenue (gros cristaux visibles, granite). C'est la vitesse de refroidissement qui détermine la structure, pas la composition."
+    ]
+  },
+  "Écologie": {
+    notions: [
+      "Écosystème = biotope (milieu physicochimique : température, humidité, lumière, nature du sol) + biocénose (ensemble des êtres vivants : producteurs, consommateurs, décomposeurs). Les deux sont en interaction permanente.",
+      "Relations trophiques : chaîne alimentaire (succession linéaire d'organismes où chacun mange le précédent) et réseau trophique (ensemble des chaînes interconnectées dans un écosystème).",
+      "Producteurs primaires (autotrophes) : végétaux chlorophylliens qui synthétisent la matière organique par photosynthèse. Consommateurs primaires/secondaires (hétérotrophes). Décomposeurs (bactéries, champignons) : minéralisation de la matière organique.",
+      "Pyramides écologiques : de nombres (individus), de biomasses (masse de matière vivante par unité de surface), d'énergie (productivité). Rendement énergétique ~10% d'un niveau à l'autre (pertes : respiration, chaleur, excrétion, non-consommation).",
+      "Cycle du carbone : fixation du CO₂ atmosphérique par photosynthèse → matière organique → respiration (retour CO₂) + minéralisation par décomposeurs (retour CO₂ et minéraux). Combustion des énergies fossiles = perturbation du cycle.",
+      "Niche écologique : rôle fonctionnel d'une espèce dans l'écosystème (régime alimentaire, période d'activité, mode de reproduction, interactions). Habitat = lieu de vie (adresse). Niche = profession. Principe d'exclusion compétitive : deux espèces ne peuvent occuper la même niche.",
+      "Interactions biologiques : prédation (+/-), parasitisme (+/-), compétition (-/-), symbiose (association étroite et durable), mutualisme (+/+), commensalisme (+/0).",
+      "Développement durable : exploitation des ressources sans compromettre leur renouvellement. Actions positives : reboisement, fixation des dunes, parcs nationaux, agriculture biologique. Actions négatives : déforestation, désertification, pollution, salinisation des sols."
+    ],
+    definitions: [
+      "Biotope : ensemble des conditions physicochimiques d'un milieu (température, lumière, pH, nature du sol). Biocénose : ensemble des êtres vivants (animaux, végétaux, microorganismes) vivant dans un biotope.",
+      "Productivité primaire : quantité de matière organique produite par les producteurs primaires par unité de surface et de temps (g/m²/an). Productivité nette = productivité brute - respiration des producteurs.",
+      "Minéralisation : transformation de la matière organique en matière minérale (CO₂, H₂O, sels minéraux) par les décomposeurs (bactéries, champignons). C'est la dernière étape des cycles biogéochimiques.",
+      "Niche écologique : rôle et position fonctionnelle d'une espèce dans l'écosystème, incluant ses relations trophiques, son habitat, sa période d'activité et ses interactions."
+    ],
+    confusions: [
+      "Niche (fonction, profession) ≠ habitat (adresse, lieu de vie). Deux espèces peuvent coexister dans le même habitat si leurs niches sont différentes.",
+      "Chaîne alimentaire (simple, linéaire) ≠ réseau trophique (complexe, interconnecté). Dans la nature, on trouve des réseaux trophiques, pas de chaînes isolées.",
+      "Symbiose (association étroite et durable) ≠ mutualisme (bénéfice réciproque). Une symbiose peut être mutualiste, parasitaire ou commensale. Les deux termes ne sont pas interchangeables.",
+      "Pyramide des nombres (peut être inversée : un arbre supporte de nombreux insectes) ≠ pyramide des biomasses ou d'énergie (toujours dressée car l'énergie se perd à chaque niveau)."
+    ]
+  },
+  "Immunologie": {
+    notions: [
+      "Soi et Non-soi : le système immunitaire distingue les cellules de l'organisme (soi) des éléments étrangers (non-soi) grâce aux marqueurs HLA (Human Leukocyte Antigen) codés par les gènes du CMH (Complexe Majeur d'Histocompatibilité) sur le chromosome 6.",
+      "Groupes sanguins ABO (chromosome 9, 3 allèles A,B,O → 6 génotypes) et Rhésus (chromosome 1, 2 allèles +,- → 3 génotypes). Antigènes (agglutinogènes) sur les hématies. Anticorps (agglutinines) dans le plasma. Règle de compatibilité : O- donneur universel, AB+ receveur universel.",
+      "Immunité non spécifique (innée) : barrières physiques (peau, muqueuses), réaction inflammatoire (macrophages, granulocytes), phagocytose. Réponse immédiate, sans mémoire.",
+      "Immunité spécifique (adaptative) : RIMH (Réaction Immunitaire à Médiation Humorale) : LB → plasmocytes → anticorps spécifiques circulants → complexe immun → élimination. RIMC (Réaction Immunitaire à Médiation Cellulaire) : LTc → perforine/granzyme → lyse des cellules infectées.",
+      "Coopération cellulaire : macrophage (cellule présentatrice) phagocyte l'antigène → le présente via CMH II → LT4 (helper) reconnaît → s'active → sécrète IL2 → active LB et LTc spécifiques. C'est une réponse en cascade.",
+      "Multiplication clonale : les lymphocytes activés se multiplient et se différencient en cellules effectrices (plasmocytes pour LB, LTc actifs) et cellules mémoire (réponse rapide lors d'un contact ultérieur).",
+      "Vaccination (immunité active artificielle) : injection d'un antigène (microbe atténué ou fragment) → l'organisme produit ses propres anticorps et cellules mémoire → protection durable. Sérothérapie (immunité passive artificielle) : injection d'anticorps préformés → protection immédiate mais temporaire.",
+      "Dysfonctionnements : allergie (hypersensibilité à un allergène, médiée par IgE). SIDA (VIH infecte les LT4 via CD4 → déficit immunitaire progressif → infections opportunistes)."
+    ],
+    definitions: [
+      "Antigène : substance reconnue comme étrangère par le système immunitaire, capable de déclencher une réponse immunitaire spécifique. Ex : protéines de surface d'un virus, toxine, pollen.",
+      "Anticorps (immunoglobuline) : protéine en forme de Y produite par les plasmocytes, capable de se lier spécifiquement à un antigène pour le neutraliser ou le marquer pour destruction.",
+      "HLA (Human Leukocyte Antigen) : glycoprotéines membranaires codées par les gènes du CMH (chromosome 6), présentes sur toutes les cellules nucléées, marqueurs du soi permettant la reconnaissance immunitaire.",
+      "Mémoire immunitaire : capacité du système immunitaire à répondre plus rapidement et plus efficacement lors d'un second contact avec un antigène, grâce aux lymphocytes mémoire."
+    ],
+    confusions: [
+      "HLA (chromosome 6, sur globules blancs et cellules nucléées) ≠ ABO (chromosome 9, sur globules rouges). Deux systèmes de marqueurs totalement distincts.",
+      "LB → anticorps (immunité humorale) ≠ LTc → lyse cellulaire directe (immunité cellulaire). LB et LTc ont des modes d'action différents.",
+      "Vaccination (préventive, induit une mémoire, protection durable) ≠ sérothérapie (curative, injection d'anticorps préformés, protection immédiate mais courte).",
+      "LT4 (CD4+, helper, activateur) ≠ LTc (CD8+, cytotoxique, tueur). Le VIH attaque les LT4, pas les LTc."
+    ]
+  },
+  "Nutrition": {
+    notions: [
+      "Glucides : oses (glucose, fructose), diholosides (saccharose, maltose), polyholosides (amidon végétal, glycogène animal, cellulose). Amidon et glycogène = polysaccharides de réserve ramifiés constitués de glucose.",
+      "Lipides : corps gras insolubles dans l'eau. Triglycérides = 3 acides gras + glycérol. Rôles : réserve énergétique, structure membranaire (phospholipides), isolation thermique.",
+      "Protéines : polymères d'acides aminés reliés par liaisons peptidiques. Rôles variés : enzymes (catalyse), structure (collagène), transport (hémoglobine), défense (anticorps). Information génétique portée par ADN → transcrit en ARNm → traduit en protéine.",
+      "Enzymes digestives : biocatalyseurs protéiques spécifiques. Amylase salivaire/pancréatique (amidon → maltose), pepsine gastrique (protéines → peptides, pH acide), trypsine pancréatique (protéines → peptides, pH basique), lipase pancréatique (lipides → acides gras + glycérol).",
+      "Photosynthèse : phase claire (thylakoïdes) = photolyse de l'eau (H₂O → ½O₂ + 2H⁺ + 2e⁻) + photophosphorylation (ADP → ATP). Phase sombre (stroma, cycle de Calvin) = fixation du CO₂ + réduction en glucose grâce à l'ATP et au NADPH.",
+      "Respiration cellulaire : glucose + O₂ → CO₂ + H₂O + ATP (36-38 ATP par glucose). Glycolyse (cytoplasme) → Cycle de Krebs (matrice mitochondriale) → Chaîne respiratoire (membrane interne). O₂ = accepteur final → H₂O.",
+      "Fermentation alcoolique (levures) : C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ + 2ATP. Anaérobie. Utilisée en boulangerie, brasserie, vinification.",
+      "Régulation glycémie : insuline (cellules β pancréas, hypoglycémiante : glycogénogenèse, entrée glucose cellules). Glucagon (cellules α pancréas, hyperglycémiant : glycogénolyse, néoglucogenèse). Foie = organe régulateur clé. Glycémie normale ~1 g/L.",
+      "Excrétion urinaire : néphron = unité fonctionnelle du rein. Filtration glomérulaire (plasma → urine primitive), réabsorption tubulaire (eau, glucose, Na⁺...), sécrétion tubulaire. Urée = déchet azoté éliminé. Aldostérone (corticosurrénale) = réabsorption Na⁺. ADH = réabsorption H₂O."
+    ],
+    definitions: [
+      "Enzyme : biocatalyseur protéique spécifique d'un substrat, possédant un site actif. Abaisse l'énergie d'activation. Sensible au pH et à la température.",
+      "Glycémie : concentration de glucose dans le sang. Valeur normale à jeun ~1 g/L (5,5 mmol/L). Régulée par insuline et glucagon.",
+      "Photophosphorylation : synthèse d'ATP couplée au transport d'électrons excité par la lumière dans la chaîne photosynthétique des thylakoïdes.",
+      "Homéostasie : maintien des constantes du milieu intérieur (glycémie, pH, température, pression artérielle...) malgré les variations externes."
+    ],
+    confusions: [
+      "Phase claire (lumière, thylakoïdes, ATP + O₂) ≠ phase sombre (obscurité, stroma, glucose). Les deux phases sont couplées mais distinctes.",
+      "O₂ respiré → H₂O (et NON CO₂). Le CO₂ expiré provient du carbone du glucose. L'O₂ est l'accepteur final d'électrons.",
+      "Insuline (hypoglycémiante, produite par pancréas) ≠ glucagon (hyperglycémiant, produit par pancréas). Le foie est la cible, pas la source.",
+      "Kwashiorkor (carence en protéines, œdèmes, ventre gonflé) ≠ marasme (carence calorique globale, amaigrissement extrême).",
+      "Fermentation (anaérobie, peu d'ATP) ≠ respiration (aérobie, beaucoup d'ATP). L'oxygène fait la différence."
+    ]
+  },
+  "Biologie cellulaire": {
+    notions: [
+      "Cellule eucaryote : noyau délimité par enveloppe nucléaire (pores nucléaires), organites membraneux (mitochondries, RE, Golgi, chloroplastes chez végétaux), cytosquelette. Taille 10-100 μm.",
+      "Cellule végétale vs animale : paroi pectocellulosique (rigidité), chloroplastes (photosynthèse), vacuole centrale (turgescence) = spécifiques végétaux. Membrane plasmique, noyau, mitochondries, RE, Golgi = communs.",
+      "Cellule procaryote (bactéries) : pas de noyau (ADN circulaire libre dans le cytoplasme), pas d'organites membraneux, ribosomes 70S uniquement, membrane plasmique. Taille 1-10 μm.",
+      "ADN (acide désoxyribonucléique) : polymère de nucléotides (phosphate + désoxyribose + base azotée A,T,C,G). Double hélice antiparallèle. Support universel de l'information génétique. Réplication semi-conservative (ADN polymérase).",
+      "ARN (acide ribonucléique) : polymère de ribonucléotides (phosphate + ribose + A,U,C,G). ARNm (copie de l'ADN), ARNt (transport des acides aminés, anticodon), ARNr (constituant des ribosomes).",
+      "Mitose : division cellulaire en 4 phases (prophase, métaphase, anaphase, télophase). Reproduction conforme : 2 cellules filles génétiquement identiques à la cellule mère (2n → 2n). Rôle : croissance, renouvellement cellulaire.",
+      "Méiose : deux divisions successives (I et II). Passage de 2n à n. Brassage génétique : interchromosomique (répartition aléatoire des chromosomes homologues) et intrachromosomique (crossing-over en prophase I). Rôle : formation des gamètes.",
+      "Caryotype : représentation ordonnée de l'ensemble des chromosomes d'une cellule. Espèce humaine : 46 chromosomes (23 paires). Autosomes (22 paires) + gonosomes (1 paire : XX ou XY)."
+    ],
+    definitions: [
+      "Nucléotide : unité de base des acides nucléiques, composée d'un groupement phosphate, d'un sucre (désoxyribose ou ribose) et d'une base azotée (A,T,C,G ou U).",
+      "Crossing-over (enjambement) : échange réciproque de segments chromatidiens entre chromosomes homologues appariés en prophase I de la méiose. Source de brassage intrachromosomique.",
+      "Caryotype : photographie ordonnée de l'ensemble des chromosomes d'une cellule en métaphase, classés par taille et position du centromère.",
+      "Mitose : division cellulaire produisant deux cellules filles génétiquement identiques à la cellule mère (même nombre de chromosomes : 2n → 2n)."
+    ],
+    confusions: [
+      "Cellule végétale (paroi + chloroplastes + vacuole) ≠ cellule animale (sans paroi ni chloroplastes, vacuoles petites). La membrane plasmique existe chez les deux.",
+      "Mitose (2n → 2n, reproduction conforme, 1 division) ≠ méiose (2n → n, production gamètes, brassage, 2 divisions). Ne pas confondre leurs rôles.",
+      "ADN (support de l'information génétique) ≠ protéine (produit de l'expression génétique). L'ADN est le plan, la protéine est le produit fini.",
+      "Nucléotide (monomère ADN/ARN) ≠ acide aminé (monomère des protéines). Deux types de briques moléculaires totalement différents.",
+      "Procaryote (pas de noyau, ADN libre) ≠ eucaryote (noyau vrai, ADN enfermé). Le ribosome est le seul organite commun aux deux types cellulaires."
+    ]
+  },
+  "Génétique": {
+    notions: [
+      "Méiose et brassage génétique : brassage interchromosomique (répartition aléatoire des chromosomes homologues en anaphase I → 2ⁿ gamètes possibles, n = nombre de paires). Brassage intrachromosomique (crossing-over en prophase I → échange de segments → chromatides remaniées).",
+      "Distance génétique (cM = centimorgan) : fréquence de recombinaison entre deux gènes liés. 1 cM = 1% de recombinaison. Permet d'établir des cartes factorielles.",
+      "Dihybridisme : gènes indépendants (situés sur des chromosomes différents) → proportions 9:3:3:1 en F2. Gènes liés (même chromosome) → majorité de phénotypes parentaux + quelques recombinés.",
+      "Épistasie : interaction entre deux gènes où l'un masque l'expression de l'autre. Épistasie récessive (9:3:4), épistasie dominante (12:3:1).",
+      "Hérédité autosomale dominante (malade = au moins un parent malade, pas de saut de génération). Récessive (deux parents sains peuvent avoir enfant malade, sauts de génération).",
+      "Hérédité liée à X récessive (fille malade = père forcément malade ; mère conductrice a 50% de fils malades). Dominante liée à X (père malade → toutes ses filles malades).",
+      "Polyallélisme ABO : 3 allèles (A, B, O) → 6 génotypes (AA, AO, BB, BO, AB, OO) → 4 phénotypes (A, B, AB, O). A et B codominants, O récessif. Rhésus : 2 allèles → 3 génotypes (++, +-, --) → 2 phénotypes (Rh+, Rh-). Total combiné ABO-Rh = 18 génotypes.",
+      "Équilibre de Hardy-Weinberg : p² + 2pq + q² = 1. Population en équilibre si grande, panmictique, sans mutation, migration, sélection ni dérive. Fréquence allélique : p = (2×homozygotes + hétérozygotes) / (2×N total)."
+    ],
+    definitions: [
+      "Crossing-over : échange réciproque de segments chromatidiens entre chromosomes homologues en prophase I. Produit des chromatides recombinées.",
+      "Distance génétique : pourcentage de recombinaison entre deux gènes liés, exprimé en centimorgans (cM). 1 cM = 1% de gamètes recombinés.",
+      "Test-cross : croisement d'un individu de phénotype dominant (génotype inconnu) avec un double récessif (génotype connu). Les proportions phénotypiques de la descendance révèlent le génotype du parent testé.",
+      "Épistasie : interaction entre deux gènes non alléliques où l'un (épistasique) masque l'expression de l'autre (hypostasique)."
+    ],
+    confusions: [
+      "Dominant ≠ fréquent. Une maladie dominante peut être rare dans la population. La dominance est une relation entre allèles, pas une fréquence.",
+      "Gènes liés (même chromosome, transmis ensemble sauf crossing-over) ≠ gènes indépendants (chromosomes différents, brassage interchromosomique).",
+      "Méiose (2n → n, réduction) ≠ fécondation (n + n → 2n, rétablissement). La méiose divise, la fécondation réunit.",
+      "Génotype (patrimoine génétique, ex: AO, BB) ≠ phénotype (expression visible, ex: groupe A, groupe B). Le génotype détermine le phénotype."
+    ]
+  },
+  "Reproduction et santé": {
+    notions: [
+      "Spermatogenèse (dans tubes séminifères, testicules) : 4 étapes : multiplication (spermatogonies 2n → mitoses), accroissement (spermatocytes I 2n), maturation (méiose : spermatocytes I → spermatocytes II → spermatides n), différenciation (spermatides → spermatozoïdes). Cellules de Sertoli (soutien, nutrition). Cellules de Leydig interstitielles (testostérone).",
+      "Régulation masculine : hypothalamus (GnRH) → hypophyse (FSH → Sertoli ; LH → Leydig → testostérone). Rétrocontrôle négatif : testostérone freine GnRH et LH.",
+      "Folliculogenèse ovarienne : follicule primordial → follicule primaire → follicule cavitaire → follicule mûr (De Graaf). Ovulation : expulsion de l'ovocyte II bloqué en métaphase II. Corps jaune : follicule transformé après ovulation (œstrogènes + progestérone).",
+      "Cycle ovarien (28 jours) : phase folliculaire (J1-J14, œstrogènes → épaississement endomètre). Ovulation (J14, pic LH). Phase lutéale (J15-J28, corps jaune → œstrogènes + progestérone → maintien endomètre). Sans fécondation → corps jaune régresse → règles.",
+      "Fécondation (trompe utérine, tiers supérieur) : rencontre gamètes → pénétration spermatozoïde → réaction ovulaire → achèvement division équationnelle de l'ovocyte II → caryogamie (fusion pronoyaux) → zygote 2n.",
+      "Grossesse : nidation (6-7ème jour, endomètre). Placenta (trophoblaste puis placenta définitif) : rôle trophique (nutriments, O₂), protecteur (barrière), hormonal (HCG maintient corps jaune → œstrogènes + progestérone → suspension cycle).",
+      "Contraception : pilule combinée (œstrogènes + progestérone) bloque l'ovulation par rétrocontrôle négatif sur axe hypothalamo-hypophysaire. Rend la glaire cervicale imperméable aux spermatozoïdes.",
+      "FIVETE (Fécondation In Vitro Et Transfert d'Embryon) : stimulation ovarienne → ponction folliculaire → fécondation in vitro → culture embryonnaire → transfert dans l'utérus. Remédie à certaines stérilités féminines et masculines."
+    ],
+    definitions: [
+      "LH (hormone lutéinisante) : gonadostimuline hypophysaire. Cibles : cellules de Leydig (testostérone) et cellules du corps jaune (progestérone).",
+      "Corps jaune (corpus luteum) : glande endocrine temporaire formée après l'ovulation à partir du follicule rompu. Sécrète œstrogènes ET progestérone.",
+      "HCG (hormone chorionique gonadotrophique) : hormone sécrétée par le trophoblaste puis le placenta. Maintient le corps jaune en début de grossesse. Détectée dans les tests de grossesse.",
+      "Caryogamie : fusion des deux pronoyaux mâle (n) et femelle (n) lors de la fécondation, aboutissant à un zygote diploïde (2n)."
+    ],
+    confusions: [
+      "Lieu de fécondation (trompe utérine, tiers supérieur) ≠ lieu de nidation (endomètre utérin). La fécondation ne se produit PAS dans l'utérus.",
+      "Corps jaune (œstrogènes + progestérone, après ovulation) ≠ follicule mûr (œstrogènes seulement, avant ovulation). Le corps jaune = follicule transformé.",
+      "HCG (produite par le placenta/trophoblaste) ≠ LH (produite par l'hypophyse). HCG remplace LH en début de grossesse pour maintenir le corps jaune.",
+      "Spermatogonies (cellules germinales diploïdes, multiplication) ≠ cellules de Leydig (cellules interstitielles endocrines, testostérone)."
+    ]
+  },
+  "Neurophysiologie": {
+    notions: [
+      "Tissu nerveux : neurones (corps cellulaire + dendrites + axone) et cellules gliales (soutien, nutrition, myélinisation). Synapse = zone de contact entre deux neurones (présynaptique → fente synaptique → postsynaptique).",
+      "Potentiel de repos : -70 mV (intérieur chargé négativement). Dû aux canaux de fuite K⁺ (sortie de K⁺) et à la pompe Na⁺/K⁺-ATPase (3 Na⁺ sortent, 2 K⁺ entrent).",
+      "Potentiel d'action (PA) : dépolarisation (ouverture canaux Na⁺ voltage-dépendants, entrée massive de Na⁺) → repolarisation (ouverture canaux K⁺ voltage-dépendants, sortie de K⁺) → hyperpolarisation transitoire. Loi du tout ou rien (PA déclenché si seuil atteint).",
+      "Propagation du PA : saltatoire dans les fibres myélinisées (gaine de myéline, nœuds de Ranvier) → rapide (jusqu'à 120 m/s). Continue dans les fibres amyélinisées → lente (0,5-2 m/s).",
+      "Transmission synaptique : arrivée PA → ouverture canaux Ca²⁺ voltage-dépendants → exocytose neurotransmetteur → fixation sur récepteurs postsynaptiques. Synapse excitatrice : PPSE (entrée Na⁺, dépolarisation). Synapse inhibitrice : PPSI (entrée Cl⁻, hyperpolarisation).",
+      "Codage du message nerveux : modulation de fréquence des PA (intensité stimulus = fréquence PA). Sommation spatiale (plusieurs synapses) et temporelle (PA rapprochés) au niveau du neurone postsynaptique.",
+      "Réflexe myotatique (ex: rotulien) : étirement musculaire → activation fuseau neuromusculaire (récepteur proprioceptif) → influx afférent (fibres sensitives) → moelle épinière → synapse directe avec motoneurone → influx efférent → contraction du muscle étiré. = réflexe monosynaptique.",
+      "Contraction musculaire : PA musculaire → libération Ca²⁺ du réticulum sarcoplasmique → Ca²⁺ se fixe sur troponine → démasquage des sites de fixation de l'actine → pont acto-myosine → glissement filaments fins sur épais → raccourcissement sarcomère. ATP nécessaire.",
+      "Régulation pression artérielle : barorécepteurs (sinus carotidien, crosse aortique) détectent pression. Hypotension → ↓ fréquence PA nerfs de Hering/Cyon → activation centre bulbaire → ↑ activité sympathique → ↑ fréquence cardiaque, vasoconstriction → ↑ pression."
+    ],
+    definitions: [
+      "PPSE (potentiel postsynaptique excitateur) : dépolarisation partielle de la membrane postsynaptique par entrée de Na⁺ via canaux chimio-dépendants, suite à la fixation d'un neurotransmetteur excitateur.",
+      "Fuseau neuromusculaire : récepteur sensoriel proprioceptif situé dans le muscle, sensible à l'étirement. Impliqué dans le réflexe myotatique.",
+      "Plaque motrice : synapse spécialisée entre la terminaison d'un motoneurone et une fibre musculaire squelettique. Neurotransmetteur = acétylcholine.",
+      "Sarcomère : unité contractile de la myofibrille, délimitée par deux stries Z, contenant filaments d'actine et de myosine."
+    ],
+    confusions: [
+      "PPSE (chimio-dépendant, gradué, sommable) ≠ PA (voltage-dépendant, tout-ou-rien). Le PPSE peut déclencher un PA si le seuil est atteint.",
+      "Réflexe myotatique (proprioceptif, fuseau neuromusculaire, monosynaptique) ≠ réflexe cutané (extéroceptif, récepteurs cutanés, polysynaptique).",
+      "Nerfs de Hering/Cyon (barorécepteurs, afférences sensitives) ≠ nerf X (parasympathique, efférence motrice).",
+      "Aldostérone (réabsorption Na⁺, tube distal, corticosurrénale) ≠ ADH (réabsorption H₂O, tube collecteur, posthypophyse)."
+    ]
+  }
+};
+
+    // ═══════════════ FICHES DE COURS (MORCEAU 4 À COLLER ICI) ═══════════════
+  const fichesCours = {
+  "1ère": [
+    {
+      theme: "Amélioration production végétale",
+      chapitre: "Nutrition minérale",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch1_Nutrition_Minerale.html",
+      ouvert: false,
+      description: "Explorez les mécanismes d'absorption de l'eau et des sels minéraux par les plantes. Comprenez l'osmose, la turgescence et la plasmolyse à travers des expériences virtuelles interactives.",
+      interactivite: "Expériences virtuelles · Schémas à légender · QCM · Bilans à trous",
+      reference: "Programme officiel 1ère Sc · Thème 1 · Chapitre 1"
+    },
+    {
+      theme: "Amélioration production végétale",
+      chapitre: "Nutrition carbonée",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch2_Nutrition_carbonee.html",
+      ouvert: false,
+      description: "Maîtrisez le mécanisme de la photosynthèse : phase claire, phase sombre, photolyse de l'eau et synthèse de matière organique. Découvrez les facteurs qui influencent le rendement photosynthétique.",
+      interactivite: "Animations · Schémas interactifs · QCM progressifs · Études de cas",
+      reference: "Programme officiel 1ère Sc · Thème 1 · Chapitre 2"
+    },
+    {
+      theme: "Amélioration production végétale",
+      chapitre: "Multiplication végétative",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch3_Multiplication_vegetative.html",
+      ouvert: false,
+      description: "Découvrez les techniques de multiplication végétative : bouturage, marcottage, greffage. Comprenez leur importance pour la conservation des caractères héréditaires et l'amélioration de la production.",
+      interactivite: "Démonstrations · Comparaisons interactives · Quiz final",
+      reference: "Programme officiel 1ère Sc · Thème 1 · Chapitre 3"
+    },
+    {
+      theme: "Microbes et organisme",
+      chapitre: "Diversité du monde microbien",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème2__microbes_et_organisme/fiche_cours_P2Ch1_Diversite_monde_microbien.html",
+      ouvert: false,
+      description: "Explorez l'univers fascinant des microorganismes : bactéries, virus, protozoaires, champignons microscopiques. Apprenez à distinguer microbes pathogènes et microbes utiles.",
+      interactivite: "Galerie microscopique · Tableaux comparatifs · QCM",
+      reference: "Programme officiel 1ère Sc · Thème 2 · Chapitre 1"
+    },
+    {
+      theme: "Microbes et organisme",
+      chapitre: "Maladies infectieuses",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème2__microbes_et_organisme/fiche_cours_P2Ch2_Maladies_infectieuses.html",
+      ouvert: true,
+      description: "Comprenez les modes de transmission des maladies infectieuses et les moyens de prévention. Étude de cas concrets : grippe, tuberculose, paludisme. Fiche gratuite en accès libre.",
+      interactivite: "Études de cas · Schémas de contamination · Quiz diagnostiques · Conseils prévention",
+      reference: "Programme officiel 1ère Sc · Thème 2 · Chapitre 2"
+    },
+    {
+      theme: "Microbes et organisme",
+      chapitre: "Défense de l'organisme",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème2__microbes_et_organisme/fiche_cours_P2Ch3_Defense_organisme.html",
+      ouvert: false,
+      description: "Découvrez les barrières naturelles du corps humain et les mécanismes de défense immunitaire : immunité non spécifique et spécifique, vaccination et sérothérapie.",
+      interactivite: "Schémas animés · Comparaisons vaccin/sérum · QCM progressifs",
+      reference: "Programme officiel 1ère Sc · Thème 2 · Chapitre 3"
+    },
+    {
+      theme: "Découvrir gérer environnement",
+      chapitre: "Site géologique local",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème3__Découvrir_gérer_notre_environnement/fiche_cours_P3Ch1_Site_Geologique_Local-1.html",
+      ouvert: false,
+      description: "Apprenez à observer et analyser un paysage géologique local. Identifiez les roches, comprenez le modelé du relief et l'effet de l'érosion sur le terrain.",
+      interactivite: "Photos de terrain · Schémas d'interprétation · Exercices d'observation",
+      reference: "Programme officiel 1ère Sc · Thème 3 · Chapitre 1"
+    },
+    {
+      theme: "Découvrir gérer environnement",
+      chapitre: "Phosphates",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème3__Découvrir_gérer_notre_environnement/fiche_cours_P3Ch2_Phosphates.html",
+      ouvert: true,
+      description: "Plongez dans l'étude des phosphates tunisiens : propriétés, composition chimique, genèse et importance économique. Fiche gratuite en accès libre.",
+      interactivite: "Carte des gisements · Analyse chimique interactive · QCM · Étude de documents",
+      reference: "Programme officiel 1ère Sc · Thème 3 · Chapitre 2"
+    }
+  ],
+  "2ème": [
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Carte topographique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch1_Carte_topographique/Fiche_T1Ch1_Carte_Topographique.html",
+      ouvert: false,
+      description: "Maîtrisez la lecture d'une carte topographique : échelle, courbes de niveau, équidistance, orientation. Réalisez des profils topographiques comme un géologue professionnel.",
+      interactivite: "Cartes interactives · Calculs d'échelle · Profils à construire · QCM",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 1"
+    },
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Stratigraphie et tectonique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch2_Stratigraphie_Tectonique/Fiche_T1Ch2_Stratigraphie_Tectonique.html",
+      ouvert: false,
+      description: "Comprenez les principes de la stratigraphie (superposition, continuité, âge relatif) et identifiez les structures tectoniques : plis, failles normales et inverses.",
+      interactivite: "Blocs diagrammes 3D · Simulations de plis et failles · QCM progressifs",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 2"
+    },
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Carte géologique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch3_Carte_geologique/Fiche_T1Ch3_Carte_Geologique.html",
+      ouvert: false,
+      description: "Apprenez à lire une carte géologique : affleurements, pendage, structures tectoniques. Réalisez une coupe géologique complète à partir des données de la carte.",
+      interactivite: "Cartes géologiques interactives · Coupes à construire · Exercices guidés",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 3"
+    },
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Ressources en eau",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch4_Ressources_eau/Fiche__T1Ch4_Ressources_Eau.html",
+      ouvert: false,
+      description: "Étudiez le cycle de l'eau, les nappes aquifères (libres et captives) et la gestion rationnelle des ressources hydriques en Tunisie. Cours interactif complet.",
+      interactivite: "Schémas animés · Carte hydrogéologique · QCM · Études de cas tunisiens",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 4"
+    },
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Phosphates",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch5_Phosphates/Fiche__T1Ch5_Phosphates.html",
+      ouvert: false,
+      description: "Approfondissez l'étude des phosphates : propriétés physicochimiques, genèse sédimentaire, gisements tunisiens et enjeux économiques pour la Tunisie.",
+      interactivite: "Carte interactive · Analyses chimiques · Documents historiques · QCM",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 5"
+    },
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Pétrole",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch6_Petrole/Fiche__T1Ch6_Petrole.html",
+      ouvert: true,
+      description: "Découvrez la formation du pétrole, son exploration et son exploitation. Comprenez pourquoi le pétrole est classé comme une roche sédimentaire carbonée. Fiche gratuite.",
+      interactivite: "Schémas de formation · Carte des gisements tunisiens · QCM · Vidéos",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 6"
+    },
+    {
+      theme: "Gestion écosystèmes",
+      chapitre: "Écosystème",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme2_Gestion_Ecosystemes/Ch1_Notion_ecosysteme/Fiche__T2Ch1_Ecosysteme.html",
+      ouvert: false,
+      description: "Maîtrisez les concepts de biotope, biocénose, population et peuplement. Identifiez les composantes d'un écosystème et leurs interactions mutuelles.",
+      interactivite: "Schémas interactifs · Sortie virtuelle · QCM · Exercices d'identification",
+      reference: "Programme officiel 2ème Sc · Thème 2 · Chapitre 1"
+    },
+    {
+      theme: "Gestion écosystèmes",
+      chapitre: "Adaptation des êtres vivants",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme2_Gestion_Ecosystemes/Ch2_Adaptation_etres_vivants/Fiche__T2Ch2_Adaptation_climatique.html",
+      ouvert: false,
+      description: "Découvrez comment les plantes et les animaux s'adaptent aux conditions climatiques extrêmes. Étudiez les adaptations morphologiques, physiologiques et comportementales.",
+      interactivite: "Galerie photo · Comparaisons interactives · QCM · Exercices d'analyse",
+      reference: "Programme officiel 2ème Sc · Thème 2 · Chapitre 2"
+    },
+    {
+      theme: "Gestion écosystèmes",
+      chapitre: "Répartition des végétaux",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme2_Gestion_Ecosystemes/Ch3_Repartition_vegetaux/Fiche__T2Ch3_Répartition.html",
+      ouvert: false,
+      description: "Comprenez le lien entre la répartition des végétaux en Tunisie et les facteurs climatiques. Calculez le quotient pluviothermique d'Emberger et déterminez les étages bioclimatiques.",
+      interactivite: "Carte interactive · Calculs de quotient · QCM · Exercices pratiques",
+      reference: "Programme officiel 2ème Sc · Thème 2 · Chapitre 3"
+    },
+    {
+      theme: "Gestion écosystèmes",
+      chapitre: "Relations trophiques",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme2_Gestion_Ecosystemes/Ch4_Relations_trophiques/Fiche__T2Ch4_Relations_Trophiques.html",
+      ouvert: false,
+      description: "Étudiez les chaînes et réseaux alimentaires, les pyramides écologiques et le cycle du carbone. Comprenez le rôle crucial des décomposeurs dans la minéralisation.",
+      interactivite: "Schémas interactifs · Pyramides à construire · QCM · Exercices",
+      reference: "Programme officiel 2ème Sc · Thème 2 · Chapitre 4"
+    },
+    {
+      theme: "Gestion écosystèmes",
+      chapitre: "Développement durable",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme2_Gestion_Ecosystemes/Ch5_Developpement_durable/Fiche__T2Ch5_DD.html",
+      ouvert: false,
+      description: "Prenez conscience des actions négatives de l'Homme sur l'environnement (désertification, pollution) et découvrez les solutions durables (reboisement, parcs nationaux, assainissement).",
+      interactivite: "Études de cas tunisiens · Cartes · QCM · Propositions de solutions",
+      reference: "Programme officiel 2ème Sc · Thème 2 · Chapitre 5"
+    },
+    {
+      theme: "Êtres vivants",
+      chapitre: "Cellule",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme3_Etres_vivants/Ch1_Cellule/Fiche__T3Ch1_Cellule.html",
+      ouvert: true,
+      description: "Explorez l'unité de structure du monde vivant : la cellule. Comparez cellules animale et végétale, découvrez les organites et leurs fonctions. Fiche gratuite en accès libre.",
+      interactivite: "Schémas interactifs · Comparaisons · QCM · Légendes à compléter",
+      reference: "Programme officiel 2ème Sc · Thème 3 · Chapitre 1"
+    },
+    {
+      theme: "Êtres vivants",
+      chapitre: "Espèce et lignée",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme3_Etres_vivants/Ch2_Espece_Lignee/Fiche__T3Ch2_Lignee_Espece.html",
+      ouvert: false,
+      description: "Définissez la notion d'espèce et ses critères d'identification (ressemblance, interfécondité). Distinguez espèce, variété, lignée et caractère héréditaire.",
+      interactivite: "Galerie d'espèces · Tableaux comparatifs · QCM · Exercices",
+      reference: "Programme officiel 2ème Sc · Thème 3 · Chapitre 2"
+    },
+    {
+      theme: "Êtres vivants",
+      chapitre: "Mitose",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme3_Etres_vivants/Ch3_Mitose/Fiche__T3Ch3_Reproduction_conforme.html",
+      ouvert: true,
+      description: "Maîtrisez les étapes de la mitose : prophase, métaphase, anaphase, télophase. Comprenez comment la mitose assure la reproduction conforme des cellules. Fiche gratuite.",
+      interactivite: "Animations · Schémas à légender · QCM · Cycle chromosomique interactif",
+      reference: "Programme officiel 2ème Sc · Thème 3 · Chapitre 3"
+    },
+    {
+      theme: "Êtres vivants",
+      chapitre: "Information génétique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme3_Etres_vivants/Ch4_Information_genetique/Fiche__T3Ch4_Information_Genetique.html",
+      ouvert: false,
+      description: "Découvrez l'ADN comme support de l'information génétique. Comprenez sa structure en double hélice, sa composition chimique et le mécanisme de réplication semi-conservative.",
+      interactivite: "Modèle 3D ADN · Schémas de réplication · QCM · Expérience de Griffith",
+      reference: "Programme officiel 2ème Sc · Thème 3 · Chapitre 4"
+    }
+  ],
+  "3ème": [
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Malnutrition",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Partie1_Alimentation_Saine_Equilibree/Ch1_Malnutrition/Fiche__T1Ch1__Malnutrition.html",
+      ouvert: false,
+      description: "Identifiez les risques liés à la malnutrition : obésité, carences alimentaires (Kwashiorkor, marasme, avitaminoses). Adoptez une alimentation saine et équilibrée.",
+      interactivite: "Études de cas · Tableaux nutritionnels · QCM · Bilans personnalisés",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 1"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Besoins nutritionnels",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Partie1_Alimentation_Saine_Equilibree/Ch2_Besoins_Nutritionnels/Fiche__T1Ch2__Besoins_nutritionnels.html",
+      ouvert: false,
+      description: "Déterminez les besoins qualitatifs et quantitatifs de l'organisme humain. Apprenez à composer des rations alimentaires équilibrées selon l'âge, le sexe et l'activité.",
+      interactivite: "Calculateur de besoins · Compositions de repas · QCM · Exercices",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 2"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Digestion",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch3_Digestion/Fiche__T1Ch3__Digestion.html",
+      ouvert: false,
+      description: "Suivez le parcours des aliments dans le tube digestif. Comprenez l'action des enzymes digestives et la simplification moléculaire des glucides, protides et lipides.",
+      interactivite: "Schémas animés · Tableaux enzymatiques · QCM · Expériences virtuelles",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 3"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Respiration cellulaire",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch4_Respiration_Cellulaire/Fiche__T1Ch4__Respiration_Cellulaire.html",
+      ouvert: false,
+      description: "Plongez au cœur de la mitochondrie pour comprendre la respiration cellulaire : glycolyse, cycle de Krebs, chaîne respiratoire. Calculez le bilan énergétique en ATP.",
+      interactivite: "Schémas interactifs · Calculs d'ATP · QCM · Animations",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 4"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Aliments contaminés",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch5_Aliments_Contamines/Fiche__T1Ch5_Aliments_contamines.html",
+      ouvert: false,
+      description: "Identifiez les risques liés à la contamination chimique et biologique des aliments. Apprenez les règles d'hygiène pour prévenir les toxi-infections alimentaires et les parasitoses.",
+      interactivite: "Études de cas · Schémas de contamination · QCM · Conseils pratiques",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 5"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Microorganismes utiles",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch6_Microorganismes_Utiles/Fiche__T1Ch6_Microorganismes_aliments.html",
+      ouvert: false,
+      description: "Découvrez le rôle bénéfique des microorganismes dans l'industrie alimentaire : fermentation lactique (yaourt, fromage), fermentation alcoolique (pain, boissons).",
+      interactivite: "Schémas de fermentation · Comparaisons · QCM · Exemples concrets",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 6"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Milieu intérieur",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch7_Milieu_Interieur/Fiche__T1Ch7_Homeostasie.html",
+      ouvert: true,
+      description: "Comprenez le concept d'homéostasie : comment l'organisme maintient ses constantes biologiques (glycémie, pH, température). Fiche gratuite en accès libre.",
+      interactivite: "Schémas de régulation · Analyses sanguines · QCM · Exercices",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 7"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Excrétion urinaire",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch8_Excretion_Urinaire/Fiche__T1Ch8_Excretion_urinaire.html",
+      ouvert: false,
+      description: "Étudiez la structure du néphron et les mécanismes de l'excrétion urinaire : filtration glomérulaire, réabsorption tubulaire. Comprenez le rôle du rein dans l'homéostasie.",
+      interactivite: "Schéma animé du néphron · QCM · Comparaisons sang/urine · Exercices",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 8"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Régulation glycémie",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch9_Regulation_Glycemie/Fiche__T1Ch9_Glycemie.html",
+      ouvert: false,
+      description: "Maîtrisez la régulation de la glycémie : rôles du foie, du pancréas, de l'insuline et du glucagon. Distinguez diabète insulino-dépendant et non insulino-dépendant.",
+      interactivite: "Boucle de régulation interactive · QCM · Études de cas · Schémas",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 9"
+    },
+    {
+      theme: "Génétique",
+      chapitre: "Gènes et expression",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme2_Genetique/T2Ch1&2/Fiche__T2P1Ch1&2_genes_expression.html",
+      ouvert: true,
+      description: "Comprenez comment l'information génétique (ADN) s'exprime : transcription en ARNm, traduction en protéine. Étudiez les mutations et leur rôle dans la diversité génétique. Fiche gratuite.",
+      interactivite: "Animations transcription/traduction · Schémas · QCM · Code génétique",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 2 · Chapitres 1 & 2"
+    },
+    {
+      theme: "Génétique",
+      chapitre: "Génétique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme2_Genetique/T2Ch3&4&5/Fiche_T2P2Ch3&4&5_Genetique.html",
+      ouvert: false,
+      description: "Résolvez des problèmes de monohybridisme avec dominance et codominance. Maîtrisez le test-cross et l'interprétation chromosomique des croisements.",
+      interactivite: "Échiquiers de croisement interactifs · QCM · Problèmes guidés · Exercices",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 2 · Chapitres 3, 4 & 5"
+    },
+    {
+      theme: "Dynamique globe et évolution",
+      chapitre: "Géologie et évolution",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme3_Dynamique_Globe_Evolution/T3Ch1&2&3/Fiche__T3Ch123_Geologie_evolution.html",
+      ouvert: true,
+      description: "Explorez la structure du globe terrestre et la tectonique des plaques. Découvrez les liens entre évolution géologique et évolution biologique. Fiche gratuite.",
+      interactivite: "Schémas 3D · Cartes interactives · Frises chronologiques · QCM",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 3 · Chapitres 1, 2 & 3"
+    }
+  ],
+  "4ème": [
+    {
+      theme: "Reproduction et santé",
+      chapitre: "Reproduction homme",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme1_Reproduction_Humaine_Sante/Ch1_Fonction_Reproductrice_Homme/Fiche__T1Ch1_ReproductionHomme.html",
+      ouvert: false,
+      description: "Maîtrisez la spermatogenèse en 4 étapes et la régulation hormonale masculine. Comprenez le rôle des cellules de Sertoli, de Leydig et du complexe hypothalamo-hypophysaire.",
+      interactivite: "Schémas animés · Boucle de régulation · QCM · Coupes histologiques",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 1 · Chapitre 1"
+    },
+    {
+      theme: "Reproduction et santé",
+      chapitre: "Reproduction femme et procréation",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme1_Reproduction_Humaine_Sante/Ch2&3_Repfemm_Procreation/Fiche__T1__Ch2&3.html",
+      ouvert: true,
+      description: "Étudiez la folliculogenèse, le cycle ovarien et utérin. Comprenez la fécondation, la nidation et la régulation hormonale féminine. Fiche gratuite en accès libre.",
+      interactivite: "Schémas du cycle · Animation fécondation · QCM · Exercices",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 1 · Chapitres 2 & 3"
+    },
+    {
+      theme: "Génétique",
+      chapitre: "Génétique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme2_Genetique/Fiche__Theme2__Genetique_V2.html",
+      ouvert: false,
+      description: "Approfondissez le brassage génétique (interchromosomique et intrachromosomique). Résolvez des problèmes de dihybridisme avec gènes indépendants et liés.",
+      interactivite: "Échiquiers interactifs · Calculs de distance génétique · QCM · Problèmes",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 2 · Génétique"
+    },
+    {
+      theme: "Évolution biologique",
+      chapitre: "Évolution",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme3_Evolution_Biologique/Fiche__T3_Evolution_V2.html",
+      ouvert: false,
+      description: "Découvrez les preuves de l'évolution (paléontologie, anatomie comparée, embryologie). Comprenez les mécanismes : mutations, sélection naturelle, spéciation.",
+      interactivite: "Frises chronologiques · Comparaisons anatomiques · QCM · Arbres phylogénétiques",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 3 · Évolution"
+    },
+    {
+      theme: "Neurophysiologie",
+      chapitre: "Tissu nerveux et réflexe",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme4_Neurophysiologie/Ch1&Ch2_ReflexeMyotatique_TissuNerveux/Fiche__T4_Ch1&2_V2.html",
+      ouvert: true,
+      description: "Explorez la structure du neurone et de la synapse. Comprenez le réflexe myotatique, le potentiel de repos et le potentiel d'action. Fiche gratuite en accès libre.",
+      interactivite: "Animations PA · Schémas réflexe · QCM · Enregistrements virtuels",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 4 · Chapitres 1 & 2"
+    },
+    {
+      theme: "Neurophysiologie",
+      chapitre: "Muscle, pression, hygiène SN",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme4_Neurophysiologie/Chapitres3&4&5__Muscle_squelettique_Pression_arterielle_HygieneSN/Fiche__T4_Ch3&4&5__V2.html",
+      ouvert: false,
+      description: "Étudiez la contraction musculaire (sarcomère, Ca²⁺, complexe acto-myosine), la régulation de la pression artérielle et l'hygiène du système nerveux.",
+      interactivite: "Schémas contraction · Boucle pression · QCM · Conseils santé",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 4 · Chapitres 3, 4 & 5"
+    },
+    {
+      theme: "Immunité",
+      chapitre: "Soi/Non-soi et immunité",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme5_Immunite/Chapitres1&2__Soi_NonSoi_Immunité_specifique/Fiche_T5Ch1&2_V2.html",
+      ouvert: false,
+      description: "Maîtrisez les marqueurs du soi (HLA, groupes sanguins) et les mécanismes de l'immunité spécifique humorale (LB, anticorps) et cellulaire (LTc).",
+      interactivite: "Schémas interactifs · Tableaux comparatifs · QCM · Études de cas",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 5 · Chapitres 1 & 2"
+    },
+    {
+      theme: "Immunité",
+      chapitre: "Réponse et dysfonctionnement",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme5_Immunite/Chapitres3&4__Réponse_Immunitaire_Dysfonctionnement/Fiche_T5Ch3&4_V2.html",
+      ouvert: true,
+      description: "Comprenez les étapes de la réponse immunitaire (induction, amplification, effectrice). Étudiez les allergies et le SIDA comme dysfonctionnements. Fiche gratuite.",
+      interactivite: "Schémas coopération cellulaire · QCM · Études de cas · Prévention",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 5 · Chapitres 3 & 4"
+    }
+  ]
+};
+
+    function buildRevisionSidebar(){const sb=document.getElementById('revision-sidebar');sb.innerHTML='';const bp=document.createElement('button');bp.className='rev-tab active';bp.textContent='📚 Prog. Officiel';bp.onclick=()=>{sb.querySelectorAll('.rev-tab').forEach(b=>b.classList.remove('active'));bp.classList.add('active');showProgrammeOfficiel();};sb.appendChild(bp);const tt=new Set();Object.values(fichesCours).flat().forEach(f=>tt.add(f.theme));tt.forEach(th=>{const b=document.createElement('button');b.className='rev-tab';b.textContent=(themeIcons[th]||'📌')+' '+th;b.onclick=()=>{sb.querySelectorAll('.rev-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');showRevisionTheme(th);};sb.appendChild(b);});showProgrammeOfficiel();}
+    function showProgrammeOfficiel(){const c=document.getElementById('revision-content');let h='<div class="rev-title">📚 Programme Officiel SVT</div><div class="programme-accordeon">';Object.entries(fichesCours).forEach(([niv,fs])=>{const nl=niv==="1ère"?"1ère année":niv==="2ème"?"2ème année":niv==="3ème"?"3ème année":"4ème année";h+=`<div class="accordeon-niveau open"><button class="niveau-header">📘 ${nl}</button><div class="niveau-body">`;const tm=new Map();fs.forEach(f=>{if(!tm.has(f.theme))tm.set(f.theme,[]);tm.get(f.theme).push(f);});tm.forEach((ft,nm)=>{h+=`<div class="theme-block"><div class="theme-name">${themeIcons[nm]||'📌'} ${nm}</div>`;ft.forEach(f=>{h+=`<div class="chapitre-item"><div class="chapitre-name">${f.chapitre}</div>`;if(f.ouvert){h+=`<a href="${f.url}" target="_blank" class="fiche-link">🔗 Gratuit</a>`;}else{h+=`<span class="fiche-lock">🔒 Pack</span>`;}h+=`</div>`;});h+='</div>';});h+='</div></div>';});h+=`<div class="pack-promo"><h4>🛒 Pack Cours + QCM SVT — 30 DT</h4><p>Toutes les fiches + QCM</p><a href="../../commander.html" class="btn btn-gold">Commander</a></div></div>`;c.innerHTML=h;document.querySelectorAll('.niveau-header').forEach(b=>{b.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});}
+    function showRevisionTheme(th){const c=document.getElementById('revision-content');const mt=themeMapping[th]||th;const rd=resumesThemes[mt];let h=`<div class="rev-title">${themeIcons[th]||'📌'} ${th}</div>`;if(rd){h+=`<div class="rev-block"><h4>📘 NOTIONS ESSENTIELLES</h4><ul>${rd.notions.map(n=>'<li>'+n+'</li>').join('')}</ul></div>`;h+=`<div class="rev-block def-block"><h4>📖 DÉFINITIONS CLÉS</h4><ul>${rd.definitions.map(d=>'<li>'+d+'</li>').join('')}</ul></div>`;h+=`<div class="rev-block piege-block"><h4>⚠️ CONFUSIONS FRÉQUENTES</h4><ul>${rd.confusions.map(p=>'<li>'+p+'</li>').join('')}</ul></div>`;}Object.entries(fichesCours).forEach(([niv,fs])=>{const ft=fs.filter(f=>f.theme===th);if(ft.length>0){const nl=niv==="1ère"?"1ère":niv==="2ème"?"2ème":niv==="3ème"?"3ème":"4ème";h+=`<div class="rev-block"><h4>📘 ${nl} année — Fiches</h4>`;ft.forEach(f=>{h+=`<div style="margin-bottom:4px">${f.chapitre} : `;if(f.ouvert){h+=`<a href="${f.url}" target="_blank" class="fiche-link">🔗 Gratuit</a>`;}else{h+=`<span class="fiche-lock">🔒 Pack</span>`;}h+=`</div>`;});h+=`</div>`;}});h+=`<div class="pack-promo"><h4>🛒 Pack Cours + QCM SVT — 30 DT</h4><p>Toutes les fiches + QCM</p><a href="../../commander.html" class="btn btn-gold">Commander</a></div>`;c.innerHTML=h;}
+  </script>
+</body>
+</html>
