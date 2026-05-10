@@ -1287,10 +1287,607 @@
     const themeMapping={"Exploitation ressources géologiques":"Géologie","Gestion écosystèmes":"Écologie","Nutrition et santé":"Nutrition","Êtres vivants":"Biologie cellulaire","Reproduction et santé":"Reproduction et santé","Immunité":"Immunologie","Dynamique globe et évolution":"Géologie","Amélioration production végétale":"Nutrition","Microbes et organisme":"Immunologie","Découvrir gérer environnement":"Géologie","Évolution biologique":"Génétique","Géologie":"Géologie","Écologie":"Écologie","Immunologie":"Immunologie","Nutrition":"Nutrition","Biologie cellulaire":"Biologie cellulaire","Génétique":"Génétique","Neurophysiologie":"Neurophysiologie"};
 
     // ═══════════════ RÉSUMÉS DES THÈMES (MORCEAU 3 À COLLER ICI) ═══════════════
-    const resumesThemes = MORCEAU_3_RESUMES;
+    const resumesThemes = {
+  "Géologie": {
+    notions: [
+      "Structure du globe terrestre : croûte (continentale 30-70 km, océanique 5-10 km), manteau (asthénosphère ductile 100-670 km, mésosphère solide 670-2900 km), noyau externe liquide (2900-5150 km), noyau interne solide ou graine (5150-6371 km).",
+      "Discontinuités sismiques majeures : Moho (croûte-manteau, ~30 km sous continents, ~7 km sous océans), Gutenberg (manteau-noyau, 2900 km), Lehmann (noyau externe-interne, 5150 km).",
+      "Ondes sismiques P (primaires, compression, vitesse ~6-13 km/s, traversent solides et liquides) et S (secondaires, cisaillement, vitesse ~3,5-7 km/s, ne traversent PAS les liquides). Leur étude a permis de découvrir la structure interne du globe.",
+      "Roches magmatiques : basalte (roche volcanique microlithique, refroidissement rapide en surface, pauvre en silice ~50% SiO₂, riche en ferromagnésiens) vs granite (roche plutonique grenue, refroidissement lent en profondeur, riche en silice ~70% SiO₂, quartz + feldspaths).",
+      "Tectonique des plaques : la lithosphère rigide est divisée en plaques qui se déplacent sur l'asthénosphère ductile. Moteur : courants de convection dans le manteau (chaleur interne + désintégration radioactive).",
+      "Divergence (dorsales océaniques) : accrétion = création de lithosphère océanique par remontée magmatique. Failles transformantes segmentent les dorsales. Expansion océanique : l'âge et l'épaisseur des sédiments augmentent en s'éloignant de la dorsale.",
+      "Convergence : subduction (lithosphère océanique plonge sous une autre plaque → fosse océanique, volcanisme andésitique, séismes profonds plan de Wadati-Benioff). Collision continentale (orogenèse = formation de chaînes de montagnes, exemple : Alpes, Himalaya, Atlas).",
+      "Stratigraphie : principes de superposition (couche en dessous = plus ancienne), continuité (même couche = même âge), horizontalité originelle, recoupement. Fossiles stratigraphiques : bonne extension géographique, courte extension temporelle, abondance.",
+      "Ressources naturelles tunisiennes : pétrole (roche sédimentaire carbonée, bassin de Ghadamès, golfe de Gabès). Phosphates (Éocène inférieur Yprésien, bassin de Gafsa-Metlaoui, minéral = apatite). Eaux souterraines (nappe libre phréatique, nappe captive profonde).",
+      "Chaîne atlasique tunisienne : chaîne de collision intracontinentale (plaque africaine vs eurasiatique). Sédiments d'âge secondaire (Crétacé) plissés au Mio-Pliocène. Orientation NE-SW. Fait partie de la chaîne alpine."
+    ],
+    definitions: [
+      "Faille normale : structure tectonique résultant d'une distension (le toit descend par rapport au mur). Faille inverse : structure résultant d'une compression (le toit monte par rapport au mur).",
+      "Pendage : angle d'inclinaison d'une couche géologique par rapport au plan horizontal, mesuré en degrés.",
+      "Nappe aquifère : formation géologique perméable contenant de l'eau souterraine exploitable. Nappe libre (surface piézométrique = surface de la nappe). Nappe captive (emprisonnée entre deux couches imperméables, eau sous pression = artésianisme).",
+      "Accrétion : processus de création de lithosphère océanique au niveau d'une dorsale par refroidissement du magma.",
+      "Fossile stratigraphique : espèce fossile ayant une grande extension géographique et une courte durée de vie, utilisée pour dater les couches géologiques (ex : ammonites, nummulites)."
+    ],
+    confusions: [
+      "Faille normale (distension = étirement) ≠ faille inverse (compression = raccourcissement). Le nom 'inverse' ne signifie pas 'anormale'.",
+      "Ondes P (compression, traversent tout, plus rapides) ≠ ondes S (cisaillement, ne traversent pas les liquides, plus lentes). L'absence d'ondes S dans le noyau externe prouve sa liquidité.",
+      "Âge des roches (Secondaire/Crétacé pour l'Atlas) ≠ âge de la surrection/orogenèse (Mio-Pliocène/Tertiaire). Les roches se sont déposées bien avant d'être plissées.",
+      "Nappe libre (proche de la surface, alimentée par infiltration) ≠ nappe captive (profonde, entre deux couches imperméables, sous pression).",
+      "Structure microlithique (cristaux fins + verre volcanique, basalte) ≠ structure grenue (gros cristaux visibles, granite). C'est la vitesse de refroidissement qui détermine la structure, pas la composition."
+    ]
+  },
+  "Écologie": {
+    notions: [
+      "Écosystème = biotope (milieu physicochimique : température, humidité, lumière, nature du sol) + biocénose (ensemble des êtres vivants : producteurs, consommateurs, décomposeurs). Les deux sont en interaction permanente.",
+      "Relations trophiques : chaîne alimentaire (succession linéaire d'organismes où chacun mange le précédent) et réseau trophique (ensemble des chaînes interconnectées dans un écosystème).",
+      "Producteurs primaires (autotrophes) : végétaux chlorophylliens qui synthétisent la matière organique par photosynthèse. Consommateurs primaires/secondaires (hétérotrophes). Décomposeurs (bactéries, champignons) : minéralisation de la matière organique.",
+      "Pyramides écologiques : de nombres (individus), de biomasses (masse de matière vivante par unité de surface), d'énergie (productivité). Rendement énergétique ~10% d'un niveau à l'autre (pertes : respiration, chaleur, excrétion, non-consommation).",
+      "Cycle du carbone : fixation du CO₂ atmosphérique par photosynthèse → matière organique → respiration (retour CO₂) + minéralisation par décomposeurs (retour CO₂ et minéraux). Combustion des énergies fossiles = perturbation du cycle.",
+      "Niche écologique : rôle fonctionnel d'une espèce dans l'écosystème (régime alimentaire, période d'activité, mode de reproduction, interactions). Habitat = lieu de vie (adresse). Niche = profession. Principe d'exclusion compétitive : deux espèces ne peuvent occuper la même niche.",
+      "Interactions biologiques : prédation (+/-), parasitisme (+/-), compétition (-/-), symbiose (association étroite et durable), mutualisme (+/+), commensalisme (+/0).",
+      "Développement durable : exploitation des ressources sans compromettre leur renouvellement. Actions positives : reboisement, fixation des dunes, parcs nationaux, agriculture biologique. Actions négatives : déforestation, désertification, pollution, salinisation des sols."
+    ],
+    definitions: [
+      "Biotope : ensemble des conditions physicochimiques d'un milieu (température, lumière, pH, nature du sol). Biocénose : ensemble des êtres vivants (animaux, végétaux, microorganismes) vivant dans un biotope.",
+      "Productivité primaire : quantité de matière organique produite par les producteurs primaires par unité de surface et de temps (g/m²/an). Productivité nette = productivité brute - respiration des producteurs.",
+      "Minéralisation : transformation de la matière organique en matière minérale (CO₂, H₂O, sels minéraux) par les décomposeurs (bactéries, champignons). C'est la dernière étape des cycles biogéochimiques.",
+      "Niche écologique : rôle et position fonctionnelle d'une espèce dans l'écosystème, incluant ses relations trophiques, son habitat, sa période d'activité et ses interactions."
+    ],
+    confusions: [
+      "Niche (fonction, profession) ≠ habitat (adresse, lieu de vie). Deux espèces peuvent coexister dans le même habitat si leurs niches sont différentes.",
+      "Chaîne alimentaire (simple, linéaire) ≠ réseau trophique (complexe, interconnecté). Dans la nature, on trouve des réseaux trophiques, pas de chaînes isolées.",
+      "Symbiose (association étroite et durable) ≠ mutualisme (bénéfice réciproque). Une symbiose peut être mutualiste, parasitaire ou commensale. Les deux termes ne sont pas interchangeables.",
+      "Pyramide des nombres (peut être inversée : un arbre supporte de nombreux insectes) ≠ pyramide des biomasses ou d'énergie (toujours dressée car l'énergie se perd à chaque niveau)."
+    ]
+  },
+  "Immunologie": {
+    notions: [
+      "Soi et Non-soi : le système immunitaire distingue les cellules de l'organisme (soi) des éléments étrangers (non-soi) grâce aux marqueurs HLA (Human Leukocyte Antigen) codés par les gènes du CMH (Complexe Majeur d'Histocompatibilité) sur le chromosome 6.",
+      "Groupes sanguins ABO (chromosome 9, 3 allèles A,B,O → 6 génotypes) et Rhésus (chromosome 1, 2 allèles +,- → 3 génotypes). Antigènes (agglutinogènes) sur les hématies. Anticorps (agglutinines) dans le plasma. Règle de compatibilité : O- donneur universel, AB+ receveur universel.",
+      "Immunité non spécifique (innée) : barrières physiques (peau, muqueuses), réaction inflammatoire (macrophages, granulocytes), phagocytose. Réponse immédiate, sans mémoire.",
+      "Immunité spécifique (adaptative) : RIMH (Réaction Immunitaire à Médiation Humorale) : LB → plasmocytes → anticorps spécifiques circulants → complexe immun → élimination. RIMC (Réaction Immunitaire à Médiation Cellulaire) : LTc → perforine/granzyme → lyse des cellules infectées.",
+      "Coopération cellulaire : macrophage (cellule présentatrice) phagocyte l'antigène → le présente via CMH II → LT4 (helper) reconnaît → s'active → sécrète IL2 → active LB et LTc spécifiques. C'est une réponse en cascade.",
+      "Multiplication clonale : les lymphocytes activés se multiplient et se différencient en cellules effectrices (plasmocytes pour LB, LTc actifs) et cellules mémoire (réponse rapide lors d'un contact ultérieur).",
+      "Vaccination (immunité active artificielle) : injection d'un antigène (microbe atténué ou fragment) → l'organisme produit ses propres anticorps et cellules mémoire → protection durable. Sérothérapie (immunité passive artificielle) : injection d'anticorps préformés → protection immédiate mais temporaire.",
+      "Dysfonctionnements : allergie (hypersensibilité à un allergène, médiée par IgE). SIDA (VIH infecte les LT4 via CD4 → déficit immunitaire progressif → infections opportunistes)."
+    ],
+    definitions: [
+      "Antigène : substance reconnue comme étrangère par le système immunitaire, capable de déclencher une réponse immunitaire spécifique. Ex : protéines de surface d'un virus, toxine, pollen.",
+      "Anticorps (immunoglobuline) : protéine en forme de Y produite par les plasmocytes, capable de se lier spécifiquement à un antigène pour le neutraliser ou le marquer pour destruction.",
+      "HLA (Human Leukocyte Antigen) : glycoprotéines membranaires codées par les gènes du CMH (chromosome 6), présentes sur toutes les cellules nucléées, marqueurs du soi permettant la reconnaissance immunitaire.",
+      "Mémoire immunitaire : capacité du système immunitaire à répondre plus rapidement et plus efficacement lors d'un second contact avec un antigène, grâce aux lymphocytes mémoire."
+    ],
+    confusions: [
+      "HLA (chromosome 6, sur globules blancs et cellules nucléées) ≠ ABO (chromosome 9, sur globules rouges). Deux systèmes de marqueurs totalement distincts.",
+      "LB → anticorps (immunité humorale) ≠ LTc → lyse cellulaire directe (immunité cellulaire). LB et LTc ont des modes d'action différents.",
+      "Vaccination (préventive, induit une mémoire, protection durable) ≠ sérothérapie (curative, injection d'anticorps préformés, protection immédiate mais courte).",
+      "LT4 (CD4+, helper, activateur) ≠ LTc (CD8+, cytotoxique, tueur). Le VIH attaque les LT4, pas les LTc."
+    ]
+  },
+  "Nutrition": {
+    notions: [
+      "Glucides : oses (glucose, fructose), diholosides (saccharose, maltose), polyholosides (amidon végétal, glycogène animal, cellulose). Amidon et glycogène = polysaccharides de réserve ramifiés constitués de glucose.",
+      "Lipides : corps gras insolubles dans l'eau. Triglycérides = 3 acides gras + glycérol. Rôles : réserve énergétique, structure membranaire (phospholipides), isolation thermique.",
+      "Protéines : polymères d'acides aminés reliés par liaisons peptidiques. Rôles variés : enzymes (catalyse), structure (collagène), transport (hémoglobine), défense (anticorps). Information génétique portée par ADN → transcrit en ARNm → traduit en protéine.",
+      "Enzymes digestives : biocatalyseurs protéiques spécifiques. Amylase salivaire/pancréatique (amidon → maltose), pepsine gastrique (protéines → peptides, pH acide), trypsine pancréatique (protéines → peptides, pH basique), lipase pancréatique (lipides → acides gras + glycérol).",
+      "Photosynthèse : phase claire (thylakoïdes) = photolyse de l'eau (H₂O → ½O₂ + 2H⁺ + 2e⁻) + photophosphorylation (ADP → ATP). Phase sombre (stroma, cycle de Calvin) = fixation du CO₂ + réduction en glucose grâce à l'ATP et au NADPH.",
+      "Respiration cellulaire : glucose + O₂ → CO₂ + H₂O + ATP (36-38 ATP par glucose). Glycolyse (cytoplasme) → Cycle de Krebs (matrice mitochondriale) → Chaîne respiratoire (membrane interne). O₂ = accepteur final → H₂O.",
+      "Fermentation alcoolique (levures) : C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ + 2ATP. Anaérobie. Utilisée en boulangerie, brasserie, vinification.",
+      "Régulation glycémie : insuline (cellules β pancréas, hypoglycémiante : glycogénogenèse, entrée glucose cellules). Glucagon (cellules α pancréas, hyperglycémiant : glycogénolyse, néoglucogenèse). Foie = organe régulateur clé. Glycémie normale ~1 g/L.",
+      "Excrétion urinaire : néphron = unité fonctionnelle du rein. Filtration glomérulaire (plasma → urine primitive), réabsorption tubulaire (eau, glucose, Na⁺...), sécrétion tubulaire. Urée = déchet azoté éliminé. Aldostérone (corticosurrénale) = réabsorption Na⁺. ADH = réabsorption H₂O."
+    ],
+    definitions: [
+      "Enzyme : biocatalyseur protéique spécifique d'un substrat, possédant un site actif. Abaisse l'énergie d'activation. Sensible au pH et à la température.",
+      "Glycémie : concentration de glucose dans le sang. Valeur normale à jeun ~1 g/L (5,5 mmol/L). Régulée par insuline et glucagon.",
+      "Photophosphorylation : synthèse d'ATP couplée au transport d'électrons excité par la lumière dans la chaîne photosynthétique des thylakoïdes.",
+      "Homéostasie : maintien des constantes du milieu intérieur (glycémie, pH, température, pression artérielle...) malgré les variations externes."
+    ],
+    confusions: [
+      "Phase claire (lumière, thylakoïdes, ATP + O₂) ≠ phase sombre (obscurité, stroma, glucose). Les deux phases sont couplées mais distinctes.",
+      "O₂ respiré → H₂O (et NON CO₂). Le CO₂ expiré provient du carbone du glucose. L'O₂ est l'accepteur final d'électrons.",
+      "Insuline (hypoglycémiante, produite par pancréas) ≠ glucagon (hyperglycémiant, produit par pancréas). Le foie est la cible, pas la source.",
+      "Kwashiorkor (carence en protéines, œdèmes, ventre gonflé) ≠ marasme (carence calorique globale, amaigrissement extrême).",
+      "Fermentation (anaérobie, peu d'ATP) ≠ respiration (aérobie, beaucoup d'ATP). L'oxygène fait la différence."
+    ]
+  },
+  "Biologie cellulaire": {
+    notions: [
+      "Cellule eucaryote : noyau délimité par enveloppe nucléaire (pores nucléaires), organites membraneux (mitochondries, RE, Golgi, chloroplastes chez végétaux), cytosquelette. Taille 10-100 μm.",
+      "Cellule végétale vs animale : paroi pectocellulosique (rigidité), chloroplastes (photosynthèse), vacuole centrale (turgescence) = spécifiques végétaux. Membrane plasmique, noyau, mitochondries, RE, Golgi = communs.",
+      "Cellule procaryote (bactéries) : pas de noyau (ADN circulaire libre dans le cytoplasme), pas d'organites membraneux, ribosomes 70S uniquement, membrane plasmique. Taille 1-10 μm.",
+      "ADN (acide désoxyribonucléique) : polymère de nucléotides (phosphate + désoxyribose + base azotée A,T,C,G). Double hélice antiparallèle. Support universel de l'information génétique. Réplication semi-conservative (ADN polymérase).",
+      "ARN (acide ribonucléique) : polymère de ribonucléotides (phosphate + ribose + A,U,C,G). ARNm (copie de l'ADN), ARNt (transport des acides aminés, anticodon), ARNr (constituant des ribosomes).",
+      "Mitose : division cellulaire en 4 phases (prophase, métaphase, anaphase, télophase). Reproduction conforme : 2 cellules filles génétiquement identiques à la cellule mère (2n → 2n). Rôle : croissance, renouvellement cellulaire.",
+      "Méiose : deux divisions successives (I et II). Passage de 2n à n. Brassage génétique : interchromosomique (répartition aléatoire des chromosomes homologues) et intrachromosomique (crossing-over en prophase I). Rôle : formation des gamètes.",
+      "Caryotype : représentation ordonnée de l'ensemble des chromosomes d'une cellule. Espèce humaine : 46 chromosomes (23 paires). Autosomes (22 paires) + gonosomes (1 paire : XX ou XY)."
+    ],
+    definitions: [
+      "Nucléotide : unité de base des acides nucléiques, composée d'un groupement phosphate, d'un sucre (désoxyribose ou ribose) et d'une base azotée (A,T,C,G ou U).",
+      "Crossing-over (enjambement) : échange réciproque de segments chromatidiens entre chromosomes homologues appariés en prophase I de la méiose. Source de brassage intrachromosomique.",
+      "Caryotype : photographie ordonnée de l'ensemble des chromosomes d'une cellule en métaphase, classés par taille et position du centromère.",
+      "Mitose : division cellulaire produisant deux cellules filles génétiquement identiques à la cellule mère (même nombre de chromosomes : 2n → 2n)."
+    ],
+    confusions: [
+      "Cellule végétale (paroi + chloroplastes + vacuole) ≠ cellule animale (sans paroi ni chloroplastes, vacuoles petites). La membrane plasmique existe chez les deux.",
+      "Mitose (2n → 2n, reproduction conforme, 1 division) ≠ méiose (2n → n, production gamètes, brassage, 2 divisions). Ne pas confondre leurs rôles.",
+      "ADN (support de l'information génétique) ≠ protéine (produit de l'expression génétique). L'ADN est le plan, la protéine est le produit fini.",
+      "Nucléotide (monomère ADN/ARN) ≠ acide aminé (monomère des protéines). Deux types de briques moléculaires totalement différents.",
+      "Procaryote (pas de noyau, ADN libre) ≠ eucaryote (noyau vrai, ADN enfermé). Le ribosome est le seul organite commun aux deux types cellulaires."
+    ]
+  },
+  "Génétique": {
+    notions: [
+      "Méiose et brassage génétique : brassage interchromosomique (répartition aléatoire des chromosomes homologues en anaphase I → 2ⁿ gamètes possibles, n = nombre de paires). Brassage intrachromosomique (crossing-over en prophase I → échange de segments → chromatides remaniées).",
+      "Distance génétique (cM = centimorgan) : fréquence de recombinaison entre deux gènes liés. 1 cM = 1% de recombinaison. Permet d'établir des cartes factorielles.",
+      "Dihybridisme : gènes indépendants (situés sur des chromosomes différents) → proportions 9:3:3:1 en F2. Gènes liés (même chromosome) → majorité de phénotypes parentaux + quelques recombinés.",
+      "Épistasie : interaction entre deux gènes où l'un masque l'expression de l'autre. Épistasie récessive (9:3:4), épistasie dominante (12:3:1).",
+      "Hérédité autosomale dominante (malade = au moins un parent malade, pas de saut de génération). Récessive (deux parents sains peuvent avoir enfant malade, sauts de génération).",
+      "Hérédité liée à X récessive (fille malade = père forcément malade ; mère conductrice a 50% de fils malades). Dominante liée à X (père malade → toutes ses filles malades).",
+      "Polyallélisme ABO : 3 allèles (A, B, O) → 6 génotypes (AA, AO, BB, BO, AB, OO) → 4 phénotypes (A, B, AB, O). A et B codominants, O récessif. Rhésus : 2 allèles → 3 génotypes (++, +-, --) → 2 phénotypes (Rh+, Rh-). Total combiné ABO-Rh = 18 génotypes.",
+      "Équilibre de Hardy-Weinberg : p² + 2pq + q² = 1. Population en équilibre si grande, panmictique, sans mutation, migration, sélection ni dérive. Fréquence allélique : p = (2×homozygotes + hétérozygotes) / (2×N total)."
+    ],
+    definitions: [
+      "Crossing-over : échange réciproque de segments chromatidiens entre chromosomes homologues en prophase I. Produit des chromatides recombinées.",
+      "Distance génétique : pourcentage de recombinaison entre deux gènes liés, exprimé en centimorgans (cM). 1 cM = 1% de gamètes recombinés.",
+      "Test-cross : croisement d'un individu de phénotype dominant (génotype inconnu) avec un double récessif (génotype connu). Les proportions phénotypiques de la descendance révèlent le génotype du parent testé.",
+      "Épistasie : interaction entre deux gènes non alléliques où l'un (épistasique) masque l'expression de l'autre (hypostasique)."
+    ],
+    confusions: [
+      "Dominant ≠ fréquent. Une maladie dominante peut être rare dans la population. La dominance est une relation entre allèles, pas une fréquence.",
+      "Gènes liés (même chromosome, transmis ensemble sauf crossing-over) ≠ gènes indépendants (chromosomes différents, brassage interchromosomique).",
+      "Méiose (2n → n, réduction) ≠ fécondation (n + n → 2n, rétablissement). La méiose divise, la fécondation réunit.",
+      "Génotype (patrimoine génétique, ex: AO, BB) ≠ phénotype (expression visible, ex: groupe A, groupe B). Le génotype détermine le phénotype."
+    ]
+  },
+  "Reproduction et santé": {
+    notions: [
+      "Spermatogenèse (dans tubes séminifères, testicules) : 4 étapes : multiplication (spermatogonies 2n → mitoses), accroissement (spermatocytes I 2n), maturation (méiose : spermatocytes I → spermatocytes II → spermatides n), différenciation (spermatides → spermatozoïdes). Cellules de Sertoli (soutien, nutrition). Cellules de Leydig interstitielles (testostérone).",
+      "Régulation masculine : hypothalamus (GnRH) → hypophyse (FSH → Sertoli ; LH → Leydig → testostérone). Rétrocontrôle négatif : testostérone freine GnRH et LH.",
+      "Folliculogenèse ovarienne : follicule primordial → follicule primaire → follicule cavitaire → follicule mûr (De Graaf). Ovulation : expulsion de l'ovocyte II bloqué en métaphase II. Corps jaune : follicule transformé après ovulation (œstrogènes + progestérone).",
+      "Cycle ovarien (28 jours) : phase folliculaire (J1-J14, œstrogènes → épaississement endomètre). Ovulation (J14, pic LH). Phase lutéale (J15-J28, corps jaune → œstrogènes + progestérone → maintien endomètre). Sans fécondation → corps jaune régresse → règles.",
+      "Fécondation (trompe utérine, tiers supérieur) : rencontre gamètes → pénétration spermatozoïde → réaction ovulaire → achèvement division équationnelle de l'ovocyte II → caryogamie (fusion pronoyaux) → zygote 2n.",
+      "Grossesse : nidation (6-7ème jour, endomètre). Placenta (trophoblaste puis placenta définitif) : rôle trophique (nutriments, O₂), protecteur (barrière), hormonal (HCG maintient corps jaune → œstrogènes + progestérone → suspension cycle).",
+      "Contraception : pilule combinée (œstrogènes + progestérone) bloque l'ovulation par rétrocontrôle négatif sur axe hypothalamo-hypophysaire. Rend la glaire cervicale imperméable aux spermatozoïdes.",
+      "FIVETE (Fécondation In Vitro Et Transfert d'Embryon) : stimulation ovarienne → ponction folliculaire → fécondation in vitro → culture embryonnaire → transfert dans l'utérus. Remédie à certaines stérilités féminines et masculines."
+    ],
+    definitions: [
+      "LH (hormone lutéinisante) : gonadostimuline hypophysaire. Cibles : cellules de Leydig (testostérone) et cellules du corps jaune (progestérone).",
+      "Corps jaune (corpus luteum) : glande endocrine temporaire formée après l'ovulation à partir du follicule rompu. Sécrète œstrogènes ET progestérone.",
+      "HCG (hormone chorionique gonadotrophique) : hormone sécrétée par le trophoblaste puis le placenta. Maintient le corps jaune en début de grossesse. Détectée dans les tests de grossesse.",
+      "Caryogamie : fusion des deux pronoyaux mâle (n) et femelle (n) lors de la fécondation, aboutissant à un zygote diploïde (2n)."
+    ],
+    confusions: [
+      "Lieu de fécondation (trompe utérine, tiers supérieur) ≠ lieu de nidation (endomètre utérin). La fécondation ne se produit PAS dans l'utérus.",
+      "Corps jaune (œstrogènes + progestérone, après ovulation) ≠ follicule mûr (œstrogènes seulement, avant ovulation). Le corps jaune = follicule transformé.",
+      "HCG (produite par le placenta/trophoblaste) ≠ LH (produite par l'hypophyse). HCG remplace LH en début de grossesse pour maintenir le corps jaune.",
+      "Spermatogonies (cellules germinales diploïdes, multiplication) ≠ cellules de Leydig (cellules interstitielles endocrines, testostérone)."
+    ]
+  },
+  "Neurophysiologie": {
+    notions: [
+      "Tissu nerveux : neurones (corps cellulaire + dendrites + axone) et cellules gliales (soutien, nutrition, myélinisation). Synapse = zone de contact entre deux neurones (présynaptique → fente synaptique → postsynaptique).",
+      "Potentiel de repos : -70 mV (intérieur chargé négativement). Dû aux canaux de fuite K⁺ (sortie de K⁺) et à la pompe Na⁺/K⁺-ATPase (3 Na⁺ sortent, 2 K⁺ entrent).",
+      "Potentiel d'action (PA) : dépolarisation (ouverture canaux Na⁺ voltage-dépendants, entrée massive de Na⁺) → repolarisation (ouverture canaux K⁺ voltage-dépendants, sortie de K⁺) → hyperpolarisation transitoire. Loi du tout ou rien (PA déclenché si seuil atteint).",
+      "Propagation du PA : saltatoire dans les fibres myélinisées (gaine de myéline, nœuds de Ranvier) → rapide (jusqu'à 120 m/s). Continue dans les fibres amyélinisées → lente (0,5-2 m/s).",
+      "Transmission synaptique : arrivée PA → ouverture canaux Ca²⁺ voltage-dépendants → exocytose neurotransmetteur → fixation sur récepteurs postsynaptiques. Synapse excitatrice : PPSE (entrée Na⁺, dépolarisation). Synapse inhibitrice : PPSI (entrée Cl⁻, hyperpolarisation).",
+      "Codage du message nerveux : modulation de fréquence des PA (intensité stimulus = fréquence PA). Sommation spatiale (plusieurs synapses) et temporelle (PA rapprochés) au niveau du neurone postsynaptique.",
+      "Réflexe myotatique (ex: rotulien) : étirement musculaire → activation fuseau neuromusculaire (récepteur proprioceptif) → influx afférent (fibres sensitives) → moelle épinière → synapse directe avec motoneurone → influx efférent → contraction du muscle étiré. = réflexe monosynaptique.",
+      "Contraction musculaire : PA musculaire → libération Ca²⁺ du réticulum sarcoplasmique → Ca²⁺ se fixe sur troponine → démasquage des sites de fixation de l'actine → pont acto-myosine → glissement filaments fins sur épais → raccourcissement sarcomère. ATP nécessaire.",
+      "Régulation pression artérielle : barorécepteurs (sinus carotidien, crosse aortique) détectent pression. Hypotension → ↓ fréquence PA nerfs de Hering/Cyon → activation centre bulbaire → ↑ activité sympathique → ↑ fréquence cardiaque, vasoconstriction → ↑ pression."
+    ],
+    definitions: [
+      "PPSE (potentiel postsynaptique excitateur) : dépolarisation partielle de la membrane postsynaptique par entrée de Na⁺ via canaux chimio-dépendants, suite à la fixation d'un neurotransmetteur excitateur.",
+      "Fuseau neuromusculaire : récepteur sensoriel proprioceptif situé dans le muscle, sensible à l'étirement. Impliqué dans le réflexe myotatique.",
+      "Plaque motrice : synapse spécialisée entre la terminaison d'un motoneurone et une fibre musculaire squelettique. Neurotransmetteur = acétylcholine.",
+      "Sarcomère : unité contractile de la myofibrille, délimitée par deux stries Z, contenant filaments d'actine et de myosine."
+    ],
+    confusions: [
+      "PPSE (chimio-dépendant, gradué, sommable) ≠ PA (voltage-dépendant, tout-ou-rien). Le PPSE peut déclencher un PA si le seuil est atteint.",
+      "Réflexe myotatique (proprioceptif, fuseau neuromusculaire, monosynaptique) ≠ réflexe cutané (extéroceptif, récepteurs cutanés, polysynaptique).",
+      "Nerfs de Hering/Cyon (barorécepteurs, afférences sensitives) ≠ nerf X (parasympathique, efférence motrice).",
+      "Aldostérone (réabsorption Na⁺, tube distal, corticosurrénale) ≠ ADH (réabsorption H₂O, tube collecteur, posthypophyse)."
+    ]
+  }
+};
 
     // ═══════════════ FICHES DE COURS (MORCEAU 4 À COLLER ICI) ═══════════════
-    const fichesCours = MORCEAU_4_FICHES;
+  const fichesCours = {
+  "1ère": [
+    {
+      theme: "Amélioration production végétale",
+      chapitre: "Nutrition minérale",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch1_Nutrition_Minerale.html",
+      ouvert: false,
+      description: "Explorez les mécanismes d'absorption de l'eau et des sels minéraux par les plantes. Comprenez l'osmose, la turgescence et la plasmolyse à travers des expériences virtuelles interactives.",
+      interactivite: "Expériences virtuelles · Schémas à légender · QCM · Bilans à trous",
+      reference: "Programme officiel 1ère Sc · Thème 1 · Chapitre 1"
+    },
+    {
+      theme: "Amélioration production végétale",
+      chapitre: "Nutrition carbonée",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch2_Nutrition_carbonee.html",
+      ouvert: false,
+      description: "Maîtrisez le mécanisme de la photosynthèse : phase claire, phase sombre, photolyse de l'eau et synthèse de matière organique. Découvrez les facteurs qui influencent le rendement photosynthétique.",
+      interactivite: "Animations · Schémas interactifs · QCM progressifs · Études de cas",
+      reference: "Programme officiel 1ère Sc · Thème 1 · Chapitre 2"
+    },
+    {
+      theme: "Amélioration production végétale",
+      chapitre: "Multiplication végétative",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème1_Amélioration_production_végétale/fiche_cours_P1Ch3_Multiplication_vegetative.html",
+      ouvert: false,
+      description: "Découvrez les techniques de multiplication végétative : bouturage, marcottage, greffage. Comprenez leur importance pour la conservation des caractères héréditaires et l'amélioration de la production.",
+      interactivite: "Démonstrations · Comparaisons interactives · Quiz final",
+      reference: "Programme officiel 1ère Sc · Thème 1 · Chapitre 3"
+    },
+    {
+      theme: "Microbes et organisme",
+      chapitre: "Diversité du monde microbien",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème2__microbes_et_organisme/fiche_cours_P2Ch1_Diversite_monde_microbien.html",
+      ouvert: false,
+      description: "Explorez l'univers fascinant des microorganismes : bactéries, virus, protozoaires, champignons microscopiques. Apprenez à distinguer microbes pathogènes et microbes utiles.",
+      interactivite: "Galerie microscopique · Tableaux comparatifs · QCM",
+      reference: "Programme officiel 1ère Sc · Thème 2 · Chapitre 1"
+    },
+    {
+      theme: "Microbes et organisme",
+      chapitre: "Maladies infectieuses",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème2__microbes_et_organisme/fiche_cours_P2Ch2_Maladies_infectieuses.html",
+      ouvert: true,
+      description: "Comprenez les modes de transmission des maladies infectieuses et les moyens de prévention. Étude de cas concrets : grippe, tuberculose, paludisme. Fiche gratuite en accès libre.",
+      interactivite: "Études de cas · Schémas de contamination · Quiz diagnostiques · Conseils prévention",
+      reference: "Programme officiel 1ère Sc · Thème 2 · Chapitre 2"
+    },
+    {
+      theme: "Microbes et organisme",
+      chapitre: "Défense de l'organisme",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème2__microbes_et_organisme/fiche_cours_P2Ch3_Defense_organisme.html",
+      ouvert: false,
+      description: "Découvrez les barrières naturelles du corps humain et les mécanismes de défense immunitaire : immunité non spécifique et spécifique, vaccination et sérothérapie.",
+      interactivite: "Schémas animés · Comparaisons vaccin/sérum · QCM progressifs",
+      reference: "Programme officiel 1ère Sc · Thème 2 · Chapitre 3"
+    },
+    {
+      theme: "Découvrir gérer environnement",
+      chapitre: "Site géologique local",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème3__Découvrir_gérer_notre_environnement/fiche_cours_P3Ch1_Site_Geologique_Local-1.html",
+      ouvert: false,
+      description: "Apprenez à observer et analyser un paysage géologique local. Identifiez les roches, comprenez le modelé du relief et l'effet de l'érosion sur le terrain.",
+      interactivite: "Photos de terrain · Schémas d'interprétation · Exercices d'observation",
+      reference: "Programme officiel 1ère Sc · Thème 3 · Chapitre 1"
+    },
+    {
+      theme: "Découvrir gérer environnement",
+      chapitre: "Phosphates",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_1SECONDAIRE/Thème3__Découvrir_gérer_notre_environnement/fiche_cours_P3Ch2_Phosphates.html",
+      ouvert: true,
+      description: "Plongez dans l'étude des phosphates tunisiens : propriétés, composition chimique, genèse et importance économique. Fiche gratuite en accès libre.",
+      interactivite: "Carte des gisements · Analyse chimique interactive · QCM · Étude de documents",
+      reference: "Programme officiel 1ère Sc · Thème 3 · Chapitre 2"
+    }
+  ],
+  "2ème": [
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Carte topographique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch1_Carte_topographique/Fiche_T1Ch1_Carte_Topographique.html",
+      ouvert: false,
+      description: "Maîtrisez la lecture d'une carte topographique : échelle, courbes de niveau, équidistance, orientation. Réalisez des profils topographiques comme un géologue professionnel.",
+      interactivite: "Cartes interactives · Calculs d'échelle · Profils à construire · QCM",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 1"
+    },
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Stratigraphie et tectonique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch2_Stratigraphie_Tectonique/Fiche_T1Ch2_Stratigraphie_Tectonique.html",
+      ouvert: false,
+      description: "Comprenez les principes de la stratigraphie (superposition, continuité, âge relatif) et identifiez les structures tectoniques : plis, failles normales et inverses.",
+      interactivite: "Blocs diagrammes 3D · Simulations de plis et failles · QCM progressifs",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 2"
+    },
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Carte géologique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch3_Carte_geologique/Fiche_T1Ch3_Carte_Geologique.html",
+      ouvert: false,
+      description: "Apprenez à lire une carte géologique : affleurements, pendage, structures tectoniques. Réalisez une coupe géologique complète à partir des données de la carte.",
+      interactivite: "Cartes géologiques interactives · Coupes à construire · Exercices guidés",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 3"
+    },
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Ressources en eau",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch4_Ressources_eau/Fiche__T1Ch4_Ressources_Eau.html",
+      ouvert: false,
+      description: "Étudiez le cycle de l'eau, les nappes aquifères (libres et captives) et la gestion rationnelle des ressources hydriques en Tunisie. Cours interactif complet.",
+      interactivite: "Schémas animés · Carte hydrogéologique · QCM · Études de cas tunisiens",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 4"
+    },
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Phosphates",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch5_Phosphates/Fiche__T1Ch5_Phosphates.html",
+      ouvert: false,
+      description: "Approfondissez l'étude des phosphates : propriétés physicochimiques, genèse sédimentaire, gisements tunisiens et enjeux économiques pour la Tunisie.",
+      interactivite: "Carte interactive · Analyses chimiques · Documents historiques · QCM",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 5"
+    },
+    {
+      theme: "Exploitation ressources géologiques",
+      chapitre: "Pétrole",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme1_Exploitation_Ressources_Geologiques/Ch6_Petrole/Fiche__T1Ch6_Petrole.html",
+      ouvert: true,
+      description: "Découvrez la formation du pétrole, son exploration et son exploitation. Comprenez pourquoi le pétrole est classé comme une roche sédimentaire carbonée. Fiche gratuite.",
+      interactivite: "Schémas de formation · Carte des gisements tunisiens · QCM · Vidéos",
+      reference: "Programme officiel 2ème Sc · Thème 1 · Chapitre 6"
+    },
+    {
+      theme: "Gestion écosystèmes",
+      chapitre: "Écosystème",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme2_Gestion_Ecosystemes/Ch1_Notion_ecosysteme/Fiche__T2Ch1_Ecosysteme.html",
+      ouvert: false,
+      description: "Maîtrisez les concepts de biotope, biocénose, population et peuplement. Identifiez les composantes d'un écosystème et leurs interactions mutuelles.",
+      interactivite: "Schémas interactifs · Sortie virtuelle · QCM · Exercices d'identification",
+      reference: "Programme officiel 2ème Sc · Thème 2 · Chapitre 1"
+    },
+    {
+      theme: "Gestion écosystèmes",
+      chapitre: "Adaptation des êtres vivants",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme2_Gestion_Ecosystemes/Ch2_Adaptation_etres_vivants/Fiche__T2Ch2_Adaptation_climatique.html",
+      ouvert: false,
+      description: "Découvrez comment les plantes et les animaux s'adaptent aux conditions climatiques extrêmes. Étudiez les adaptations morphologiques, physiologiques et comportementales.",
+      interactivite: "Galerie photo · Comparaisons interactives · QCM · Exercices d'analyse",
+      reference: "Programme officiel 2ème Sc · Thème 2 · Chapitre 2"
+    },
+    {
+      theme: "Gestion écosystèmes",
+      chapitre: "Répartition des végétaux",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme2_Gestion_Ecosystemes/Ch3_Repartition_vegetaux/Fiche__T2Ch3_Répartition.html",
+      ouvert: false,
+      description: "Comprenez le lien entre la répartition des végétaux en Tunisie et les facteurs climatiques. Calculez le quotient pluviothermique d'Emberger et déterminez les étages bioclimatiques.",
+      interactivite: "Carte interactive · Calculs de quotient · QCM · Exercices pratiques",
+      reference: "Programme officiel 2ème Sc · Thème 2 · Chapitre 3"
+    },
+    {
+      theme: "Gestion écosystèmes",
+      chapitre: "Relations trophiques",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme2_Gestion_Ecosystemes/Ch4_Relations_trophiques/Fiche__T2Ch4_Relations_Trophiques.html",
+      ouvert: false,
+      description: "Étudiez les chaînes et réseaux alimentaires, les pyramides écologiques et le cycle du carbone. Comprenez le rôle crucial des décomposeurs dans la minéralisation.",
+      interactivite: "Schémas interactifs · Pyramides à construire · QCM · Exercices",
+      reference: "Programme officiel 2ème Sc · Thème 2 · Chapitre 4"
+    },
+    {
+      theme: "Gestion écosystèmes",
+      chapitre: "Développement durable",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme2_Gestion_Ecosystemes/Ch5_Developpement_durable/Fiche__T2Ch5_DD.html",
+      ouvert: false,
+      description: "Prenez conscience des actions négatives de l'Homme sur l'environnement (désertification, pollution) et découvrez les solutions durables (reboisement, parcs nationaux, assainissement).",
+      interactivite: "Études de cas tunisiens · Cartes · QCM · Propositions de solutions",
+      reference: "Programme officiel 2ème Sc · Thème 2 · Chapitre 5"
+    },
+    {
+      theme: "Êtres vivants",
+      chapitre: "Cellule",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme3_Etres_vivants/Ch1_Cellule/Fiche__T3Ch1_Cellule.html",
+      ouvert: true,
+      description: "Explorez l'unité de structure du monde vivant : la cellule. Comparez cellules animale et végétale, découvrez les organites et leurs fonctions. Fiche gratuite en accès libre.",
+      interactivite: "Schémas interactifs · Comparaisons · QCM · Légendes à compléter",
+      reference: "Programme officiel 2ème Sc · Thème 3 · Chapitre 1"
+    },
+    {
+      theme: "Êtres vivants",
+      chapitre: "Espèce et lignée",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme3_Etres_vivants/Ch2_Espece_Lignee/Fiche__T3Ch2_Lignee_Espece.html",
+      ouvert: false,
+      description: "Définissez la notion d'espèce et ses critères d'identification (ressemblance, interfécondité). Distinguez espèce, variété, lignée et caractère héréditaire.",
+      interactivite: "Galerie d'espèces · Tableaux comparatifs · QCM · Exercices",
+      reference: "Programme officiel 2ème Sc · Thème 3 · Chapitre 2"
+    },
+    {
+      theme: "Êtres vivants",
+      chapitre: "Mitose",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme3_Etres_vivants/Ch3_Mitose/Fiche__T3Ch3_Reproduction_conforme.html",
+      ouvert: true,
+      description: "Maîtrisez les étapes de la mitose : prophase, métaphase, anaphase, télophase. Comprenez comment la mitose assure la reproduction conforme des cellules. Fiche gratuite.",
+      interactivite: "Animations · Schémas à légender · QCM · Cycle chromosomique interactif",
+      reference: "Programme officiel 2ème Sc · Thème 3 · Chapitre 3"
+    },
+    {
+      theme: "Êtres vivants",
+      chapitre: "Information génétique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_2SECONDAIRE/Theme3_Etres_vivants/Ch4_Information_genetique/Fiche__T3Ch4_Information_Genetique.html",
+      ouvert: false,
+      description: "Découvrez l'ADN comme support de l'information génétique. Comprenez sa structure en double hélice, sa composition chimique et le mécanisme de réplication semi-conservative.",
+      interactivite: "Modèle 3D ADN · Schémas de réplication · QCM · Expérience de Griffith",
+      reference: "Programme officiel 2ème Sc · Thème 3 · Chapitre 4"
+    }
+  ],
+  "3ème": [
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Malnutrition",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Partie1_Alimentation_Saine_Equilibree/Ch1_Malnutrition/Fiche__T1Ch1__Malnutrition.html",
+      ouvert: false,
+      description: "Identifiez les risques liés à la malnutrition : obésité, carences alimentaires (Kwashiorkor, marasme, avitaminoses). Adoptez une alimentation saine et équilibrée.",
+      interactivite: "Études de cas · Tableaux nutritionnels · QCM · Bilans personnalisés",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 1"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Besoins nutritionnels",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Partie1_Alimentation_Saine_Equilibree/Ch2_Besoins_Nutritionnels/Fiche__T1Ch2__Besoins_nutritionnels.html",
+      ouvert: false,
+      description: "Déterminez les besoins qualitatifs et quantitatifs de l'organisme humain. Apprenez à composer des rations alimentaires équilibrées selon l'âge, le sexe et l'activité.",
+      interactivite: "Calculateur de besoins · Compositions de repas · QCM · Exercices",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 2"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Digestion",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch3_Digestion/Fiche__T1Ch3__Digestion.html",
+      ouvert: false,
+      description: "Suivez le parcours des aliments dans le tube digestif. Comprenez l'action des enzymes digestives et la simplification moléculaire des glucides, protides et lipides.",
+      interactivite: "Schémas animés · Tableaux enzymatiques · QCM · Expériences virtuelles",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 3"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Respiration cellulaire",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch4_Respiration_Cellulaire/Fiche__T1Ch4__Respiration_Cellulaire.html",
+      ouvert: false,
+      description: "Plongez au cœur de la mitochondrie pour comprendre la respiration cellulaire : glycolyse, cycle de Krebs, chaîne respiratoire. Calculez le bilan énergétique en ATP.",
+      interactivite: "Schémas interactifs · Calculs d'ATP · QCM · Animations",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 4"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Aliments contaminés",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch5_Aliments_Contamines/Fiche__T1Ch5_Aliments_contamines.html",
+      ouvert: false,
+      description: "Identifiez les risques liés à la contamination chimique et biologique des aliments. Apprenez les règles d'hygiène pour prévenir les toxi-infections alimentaires et les parasitoses.",
+      interactivite: "Études de cas · Schémas de contamination · QCM · Conseils pratiques",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 5"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Microorganismes utiles",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch6_Microorganismes_Utiles/Fiche__T1Ch6_Microorganismes_aliments.html",
+      ouvert: false,
+      description: "Découvrez le rôle bénéfique des microorganismes dans l'industrie alimentaire : fermentation lactique (yaourt, fromage), fermentation alcoolique (pain, boissons).",
+      interactivite: "Schémas de fermentation · Comparaisons · QCM · Exemples concrets",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 6"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Milieu intérieur",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch7_Milieu_Interieur/Fiche__T1Ch7_Homeostasie.html",
+      ouvert: true,
+      description: "Comprenez le concept d'homéostasie : comment l'organisme maintient ses constantes biologiques (glycémie, pH, température). Fiche gratuite en accès libre.",
+      interactivite: "Schémas de régulation · Analyses sanguines · QCM · Exercices",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 7"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Excrétion urinaire",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch8_Excretion_Urinaire/Fiche__T1Ch8_Excretion_urinaire.html",
+      ouvert: false,
+      description: "Étudiez la structure du néphron et les mécanismes de l'excrétion urinaire : filtration glomérulaire, réabsorption tubulaire. Comprenez le rôle du rein dans l'homéostasie.",
+      interactivite: "Schéma animé du néphron · QCM · Comparaisons sang/urine · Exercices",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 8"
+    },
+    {
+      theme: "Nutrition et santé",
+      chapitre: "Régulation glycémie",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme1_Nutrition_Sante/Ch9_Regulation_Glycemie/Fiche__T1Ch9_Glycemie.html",
+      ouvert: false,
+      description: "Maîtrisez la régulation de la glycémie : rôles du foie, du pancréas, de l'insuline et du glucagon. Distinguez diabète insulino-dépendant et non insulino-dépendant.",
+      interactivite: "Boucle de régulation interactive · QCM · Études de cas · Schémas",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 1 · Chapitre 9"
+    },
+    {
+      theme: "Génétique",
+      chapitre: "Gènes et expression",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme2_Genetique/T2Ch1&2/Fiche__T2P1Ch1&2_genes_expression.html",
+      ouvert: true,
+      description: "Comprenez comment l'information génétique (ADN) s'exprime : transcription en ARNm, traduction en protéine. Étudiez les mutations et leur rôle dans la diversité génétique. Fiche gratuite.",
+      interactivite: "Animations transcription/traduction · Schémas · QCM · Code génétique",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 2 · Chapitres 1 & 2"
+    },
+    {
+      theme: "Génétique",
+      chapitre: "Génétique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme2_Genetique/T2Ch3&4&5/Fiche_T2P2Ch3&4&5_Genetique.html",
+      ouvert: false,
+      description: "Résolvez des problèmes de monohybridisme avec dominance et codominance. Maîtrisez le test-cross et l'interprétation chromosomique des croisements.",
+      interactivite: "Échiquiers de croisement interactifs · QCM · Problèmes guidés · Exercices",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 2 · Chapitres 3, 4 & 5"
+    },
+    {
+      theme: "Dynamique globe et évolution",
+      chapitre: "Géologie et évolution",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_3SECONDAIRE/Theme3_Dynamique_Globe_Evolution/T3Ch1&2&3/Fiche__T3Ch123_Geologie_evolution.html",
+      ouvert: true,
+      description: "Explorez la structure du globe terrestre et la tectonique des plaques. Découvrez les liens entre évolution géologique et évolution biologique. Fiche gratuite.",
+      interactivite: "Schémas 3D · Cartes interactives · Frises chronologiques · QCM",
+      reference: "Programme officiel 3ème Sc.Exp · Thème 3 · Chapitres 1, 2 & 3"
+    }
+  ],
+  "4ème": [
+    {
+      theme: "Reproduction et santé",
+      chapitre: "Reproduction homme",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme1_Reproduction_Humaine_Sante/Ch1_Fonction_Reproductrice_Homme/Fiche__T1Ch1_ReproductionHomme.html",
+      ouvert: false,
+      description: "Maîtrisez la spermatogenèse en 4 étapes et la régulation hormonale masculine. Comprenez le rôle des cellules de Sertoli, de Leydig et du complexe hypothalamo-hypophysaire.",
+      interactivite: "Schémas animés · Boucle de régulation · QCM · Coupes histologiques",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 1 · Chapitre 1"
+    },
+    {
+      theme: "Reproduction et santé",
+      chapitre: "Reproduction femme et procréation",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme1_Reproduction_Humaine_Sante/Ch2&3_Repfemm_Procreation/Fiche__T1__Ch2&3.html",
+      ouvert: true,
+      description: "Étudiez la folliculogenèse, le cycle ovarien et utérin. Comprenez la fécondation, la nidation et la régulation hormonale féminine. Fiche gratuite en accès libre.",
+      interactivite: "Schémas du cycle · Animation fécondation · QCM · Exercices",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 1 · Chapitres 2 & 3"
+    },
+    {
+      theme: "Génétique",
+      chapitre: "Génétique",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme2_Genetique/Fiche__Theme2__Genetique_V2.html",
+      ouvert: false,
+      description: "Approfondissez le brassage génétique (interchromosomique et intrachromosomique). Résolvez des problèmes de dihybridisme avec gènes indépendants et liés.",
+      interactivite: "Échiquiers interactifs · Calculs de distance génétique · QCM · Problèmes",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 2 · Génétique"
+    },
+    {
+      theme: "Évolution biologique",
+      chapitre: "Évolution",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme3_Evolution_Biologique/Fiche__T3_Evolution_V2.html",
+      ouvert: false,
+      description: "Découvrez les preuves de l'évolution (paléontologie, anatomie comparée, embryologie). Comprenez les mécanismes : mutations, sélection naturelle, spéciation.",
+      interactivite: "Frises chronologiques · Comparaisons anatomiques · QCM · Arbres phylogénétiques",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 3 · Évolution"
+    },
+    {
+      theme: "Neurophysiologie",
+      chapitre: "Tissu nerveux et réflexe",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme4_Neurophysiologie/Ch1&Ch2_ReflexeMyotatique_TissuNerveux/Fiche__T4_Ch1&2_V2.html",
+      ouvert: true,
+      description: "Explorez la structure du neurone et de la synapse. Comprenez le réflexe myotatique, le potentiel de repos et le potentiel d'action. Fiche gratuite en accès libre.",
+      interactivite: "Animations PA · Schémas réflexe · QCM · Enregistrements virtuels",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 4 · Chapitres 1 & 2"
+    },
+    {
+      theme: "Neurophysiologie",
+      chapitre: "Muscle, pression, hygiène SN",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme4_Neurophysiologie/Chapitres3&4&5__Muscle_squelettique_Pression_arterielle_HygieneSN/Fiche__T4_Ch3&4&5__V2.html",
+      ouvert: false,
+      description: "Étudiez la contraction musculaire (sarcomère, Ca²⁺, complexe acto-myosine), la régulation de la pression artérielle et l'hygiène du système nerveux.",
+      interactivite: "Schémas contraction · Boucle pression · QCM · Conseils santé",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 4 · Chapitres 3, 4 & 5"
+    },
+    {
+      theme: "Immunité",
+      chapitre: "Soi/Non-soi et immunité",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme5_Immunite/Chapitres1&2__Soi_NonSoi_Immunité_specifique/Fiche_T5Ch1&2_V2.html",
+      ouvert: false,
+      description: "Maîtrisez les marqueurs du soi (HLA, groupes sanguins) et les mécanismes de l'immunité spécifique humorale (LB, anticorps) et cellulaire (LTc).",
+      interactivite: "Schémas interactifs · Tableaux comparatifs · QCM · Études de cas",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 5 · Chapitres 1 & 2"
+    },
+    {
+      theme: "Immunité",
+      chapitre: "Réponse et dysfonctionnement",
+      url: "https://mohammedchagra18-dotcom.github.io/SVT_TUNISIE_4SECONDAIRE/Theme5_Immunite/Chapitres3&4__Réponse_Immunitaire_Dysfonctionnement/Fiche_T5Ch3&4_V2.html",
+      ouvert: true,
+      description: "Comprenez les étapes de la réponse immunitaire (induction, amplification, effectrice). Étudiez les allergies et le SIDA comme dysfonctionnements. Fiche gratuite.",
+      interactivite: "Schémas coopération cellulaire · QCM · Études de cas · Prévention",
+      reference: "Programme officiel 4ème Sc.Exp · Thème 5 · Chapitres 3 & 4"
+    }
+  ]
+};
 
     function buildRevisionSidebar(){const sb=document.getElementById('revision-sidebar');sb.innerHTML='';const bp=document.createElement('button');bp.className='rev-tab active';bp.textContent='📚 Prog. Officiel';bp.onclick=()=>{sb.querySelectorAll('.rev-tab').forEach(b=>b.classList.remove('active'));bp.classList.add('active');showProgrammeOfficiel();};sb.appendChild(bp);const tt=new Set();Object.values(fichesCours).flat().forEach(f=>tt.add(f.theme));tt.forEach(th=>{const b=document.createElement('button');b.className='rev-tab';b.textContent=(themeIcons[th]||'📌')+' '+th;b.onclick=()=>{sb.querySelectorAll('.rev-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');showRevisionTheme(th);};sb.appendChild(b);});showProgrammeOfficiel();}
     function showProgrammeOfficiel(){const c=document.getElementById('revision-content');let h='<div class="rev-title">📚 Programme Officiel SVT</div><div class="programme-accordeon">';Object.entries(fichesCours).forEach(([niv,fs])=>{const nl=niv==="1ère"?"1ère année":niv==="2ème"?"2ème année":niv==="3ème"?"3ème année":"4ème année";h+=`<div class="accordeon-niveau open"><button class="niveau-header">📘 ${nl}</button><div class="niveau-body">`;const tm=new Map();fs.forEach(f=>{if(!tm.has(f.theme))tm.set(f.theme,[]);tm.get(f.theme).push(f);});tm.forEach((ft,nm)=>{h+=`<div class="theme-block"><div class="theme-name">${themeIcons[nm]||'📌'} ${nm}</div>`;ft.forEach(f=>{h+=`<div class="chapitre-item"><div class="chapitre-name">${f.chapitre}</div>`;if(f.ouvert){h+=`<a href="${f.url}" target="_blank" class="fiche-link">🔗 Gratuit</a>`;}else{h+=`<span class="fiche-lock">🔒 Pack</span>`;}h+=`</div>`;});h+='</div>';});h+='</div></div>';});h+=`<div class="pack-promo"><h4>🛒 Pack Cours + QCM SVT — 30 DT</h4><p>Toutes les fiches + QCM</p><a href="../../commander.html" class="btn btn-gold">Commander</a></div></div>`;c.innerHTML=h;document.querySelectorAll('.niveau-header').forEach(b=>{b.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});}
