@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Synapris — QCM CAPES Physique 2009</title>
+  <link rel="icon" type="image/png"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23005c3a'/%3E%3Ctext x='50' y='68' font-size='60' font-family='Inter,sans-serif' font-weight='800' fill='%232ecc71' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#005c3a;--primary-mid:#007a4d;--accent:#2ecc71;--accent-dark:#27ae60;--green:#2e7d32;--green-light:#e8f5e9;--red:#c62828;--red-light:#ffebee;--orange:#ef6c00;--white:#ffffff;--gray-light:#f5f7fa;--gray:#90a4ae;--sky-deep:#3b82f6;--sky-card:#eff6ff;--sky-border:#93c5fd;--shadow:0 4px 20px rgba(0,92,58,0.10);--shadow-sm:0 2px 8px rgba(0,92,58,0.08);--radius:12px;--font-ar:'Amiri',serif;--font-heading:'Inter',sans-serif;--font-fr:'Source Sans 3',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{font-family:var(--font-fr);font-size:18px;line-height:1.6;background:linear-gradient(160deg,#f0fdf6 0%,#f0faf4 45%,#f5fef8 100%);color:#1a1a2e;display:flex;flex-direction:column}
+    .site-header{background:linear-gradient(135deg,#003820 0%,#005c3a 100%);color:var(--white);padding:14px 20px;flex-shrink:0;box-shadow:0 3px 16px rgba(0,0,0,0.35)}
+    .header-grid{display:grid;grid-template-columns:130px 1fr 280px;gap:14px;align-items:center}
+    .header-col1{display:flex;flex-direction:column;align-items:center;gap:6px}
+    .logo-square{width:100px;height:100px;border-radius:18px;background:#ffffff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:42px;font-weight:800;color:var(--primary);border:3px solid var(--white);box-shadow:0 0 0 5px rgba(255,255,255,0.20);overflow:hidden}
+    .logo-square img{width:100%;height:100%;object-fit:cover}
+    .header-col1 .verset{font-family:var(--font-ar);font-size:16px;font-weight:700;color:var(--accent);text-align:center;font-style:italic;line-height:1.3}
+    .header-col2{background:#d4f5e2;border-radius:12px;padding:14px 16px;text-align:center}
+    .header-col2 .concours-ar{font-family:var(--font-ar);font-size:16px;font-weight:800;color:#005c3a;line-height:1.4;margin-bottom:6px;direction:rtl}
+    .header-col2 .specialite{font-family:var(--font-ar);font-size:13px;color:#005c3a;font-weight:700;direction:rtl}
+    .header-col3{text-align:center}
+    .header-col3 .accroche{font-family:var(--font-heading);font-size:14px;font-weight:600;color:var(--accent);margin-bottom:4px}
+    .header-col3 .marque{font-size:20px;font-weight:800;color:var(--white);letter-spacing:1px}
+    .header-col3 .marque span{color:var(--accent)}
+    .header-col3 .session{font-size:11px;color:rgba(255,255,255,0.75);margin-bottom:8px}
+    .header-col3 .titre-epreuve{font-size:26px;font-weight:800;color:var(--accent);letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.30)}
+    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:10px 20px;display:flex;align-items:center;gap:14px;font-size:14px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
+    .mini-bar .mb-progress{flex:1;min-width:80px;display:flex;align-items:center;gap:10px}
+    .mb-progress span{font-size:16px;font-weight:700}
+    .mb-progress-bar{flex:1;height:8px;background:#e0e5ec;border-radius:4px;overflow:hidden}
+    .mb-progress-fill{height:100%;background:linear-gradient(90deg,var(--accent-dark),var(--accent));border-radius:4px;transition:width .4s ease}
+    .mb-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:14px;font-weight:700;font-size:12px;white-space:nowrap}
+    .mb-badge.mode-badge{background:#e8f0fb;color:var(--sky-deep)}
+    .mb-badge.client-badge{background:#fff3e0;color:var(--accent-dark)}
+    .main-scroll{flex:1;overflow-y:auto;padding:12px 0 8px}
+    .main-content{max-width:1100px;margin:0 auto;padding:0 18px 20px}
+    .page{display:none}
+    .page.active{display:block;animation:fadeIn .35s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 28px;margin-bottom:18px;border-left:6px solid var(--primary)}
+    .card.sky{border-left-color:var(--sky-deep);background:#fafcff}
+    .card-title{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+    .btn{font-family:var(--font-fr);font-size:15px;font-weight:600;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover:not(:disabled){background:var(--primary-mid)}
+    .btn-sky{background:var(--sky-deep);color:var(--white)}.btn-sky:hover:not(:disabled){background:#2563eb}
+    .btn-green{background:var(--green);color:var(--white)}.btn-green:hover:not(:disabled){background:#388e3c}
+    .btn-gold{background:var(--accent);color:#005c3a;font-weight:700}.btn-gold:hover:not(:disabled){background:var(--accent-dark);color:#fff}
+    .btn-gray{background:#6c757d;color:var(--white)}.btn-gray:hover:not(:disabled){background:#5a6268}
+    .btn-outline-white{border:2px solid var(--white);color:var(--white);background:transparent;font-size:13px;padding:8px 16px}.btn-outline-white:hover{background:rgba(255,255,255,0.10)}
+    .btn-whatsapp{background:#25d366;color:var(--white)}.btn-whatsapp:hover{background:#1ebe57}
+    .btn-block{display:flex;width:100%;margin-top:14px;font-size:16px;padding:14px}
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 16px;max-width:560px;margin-left:auto;margin-right:auto}
+    .mode-card{background:#f8faff;border:2px solid var(--sky-border);border-radius:var(--radius);padding:22px 14px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+    .mode-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--sky-deep);transform:scaleX(0);transform-origin:center;transition:transform .2s}
+    .mode-card:hover::after,.mode-card.selected::after{transform:scaleX(1)}
+    .mode-card:hover,.mode-card.selected{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sky-deep)}
+    .mode-card.exam-card::after{background:var(--red)}.mode-card.exam-card:hover,.mode-card.exam-card.selected{border-color:var(--red);background:#fff5f5}
+    .mode-icon{font-size:36px;display:block;margin-bottom:6px}.mode-name{font-size:17px;font-weight:700;color:var(--primary)}
+    .mode-desc{font-size:13px;color:var(--gray);margin-top:4px;line-height:1.5}
+    .notice-box{background:#fffdf5;border:2px dashed var(--accent);border-radius:12px;padding:16px 20px;margin:12px 0 0;font-size:15px;line-height:1.6;display:flex;align-items:flex-start;gap:12px}
+    .notice-box .notice-icon{font-size:28px;flex-shrink:0;margin-top:2px}
+    .ref-btn{background:transparent;border:1.5px dashed var(--gray);color:var(--gray);font-size:13px;padding:8px 16px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:10px 0 0;transition:all .2s}
+    .ref-btn:hover{border-color:var(--accent);color:var(--accent);background:#fffdf5}
+    .question-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+    .q-left{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;border:1.5px solid var(--sky-border)}
+    .q-right{min-height:120px}
+    .question-statement{font-size:16px;color:#1a1a2e;line-height:1.8;margin-bottom:14px;padding:14px 18px;background:#f8faff;border-radius:12px;border-left:5px solid var(--accent);user-select:text}
+    .choices-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+    .choice-btn{font-family:var(--font-fr);font-size:15px;padding:11px 16px;border:2px solid var(--sky-border);border-radius:12px;background:var(--white);color:#1a1a2e;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:flex-start;gap:10px;width:100%}
+    .choice-btn:hover:not(:disabled){background:#f0f6ff;border-color:var(--sky-deep)}
+    .choice-btn.selected{background:#e8f0ff;border-color:var(--sky-deep);box-shadow:0 0 0 4px rgba(59,130,246,0.15)}
+    .choice-btn.correct{background:var(--green-light);border-color:var(--green);color:var(--green);font-weight:600}
+    .choice-btn.wrong{background:var(--red-light);border-color:var(--red);color:var(--red)}
+    .choice-btn:disabled{cursor:default}
+    .choice-letter{width:30px;height:30px;border-radius:50%;background:var(--primary);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;margin-top:2px}
+    .choice-btn.correct .choice-letter{background:var(--green)}.choice-btn.wrong .choice-letter{background:var(--red)}.choice-btn.selected .choice-letter{background:var(--sky-deep)}
+    .choice-text{flex:1}
+    .validate-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .nav-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .nav-row .btn-group{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .feedback-placeholder{background:#f8faff;border:2px dashed var(--sky-border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:140px;padding:24px 16px;text-align:center;color:var(--gray)}
+    .feedback-placeholder .ph-icon{font-size:36px;margin-bottom:8px}.feedback-placeholder .ph-text{font-size:14px}
+    .feedback-box{display:none;animation:fadeIn .3s ease}.feedback-box.visible{display:block}
+    .feedback-header{display:flex;align-items:center;gap:10px;padding:14px 20px;font-size:17px;font-weight:700;border-radius:12px 12px 0 0;border:2px solid transparent;border-bottom:none}
+    .feedback-box.correct .feedback-header{background:var(--green-light);color:var(--green);border-color:var(--green)}
+    .feedback-box.wrong .feedback-header{background:var(--red-light);color:var(--red);border-color:var(--red)}
+    .feedback-body{padding:20px 24px;background:#fafcff;border:2px solid #dbeafe;border-top:none;border-radius:0 0 12px 12px;font-size:15px;line-height:1.8;user-select:text;white-space:pre-line}
+    .feedback-box.correct .feedback-body{border-color:var(--green)}.feedback-box.wrong .feedback-body{border-color:var(--red)}
+    .fb-section{margin-bottom:14px;padding:14px 18px;border-radius:10px;background:#f9fafb;border-left:5px solid var(--sky-deep)}
+    .fb-section.fb-correct{background:#f0faf0;border-left-color:var(--green)}
+    .fb-section.fb-foundation{background:#f0f4ff;border-left-color:var(--sky-deep)}
+    .fb-section.fb-reference{background:#fef9f0;border-left-color:var(--accent-dark)}
+    .fb-section.fb-obstacle{background:#fff5f5;border-left-color:var(--red)}
+    .fb-section.fb-tip{background:#fffdf0;border-left-color:var(--accent)}
+    .fb-section.fb-objectif{background:#f0faf8;border-left-color:var(--primary)}
+    .fb-section strong{display:block;margin-bottom:5px;font-size:16px;letter-spacing:0.3px}
+    .hidden{display:none!important}
+    .exam-mode .q-left,.exam-mode .q-right{border-radius:2px;border:1px solid #999;box-shadow:none}
+    .grille-examen{background:#faf9f6;border:2px solid #555;border-radius:2px;padding:12px 10px;font-family:'Courier New',monospace;font-size:12px;user-select:none;overflow-y:auto;max-height:75vh}
+    .grille-examen h4{text-align:center;font-size:14px;margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-family:var(--font-fr)}
+    .grille-table{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+    .grille-col{display:flex;flex-direction:column;gap:2px}
+    .grille-row{display:flex;align-items:center;gap:4px;font-size:11px}
+    .grille-q-num{width:28px;font-weight:700;text-align:right;cursor:pointer;color:var(--primary);font-family:var(--font-fr)}
+    .grille-q-num.answered{color:var(--accent-dark);animation:subtlePulse 1.5s infinite}
+    @keyframes subtlePulse{0%,100%{opacity:1}50%{opacity:0.5}}
+    .grille-case{width:20px;height:20px;border:1.5px solid #555;display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;cursor:pointer;background:#fff;transition:all .15s}
+    .grille-case:hover{background:#ddd}.grille-case.checked{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;font-family:'Courier New',monospace;font-size:13px}
+    .result-row{display:flex;align-items:center;gap:6px;padding:4px 0}
+    .result-q-num{width:32px;font-weight:700;font-family:var(--font-fr)}
+    .result-case{width:24px;height:24px;border:2px solid #aaa;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;background:#f5f5f5}
+    .result-case.correct-choice{background:#2e7d32;color:#fff;border-color:#2e7d32}
+    .result-case.wrong-choice{background:#c62828;color:#fff;border-color:#c62828}
+    .result-case.missed-choice{background:#fff3e0;border-color:#ef6c00;color:#ef6c00}
+    .timer-wrap{text-align:center;margin-bottom:10px}
+    .timer-badge{display:inline-flex;align-items:center;gap:6px;background:#f8faff;border:2px solid var(--sky-border);border-radius:10px;padding:6px 16px;font-size:20px;font-weight:700;color:var(--primary);transition:all .3s}
+    .timer-badge.warning{background:#fff8f0;border-color:var(--orange);color:var(--orange)}
+    .timer-badge.danger{background:var(--red-light);border-color:var(--red);color:var(--red);animation:pulse .8s infinite}
+    .perq-timer{font-size:12px;color:var(--gray);margin-left:8px;font-weight:600}.perq-timer.warning{color:var(--orange)}.perq-timer.danger{color:var(--red)}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+    .site-footer{background:var(--primary);color:rgba(255,255,255,0.85);padding:10px 20px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
+    .site-footer .footer-info{font-weight:600}.site-footer .footer-info strong{color:var(--accent);font-weight:700}
+    .site-footer .footer-buttons{display:flex;gap:8px;flex-wrap:wrap}
+    .footer-reset{background:transparent;border:1px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.7);font-size:10px;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all .2s}
+    .footer-reset:hover{border-color:var(--accent);color:var(--accent)}
+    .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,92,58,0.80);display:flex;align-items:center;justify-content:center;z-index:1000;animation:fadeIn .3s ease}
+    .modal-box{background:var(--white);border-radius:var(--radius);padding:32px 28px;max-width:520px;width:90%;text-align:center;box-shadow:0 14px 50px rgba(0,0,0,0.35);border-top:6px solid var(--accent)}
+    .modal-box.rtl{direction:rtl;font-family:var(--font-ar);text-align:right}
+    .modal-box h3{font-family:var(--font-heading);font-size:24px;color:var(--primary);margin-bottom:10px}
+    .modal-box.rtl h3{font-family:var(--font-ar);font-size:22px}
+    .modal-box p{font-size:16px;color:#555;margin-bottom:20px;line-height:1.7}
+    .modal-box .key-input{width:100%;padding:14px 16px;border:2px solid var(--sky-border);border-radius:10px;font-size:18px;text-align:center;font-family:var(--font-fr);letter-spacing:2px;margin-bottom:16px;outline:none;transition:border-color .2s}
+    .modal-box .key-input:focus{border-color:var(--accent)}
+    .modal-box .modal-error{color:var(--red);font-size:14px;font-weight:600;margin-bottom:10px;display:none}
+    .modal-box .modal-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .score-card{text-align:center;padding:28px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px}
+    .score-badge{font-size:56px;display:block;margin-bottom:8px}.score-pct{font-size:52px;font-weight:800;color:var(--primary);display:block}
+    .score-label{font-size:18px;font-weight:600;color:var(--gray);display:block;margin-top:6px}.score-sub{font-size:15px;color:var(--gray);display:block}
+    .result-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+    .result-table th{background:var(--primary);color:var(--white);padding:8px 10px;text-align:left}
+    .result-table td{padding:7px 10px;border-bottom:1px solid #e0e5ec}.r-ok{color:var(--green);font-weight:700}.r-ko{color:var(--red)}
+    .intro-banner{background:linear-gradient(135deg,#f0fdf4 0%,#e6f5ed 40%,#f5fef8 100%);border-radius:18px;padding:40px 28px;text-align:center;box-shadow:var(--shadow);border:2px solid var(--primary);margin-bottom:20px}
+    .intro-banner .intro-logo{font-family:var(--font-heading);font-size:48px;font-weight:800;color:var(--primary);letter-spacing:3px}
+    .intro-banner .intro-logo span{color:var(--accent)}.intro-banner .intro-slogan{font-size:22px;font-weight:600;color:#555;margin:8px 0 20px}
+    .intro-banner .intro-features{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:24px 0}
+    .intro-feature{text-align:center;font-size:16px;font-weight:600;color:var(--primary)}.intro-feature .feat-icon{font-size:40px;display:block;margin-bottom:6px}
+    @media(max-width:480px){body{font-size:16px}.site-header{padding:8px 10px}.header-grid{grid-template-columns:20% 50% 30%;gap:4px}.logo-square{width:48px;height:48px;font-size:20px;border-radius:10px}.header-col1 .verset{font-size:8px}.header-col2 .concours-ar{font-size:10px}.header-col2 .specialite{font-size:8px}.header-col3 .accroche{font-size:9px}.header-col3 .marque{font-size:13px}.header-col3 .session{font-size:7px}.header-col3 .titre-epreuve{font-size:16px}.mini-bar{padding:6px 10px;gap:8px;font-size:11px}.mini-bar .mb-progress span{font-size:12px}.mb-badge{font-size:9px;padding:3px 8px}.main-content{padding:0 8px 14px}.mode-grid{gap:8px}.mode-card{padding:14px 6px}.mode-icon{font-size:28px}.mode-name{font-size:13px}.mode-desc{font-size:10px}.question-layout{grid-template-columns:1fr;gap:6px}.q-left{padding:12px}.question-statement{font-size:13px;padding:10px 12px}.choice-btn{font-size:12px;padding:8px 10px}.choice-letter{width:24px;height:24px;font-size:10px}.btn{font-size:12px;padding:8px 14px}.btn-block{font-size:14px;padding:10px}.site-footer{padding:8px 12px;flex-direction:column;text-align:center;font-size:11px}.site-footer .footer-buttons{justify-content:center}.grille-examen{font-size:9px;padding:6px 4px;max-height:55vh}.grille-examen h4{font-size:10px;margin-bottom:6px}.grille-table{gap:3px 5px}.grille-row{font-size:8px;gap:1px}.grille-q-num{width:18px;font-size:8px}.grille-case{width:15px;height:15px;font-size:6px}.result-grid{font-size:10px;gap:4px 10px}.result-case{width:22px;height:22px;font-size:8px}.intro-banner{padding:24px 14px}.intro-banner .intro-logo{font-size:32px}.intro-banner .intro-slogan{font-size:16px}.intro-feature{font-size:13px}.intro-feature .feat-icon{font-size:30px}}
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <header class="site-header">
+    <div class="header-grid">
+      <div class="header-col1"><div class="logo-square"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23005c3a'/%3E%3Cstop offset='100%25' style='stop-color:%232ecc71'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpolygon points='50,15 82,38 82,72 50,88 18,72 18,38' fill='white' opacity='0.9'/%3E%3Ccircle cx='50' cy='50' r='12' fill='%23005c3a'/%3E%3Ctext x='50' y='78' font-size='22' font-family='Inter,sans-serif' font-weight='800' fill='white' text-anchor='middle'%3ESYNAPRIS%3C/text%3E%3C/svg%3E" alt="Synapris" /></div><div class="verset">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</div></div>
+      <div class="header-col2"><div class="concours-ar">المناظرة الخارجية بالاختبارات لانتداب أساتذة<br>التعليم الثانوي و التعليم التقني و التعليم الفني</div><div class="specialite">اختصاص : الفيزياء — CAPES 2009 — المدة : 60 دقيقة</div></div>
+      <div class="header-col3"><div class="accroche">✨ Votre réussite commence ici</div><div class="marque"><span>SYNAPRIS</span></div><div class="session">Éclairer l'intelligence · CAPES Physique 2009</div><div class="titre-epreuve">QCM_CAPES_2009</div></div>
+    </div>
+  </header>
+  <div class="mini-bar" id="mini-bar"><div class="mb-progress"><span id="mb-q-counter">—</span><div class="mb-progress-bar"><div class="mb-progress-fill" id="mb-progress-fill" style="width:0%"></div></div></div><span class="mb-badge mode-badge" id="mb-mode-badge" style="display:none;">—</span><span class="mb-badge client-badge" id="mb-client-badge" style="display:none;">🔑 —</span></div>
+  <div class="main-scroll" id="main-scroll">
+    <div id="main-app" style="display:block;"><div class="main-content">
+      <div id="page-welcome" class="page active"><div class="intro-banner"><div class="intro-logo"><span>S</span>YNAPRIS</div><div class="intro-slogan">🌟 Le savoir sous tous ses prismes</div><div class="intro-features"><div class="intro-feature"><span class="feat-icon">📝</span>Entraînez-vous</div><div class="intro-feature"><span class="feat-icon">⏱️</span>Simulez l'examen</div><div class="intro-feature"><span class="feat-icon">💡</span>Comprenez vos erreurs</div><div class="intro-feature"><span class="feat-icon">📊</span>Suivez votre progrès</div></div><button class="btn btn-gold btn-block" onclick="showPage('page-home')" style="max-width:400px;margin:0 auto;">✨ Accéder au QCM CAPES Physique 2009</button><p style="font-size:13px;color:var(--gray);margin-top:14px;">QCM interactif — CAPES Physique 2009 — 50 questions · 60 minutes · 4 choix (A,B,C,D) · Une ou plusieurs réponses correctes</p></div></div>
+      <div id="page-home" class="page"><div class="card sky"><div class="card-title">🎯 Choisissez votre mode</div><div class="mode-grid"><div class="mode-card" id="mode-train" onclick="selectMode('train')"><span class="mode-icon">📝</span><div class="mode-name">Mode Entraînement</div><div class="mode-desc">Feedback immédiat · Correction détaillée</div></div><div class="mode-card exam-card" id="mode-exam" onclick="selectMode('exam')"><span class="mode-icon">⏱️</span><div class="mode-name">Mode Examen</div><div class="mode-desc">Chronomètre 60 min · Conditions réelles</div></div></div><div class="notice-box" id="notice-train"><div class="notice-icon">🖱️</div><div><strong>🟢 Mode Entraînement :</strong> Cliquez sur A, B, C, D pour choisir (plusieurs réponses possibles) → <strong>Validez</strong> pour voir la correction → <strong>Flèches ← →</strong> pour naviguer entre les questions. <strong>Enter</strong> pour valider rapidement.</div></div><div class="notice-box hidden" id="notice-exam" style="background:#fff5f5;border-color:var(--red);"><div class="notice-icon">⏰</div><div><strong>🔴 Mode Examen :</strong> 50 questions en 60 minutes. Chronomètre en haut. Pas de correction avant la fin. Grille de réponses à droite. Plusieurs réponses possibles. Bonne chance !</div></div><div style="text-align:center;"><button class="ref-btn" onclick="showRefModal()">📚 Références &amp; mentions légales</button></div><button class="btn btn-sky btn-block" id="btn-start" disabled onclick="startQuiz()">⏳ Chargement...</button></div></div>
+      <div id="page-question" class="page"><div class="timer-wrap hidden" id="timer-wrap"><div class="timer-badge" id="timer-badge">⏱ 60:00</div><span class="perq-timer" id="perq-timer">⚡ 1:12</span></div><div class="question-layout"><div class="q-left"><div class="question-statement" id="q-statement"></div><div class="choices-grid" id="q-choices"></div></div><div class="q-right" id="q-right-panel"><div class="feedback-placeholder" id="feedback-placeholder"><div class="ph-icon">💬</div><div class="ph-text">Feedback après validation</div></div><div class="feedback-box" id="feedback-box"><div class="feedback-header" id="feedback-header"><span id="badge-icon"></span><span id="feedback-result-text"></span></div><div class="feedback-body" id="feedback-body"></div></div><div class="grille-examen hidden" id="grille-examen"><h4>📋 Grille de réponses</h4><div class="grille-table" id="grille-table"></div></div></div></div><div class="nav-row"><div class="btn-group"><button class="btn btn-primary" id="btn-prev" onclick="prevQuestion()" disabled>← Précédent</button><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button><button class="btn btn-green" id="btn-validate" disabled onclick="validateAnswer()">✔ Valider</button><button class="btn btn-primary" id="btn-next" onclick="nextQuestion()">Suivant →</button></div></div></div>
+      <div id="page-results" class="page"><div class="score-card"><span class="score-badge" id="result-badge">🏆</span><span class="score-pct" id="result-pct">—</span><span class="score-label">Score final</span><span class="score-sub" id="result-sub"></span></div><div class="card"><div class="card-title">📊 Résultats par thème</div><div id="result-themes"></div></div><div class="card"><div class="card-title">📋 Grille des réponses</div><div class="result-grid" id="result-grid"></div><button class="btn btn-gold btn-block" id="btn-retry-failed" onclick="retryFailed()" style="display:none;margin-top:12px;">🔁 Retravailler les erreurs</button><button class="btn btn-gold btn-block" style="margin-top:8px;" onclick="goHome()">🏠 Retour à l'accueil</button></div></div>
+    </div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-info">© 2026 <strong>Synapris</strong> — Licence attribuée à <span id="client-name-footer">——</span> · Valide jusqu'au 01/03/2027</div>
+    <div class="footer-buttons"><button class="footer-reset" onclick="resetClientName()" title="Changer le prénom">🔄 Changer</button><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a><a href="../../commander.html" class="btn btn-outline-white">📦 Voir les offres</a></div>
+  </footer>
+  <script>
+    const FICHE_TYPE = 'full';
+    const QUESTIONS_GRATUITES = 50;
+    const VALID_CODES = ['SYN-MAESTRO-PHYS'];
+    const EXPIRATION_DATE = new Date('2027-03-01T00:00:00');
+    let licenceOk = true;
+    let clientName = '';
+    let mode = 'train';
+    let currentQ = 0,
+      activeSet = [],
+      userAnswers = [],
+      validated = [],
+      examTimer = null,
+      examSeconds = 0,
+      perQTimer = null,
+      perQSeconds = 0;
+    const TOTAL_EXAM_SEC = 3600,
+      PER_Q_SEC = 72;
+    const CHOICES_LETTERS = ['A', 'B', 'C', 'D'];
+
+    document.addEventListener('DOMContentLoaded', function() {
+      if (new Date() > EXPIRATION_DATE) { showExpirationModal(); return; }
+      const savedName = localStorage.getItem('synapris_client_name');
+      if (savedName) { clientName = savedName;
+        document.getElementById('client-name-footer').textContent = clientName;
+        document.getElementById('mb-client-badge').style.display = 'inline-flex';
+        document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+        initDefaultMode(); } else { showNameModal(); }
+    });
+
+    function resetClientName() { localStorage.removeItem('synapris_client_name');
+      clientName = '';
+      document.getElementById('client-name-footer').textContent = '——';
+      document.getElementById('mb-client-badge').style.display = 'none';
+      showNameModal(); }
+
+    function showExpirationModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'expiration-modal';
+      overlay.innerHTML = '<div class="modal-box"><h3>⏰ Fiche expirée</h3><p>Cette fiche n\'est plus valide depuis le <strong>01/03/2027</strong>.<br>Contactez SYNAPRIS pour obtenir une version actualisée.</p><div class="modal-actions"><a href="https://wa.me/21620002520?text=Bonjour%20SYNAPRIS,%20je%20souhaite%20renouveler%20ma%20fiche." class="btn btn-whatsapp" target="_blank">💬 WhatsApp 21 600 025 20</a></div></div>';
+      document.body.appendChild(overlay);
+      document.getElementById('main-app').style.display = 'none';
+    }
+
+    function showNameModal() {
+      const existing = document.getElementById('name-modal'); if (existing) existing.remove();
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'name-modal';
+      overlay.innerHTML = '<div class="modal-box"><h3>🌟 Bienvenue sur SYNAPRIS !</h3><p>Pour personnaliser votre fiche, entrez votre prénom :</p><input type="text" class="key-input" id="name-input" placeholder="Votre prénom" autocomplete="off" /><div class="modal-error" id="name-error">❌ Veuillez entrer un prénom valide (lettres uniquement).</div><div class="modal-actions"><button class="btn btn-gold" id="btn-name-ok">✅ Commencer</button></div><p style="font-size:11px;margin-top:14px;color:var(--gray);">Votre prénom sera gravé dans le footer de la fiche.<br>Usage strictement personnel.</p></div>';
+      document.body.appendChild(overlay);
+      document.getElementById('btn-name-ok').addEventListener('click', () => {
+        const name = document.getElementById('name-input').value.trim();
+        if (name && name.length >= 2 && /^[A-Za-zÀ-ÿ\s\-]+$/.test(name)) { clientName = name;
+          localStorage.setItem('synapris_client_name', clientName);
+          document.getElementById('client-name-footer').textContent = clientName;
+          document.getElementById('mb-client-badge').style.display = 'inline-flex';
+          document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+          overlay.remove();
+          initDefaultMode(); } else { document.getElementById('name-error').style.display = 'block'; }
+      });
+    }
+
+    function showRefModal() {
+      const existing = document.getElementById('ref-modal'); if (existing) existing.remove();
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'ref-modal';
+      overlay.innerHTML = '<div class="modal-box" style="max-width:580px;text-align:left;"><h3 style="text-align:center;">📚 RÉFÉRENCES & MENTIONS LÉGALES</h3><div style="font-size:14px;line-height:1.8;color:#333;"><p><strong>📖 SOURCE OFFICIELLE :</strong></p><ul style="padding-left:20px;margin-bottom:12px;"><li>CAPES externe de physique-chimie — Session 2009</li><li>50 questions à choix multiples — 4 choix (A,B,C,D)</li><li>Une ou plusieurs réponses correctes par question</li></ul><p><strong>⚙️ CONCEPTION & PROPRIÉTÉ INTELLECTUELLE :</strong></p><p style="margin-bottom:12px;">L\'analyse de contenu, la structuration pédagogique, les corrections détaillées et l\'architecture interactive de cette fiche sont la propriété intellectuelle exclusive de son concepteur.</p><p><strong>🔒 USAGE RESTREINT :</strong></p><p style="margin-bottom:12px;">Cette fiche est concédée à titre <strong>strictement personnel</strong>. Toute reproduction, diffusion, partage ou revente est formellement interdite.</p><p style="margin-bottom:12px;">📲 <strong>Contact :</strong> WhatsApp 21 600 025 20</p><p style="text-align:center;font-weight:600;color:var(--accent-dark);">© SYNAPRIS — Le savoir sous tous ses prismes</p></div><div class="modal-actions" style="margin-top:16px;"><button class="btn btn-primary" onclick="document.getElementById(\'ref-modal\').remove()">Fermer</button></div></div>';
+      document.body.appendChild(overlay);
+      overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.remove(); });
+    }
+
+    function initDefaultMode() { document.getElementById('mode-train').classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
+      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+      document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
+      document.getElementById('notice-train').classList.remove('hidden');
+      document.getElementById('notice-exam').classList.add('hidden'); }
+
+    // ═══════════════ 50 QUESTIONS — CAPES PHYSIQUE 2009 ═══════════════
+    const questionsData = [
+      { id: 1, statement: "On dispose de solutions aqueuses (0,010 mol/L) de : a) $NH_3$ ; b) $CH_3CO_2H$ ; c) $HCl$. Leurs valeurs de pH se classent dans l'ordre :", choices: ["A. $pH_a < pH_c < pH_b$", "B. $pH_c < pH_a < pH_b$", "C. $pH_c < pH_b < pH_a$", "D. $pH_b < pH_c < pH_a$"], correct: [2], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : HCl est un acide fort, donc pH le plus bas. $CH_3COOH$ est un acide faible ($pK_a\\approx4,8$), pH intermédiaire. $NH_3$ est une base faible, pH basique (>7). À concentration égale, acide fort < acide faible < base.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « pH des solutions aqueuses ».\n\n⚠️ OBSTACLE DIDACTIQUE : Les élèves oublient que $NH_3$ est une base, pas un acide. Son pH est donc >7.\n\n💡 APPROFONDISSEMENT : À $C=0,010$ mol/L, $pH(HCl)=2$, $pH(CH_3COOH)\\approx3,4$, $pH(NH_3)\\approx10,6$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Classer les solutions selon le pH en fonction de la force acido-basique." },
+      { id: 2, statement: "La réaction d'oxydo-réduction est une réaction chimique :", choices: ["A. De deux sens qui s'inversent", "B. Au cours de laquelle se produit un transfert d'électrons du réducteur vers l'oxydant", "C. Qui se produit entre un acide et une base", "D. Toujours lente et athermique"], correct: [1], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : L'oxydoréduction implique un transfert d'électrons du réducteur (donneur) vers l'oxydant (accepteur). Ce n'est ni toujours lente, ni toujours athermique.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Oxydoréduction ».\n\n⚠️ OBSTACLE DIDACTIQUE : Confusion entre oxydant (qui capte e⁻) et réducteur (qui cède e⁻).\n\n💡 APPROFONDISSEMENT : MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O : Fe²⁺ est réducteur, MnO₄⁻ est oxydant.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Maîtriser la notion de transfert d'électrons en oxydoréduction." },
+      { id: 3, statement: "Considérons deux solutions aqueuses de monobase de même concentration $C$. La solution qui correspond à l'acide le plus fort :", choices: ["A. Est celle qui a la valeur du pH la plus grande", "B. Est celle qui a la valeur du pH la plus petite", "C. Est celle qui a la valeur du pKa la plus grande", "D. Est celle qui a la valeur du pKa la plus petite"], correct: [3], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : Pour un acide faible, $pH = \\frac{1}{2}(pK_a - \\log C)$. Plus $pK_a$ est petit, plus l'acide est fort et plus le pH de sa solution est faible.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Force des acides et des bases ».\n\n⚠️ OBSTACLE DIDACTIQUE : $pK_a$ et force acide sont inversement proportionnels : plus $pK_a$ est faible, plus l'acide est fort.\n\n💡 APPROFONDISSEMENT : $pK_a(HCl)=-7$ (acide très fort), $pK_a(CH_3COOH)=4,8$ (acide faible).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Relier $pK_a$ et force acide." },
+      { id: 4, statement: "Parmi les équations chimiques suivantes, laquelle possède un coefficient stœchiométrique de 2 pour les produits une fois équilibrée :", choices: ["A. $2 H_2 + 2 Br_2 \\rightarrow HBr$", "B. $N_2 + 3 H_2 \\rightarrow NH_3$", "C. $2 O_3 \\rightarrow O_2$", "D. $2 NO_2 \\rightarrow N_2O_4$"], correct: [1], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Équilibrons : $N_2 + 3H_2 \\rightarrow 2NH_3$. Le coefficient de $NH_3$ est 2.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 2ème année secondaire, Chapitre « Équations chimiques — Stœchiométrie ».\n\n⚠️ OBSTACLE DIDACTIQUE : Ne pas confondre coefficient avant équilibrage et après. $N_2 + 3H_2 \\rightarrow NH_3$ n'est pas équilibrée.\n\n💡 APPROFONDISSEMENT : Une équation équilibrée conserve le nombre d'atomes de chaque élément.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Maîtriser l'équilibrage des équations chimiques." },
+      { id: 5, statement: "Chaque élément chimique est représenté par le symbole $_Z^A X$ :", choices: ["A. $A$ représente le nombre de protons", "B. $Z$ représente le nombre de charges", "C. $X$ représente le nombre de neutrons", "D. $A$ représente le nombre de masse"], correct: [3], theme: "Structure de la matière", niveau_scolaire: "2ème secondaire", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : Dans $_Z^A X$, $A$ est le nombre de masse (protons+neutrons), $Z$ le numéro atomique (protons).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 2ème année secondaire, Chapitre « Noyau atomique ».\n\n⚠️ OBSTACLE DIDACTIQUE : Confusion entre $A$ (masse) et $Z$ (charge).\n\n💡 APPROFONDISSEMENT : $^{12}_6C$ : $A=12$, $Z=6$, 6 neutrons.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Maîtriser la symbolique nucléaire." },
+      { id: 6, statement: "L'atome de chlore possède 17 électrons ; sa formule électronique est :", choices: ["A. $(K)^2 (L)^{10} (M)^5$", "B. $(K)^2 (L)^8 (M)^7$", "C. $(K)^2 (L)^{15} (M)^0$", "D. $(K)^2 (L)^9 (M)^6$"], correct: [1], theme: "Structure de la matière", niveau_scolaire: "2ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Remplissage : $K$ :2, $L$ :8, $M$ :7 → total 17 électrons.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 2ème année secondaire, Chapitre « Configuration électronique ».\n\n⚠️ OBSTACLE DIDACTIQUE : La couche $L$ accepte 8 électrons maximum, pas 10 ni 15.\n\n💡 APPROFONDISSEMENT : Le chlore est dans la 3ème période, colonne 17 (halogènes).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer les règles de remplissage des couches électroniques." },
+      { id: 7, statement: "L'atome de potassium, dont le symbole est $_{19}^{39} K$, possède :", choices: ["A. 19 neutrons", "B. 19 électrons", "C. 39 protons", "D. 19 protons"], correct: [1,3], theme: "Structure de la matière", niveau_scolaire: "2ème secondaire", explication: "✅ Réponse : B et D\n\n🔬 FONDEMENT THÉORIQUE : $Z=19$ protons = 19 électrons (atome neutre). $A=39$, neutrons = $39-19=20$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 2ème année secondaire, Chapitre « Noyau — Structure de l'atome ».\n\n⚠️ OBSTACLE DIDACTIQUE : Confondre $A$ et $Z$. $A=39$ est le nombre de masse, pas le nombre de protons.\n\n💡 APPROFONDISSEMENT : Le potassium est un métal alcalin, très réactif.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer protons, neutrons et électrons à partir de $_Z^A X$." },
+      { id: 8, statement: "On fait réagir 12,0 g de carbone et 5,0 g d'hydrogène selon : $3C(s) + 4H_2(g) \\rightarrow C_3H_8(g) + 103,6$ kJ. La quantité maximale de chaleur libérée est :", choices: ["A. 34,50 kJ", "B. 64 kJ", "C. 128,5 kJ", "D. 309,5 kJ"], correct: [0], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : $n(C)=1$ mol, $n(H_2)=2,5$ mol. Réactif limitant : $C$ (3 mol $C$ → 103,6 kJ, donc 1 mol → 34,5 kJ).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Thermochimie — Énergie de réaction ».\n\n⚠️ OBSTACLE DIDACTIQUE : Oublier de déterminer le réactif limitant avant le calcul.\n\n💡 APPROFONDISSEMENT : La réaction est exothermique ($\\Delta H<0$), dégage 103,6 kJ pour 3 mol de $C$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer la stœchiométrie aux bilans thermiques." },
+      { id: 9, statement: "Quel métal est le mieux utilisé comme anode sacrificielle pour protéger le fer ?", choices: ["A. Le magnésium", "B. Le zinc", "C. Le plomb", "D. L'argent"], correct: [0], theme: "Électrochimie", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Plus le métal est réducteur (potentiel $E^0$ faible), meilleure est la protection. $E^0(Mg^{2+}/Mg)=-2,37$ V < $E^0(Zn^{2+}/Zn)=-0,76$ V.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Protection contre la corrosion ».\n\n⚠️ OBSTACLE DIDACTIQUE : Le zinc est courant mais moins efficace que le magnésium.\n\n💡 APPROFONDISSEMENT : Le magnésium se sacrifie plus facilement que le zinc.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Choisir un métal sacrificiel en fonction de son potentiel standard." },
+      { id: 10, statement: "Dans la réaction entre une plaque de zinc et une solution de sulfate de cuivre (II), le réducteur est :", choices: ["A. $Cu(sd)$", "B. $Zn(sd)$", "C. $Cu^{2+}$", "D. $Zn^{2+}$"], correct: [1], theme: "Électrochimie", niveau_scolaire: "2ème-4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : $Zn \\rightarrow Zn^{2+} + 2e^-$, le zinc cède des électrons, c'est donc le réducteur. $Cu^{2+}$ est l'oxydant.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Oxydoréduction — Piles ».\n\n⚠️ OBSTACLE DIDACTIQUE : Ne pas confondre le métal qui s'oxyde (disparaît) = réducteur.\n\n💡 APPROFONDISSEMENT : Dans la pile Daniell, le zinc est l'anode et le réducteur.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Identifier réducteur et oxydant dans une réaction spontanée." },
+      { id: 11, statement: "En solution aqueuse, une base est d'autant plus forte :", choices: ["A. Que le produit ionique de l'eau est faible", "B. Que sa concentration C est forte", "C. Que son $pK_b$ est faible", "D. Que son acide conjugué est faible"], correct: [2], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : $K_b = 10^{-pK_b}$. Plus $pK_b$ est faible, plus $K_b$ est grand, plus la base est forte.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Acides et bases — $pK_b$ ».\n\n⚠️ OBSTACLE DIDACTIQUE : $pK_b$ et force basique sont inversement proportionnels.\n\n💡 APPROFONDISSEMENT : $pK_b(NH_3)=4,75$ (base faible), $pK_b(NaOH)=-1,7$ (base très forte).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Utiliser $pK_b$ pour comparer la force des bases." },
+      { id: 12, statement: "Les systèmes chimiques atteignent l'équilibre quand :", choices: ["A. Les taux d'avancement des réactions vers la droite et vers la gauche deviennent égaux", "B. Aucune réaction n'a lieu", "C. La masse des produits égale la masse des réactifs", "D. Le taux d'avancement final atteint sa valeur maximale"], correct: [0], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : L'équilibre est dynamique : vitesses des réactions directe et inverse sont égales. Les réactions continuent, mais macroscopiquement rien ne change.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Équilibre chimique ».\n\n⚠️ OBSTACLE DIDACTIQUE : Croire qu'à l'équilibre les réactions s'arrêtent.\n\n💡 APPROFONDISSEMENT : $N_2 + 3H_2 \\rightleftharpoons 2NH_3$ : à l'équilibre, les vitesses s'égalisent.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Comprendre la nature dynamique de l'équilibre chimique." },
+      { id: 13, statement: "Un système à l'équilibre, soumis à une contrainte, tend vers un nouvel équilibre qui :", choices: ["A. Diminue cette contrainte", "B. Augmente cette contrainte", "C. Allège cette contrainte", "D. Renforce cette contrainte"], correct: [0], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Principe de Le Chatelier (ou loi de modération) : le système évolue pour s'opposer à la contrainte imposée.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Loi de modération ».\n\n⚠️ OBSTACLE DIDACTIQUE : Le système ne supprime pas la contrainte, il l'atténue.\n\n💡 APPROFONDISSEMENT : Si on chauffe, le système cherche à refroidir (réaction endothermique favorisée).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer la loi de Le Chatelier aux perturbations d'un équilibre." },
+      { id: 14, statement: "En thermodynamique, les phénomènes physiques ou chimiques sont associés à un dégagement ou une absorption de :", choices: ["A. Masse", "B. Concentration", "C. Chaleur", "D. Vapeur"], correct: [2], theme: "Thermodynamique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : La thermodynamique étudie les échanges d'énergie, principalement sous forme de chaleur ($Q$) et de travail ($W$).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Thermochimie ».\n\n⚠️ OBSTACLE DIDACTIQUE : Confondre chaleur et température. La chaleur est un transfert d'énergie.\n\n💡 APPROFONDISSEMENT : Réaction exothermique = dégage de la chaleur ; endothermique = absorbe.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Distinguer échange thermique et changement de température." },
+      { id: 15, statement: "Le critère de spontanéité d'une réaction chimique est lorsque :", choices: ["A. $G$ est quelconque", "B. $G > 0$", "C. $G = 0$", "D. $G < 0$ (réaction spontanée)"], correct: [3], theme: "Thermodynamique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : À $T$ et $P$ constantes, une réaction est spontanée si $\\Delta_r G < 0$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Thermodynamique chimique, enthalpie libre.\n\n⚠️ OBSTACLE DIDACTIQUE : $\\Delta_r G = \\Delta_r H - T\\Delta_r S$. Une réaction peut être endothermique mais spontanée si $T\\Delta_r S > \\Delta_r H$.\n\n💡 APPROFONDISSEMENT : $\\Delta_r G=0$ à l'équilibre.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Utiliser le signe de $\\Delta_r G$ pour prédire la spontanéité." },
+      { id: 16, statement: "Le désordre d'un système augmente si :", choices: ["A. La réaction est provoquée", "B. La réaction est spontanée", "C. La réaction est impossible", "D. La réaction est stoppée"], correct: [1], theme: "Thermodynamique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Une transformation spontanée dans un système isolé s'accompagne d'une augmentation de l'entropie (désordre).\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Second principe de la thermodynamique.\n\n⚠️ OBSTACLE DIDACTIQUE : Le désordre n'augmente pas nécessairement dans un système non isolé.\n\n💡 APPROFONDISSEMENT : $\\Delta S_{univers} > 0$ pour une transformation spontanée.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Relier entropie et spontanéité." },
+      { id: 17, statement: "La meilleure description du pH du jus d'orange est :", choices: ["A. Il est supérieur à 7", "B. Il est égal à 7", "C. $0 < pH < 7$", "D. $7 < pH < 14$"], correct: [2], theme: "Chimie des solutions", niveau_scolaire: "1ère-2ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Le jus d'orange contient de l'acide citrique, son pH est acide ($pH \\approx 3-4$).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Applications des notions de pH.\n\n⚠️ OBSTACLE DIDACTIQUE : Beaucoup de produits naturels sont acides (citron, orange, vinaigre).\n\n💡 APPROFONDISSEMENT : $pH=7$ neutre, $pH<7$ acide, $pH>7$ basique.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Connaître le pH des produits usuels." },
+      { id: 18, statement: "Solutions de même volume et concentration. Laquelle a la molarité en ions hydronium la plus élevée ?", choices: ["A. $NaOH(aq)$", "B. $CH_3COOH(aq)$", "C. $HCl$", "D. $H_2SO_4$"], correct: [3], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : $H_2SO_4$ est un diacide fort : $[H_3O^+] = 2C$. $HCl$ : monoacide fort : $[H_3O^+] = C$. $CH_3COOH$ : acide faible : $[H_3O^+] < C$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Acides forts — pH ».\n\n⚠️ OBSTACLE DIDACTIQUE : Ne pas confondre basicité (nombre de $H^+$ libérables) et force acide.\n\n💡 APPROFONDISSEMENT : À $C=0,1$ mol/L, $[H_3O^+]_{H_2SO_4}=0,2$ mol/L.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer la concentration en $H_3O^+$ pour un acide fort polyprotique." },
+      { id: 19, statement: "Une solution de monobase a un $pH = 12$. Diluée 100 fois, le pH devient :", choices: ["A. Égal à 14", "B. Inférieur à 7", "C. Supérieur à 7 et inférieur à 12", "D. Égal à 12"], correct: [2], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Diluer 100 fois une base forte fait baisser le $pH$ de 2 unités : $pH=10$. Pour une base faible, la baisse est moindre. Le pH reste basique (>7).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Effet de la dilution sur le pH.\n\n⚠️ OBSTACLE DIDACTIQUE : Diluer ne change pas le caractère acide/basique, seulement l'intensité.\n\n💡 APPROFONDISSEMENT : Le pH tend vers 7 sans jamais l'atteindre exactement.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Prévoir l'effet de la dilution sur le pH d'une solution basique." },
+      { id: 20, statement: "La vitesse de la réaction $v = -\\frac{1}{a} \\frac{d[A]}{dt}$. Pour une réaction d'ordre deux :", choices: ["A. $v = k[A]$", "B. $v = k[A]^2$", "C. $v = k$", "D. $v = \\frac{k}{[A]}$"], correct: [1], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Une réaction d'ordre 2 a une loi de vitesse $v = k[A]^2$ (pour un seul réactif) ou $v = k[A][B]$ (deux réactifs).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Cinétique chimique ».\n\n⚠️ OBSTACLE DIDACTIQUE : L'ordre de réaction n'est pas lié au coefficient stœchiométrique (sauf pour les réactions élémentaires).\n\n💡 APPROFONDISSEMENT : Exemple : $2NO_2 \\rightarrow 2NO + O_2$ est d'ordre 2 par rapport à $NO_2$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Écrire la loi de vitesse en fonction de l'ordre de réaction." },
+      { id: 21, statement: "Le nom du composé $C_6H_5-COOH$ est :", choices: ["A. L'acide benzénique", "B. L'acide benzoïque", "C. L'acide carbonique", "D. L'acide éthanoïque"], correct: [1], theme: "Chimie organique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : $C_6H_5-COOH$ est l'acide benzoïque, utilisé comme conservateur alimentaire (E210).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Acides carboxyliques ».\n\n⚠️ OBSTACLE DIDACTIQUE : $C_6H_5-$ est le radical phényle, pas benzénique.\n\n💡 APPROFONDISSEMENT : L'acide éthanoïque est $CH_3COOH$, l'acide carbonique est $H_2CO_3$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Nommer les acides carboxyliques aromatiques." },
+      { id: 22, statement: "La déshydratation de l'alcool butylique $(CH_3)_3C-OH$ ne donne pas d'éther mais exclusivement :", choices: ["A. Rien", "B. De l'isobutène", "C. Du butane", "D. Du butanone"], correct: [1], theme: "Chimie organique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : $(CH_3)_3C-OH$ est un alcool tertiaire. La déshydratation intramoléculaire donne un alcène : l'isobutène $(CH_3)_2C=CH_2$ (règle de Zaïtsev).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Alcools — Déshydratation ».\n\n⚠️ OBSTACLE DIDACTIQUE : Les alcools tertiaires donnent surtout des alcènes (élimination), pas des éthers.\n\n💡 APPROFONDISSEMENT : La déshydratation intermoléculaire (éther) est favorisée pour les alcools primaires.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Identifier le produit de déshydratation selon la classe de l'alcool." },
+      { id: 23, statement: "En chimie organique, une oxime est de la forme :", choices: ["A. $(C_nH_{2n})=N-OH$", "B. $(C_nH_{2n+1})-NH_2$", "C. $RCH=N-OH$", "D. $(C_nH_{2n+1})-NO_2$"], correct: [2], theme: "Chimie organique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Une oxime $R_2C=N-OH$ résulte de la condensation d'un carbonyle ($R_2C=O$) avec l'hydroxylamine $NH_2OH$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Chimie organique, dérivés carbonylés.\n\n⚠️ OBSTACLE DIDACTIQUE : Ne pas confondre oxime ($=N-OH$) et amine ($-NH_2$) ou nitro ($-NO_2$).\n\n💡 APPROFONDISSEMENT : Les oximes sont utilisées pour purifier et identifier les aldéhydes/cétones.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Reconnaître la fonction oxime." },
+      { id: 24, statement: "Un acide est toute entité capable :", choices: ["A. De libérer un proton $H^+$", "B. De libérer des électrons", "C. De rester inerte", "D. D'accepter des électrons d'un donneur"], correct: [0], theme: "Chimie des solutions", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Selon Brönsted, un acide est un donneur de proton $H^+$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Théorie de Brönsted ».\n\n⚠️ OBSTACLE DIDACTIQUE : Un acide selon Lewis est un accepteur de doublet électronique.\n\n💡 APPROFONDISSEMENT : Brönsted (proton) ⊂ Lewis (doublet électronique).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer la définition de Brönsted des acides." },
+      { id: 25, statement: "Le premier principe de la thermodynamique (conservation) énonce que l'énergie interne $U$ :", choices: ["A. Pose l'existence d'une grandeur fondamentale, l'énergie", "B. Ne dépend que de la température", "C. Entraîne toujours une élévation de température", "D. Revient à donner de l'énergie"], correct: [0], theme: "Thermodynamique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Le premier principe affirme que l'énergie se conserve : $\\Delta U = W + Q$. L'énergie interne $U$ est une fonction d'état.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Premier principe de la thermodynamique.\n\n⚠️ OBSTACLE DIDACTIQUE : $U$ dépend de la température MAIS aussi de la pression/volume pour les gaz réels.\n\n💡 APPROFONDISSEMENT : Pour un gaz parfait, $U$ ne dépend que de $T$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Comprendre le sens physique de l'énergie interne." },
+      { id: 26, statement: "Un champ électrostatique $\\vec{E}(M)$ est défini par :", choices: ["A. $\\vec{E}(M) = \\frac{q}{4\\pi\\varepsilon_0 r^2} \\frac{\\vec{PM}}{PM}$", "B. $\\vec{E}(M) = \\frac{q}{4\\pi\\varepsilon_0 r} \\frac{\\vec{PM}}{PM}$", "C. $\\vec{E}(M) = \\frac{q}{4\\pi\\varepsilon_0} \\frac{\\vec{PM}}{PM}$", "D. $\\vec{E}(M) = \\frac{q}{4\\pi\\varepsilon_0 r^3} \\vec{PM}$"], correct: [0,3], theme: "Électromagnétisme", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A et D\n\n🔬 FONDEMENT THÉORIQUE : Les deux expressions sont équivalentes car $\\vec{PM}/PM$ est le vecteur unitaire, et $\\vec{PM}/r^3$ donne aussi une norme $1/r^2$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Électrostatique, champ créé par une charge ponctuelle.\n\n⚠️ OBSTACLE DIDACTIQUE : Ne pas oublier le $1/r^2$ ni le $\\vec{PM}$.\n\n💡 APPROFONDISSEMENT : $\\vec{E} = \\frac{q}{4\\pi\\varepsilon_0 r^2} \\vec{u}_r$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Maîtriser l'expression vectorielle du champ électrostatique." },
+      { id: 27, statement: "Une charge ponctuelle $q$, placée en un point $P$, crée en un point $M$ situé à une distance $r$ de $P$ un potentiel $V(M)$ défini par :", choices: ["A. $V(M) = \\frac{q}{4\\pi\\varepsilon_0 r^2}$", "B. $V(M) = \\frac{q}{4\\pi\\varepsilon_0 r}$", "C. $V(M) = \\frac{q}{4\\pi\\varepsilon_0}$", "D. $V(M) = \\frac{q}{4\\pi\\varepsilon_0 r^3}$"], correct: [1], theme: "Électromagnétisme", niveau_scolaire: "Supérieur", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Le potentiel d'une charge ponctuelle décroît en $1/r$ : $V(r) = \\frac{q}{4\\pi\\varepsilon_0 r}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Potentiel électrostatique.\n\n⚠️ OBSTACLE DIDACTIQUE : Ne pas confondre champ ($1/r^2$) et potentiel ($1/r$).\n\n💡 APPROFONDISSEMENT : $\\vec{E} = -\\vec{\\nabla} V$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer le potentiel créé par une charge ponctuelle." },
+      { id: 28, statement: "Une charge ponctuelle $q$, placée en un point $P$, crée en un point $M$ situé à une distance $r$ de $P$ un champ électrique $\\vec{E}(M)$ et un potentiel $V(M)$ définis par la relation suivante :", choices: ["A. $\\vec{E}(M) = -\\vec{grad} V$", "B. $V(M) = -\\vec{grad} \\vec{E}(M)$", "C. $\\vec{E}(M) = \\vec{grad} V$", "D. $V(M) = \\vec{E}(M) \\cdot \\vec{PM}^3$"], correct: [0], theme: "Électromagnétisme", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Le champ électrique dérive du potentiel : $\\vec{E} = -\\vec{\\nabla} V$. Le signe moins indique que le champ pointe vers les potentiels décroissants.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Relation champ-potentiel.\n\n⚠️ OBSTACLE DIDACTIQUE : Oublier le signe moins dans la relation.\n\n💡 APPROFONDISSEMENT : $V(\\infty)=0$ pour une charge ponctuelle.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Utiliser la relation champ-potentiel." },
+      { id: 29, statement: "Théorème de Gauss : Le flux sortant $\\Phi$ du champ électrostatique $\\vec{E}(M)$ à travers une surface fermée quelconque (appelée surface de Gauss) s'exprime par :", choices: ["A. $\\Phi = \\int \\int \\vec{E}(M) / d\\vec{s} = Q_{int}$", "B. $\\Phi = \\int \\int \\vec{E}(M) \\cdot d\\vec{s} = \\frac{Q_{int}}{\\varepsilon_0}$", "C. $\\Phi = \\int \\int \\vec{E}(M) = \\frac{Q_{int}}{\\varepsilon_i}$", "D. $\\Phi = - \\int \\int \\frac{\\vec{E}(M)}{\\varepsilon_i} \\cdot d\\vec{s} = \\vec{E}(M)$"], correct: [1], theme: "Électromagnétisme", niveau_scolaire: "Supérieur", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Le théorème de Gauss lie le flux du champ électrique à travers une surface fermée à la charge intérieure : $\\Phi = \\frac{Q_{int}}{\\varepsilon_0}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Théorème de Gauss.\n\n⚠️ OBSTACLE DIDACTIQUE : Ne pas oublier $\\varepsilon_0$ au dénominateur.\n\n💡 APPROFONDISSEMENT : C'est l'analogue du théorème d'Ampère pour le magnétisme.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer le théorème de Gauss aux distributions à haute symétrie." },
+      { id: 30, statement: "Un référentiel (ou repère Galiléen) est par définition :", choices: ["A. en rotation uniforme par rapport à un repère absolu", "B. en translation rectiligne uniforme par rapport à un repère absolu", "C. en mouvement rectiligne uniforme par rapport à un repère absolu", "D. en mouvement accéléré par rapport au repère de Copernic"], correct: [1,2], theme: "Mécanique", niveau_scolaire: "3ème secondaire", explication: "✅ Réponse : B et C\n\n🔬 FONDEMENT THÉORIQUE : Un référentiel galiléen est en translation rectiligne uniforme par rapport à un autre référentiel galiléen. Le repère de Copernic est un référentiel galiléen de référence.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 3ème année secondaire, Chapitre « Référentiels — Principe d'inertie ».\n\n⚠️ OBSTACLE DIDACTIQUE : Un référentiel en rotation (même uniforme) n'est pas galiléen.\n\n💡 APPROFONDISSEMENT : Le principe d'inertie n'est valable que dans les référentiels galiléens.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Distinguer référentiel galiléen et non galiléen." },
+      { id: 31, statement: "Les repères Galiléens sont tous les repères en translation rectiligne uniforme par rapport au repère de Copernic et munis de la même :", choices: ["A. accélération", "B. masse", "C. chronologie", "D. vitesse"], correct: [2], theme: "Mécanique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : En mécanique classique, le temps est absolu. Tous les référentiels galiléens utilisent la même chronologie (même mesure du temps).\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Mécanique newtonienne.\n\n⚠️ OBSTACLE DIDACTIQUE : En relativité restreinte, le temps n'est plus absolu.\n\n💡 APPROFONDISSEMENT : Les transformations de Galilée préservent l'intervalle de temps.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Comprendre la notion de temps absolu en mécanique classique." },
+      { id: 32, statement: "À une force $\\vec{F}$ appliquée à une masse ponctuelle $m$ en position $M$, on associe un scalaire $\\delta W = \\vec{F} \\cdot \\delta \\vec{M}$ appelé :", choices: ["A. travail élémentaire de $\\vec{F}$ pour un déplacement quelconque $\\delta \\vec{M}$", "B. travail de $\\vec{F}$ pour l'accélération $\\delta \\vec{M}$", "C. variation de la quantité de mouvement", "D. travail virtuel de $\\vec{F}$ pour un déplacement virtuel $\\delta \\vec{M}$"], correct: [0,3], theme: "Mécanique", niveau_scolaire: "3ème secondaire", explication: "✅ Réponse : A et D\n\n🔬 FONDEMENT THÉORIQUE : Le travail élémentaire d'une force pour un déplacement réel ou virtuel est $\\delta W = \\vec{F} \\cdot d\\vec{M}$. On parle de travail virtuel en mécanique analytique.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Principe des travaux virtuels.\n\n⚠️ OBSTACLE DIDACTIQUE : Le travail est une grandeur scalaire.\n\n💡 APPROFONDISSEMENT : Le travail total est l'intégrale de $\\delta W$ le long du chemin.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Définir le travail élémentaire d'une force." },
+      { id: 33, statement: "Les éléments de réduction du torseur cinétique du solide au point A sont définis comme suit :", choices: ["A. l'accélération $\\vec{a}$", "B. la résultante cinétique $\\vec{P} = \\int\\int\\int \\vec{V}(M)_{/R_0} dm$", "C. le moment cinétique au point A : $\\vec{\\sigma}_{A/R_0} = \\int\\int\\int \\vec{AM} \\wedge \\vec{V}(M)_{/R_0} dm$", "D. la vitesse $\\vec{V}$"], correct: [1,2], theme: "Mécanique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : B et C\n\n🔬 FONDEMENT THÉORIQUE : Un torseur se compose d'une résultante et d'un moment. Le torseur cinétique a pour résultante la quantité de mouvement $\\vec{P}$ et pour moment le moment cinétique $\\vec{\\sigma}_A$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Mécanique du solide, torseur cinétique.\n\n⚠️ OBSTACLE DIDACTIQUE : La résultante cinétique n'est pas la vitesse.\n\n💡 APPROFONDISSEMENT : $\\vec{P} = m \\vec{V}_G$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Définir les éléments du torseur cinétique." },
+      { id: 34, statement: "L'énergie cinétique $E_{c/R_0}$ d'un solide $S$ de masse $m$ relative à $R_0$ est le scalaire :", choices: ["A. $E_{c/R_0} = \\frac{1}{2} \\int_{(S)} \\vec{V}^2(M)_{/R_0} dm$", "B. $E_{c/R_0} = \\int_{(S)} \\vec{V}^2(M)_{/R_0} dm$", "C. $E_{c/R_0} = \\frac{1}{2} \\int_{(S)} \\vec{V}(M)_{/R_0} dm$", "D. $E_{c/R_0} = \\frac{1}{2} m V^2$"], correct: [0,3], theme: "Mécanique", niveau_scolaire: "3ème secondaire", explication: "✅ Réponse : A et D\n\n🔬 FONDEMENT THÉORIQUE : L'énergie cinétique est $E_c = \\frac{1}{2} \\int v^2 dm$. Pour un solide en translation pure, $E_c = \\frac{1}{2} m V_G^2$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 3ème année secondaire, Chapitre « Énergie cinétique ».\n\n⚠️ OBSTACLE DIDACTIQUE : Oublier le facteur $\\frac{1}{2}$.\n\n💡 APPROFONDISSEMENT : Pour un solide en rotation, $E_c = \\frac{1}{2} J_\\Delta \\omega^2$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer l'énergie cinétique d'un système." },
+      { id: 35, statement: "Première loi de Newton ou principe de l'inertie : une particule libre en mouvement garde une vitesse $\\vec{V}$ constante et :", choices: ["A. son accélération $\\vec{a}$ ne peut être que positive", "B. son mouvement ne peut être que rectiligne uniforme", "C. son accélération $\\vec{a}$ ne peut être que négative", "D. sa masse ne peut être que positive"], correct: [1], theme: "Mécanique", niveau_scolaire: "3ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Une particule libre (aucune force) conserve un vecteur vitesse constant → mouvement rectiligne uniforme.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 3ème année secondaire, Chapitre « Principe d'inertie ».\n\n⚠️ OBSTACLE DIDACTIQUE : Un mouvement rectiligne uniforme n'implique pas nécessairement $\\vec{V}=0$.\n\n💡 APPROFONDISSEMENT : $\\sum \\vec{F} = \\vec{0} \\Rightarrow \\vec{V} = \\text{cste}$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer le principe d'inertie." },
+      { id: 36, statement: "Une distribution de charges électriques $q$ en mouvement dans un référentiel est la source d'un champ électromagnétique :", choices: ["A. $\\vec{E}$", "B. $\\vec{B}$", "C. $(\\vec{E}, \\vec{B})$", "D. $(\\vec{E} + \\vec{B})$"], correct: [2], theme: "Électromagnétisme", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Une charge en mouvement crée à la fois un champ électrique $\\vec{E}$ et un champ magnétique $\\vec{B}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Champ magnétique créé par un courant ».\n\n⚠️ OBSTACLE DIDACTIQUE : Une charge immobile ne crée que $\\vec{E}$.\n\n💡 APPROFONDISSEMENT : Le courant électrique est un ensemble de charges en mouvement.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Distinguer source de $\\vec{E}$ et source de $\\vec{B}$." },
+      { id: 37, statement: "Dans un champ électromagnétique, la force subie par une particule (Loi de Lorentz) est :", choices: ["A. $\\vec{F} = q(\\vec{V} \\wedge \\vec{B})$", "B. $\\vec{F} = q(\\vec{E} + \\vec{V} \\wedge \\vec{B})$", "C. $\\vec{F} = q(\\vec{E} \\cdot \\vec{V} \\wedge \\vec{B})$", "D. $\\vec{F} = q(\\vec{B} + \\vec{V} \\wedge \\vec{E})$"], correct: [1], theme: "Électromagnétisme", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : La force de Lorentz est la somme de la force électrique $q\\vec{E}$ et de la force magnétique $q\\vec{V} \\wedge \\vec{B}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Force de Lorentz ».\n\n⚠️ OBSTACLE DIDACTIQUE : La force magnétique ne travaille pas (perpendiculaire au déplacement).\n\n💡 APPROFONDISSEMENT : C'est la force totale subie par une particule chargée dans un champ EM.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Écrire la force de Lorentz." },
+      { id: 38, statement: "Concernant les quatre interactions fondamentales :", choices: ["A. L'interaction forte assure la cohésion des protons et neutrons dans le noyau", "B. L'interaction forte est responsable des liaisons chimiques $\\sigma$", "C. L'interaction faible intervient dans la désintégration $\\beta$ du neutron en proton", "D. L'interaction faible intervient dans les frottements visqueux"], correct: [0,2], theme: "Physique nucléaire", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A et C\n\n🔬 FONDEMENT THÉORIQUE : Interaction forte : cohésion nucléaire. Interaction faible : radioactivité $\\beta$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Interactions fondamentales ».\n\n⚠️ OBSTACLE DIDACTIQUE : Les liaisons chimiques sont électromagnétiques, pas fortes.\n\n💡 APPROFONDISSEMENT : Interactions : forte, EM, faible, gravitationnelle.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Attribuer chaque interaction à son domaine d'action." },
+      { id: 39, statement: "La première loi de Kepler stipule que les planètes décrivent des orbites elliptiques dont :", choices: ["A. la terre est au centre", "B. la terre est l'un des foyers", "C. le soleil est au centre", "D. le soleil est l'un des foyers"], correct: [3], theme: "Mécanique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : Les planètes décrivent des ellipses dont le Soleil occupe l'un des foyers.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 3ème-4ème secondaire, Chapitre « Lois de Kepler ».\n\n⚠️ OBSTACLE DIDACTIQUE : Le Soleil n'est pas au centre de l'ellipse.\n\n💡 APPROFONDISSEMENT : L'excentricité des orbites planétaires est faible (quasi-circulaires).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Énoncer la première loi de Kepler." },
+      { id: 40, statement: "La force d'interaction gravitationnelle entre deux masses $m_1$ et $m_2$ s'exprime par :", choices: ["A. $||\\vec{F}_{2/1}|| = ||-\\vec{F}_{1/2}||$", "B. $\\vec{F}_{2/1} = -\\vec{F}_{1/2} = -G \\frac{m_1 m_2}{r^3} \\vec{M_1 M_2}$", "C. $\\vec{F}_{2/1} = -\\vec{F}_{1/2}$", "D. $\\vec{F}_{2/1} = -\\vec{F}_{1/2} = G \\frac{m_1 m_2}{r^3} \\vec{M_1 M_2}$"], correct: [0,1,2], theme: "Mécanique", niveau_scolaire: "3ème secondaire", explication: "✅ Réponse : A, B et C\n\n🔬 FONDEMENT THÉORIQUE : Principe d'action-réaction : $\\vec{F}_{2/1} = -\\vec{F}_{1/2}$. L'expression vectorielle inclut le vecteur $\\vec{M_1 M_2}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 3ème année secondaire, Chapitre « Gravitation universelle ».\n\n⚠️ OBSTACLE DIDACTIQUE : Attention au signe : $\\vec{F}_{2/1}$ est dirigé de $M_1$ vers $M_2$.\n\n💡 APPROFONDISSEMENT : La force est attractive (signe moins).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Écrire vectoriellement la loi de gravitation." },
+      { id: 41, statement: "L'équation différentielle d'un pendule élastique sans frottement ($x$ élongation) est :", choices: ["A. $\\ddot{x} + \\frac{k}{m} x = 0$", "B. $\\ddot{x} - \\frac{k}{m} x = 0$", "C. $\\ddot{x} = \\frac{k}{m} x$", "D. $\\ddot{x} = -\\frac{k}{m}$"], correct: [0], theme: "Mécanique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : $m\\ddot{x} = -kx \\Rightarrow \\ddot{x} + (k/m)x = 0$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Oscillateur harmonique ».\n\n⚠️ OBSTACLE DIDACTIQUE : Le signe $-kx$ (force de rappel) donne $\\ddot{x} + \\omega^2 x = 0$.\n\n💡 APPROFONDISSEMENT : Solution $x(t)=A\\cos(\\omega_0 t+\\varphi)$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Établir l'équation différentielle de l'oscillateur harmonique." },
+      { id: 42, statement: "L'impédance mécanique $Z$ d'un pendule élastique en régime forcé avec frottement visqueux $h$ est :", choices: ["A. $Z = \\sqrt{h^2 - (m\\omega - \\frac{k}{\\omega})^2}$", "B. $Z = \\sqrt{h^2 + (m\\omega - \\frac{k}{\\omega})}$", "C. $Z = \\sqrt{h^2 + (m\\omega + \\frac{k}{\\omega})^2}$", "D. $Z = \\sqrt{h^2 + (m\\omega - \\frac{k}{\\omega})^2}$"], correct: [3], theme: "Mécanique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : Impédance mécanique $Z = \\sqrt{h^2 + (m\\omega - k/\\omega)^2}$ (analogie $L\\omega - 1/C\\omega$).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire (Maths), Chapitre « Oscillations forcées ».\n\n⚠️ OBSTACLE DIDACTIQUE : $h$ (frottement) correspond à $R$, $m$ à $L$, $k$ à $1/C$.\n\n💡 APPROFONDISSEMENT : La résonance a lieu quand $m\\omega = k/\\omega$ soit $\\omega = \\sqrt{k/m}$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Utiliser l'analogie électromécanique." },
+      { id: 43, statement: "Un exemple de système à masse variable (système ouvert) est :", choices: ["A. une goutte d'eau dans une atmosphère chargée de vapeur", "B. une chaise immobile", "C. une table immobile", "D. un avion en mouvement"], correct: [0], theme: "Mécanique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Une goutte d'eau qui grossit (condensation) ou s'évapore échange de la matière avec l'extérieur → masse variable.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Mécanique des systèmes ouverts.\n\n⚠️ OBSTACLE DIDACTIQUE : La plupart des problèmes du secondaire supposent une masse constante.\n\n💡 APPROFONDISSEMENT : La fusée est un autre exemple classique.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Identifier un système à masse variable." },
+      { id: 44, statement: "La constante de Boltzmann $k$ dans la formule $S = k \\log \\Omega$ s'exprime en :", choices: ["A. Kilogramme ($kg$)", "B. Mètre ($m$)", "C. $J \\cdot K^{-1}$", "D. Seconde ($s$)"], correct: [2], theme: "Thermodynamique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : $S$ est en $J/K$, $\\Omega$ est sans dimension, donc $k$ est en $J/K$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Entropie statistique, constante de Boltzmann.\n\n⚠️ OBSTACLE DIDACTIQUE : Ne pas confondre $k$ (constante de Boltzmann) et $R$ (constante des gaz parfaits). $R = N_A k$.\n\n💡 APPROFONDISSEMENT : $k = 1,38 \\times 10^{-23} \\text{ J/K}$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Connaître l'unité de la constante de Boltzmann." },
+      { id: 45, statement: "Au cours d'une réaction nucléaire, il y a conservation :", choices: ["A. du nombre de masse", "B. de l'énergie totale", "C. du nombre de charge", "D. de la masse totale du système de nucléides"], correct: [0,1,2], theme: "Physique nucléaire", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A, B et C\n\n🔬 FONDEMENT THÉORIQUE : Lois de conservation : nombre de masse $A$, charge $Z$, énergie totale (masse+cinétique). La masse n'est pas conservée ($E=mc^2$).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Réactions nucléaires ».\n\n⚠️ OBSTACLE DIDACTIQUE : La conservation de la masse n'est qu'approximative en chimie ; en physique nucléaire, défaut de masse.\n\n💡 APPROFONDISSEMENT : $E = mc^2$ explique l'énergie nucléaire.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Énoncer les lois de conservation en réaction nucléaire." },
+      { id: 46, statement: "Une radioactivité de type $\\beta^-$ correspond à la transmutation au sein du noyau :", choices: ["A. d'un neutron en proton", "B. d'un proton en neutron", "C. d'un proton en électron", "D. d'un électron en neutron"], correct: [0], theme: "Physique nucléaire", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : $\\beta^-$ : $n \\rightarrow p + e^- + \\bar{\\nu}_e$. Un neutron se transforme en proton avec émission d'un électron.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Radioactivité ».\n\n⚠️ OBSTACLE DIDACTIQUE : L'électron provient du noyau, pas du cortège électronique.\n\n💡 APPROFONDISSEMENT : $A$ constant, $Z$ augmente de 1.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Expliquer la désintégration $\\beta^-$." },
+      { id: 47, statement: "Une radioactivité de type $\\beta^+$ correspond à la transmutation au sein du noyau :", choices: ["A. d'un neutron en proton", "B. d'un proton en neutron", "C. d'un proton en électron", "D. d'un électron en neutron"], correct: [1], theme: "Physique nucléaire", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : $\\beta^+$ : $p \\rightarrow n + e^+ + \\nu_e$. Un proton se transforme en neutron avec émission d'un positon.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Radioactivité ».\n\n⚠️ OBSTACLE DIDACTIQUE : $\\beta^+$ et $\\beta^-$ sont symétriques.\n\n💡 APPROFONDISSEMENT : $A$ constant, $Z$ diminue de 1.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Expliquer la désintégration $\\beta^+$." },
+      { id: 48, statement: "La formule de conjugaison pour une lentille convergente de centre $S$ reliant un objet $A$ et son image $A'$ est :", choices: ["A. $\\frac{1}{SA'} - \\frac{1}{SA} = \\frac{1}{SF'}$", "B. $\\frac{1}{SA'} + \\frac{1}{SA} = \\frac{1}{SF'}$", "C. $\\frac{1}{SA} - \\frac{1}{SA'} = \\frac{1}{SF'}$", "D. $\\frac{1}{SA} + \\frac{1}{SA'} = \\frac{1}{SF'}$"], correct: [0], theme: "Optique", niveau_scolaire: "3ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Relation de Descartes : $\\frac{1}{\\overline{SA'}} - \\frac{1}{\\overline{SA}} = \\frac{1}{f'}$ avec $f' = \\overline{SF'}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 3ème année secondaire, Chapitre « Lentilles minces ».\n\n⚠️ OBSTACLE DIDACTIQUE : Attention aux signes (grandeurs algébriques).\n\n💡 APPROFONDISSEMENT : $\\overline{SA}$ est négatif si l'objet est à gauche de la lentille.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer la relation de conjugaison de Descartes." },
+      { id: 49, statement: "Une loupe est une lentille qui donne d'un objet une image virtuelle agrandie. Il s'agit d'une lentille :", choices: ["A. divergente", "B. mince", "C. épaisse", "D. convergente"], correct: [1,3], theme: "Optique", niveau_scolaire: "3ème secondaire", explication: "✅ Réponse : B et D\n\n🔬 FONDEMENT THÉORIQUE : Une loupe est une lentille convergente mince. L'objet est placé entre le foyer objet $F$ et la lentille.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 3ème année secondaire, Chapitre « Instruments d'optique — Loupe ».\n\n⚠️ OBSTACLE DIDACTIQUE : Une lentille divergente donne toujours une image virtuelle plus petite.\n\n💡 APPROFONDISSEMENT : Le grossissement commercial $G_c = \\frac{250\\text{ mm}}{f'}$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Expliquer le principe de la loupe." },
+      { id: 50, statement: "Un amplificateur opérationnel idéal est caractérisé par une résistance d'entrée $R_e$ infinie et :", choices: ["A. une résistance de sortie $R_s$ nulle", "B. une résistance de sortie $R_s$ infinie", "C. un courant d'entrée $i_+$ nul", "D. un courant d'entrée $i_-$ nul"], correct: [0,2,3], theme: "Électronique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A, C et D\n\n🔬 FONDEMENT THÉORIQUE : AOP idéal : $R_e \\to \\infty$, $R_s \\to 0$, $i_+ = i_- = 0$, $\\varepsilon = u_+ - u_- = 0$ en régime linéaire.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Électronique, amplificateur opérationnel.\n\n⚠️ OBSTACLE DIDACTIQUE : $R_s$ nulle signifie que la tension de sortie ne dépend pas du courant débité.\n\n💡 APPROFONDISSEMENT : Les courants d'entrée nuls impliquent une impédance d'entrée infinie.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Connaître les caractéristiques de l'AOP idéal." }
+    ];
+
+    function showPage(e) { document.querySelectorAll('#main-app .page').forEach(p => p.classList.remove('active'));
+      document.getElementById(e).classList.add('active');
+      document.getElementById('main-scroll').scrollTop = 0; }
+
+    function selectMode(e) { mode = e;
+      ['train', 'exam'].forEach(x => document.getElementById('mode-' + x)?.classList.remove('selected'));
+      document.getElementById('mode-' + e).classList.add('selected'); const t = document.getElementById('btn-start');
+      t.disabled = false;
+      t.innerHTML = e === 'train' ? '📝 Mode Entraînement' : '⏱️ Mode Examen (60 min)';
+      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+      document.getElementById('mb-mode-badge').textContent = e === 'train' ? '📝 Entraînement' : '⏱️ Examen';
+      document.getElementById('notice-train').classList.toggle('hidden', e !== 'train');
+      document.getElementById('notice-exam').classList.toggle('hidden', e !== 'exam'); }
+
+    function startQuiz(e) { if (mode === 'exam') { showExamInstructionsModal(); return; }
+      currentQ = 0;
+      activeSet = e || questionsData.map((_, i) => i);
+      userAnswers = new Array(activeSet.length).fill(null).map(() => []);
+      validated = new Array(activeSet.length).fill(false);
+      showPage('page-question');
+      document.getElementById('btn-validate').classList.remove('hidden');
+      document.getElementById('feedback-placeholder').style.display = 'flex';
+      document.getElementById('feedback-box').classList.remove('visible');
+      document.getElementById('feedback-box').style.display = 'none'; if (mode === 'exam') { document.body.classList.add('exam-mode');
+        examSeconds = TOTAL_EXAM_SEC;
+        perQSeconds = PER_Q_SEC;
+        document.getElementById('timer-wrap').classList.remove('hidden');
+        document.getElementById('perq-timer').classList.remove('hidden');
+        startExamTimer();
+        startPerQTimer();
+        document.getElementById('btn-validate').classList.add('hidden');
+        document.getElementById('feedback-placeholder').classList.add('hidden');
+        document.getElementById('feedback-box').classList.remove('visible');
+        document.getElementById('feedback-box').style.display = 'none';
+        document.getElementById('grille-examen').classList.remove('hidden');
+        buildGrilleExamen(); } else { document.body.classList.remove('exam-mode');
+        document.getElementById('timer-wrap').classList.add('hidden');
+        document.getElementById('perq-timer').classList.add('hidden'); if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+        document.getElementById('grille-examen').classList.add('hidden'); }
+      updateMiniBar();
+      renderQuestion(); }
+
+    function showExamInstructionsModal() { const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'exam-instructions-modal';
+      overlay.innerHTML = '<div class="modal-box rtl" style="max-width:600px;"><h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</h3><p style="font-size:18px;font-weight:700;color:var(--primary);">📋 تعليمات الامتحان</p><table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:15px;text-align:right;"><tr><td style="padding:8px 12px;border:1px solid #ccc;">⏰ المدة</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">60 دقيقة</td></tr><tr><td style="padding:8px 12px;border:1px solid #ccc;">📝 عدد الأسئلة</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">50 سؤالاً</td></tr><tr><td style="padding:8px 12px;border:1px solid #ccc;">✅ نوع الاختيار</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">إجابة واحدة أو أكثر صحيحة</td></tr></table><p style="font-size:15px;">⌨️ <strong>الأزرار :</strong> A B C D = اختيار الإجابة | Enter = تأكيد | → ← = التنقل بين الأسئلة</p><p style="font-size:15px;color:var(--red);font-weight:700;">⚠️ لا يمكن العودة للتصحيح قبل نهاية الوقت</p><p style="font-size:16px;font-weight:700;color:var(--accent-dark);margin-top:12px;">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</p><div class="modal-actions" style="direction:ltr;"><button class="btn btn-gold" id="btn-start-exam">▶️ بدء الامتحان</button></div></div>';
+      document.body.appendChild(overlay);
+      document.getElementById('btn-start-exam').addEventListener('click', () => { overlay.remove();
+        currentQ = 0;
+        activeSet = questionsData.map((_, i) => i);
+        userAnswers = new Array(activeSet.length).fill(null).map(() => []);
+        validated = new Array(activeSet.length).fill(false);
+        showPage('page-question');
+        document.body.classList.add('exam-mode');
+        examSeconds = TOTAL_EXAM_SEC;
+        perQSeconds = PER_Q_SEC;
+        document.getElementById('timer-wrap').classList.remove('hidden');
+        document.getElementById('perq-timer').classList.remove('hidden');
+        startExamTimer();
+        startPerQTimer();
+        document.getElementById('btn-validate').classList.add('hidden');
+        document.getElementById('feedback-placeholder').classList.add('hidden');
+        document.getElementById('feedback-box').classList.remove('visible');
+        document.getElementById('feedback-box').style.display = 'none';
+        document.getElementById('grille-examen').classList.remove('hidden');
+        buildGrilleExamen();
+        updateMiniBar();
+        renderQuestion(); }); }
+
+    function buildGrilleExamen() { const container = document.getElementById('grille-table'); const half = Math.ceil(activeSet.length / 2); let html = '<div class="grille-col">'; for (let i = 0; i < half; i++) { const qIdx = activeSet[i]; const q = questionsData[qIdx]; const answered = userAnswers[i] && userAnswers[i].length > 0;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A', 'B', 'C', 'D'].forEach((ltr, j) => { const checked = userAnswers[i] && userAnswers[i].includes(j);
+          html += `<span class="grille-case${checked?' checked':''}" onclick="toggleChoiceFromGrille(${i},${j})">${ltr}</span>`; });
+        html += '</div>'; }
+      html += '</div><div class="grille-col">'; for (let i = half; i < activeSet.length; i++) { const qIdx = activeSet[i]; const q = questionsData[qIdx]; const answered = userAnswers[i] && userAnswers[i].length > 0;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A', 'B', 'C', 'D'].forEach((ltr, j) => { const checked = userAnswers[i] && userAnswers[i].includes(j);
+          html += `<span class="grille-case${checked?' checked':''}" onclick="toggleChoiceFromGrille(${i},${j})">${ltr}</span>`; });
+        html += '</div>'; }
+      html += '</div>';
+      container.innerHTML = html; }
+
+    function toggleChoiceFromGrille(qIndex, choiceIndex) { currentQ = qIndex; if (validated[currentQ]) return;
+      if (!userAnswers[currentQ]) userAnswers[currentQ] = [];
+      const idx = userAnswers[currentQ].indexOf(choiceIndex);
+      if (idx === -1) userAnswers[currentQ].push(choiceIndex);
+      else userAnswers[currentQ].splice(idx, 1);
+      renderQuestion();
+      buildGrilleExamen(); }
+
+    function jumpToQuestion(qIndex) { currentQ = qIndex; if (mode === 'exam') { perQSeconds = PER_Q_SEC;
+        updatePerQTimerDisplay(); }
+      renderQuestion(); if (mode === 'exam') buildGrilleExamen(); }
+
+    function goHome() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode');
+      showPage('page-home'); }
+
+    function updateMiniBar() { const e = currentQ + 1,
+        t = activeSet.length;
+      document.getElementById('mb-q-counter').textContent = `Q${e}/${t}`;
+      document.getElementById('mb-progress-fill').style.width = (e / t * 100) + '%'; }
+
+    function renderQuestion() { const e = currentQ,
+        t = activeSet[e],
+        n = questionsData[t],
+        o = activeSet.length;
+      document.getElementById('q-statement').innerHTML = `❓ <strong>Q${n.id}.</strong> ${n.statement}`;
+      document.getElementById('mb-q-counter').textContent = `Q${e+1}/${o}`;
+      document.getElementById('mb-progress-fill').style.width = ((e + 1) / o * 100) + '%'; const s = document.getElementById('q-choices');
+      s.innerHTML = ''; const a = n.correct; const letters = ['A', 'B', 'C', 'D'];
+      letters.forEach((ltr, i) => { if (i < n.choices.length) { const r = document.createElement('button');
+          r.className = 'choice-btn'; if (validated[e]) { if (a.includes(i)) r.classList.add('correct'); if (userAnswers[e] && userAnswers[e].includes(i)) { if (!a.includes(i)) r.classList.add('wrong'); } } else if (userAnswers[e] && userAnswers[e].includes(i)) r.classList.add('selected');
+          r.innerHTML = `<span class="choice-letter">${ltr}</span><span class="choice-text">${n.choices[i]}</span>`; if (validated[e]) r.disabled = true;
+          else r.onclick = () => { if (!userAnswers[currentQ]) userAnswers[currentQ] = [];
+            const idx = userAnswers[currentQ].indexOf(i);
+            if (idx === -1) userAnswers[currentQ].push(i);
+            else userAnswers[currentQ].splice(idx, 1);
+            renderQuestion(); if (mode === 'exam') buildGrilleExamen(); };
+          s.appendChild(r); } }); const i = userAnswers[e] && userAnswers[e].length > 0; if (mode === 'train') { document.getElementById('btn-validate').disabled = (!i || validated[e]); } if (validated[e] && mode === 'train') { buildFeedback(n, userAnswers[e]); } else if (mode === 'train') { document.getElementById('feedback-placeholder').style.display = 'flex';
+        document.getElementById('feedback-box').style.display = 'none'; }
+      document.getElementById('btn-prev').disabled = (e === 0); const l = document.getElementById('btn-next'); if (e === o - 1) { l.innerHTML = '🏁 Terminer';
+        l.className = 'btn btn-gold'; } else { l.innerHTML = 'Suivant →';
+        l.className = 'btn btn-primary'; } if (typeof renderMathInElement !== 'undefined') { renderMathInElement(document.getElementById('q-statement'), { delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }],
+            throwOnError: false }); renderMathInElement(document.getElementById('q-choices'), { delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }],
+            throwOnError: false }); } if (mode === 'exam') { perQSeconds = PER_Q_SEC;
+        updatePerQTimerDisplay();
+        buildGrilleExamen(); } }
+
+    function validateAnswer() { if (!userAnswers[currentQ] || userAnswers[currentQ].length === 0) return;
+      validated[currentQ] = true;
+      renderQuestion(); }
+
+    function buildFeedback(e, t) {
+      document.getElementById('feedback-placeholder').style.display = 'none'; const n = e.correct;
+      const a = t && n.length === t.length && n.every(v => t.includes(v));
+      document.getElementById('feedback-box').classList.add('visible', a ? 'correct' : 'wrong');
+      document.getElementById('feedback-box').style.display = 'block';
+      document.getElementById('badge-icon').textContent = a ? '✅' : '❌';
+      document.getElementById('feedback-result-text').textContent = a ? 'Bonne réponse !' : 'Réponse incorrecte';
+      document.getElementById('feedback-body').innerHTML = formatFeedbackBody(e); if (typeof renderMathInElement !== 'undefined') { renderMathInElement(document.getElementById('feedback-body'), { delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }],
+            throwOnError: false }); }
+    }
+
+    function formatFeedbackBody(e) { const parts = e.explication.split('\n\n'); let html = ''; parts.forEach(part => { if (part.startsWith('✅')) { html += `<div class="fb-section fb-correct"><strong>✅ Réponse</strong>${part.replace('✅ ','')}</div>`; } else if (part.startsWith('🔬')) { html += `<div class="fb-section fb-foundation"><strong>🔬 Fondement théorique</strong>${part.replace('🔬 ','')}</div>`; } else if (part.startsWith('📖')) { html += `<div class="fb-section fb-reference"><strong>📖 Référence programme</strong>${part.replace('📖 ','')}</div>`; } else if (part.startsWith('⚠️')) { html += `<div class="fb-section fb-obstacle"><strong>⚠️ Obstacle didactique</strong>${part.replace('⚠️ ','')}</div>`; } else if (part.startsWith('💡')) { html += `<div class="fb-section fb-tip"><strong>💡 Approfondissement</strong>${part.replace('💡 ','')}</div>`; } else if (part.startsWith('🎯')) { html += `<div class="fb-section fb-objectif"><strong>🎯 Objectif pédagogique</strong>${part.replace('🎯 ','')}</div>`; } else { html += `<div class="fb-section">${part}</div>`; } }); return html; }
+
+    function prevQuestion() { if (currentQ > 0) { currentQ--;
+        renderQuestion(); if (mode === 'exam') { perQSeconds = PER_Q_SEC;
+          updatePerQTimerDisplay(); } } }
+
+    function nextQuestion() { if (currentQ < activeSet.length - 1) { currentQ++;
+        renderQuestion(); if (mode === 'exam') { perQSeconds = PER_Q_SEC;
+          updatePerQTimerDisplay(); } } else { finishQuiz(); } }
+
+    function finishQuiz() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode');
+      showPage('page-results');
+      renderResults();
+      document.getElementById('timer-wrap').classList.add('hidden');
+      document.getElementById('perq-timer').classList.add('hidden'); }
+
+    function renderResults() { let e = 0; const themesMap = {};
+      activeSet.forEach((t, o) => { const s = questionsData[t],
+          a = s.correct,
+          i = userAnswers[o] && a.length === userAnswers[o].length && a.every(v => userAnswers[o].includes(v));
+        i && e++;
+        themesMap[s.theme] || (themesMap[s.theme] = { total: 0, correct: 0 });
+        themesMap[s.theme].total++;
+        i && themesMap[s.theme].correct++; }); const pct = Math.round(e / activeSet.length * 100);
+      document.getElementById('result-pct').textContent = pct + '%';
+      document.getElementById('result-sub').textContent = `${e} / ${activeSet.length} bonnes réponses`;
+      document.getElementById('result-badge').textContent = pct >= 80 ? '🏆' : pct >= 50 ? '👍' : '💪';
+      document.getElementById('btn-retry-failed').style.display = activeSet.some((e, t) => { const a = questionsData[e].correct; const i = userAnswers[t] || []; return !(a.length === i.length && a.every(v => i.includes(v)); }) ? 'flex' : 'none';
+      document.getElementById('result-themes').innerHTML = '<table class="result-table"><thead><tr><th>Thème</th><th>Score</th><th>%</th></tr></thead><tbody>' + Object.entries(themesMap).map(([theme, data]) => { const tp = Math.round(data.correct / data.total * 100); return `<tr><td>${tp>=80?'🟢':tp>=50?'🟡':'🔴'} ${theme}</td><td>${data.correct}/${data.total}</td><td>${tp}%</td></tr>`; }).join('') + '</tbody></table>'; const half = Math.ceil(activeSet.length / 2); let gridHtml = '<div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">'; for (let i = 0; i < half; i++) { const qIdx = activeSet[i]; const q = questionsData[qIdx]; const correctIdx = q.correct; const userAns = userAnswers[i] || [];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A', 'B', 'C', 'D'].forEach((ltr, j) => { let cls = ''; if (correctIdx.includes(j) && userAns.includes(j)) cls = 'correct-choice'; else if (correctIdx.includes(j) && !userAns.includes(j)) cls = 'missed-choice'; else if (!correctIdx.includes(j) && userAns.includes(j)) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`; });
+        gridHtml += '</div>'; }
+      gridHtml += '</div><div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">'; for (let i = half; i < activeSet.length; i++) { const qIdx = activeSet[i]; const q = questionsData[qIdx]; const correctIdx = q.correct; const userAns = userAnswers[i] || [];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A', 'B', 'C', 'D'].forEach((ltr, j) => { let cls = ''; if (correctIdx.includes(j) && userAns.includes(j)) cls = 'correct-choice'; else if (correctIdx.includes(j) && !userAns.includes(j)) cls = 'missed-choice'; else if (!correctIdx.includes(j) && userAns.includes(j)) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`; });
+        gridHtml += '</div>'; }
+      gridHtml += '</div>';
+      document.getElementById('result-grid').innerHTML = gridHtml; }
+
+    function retryFailed() { const e = activeSet.filter((e, t) => { const a = questionsData[e].correct; const i = userAnswers[t] || []; return !(a.length === i.length && a.every(v => i.includes(v)); }); if (e.length > 0) startQuiz(e); }
+
+    function startExamTimer() { updateExamTimerDisplay();
+      examTimer = setInterval(() => { examSeconds--;
+        updateExamTimerDisplay(); if (examSeconds <= 0) { clearInterval(examTimer);
+          clearInterval(perQTimer);
+          finishQuiz(); } }, 1000); }
+
+    function updateExamTimerDisplay() { const e = Math.floor(examSeconds / 60),
+        t = examSeconds % 60,
+        n = document.getElementById('timer-badge');
+      n.textContent = `⏱ ${String(e).padStart(2,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'timer-badge'; if (examSeconds <= 600) n.classList.add('danger'); else if (examSeconds <= 1800) n.classList.add('warning'); }
+
+    function startPerQTimer() { updatePerQTimerDisplay();
+      perQTimer = setInterval(() => { perQSeconds--;
+        updatePerQTimerDisplay(); if (perQSeconds <= 0) { clearInterval(perQTimer);
+          validated[currentQ] = true;
+          nextQuestion(); } }, 1000); }
+
+    function updatePerQTimerDisplay() { const e = Math.floor(perQSeconds / 60),
+        t = perQSeconds % 60,
+        n = document.getElementById('perq-timer');
+      n.textContent = `⚡ ${String(e).padStart(1,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'perq-timer'; if (perQSeconds <= 15) n.classList.add('danger'); else if (perQSeconds <= 30) n.classList.add('warning'); }
+
+    document.addEventListener('keydown', e => { const t = document.querySelector('#main-app .page.active'); if (!t || t.id !== 'page-question') return; const n = e.key.toUpperCase(); if (['A', 'B', 'C', 'D'].includes(n) && !validated[currentQ]) { const idx = ['A', 'B', 'C', 'D'].indexOf(n);
+        if (!userAnswers[currentQ]) userAnswers[currentQ] = [];
+        const pos = userAnswers[currentQ].indexOf(idx);
+        if (pos === -1) userAnswers[currentQ].push(idx);
+        else userAnswers[currentQ].splice(pos, 1);
+        renderQuestion(); if (mode === 'exam') buildGrilleExamen(); }
+      if (e.key === 'Enter') { if (mode === 'train') { const e = document.getElementById('btn-validate'); if (!e.disabled) validateAnswer(); } }
+      if (e.key === 'ArrowRight') nextQuestion(); if (e.key === 'ArrowLeft') prevQuestion(); });
+  </script>
+</body>
+</html>
