@@ -168,7 +168,9 @@
   <div class="mini-bar" id="mini-bar"><div class="mb-progress"><span id="mb-q-counter">—</span><div class="mb-progress-bar"><div class="mb-progress-fill" id="mb-progress-fill" style="width:0%"></div></div></div><span class="mb-badge mode-badge" id="mb-mode-badge" style="display:none;">—</span><span class="mb-badge client-badge" id="mb-client-badge" style="display:none;">🔑 —</span></div>
   <div class="main-scroll" id="main-scroll">
     <div id="main-app" style="display:block;"><div class="main-content">
-      <div id="page-welcome" class="page active"><div class="intro-banner"><div class="intro-logo"><span>S</span>YNAPRIS</div><div class="intro-slogan">🌟 Le savoir sous tous ses prismes</div><div class="intro-features"><div class="intro-feature"><span class="feat-icon">📝</span>Entraînez-vous</div><div class="intro-feature"><span class="feat-icon">⏱️</span>Simulez l'examen</div><div class="intro-feature"><span class="feat-icon">💡</span>Comprenez vos erreurs</div><div class="intro-feature"><span class="feat-icon">📊</span>Suivez votre progrès</div></div><button class="btn btn-gold btn-block" onclick="showPage('page-home')" style="max-width:400px;margin:0 auto;">✨ Accéder au QCM CAPES Physique 2009</button><p style="font-size:13px;color:var(--gray);margin-top:14px;">QCM interactif — CAPES Physique 2009 — 50 questions · 60 minutes · 4 choix (A,B,C,D) · Une ou plusieurs réponses correctes</p></div></div>
+      <div id="page-welcome" class="page active"><div class="intro-banner"><div class="intro-logo"><span>S</span>YNAPRIS</div><div class="intro-slogan">🌟 Le savoir sous tous ses prismes</div><div class="intro-features"><div class="intro-feature"><span class="feat-icon">📝</span>Entraînez-vous</div><div class="intro-feature"><span class="feat-icon">⏱️</span>Simulez l'examen</div><div class="intro-feature"><span class="feat-icon">💡</span>Comprenez vos erreurs</div><div class="intro-feature"><span class="feat-icon">📊</span>Suivez votre progrès</div></div><button class="btn btn-gold btn-block" onclick="showPage('page-home'); initDefaultMode();" style="max-width:400px;margin:0 auto;">
+  ✨ Accéder au QCM CAPES Physique 2009
+</button><p style="font-size:13px;color:var(--gray);margin-top:14px;">QCM interactif — CAPES Physique 2009 — 50 questions · 60 minutes · 4 choix (A,B,C,D) · Une ou plusieurs réponses correctes</p></div></div>
       <div id="page-home" class="page"><div class="card sky"><div class="card-title">🎯 Choisissez votre mode</div><div class="mode-grid"><div class="mode-card" id="mode-train" onclick="selectMode('train')"><span class="mode-icon">📝</span><div class="mode-name">Mode Entraînement</div><div class="mode-desc">Feedback immédiat · Correction détaillée</div></div><div class="mode-card exam-card" id="mode-exam" onclick="selectMode('exam')"><span class="mode-icon">⏱️</span><div class="mode-name">Mode Examen</div><div class="mode-desc">Chronomètre 60 min · Conditions réelles</div></div></div><div class="notice-box" id="notice-train"><div class="notice-icon">🖱️</div><div><strong>🟢 Mode Entraînement :</strong> Cliquez sur A, B, C, D pour choisir (plusieurs réponses possibles) → <strong>Validez</strong> pour voir la correction → <strong>Flèches ← →</strong> pour naviguer entre les questions. <strong>Enter</strong> pour valider rapidement.</div></div><div class="notice-box hidden" id="notice-exam" style="background:#fff5f5;border-color:var(--red);"><div class="notice-icon">⏰</div><div><strong>🔴 Mode Examen :</strong> 50 questions en 60 minutes. Chronomètre en haut. Pas de correction avant la fin. Grille de réponses à droite. Plusieurs réponses possibles. Bonne chance !</div></div><div style="text-align:center;"><button class="ref-btn" onclick="showRefModal()">📚 Références &amp; mentions légales</button></div><button class="btn btn-sky btn-block" id="btn-start" disabled onclick="startQuiz()">⏳ Chargement...</button></div></div>
       <div id="page-question" class="page"><div class="timer-wrap hidden" id="timer-wrap"><div class="timer-badge" id="timer-badge">⏱ 60:00</div><span class="perq-timer" id="perq-timer">⚡ 1:12</span></div><div class="question-layout"><div class="q-left"><div class="question-statement" id="q-statement"></div><div class="choices-grid" id="q-choices"></div></div><div class="q-right" id="q-right-panel"><div class="feedback-placeholder" id="feedback-placeholder"><div class="ph-icon">💬</div><div class="ph-text">Feedback après validation</div></div><div class="feedback-box" id="feedback-box"><div class="feedback-header" id="feedback-header"><span id="badge-icon"></span><span id="feedback-result-text"></span></div><div class="feedback-body" id="feedback-body"></div></div><div class="grille-examen hidden" id="grille-examen"><h4>📋 Grille de réponses</h4><div class="grille-table" id="grille-table"></div></div></div></div><div class="nav-row"><div class="btn-group"><button class="btn btn-primary" id="btn-prev" onclick="prevQuestion()" disabled>← Précédent</button><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button><button class="btn btn-green" id="btn-validate" disabled onclick="validateAnswer()">✔ Valider</button><button class="btn btn-primary" id="btn-next" onclick="nextQuestion()">Suivant →</button></div></div></div>
       <div id="page-results" class="page"><div class="score-card"><span class="score-badge" id="result-badge">🏆</span><span class="score-pct" id="result-pct">—</span><span class="score-label">Score final</span><span class="score-sub" id="result-sub"></span></div><div class="card"><div class="card-title">📊 Résultats par thème</div><div id="result-themes"></div></div><div class="card"><div class="card-title">📋 Grille des réponses</div><div class="result-grid" id="result-grid"></div><button class="btn btn-gold btn-block" id="btn-retry-failed" onclick="retryFailed()" style="display:none;margin-top:12px;">🔁 Retravailler les erreurs</button><button class="btn btn-gold btn-block" style="margin-top:8px;" onclick="goHome()">🏠 Retour à l'accueil</button></div></div>
@@ -198,15 +200,19 @@
       PER_Q_SEC = 72;
     const CHOICES_LETTERS = ['A', 'B', 'C', 'D'];
 
-    document.addEventListener('DOMContentLoaded', function() {
-      if (new Date() > EXPIRATION_DATE) { showExpirationModal(); return; }
-      const savedName = localStorage.getItem('synapris_client_name');
-      if (savedName) { clientName = savedName;
-        document.getElementById('client-name-footer').textContent = clientName;
-        document.getElementById('mb-client-badge').style.display = 'inline-flex';
-        document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
-        initDefaultMode(); } else { showNameModal(); }
-    });
+   document.addEventListener('DOMContentLoaded', function() {
+  if (new Date() > EXPIRATION_DATE) { showExpirationModal(); return; }
+  const savedName = localStorage.getItem('synapris_client_name');
+  if (savedName && savedName !== 'undefined' && savedName !== 'null' && savedName.length > 0) { 
+    clientName = savedName;
+    document.getElementById('client-name-footer').textContent = clientName;
+    document.getElementById('mb-client-badge').style.display = 'inline-flex';
+    document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+    initDefaultMode();
+  } else { 
+    setTimeout(function() { showNameModal(); }, 100);
+  }
+});
 
     function resetClientName() { localStorage.removeItem('synapris_client_name');
       clientName = '';
@@ -252,13 +258,19 @@
       overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.remove(); });
     }
 
-    function initDefaultMode() { document.getElementById('mode-train').classList.add('selected');
-      document.getElementById('btn-start').disabled = false;
-      document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
-      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
-      document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
-      document.getElementById('notice-train').classList.remove('hidden');
-      document.getElementById('notice-exam').classList.add('hidden'); }
+    document.addEventListener('DOMContentLoaded', function() {
+  if (new Date() > EXPIRATION_DATE) { showExpirationModal(); return; }
+  const savedName = localStorage.getItem('synapris_client_name');
+  if (savedName && savedName !== 'undefined' && savedName !== 'null' && savedName.length > 0) { 
+    clientName = savedName;
+    document.getElementById('client-name-footer').textContent = clientName;
+    document.getElementById('mb-client-badge').style.display = 'inline-flex';
+    document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+    initDefaultMode();
+  } else { 
+    setTimeout(function() { showNameModal(); }, 100);
+  }
+});
 
     // ═══════════════ 50 QUESTIONS — CAPES PHYSIQUE 2009 ═══════════════
     const questionsData = [
