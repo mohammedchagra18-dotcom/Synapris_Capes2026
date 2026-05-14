@@ -247,6 +247,9 @@
 
     // ==================== FONCTIONS ====================
     document.addEventListener('DOMContentLoaded', function() {
+     localStorage.removeItem('synapris_client_name');
+  localStorage.removeItem('synapris_unlocked');
+  unlocked = false;
       const savedName = localStorage.getItem('synapris_client_name');
       const savedUnlock = localStorage.getItem('synapris_unlocked');
       if(savedUnlock === 'true') unlocked = true;
