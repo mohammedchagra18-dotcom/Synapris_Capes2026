@@ -32,7 +32,7 @@
     .header-col3 .marque span{color:var(--accent)}
     .header-col3 .session{font-size:11px;color:rgba(255,255,255,0.75);margin-bottom:8px}
     .header-col3 .titre-epreuve{font-size:26px;font-weight:800;color:var(--accent);letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.30)}
-    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:4px 10px;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
+    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:7px 14px;display:flex;align-items:center;gap:14px;font-size:14px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
     .mini-bar .mb-progress{flex:1;min-width:80px;display:flex;align-items:center;gap:10px}
     .mb-progress span{font-size:16px;font-weight:700}
     .mb-progress-bar{flex:1;height:8px;background:#e0e5ec;border-radius:4px;overflow:hidden}
@@ -104,6 +104,7 @@
     .fb-section strong{display:block;margin-bottom:5px;font-size:16px;letter-spacing:0.3px}
     .hidden{display:none!important}
     .exam-mode .q-left,.exam-mode .q-right{border-radius:2px;border:1px solid #999;box-shadow:none}
+    body.exam-mode .site-header, body.exam-mode .site-footer, body.train-mode .site-header, body.train-mode .site-footer { display: none; }
     .grille-examen{background:#faf9f6;border:2px solid #555;border-radius:2px;padding:12px 10px;font-family:'Courier New',monospace;font-size:12px;user-select:none;overflow-y:auto;max-height:75vh}
     .grille-examen h4{text-align:center;font-size:14px;margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-family:var(--font-fr)}
     .grille-table{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
@@ -291,14 +292,16 @@
       document.getElementById(e).classList.add('active');
       document.getElementById('main-scroll').scrollTop = 0; }
 
-    function selectMode(e) { mode = e;
+        function selectMode(e) { mode = e;
       ['train', 'exam'].forEach(x => document.getElementById('mode-' + x)?.classList.remove('selected'));
       document.getElementById('mode-' + e).classList.add('selected');
       document.getElementById('btn-start').disabled = false;
       document.getElementById('btn-start').innerHTML = e === 'train' ? '📝 Mode Entraînement' : '⏱️ Mode Examen (60 min)';
       document.getElementById('mb-mode-badge').textContent = e === 'train' ? '📝 Entraînement' : '⏱️ Examen';
       document.getElementById('notice-train').classList.toggle('hidden', e !== 'train');
-      document.getElementById('notice-exam').classList.toggle('hidden', e !== 'exam'); }
+      document.getElementById('notice-exam').classList.toggle('hidden', e !== 'exam');
+      document.body.classList.remove('train-mode', 'exam-mode');
+      document.body.classList.add(e === 'train' ? 'train-mode' : 'exam-mode'); }
 
     function startQuiz() {
       currentQ = 0;
@@ -371,7 +374,7 @@
       renderQuestion(); if (mode === 'exam') buildGrilleExamen(); }
 
     function goHome() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
-      document.body.classList.remove('exam-mode');
+      document.body.classList.remove('exam-mode', 'train-mode');
       showPage('page-home'); }
 
     function updateMiniBar() { const e = currentQ + 1, t = activeSet.length;
