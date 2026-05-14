@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Synapris — QCM CAPES Physique 2007</title>
+  <link rel="icon" type="image/png"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23005c3a'/%3E%3Ctext x='50' y='68' font-size='60' font-family='Inter,sans-serif' font-weight='800' fill='%232ecc71' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#005c3a;--primary-mid:#007a4d;--accent:#2ecc71;--accent-dark:#27ae60;--green:#2e7d32;--green-light:#e8f5e9;--red:#c62828;--red-light:#ffebee;--orange:#ef6c00;--white:#ffffff;--gray-light:#f5f7fa;--gray:#90a4ae;--sky-deep:#3b82f6;--sky-card:#eff6ff;--sky-border:#93c5fd;--shadow:0 4px 20px rgba(0,92,58,0.10);--shadow-sm:0 2px 8px rgba(0,92,58,0.08);--radius:12px;--font-ar:'Amiri',serif;--font-heading:'Inter',sans-serif;--font-fr:'Source Sans 3',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{font-family:var(--font-fr);font-size:18px;line-height:1.6;background:linear-gradient(160deg,#f0fdf6 0%,#f0faf4 45%,#f5fef8 100%);color:#1a1a2e;display:flex;flex-direction:column}
+    .site-header{background:linear-gradient(135deg,#003820 0%,#005c3a 100%);color:var(--white);padding:14px 20px;flex-shrink:0;box-shadow:0 3px 16px rgba(0,0,0,0.35)}
+    .header-grid{display:grid;grid-template-columns:130px 1fr 280px;gap:14px;align-items:center}
+    .header-col1{display:flex;flex-direction:column;align-items:center;gap:6px}
+    .logo-square{width:100px;height:100px;border-radius:18px;background:#ffffff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:42px;font-weight:800;color:var(--primary);border:3px solid var(--white);box-shadow:0 0 0 5px rgba(255,255,255,0.20);overflow:hidden}
+    .logo-square img{width:100%;height:100%;object-fit:cover}
+    .header-col1 .verset{font-family:var(--font-ar);font-size:16px;font-weight:700;color:var(--accent);text-align:center;font-style:italic;line-height:1.3}
+    .header-col2{background:#d4f5e2;border-radius:12px;padding:14px 16px;text-align:center}
+    .header-col2 .concours-ar{font-family:var(--font-ar);font-size:16px;font-weight:800;color:#005c3a;line-height:1.4;margin-bottom:6px;direction:rtl}
+    .header-col2 .specialite{font-family:var(--font-ar);font-size:13px;color:#005c3a;font-weight:700;direction:rtl}
+    .header-col3{text-align:center}
+    .header-col3 .accroche{font-family:var(--font-heading);font-size:14px;font-weight:600;color:var(--accent);margin-bottom:4px}
+    .header-col3 .marque{font-size:20px;font-weight:800;color:var(--white);letter-spacing:1px}
+    .header-col3 .marque span{color:var(--accent)}
+    .header-col3 .session{font-size:11px;color:rgba(255,255,255,0.75);margin-bottom:8px}
+    .header-col3 .titre-epreuve{font-size:26px;font-weight:800;color:var(--accent);letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.30)}
+    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:10px 20px;display:flex;align-items:center;gap:14px;font-size:14px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
+    .mini-bar .mb-progress{flex:1;min-width:80px;display:flex;align-items:center;gap:10px}
+    .mb-progress span{font-size:16px;font-weight:700}
+    .mb-progress-bar{flex:1;height:8px;background:#e0e5ec;border-radius:4px;overflow:hidden}
+    .mb-progress-fill{height:100%;background:linear-gradient(90deg,var(--accent-dark),var(--accent));border-radius:4px;transition:width .4s ease}
+    .mb-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:14px;font-weight:700;font-size:12px;white-space:nowrap}
+    .mb-badge.mode-badge{background:#e8f0fb;color:var(--sky-deep)}
+    .mb-badge.client-badge{background:#fff3e0;color:var(--accent-dark)}
+    .main-scroll{flex:1;overflow-y:auto;padding:12px 0 8px}
+    .main-content{max-width:1100px;margin:0 auto;padding:0 18px 20px}
+    .page{display:none}
+    .page.active{display:block;animation:fadeIn .35s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 28px;margin-bottom:18px;border-left:6px solid var(--primary)}
+    .card.sky{border-left-color:var(--sky-deep);background:#fafcff}
+    .card-title{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+    .btn{font-family:var(--font-fr);font-size:15px;font-weight:600;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover:not(:disabled){background:var(--primary-mid)}
+    .btn-sky{background:var(--sky-deep);color:var(--white)}.btn-sky:hover:not(:disabled){background:#2563eb}
+    .btn-green{background:var(--green);color:var(--white)}.btn-green:hover:not(:disabled){background:#388e3c}
+    .btn-gold{background:var(--accent);color:#005c3a;font-weight:700}.btn-gold:hover:not(:disabled){background:var(--accent-dark);color:#fff}
+    .btn-gray{background:#6c757d;color:var(--white)}.btn-gray:hover:not(:disabled){background:#5a6268}
+    .btn-outline-white{border:2px solid var(--white);color:var(--white);background:transparent;font-size:13px;padding:8px 16px}.btn-outline-white:hover{background:rgba(255,255,255,0.10)}
+    .btn-whatsapp{background:#25d366;color:var(--white)}.btn-whatsapp:hover{background:#1ebe57}
+    .btn-block{display:flex;width:100%;margin-top:14px;font-size:16px;padding:14px}
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 16px;max-width:560px;margin-left:auto;margin-right:auto}
+    .mode-card{background:#f8faff;border:2px solid var(--sky-border);border-radius:var(--radius);padding:22px 14px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+    .mode-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--sky-deep);transform:scaleX(0);transform-origin:center;transition:transform .2s}
+    .mode-card:hover::after,.mode-card.selected::after{transform:scaleX(1)}
+    .mode-card:hover,.mode-card.selected{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sky-deep)}
+    .mode-card.exam-card::after{background:var(--red)}.mode-card.exam-card:hover,.mode-card.exam-card.selected{border-color:var(--red);background:#fff5f5}
+    .mode-icon{font-size:36px;display:block;margin-bottom:6px}.mode-name{font-size:17px;font-weight:700;color:var(--primary)}
+    .mode-desc{font-size:13px;color:var(--gray);margin-top:4px;line-height:1.5}
+    .notice-box{background:#fffdf5;border:2px dashed var(--accent);border-radius:12px;padding:16px 20px;margin:12px 0 0;font-size:15px;line-height:1.6;display:flex;align-items:flex-start;gap:12px}
+    .notice-box .notice-icon{font-size:28px;flex-shrink:0;margin-top:2px}
+    .ref-btn{background:transparent;border:1.5px dashed var(--gray);color:var(--gray);font-size:13px;padding:8px 16px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:10px 0 0;transition:all .2s}
+    .ref-btn:hover{border-color:var(--accent);color:var(--accent);background:#fffdf5}
+    .question-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+    .q-left{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;border:1.5px solid var(--sky-border)}
+    .q-right{min-height:120px}
+    .question-statement{font-size:16px;color:#1a1a2e;line-height:1.8;margin-bottom:14px;padding:14px 18px;background:#f8faff;border-radius:12px;border-left:5px solid var(--accent);user-select:text}
+    .choices-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+    .choice-btn{font-family:var(--font-fr);font-size:15px;padding:11px 16px;border:2px solid var(--sky-border);border-radius:12px;background:var(--white);color:#1a1a2e;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:flex-start;gap:10px;width:100%}
+    .choice-btn:hover:not(:disabled){background:#f0f6ff;border-color:var(--sky-deep)}
+    .choice-btn.selected{background:#e8f0ff;border-color:var(--sky-deep);box-shadow:0 0 0 4px rgba(59,130,246,0.15)}
+    .choice-btn.correct{background:var(--green-light);border-color:var(--green);color:var(--green);font-weight:600}
+    .choice-btn.wrong{background:var(--red-light);border-color:var(--red);color:var(--red)}
+    .choice-btn:disabled{cursor:default}
+    .choice-letter{width:30px;height:30px;border-radius:50%;background:var(--primary);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;margin-top:2px}
+    .choice-btn.correct .choice-letter{background:var(--green)}.choice-btn.wrong .choice-letter{background:var(--red)}.choice-btn.selected .choice-letter{background:var(--sky-deep)}
+    .choice-text{flex:1}
+    .nav-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .nav-row .btn-group{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .feedback-placeholder{background:#f8faff;border:2px dashed var(--sky-border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:140px;padding:24px 16px;text-align:center;color:var(--gray)}
+    .feedback-placeholder .ph-icon{font-size:36px;margin-bottom:8px}.feedback-placeholder .ph-text{font-size:14px}
+    .feedback-box{display:none;animation:fadeIn .3s ease}.feedback-box.visible{display:block}
+    .feedback-header{display:flex;align-items:center;gap:10px;padding:14px 20px;font-size:17px;font-weight:700;border-radius:12px 12px 0 0;border:2px solid transparent;border-bottom:none}
+    .feedback-box.correct .feedback-header{background:var(--green-light);color:var(--green);border-color:var(--green)}
+    .feedback-box.wrong .feedback-header{background:var(--red-light);color:var(--red);border-color:var(--red)}
+    .feedback-body{padding:20px 24px;background:#fafcff;border:2px solid #dbeafe;border-top:none;border-radius:0 0 12px 12px;font-size:15px;line-height:1.8;user-select:text;white-space:pre-line}
+    .feedback-box.correct .feedback-body{border-color:var(--green)}.feedback-box.wrong .feedback-body{border-color:var(--red)}
+    .fb-section{margin-bottom:14px;padding:14px 18px;border-radius:10px;background:#f9fafb;border-left:5px solid var(--sky-deep)}
+    .fb-section.fb-correct{background:#f0faf0;border-left-color:var(--green)}
+    .fb-section.fb-foundation{background:#f0f4ff;border-left-color:var(--sky-deep)}
+    .fb-section.fb-reference{background:#fef9f0;border-left-color:var(--accent-dark)}
+    .fb-section.fb-obstacle{background:#fff5f5;border-left-color:var(--red)}
+    .fb-section.fb-tip{background:#fffdf0;border-left-color:var(--accent)}
+    .fb-section.fb-objectif{background:#f0faf8;border-left-color:var(--primary)}
+    .fb-section strong{display:block;margin-bottom:5px;font-size:16px;letter-spacing:0.3px}
+    .hidden{display:none!important}
+    .exam-mode .q-left,.exam-mode .q-right{border-radius:2px;border:1px solid #999;box-shadow:none}
+    .grille-examen{background:#faf9f6;border:2px solid #555;border-radius:2px;padding:12px 10px;font-family:'Courier New',monospace;font-size:12px;user-select:none;overflow-y:auto;max-height:75vh}
+    .grille-examen h4{text-align:center;font-size:14px;margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-family:var(--font-fr)}
+    .grille-table{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+    .grille-col{display:flex;flex-direction:column;gap:2px}
+    .grille-row{display:flex;align-items:center;gap:4px;font-size:11px}
+    .grille-q-num{width:28px;font-weight:700;text-align:right;cursor:pointer;color:var(--primary);font-family:var(--font-fr)}
+    .grille-q-num.answered{color:var(--accent-dark);animation:subtlePulse 1.5s infinite}
+    @keyframes subtlePulse{0%,100%{opacity:1}50%{opacity:0.5}}
+    .grille-case{width:20px;height:20px;border:1.5px solid #555;display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;cursor:pointer;background:#fff;transition:all .15s}
+    .grille-case:hover{background:#ddd}.grille-case.checked{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;font-family:'Courier New',monospace;font-size:13px}
+    .result-row{display:flex;align-items:center;gap:6px;padding:4px 0}
+    .result-q-num{width:32px;font-weight:700;font-family:var(--font-fr)}
+    .result-case{width:24px;height:24px;border:2px solid #aaa;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;background:#f5f5f5}
+    .result-case.correct-choice{background:#2e7d32;color:#fff;border-color:#2e7d32}
+    .result-case.wrong-choice{background:#c62828;color:#fff;border-color:#c62828}
+    .result-case.missed-choice{background:#fff3e0;border-color:#ef6c00;color:#ef6c00}
+    .timer-wrap{text-align:center;margin-bottom:10px}
+    .timer-badge{display:inline-flex;align-items:center;gap:6px;background:#f8faff;border:2px solid var(--sky-border);border-radius:10px;padding:6px 16px;font-size:20px;font-weight:700;color:var(--primary);transition:all .3s}
+    .timer-badge.warning{background:#fff8f0;border-color:var(--orange);color:var(--orange)}
+    .timer-badge.danger{background:var(--red-light);border-color:var(--red);color:var(--red);animation:pulse .8s infinite}
+    .perq-timer{font-size:12px;color:var(--gray);margin-left:8px;font-weight:600}.perq-timer.warning{color:var(--orange)}.perq-timer.danger{color:var(--red)}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+    .site-footer{background:var(--primary);color:rgba(255,255,255,0.85);padding:10px 20px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
+    .site-footer .footer-info{font-weight:600}.site-footer .footer-info strong{color:var(--accent);font-weight:700}
+    .site-footer .footer-buttons{display:flex;gap:8px;flex-wrap:wrap}
+    .footer-reset{background:transparent;border:1px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.7);font-size:10px;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all .2s}
+    .footer-reset:hover{border-color:var(--accent);color:var(--accent)}
+    .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,92,58,0.80);display:flex;align-items:center;justify-content:center;z-index:1000;animation:fadeIn .3s ease}
+    .modal-box{background:var(--white);border-radius:var(--radius);padding:32px 28px;max-width:520px;width:90%;text-align:center;box-shadow:0 14px 50px rgba(0,0,0,0.35);border-top:6px solid var(--accent)}
+    .modal-box.rtl{direction:rtl;font-family:var(--font-ar);text-align:right}
+    .modal-box h3{font-family:var(--font-heading);font-size:24px;color:var(--primary);margin-bottom:10px}
+    .modal-box.rtl h3{font-family:var(--font-ar);font-size:22px}
+    .modal-box p{font-size:16px;color:#555;margin-bottom:20px;line-height:1.7}
+    .modal-box .key-input{width:100%;padding:14px 16px;border:2px solid var(--sky-border);border-radius:10px;font-size:18px;text-align:center;font-family:var(--font-fr);letter-spacing:2px;margin-bottom:16px;outline:none;transition:border-color .2s}
+    .modal-box .key-input:focus{border-color:var(--accent)}
+    .modal-box .modal-error{color:var(--red);font-size:14px;font-weight:600;margin-bottom:10px;display:none}
+    .modal-box .modal-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .score-card{text-align:center;padding:28px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px}
+    .score-badge{font-size:56px;display:block;margin-bottom:8px}.score-pct{font-size:52px;font-weight:800;color:var(--primary);display:block}
+    .score-label{font-size:18px;font-weight:600;color:var(--gray);display:block;margin-top:6px}.score-sub{font-size:15px;color:var(--gray);display:block}
+    .result-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+    .result-table th{background:var(--primary);color:var(--white);padding:8px 10px;text-align:left}
+    .result-table td{padding:7px 10px;border-bottom:1px solid #e0e5ec}
+    .intro-banner{background:linear-gradient(135deg,#f0fdf4 0%,#e6f5ed 40%,#f5fef8 100%);border-radius:18px;padding:40px 28px;text-align:center;box-shadow:var(--shadow);border:2px solid var(--primary);margin-bottom:20px}
+    .intro-banner .intro-logo{font-family:var(--font-heading);font-size:48px;font-weight:800;color:var(--primary);letter-spacing:3px}
+    .intro-banner .intro-logo span{color:var(--accent)}.intro-banner .intro-slogan{font-size:22px;font-weight:600;color:#555;margin:8px 0 20px}
+    .intro-banner .intro-features{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:24px 0}
+    .intro-feature{text-align:center;font-size:16px;font-weight:600;color:var(--primary)}.intro-feature .feat-icon{font-size:40px;display:block;margin-bottom:6px}
+    @media(max-width:480px){body{font-size:16px}.site-header{padding:8px 10px}.header-grid{grid-template-columns:20% 50% 30%;gap:4px}.logo-square{width:48px;height:48px;font-size:20px;border-radius:10px}.header-col1 .verset{font-size:8px}.header-col2 .concours-ar{font-size:10px}.header-col2 .specialite{font-size:8px}.header-col3 .accroche{font-size:9px}.header-col3 .marque{font-size:13px}.header-col3 .session{font-size:7px}.header-col3 .titre-epreuve{font-size:16px}.mini-bar{padding:6px 10px;gap:8px;font-size:11px}.mini-bar .mb-progress span{font-size:12px}.mb-badge{font-size:9px;padding:3px 8px}.main-content{padding:0 8px 14px}.mode-grid{gap:8px}.mode-card{padding:14px 6px}.mode-icon{font-size:28px}.mode-name{font-size:13px}.mode-desc{font-size:10px}.question-layout{grid-template-columns:1fr;gap:6px}.q-left{padding:12px}.question-statement{font-size:13px;padding:10px 12px}.choice-btn{font-size:12px;padding:8px 10px}.choice-letter{width:24px;height:24px;font-size:10px}.btn{font-size:12px;padding:8px 14px}.btn-block{font-size:14px;padding:10px}.site-footer{padding:8px 12px;flex-direction:column;text-align:center;font-size:11px}.site-footer .footer-buttons{justify-content:center}.grille-examen{font-size:9px;padding:6px 4px;max-height:55vh}.grille-examen h4{font-size:10px;margin-bottom:6px}.grille-table{gap:3px 5px}.grille-row{font-size:8px;gap:1px}.grille-q-num{width:18px;font-size:8px}.grille-case{width:15px;height:15px;font-size:6px}.result-grid{font-size:10px;gap:4px 10px}.result-case{width:22px;height:22px;font-size:8px}.intro-banner{padding:24px 14px}.intro-banner .intro-logo{font-size:32px}.intro-banner .intro-slogan{font-size:16px}.intro-feature{font-size:13px}.intro-feature .feat-icon{font-size:30px}}
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <header class="site-header">
+    <div class="header-grid">
+      <div class="header-col1"><div class="logo-square"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23005c3a'/%3E%3Cstop offset='100%25' style='stop-color:%232ecc71'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpolygon points='50,15 82,38 82,72 50,88 18,72 18,38' fill='white' opacity='0.9'/%3E%3Ccircle cx='50' cy='50' r='12' fill='%23005c3a'/%3E%3Ctext x='50' y='78' font-size='22' font-family='Inter,sans-serif' font-weight='800' fill='white' text-anchor='middle'%3ESYNAPRIS%3C/text%3E%3C/svg%3E" alt="Synapris" onerror="this.style.display='none';this.parentElement.textContent='S'" /></div><div class="verset">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</div></div>
+      <div class="header-col2"><div class="concours-ar">المناظرة الخارجية بالاختبارات لانتداب أساتذة<br>التعليم الثانوي و التعليم التقني و التعليم الفني</div><div class="specialite">اختصاص : الفيزياء — CAPES 2007 — المدة : 60 دقيقة</div></div>
+      <div class="header-col3"><div class="accroche">✨ Votre réussite commence ici</div><div class="marque"><span>SYNAPRIS</span></div><div class="session">Éclairer l'intelligence · CAPES Physique 2007</div><div class="titre-epreuve">QCM_CAPES_2007</div></div>
+    </div>
+  </header>
+  <div class="mini-bar" id="mini-bar"><div class="mb-progress"><span id="mb-q-counter">—</span><div class="mb-progress-bar"><div class="mb-progress-fill" id="mb-progress-fill" style="width:0%"></div></div></div><span class="mb-badge mode-badge" id="mb-mode-badge" style="display:none;">—</span><span class="mb-badge client-badge" id="mb-client-badge" style="display:none;">🔑 —</span></div>
+  <div class="main-scroll" id="main-scroll">
+    <div id="main-app" style="display:block;"><div class="main-content">
+      <div id="page-welcome" class="page active"><div class="intro-banner"><div class="intro-logo"><span>S</span>YNAPRIS</div><div class="intro-slogan">🌟 Le savoir sous tous ses prismes</div><div class="intro-features"><div class="intro-feature"><span class="feat-icon">📝</span>Entraînez-vous</div><div class="intro-feature"><span class="feat-icon">⏱️</span>Simulez l'examen</div><div class="intro-feature"><span class="feat-icon">💡</span>Comprenez vos erreurs</div><div class="intro-feature"><span class="feat-icon">📊</span>Suivez votre progrès</div></div><button class="btn btn-gold btn-block" onclick="showPage('page-home')" style="max-width:400px;margin:0 auto;">✨ Accéder au QCM CAPES 2007</button><p style="font-size:13px;color:var(--gray);margin-top:14px;">QCM interactif — CAPES Physique 2007 — 50 questions · 60 minutes · 4 choix (A,B,C,D) · Une ou plusieurs réponses correctes</p></div></div>
+      <div id="page-home" class="page"><div class="card sky"><div class="card-title">🎯 Choisissez votre mode</div><div class="mode-grid"><div class="mode-card" id="mode-train" onclick="selectMode('train')"><span class="mode-icon">📝</span><div class="mode-name">Mode Entraînement</div><div class="mode-desc">Feedback immédiat · Correction détaillée</div></div><div class="mode-card exam-card" id="mode-exam" onclick="selectMode('exam')"><span class="mode-icon">⏱️</span><div class="mode-name">Mode Examen</div><div class="mode-desc">Chronomètre 60 min · Conditions réelles</div></div></div><div class="notice-box" id="notice-train"><div class="notice-icon">🖱️</div><div><strong>🟢 Mode Entraînement :</strong> Cochez la ou les bonnes réponses → <strong>Validez</strong> pour voir la correction → <strong>Flèches ← →</strong> pour naviguer. Plusieurs réponses possibles.</div></div><div class="notice-box hidden" id="notice-exam" style="background:#fff5f5;border-color:var(--red);"><div class="notice-icon">⏰</div><div><strong>🔴 Mode Examen :</strong> 50 questions en 60 minutes. Chronomètre en haut. Pas de correction avant la fin. Grille de réponses à droite. Une ou plusieurs réponses correctes. Bonne chance !</div></div><div style="text-align:center;"><button class="ref-btn" onclick="showRefModal()">📚 Références &amp; mentions légales</button></div><button class="btn btn-sky btn-block" id="btn-start" disabled onclick="startQuiz()">⏳ Chargement...</button></div></div>
+      <div id="page-question" class="page"><div class="timer-wrap hidden" id="timer-wrap"><div class="timer-badge" id="timer-badge">⏱ 60:00</div><span class="perq-timer" id="perq-timer">⚡ 1:12</span></div><div class="question-layout"><div class="q-left"><div class="question-statement" id="q-statement"></div><div class="choices-grid" id="q-choices"></div></div><div class="q-right" id="q-right-panel"><div class="feedback-placeholder" id="feedback-placeholder"><div class="ph-icon">💬</div><div class="ph-text">Feedback après validation</div></div><div class="feedback-box" id="feedback-box"><div class="feedback-header" id="feedback-header"><span id="badge-icon"></span><span id="feedback-result-text"></span></div><div class="feedback-body" id="feedback-body"></div></div><div class="grille-examen hidden" id="grille-examen"><h4>📋 Grille de réponses</h4><div class="grille-table" id="grille-table"></div></div></div></div><div class="nav-row"><div class="btn-group"><button class="btn btn-primary" id="btn-prev" onclick="prevQuestion()" disabled>← Précédent</button><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button><button class="btn btn-green" id="btn-validate" disabled onclick="validateAnswer()">✔ Valider</button><button class="btn btn-primary" id="btn-next" onclick="nextQuestion()">Suivant →</button></div></div></div>
+      <div id="page-results" class="page"><div class="score-card"><span class="score-badge" id="result-badge">🏆</span><span class="score-pct" id="result-pct">—</span><span class="score-label">Score final</span><span class="score-sub" id="result-sub"></span></div><div class="card"><div class="card-title">📊 Résultats par thème</div><div id="result-themes"></div></div><div class="card"><div class="card-title">📋 Grille des réponses</div><div class="result-grid" id="result-grid"></div><button class="btn btn-gold btn-block" style="margin-top:8px;" onclick="goHome()">🏠 Retour à l'accueil</button></div></div>
+    </div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-info">© 2026 <strong>Synapris</strong> — Licence attribuée à <span id="client-name-footer">——</span> · Valide jusqu'au 01/03/2027 · CAPES Physique 2007 · 50 questions · 60 min</div>
+    <div class="footer-buttons"><button class="footer-reset" onclick="resetClientName()" title="Changer le prénom">🔄 Changer</button><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a></div>
+  </footer>
+  <script>
+    const FICHE_TYPE = 'full';
+    const TOTAL_EXAM_SEC = 3600, PER_Q_SEC = 72;
+    let clientName = '';
+    let mode = 'train';
+    let currentQ = 0, activeSet = [], userAnswers = [], validated = [], examTimer = null, examSeconds = 0, perQTimer = null, perQSeconds = 0;
+
+    // ==================== 50 QUESTIONS CAPES PHYSIQUE 2007 ====================
+    const questionsData = [
+      { id: 1, statement: "Pour un oscillateur mécanique constitué d'un solide de masse $m$, d'un ressort de raideur $k$ et faiblement amorti, la pseudopulsation $\\Omega$ du mouvement est :", choices: ["A: $\\Omega = \\sqrt{\\frac{k}{m}}$", "B: $\\Omega = \\sqrt{\\frac{m}{k}}$", "C: $\\Omega = \\sqrt{\\omega_0^2 + \\frac{\\mu^2}{4m^2}}$", "D: $\\Omega = \\sqrt{\\omega_0^2 - \\frac{\\mu^2}{4m^2}}$"], correct: [3], theme: "Oscillations mécaniques", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : Pour un oscillateur amorti, l'équation différentielle est $m\\ddot{x} + \\mu\\dot{x} + kx = 0$. La solution donne une pseudopulsation $\\Omega = \\sqrt{\\omega_0^2 - \\frac{\\mu^2}{4m^2}}$ où $\\omega_0 = \\sqrt{k/m}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Oscillations amorties ».\n\n⚠️ OBSTACLE DIDACTIQUE : L'amortissement \"freine\" le système, ce qui diminue légèrement la fréquence d'oscillation par rapport au cas idéal.\n\n💡 APPROFONDISSEMENT : Si $\\mu$ est faible, $\\Omega \\approx \\omega_0$. Si $\\mu$ est grand, le système devient apériodique.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Comprendre l'effet de l'amortissement sur la fréquence d'oscillation." },
+      { id: 2, statement: "Pour l'oscillateur considéré dans la première question, le décrément logarithmique $\\delta$ du mouvement est :", choices: ["A: $\\delta = \\frac{\\mu}{m} \\sqrt{\\frac{m}{k}}$", "B: $\\delta = \\frac{\\mu}{2m} \\cdot T_0$", "C: $\\delta = \\frac{\\mu}{2m} \\cdot T$", "D: $\\delta = \\frac{2m}{\\mu} \\cdot T$"], correct: [2], theme: "Oscillations mécaniques", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Le décrément logarithmique $\\delta = \\ln\\frac{x(t)}{x(t+T)} = \\frac{\\mu}{2m}T$, où $T$ est la pseudo-période.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Amortissement ».\n\n⚠️ OBSTACLE DIDACTIQUE : Ne pas confondre avec la période propre $T_0$. Le décrément se calcule sur la période réelle du mouvement amorti.\n\n💡 APPROFONDISSEMENT : $\\delta$ caractérise la rapidité de l'amortissement. Plus $\\delta$ est grand, plus l'amplitude décroît vite.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer le décrément logarithmique." },
+      { id: 3, statement: "Soit une bobine de résistance $r$, d'inductance $L$, parcourue de sa borne A à sa borne B par un courant variable d'intensité $i$. Selon la convention récepteur, la tension à ses bornes s'écrit :", choices: ["A: $u_{AB} = ri - L \\frac{di}{dt}$", "B: $u_{AB} = ri + L \\frac{di}{dt}$", "C: $u_{AB} = L \\frac{di}{dt} - ri$", "D: $u_{AB} = L \\frac{di}{dt}$"], correct: [1], theme: "Électricité", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : En convention récepteur, la tension aux bornes d'une bobine réelle est la somme de la chute de tension ohmique ($ri$) et de la force contre-électromotrice d'auto-induction ($L\\frac{di}{dt}$).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Bobine et inductance ».\n\n⚠️ OBSTACLE DIDACTIQUE : Si le courant est constant ($di/dt = 0$), la bobine se comporte comme une simple résistance $r$.\n\n💡 APPROFONDISSEMENT : Le signe $+$ vient de la convention récepteur : le courant entre par A et sort par B.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Écrire la tension aux bornes d'une bobine en convention récepteur." },
+      { id: 4, statement: "Un oscillateur électrique RLC série est alimenté par un générateur basses fréquences. À la résonance d'intensité, la tension $u(t)$ est :", choices: ["A: en phase avec $u_c(t)$", "B: en retard de phase par rapport à $i(t)$", "C: en quadrature avance par rapport à $u_c(t)$", "D: en quadrature retard par rapport à $u_c(t)$"], correct: [2], theme: "Électricité", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : À la résonance, $u(t)$ est en phase avec $i(t)$. Or $u_c(t)$ est en quadrature retard par rapport à $i(t)$. Donc $u(t)$ est en quadrature avance par rapport à $u_c(t)$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Résonance ».\n\n⚠️ OBSTACLE DIDACTIQUE : À la résonance, $u_L$ et $u_C$ sont en opposition de phase et s'annulent.\n\n💡 APPROFONDISSEMENT : Le déphasage entre $u$ et $u_C$ est de $+90°$ à la résonance.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Analyser les déphasages dans un circuit RLC à la résonance." },
+      { id: 5, statement: "Les oscillations entretenues d'un oscillateur électrique RLC série avec un dipôle à résistance négative sont de fréquence $N$ telle que :", choices: ["A: $N > N_0$", "B: $N < N_0$", "C: $N = N_0$", "D: $N^2 = N_0^2 - \\frac{R^2}{8\\pi^2 L^2}$"], correct: [2], theme: "Électricité", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Un dipôle à résistance négative compense exactement les pertes par effet Joule. Le circuit se comporte alors comme un circuit $LC$ idéal oscillant à sa fréquence propre $N_0 = 1/(2\\pi\\sqrt{LC})$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Oscillations entretenues ».\n\n⚠️ OBSTACLE DIDACTIQUE : L'entretien \"annule\" l'effet de la résistance réelle, rétablissant le régime sinusoïdal parfait.\n\n💡 APPROFONDISSEMENT : Le montage à amplificateur opérationnel peut créer une résistance négative.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Comprendre le principe des oscillations entretenues." },
+      { id: 6, statement: "Deux particules animées des vitesses $v_1$ et $v_2$ entrent en choc. Le choc est parfaitement élastique si le coefficient de restitution $e$ est :", choices: ["A: $e = 0$", "B: $e > 0$", "C: $e = 1$", "D: $0 \\le e < 1$"], correct: [2], theme: "Mécanique", niveau_scolaire: "3ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Le coefficient de restitution $e = (v_2' - v_1')/(v_1 - v_2)$ vaut $1$ si le choc est parfaitement élastique (conservation de l'énergie cinétique).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 3ème année secondaire, Chapitre « Chocs et collisions ».\n\n⚠️ OBSTACLE DIDACTIQUE : $e=0$ correspond à un choc parfaitement mou (les corps restent collés).\n\n💡 APPROFONDISSEMENT : Pour $0 < e < 1$, le choc est inélastique.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Définir le coefficient de restitution." },
+      { id: 7, statement: "Selon la transformation de Lorentz, la longueur $l$ d'une tige de longueur propre $l_0$ mesurée dans un référentiel (S) en mouvement est :", choices: ["A: $l = l_0 \\sqrt{1+\\beta^2}$", "B: $l = l_0 \\sqrt{1-\\beta^2}$", "C: $l = \\gamma(l_0 - ut)$", "D: $l > l_0$"], correct: [1], theme: "Relativité", niveau_scolaire: "Supérieur", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : La contraction des longueurs est $l = l_0\\sqrt{1 - v^2/c^2} = l_0\\sqrt{1-\\beta^2}$ avec $\\beta = v/c$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Relativité restreinte, transformation de Lorentz.\n\n⚠️ OBSTACLE DIDACTIQUE : Le facteur $\\sqrt{1-\\beta^2}$ est toujours inférieur à 1, ce qui confirme la contraction.\n\n💡 APPROFONDISSEMENT : La contraction n'est significative que lorsque $v$ est proche de $c$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer la formule de contraction des longueurs." },
+      { id: 8, statement: "Soit une distribution de charges répartie avec une charge volumique $\\rho$ uniforme dans un fil cylindrique de rayon $R$. Le potentiel électrostatique $V(r)$ pour $r \\ge R$ est :", choices: ["A: $V(r) = -\\rho \\frac{R^2}{2\\varepsilon_0} \\log(\\frac{r}{R})$", "B: $V(r) = -\\rho \\frac{r^2-R^2}{\\varepsilon_0} + \\frac{R^2}{2\\varepsilon_0} \\log(\\frac{r}{R})$", "C: $V(r) = \\rho \\frac{R^2}{2\\varepsilon_0} \\log(\\frac{R}{r})$", "D: $V(r) = -\\rho \\frac{R^2}{2\\varepsilon_0} \\log(\\frac{r}{R})$"], correct: [0,3], theme: "Électromagnétisme", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A et D\n\n🔬 FONDEMENT THÉORIQUE : À l'extérieur d'un long fil chargé ($r \\ge R$), le champ est en $1/r$, donc le potentiel est une fonction logarithmique de la distance.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Électrostatique, cylindre chargé.\n\n⚠️ OBSTACLE DIDACTIQUE : L'expression à l'intérieur du log doit être sans unité ($r/R$).\n\n💡 APPROFONDISSEMENT : La constante d'intégration est choisie pour que $V(R)$ soit continu.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer le potentiel d'un cylindre chargé." },
+      { id: 9, statement: "Le champ électrique créé par une sphère de rayon $R$, uniformément chargée ($\\rho$), en un point $M$ ($r > R$) s'exprime par :", choices: ["A: $E(r) = \\frac{R^3 \\rho}{3\\varepsilon_0 r^2}$", "B: $E(r) = \\frac{r^3 \\rho}{3\\varepsilon_0 R^2}$", "C: $E(r) = \\frac{r \\rho}{3\\varepsilon_0}$", "D: $E(r) = \\frac{R \\rho}{3\\varepsilon_0}$"], correct: [0], theme: "Électromagnétisme", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Par le théorème de Gauss, $\\oint \\vec{E} \\cdot d\\vec{S} = Q_{int}/\\varepsilon_0$, avec $Q_{int} = \\rho \\cdot \\frac{4}{3}\\pi R^3$. D'où $E(r) = \\frac{\\rho R^3}{3\\varepsilon_0 r^2}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Théorème de Gauss ».\n\n⚠️ OBSTACLE DIDACTIQUE : La décroissance en $1/r^2$ est typique d'une distribution à symétrie sphérique.\n\n💡 APPROFONDISSEMENT : À l'intérieur ($r < R$), $E(r) = \\rho r/(3\\varepsilon_0)$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer le théorème de Gauss à une sphère chargée." },
+      { id: 10, statement: "Deux charges identiques $+Q$ sont placées à une distance $2a$. La force ressentie par une charge $+q_0$ située à une distance $r$ sur la médiatrice est :", choices: ["A: $F = \\frac{2kQq_0 r}{\\sqrt{a^2+r^2}}$", "B: $F = \\frac{2kQq_0 r}{(a^2+r^2)^{3/2}}$", "C: $F = \\frac{2kQq_0 r}{a^2+r^2}$", "D: $F = \\frac{kQq_0 r}{\\sqrt{a^2+r^2}}$"], correct: [1], theme: "Électromagnétisme", niveau_scolaire: "Supérieur", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Sur la médiatrice, les composantes horizontales des forces s'annulent par symétrie. Seules les composantes verticales s'ajoutent : $F = 2 \\cdot \\frac{kQq_0}{a^2+r^2} \\cdot \\frac{r}{\\sqrt{a^2+r^2}} = \\frac{2kQq_0 r}{(a^2+r^2)^{3/2}}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Électrostatique, forces entre charges.\n\n⚠️ OBSTACLE DIDACTIQUE : Le terme $(a^2+r^2)^{3/2}$ provient du produit de la loi en $1/d^2$ et du cosinus de l'angle.\n\n💡 APPROFONDISSEMENT : Pour $r \\gg a$, $F \\approx 2kQq_0/r^2$ (charge ponctuelle $2Q$).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer la force résultante sur une charge." },
+      { id: 11, statement: "Un condensateur visant une tension $U_f$ atteint $U_0$ au bout d'une durée $\\Delta t$ égale à :", choices: ["A: $\\Delta t = \\tau \\log \\frac{U_f - U_i}{U_f - U_0}$", "B: $\\Delta t = \\tau \\log \\frac{U_f - U_0}{U_f - U_i}$", "C: $\\Delta t = \\tau \\log \\frac{U_f + U_0}{U_f - U_i}$", "D: $\\Delta t = \\frac{1}{\\tau} \\log \\frac{U_f + U_0}{U_f - U_i}$"], correct: [0], theme: "Électricité", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : La charge d'un condensateur suit $u(t) = U_f + (U_i - U_f)e^{-t/\\tau}$. En isolant $t$, on obtient $\\Delta t = \\tau \\ln\\frac{U_f - U_i}{U_f - U_0}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Charge d'un condensateur ».\n\n⚠️ OBSTACLE DIDACTIQUE : Plus l'écart entre $U_f$ et $U_0$ est petit, plus $\\Delta t$ est grand.\n\n💡 APPROFONDISSEMENT : La constante de temps $\\tau = RC$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer le temps de charge d'un condensateur." },
+      { id: 12, statement: "La capacité $C$ d'un condensateur sphérique constitué de deux armatures de rayons $R_1$ et $R_2$ est :", choices: ["A: $C = \\frac{4\\pi\\varepsilon_0 R_1 R_2}{R_2 - R_1}$", "B: $C = \\frac{R_1 R_2}{4\\pi\\varepsilon_0 (R_2 + R_1)}$", "C: $C = \\frac{4\\pi(R_1 + R_2)}{\\varepsilon_0 (R_2 - R_1)}$", "D: $C = \\frac{4\\pi\\varepsilon_0 (R_2 - R_1)}{R_2 R_1}$"], correct: [0], theme: "Électromagnétisme", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : La capacité d'un condensateur sphérique est $C = \\frac{4\\pi\\varepsilon_0 R_1 R_2}{R_2 - R_1}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Condensateurs, capacité.\n\n⚠️ OBSTACLE DIDACTIQUE : Si l'écart entre les sphères est petit ($R_2-R_1 \\to d$), on retrouve la formule du condensateur plan.\n\n💡 APPROFONDISSEMENT : Pour $R_2 \\to \\infty$, $C \\approx 4\\pi\\varepsilon_0 R_1$ (capacité d'une sphère isolée).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer la capacité d'un condensateur sphérique." },
+      { id: 13, statement: "La fréquence $N = \\frac{1}{4\\pi RC}$ est la fréquence de coupure d'un :", choices: ["A: Filtre passe bas RC", "B: Filtre passe haut CR", "C: Filtre passe bas actif (circuit RC autour d'un ampli op)", "D: Filtre passe bande RLC série"], correct: [2], theme: "Électronique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Certains montages à amplificateur opérationnel introduisent des facteurs spécifiques dans le calcul de la fréquence de coupure. Le facteur $4\\pi$ suggère un montage actif particulier.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Filtres actifs.\n\n⚠️ OBSTACLE DIDACTIQUE : Un filtre passif RC a une fréquence de coupure $1/(2\\pi RC)$.\n\n💡 APPROFONDISSEMENT : Le facteur $4\\pi$ vient du gain de l'amplificateur.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Identifier la fréquence de coupure d'un filtre actif." },
+      { id: 14, statement: "Pour un filtre passif, le gain en tension $G$ vérifie :", choices: ["A: $G \\le 0\\text{ dB}$", "B: $G > 0\\text{ dB}$", "C: $G > 1$", "D: $0 \\le G < 1\\text{ dB}$"], correct: [0], theme: "Électronique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Un filtre passif ne contient pas de source d'énergie ; la tension de sortie est donc toujours inférieure ou égale à la tension d'entrée ($G \\le 1$). En décibels, $G_{dB} = 20\\log_{10}G \\le 0\\text{ dB}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Filtres ».\n\n⚠️ OBSTACLE DIDACTIQUE : Un gain positif ($> 0\\text{ dB}$) nécessite un amplificateur (filtre actif).\n\n💡 APPROFONDISSEMENT : $0\\text{ dB}$ correspond à $G=1$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Comprendre la notion de gain d'un filtre passif." },
+      { id: 15, statement: "Une onde électromagnétique transporte dans le vide une densité volumique d'énergie $U$ telle que :", choices: ["A: $U = \\varepsilon_0 E^2$", "B: $U = \\frac{B^2}{\\mu_0}$", "C: $U = \\frac{\\varepsilon_0 E^2}{B \\mu_0}$", "D: $U = \\frac{B^2 \\mu_0}{\\varepsilon_0 E^2}$"], correct: [0], theme: "Ondes", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : La densité d'énergie électromagnétique est $U = \\frac{1}{2}\\varepsilon_0 E^2 + \\frac{1}{2}\\frac{B^2}{\\mu_0}$. Dans le vide, $E = cB$, donc les deux termes sont égaux, soit $U = \\varepsilon_0 E^2$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Ondes électromagnétiques.\n\n⚠️ OBSTACLE DIDACTIQUE : L'énergie est équitablement répartie entre les champs $E$ et $B$.\n\n💡 APPROFONDISSEMENT : $U$ est proportionnelle au carré de l'amplitude de l'onde.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer la densité d'énergie d'une onde EM." },
+      { id: 16, statement: "Dans le vide, les amplitudes du champ électrique $\\vec{E}$ et magnétique $\\vec{B}$ sont reliées par :", choices: ["A: $E = \\frac{B}{c}$", "B: $E = c$", "C: $E = B \\cdot c$", "D: $E \\cdot B = \\mu_0 \\varepsilon_0 c^2$"], correct: [2], theme: "Ondes", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Dans le vide, $E = cB$, où $c = 1/\\sqrt{\\varepsilon_0\\mu_0}$ est la vitesse de la lumière.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Ondes électromagnétiques ».\n\n⚠️ OBSTACLE DIDACTIQUE : $E$ est en V/m et $B$ en Tesla ; numériquement $E$ est beaucoup plus grand que $B$.\n\n💡 APPROFONDISSEMENT : Cette relation découle des équations de Maxwell.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Relier les amplitudes des champs $E$ et $B$." },
+      { id: 17, statement: "Dans l'expérience de Compton, la fréquence $\\nu$ des rayons X diffusés est telle que :", choices: ["A: $\\nu > \\nu_1$", "B: $\\nu = \\nu_1$", "C: $\\nu < \\nu_1$", "D: $\\nu$ peut être supérieure ou inférieure à $\\nu_1$"], correct: [2], theme: "Physique quantique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Le photon incident perd de l'énergie au profit de l'électron. Sa longueur d'onde augmente ($\\lambda > \\lambda_1$), donc sa fréquence diminue ($\\nu < \\nu_1$).\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Effet Compton.\n\n⚠️ OBSTACLE DIDACTIQUE : Perte d'énergie = baisse de fréquence ($E = h\\nu$).\n\n💡 APPROFONDISSEMENT : Le décalage Compton est $\\Delta\\lambda = \\frac{h}{mc}(1-\\cos\\theta)$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Expliquer l'effet Compton." },
+      { id: 18, statement: "Le phénomène de diffraction d'une onde rectiligne par une fente de largeur $a$ est appréciable si :", choices: ["A: $a$ est très grande devant $\\lambda$", "B: $a$ est très faible devant $\\lambda$", "C: quelles que soient les valeurs de $a$ et $\\lambda$", "D: $a$ est faible et quelle que soit la valeur de $\\lambda$"], correct: [1], theme: "Ondes", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : La diffraction est significative lorsque la dimension de l'ouverture $a$ est du même ordre de grandeur ou plus petite que la longueur d'onde $\\lambda$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Diffraction ».\n\n⚠️ OBSTACLE DIDACTIQUE : Plus l'ouverture est étroite, plus l'onde s'étale après le passage.\n\n💡 APPROFONDISSEMENT : L'angle de diffraction $\\theta \\approx \\lambda/a$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Comprendre la condition de diffraction." },
+      { id: 19, statement: "Le coefficient de réflexion $r_{12}$ d'une corde constituée de deux matériaux d'impédances $Z_1$ et $Z_2$ est :", choices: ["A: $r_{12} = \\frac{Z_1 + Z_2}{Z_1 - Z_2}$", "B: $r_{12} = \\frac{Z_1 Z_2}{Z_1 + Z_2}$", "C: $r_{12} = \\frac{Z_1 - Z_2}{Z_1 + Z_2}$", "D: $r_{12} = \\frac{Z_1 + Z_2}{Z_1 Z_2}$"], correct: [2], theme: "Ondes", niveau_scolaire: "Supérieur", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Le coefficient de réflexion à l'interface de deux milieux dépend de la différence de leurs impédances caractéristiques : $r = (Z_1 - Z_2)/(Z_1 + Z_2)$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Ondes sur une corde, réflexion.\n\n⚠️ OBSTACLE DIDACTIQUE : Si $Z_1 = Z_2$, $r=0$ (pas de réflexion, transmission totale).\n\n💡 APPROFONDISSEMENT : Le coefficient de transmission est $t = 2Z_2/(Z_1+Z_2)$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer le coefficient de réflexion." },
+      { id: 20, statement: "L'angle d'incidence $i$ au minimum de déviation $D_m$ d'un prisme d'angle $A$ est :", choices: ["A: $i = \\frac{D_m}{2}$", "B: $i = D_m$", "C: $i = \\frac{D_m - A}{2}$", "D: $i = \\frac{D_m + A}{2}$"], correct: [3], theme: "Optique géométrique", niveau_scolaire: "3ème secondaire", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : Au minimum de déviation, le trajet du rayon est symétrique dans le prisme ($i = i'$ et $r = r' = A/2$). La déviation $D_m = 2i - A$, donc $i = (D_m + A)/2$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 3ème année secondaire, Chapitre « Prisme ».\n\n⚠️ OBSTACLE DIDACTIQUE : Cette relation permet de mesurer l'indice de réfraction avec précision.\n\n💡 APPROFONDISSEMENT : $n = \\frac{\\sin((D_m+A)/2)}{\\sin(A/2)}$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer l'angle d'incidence au minimum de déviation." },
+      { id: 21, statement: "D'après le théorème de Gauss :", choices: ["A: la circulation du vecteur champ électrique est nulle", "B: la circulation de $\\vec{E}$ est indépendante du chemin suivi", "C: le flux d'un champ électrique à travers une surface fermée est indépendant des charges extérieures à la surface", "D: le flux d'un champ électrique à travers une surface fermée est toujours nul"], correct: [2], theme: "Électromagnétisme", niveau_scolaire: "Supérieur", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Le théorème de Gauss s'énonce : $\\oint \\vec{E} \\cdot d\\vec{S} = Q_{int}/\\varepsilon_0$. Seules les charges intérieures contribuent au flux.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Électrostatique, théorème de Gauss.\n\n⚠️ OBSTACLE DIDACTIQUE : Une charge extérieure fait \"entrer\" autant de lignes de champ qu'elle n'en fait \"sortir\".\n\n💡 APPROFONDISSEMENT : C'est une conséquence du caractère conservatif du champ électrostatique.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Énoncer le théorème de Gauss." },
+      { id: 22, statement: "La force de Lorentz a pour expression :", choices: ["A: $\\vec{F} = q\\vec{E}$", "B: $\\vec{F} = I\\vec{l} \\wedge \\vec{B}$", "C: $\\vec{F} = q\\vec{v} \\wedge \\vec{B}$", "D: $\\vec{F} = q\\vec{E} + q\\vec{v} \\wedge \\vec{B}$"], correct: [3], theme: "Électromagnétisme", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : La force de Lorentz complète est la somme de la force électrique et de la force magnétique.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Force de Lorentz ».\n\n⚠️ OBSTACLE DIDACTIQUE : La partie magnétique ne travaille pas car elle est perpendiculaire à la vitesse.\n\n💡 APPROFONDISSEMENT : C'est la force qui dévie les particules chargées.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Écrire la force de Lorentz." },
+      { id: 23, statement: "D'après la loi de Biot et Savart, le module du champ magnétique au centre d'une spire de rayon $R$ parcourue par un courant $I$ est :", choices: ["A: uniforme entre les branches d'un aimant", "B: $\\vec{B} = \\mu_0 \\vec{H}$ dans le vide", "C: $d\\vec{B} = \\frac{\\mu_0}{4\\pi} \\frac{I d\\vec{l} \\wedge \\vec{u}}{r^2}$", "D: $||\\vec{B}|| = 4\\pi \\cdot 10^{-7} \\frac{I}{R}$"], correct: [2], theme: "Électromagnétisme", niveau_scolaire: "Supérieur", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : La loi de Biot et Savart donne le champ magnétique élémentaire créé par un élément de courant.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Magnétostatique, loi de Biot et Savart.\n\n⚠️ OBSTACLE DIDACTIQUE : Au centre d'une spire, $B = \\mu_0 I/(2R)$.\n\n💡 APPROFONDISSEMENT : Le champ total s'obtient par intégration sur tout le circuit.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Énoncer la loi de Biot et Savart." },
+      { id: 24, statement: "Les amplificateurs opérationnels peuvent servir à la réalisation de :", choices: ["A: amplificateurs de courants", "B: amplificateurs de tensions", "C: adaptateurs d'impédances", "D: comparateurs d'intensités"], correct: [1,2], theme: "Électronique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : B et C\n\n🔬 FONDEMENT THÉORIQUE : L'amplificateur opérationnel possède une impédance d'entrée infinie et une impédance de sortie quasi nulle, ce qui en fait un excellent amplificateur de tension et adaptateur d'impédance.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Électronique, amplificateur opérationnel.\n\n⚠️ OBSTACLE DIDACTIQUE : Le montage suiveur est le parfait exemple d'adaptateur d'impédance.\n\n💡 APPROFONDISSEMENT : En régime linéaire, $V_+ = V_-$ (masse virtuelle).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Connaître les applications de l'AOP." },
+      { id: 25, statement: "Pour un oscillateur RLC, le régime permanent est apériodique lorsque le facteur de qualité $Q$ est :", choices: ["A: nul", "B: égal à $1/2$", "C: inférieur à $1/2$", "D: supérieur à $1/2$"], correct: [2], theme: "Électricité", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : C\n\n🔬 FONDEMENT THÉORIQUE : Le facteur de qualité $Q = \\frac{L\\omega_0}{R}$. Le régime est apériodique lorsque l'amortissement est fort, soit $Q \\le 1/2$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Régimes d'oscillations ».\n\n⚠️ OBSTACLE DIDACTIQUE : À $Q = 1/2$, on atteint le régime critique (retour à l'équilibre le plus rapide).\n\n💡 APPROFONDISSEMENT : Si $Q > 1/2$, régime pseudo-périodique.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Déterminer le régime d'oscillation à partir de $Q$." },
+      { id: 26, statement: "La réaction d'estérification est une réaction chimique :", choices: ["A: qui se produit entre un acide carboxylique et un alcool", "B: qui se produit entre un acide minéral et un alcool", "C: dont le rendement diminue des alcools primaires aux alcools tertiaires", "D: lente, et de rendement inférieur à l'unité"], correct: [0,2,3], theme: "Chimie organique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A, C et D\n\n🔬 FONDEMENT THÉORIQUE : L'estérification est la réaction entre un acide carboxylique et un alcool. Elle est lente, limitée (rendement < 100%) et athermique. Le rendement dépend de la classe de l'alcool.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Estérification ».\n\n⚠️ OBSTACLE DIDACTIQUE : Le rendement chute d'environ 67% pour un alcool primaire à 5-10% pour un tertiaire.\n\n💡 APPROFONDISSEMENT : L'estérification est l'exemple parfait d'équilibre chimique lent.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Décrire les caractéristiques de l'estérification." },
+      { id: 27, statement: "La vitesse v d'une réaction chimique à un instant t :", choices: ["A: est égale à la dérivée en fonction du temps, de l'avancement x de la réaction", "B: est de signe contraire à celui de la vitesse de formation du produit réactionnel", "C: est une constante négative", "D: est dans certains cas proportionnelle à $dC/dt$ avec $C$ la concentration du réactif"], correct: [0,3], theme: "Cinétique chimique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A et D\n\n🔬 FONDEMENT THÉORIQUE : Par définition, la vitesse instantanée est $v = dx/dt$. Si le volume est constant, elle est aussi liée à la variation de concentration : $v \\propto -dC/dt$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Cinétique chimique ».\n\n⚠️ OBSTACLE DIDACTIQUE : La dérivée d'une grandeur par rapport au temps définit sa vitesse d'évolution.\n\n💡 APPROFONDISSEMENT : La vitesse est toujours positive par définition.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Définir la vitesse d'une réaction chimique." },
+      { id: 28, statement: "Considérons deux solutions aqueuses d'acides faibles de même concentration C telle que : $10^{-6} \\text{ mol.L}^{-1} < C < 10^{-1} \\text{ mol.L}^{-1}$. La solution qui correspond à l'acide le plus fort :", choices: ["A: est celle qui a la valeur du pH la plus grande", "B: est celle qui a la valeur du pH la plus petite", "C: est celle qui a la valeur du pKa la plus grande", "D: est celle qui a la valeur du pKa la plus petite"], correct: [1,3], theme: "Acides et bases", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B et D\n\n🔬 FONDEMENT THÉORIQUE : À concentration égale, l'acide le plus fort a le pH le plus petit (plus dissocié) et le $pK_a$ le plus petit ($K_a$ grand).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Force des acides ».\n\n⚠️ OBSTACLE DIDACTIQUE : Plus l'acide est fort, plus il fait \"descendre\" le pH et le $pK_a$.\n\n💡 APPROFONDISSEMENT : Un acide faible a $pK_a$ entre 0 et 14.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Comparer la force d'acides faibles." },
+      { id: 29, statement: "Soit la pile symbolisée par $Pb | Pb^{2+}(C_1) || Cu^{2+}(C_2) | Cu$ ; l'équation de la réaction qui lui est associée s'écrit :", choices: ["A: $Pb^{2+} + Cu \\rightarrow Pb + Cu^{2+}$", "B: $Pb + Cu^{2+} \\rightarrow Pb^{2+} + Cu$", "C: $Pb + Cu \\rightarrow Pb^{2+} + Cu^{2+}$", "D: $Pb^{2+} + Cu^{2+} \\rightarrow Pb + Cu$"], correct: [1], theme: "Électrochimie", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Dans la notation $M_1 | M_1^{z+} || M_2^{z+} | M_2$, le métal de gauche est l'anode (oxydation) et celui de droite est la cathode (réduction).\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Piles ».\n\n⚠️ OBSTACLE DIDACTIQUE : Suivez l'ordre alphabétique : **A**node à gauche, **C**athode à droite.\n\n💡 APPROFONDISSEMENT : La réaction spontanée est $Pb + Cu^{2+} \\rightarrow Pb^{2+} + Cu$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Écrire l'équation d'une pile." },
+      { id: 30, statement: "L'oxydation d'un alcool peut donner :", choices: ["A: un acide carboxylique si l'alcool est de classe primaire", "B: une cétone si l'alcool est de classe secondaire", "C: un aldéhyde si l'alcool est de classe tertiaire", "D: un monohalogenoalcane"], correct: [0,1], theme: "Chimie organique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A et B\n\n🔬 FONDEMENT THÉORIQUE : Un alcool primaire s'oxyde en aldéhyde puis en acide carboxylique. Un alcool secondaire s'oxyde en cétone. Les alcools tertiaires ne subissent pas d'oxydation ménagée.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Oxydation des alcools ».\n\n⚠️ OBSTACLE DIDACTIQUE : L'oxydation ménagée respecte le squelette carboné.\n\n💡 APPROFONDISSEMENT : L'oxydant peut être $KMnO_4$ ou $K_2Cr_2O_7$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Prévoir le produit d'oxydation d'un alcool." },
+      { id: 31, statement: "Soit la pile Daniell symbolisée par $Zn | Zn^{2+}(C_1) || Cu^{2+}(C_2) | Cu$ ; la f.e.m. de cette pile s'écrit :", choices: ["A: $E = E_0 + 0,03 \\log \\frac{[Cu^{2+}]}{[Zn^{2+}]}$", "B: $E = E_0 - 0,03 \\log \\frac{[Cu^{2+}]}{[Zn^{2+}]}$", "C: $E = E_0 + 0,03 \\log \\frac{[Zn^{2+}]}{[Cu^{2+}]}$", "D: $E = E_0 - 0,03 \\log \\frac{[Zn^{2+}]}{[Cu^{2+}]}$"], correct: [3], theme: "Électrochimie", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : Équation de Nernst : $E = E_0 - \\frac{0,06}{n} \\log Q$. Pour la pile Daniell, $n=2$ et $Q = [Zn^{2+}]/[Cu^{2+}]$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Piles ».\n\n⚠️ OBSTACLE DIDACTIQUE : Le signe moins devant le log implique que si $[Zn^{2+}]$ augmente, $E$ diminue.\n\n💡 APPROFONDISSEMENT : $E_0 = E^0(Cu^{2+}/Cu) - E^0(Zn^{2+}/Zn) = 1,10\\text{ V}$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer l'équation de Nernst." },
+      { id: 32, statement: "Soit l'équation de la réaction de précipitation du sulfate de baryum $BaSO_4$ : $Ba^{2+} + SO_4^{2-} \\rightarrow BaSO_4$ ; on a $\\Pi = [Ba^{2+}][SO_4^{2-}]$ et $K_s$ le produit de solubilité.", choices: ["A: Cette réaction est observée lorsque $\\Pi < K_s$", "B: Cette réaction est observée lorsque $K_s < \\Pi$", "C: Cette réaction est lente", "D: Cette réaction est instantanée"], correct: [1,3], theme: "Chimie - Solubilité", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B et D\n\n🔬 FONDEMENT THÉORIQUE : Le précipité apparaît lorsque le produit ionique $\\Pi$ dépasse la limite de solubilité $K_s$. Les réactions entre ions sont quasi-instantanées.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Équilibres de précipitation ».\n\n⚠️ OBSTACLE DIDACTIQUE : $K_s$ est la \"porte\" : si $\\Pi$ pousse trop fort, la porte s'ouvre et le solide tombe.\n\n💡 APPROFONDISSEMENT : Si $\\Pi < K_s$, la solution est non saturée.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Prévoir l'apparition d'un précipité." },
+      { id: 33, statement: "Soit l'équation de la réaction chimique lente et athermique qui s'écrit : $A + B \\rightarrow C + D$, tous les constituants sont en solution aqueuse.", choices: ["A: La vitesse de cette réaction augmente avec la température", "B: La vitesse de cette réaction ne varie pas avec la température", "C: La vitesse de cette réaction augmente si la concentration initiale $[B]_0$ augmente", "D: La vitesse de cette réaction augmente si la concentration initiale $[A]_0$ augmente"], correct: [0,2,3], theme: "Cinétique chimique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A, C et D\n\n🔬 FONDEMENT THÉORIQUE : La vitesse d'une réaction augmente avec la température (loi d'Arrhenius) et avec les concentrations initiales des réactifs.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Cinétique ».\n\n⚠️ OBSTACLE DIDACTIQUE : Même si la réaction est athermique, l'agitation thermique favorise les chocs efficaces.\n\n💡 APPROFONDISSEMENT : $v = k[A]^\\alpha[B]^\\beta$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Identifier les facteurs cinétiques." },
+      { id: 34, statement: "L'hydratation du propène $CH_3-CH=CH_2$ donne comme produit majoritaire :", choices: ["A: le propan-2-ol", "B: le propan-1-ol", "C: le propanal", "D: le propanone (ou acétone)"], correct: [0], theme: "Chimie organique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : L'hydratation du propène suit la règle de Markovnikov : l'hydrogène se fixe sur le carbone le moins substitué, le groupement $-OH$ sur le carbone le plus substitué.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Addition sur les alcènes ».\n\n⚠️ OBSTACLE DIDACTIQUE : \"Le riche devient plus riche\" : le carbone le plus hydrogéné reçoit $H$.\n\n💡 APPROFONDISSEMENT : Le produit est le propan-2-ol (alcool secondaire).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer la règle de Markovnikov." },
+      { id: 35, statement: "En solution aqueuse, un acide est d'autant plus faible que :", choices: ["A: sa base conjuguée est faible", "B: la valeur de son pKa est élevée", "C: sa concentration C est forte", "D: le produit ionique de l'eau est faible"], correct: [1], theme: "Acides et bases", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Un acide est faible s'il se dissocie peu. Plus sa constante $K_a$ est petite ($pK_a$ grand), moins il est dissocié.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Force des acides ».\n\n⚠️ OBSTACLE DIDACTIQUE : $pK_a = 14$ est l'acide le plus faible possible dans l'eau (l'eau elle-même).\n\n💡 APPROFONDISSEMENT : $pK_a = -\\log K_a$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Relier $pK_a$ et force acide." },
+      { id: 36, statement: "Le principe d'exclusion de Pauli stipule que :", choices: ["A: dans un atome, deux électrons ne peuvent avoir leurs quatre nombres quantiques égaux, ils diffèrent au moins par $s$ ($1/2, -1/2$)", "B: dans un atome, deux électrons diffèrent toujours par le nombre quantique de spin $s$", "C: dans un atome, les quatre nombres quantiques de deux électrons sont tous différents les uns des autres", "D: dans un atome, les quatre nombres quantiques de deux électrons peuvent, dans certains cas, prendre la même valeur"], correct: [0], theme: "Physique atomique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Le principe de Pauli interdit à deux électrons d'un même atome d'être dans le même état quantique défini par $(n, l, m_l, m_s)$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Structure atomique.\n\n⚠️ OBSTACLE DIDACTIQUE : C'est la raison pour laquelle une orbitale atomique ne peut contenir que deux électrons (de spins opposés).\n\n💡 APPROFONDISSEMENT : C'est un principe fondamental de la mécanique quantique.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Énoncer le principe d'exclusion de Pauli." },
+      { id: 37, statement: "La loi de dilution d'Ostwald stipule que : en solution aqueuse le coefficient de dissociation d'un électrolyte est :", choices: ["A: une fonction décroissante de la dilution", "B: une fonction croissante de la dilution", "C: indépendante de la dilution", "D: une fonction croissante ou décroissante de la dilution selon la nature de l'électrolyte"], correct: [1], theme: "Chimie des solutions", niveau_scolaire: "Supérieur", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Loi d'Ostwald : plus on dilue une solution d'électrolyte faible, plus le coefficient de dissociation $\\alpha$ augmente, tendant vers 1 à dilution infinie.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Électrolytes faibles.\n\n⚠️ OBSTACLE DIDACTIQUE : Diluer donne de \"l'espace\" aux molécules pour se casser en ions.\n\n💡 APPROFONDISSEMENT : $\\alpha = \\sqrt{K_a/C}$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Expliquer l'effet de la dilution sur la dissociation." },
+      { id: 38, statement: "Lewis a défini un acide comme un composé susceptible de :", choices: ["A: libérer un proton au cours d'une réaction chimique", "B: accepter des électrons d'un donneur, la base au cours d'une réaction chimique", "C: mettre en commun son doublet d'électrons au cours d'une réaction chimique", "D: libérer des électrons à un accepteur, la base"], correct: [1], theme: "Chimie - Acides et bases", niveau_scolaire: "Supérieur", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Selon Lewis, un acide est une espèce possédant une lacune électronique capable d'accepter un doublet d'électrons.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Théorie de Lewis.\n\n⚠️ OBSTACLE DIDACTIQUE : Lewis = Doublets d'électrons (contrairement à Brönsted = Protons).\n\n💡 APPROFONDISSEMENT : Exemple : $AlCl_3$ est un acide de Lewis.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Définir un acide selon Lewis." },
+      { id: 39, statement: "Dans un réseau cubique à faces centrées, la maille comporte :", choices: ["A: 4 atomes : 1 pour les atomes aux sommets et 3 pour les atomes aux centres des faces", "B: 6 atomes : 2 pour les atomes aux sommets et 4 pour les atomes aux centres des faces", "C: 10 atomes : 4 pour les atomes aux sommets et 6 pour les atomes aux centres des faces", "D: 14 atomes : 8 pour les atomes aux sommets et 6 pour les atomes aux centres des faces"], correct: [0], theme: "Cristallographie", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Nombre d'atomes par maille CFC : $N = (8\\text{ sommets} \\times 1/8) + (6\\text{ faces} \\times 1/2) = 1 + 3 = 4$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Cristallographie, structures cristallines.\n\n⚠️ OBSTACLE DIDACTIQUE : Les atomes de face sont partagés entre 2 mailles, ceux de sommet entre 8.\n\n💡 APPROFONDISSEMENT : Le CFC est la structure la plus compacte ($74\\%$).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer le nombre d'atomes par maille CFC." },
+      { id: 40, statement: "La densité de remplissage, ou compacité, est définie par le rapport du volume occupé par les particules, au volume de la maille. Dans un réseau cubique centré, la compacité est donnée par :", choices: ["A: $\\frac{\\pi \\sqrt{3}}{8}$", "B: $\\frac{\\pi \\sqrt{2}}{6}$", "C: $\\frac{\\pi}{3 \\sqrt{2}}$", "D: $\\frac{\\pi \\sqrt{3}}{4}$"], correct: [0], theme: "Cristallographie", niveau_scolaire: "Supérieur", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Dans un réseau cubique centré, les atomes se touchent selon la grande diagonale du cube : $4R = a\\sqrt{3}$. Le volume occupé est $2 \\times \\frac{4}{3}\\pi R^3$ et le volume de la maille est $a^3$. La compacité vaut $\\frac{\\pi\\sqrt{3}}{8} \\approx 0,68$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Cristallographie, compacité.\n\n⚠️ OBSTACLE DIDACTIQUE : Le CC est moins compact que le CFC ($0,74$).\n\n💡 APPROFONDISSEMENT : Le CC contient 2 atomes par maille.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer la compacité d'un réseau cubique centré." },
+      { id: 41, statement: "Pour d'une solution aqueuse, le pH à 25 °C, égal à 2, la concentration en ions hydronium vaut (en mol.L-1) :", choices: ["A: 0,01", "B: 0,02", "C: 0,2", "D: 2"], correct: [0], theme: "Acides et bases", niveau_scolaire: "2ème-4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : $[H_3O^+] = 10^{-pH} = 10^{-2} = 0,01\\text{ mol.L}^{-1}$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 2ème année secondaire, Chapitre « pH ».\n\n⚠️ OBSTACLE DIDACTIQUE : Calcul de tête : un pH de $n$ donne une concentration de $1$ à la $n$-ième décimale.\n\n💡 APPROFONDISSEMENT : Cette relation est valable pour $pH \\le 6$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer la concentration à partir du pH." },
+      { id: 42, statement: "À 25 °C, le pKa du couple $H_3O^+ / H_2O$ est égal à :", choices: ["A: 0", "B: 7", "C: 14", "D: 1"], correct: [0], theme: "Acides et bases", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Par convention, l'ion hydronium est l'acide le plus fort pouvant exister dans l'eau. Son $pK_a$ est fixé à 0.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Échelle de pKa ».\n\n⚠️ OBSTACLE DIDACTIQUE : C'est l'origine de l'échelle d'acidité dans l'eau.\n\n💡 APPROFONDISSEMENT : $pK_a(H_2O/OH^-) = 14$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Connaître le $pK_a$ de $H_3O^+$." },
+      { id: 43, statement: "L'hydrolyse d'un ester en milieu basique :", choices: ["A: conduit toujours à un équilibre chimique", "B: est totale", "C: est impossible car elle ne peut se faire qu'en milieu acide", "D: produit un anhydride d'acide"], correct: [1], theme: "Chimie organique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Contrairement à l'hydrolyse acide, l'hydrolyse basique (saponification) est totale et rapide car l'ion carboxylate formé ne réagit pas avec l'alcool.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Saponification ».\n\n⚠️ OBSTACLE DIDACTIQUE : C'est la réaction utilisée pour fabriquer le savon.\n\n💡 APPROFONDISSEMENT : $RCOOR' + NaOH \\rightarrow RCOONa + R'OH$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Distinguer hydrolyse acide et basique." },
+      { id: 44, statement: "Quand on passe des alcools primaires aux alcools tertiaires, la mobilité de l'hydrogène dans le groupement OH :", choices: ["A: augmente suite à l'augmentation de l'encombrement stérique du groupement R", "B: décroît à cause de l'électronégativité de l'atome d'oxygène", "C: ne dépend pas de la classe de l'alcool", "D: décroît à cause de l'effet inductif du groupement R"], correct: [3], theme: "Chimie organique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : D\n\n🔬 FONDEMENT THÉORIQUE : Les groupements alkyles $R$ sont donneurs d'électrons par effet inductif (+I). Ils augmentent la densité électronique sur l'oxygène, ce qui \"tient\" plus fortement l'hydrogène, diminuant son caractère acide.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Réactivité des alcools.\n\n⚠️ OBSTACLE DIDACTIQUE : Plus il y a de carbone autour du $-OH$, moins l'hydrogène veut partir.\n\n💡 APPROFONDISSEMENT : L'acidité décroît dans l'ordre : primaire > secondaire > tertiaire.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Expliquer l'influence de la classe sur l'acidité des alcools." },
+      { id: 45, statement: "L'action du dibrome sur un alcène :", choices: ["A: fait intervenir un électrophile", "B: fait intervenir un intermédiaire ponté appelé bromonium", "C: donne un dérivé monobromé", "D: donne un dérivé dibromé"], correct: [0,1,3], theme: "Chimie organique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A, B et D\n\n🔬 FONDEMENT THÉORIQUE : L'addition de $Br_2$ sur un alcène est une addition électrophile qui passe par un intermédiaire cyclique : l'ion bromonium ponté. Elle produit un dérivé dibromé vicinal.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Addition sur les alcènes ».\n\n⚠️ OBSTACLE DIDACTIQUE : Le test à l'eau de brome (décoloration) identifie les alcènes.\n\n💡 APPROFONDISSEMENT : La réaction est stéréospécifique (anti addition).\n\n🎯 OBJECTIF PÉDAGOGIQUE : Décrire le mécanisme d'addition du dibrome." },
+      { id: 46, statement: "On appelle $\\Delta H_1, \\Delta H_2, \\Delta H_3$ les enthalpies successives des trois réactions (1), (2), (3) suivantes :\n1. $2NH_3 \\rightleftharpoons 3H_2 + N_2$\n2. $NH_3 \\rightleftharpoons \\frac{3}{2} H_2 + \\frac{1}{2} N_2$\n3. $3H_2 + N_2 \\rightleftharpoons 2NH_3$", choices: ["A: $\\Delta H_2 = 2 \\Delta H_1$", "B: $\\Delta H_2 = \\Delta H_1$", "C: $\\Delta H_3 = - \\Delta H_1$", "D: $\\Delta H_2 = \\frac{1}{2} \\Delta H_1$"], correct: [2,3], theme: "Thermodynamique", niveau_scolaire: "Supérieur", explication: "✅ Réponse : C et D\n\n🔬 FONDEMENT THÉORIQUE : L'enthalpie est une grandeur extensive. Si on divise les coefficients par 2, l'enthalpie est divisée par 2 ($\\Delta H_2 = \\frac{1}{2}\\Delta H_1$). Si on inverse le sens, l'enthalpie change de signe ($\\Delta H_3 = -\\Delta H_1$).\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Thermodynamique, loi de Hess.\n\n⚠️ OBSTACLE DIDACTIQUE : L'enthalpie dépend des coefficients stœchiométriques.\n\n💡 APPROFONDISSEMENT : $\\Delta H$ est une fonction d'état.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer la loi de Hess." },
+      { id: 47, statement: "La maille cristalline élémentaire du chlorure de sodium est un cube d'arête a. Les ions $Na^+$ forment un réseau cubique à faces centrées. Il en est de même pour les ions $Cl^-$. On montre que pour les rayons $r_{Na^+}$ et $r_{Cl^-}$, on a :", choices: ["A: $r_{Na^+} + r_{Cl^-} = a$", "B: $r_{Na^+} + r_{Cl^-} = \\frac{1}{2} a$", "C: $r_{Na^+} + r_{Cl^-} = \\frac{a \\sqrt{3}}{2}$", "D: $r_{Na^+} + r_{Cl^-} = \\frac{a \\sqrt{3}}{4}$"], correct: [1], theme: "Cristallographie", niveau_scolaire: "Supérieur", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Dans NaCl, les ions $Na^+$ et $Cl^-$ se touchent le long de l'arête du cube. L'arête $a$ contient deux rayons : $a = 2(r_{Na^+} + r_{Cl^-})$, soit $r_{Na^+} + r_{Cl^-} = a/2$.\n\n📖 RÉFÉRENCE PROGRAMME : Programme CAPES — Cristallographie, structure NaCl.\n\n⚠️ OBSTACLE DIDACTIQUE : La coordinence est 6 pour chaque ion.\n\n💡 APPROFONDISSEMENT : Le rapport des rayons doit être $r_+/r_- \\approx 0,414-0,732$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Déterminer la relation entre arête et rayons ioniques dans NaCl." },
+      { id: 48, statement: "En spectrophotométrie, l'absorbance d'une soluté est une fonction :", choices: ["A: croissante en fonction de la concentration", "B: décroissante en fonction de la concentration", "C: indépendante de la concentration", "D: croissante ou décroissante selon la nature du soluté"], correct: [0], theme: "Chimie analytique", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : A\n\n🔬 FONDEMENT THÉORIQUE : Loi de Beer-Lambert : $A = \\varepsilon \\cdot \\ell \\cdot C$. L'absorbance est directement proportionnelle à la concentration.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Spectrophotométrie ».\n\n⚠️ OBSTACLE DIDACTIQUE : Plus une solution est concentrée (sombre), moins elle laisse passer la lumière.\n\n💡 APPROFONDISSEMENT : La loi est valable pour $C \\le 10^{-2}\\text{ mol.L}^{-1}$.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Appliquer la loi de Beer-Lambert." },
+      { id: 49, statement: "Une solution d'acide fort a un pH = 5. Diluée 100 fois, le pH de la solution obtenue est :", choices: ["A: égal à 7", "B: inférieur à 7", "C: supérieur à 7", "D: ne varie pas"], correct: [1], theme: "Acides et bases", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Un acide fort de pH 5 a une concentration de $10^{-5}$ M. Dilué 100 fois, sa concentration devient $10^{-7}$ M. À cette concentration, l'autoprotolyse de l'eau n'est plus négligeable et le pH tend vers 7 par le bas.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Dilution ».\n\n⚠️ OBSTACLE DIDACTIQUE : On ne peut jamais rendre un acide basique en ajoutant de l'eau pure.\n\n💡 APPROFONDISSEMENT : Le pH limite est 6,98 environ.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Calculer le pH après dilution d'un acide fort très dilué." },
+      { id: 50, statement: "L'électrode d'argent constitue le pôle (+) de la pile cuivre-argent schématisée par $Cu | Cu^{2+}(C_1) || Ag^+(C_2) | Ag$. Lorsque cette pile débite un courant, il y a à la surface de l'électrode d'argent :", choices: ["A: consommation du métal argent", "B: dépôt du métal argent", "C: dépôt du métal cuivre", "D: rien ne se produit"], correct: [1], theme: "Électrochimie", niveau_scolaire: "4ème secondaire", explication: "✅ Réponse : B\n\n🔬 FONDEMENT THÉORIQUE : Au pôle positif (cathode), il y a réduction des ions argent : $Ag^+ + e^- \\rightarrow Ag_{(s)}$. Du métal argent se dépose sur l'électrode.\n\n📖 RÉFÉRENCE PROGRAMME : Programme tunisien — 4ème année secondaire, Chapitre « Piles ».\n\n⚠️ OBSTACLE DIDACTIQUE : La réduction transforme les ions \"invisibles\" en solide visible sur l'électrode.\n\n💡 APPROFONDISSEMENT : À l'anode (cuivre), il y a oxydation du métal.\n\n🎯 OBJECTIF PÉDAGOGIQUE : Identifier les réactions aux électrodes d'une pile." }
+    ];
+
+    // ==================== FONCTIONS ====================
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedName = localStorage.getItem('synapris_client_name');
+      if (savedName) { clientName = savedName;
+        document.getElementById('client-name-footer').textContent = clientName;
+        document.getElementById('mb-client-badge').style.display = 'inline-flex';
+        document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+        initDefaultMode(); } else { showNameModal(); }
+    });
+
+    function resetClientName() { localStorage.removeItem('synapris_client_name');
+      clientName = '';
+      document.getElementById('client-name-footer').textContent = '——';
+      document.getElementById('mb-client-badge').style.display = 'none';
+      showNameModal(); }
+
+    function showNameModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'name-modal';
+      overlay.innerHTML = '<div class="modal-box"><h3>🌟 Bienvenue sur SYNAPRIS !</h3><p>Entrez votre prénom :</p><input type="text" class="key-input" id="name-input" placeholder="Votre prénom" autocomplete="off" /><div class="modal-error" id="name-error">❌ Prénom invalide.</div><div class="modal-actions"><button class="btn btn-gold" id="btn-name-ok">✅ Commencer</button></div></div>';
+      document.body.appendChild(overlay);
+      document.getElementById('btn-name-ok').addEventListener('click', () => {
+        const name = document.getElementById('name-input').value.trim();
+        if (name && name.length >= 2 && /^[A-Za-zÀ-ÿ\s\-]+$/.test(name)) { clientName = name;
+          localStorage.setItem('synapris_client_name', clientName);
+          document.getElementById('client-name-footer').textContent = clientName;
+          document.getElementById('mb-client-badge').style.display = 'inline-flex';
+          document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+          overlay.remove();
+          initDefaultMode(); } else { document.getElementById('name-error').style.display = 'block'; }
+      });
+    }
+
+    function showRefModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.innerHTML = '<div class="modal-box"><h3>📚 RÉFÉRENCES</h3><p><strong>CAPES Physique 2007</strong><br>50 questions · 60 minutes<br>Une ou plusieurs réponses correctes</p><div class="modal-actions"><button class="btn btn-primary" onclick="this.closest(\'.modal-overlay\').remove()">Fermer</button></div></div>';
+      document.body.appendChild(overlay);
+    }
+
+    function initDefaultMode() { document.getElementById('mode-train').classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
+      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+      document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
+      document.getElementById('notice-train').classList.remove('hidden');
+      document.getElementById('notice-exam').classList.add('hidden'); }
+
+    function showPage(e) { document.querySelectorAll('#main-app .page').forEach(p => p.classList.remove('active'));
+      document.getElementById(e).classList.add('active');
+      document.getElementById('main-scroll').scrollTop = 0; }
+
+    function selectMode(e) { mode = e;
+      ['train', 'exam'].forEach(x => document.getElementById('mode-' + x)?.classList.remove('selected'));
+      document.getElementById('mode-' + e).classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').innerHTML = e === 'train' ? '📝 Mode Entraînement' : '⏱️ Mode Examen (60 min)';
+      document.getElementById('mb-mode-badge').textContent = e === 'train' ? '📝 Entraînement' : '⏱️ Examen';
+      document.getElementById('notice-train').classList.toggle('hidden', e !== 'train');
+      document.getElementById('notice-exam').classList.toggle('hidden', e !== 'exam'); }
+
+    function startQuiz() {
+      currentQ = 0;
+      activeSet = questionsData.map((_, i) => i);
+      userAnswers = new Array(activeSet.length).fill(null).map(() => []);
+      validated = new Array(activeSet.length).fill(false);
+      showPage('page-question');
+      if (mode === 'exam') {
+        document.body.classList.add('exam-mode');
+        examSeconds = TOTAL_EXAM_SEC;
+        perQSeconds = PER_Q_SEC;
+        document.getElementById('timer-wrap').classList.remove('hidden');
+        document.getElementById('perq-timer').classList.remove('hidden');
+        startExamTimer();
+        startPerQTimer();
+        document.getElementById('btn-validate').classList.add('hidden');
+        document.getElementById('grille-examen').classList.remove('hidden');
+        buildGrilleExamen();
+      } else {
+        document.body.classList.remove('exam-mode');
+        document.getElementById('timer-wrap').classList.add('hidden');
+        document.getElementById('perq-timer').classList.add('hidden');
+        if (examTimer) clearInterval(examTimer);
+        if (perQTimer) clearInterval(perQTimer);
+        document.getElementById('grille-examen').classList.add('hidden');
+      }
+      updateMiniBar();
+      renderQuestion();
+    }
+
+    function buildGrilleExamen() {
+      const container = document.getElementById('grille-table');
+      const half = Math.ceil(activeSet.length / 2);
+      let html = '<div class="grille-col">';
+      for (let i = 0; i < half; i++) {
+        const q = questionsData[activeSet[i]];
+        const answered = userAnswers[i] && userAnswers[i].length > 0;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          const checked = userAnswers[i] && userAnswers[i].includes(j);
+          html += `<span class="grille-case${checked?' checked':''}" onclick="selectChoiceFromGrille(${i},${j})">${ltr}</span>`;
+        });
+        html += '</div>';
+      }
+      html += '</div><div class="grille-col">';
+      for (let i = half; i < activeSet.length; i++) {
+        const q = questionsData[activeSet[i]];
+        const answered = userAnswers[i] && userAnswers[i].length > 0;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          const checked = userAnswers[i] && userAnswers[i].includes(j);
+          html += `<span class="grille-case${checked?' checked':''}" onclick="selectChoiceFromGrille(${i},${j})">${ltr}</span>`;
+        });
+        html += '</div>';
+      }
+      html += '</div>';
+      container.innerHTML = html;
+    }
+
+    function selectChoiceFromGrille(qIndex, choiceIndex) { currentQ = qIndex; if (validated[currentQ]) return;
+      if (!userAnswers[currentQ]) userAnswers[currentQ] = [];
+      const idx = userAnswers[currentQ].indexOf(choiceIndex);
+      if (idx === -1) userAnswers[currentQ].push(choiceIndex);
+      else userAnswers[currentQ].splice(idx, 1);
+      renderQuestion();
+      buildGrilleExamen(); }
+
+    function jumpToQuestion(qIndex) { currentQ = qIndex;
+      if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); }
+      renderQuestion(); if (mode === 'exam') buildGrilleExamen(); }
+
+    function goHome() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode');
+      showPage('page-home'); }
+
+    function updateMiniBar() { const e = currentQ + 1, t = activeSet.length;
+      document.getElementById('mb-q-counter').textContent = `Q${e}/${t}`;
+      document.getElementById('mb-progress-fill').style.width = (e / t * 100) + '%'; }
+
+    function renderQuestion() {
+      const qIdx = activeSet[currentQ];
+      const q = questionsData[qIdx];
+      document.getElementById('q-statement').innerHTML = `❓ <strong>Q${q.id}.</strong> ${q.statement}`;
+      const container = document.getElementById('q-choices');
+      container.innerHTML = '';
+      const correctIndices = q.correct;
+      ['A','B','C','D'].forEach((ltr, i) => {
+        if (i < q.choices.length) {
+          const btn = document.createElement('button');
+          btn.className = 'choice-btn';
+          if (validated[currentQ]) {
+            if (correctIndices.includes(i)) btn.classList.add('correct');
+            else if (userAnswers[currentQ] && userAnswers[currentQ].includes(i)) btn.classList.add('wrong');
+          } else if (userAnswers[currentQ] && userAnswers[currentQ].includes(i)) btn.classList.add('selected');
+          btn.innerHTML = `<span class="choice-letter">${ltr}</span><span class="choice-text">${q.choices[i]}</span>`;
+          if (!validated[currentQ]) {
+            btn.onclick = () => {
+              if (!userAnswers[currentQ]) userAnswers[currentQ] = [];
+              const idx = userAnswers[currentQ].indexOf(i);
+              if (idx === -1) userAnswers[currentQ].push(i);
+              else userAnswers[currentQ].splice(idx, 1);
+              renderQuestion();
+              if (mode === 'exam') buildGrilleExamen();
+            };
+          }
+          container.appendChild(btn);
+        }
+      });
+      const hasAnswer = userAnswers[currentQ] && userAnswers[currentQ].length > 0;
+      if (mode === 'train') document.getElementById('btn-validate').disabled = (!hasAnswer || validated[currentQ]);
+      if (validated[currentQ] && mode === 'train') buildFeedback(q, userAnswers[currentQ]);
+      else if (mode === 'train') { document.getElementById('feedback-placeholder').style.display = 'flex';
+        document.getElementById('feedback-box').style.display = 'none'; }
+      document.getElementById('btn-prev').disabled = (currentQ === 0);
+      const nextBtn = document.getElementById('btn-next');
+      if (currentQ === activeSet.length - 1) { nextBtn.innerHTML = '🏁 Terminer'; nextBtn.className = 'btn btn-gold'; }
+      else { nextBtn.innerHTML = 'Suivant →'; nextBtn.className = 'btn btn-primary'; }
+      if (typeof renderMathInElement !== 'undefined') {
+        renderMathInElement(document.getElementById('q-statement'), { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+        renderMathInElement(container, { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+      }
+      if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); buildGrilleExamen(); }
+    }
+
+    function validateAnswer() { if (!userAnswers[currentQ] || userAnswers[currentQ].length === 0) return;
+      validated[currentQ] = true;
+      renderQuestion(); }
+
+    function buildFeedback(q, user) {
+      document.getElementById('feedback-placeholder').style.display = 'none';
+      const correct = q.correct;
+      const sortedCorrect = [...correct].sort();
+      const sortedUser = user ? [...user].sort() : [];
+      const isCorrect = sortedCorrect.length === sortedUser.length && sortedCorrect.every((v,i) => v === sortedUser[i]);
+      document.getElementById('feedback-box').classList.add('visible', isCorrect ? 'correct' : 'wrong');
+      document.getElementById('feedback-box').style.display = 'block';
+      document.getElementById('badge-icon').textContent = isCorrect ? '✅' : '❌';
+      document.getElementById('feedback-result-text').textContent = isCorrect ? 'Bonne réponse !' : 'Réponse incorrecte';
+      let html = '';
+      const parts = q.explication.split('\n\n');
+      parts.forEach(part => {
+        if (part.startsWith('✅')) html += `<div class="fb-section fb-correct"><strong>✅ Réponse</strong>${part.replace('✅ ','')}</div>`;
+        else if (part.startsWith('🔬')) html += `<div class="fb-section fb-foundation"><strong>🔬 Fondement théorique</strong>${part.replace('🔬 ','')}</div>`;
+        else if (part.startsWith('📖')) html += `<div class="fb-section fb-reference"><strong>📖 Référence programme</strong>${part.replace('📖 ','')}</div>`;
+        else if (part.startsWith('⚠️')) html += `<div class="fb-section fb-obstacle"><strong>⚠️ Obstacle didactique</strong>${part.replace('⚠️ ','')}</div>`;
+        else if (part.startsWith('💡')) html += `<div class="fb-section fb-tip"><strong>💡 Approfondissement</strong>${part.replace('💡 ','')}</div>`;
+        else if (part.startsWith('🎯')) html += `<div class="fb-section fb-objectif"><strong>🎯 Objectif pédagogique</strong>${part.replace('🎯 ','')}</div>`;
+        else html += `<div class="fb-section">${part}</div>`;
+      });
+      document.getElementById('feedback-body').innerHTML = html;
+      if (typeof renderMathInElement !== 'undefined') renderMathInElement(document.getElementById('feedback-body'), { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+    }
+
+    function prevQuestion() { if (currentQ > 0) { currentQ--; renderQuestion(); if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); } } }
+    function nextQuestion() { if (currentQ < activeSet.length - 1) { currentQ++; renderQuestion(); if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); } } else { finishQuiz(); } }
+
+    function finishQuiz() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode');
+      showPage('page-results');
+      let correctCount = 0;
+      const themesMap = {};
+      activeSet.forEach((idx, i) => {
+        const q = questionsData[idx];
+        const correctIndices = q.correct;
+        const user = userAnswers[i] || [];
+        const sortedCorrect = [...correctIndices].sort();
+        const sortedUser = [...user].sort();
+        const ok = sortedCorrect.length === sortedUser.length && sortedCorrect.every((v,idx) => v === sortedUser[idx]);
+        if (ok) correctCount++;
+        if (!themesMap[q.theme]) themesMap[q.theme] = { total: 0, correct: 0 };
+        themesMap[q.theme].total++;
+        if (ok) themesMap[q.theme].correct++;
+      });
+      const pct = Math.round(correctCount / activeSet.length * 100);
+      document.getElementById('result-pct').textContent = pct + '%';
+      document.getElementById('result-sub').textContent = `${correctCount} / ${activeSet.length} bonnes réponses`;
+      document.getElementById('result-badge').textContent = pct >= 80 ? '🏆' : pct >= 50 ? '👍' : '💪';
+      document.getElementById('result-themes').innerHTML = '<table class="result-table"><thead><tr><th>Thème</th><th>Score</th><th>%</th></tr></thead><tbody>' + Object.entries(themesMap).map(([theme, data]) => { const tp = Math.round(data.correct / data.total * 100); return `<tr><td>${tp>=80?'🟢':tp>=50?'🟡':'🔴'} ${theme}</td><td>${data.correct}/${data.total}</td><td>${tp}%</td>`; }).join('') + '</tbody></table>';
+      const half = Math.ceil(activeSet.length / 2);
+      let gridHtml = '<div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">';
+      for (let i = 0; i < half; i++) {
+        const q = questionsData[activeSet[i]];
+        const correctIndices = q.correct;
+        const user = userAnswers[i] || [];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          let cls = '';
+          if (correctIndices.includes(j) && user.includes(j)) cls = 'correct-choice';
+          else if (correctIndices.includes(j) && !user.includes(j)) cls = 'missed-choice';
+          else if (!correctIndices.includes(j) && user.includes(j)) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`;
+        });
+        gridHtml += '</div>';
+      }
+      gridHtml += '</div><div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">';
+      for (let i = half; i < activeSet.length; i++) {
+        const q = questionsData[activeSet[i]];
+        const correctIndices = q.correct;
+        const user = userAnswers[i] || [];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          let cls = '';
+          if (correctIndices.includes(j) && user.includes(j)) cls = 'correct-choice';
+          else if (correctIndices.includes(j) && !user.includes(j)) cls = 'missed-choice';
+          else if (!correctIndices.includes(j) && user.includes(j)) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`;
+        });
+        gridHtml += '</div>';
+      }
+      gridHtml += '</div>';
+      document.getElementById('result-grid').innerHTML = gridHtml;
+      document.getElementById('timer-wrap').classList.add('hidden');
+      document.getElementById('perq-timer').classList.add('hidden');
+    }
+
+    function startExamTimer() { updateExamTimerDisplay();
+      examTimer = setInterval(() => { examSeconds--; updateExamTimerDisplay(); if (examSeconds <= 0) { clearInterval(examTimer); clearInterval(perQTimer); finishQuiz(); } }, 1000); }
+    function updateExamTimerDisplay() { const e = Math.floor(examSeconds / 60), t = examSeconds % 60, n = document.getElementById('timer-badge');
+      n.textContent = `⏱ ${String(e).padStart(2,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'timer-badge'; if (examSeconds <= 600) n.classList.add('danger'); else if (examSeconds <= 1800) n.classList.add('warning'); }
+    function startPerQTimer() { updatePerQTimerDisplay();
+      perQTimer = setInterval(() => { perQSeconds--; updatePerQTimerDisplay(); if (perQSeconds <= 0) { clearInterval(perQTimer); validated[currentQ] = true; nextQuestion(); } }, 1000); }
+    function updatePerQTimerDisplay() { const e = Math.floor(perQSeconds / 60), t = perQSeconds % 60, n = document.getElementById('perq-timer');
+      n.textContent = `⚡ ${String(e).padStart(1,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'perq-timer'; if (perQSeconds <= 15) n.classList.add('danger'); else if (perQSeconds <= 30) n.classList.add('warning'); }
+
+    document.addEventListener('keydown', e => { const page = document.querySelector('#main-app .page.active'); if (!page || page.id !== 'page-question') return;
+      const key = e.key.toUpperCase();
+      if (['A','B','C','D'].includes(key) && !validated[currentQ]) {
+        const idx = ['A','B','C','D'].indexOf(key);
+        if (!userAnswers[currentQ]) userAnswers[currentQ] = [];
+        const pos = userAnswers[currentQ].indexOf(idx);
+        if (pos === -1) userAnswers[currentQ].push(idx);
+        else userAnswers[currentQ].splice(pos, 1);
+        renderQuestion(); if (mode === 'exam') buildGrilleExamen();
+      }
+      if (e.key === 'Enter' && mode === 'train') { const btn = document.getElementById('btn-validate'); if (!btn.disabled) validateAnswer(); }
+      if (e.key === 'ArrowRight') nextQuestion();
+      if (e.key === 'ArrowLeft') prevQuestion();
+    });
+  </script>
+</body>
+</html>
