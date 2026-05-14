@@ -412,6 +412,14 @@
       if (validated[currentQ] && mode === 'train') buildFeedback(q, userAnswers[currentQ]);
       else if (mode === 'train') { document.getElementById('feedback-placeholder').style.display = 'flex';
         document.getElementById('feedback-box').style.display = 'none'; }
+      
+      // 🔥 CORRECTION MODE EXAMEN : masquer complètement le feedback
+      if (mode === 'exam') {
+        document.getElementById('feedback-placeholder').style.display = 'none';
+        document.getElementById('feedback-box').style.display = 'none';
+        document.getElementById('feedback-box').classList.remove('visible');
+      }
+      
       document.getElementById('btn-prev').disabled = (currentQ === 0);
       const nextBtn = document.getElementById('btn-next');
       if (currentQ === activeSet.length - 1) { nextBtn.innerHTML = '🏁 Terminer'; nextBtn.className = 'btn btn-gold'; }
@@ -422,7 +430,6 @@
       }
       if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); buildGrilleExamen(); }
     }
-
     function validateAnswer() { if (!userAnswers[currentQ] || userAnswers[currentQ].length === 0) return;
       validated[currentQ] = true;
       renderQuestion(); }
