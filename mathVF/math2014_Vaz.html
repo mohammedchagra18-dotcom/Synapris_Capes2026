@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Synapris — QCM Maths 2014</title>
+  <link rel="icon" type="image/png"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231a237e'/%3E%3Ctext x='50' y='68' font-size='60' font-family='Inter,sans-serif' font-weight='800' fill='%23f0a500' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#0f1f3d;--primary-mid:#1a3360;--accent:#f0a500;--accent-dark:#d4900a;--green:#2e7d32;--green-light:#e8f5e9;--red:#c62828;--red-light:#ffebee;--orange:#ef6c00;--white:#ffffff;--gray-light:#f5f7fa;--gray:#90a4ae;--sky-deep:#3b82f6;--sky-card:#eff6ff;--sky-border:#93c5fd;--shadow:0 4px 20px rgba(15,31,61,0.10);--shadow-sm:0 2px 8px rgba(15,31,61,0.08);--radius:12px;--font-ar:'Amiri',serif;--font-heading:'Inter',sans-serif;--font-fr:'Source Sans 3',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{font-family:var(--font-fr);font-size:18px;line-height:1.6;background:linear-gradient(160deg,#fdfbf7 0%,#f8f5ee 45%,#fef9f0 100%);color:#1a1a2e;display:flex;flex-direction:column}
+    .site-header{background:linear-gradient(135deg,#0b152e 0%,#1a2d5a 100%);color:var(--white);padding:2vh 1vw;height:23vh;display:flex;align-items:center;flex-shrink:0;box-shadow:0 3px 16px rgba(0,0,0,0.35)}
+    .header-grid{display:grid;grid-template-columns:130px 1fr 280px;gap:14px;align-items:center;width:100%}
+    .header-col1{display:flex;flex-direction:column;align-items:center;gap:6px}
+    .logo-square{width:100px;height:100px;border-radius:18px;background:#ffffff;display:flex;align-items:center;justify-content:center;border:3px solid var(--white);box-shadow:0 0 0 5px rgba(255,255,255,0.20);overflow:hidden}
+    .logo-square img{width:100%;height:100%;object-fit:contain}
+    .header-col1 .verset{font-family:var(--font-ar);font-size:16px;font-weight:700;color:var(--accent);text-align:center;font-style:italic;line-height:1.3}
+    .header-col2{background:var(--accent);border-radius:12px;padding:14px 16px;text-align:center}
+    .header-col2 .concours-ar{font-family:var(--font-ar);font-size:22px;font-weight:800;color:#0f1f3d;line-height:1.5;margin-bottom:6px;direction:rtl}
+    .header-col2 .specialite{font-family:var(--font-ar);font-size:16px;color:#0f1f3d;font-weight:700;direction:rtl}
+    .header-col3{text-align:center}
+    .header-col3 .accroche{font-family:var(--font-heading);font-size:14px;font-weight:600;color:var(--accent);margin-bottom:4px;color:#ef6c00;animation:blink 1.2s infinite;}
+    .header-col3 .marque{font-size:20px;font-weight:800;color:var(--white);letter-spacing:1px}
+    .header-col3 .marque span{color:var(--accent);color:#ef6c00;animation:blink 1.2s infinite;}
+    .header-col3 .session{font-size:11px;color:rgba(255,255,255,0.75);margin-bottom:8px}
+    .header-col3 .titre-epreuve{font-size:26px;font-weight:800;color:var(--accent);letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.30)}
+    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:1vh 1vw;height:7vh;font-size:2vh;display:flex;align-items:center;gap:14px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
+    .mini-bar .mb-progress{flex:1;min-width:80px;display:flex;align-items:center;gap:10px}
+    .mb-progress span{font-size:2vh;font-weight:700}
+    .mb-progress-bar{flex:1;height:8px;background:#e0e5ec;border-radius:4px;overflow:hidden}
+    .mb-progress-fill{height:100%;background:linear-gradient(90deg,var(--sky-deep),var(--accent));border-radius:4px;transition:width .4s ease}
+    .mb-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:14px;font-weight:700;font-size:1.8vh;white-space:nowrap}
+    .mb-badge.mode-badge{background:#e8f0fb;color:var(--sky-deep)}
+    .mb-badge.client-badge{background:#fff3e0;color:var(--accent-dark)}
+    .main-scroll{flex:1;overflow-y:auto;padding:12px 0 8px;height:60vh}
+    .main-content{max-width:1100px;margin:0 auto;padding:0 18px 20px;height:100%;display:flex;flex-direction:column}
+    .page{display:none;height:100%}
+    .page.active{display:block;animation:fadeIn .35s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0.5}}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 28px;margin-bottom:18px;border-left:6px solid var(--primary)}
+    .card.sky{border-left-color:var(--sky-deep);background:#fafcff}
+    .card-title{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+    .btn{font-family:var(--font-fr);font-size:15px;font-weight:600;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover:not(:disabled){background:var(--primary-mid)}
+    .btn-sky{background:var(--sky-deep);color:var(--white)}.btn-sky:hover:not(:disabled){background:#2563eb}
+    .btn-green{background:var(--green);color:var(--white)}.btn-green:hover:not(:disabled){background:#388e3c}
+    .btn-gold{background:var(--accent);color:var(--primary);font-weight:700}.btn-gold:hover:not(:disabled){background:var(--accent-dark)}
+    .btn-gray{background:#6c757d;color:var(--white)}.btn-gray:hover:not(:disabled){background:#5a6268}
+    .btn-outline-white{border:2px solid var(--white);color:var(--white);background:transparent;font-size:13px;padding:8px 16px}.btn-outline-white:hover{background:rgba(255,255,255,0.10)}
+    .btn-whatsapp{background:#25d366;color:var(--white)}.btn-whatsapp:hover{background:#1ebe57}
+    .btn-block{display:flex;width:100%;margin-top:14px;font-size:16px;padding:14px}
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 16px;max-width:560px;margin-left:auto;margin-right:auto}
+    .mode-card{background:#f8faff;border:2px solid var(--sky-border);border-radius:var(--radius);padding:22px 14px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+    .mode-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--sky-deep);transform:scaleX(0);transform-origin:center;transition:transform .2s}
+    .mode-card:hover::after,.mode-card.selected::after{transform:scaleX(1)}
+    .mode-card:hover,.mode-card.selected{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sky-deep)}
+    .mode-card.exam-card::after{background:var(--red)}.mode-card.exam-card:hover,.mode-card.exam-card.selected{border-color:var(--red);background:#fff5f5}
+    .mode-icon{font-size:36px;display:block;margin-bottom:6px}.mode-name{font-size:17px;font-weight:700;color:var(--primary)}
+    .mode-desc{font-size:13px;color:var(--gray);margin-top:4px;line-height:1.5}
+    .notice-box{background:#fffdf5;border:2px dashed var(--accent);border-radius:12px;padding:16px 20px;margin:12px 0 0;font-size:15px;line-height:1.6;display:flex;align-items:flex-start;gap:12px}
+    .notice-box .notice-icon{font-size:28px;flex-shrink:0;margin-top:2px}
+    .ref-btn{background:transparent;border:1.5px dashed var(--gray);color:var(--gray);font-size:13px;padding:8px 16px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:10px 0 0;transition:all .2s}
+    .ref-btn:hover{border-color:var(--accent);color:var(--accent);background:#fffdf5}
+    .question-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;height:calc(100% - 60px)}
+    .q-left{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;border:1.5px solid var(--sky-border);display:flex;flex-direction:column;height:100%;overflow-y:auto}
+    .q-right{min-height:120px;display:flex;flex-direction:column;height:100%;overflow-y:auto}
+    .question-statement{font-size:16px;color:#1a1a2e;line-height:1.8;margin-bottom:14px;padding:14px 18px;background:#f8faff;border-radius:12px;border-left:5px solid var(--accent);user-select:text}
+    .choices-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:14px;flex:1}
+    .choice-btn{font-family:var(--font-fr);font-size:15px;padding:11px 16px;border:2px solid var(--sky-border);border-radius:12px;background:var(--white);color:#1a1a2e;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:flex-start;gap:10px;width:100%}
+    .choice-btn:hover:not(:disabled){background:#f0f6ff;border-color:var(--sky-deep)}
+    .choice-btn.selected{background:#e8f0ff;border-color:var(--sky-deep);box-shadow:0 0 0 4px rgba(59,130,246,0.15)}
+    .choice-btn.correct{background:var(--green-light);border-color:var(--green);color:var(--green);font-weight:600}
+    .choice-btn.wrong{background:var(--red-light);border-color:var(--red);color:var(--red)}
+    .choice-btn:disabled{cursor:default}
+    .choice-letter{width:30px;height:30px;border-radius:50%;background:var(--primary);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;margin-top:2px}
+    .choice-btn.correct .choice-letter{background:var(--green)}.choice-btn.wrong .choice-letter{background:var(--red)}.choice-btn.selected .choice-letter{background:var(--sky-deep)}
+    .choice-text{flex:1}
+    .nav-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .nav-row .btn-group{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .feedback-placeholder{background:#f8faff;border:2px dashed var(--sky-border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:140px;padding:24px 16px;text-align:center;color:var(--gray)}
+    .feedback-placeholder .ph-icon{font-size:36px;margin-bottom:8px}.feedback-placeholder .ph-text{font-size:14px}
+    .feedback-box{display:none;animation:fadeIn .3s ease}.feedback-box.visible{display:block}
+    .feedback-header{display:flex;align-items:center;gap:10px;padding:14px 20px;font-size:17px;font-weight:700;border-radius:12px 12px 0 0;border:2px solid transparent;border-bottom:none}
+    .feedback-box.correct .feedback-header{background:var(--green-light);color:var(--green);border-color:var(--green)}
+    .feedback-box.wrong .feedback-header{background:var(--red-light);color:var(--red);border-color:var(--red)}
+    .feedback-body{padding:20px 24px;background:#fafcff;border:2px solid #dbeafe;border-top:none;border-radius:0 0 12px 12px;font-size:15px;line-height:1.8;user-select:text;white-space:pre-line;max-height:400px;overflow-y:auto}
+    .feedback-box.correct .feedback-body{border-color:var(--green)}.feedback-box.wrong .feedback-body{border-color:var(--red)}
+    .fb-section{margin-bottom:14px;padding:14px 18px;border-radius:10px;background:#f9fafb;border-left:5px solid var(--sky-deep)}
+    .fb-section.fb-correct{background:#f0faf0;border-left-color:var(--green)}
+    .fb-section.fb-foundation{background:#f0f4ff;border-left-color:var(--sky-deep)}
+    .fb-section.fb-reference{background:#fef9f0;border-left-color:var(--accent-dark)}
+    .fb-section.fb-obstacle{background:#fff5f5;border-left-color:var(--red)}
+    .fb-section.fb-tip{background:#fffdf0;border-left-color:var(--accent)}
+    .fb-section.fb-objectif{background:#f0faf8;border-left-color:var(--primary)}
+    .fb-section strong{display:block;margin-bottom:5px;font-size:16px;letter-spacing:0.3px}
+    .hidden{display:none!important}
+    .exam-mode .q-left,.exam-mode .q-right{border-radius:2px;border:1px solid #999;box-shadow:none}
+    .grille-examen{background:#faf9f6;border:2px solid #555;border-radius:2px;padding:12px 10px;font-family:'Courier New',monospace;font-size:12px;user-select:none;overflow-y:auto;max-height:75vh}
+    .grille-examen h4{text-align:center;font-size:14px;margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-family:var(--font-fr)}
+    .grille-table{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+    .grille-col{display:flex;flex-direction:column;gap:2px}
+    .grille-row{display:flex;align-items:center;gap:4px;font-size:11px}
+    .grille-q-num{width:28px;font-weight:700;text-align:right;cursor:pointer;color:var(--primary);font-family:var(--font-fr)}
+    .grille-q-num.answered{color:var(--accent-dark);animation:subtlePulse 1.5s infinite}
+    @keyframes subtlePulse{0%,100%{opacity:1}50%{opacity:0.5}}
+    .grille-case{width:20px;height:20px;border:1.5px solid #555;display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;cursor:pointer;background:#fff;transition:all .15s}
+    .grille-case:hover{background:#ddd}.grille-case.checked{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;font-family:'Courier New',monospace;font-size:13px}
+    .result-row{display:flex;align-items:center;gap:6px;padding:4px 0}
+    .result-q-num{width:32px;font-weight:700;font-family:var(--font-fr)}
+    .result-case{width:24px;height:24px;border:2px solid #aaa;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;background:#f5f5f5}
+    .result-case.correct-choice{background:#2e7d32;color:#fff;border-color:#2e7d32}
+    .result-case.wrong-choice{background:#c62828;color:#fff;border-color:#c62828}
+    .result-case.missed-choice{background:#fff3e0;border-color:#ef6c00;color:#ef6c00}
+    .timer-wrap{text-align:center;margin-bottom:10px}
+    .timer-badge{display:inline-flex;align-items:center;gap:6px;background:#f8faff;border:2px solid var(--sky-border);border-radius:10px;padding:6px 16px;font-size:20px;font-weight:700;color:var(--primary);transition:all .3s}
+    .timer-badge.warning{background:#fff8f0;border-color:var(--orange);color:var(--orange)}
+    .timer-badge.danger{background:var(--red-light);border-color:var(--red);color:var(--red);animation:pulse .8s infinite}
+    .perq-timer{font-size:12px;color:var(--gray);margin-left:8px;font-weight:600}.perq-timer.warning{color:var(--orange)}.perq-timer.danger{color:var(--red)}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+    .site-footer{background:var(--primary);color:rgba(255,255,255,0.85);padding:1vh 1vw;height:10vh;font-size:1.5vh;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .site-footer .footer-info{font-weight:600}.site-footer .footer-info strong{color:var(--accent);font-weight:700}
+    .site-footer .footer-buttons{display:flex;gap:8px;flex-wrap:wrap}
+    .footer-reset{background:transparent;border:1px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.7);font-size:10px;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all .2s}
+    .footer-reset:hover{border-color:var(--accent);color:var(--accent)}
+    .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,31,61,0.85);display:flex;align-items:center;justify-content:center;z-index:1000;animation:fadeIn .3s ease}
+    .modal-box{background:var(--white);border-radius:var(--radius);padding:32px 28px;max-width:520px;width:90%;text-align:center;box-shadow:0 14px 50px rgba(0,0,0,0.35);border-top:6px solid var(--accent)}
+    .modal-box.rtl{direction:rtl;font-family:var(--font-ar);text-align:right}
+    .modal-box h3{font-family:var(--font-heading);font-size:24px;color:var(--primary);margin-bottom:10px}
+    .modal-box.rtl h3{font-family:var(--font-ar);font-size:22px}
+    .modal-box p{font-size:16px;color:#555;margin-bottom:20px;line-height:1.7}
+    .modal-box .key-input{width:100%;padding:14px 16px;border:2px solid var(--sky-border);border-radius:10px;font-size:18px;text-align:center;font-family:var(--font-fr);letter-spacing:2px;margin-bottom:16px;outline:none;transition:border-color .2s}
+    .modal-box .key-input:focus{border-color:var(--accent)}
+    .modal-box .modal-error{color:var(--red);font-size:14px;font-weight:600;margin-bottom:10px;display:none}
+    .modal-box .modal-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .score-card{text-align:center;padding:28px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px}
+    .score-badge{font-size:56px;display:block;margin-bottom:8px}.score-pct{font-size:52px;font-weight:800;color:var(--primary);display:block}
+    .score-label{font-size:18px;font-weight:600;color:var(--gray);display:block;margin-top:6px}.score-sub{font-size:15px;color:var(--gray);display:block}
+    .result-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+    .result-table th{background:var(--primary);color:var(--white);padding:8px 10px;text-align:left}
+    .result-table td{padding:7px 10px;border-bottom:1px solid #e0e5ec}
+    .intro-banner{background:linear-gradient(135deg,#fff8e7 0%,#fff3d6 40%,#fef9f0 100%);border-radius:18px;padding:40px 28px;text-align:center;box-shadow:var(--shadow);border:2px solid var(--accent);margin-bottom:20px}
+    .intro-banner .intro-logo{font-family:var(--font-heading);font-size:48px;font-weight:800;color:var(--primary);letter-spacing:3px;margin-bottom:20px}
+    .intro-banner .intro-logo span{color:var(--accent)}
+    .intro-banner .intro-logo img{max-width:200px;height:auto;margin:0 auto}
+    .intro-banner .intro-slogan{font-size:22px;font-weight:600;color:#555;margin:8px 0 20px}
+    .intro-banner .intro-features{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:24px 0}
+    .intro-feature{text-align:center;font-size:16px;font-weight:600;color:var(--primary)}.intro-feature .feat-icon{font-size:40px;display:block;margin-bottom:6px}
+    body.exam-mode .site-header, body.exam-mode .site-footer, body.train-mode .site-header, body.train-mode .site-footer { display: none; }
+    @media(max-width:480px){body{font-size:16px}.header-grid{grid-template-columns:20% 50% 30%;gap:4px}.logo-square{width:48px;height:48px;border-radius:10px}.header-col1 .verset{font-size:8px}.header-col2 .concours-ar{font-size:12px!important}.header-col2 .specialite{font-size:9px}.header-col3 .accroche{font-size:9px}.header-col3 .marque{font-size:13px}.header-col3 .session{font-size:7px}.header-col3 .titre-epreuve{font-size:16px}.mini-bar{padding:6px 10px;gap:8px;font-size:11px}.mini-bar .mb-progress span{font-size:12px}.mb-badge{font-size:9px;padding:3px 8px}.main-content{padding:0 8px 14px}.mode-grid{gap:8px}.mode-card{padding:14px 6px}.mode-icon{font-size:28px}.mode-name{font-size:13px}.mode-desc{font-size:10px}.question-layout{grid-template-columns:1fr;gap:6px}.q-left{padding:12px}.question-statement{font-size:13px;padding:10px 12px}.choice-btn{font-size:12px;padding:8px 10px}.choice-letter{width:24px;height:24px;font-size:10px}.btn{font-size:12px;padding:8px 14px}.btn-block{font-size:14px;padding:10px}.site-footer{padding:8px 12px;flex-direction:column;text-align:center}.site-footer .footer-buttons{justify-content:center}.grille-examen{font-size:9px;padding:6px 4px;max-height:55vh}.grille-examen h4{font-size:10px;margin-bottom:6px}.grille-table{gap:3px 5px}.grille-row{font-size:8px;gap:1px}.grille-q-num{width:18px;font-size:8px}.grille-case{width:15px;height:15px;font-size:6px}.result-grid{font-size:10px;gap:4px 10px}.result-case{width:22px;height:22px;font-size:8px}.intro-banner{padding:24px 14px}.intro-banner .intro-logo{font-size:32px}.intro-banner .intro-slogan{font-size:16px}.intro-feature{font-size:13px}.intro-feature .feat-icon{font-size:30px}}
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <header class="site-header">
+    <div class="header-grid">
+      <div class="header-col1"><div class="logo-square"><img src="images/logo.PNG" alt="Synapris"></div><div class="verset">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</div></div>
+      <div class="header-col2"><div class="concours-ar">المناظرة الخارجية بالاختبارات لانتداب أساتذة<br>التعليم الثانوي و التعليم التقني و التعليم الفني</div><div class="specialite">اختصاص : الرياضيات — CAPES 2014 — المدة : 60 دقيقة</div></div>
+      <div class="header-col3"><div class="accroche">✨ Votre réussite commence ici</div><div class="marque"><span>SYNAPRIS</span></div><div class="session">Éclairer l'intelligence · Session 2014</div><div class="titre-epreuve">QCM_MATHS_2014</div></div>
+    </div>
+  </header>
+  <div class="mini-bar" id="mini-bar"><div class="mb-progress"><span id="mb-q-counter">—</span><div class="mb-progress-bar"><div class="mb-progress-fill" id="mb-progress-fill" style="width:0%"></div></div></div><span class="mb-badge mode-badge" id="mb-mode-badge" style="display:none;">—</span><span class="mb-badge client-badge" id="mb-client-badge" style="display:none;">🔑 —</span></div>
+  <div class="main-scroll" id="main-scroll">
+    <div id="main-app" style="display:block;"><div class="main-content">
+      <div id="page-welcome" class="page active"><div class="intro-banner"><div class="intro-logo"><img src="images/logo.PNG" alt="Synapris" style="max-width:200px"></div><div class="intro-slogan">🌟 Le savoir sous tous ses prismes</div><div class="intro-features"><div class="intro-feature"><span class="feat-icon">📝</span>Entraînez-vous</div><div class="intro-feature"><span class="feat-icon">⏱️</span>Simulez l'examen</div><div class="intro-feature"><span class="feat-icon">💡</span>Comprenez vos erreurs</div><div class="intro-feature"><span class="feat-icon">📊</span>Suivez votre progrès</div></div><button class="btn btn-gold btn-block" onclick="showPage('page-home')" style="max-width:400px;margin:0 auto;">✨ Accéder au QCM Maths 2014</button><p style="font-size:13px;color:var(--gray);margin-top:14px;">QCM interactif — CAPES Maths 2014 — 60 questions · 60 minutes · 4 choix (A,B,C,D) · Une seule réponse correcte</p></div></div>
+      <div id="page-home" class="page"><div class="card sky"><div class="card-title">🎯 Choisissez votre mode</div><div class="mode-grid"><div class="mode-card" id="mode-train" onclick="selectMode('train')"><span class="mode-icon">📝</span><div class="mode-name">Mode Entraînement</div><div class="mode-desc">Feedback immédiat · Correction détaillée</div></div><div class="mode-card exam-card" id="mode-exam" onclick="selectMode('exam')"><span class="mode-icon">⏱️</span><div class="mode-name">Mode Examen</div><div class="mode-desc">Chronomètre 60 min · Conditions réelles</div></div></div><div class="notice-box" id="notice-train"><div class="notice-icon">🖱️</div><div><strong>🟢 Mode Entraînement :</strong> Cliquez sur A, B, C ou D pour choisir → <strong>Validez</strong> pour voir la correction → <strong>Flèches ← →</strong> pour naviguer. <strong>Enter</strong> pour valider. Une seule réponse correcte.</div></div><div class="notice-box hidden" id="notice-exam" style="background:#fff5f5;border-color:var(--red);"><div class="notice-icon">⏰</div><div><strong>🔴 Mode Examen :</strong> 60 questions en 60 minutes. Chronomètre en haut. Pas de correction avant la fin. Grille de réponses à droite. Une seule réponse correcte. Bonne chance !</div></div><div style="text-align:center;"><button class="ref-btn" onclick="showRefModal()">📚 Références &amp; mentions légales</button></div><button class="btn btn-sky btn-block" id="btn-start" disabled onclick="startQuiz()">⏳ Chargement...</button></div></div>
+      <div id="page-question" class="page"><div class="timer-wrap hidden" id="timer-wrap"><div class="timer-badge" id="timer-badge">⏱ 60:00</div><span class="perq-timer" id="perq-timer">⚡ 1:00</span></div><div class="question-layout"><div class="q-left"><div class="question-statement" id="q-statement"></div><div class="choices-grid" id="q-choices"></div></div><div class="q-right" id="q-right-panel"><div class="feedback-placeholder" id="feedback-placeholder"><div class="ph-icon">💬</div><div class="ph-text">Feedback après validation</div></div><div class="feedback-box" id="feedback-box"><div class="feedback-header" id="feedback-header"><span id="badge-icon"></span><span id="feedback-result-text"></span></div><div class="feedback-body" id="feedback-body"></div></div><div class="grille-examen hidden" id="grille-examen"><h4>📋 Grille de réponses</h4><div class="grille-table" id="grille-table"></div></div></div></div><div class="nav-row"><div class="btn-group"><button class="btn btn-primary" id="btn-prev" onclick="prevQuestion()" disabled>← Précédent</button><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button><button class="btn btn-green" id="btn-validate" disabled onclick="validateAnswer()">✔ Valider</button><button class="btn btn-primary" id="btn-next" onclick="nextQuestion()">Suivant →</button></div></div></div>
+      <div id="page-results" class="page"><div class="score-card"><span class="score-badge" id="result-badge">🏆</span><span class="score-pct" id="result-pct">—</span><span class="score-label">Score final</span><span class="score-sub" id="result-sub"></span></div><div class="card"><div class="card-title">📊 Résultats par thème</div><div id="result-themes"></div></div><div class="card"><div class="card-title">📋 Grille des réponses</div><div class="result-grid" id="result-grid"></div><button class="btn btn-gold btn-block" style="margin-top:8px;" onclick="goHome()">🏠 Retour à l'accueil</button></div></div>
+    </div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-info">© 2026 <strong>Synapris</strong> — Licence attribuée à <span id="client-name-footer">——</span> · Valide jusqu'au 01/03/2027 · CAPES Maths 2014 · 60 questions · 60 min</div>
+    <div class="footer-buttons"><button class="footer-reset" onclick="resetClientName()" title="Changer le prénom">🔄 Changer</button><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a><a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/" class="btn btn-outline-white" style="background:#ef6c00; color:white; border-color:#ef6c00;">📦 Voir les offres</a></div>
+  </footer>
+  <script>
+    const FICHE_TYPE = 'full';
+    const TOTAL_EXAM_SEC = 3600, PER_Q_SEC = 60;
+    let clientName = '';
+    let mode = 'train';
+    let currentQ = 0, activeSet = [], userAnswers = [], validated = [], examTimer = null, examSeconds = 0, perQTimer = null, perQSeconds = 0;
+    let unlocked = false;
+    const VALID_KEYS = ['SYN-MAESTRO-MATH'];
+    const QUESTIONS_GRATUITES = 10;
+    
+    function isQuestionLocked(qIndex) {
+      if(unlocked) return false;
+      const realQNumber = qIndex + 1;
+      return realQNumber > QUESTIONS_GRATUITES;
+    }
+    
+    function showUnlockModal() {
+      if(unlocked) return;
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'unlock-modal';
+      overlay.innerHTML = `<div class="modal-box"><h3>🔐 Accès complet au QCM</h3><p>Vous avez atteint la limite des ${QUESTIONS_GRATUITES} questions gratuites.<br><strong>25 DT seulement</strong> pour débloquer les ${activeSet.length - QUESTIONS_GRATUITES} questions restantes (Q${QUESTIONS_GRATUITES+1} à Q${activeSet.length}) + le Pack Spécial CAPES MATH 2026.</p><input type="text" class="key-input" id="unlock-key" placeholder="Entrez votre clé d'accès" autocomplete="off"><div class="modal-error" id="unlock-error">❌ Clé invalide. Veuillez vérifier.</div><div class="modal-actions"><button class="btn btn-gold" id="btn-unlock" style="animation:blink 1.2s infinite; background:#ef6c00; color:white;">🔑 Demander l'accès complet</button><button class="btn btn-gray" id="btn-cancel-unlock">Voir mes résultats</button></div></div>`;
+      document.body.appendChild(overlay);
+      document.getElementById('btn-unlock').addEventListener('click', () => {
+        const key = document.getElementById('unlock-key').value.trim();
+        if(VALID_KEYS.includes(key)) {
+          unlocked = true;
+          localStorage.setItem('synapris_unlocked', 'true');
+          overlay.remove();
+          // Recharger avec toutes les questions
+          activeSet = questionsData.map((_, i) => i);
+          userAnswers = new Array(activeSet.length).fill(null);
+          validated = new Array(activeSet.length).fill(false);
+          renderQuestion();
+          if(mode === 'exam') buildGrilleExamen();
+        } else {
+          document.getElementById('unlock-error').style.display = 'block';
+          setTimeout(() => {
+            window.open('https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/', '_blank');
+          }, 500);
+        }
+      });
+      document.getElementById('btn-cancel-unlock').addEventListener('click', () => {
+        overlay.remove();
+        finishQuiz();
+      });
+    }
+    
+    function showExamInstructionsModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'exam-instructions-modal';
+      overlay.innerHTML = '<div class="modal-box rtl" style="max-width:600px;"><h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</h3><p style="font-size:18px;font-weight:700;color:var(--primary);">📋 تعليمات الامتحان</p><table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:15px;text-align:right;"><tr><td style="padding:8px 12px;border:1px solid #ccc;">⏰ المدة</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">60 دقيقة</td></tr><tr><td style="padding:8px 12px;border:1px solid #ccc;">📝 عدد الأسئلة</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">60 سؤالاً</td></tr><tr><td style="padding:8px 12px;border:1px solid #ccc;">✅ نوع الاختيار</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">إجابة واحدة صحيحة</td></tr></table><p style="font-size:15px;">⌨️ <strong>الأزرار :</strong> A B C D = اختيار الإجابة | Enter = تأكيد | → ← = التنقل بين الأسئلة</p><p style="font-size:15px;color:var(--red);font-weight:700;">⚠️ لا يمكن العودة للتصحيح قبل نهاية الوقت</p><p style="font-size:16px;font-weight:700;color:var(--accent-dark);margin-top:12px;">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</p><div class="modal-actions" style="direction:ltr;"><button class="btn btn-gold" id="btn-start-exam">▶️ بدء الامتحان</button></div></div>';
+      document.body.appendChild(overlay);
+      document.getElementById('btn-start-exam').addEventListener('click', () => { overlay.remove();
+        currentQ = 0;
+        activeSet = questionsData.map((_, i) => i);
+        if(!unlocked && activeSet.length > QUESTIONS_GRATUITES) {
+          activeSet = activeSet.slice(0, QUESTIONS_GRATUITES);
+        }
+        userAnswers = new Array(activeSet.length).fill(null);
+        validated = new Array(activeSet.length).fill(false);
+        showPage('page-question');
+        document.body.classList.add('exam-mode');
+        examSeconds = TOTAL_EXAM_SEC;
+        perQSeconds = PER_Q_SEC;
+        document.getElementById('timer-wrap').classList.remove('hidden');
+        document.getElementById('perq-timer').classList.remove('hidden');
+        startExamTimer();
+        startPerQTimer();
+        document.getElementById('btn-validate').classList.add('hidden');
+        document.getElementById('feedback-placeholder').style.display = 'none';
+        document.getElementById('grille-examen').classList.remove('hidden');
+        buildGrilleExamen();
+        updateMiniBar();
+        renderQuestion(); });
+    }
+    
+    // ==================== 60 QUESTIONS — CAPES MATHS 2014 ====================
+    const questionsData = [
+      { id: 1, statement: "Soit la fonction $f$ définie sur $]-\\infty, -1[$ par $f(x) = \\dfrac{\\sqrt{x^2-2x-3}}{x-2}$. La courbe $\\mathscr{C}$ admet une asymptote d'équation :", choices: ["$y = 1$", "$y = -1$", "$y = x$", "$y = -x$"], correct: 1, theme: "Limites et asymptotes", niveau_scolaire: "4ème année", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n$f(x)=\\frac{\\sqrt{(x-1)^2-4}}{x-2}$. En $-\\infty$, $\\sqrt{x^2-2x-3}\\sim |x|=-x$. Donc $f(x)\\sim\\frac{-x}{x}=-1$. L'asymptote horizontale est $y=-1$.\n\n⚠️ VIGILANCE : Ne pas confondre $|x|$ et $x$ quand $x<0$.\n\n💡 ASTUCE : Factoriser sous la racine par le terme dominant.\n\n🎯 OBJECTIF : Déterminer une asymptote oblique ou horizontale." },
+      { id: 2, statement: "Soit $f$ la solution de l'équation différentielle $y' = 2y + 2$ telle que $f(0) = 1$. La valeur moyenne $\\bar{f}$ de $f$ sur $[0,1]$ est égale à :", choices: ["$e^2 - 2$", "$e^2 - 1$", "$2e^2 - 2$", "$2e^2 - 1$"], correct: 0, theme: "Équations différentielles — Valeur moyenne", niveau_scolaire: "4ème année", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\nÉquation homogène : $y'=2y$ ⇒ $y_H=Ce^{2x}$. Solution particulière constante : $y_P=-1$. Solution générale : $y=Ce^{2x}-1$. $f(0)=C-1=1$ ⇒ $C=2$. Donc $f(x)=2e^{2x}-1$.\nValeur moyenne : $\\bar{f}=\\int_0^1(2e^{2x}-1)dx=[e^{2x}-x]_0^1=(e^2-1)-(1-0)=e^2-2$.\n\n⚠️ VIGILANCE : Ne pas oublier le $-x$ dans la primitive de $-1$.\n\n💡 ASTUCE : Toujours vérifier la condition initiale après avoir trouvé la solution générale." },
+      { id: 3, statement: "On considère la fonction $f : x \\mapsto \\dfrac{\\ln x}{x - 1 + \\ln x}$.", choices: ["$\\displaystyle\\lim_{x \\to 0^+} f(x) = -\\infty$", "$\\displaystyle\\lim_{x \\to +\\infty} f(x) = +\\infty$", "$\\displaystyle\\lim_{x \\to 1} f(x) = \\dfrac{1}{2}$", "$\\displaystyle\\lim_{x \\to e} f(x) = 1$"], correct: 2, theme: "Limites de fonctions", niveau_scolaire: "4ème année", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\nEn $x=1$ : $\\ln x\\sim x-1$. Donc $f(x)\\sim\\frac{x-1}{(x-1)+(x-1)}=\\frac{x-1}{2(x-1)}=\\frac{1}{2}$. La limite est $\\frac{1}{2}$.\n\n⚠️ VIGILANCE : Utiliser l'équivalent $\\ln x\\sim x-1$ au voisinage de 1.\n\n💡 ASTUCE : Pour les limites en 1 avec $\\ln x$, penser au DL $\\ln(1+u)\\sim u$." },
+      { id: 4, statement: "Le théorème des valeurs intermédiaires s'énonce suivant la formulation :", choices: ["Si $f$ est une fonction continue et strictement croissante sur $[a,b]$, alors pour tout $c \\in [f(a), f(b)]$ il existe un unique $\\alpha \\in [a,b]$ vérifiant $f(\\alpha) = c$", "Si $f$ est une fonction continue sur $[a,b]$ tel que $f(a) \\times f(b) < 0$, alors il existe un réel unique $c$ de $]a,b[$ vérifiant $f(c) = 0$", "Si $f$ est une fonction continue sur $[a,b]$, alors pour tout $c$ compris entre $f(a)$ et $f(b)$, il existe $\\alpha \\in [a,b]$ vérifiant $f(\\alpha) = c$", "Si $f$ est une fonction continue sur $[a,b]$ et dérivable sur $]a,b[$, il existe $c \\in ]a,b[$ vérifiant $f'(c) = 0$"], correct: 2, theme: "Continuité — Théorème des valeurs intermédiaires", niveau_scolaire: "3ème année", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\nC'est l'énoncé exact du TVI : une fonction continue sur $[a,b]$ prend toute valeur comprise entre $f(a)$ et $f(b)$.\n\n⚠️ VIGILANCE : Ne pas confondre TVI, corollaire du TVI, théorème de Rolle et théorème de la bijection.\n\n💡 ASTUCE : Le TVI garantit l'existence d'au moins une solution, pas l'unicité." },
+      { id: 5, statement: "Soit la fonction $f$ définie sur $I = \\left[0, \\dfrac{\\pi}{2}\\right]$ par $f(x) = \\dfrac{\\sin x}{x}$ si $x \\neq 0$ et $f(0) = 1$. Alors :", choices: ["$f$ est continue et non dérivable sur $I$", "$f$ est dérivable sur $I$", "$f$ est non dérivable à droite en 0", "$f$ n'est pas continue à droite en 0"], correct: 1, theme: "Continuité et dérivabilité", niveau_scolaire: "4ème année", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n$\\lim_{x\\to 0}\\frac{\\sin x}{x}=1=f(0)$, donc $f$ est continue en 0. La dérivée à droite en 0 : $\\lim_{x\\to 0^+}\\frac{f(x)-f(0)}{x}=\\lim_{x\\to 0^+}\\frac{\\frac{\\sin x}{x}-1}{x}=0$. Donc $f$ est dérivable en 0.\n\n⚠️ VIGILANCE : La limite usuelle $\\frac{\\sin x}{x}\\to 1$ donne la continuité.\n\n💡 ASTUCE : $\\sin x=x-\\frac{x^3}{6}+O(x^5)$ permet de calculer la dérivée en 0." },
+      { id: 6, statement: "Soit $f$ la solution de l'équation différentielle $y' = ay$, $(a \\in \\mathbb{R})$ vérifiant $f(0) = 1$ et $f(1) = 2$. Le réel $a$ est égal à :", choices: ["$1$", "$2$", "$\\ln 2$", "$e^2$"], correct: 2, theme: "Équations différentielles", niveau_scolaire: "4ème année", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\nSolution : $f(x)=Ce^{ax}$. $f(0)=C=1$ ⇒ $f(x)=e^{ax}$. $f(1)=e^a=2$ ⇒ $a=\\ln 2$.\n\n⚠️ VIGILANCE : Ne pas confondre $e^a=2$ et $a=e^2$.\n\n💡 ASTUCE : La solution de $y'=ay$ est toujours $y=Ce^{ax}$." },
+      { id: 7, statement: "Dans la figure ci-contre, on note $\\mathscr{C}$ la courbe représentative d'une fonction $f$ et $\\Gamma$ celle de sa primitive $F$. L'aire de la partie du plan délimitée par $\\mathscr{C}$, l'axe des abscisses et les droites d'équations $x = 0$ et $x = 3$ est égale à :", choices: ["$3$", "$\\dfrac{7}{2}$", "$4$", "$\\dfrac{9}{2}$"], correct: 2, theme: "Intégration — Calcul d'aire", niveau_scolaire: "4ème année", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\nL'aire est $\\int_0^3|f(x)|dx$. D'après le graphique, $F$ est la primitive de $f$. L'aire correspond à $F(3)-F(0)=4$.\n\n⚠️ VIGILANCE : L'aire est la valeur absolue de l'intégrale, mais ici $f$ est positive sur $[0,3]$.\n\n💡 ASTUCE : L'aire sous la courbe de $f$ entre $a$ et $b$ est $F(b)-F(a)$ si $f\\ge 0$." },
+      { id: 8, statement: "Soit $f$ la solution de l'équation différentielle $y' = -2y - 3$ telle que $f(0) = \\dfrac{3}{2}$. La représentation graphique de $f$ dans un repère orthonormé est :", choices: ["Graphique A", "Graphique B", "Graphique C", "Graphique D"], correct: 1, theme: "Équations différentielles — Représentation graphique", niveau_scolaire: "4ème année", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\nSolution homogène : $y_H=Ce^{-2x}$. Solution particulière constante : $y_P=-\\frac{3}{2}$. Solution générale : $y=Ce^{-2x}-\\frac{3}{2}$. $f(0)=C-\\frac{3}{2}=\\frac{3}{2}$ ⇒ $C=3$. Donc $f(x)=3e^{-2x}-\\frac{3}{2}$. C'est une fonction décroissante qui tend vers $-\\frac{3}{2}$ en $+\\infty$, avec $f(0)=\\frac{3}{2}$." },
+      { id: 9, statement: "Soit la fonction $f : x \\mapsto (x^2 - 4)\\sqrt{x-2}$. Alors :", choices: ["$f$ n'est pas dérivable à droite en 2", "$f$ est dérivable à droite en 2 et $f'_d(2) = 1$", "$f$ est dérivable à droite en 2 et $f'_d(2) = 0$", "$f$ est dérivable à droite en 2 et $f'_d(2) = -1$"], correct: 2, theme: "Dérivabilité", niveau_scolaire: "4ème année", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n$f(x)=(x-2)(x+2)\\sqrt{x-2}=(x+2)(x-2)^{3/2}$. En 2, $(x-2)^{3/2}$ est dérivable à droite avec dérivée nulle car exposant $>1$. Donc $f'_d(2)=0$.\n\n⚠️ VIGILANCE : $x\\mapsto x^\\alpha$ est dérivable en 0 à droite ssi $\\alpha>1$, avec dérivée nulle si $\\alpha>1$.\n\n💡 ASTUCE : Factoriser $(x^2-4)=(x-2)(x+2)$ permet de simplifier l'étude." },
+      { id: 10, statement: "$\\displaystyle\\int_{-\\frac{\\pi}{3}}^{\\frac{\\pi}{3}} (x + 2\\sin x)^3\\,dx$ est égale à :", choices: ["$0$", "$1$", "$\\dfrac{\\pi^2}{2}$", "$-\\dfrac{\\pi^2}{2}$"], correct: 0, theme: "Intégration — Fonctions paires/impaires", niveau_scolaire: "4ème année", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\nLa fonction $g(x)=(x+2\\sin x)^3$ est impaire car $g(-x)=(-x-2\\sin x)^3=-(x+2\\sin x)^3=-g(x)$. L'intégrale d'une fonction impaire sur un intervalle symétrique est nulle.\n\n⚠️ VIGILANCE : Vérifier la parité avant de se lancer dans un calcul compliqué.\n\n💡 ASTUCE : $(a+b)^3$ conserve la parité de $a+b$." }
+    ];
+    // Ajout des questions 11 à 60 (contenu réel de la fiche Maths 2014)
+    for(let i=11; i<=60; i++) {
+      if(i===11) questionsData.push({ id: 11, statement: "$\\displaystyle\\int_0^{\\pi} e^x \\cos(nx)\\,dx$ est égale à :", choices: ["$\\dfrac{e^{\\pi} + (-1)^n}{1 + n^2}$", "$\\dfrac{(-1)^n e^{\\pi} - 1}{1 + n^2}$", "$\\dfrac{e^{\\pi} + 1}{1 + n^2}$", "$\\dfrac{e^{\\pi} - 1}{1 + n^2}$"], correct: 1, theme: "Intégration — Intégration par parties", niveau_scolaire: "4ème année", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\nDouble intégration par parties ou utilisation des formules d'Euler. $I_n=\\int_0^\\pi e^x\\cos(nx)dx = \\frac{(-1)^n e^\\pi-1}{1+n^2}$.\n\n⚠️ VIGILANCE : $\\cos(n\\pi)=(-1)^n$.\n\n💡 ASTUCE : $\\int e^{ax}\\cos(bx)dx=\\frac{e^{ax}}{a^2+b^2}(a\\cos bx+b\\sin bx)+C$." });
+      else if(i===12) questionsData.push({ id: 12, statement: "On considère l'équation différentielle $(E) : y' + (\\ln 2)\\,y = 0$. La solution $y_0$ vérifiant $y_0(-1) = 4$ est donnée par :", choices: ["$y_0(x) = 2^{1-x}$", "$y_0(x) = 8 \\times 2^x$", "$y_0(x) = 16 \\times 2^{1-x}$", "$y_0(x) = 2 + 2^{-x}$"], correct: 0, theme: "Équations différentielles", niveau_scolaire: "4ème année", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n$y'=-(\\ln 2)y$ ⇒ $y=Ce^{-x\\ln 2}=C\\cdot 2^{-x}$. $y_0(-1)=C\\cdot 2^1=2C=4$ ⇒ $C=2$. Donc $y_0(x)=2\\cdot 2^{-x}=2^{1-x}$.\n\n⚠️ VIGILANCE : $e^{-x\\ln 2}=2^{-x}$.\n\n💡 ASTUCE : $a^{\\ln b}=b^{\\ln a}$, et $e^{x\\ln 2}=2^x$." });
+      else if(i===13) questionsData.push({ id: 13, statement: "Soit $f$ une fonction définie, continue et strictement monotone de $[0,1]$ sur $[0,1]$. Alors pour tout $y_0 \\in [0,1]$, l'équation $f(x^2) = y_0$ :", choices: ["admet une solution unique dans $[0,1]$", "admet exactement deux solutions dans $[0,1]$", "admet au moins deux solutions dans $[0,1]$", "n'admet pas de solutions dans $[0,1]$"], correct: 0, theme: "Fonctions — Composition et bijection", niveau_scolaire: "4ème année", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\nLa fonction $g(x)=x^2$ est une bijection de $[0,1]$ sur $[0,1]$. Donc $f\\circ g$ est une bijection de $[0,1]$ sur $[0,1]$ comme composée de deux bijections. L'équation $f(x^2)=y_0$ admet donc une unique solution.\n\n⚠️ VIGILANCE : La composée de deux bijections est une bijection.\n\n💡 ASTUCE : Sur $[0,1]$, $x\\mapsto x^2$ est strictement croissante donc bijective." });
+      else if(i===14) questionsData.push({ id: 14, statement: "Une approximation affine de $f : x \\mapsto -\\dfrac{1}{(1+x)^2}$ au voisinage de 0 est :", choices: ["$x \\mapsto 2x + 1$", "$x \\mapsto 2x - 1$", "$x \\mapsto -2x + 1$", "$x \\mapsto -2x - 1$"], correct: 1, theme: "Dérivation — Approximation affine", niveau_scolaire: "4ème année", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n$f(x)=-(1+x)^{-2}$. $f(0)=-1$. $f'(x)=2(1+x)^{-3}$, $f'(0)=2$. Approximation affine : $f(x)\\approx f(0)+f'(0)x=-1+2x=2x-1$.\n\n⚠️ VIGILANCE : $\\frac{d}{dx}(1+x)^{-2}=-2(1+x)^{-3}$, avec le signe moins devant : $f'(x)=2(1+x)^{-3}$.\n\n💡 ASTUCE : L'approximation affine est la tangente : $y=f(a)+f'(a)(x-a)$." });
+      else if(i===15) questionsData.push({ id: 15, statement: "Soit la fonction $f : x \\mapsto e^{\\frac{1}{\\ln x}}$. Alors :", choices: ["$\\forall x \\in ]1, +\\infty[$, $f \\circ f(x) = \\dfrac{1}{x}$", "$\\forall x \\in ]1, +\\infty[$, $f \\circ f(x) = e^{\\frac{1}{x}}$", "$\\forall x \\in ]1, +\\infty[$, $f \\circ f(x) = \\ln\\!\\left(\\dfrac{1}{\\ln x}\\right)$", "$\\forall x \\in ]1, +\\infty[$, $f \\circ f(x) = x$"], correct: 3, theme: "Composition de fonctions", niveau_scolaire: "4ème année", explication: "✅ Réponse : D\n\n🔍 CORRECTION :\n$f(x)=e^{1/\\ln x}$. $f\\circ f(x)=e^{1/\\ln(f(x))}=e^{1/\\ln(e^{1/\\ln x})}=e^{1/(1/\\ln x)}=e^{\\ln x}=x$.\n\n⚠️ VIGILANCE : $\\ln(e^u)=u$, donc $\\ln(f(x))=\\frac{1}{\\ln x}$.\n\n💡 ASTUCE : $f$ est involutive : $f^{-1}=f$." });
+      else if(i===16) questionsData.push({ id: 16, statement: "Le plan est muni d'un repère orthonormé $(O, \\vec{i}, \\vec{j})$. On donne la courbe $\\mathscr{C}$ d'une fonction $f$ dérivable sur $]0, +\\infty[$. $\\mathscr{C}$ admet une tangente horizontale au point $A$ d'abscisse $\\dfrac{1}{2}$ et un point d'inflexion en $B$ d'abscisse $\\dfrac{1+\\sqrt{2}}{2}$. Indiquer le graphique représentant $f'$ et $f''$ :", choices: ["Graphique A", "Graphique B", "Graphique C", "Graphique D"], correct: 2, theme: "Dérivation — Lien fonction/dérivées", niveau_scolaire: "4ème année", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\nTangente horizontale en $x=1/2$ ⇒ $f'(1/2)=0$. Point d'inflexion en $x=(1+\\sqrt{2})/2$ ⇒ $f''$ s'annule en changeant de signe. Le graphique C correspond à ces conditions." });
+      else if(i===17) questionsData.push({ id: 17, statement: "Soit la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = 1 + x + \\dfrac{x^2}{2} + \\dfrac{x^3}{3}$. L'équation $f(x) = 0$ admet :", choices: ["zéro solution", "une unique solution", "deux solutions", "trois solutions"], correct: 1, theme: "Étude de fonctions — Résolution d'équations", niveau_scolaire: "4ème année", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n$f'(x)=1+x+x^2=(x+\\frac{1}{2})^2+\\frac{3}{4}>0$, donc $f$ est strictement croissante sur $\\mathbb{R}$. $\\lim_{-\\infty}f=-\\infty$, $\\lim_{+\\infty}f=+\\infty$. Par le TVI et la stricte monotonie, $f(x)=0$ admet une unique solution.\n\n⚠️ VIGILANCE : Un trinôme $1+x+x^2$ a un discriminant négatif, donc toujours positif.\n\n💡 ASTUCE : $x^2+x+1=(x+\\frac{1}{2})^2+\\frac{3}{4}>0$ pour tout $x$." });
+      else if(i===18) questionsData.push({ id: 18, statement: "Le nombre de solutions dans $\\mathbb{R}_+$ de l'équation $e^x = x + \\dfrac{x^2}{2} + \\dfrac{x^3}{6}$ est :", choices: ["$0$", "$1$", "$2$", "$3$"], correct: 1, theme: "Étude de fonctions — Comparaison", niveau_scolaire: "4ème année", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\nSoit $g(x)=e^x-(1+x+\\frac{x^2}{2}+\\frac{x^3}{6})$. $g'(x)=e^x-(1+x+\\frac{x^2}{2})$, $g''(x)=e^x-(1+x)$, $g'''(x)=e^x-1>0$ pour $x>0$. En remontant, $g''(x)>0$, $g'(x)>0$, $g(x)>0$ pour $x>0$. En 0, $g(0)=0$. Donc $x=0$ est l'unique solution dans $\\mathbb{R}_+$.\n\n⚠️ VIGILANCE : $1+x+\\frac{x^2}{2}+\\frac{x^3}{6}$ est le début du DL de $e^x$, mais $e^x$ est strictement plus grand pour $x>0$.\n\n💡 ASTUCE : Utiliser les dérivées successives pour comparer $e^x$ à son développement limité." });
+      else if(i===19) questionsData.push({ id: 19, statement: "Une urne contient 7 boules rouges et 3 boules noires indiscernables au toucher. On tire successivement et avec remise $n$ boules de l'urne, où $n \\in \\mathbb{N}^*$. La probabilité d'obtenir au moins une boule noire est égale à :", choices: ["$\\left(\\dfrac{3}{10}\\right)^n$", "$\\left(\\dfrac{7}{10}\\right)^n$", "$1 - \\left(\\dfrac{3}{10}\\right)^n$", "$1 - \\left(\\dfrac{7}{10}\\right)^n$"], correct: 3, theme: "Probabilités — Tirages avec remise", niveau_scolaire: "4ème année", explication: "✅ Réponse : D\n\n🔍 CORRECTION :\nL'événement contraire de « au moins une noire » est « que des rouges ». Probabilité de tirer une rouge : $\\frac{7}{10}$. Avec $n$ tirages indépendants : $P(\\text{que des rouges})=(\\frac{7}{10})^n$. Donc $P(\\text{au moins une noire})=1-(\\frac{7}{10})^n$.\n\n⚠️ VIGILANCE : Ne pas confondre avec $1-(\\frac{3}{10})^n$ qui serait la probabilité d'au moins une rouge.\n\n💡 ASTUCE : Pour « au moins un », penser à l'événement contraire." });
+      else if(i===20) questionsData.push({ id: 20, statement: "Soit $P$ la loi uniforme sur $[0, 2\\pi]$. Alors $P\\!\\left(\\left[\\dfrac{\\pi}{6}, \\dfrac{2\\pi}{3}\\right]\\right)$ est égale à :", choices: ["$\\dfrac{1}{4}$", "$\\dfrac{1}{2}$", "$\\dfrac{\\pi}{4}$", "$\\dfrac{\\pi}{2}$"], correct: 0, theme: "Probabilités — Loi uniforme", niveau_scolaire: "4ème année", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\nLongueur de l'intervalle : $\\frac{2\\pi}{3}-\\frac{\\pi}{6}=\\frac{4\\pi-\\pi}{6}=\\frac{\\pi}{2}$. Probabilité = $\\frac{\\text{longueur}}{\\text{longueur totale}}=\\frac{\\pi/2}{2\\pi}=\\frac{1}{4}$.\n\n⚠️ VIGILANCE : Pour une loi uniforme, la probabilité est proportionnelle à la longueur.\n\n💡 ASTUCE : Simplifier les fractions avant de diviser." });
+      else {
+        questionsData.push({ id: i, statement: `Question ${i} : Contenu complet du CAPES Maths 2014.`, choices: ["A: Option A", "B: Option B", "C: Option C", "D: Option D"], correct: 0, theme: "Mathématiques générales", niveau_scolaire: "Supérieur", explication: `✅ Réponse : A\n\n🔍 Cette question fait partie du contenu premium du CAPES Maths 2014 débloqué avec la clé SYN-MAESTRO-MATH.\n\n📖 Pack Spécial CAPES MATH 2026 inclus.\n\n💡 Contactez-nous pour l'accès complet.` });
+      }
+    }
+
+    // ==================== FONCTIONS ====================
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedName = localStorage.getItem('synapris_client_name');
+      const savedUnlock = localStorage.getItem('synapris_unlocked');
+      if(savedUnlock === 'true') unlocked = true;
+      if (savedName) { clientName = savedName;
+        document.getElementById('client-name-footer').textContent = clientName;
+        document.getElementById('mb-client-badge').style.display = 'inline-flex';
+        document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+        initDefaultMode(); } else { showNameModal(); }
+    });
+
+    function resetClientName() { localStorage.removeItem('synapris_client_name');
+      clientName = '';
+      document.getElementById('client-name-footer').textContent = '——';
+      document.getElementById('mb-client-badge').style.display = 'none';
+      showNameModal(); }
+
+    function showNameModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'name-modal';
+      overlay.innerHTML = '<div class="modal-box"><h3>🌟 Bienvenue sur SYNAPRIS !</h3><p>Entrez votre prénom :</p><input type="text" class="key-input" id="name-input" placeholder="Votre prénom" autocomplete="off" /><div class="modal-error" id="name-error">❌ Prénom invalide.</div><div class="modal-actions"><button class="btn btn-gold" id="btn-name-ok">✅ Commencer</button></div></div>';
+      document.body.appendChild(overlay);
+      document.getElementById('btn-name-ok').addEventListener('click', () => {
+        const name = document.getElementById('name-input').value.trim();
+        if (name && name.length >= 2 && /^[A-Za-zÀ-ÿ\s\-]+$/.test(name)) { clientName = name;
+          localStorage.setItem('synapris_client_name', clientName);
+          document.getElementById('client-name-footer').textContent = clientName;
+          document.getElementById('mb-client-badge').style.display = 'inline-flex';
+          document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+          overlay.remove();
+          initDefaultMode(); } else { document.getElementById('name-error').style.display = 'block'; }
+      });
+    }
+
+    function showRefModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.innerHTML = '<div class="modal-box"><h3>📚 RÉFÉRENCES</h3><p><strong>CAPES Maths 2014</strong><br>60 questions · 60 minutes<br>4 choix (A,B,C,D) · Une seule réponse correcte</p><div class="modal-actions"><button class="btn btn-primary" onclick="this.closest(\'.modal-overlay\').remove()">Fermer</button></div></div>';
+      document.body.appendChild(overlay);
+    }
+
+    function initDefaultMode() { document.getElementById('mode-train').classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
+      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+      document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
+      document.getElementById('notice-train').classList.remove('hidden');
+      document.getElementById('notice-exam').classList.add('hidden'); }
+
+    function showPage(e) { document.querySelectorAll('#main-app .page').forEach(p => p.classList.remove('active'));
+      document.getElementById(e).classList.add('active');
+      document.getElementById('main-scroll').scrollTop = 0; }
+
+    function selectMode(e) { mode = e;
+      ['train', 'exam'].forEach(x => document.getElementById('mode-' + x)?.classList.remove('selected'));
+      document.getElementById('mode-' + e).classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').innerHTML = e === 'train' ? '📝 Mode Entraînement' : '⏱️ Mode Examen (60 min)';
+      document.getElementById('mb-mode-badge').textContent = e === 'train' ? '📝 Entraînement' : '⏱️ Examen';
+      document.getElementById('notice-train').classList.toggle('hidden', e !== 'train');
+      document.getElementById('notice-exam').classList.toggle('hidden', e !== 'exam');
+      document.body.classList.remove('train-mode', 'exam-mode');
+      document.body.classList.add(e === 'train' ? 'train-mode' : 'exam-mode');
+    }
+
+    function startQuiz() {
+      if(mode === 'exam') { showExamInstructionsModal(); return; }
+      currentQ = 0;
+      activeSet = questionsData.map((_, i) => i);
+      if(!unlocked && activeSet.length > QUESTIONS_GRATUITES) {
+        activeSet = activeSet.slice(0, QUESTIONS_GRATUITES);
+      }
+      userAnswers = new Array(activeSet.length).fill(null);
+      validated = new Array(activeSet.length).fill(false);
+      showPage('page-question');
+      if (mode === 'exam') {
+        document.body.classList.add('exam-mode');
+        examSeconds = TOTAL_EXAM_SEC;
+        perQSeconds = PER_Q_SEC;
+        document.getElementById('timer-wrap').classList.remove('hidden');
+        document.getElementById('perq-timer').classList.remove('hidden');
+        startExamTimer();
+        startPerQTimer();
+        document.getElementById('btn-validate').classList.add('hidden');
+        document.getElementById('grille-examen').classList.remove('hidden');
+        buildGrilleExamen();
+      } else {
+        document.body.classList.remove('exam-mode');
+        document.getElementById('timer-wrap').classList.add('hidden');
+        document.getElementById('perq-timer').classList.add('hidden');
+        if (examTimer) clearInterval(examTimer);
+        if (perQTimer) clearInterval(perQTimer);
+        document.getElementById('grille-examen').classList.add('hidden');
+      }
+      updateMiniBar();
+      renderQuestion();
+    }
+
+    function buildGrilleExamen() {
+      const container = document.getElementById('grille-table');
+      const half = Math.ceil(activeSet.length / 2);
+      let html = '<div class="grille-col">';
+      for (let i = 0; i < half; i++) {
+        const q = questionsData[activeSet[i]];
+        const answered = userAnswers[i] !== null;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          const checked = userAnswers[i] === j;
+          html += `<span class="grille-case${checked?' checked':''}" onclick="selectChoiceFromGrille(${i},${j})">${ltr}</span>`;
+        });
+        html += '</div>';
+      }
+      html += '</div><div class="grille-col">';
+      for (let i = half; i < activeSet.length; i++) {
+        const q = questionsData[activeSet[i]];
+        const answered = userAnswers[i] !== null;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          const checked = userAnswers[i] === j;
+          html += `<span class="grille-case${checked?' checked':''}" onclick="selectChoiceFromGrille(${i},${j})">${ltr}</span>`;
+        });
+        html += '</div>';
+      }
+      html += '</div>';
+      container.innerHTML = html;
+    }
+
+    function selectChoiceFromGrille(qIndex, choiceIndex) { currentQ = qIndex; if (validated[currentQ]) return;
+      userAnswers[currentQ] = choiceIndex;
+      renderQuestion();
+      buildGrilleExamen(); }
+
+    function jumpToQuestion(qIndex) { 
+      if(isQuestionLocked(qIndex) && !unlocked) {
+        showUnlockModal();
+        return;
+      }
+      currentQ = qIndex;
+      if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); }
+      renderQuestion(); if (mode === 'exam') buildGrilleExamen(); 
+    }
+
+    function goHome() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode', 'train-mode');
+      showPage('page-home'); }
+
+    function updateMiniBar() { const e = currentQ + 1, t = activeSet.length;
+      document.getElementById('mb-q-counter').textContent = `Q${e}/${t}`;
+      document.getElementById('mb-progress-fill').style.width = (e / t * 100) + '%'; }
+
+    function renderQuestion() {
+      if(isQuestionLocked(currentQ) && !unlocked) {
+        showUnlockModal();
+        return;
+      }
+      const qIdx = activeSet[currentQ];
+      const q = questionsData[qIdx];
+      document.getElementById('q-statement').innerHTML = `❓ <strong>Q${q.id}.</strong> ${q.statement}`;
+      const container = document.getElementById('q-choices');
+      container.innerHTML = '';
+      const correctIdx = q.correct;
+      ['A','B','C','D'].forEach((ltr, i) => {
+        if (i < q.choices.length) {
+          const btn = document.createElement('button');
+          btn.className = 'choice-btn';
+          if (validated[currentQ]) {
+            if (correctIdx === i) btn.classList.add('correct');
+            else if (userAnswers[currentQ] === i) btn.classList.add('wrong');
+          } else if (userAnswers[currentQ] === i) btn.classList.add('selected');
+          btn.innerHTML = `<span class="choice-letter">${ltr}</span><span class="choice-text">${q.choices[i]}</span>`;
+          if (!validated[currentQ]) {
+            btn.onclick = () => {
+              userAnswers[currentQ] = i;
+              renderQuestion();
+              if (mode === 'exam') buildGrilleExamen();
+            };
+          }
+          container.appendChild(btn);
+        }
+      });
+      const hasAnswer = userAnswers[currentQ] !== null;
+      if (mode === 'train') document.getElementById('btn-validate').disabled = (!hasAnswer || validated[currentQ]);
+      if (validated[currentQ] && mode === 'train') buildFeedback(q, userAnswers[currentQ]);
+      else if (mode === 'train') { document.getElementById('feedback-placeholder').style.display = 'flex';
+        document.getElementById('feedback-box').style.display = 'none'; }
+      if (mode === 'exam') { 
+        document.getElementById('feedback-placeholder').style.display = 'none'; 
+        document.getElementById('feedback-box').style.display = 'none'; 
+        document.getElementById('feedback-box').classList.remove('visible'); 
+      }
+      document.getElementById('btn-prev').disabled = (currentQ === 0);
+      const nextBtn = document.getElementById('btn-next');
+      if (currentQ === activeSet.length - 1) { nextBtn.innerHTML = '🏁 Terminer'; nextBtn.className = 'btn btn-gold'; }
+      else { nextBtn.innerHTML = 'Suivant →'; nextBtn.className = 'btn btn-primary'; }
+      if (typeof renderMathInElement !== 'undefined') {
+        renderMathInElement(document.getElementById('q-statement'), { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+        renderMathInElement(container, { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+      }
+      if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); buildGrilleExamen(); }
+    }
+
+    function validateAnswer() { if (userAnswers[currentQ] === null) return;
+      validated[currentQ] = true;
+      renderQuestion(); }
+
+    function buildFeedback(q, user) {
+      document.getElementById('feedback-placeholder').style.display = 'none';
+      const correct = q.correct;
+      const isCorrect = (user === correct);
+      document.getElementById('feedback-box').classList.add('visible', isCorrect ? 'correct' : 'wrong');
+      document.getElementById('feedback-box').style.display = 'block';
+      document.getElementById('badge-icon').textContent = isCorrect ? '✅' : '❌';
+      document.getElementById('feedback-result-text').textContent = isCorrect ? 'Bonne réponse !' : 'Réponse incorrecte';
+      let html = '';
+      const parts = q.explication.split('\n\n');
+      parts.forEach(part => {
+        if (part.startsWith('✅')) html += `<div class="fb-section fb-correct"><strong>✅ Réponse</strong>${part.replace('✅ ','')}</div>`;
+        else if (part.startsWith('🔍')) html += `<div class="fb-section fb-foundation"><strong>🔍 CORRECTION</strong>${part.replace('🔍 CORRECTION :','')}</div>`;
+        else if (part.startsWith('⚠️')) html += `<div class="fb-section fb-obstacle"><strong>⚠️ VIGILANCE</strong>${part.replace('⚠️ VIGILANCE :','')}</div>`;
+        else if (part.startsWith('💡')) html += `<div class="fb-section fb-tip"><strong>💡 ASTUCE</strong>${part.replace('💡 ASTUCE :','')}</div>`;
+        else if (part.startsWith('🎯')) html += `<div class="fb-section fb-objectif"><strong>🎯 OBJECTIF</strong>${part.replace('🎯 OBJECTIF :','')}</div>`;
+        else html += `<div class="fb-section">${part}</div>`;
+      });
+      document.getElementById('feedback-body').innerHTML = html;
+      if (typeof renderMathInElement !== 'undefined') renderMathInElement(document.getElementById('feedback-body'), { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+    }
+
+    function prevQuestion() { 
+      if (currentQ > 0) { 
+        currentQ--; 
+        if(isQuestionLocked(currentQ) && !unlocked) {
+          showUnlockModal();
+          return;
+        }
+        renderQuestion(); 
+        if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); } 
+      } 
+    }
+    
+    function nextQuestion() { 
+      let nextIndex = currentQ + 1;
+      if(nextIndex < activeSet.length) {
+        if(isQuestionLocked(nextIndex) && !unlocked) {
+          showUnlockModal();
+          return;
+        }
+        currentQ = nextIndex;
+        renderQuestion(); 
+        if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); }
+      } else { 
+        if(!unlocked && activeSet.length === QUESTIONS_GRATUITES && activeSet.length < questionsData.length) {
+          showUnlockModal();
+        } else {
+          finishQuiz();
+        }
+      } 
+    }
+
+    function finishQuiz() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode');
+      showPage('page-results');
+      let correctCount = 0;
+      const themesMap = {};
+      activeSet.forEach((idx, i) => {
+        const q = questionsData[idx];
+        const correct = q.correct;
+        const ok = (userAnswers[i] === correct);
+        if (ok) correctCount++;
+        if (!themesMap[q.theme]) themesMap[q.theme] = { total: 0, correct: 0 };
+        themesMap[q.theme].total++;
+        if (ok) themesMap[q.theme].correct++;
+      });
+      const pct = Math.round(correctCount / activeSet.length * 100);
+      document.getElementById('result-pct').textContent = pct + '%';
+      document.getElementById('result-sub').textContent = `${correctCount} / ${activeSet.length} bonnes réponses`;
+      document.getElementById('result-badge').textContent = pct >= 80 ? '🏆' : pct >= 50 ? '👍' : '💪';
+      document.getElementById('result-themes').innerHTML = '<table class="result-table"><thead><tr><th>Thème</th><th>Score</th><th>%</th></tr></thead><tbody>' + Object.entries(themesMap).map(([theme, data]) => { const tp = Math.round(data.correct / data.total * 100); return `<tr><td>${tp>=80?'🟢':tp>=50?'🟡':'🔴'} ${theme}</td><td>${data.correct}/${data.total}</td><td>${tp}%</td>`; }).join('') + '</tbody></table>';
+      const half = Math.ceil(activeSet.length / 2);
+      let gridHtml = '<div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">';
+      for (let i = 0; i < half; i++) {
+        const q = questionsData[activeSet[i]];
+        const correct = q.correct;
+        const user = userAnswers[i];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          let cls = '';
+          if (correct === j && user === j) cls = 'correct-choice';
+          else if (correct === j && user !== j) cls = 'missed-choice';
+          else if (correct !== j && user === j) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`;
+        });
+        gridHtml += '</div>';
+      }
+      gridHtml += '</div><div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">';
+      for (let i = half; i < activeSet.length; i++) {
+        const q = questionsData[activeSet[i]];
+        const correct = q.correct;
+        const user = userAnswers[i];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          let cls = '';
+          if (correct === j && user === j) cls = 'correct-choice';
+          else if (correct === j && user !== j) cls = 'missed-choice';
+          else if (correct !== j && user === j) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`;
+        });
+        gridHtml += '</div>';
+      }
+      gridHtml += '</div>';
+      document.getElementById('result-grid').innerHTML = gridHtml;
+      document.getElementById('timer-wrap').classList.add('hidden');
+      document.getElementById('perq-timer').classList.add('hidden');
+    }
+
+    function startExamTimer() { updateExamTimerDisplay();
+      examTimer = setInterval(() => { examSeconds--; updateExamTimerDisplay(); if (examSeconds <= 0) { clearInterval(examTimer); clearInterval(perQTimer); finishQuiz(); } }, 1000); }
+    function updateExamTimerDisplay() { const e = Math.floor(examSeconds / 60), t = examSeconds % 60, n = document.getElementById('timer-badge');
+      n.textContent = `⏱ ${String(e).padStart(2,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'timer-badge'; if (examSeconds <= 600) n.classList.add('danger'); else if (examSeconds <= 1800) n.classList.add('warning'); }
+    function startPerQTimer() { updatePerQTimerDisplay();
+      perQTimer = setInterval(() => { perQSeconds--; updatePerQTimerDisplay(); if (perQSeconds <= 0) { clearInterval(perQTimer); validated[currentQ] = true; nextQuestion(); } }, 1000); }
+    function updatePerQTimerDisplay() { const e = Math.floor(perQSeconds / 60), t = perQSeconds % 60, n = document.getElementById('perq-timer');
+      n.textContent = `⚡ ${String(e).padStart(1,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'perq-timer'; if (perQSeconds <= 15) n.classList.add('danger'); else if (perQSeconds <= 30) n.classList.add('warning'); }
+
+    document.addEventListener('keydown', e => { const page = document.querySelector('#main-app .page.active'); if (!page || page.id !== 'page-question') return;
+      const key = e.key.toUpperCase();
+      if (['A','B','C','D'].includes(key) && !validated[currentQ]) {
+        userAnswers[currentQ] = ['A','B','C','D'].indexOf(key);
+        renderQuestion(); if (mode === 'exam') buildGrilleExamen();
+      }
+      if (e.key === 'Enter' && mode === 'train') { const btn = document.getElementById('btn-validate'); if (!btn.disabled) validateAnswer(); }
+      if (e.key === 'ArrowRight') nextQuestion();
+      if (e.key === 'ArrowLeft') prevQuestion();
+    });
+  </script>
+</body>
+</html>

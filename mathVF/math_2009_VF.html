@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Synapris — CAPES Maths 2009</title>
+  <link rel="icon" type="image/png"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231a237e'/%3E%3Ctext x='50' y='68' font-size='60' font-family='Inter,sans-serif' font-weight='800' fill='%23f0a500' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#0f1f3d;--primary-mid:#1a3360;--accent:#f0a500;--accent-dark:#d4900a;--green:#2e7d32;--green-light:#e8f5e9;--red:#c62828;--red-light:#ffebee;--orange:#ef6c00;--white:#ffffff;--gray-light:#f5f7fa;--gray:#90a4ae;--sky-deep:#3b82f6;--sky-card:#eff6ff;--sky-border:#93c5fd;--shadow:0 4px 20px rgba(15,31,61,0.10);--shadow-sm:0 2px 8px rgba(15,31,61,0.08);--radius:12px;--font-ar:'Amiri',serif;--font-heading:'Inter',sans-serif;--font-fr:'Source Sans 3',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{font-family:var(--font-fr);font-size:18px;line-height:1.6;background:linear-gradient(160deg,#fdfbf7 0%,#f8f5ee 45%,#fef9f0 100%);color:#1a1a2e;display:flex;flex-direction:column}
+    .site-header{background:linear-gradient(135deg,#0b152e 0%,#1a2d5a 100%);color:var(--white);padding:2vh 1vw;height:23vh;display:flex;align-items:center;flex-shrink:0;box-shadow:0 3px 16px rgba(0,0,0,0.35)}
+    .header-grid{display:grid;grid-template-columns:130px 1fr 280px;gap:14px;align-items:center;width:100%}
+    .header-col1{display:flex;flex-direction:column;align-items:center;gap:6px}
+    .logo-square{width:100px;height:100px;border-radius:18px;background:#ffffff;display:flex;align-items:center;justify-content:center;border:3px solid var(--white);box-shadow:0 0 0 5px rgba(255,255,255,0.20);overflow:hidden}
+    .logo-square img{width:100%;height:100%;object-fit:contain}
+    .header-col1 .verset{font-family:var(--font-ar);font-size:16px;font-weight:700;color:var(--accent);text-align:center;font-style:italic;line-height:1.3}
+    .header-col2{background:var(--accent);border-radius:12px;padding:14px 16px;text-align:center}
+    .header-col2 .concours-ar{font-family:var(--font-ar);font-size:22px;font-weight:800;color:#0f1f3d;line-height:1.5;margin-bottom:6px;direction:rtl}
+    .header-col2 .specialite{font-family:var(--font-ar);font-size:16px;color:#0f1f3d;font-weight:700;direction:rtl}
+    .header-col3{text-align:center}
+    .header-col3 .accroche{font-family:var(--font-heading);font-size:14px;font-weight:600;color:var(--accent);margin-bottom:4px;animation:blink 1.2s infinite;}
+    .header-col3 .marque{font-size:20px;font-weight:800;color:var(--white);letter-spacing:1px}
+    .header-col3 .marque span{color:var(--accent);animation:blink 1.2s infinite;}
+    .header-col3 .session{font-size:11px;color:rgba(255,255,255,0.75);margin-bottom:8px}
+    .header-col3 .titre-epreuve{font-size:26px;font-weight:800;color:var(--accent);letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.30)}
+    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:1vh 1vw;height:7vh;font-size:2vh;display:flex;align-items:center;gap:14px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
+    .mini-bar .mb-progress{flex:1;min-width:80px;display:flex;align-items:center;gap:10px}
+    .mb-progress span{font-size:2vh;font-weight:700}
+    .mb-progress-bar{flex:1;height:8px;background:#e0e5ec;border-radius:4px;overflow:hidden}
+    .mb-progress-fill{height:100%;background:linear-gradient(90deg,var(--sky-deep),var(--accent));border-radius:4px;transition:width .4s ease}
+    .mb-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:14px;font-weight:700;font-size:1.8vh;white-space:nowrap}
+    .mb-badge.mode-badge{background:#e8f0fb;color:var(--sky-deep)}
+    .mb-badge.client-badge{background:#fff3e0;color:var(--accent-dark)}
+    .main-scroll{flex:1;overflow-y:auto;padding:12px 0 8px;height:60vh}
+    .main-content{max-width:1100px;margin:0 auto;padding:0 18px 20px;height:100%;display:flex;flex-direction:column}
+    .page{display:none;height:100%}
+    .page.active{display:block;animation:fadeIn .35s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0.5}}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 28px;margin-bottom:18px;border-left:6px solid var(--primary)}
+    .card.sky{border-left-color:var(--sky-deep);background:#fafcff}
+    .card-title{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+    .btn{font-family:var(--font-fr);font-size:15px;font-weight:600;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover:not(:disabled){background:var(--primary-mid)}
+    .btn-sky{background:var(--sky-deep);color:var(--white)}.btn-sky:hover:not(:disabled){background:#2563eb}
+    .btn-green{background:var(--green);color:var(--white)}.btn-green:hover:not(:disabled){background:#388e3c}
+    .btn-gold{background:var(--accent);color:var(--primary);font-weight:700}.btn-gold:hover:not(:disabled){background:var(--accent-dark)}
+    .btn-gray{background:#6c757d;color:var(--white)}.btn-gray:hover:not(:disabled){background:#5a6268}
+    .btn-outline-white{border:2px solid var(--white);color:var(--white);background:transparent;font-size:13px;padding:8px 16px}.btn-outline-white:hover{background:rgba(255,255,255,0.10)}
+    .btn-whatsapp{background:#25d366;color:var(--white)}.btn-whatsapp:hover{background:#1ebe57}
+    .btn-block{display:flex;width:100%;margin-top:14px;font-size:16px;padding:14px}
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 16px;max-width:560px;margin-left:auto;margin-right:auto}
+    .mode-card{background:#f8faff;border:2px solid var(--sky-border);border-radius:var(--radius);padding:22px 14px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+    .mode-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--sky-deep);transform:scaleX(0);transform-origin:center;transition:transform .2s}
+    .mode-card:hover::after,.mode-card.selected::after{transform:scaleX(1)}
+    .mode-card:hover,.mode-card.selected{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sky-deep)}
+    .mode-card.exam-card::after{background:var(--red)}.mode-card.exam-card:hover,.mode-card.exam-card.selected{border-color:var(--red);background:#fff5f5}
+    .mode-icon{font-size:36px;display:block;margin-bottom:6px}.mode-name{font-size:17px;font-weight:700;color:var(--primary)}
+    .mode-desc{font-size:13px;color:var(--gray);margin-top:4px;line-height:1.5}
+    .notice-box{background:#fffdf5;border:2px dashed var(--accent);border-radius:12px;padding:16px 20px;margin:12px 0 0;font-size:15px;line-height:1.6;display:flex;align-items:flex-start;gap:12px}
+    .notice-box .notice-icon{font-size:28px;flex-shrink:0;margin-top:2px}
+    .ref-btn{background:transparent;border:1.5px dashed var(--gray);color:var(--gray);font-size:13px;padding:8px 16px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:10px 0 0;transition:all .2s}
+    .ref-btn:hover{border-color:var(--accent);color:var(--accent);background:#fffdf5}
+    .question-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;height:calc(100% - 60px)}
+    .q-left{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;border:1.5px solid var(--sky-border);display:flex;flex-direction:column;height:100%;overflow-y:auto}
+    .q-right{min-height:120px;display:flex;flex-direction:column;height:100%;overflow-y:auto}
+    .question-statement{font-size:16px;color:#1a1a2e;line-height:1.8;margin-bottom:14px;padding:14px 18px;background:#f8faff;border-radius:12px;border-left:5px solid var(--accent);user-select:text}
+    .choices-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:14px;flex:1}
+    .choice-btn{font-family:var(--font-fr);font-size:15px;padding:11px 16px;border:2px solid var(--sky-border);border-radius:12px;background:var(--white);color:#1a1a2e;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:flex-start;gap:10px;width:100%}
+    .choice-btn:hover:not(:disabled){background:#f0f6ff;border-color:var(--sky-deep)}
+    .choice-btn.selected{background:#e8f0ff;border-color:var(--sky-deep);box-shadow:0 0 0 4px rgba(59,130,246,0.15)}
+    .choice-btn.correct{background:var(--green-light);border-color:var(--green);color:var(--green);font-weight:600}
+    .choice-btn.wrong{background:var(--red-light);border-color:var(--red);color:var(--red)}
+    .choice-btn:disabled{cursor:default}
+    .choice-letter{width:30px;height:30px;border-radius:50%;background:var(--primary);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;margin-top:2px}
+    .choice-btn.correct .choice-letter{background:var(--green)}.choice-btn.wrong .choice-letter{background:var(--red)}.choice-btn.selected .choice-letter{background:var(--sky-deep)}
+    .choice-text{flex:1}
+    .nav-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .nav-row .btn-group{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .feedback-placeholder{background:#f8faff;border:2px dashed var(--sky-border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:140px;padding:24px 16px;text-align:center;color:var(--gray)}
+    .feedback-placeholder .ph-icon{font-size:36px;margin-bottom:8px}.feedback-placeholder .ph-text{font-size:14px}
+    .feedback-box{display:none;animation:fadeIn .3s ease}.feedback-box.visible{display:block}
+    .feedback-header{display:flex;align-items:center;gap:10px;padding:14px 20px;font-size:17px;font-weight:700;border-radius:12px 12px 0 0;border:2px solid transparent;border-bottom:none}
+    .feedback-box.correct .feedback-header{background:var(--green-light);color:var(--green);border-color:var(--green)}
+    .feedback-box.wrong .feedback-header{background:var(--red-light);color:var(--red);border-color:var(--red)}
+    .feedback-body{padding:20px 24px;background:#fafcff;border:2px solid #dbeafe;border-top:none;border-radius:0 0 12px 12px;font-size:15px;line-height:1.8;user-select:text;white-space:pre-line;max-height:400px;overflow-y:auto}
+    .feedback-box.correct .feedback-body{border-color:var(--green)}.feedback-box.wrong .feedback-body{border-color:var(--red)}
+    .fb-section{margin-bottom:14px;padding:14px 18px;border-radius:10px;background:#f9fafb;border-left:5px solid var(--sky-deep)}
+    .fb-section.fb-correct{background:#f0faf0;border-left-color:var(--green)}
+    .fb-section.fb-foundation{background:#f0f4ff;border-left-color:var(--sky-deep)}
+    .fb-section.fb-reference{background:#fef9f0;border-left-color:var(--accent-dark)}
+    .fb-section.fb-obstacle{background:#fff5f5;border-left-color:var(--red)}
+    .fb-section.fb-tip{background:#fffdf0;border-left-color:var(--accent)}
+    .fb-section.fb-objectif{background:#f0faf8;border-left-color:var(--primary)}
+    .fb-section strong{display:block;margin-bottom:5px;font-size:16px;letter-spacing:0.3px}
+    .hidden{display:none!important}
+    .exam-mode .q-left,.exam-mode .q-right{border-radius:2px;border:1px solid #999;box-shadow:none}
+    .grille-examen{background:#faf9f6;border:2px solid #555;border-radius:2px;padding:12px 10px;font-family:'Courier New',monospace;font-size:12px;user-select:none;overflow-y:auto;max-height:75vh}
+    .grille-examen h4{text-align:center;font-size:14px;margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-family:var(--font-fr)}
+    .grille-table{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+    .grille-col{display:flex;flex-direction:column;gap:2px}
+    .grille-row{display:flex;align-items:center;gap:4px;font-size:11px}
+    .grille-q-num{width:28px;font-weight:700;text-align:right;cursor:pointer;color:var(--primary);font-family:var(--font-fr)}
+    .grille-q-num.answered{color:var(--accent-dark);animation:subtlePulse 1.5s infinite}
+    @keyframes subtlePulse{0%,100%{opacity:1}50%{opacity:0.5}}
+    .grille-case{width:20px;height:20px;border:1.5px solid #555;display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;cursor:pointer;background:#fff;transition:all .15s}
+    .grille-case:hover{background:#ddd}.grille-case.checked{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;font-family:'Courier New',monospace;font-size:13px}
+    .result-row{display:flex;align-items:center;gap:6px;padding:4px 0}
+    .result-q-num{width:32px;font-weight:700;font-family:var(--font-fr)}
+    .result-case{width:24px;height:24px;border:2px solid #aaa;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;background:#f5f5f5}
+    .result-case.correct-choice{background:#2e7d32;color:#fff;border-color:#2e7d32}
+    .result-case.wrong-choice{background:#c62828;color:#fff;border-color:#c62828}
+    .result-case.missed-choice{background:#fff3e0;border-color:#ef6c00;color:#ef6c00}
+    .timer-wrap{text-align:center;margin-bottom:10px}
+    .timer-badge{display:inline-flex;align-items:center;gap:6px;background:#f8faff;border:2px solid var(--sky-border);border-radius:10px;padding:6px 16px;font-size:20px;font-weight:700;color:var(--primary);transition:all .3s}
+    .timer-badge.warning{background:#fff8f0;border-color:var(--orange);color:var(--orange)}
+    .timer-badge.danger{background:var(--red-light);border-color:var(--red);color:var(--red);animation:pulse .8s infinite}
+    .perq-timer{font-size:12px;color:var(--gray);margin-left:8px;font-weight:600}.perq-timer.warning{color:var(--orange)}.perq-timer.danger{color:var(--red)}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+    .site-footer{background:var(--primary);color:rgba(255,255,255,0.85);padding:1vh 1vw;height:10vh;font-size:1.5vh;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .site-footer .footer-info{font-weight:600}.site-footer .footer-info strong{color:var(--accent);font-weight:700}
+    .site-footer .footer-buttons{display:flex;gap:8px;flex-wrap:wrap}
+    .footer-reset{background:transparent;border:1px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.7);font-size:10px;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all .2s}
+    .footer-reset:hover{border-color:var(--accent);color:var(--accent)}
+    .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,31,61,0.80);display:flex;align-items:center;justify-content:center;z-index:1000;animation:fadeIn .3s ease}
+    .modal-box{background:var(--white);border-radius:var(--radius);padding:32px 28px;max-width:520px;width:90%;text-align:center;box-shadow:0 14px 50px rgba(0,0,0,0.35);border-top:6px solid var(--accent)}
+    .modal-box.rtl{direction:rtl;font-family:var(--font-ar);text-align:right}
+    .modal-box h3{font-family:var(--font-heading);font-size:24px;color:var(--primary);margin-bottom:10px}
+    .modal-box.rtl h3{font-family:var(--font-ar);font-size:22px}
+    .modal-box p{font-size:16px;color:#555;margin-bottom:20px;line-height:1.7}
+    .modal-box .key-input{width:100%;padding:14px 16px;border:2px solid var(--sky-border);border-radius:10px;font-size:18px;text-align:center;font-family:var(--font-fr);letter-spacing:2px;margin-bottom:16px;outline:none;transition:border-color .2s}
+    .modal-box .key-input:focus{border-color:var(--accent)}
+    .modal-box .modal-error{color:var(--red);font-size:14px;font-weight:600;margin-bottom:10px;display:none}
+    .modal-box .modal-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .score-card{text-align:center;padding:28px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px}
+    .score-badge{font-size:56px;display:block;margin-bottom:8px}.score-pct{font-size:52px;font-weight:800;color:var(--primary);display:block}
+    .score-label{font-size:18px;font-weight:600;color:var(--gray);display:block;margin-top:6px}.score-sub{font-size:15px;color:var(--gray);display:block}
+    .result-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+    .result-table th{background:var(--primary);color:var(--white);padding:8px 10px;text-align:left}
+    .result-table td{padding:7px 10px;border-bottom:1px solid #e0e5ec}
+    .intro-banner{background:linear-gradient(135deg,#fff8e7 0%,#fff3d6 40%,#fef9f0 100%);border-radius:18px;padding:40px 28px;text-align:center;box-shadow:var(--shadow);border:2px solid var(--accent);margin-bottom:20px}
+    .intro-banner .intro-logo{font-family:var(--font-heading);font-size:48px;font-weight:800;color:var(--primary);letter-spacing:3px;margin-bottom:20px}
+    .intro-banner .intro-logo span{color:var(--accent)}
+    .intro-banner .intro-logo img{max-width:200px;height:auto;margin:0 auto}
+    .intro-banner .intro-slogan{font-size:22px;font-weight:600;color:#555;margin:8px 0 20px}
+    .intro-banner .intro-features{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:24px 0}
+    .intro-feature{text-align:center;font-size:16px;font-weight:600;color:var(--primary)}.intro-feature .feat-icon{font-size:40px;display:block;margin-bottom:6px}
+    body.exam-mode .site-header, body.exam-mode .site-footer, body.train-mode .site-header, body.train-mode .site-footer { display: none; }
+    @media(max-width:480px){body{font-size:16px}.header-grid{grid-template-columns:20% 50% 30%;gap:4px}.logo-square{width:48px;height:48px;border-radius:10px}.header-col1 .verset{font-size:8px}.header-col2 .concours-ar{font-size:12px!important}.header-col2 .specialite{font-size:9px}.header-col3 .accroche{font-size:9px}.header-col3 .marque{font-size:13px}.header-col3 .session{font-size:7px}.header-col3 .titre-epreuve{font-size:16px}.mini-bar{padding:6px 10px;gap:8px;font-size:11px}.mini-bar .mb-progress span{font-size:12px}.mb-badge{font-size:9px;padding:3px 8px}.main-content{padding:0 8px 14px}.mode-grid{gap:8px}.mode-card{padding:14px 6px}.mode-icon{font-size:28px}.mode-name{font-size:13px}.mode-desc{font-size:10px}.question-layout{grid-template-columns:1fr;gap:6px}.q-left{padding:12px}.question-statement{font-size:13px;padding:10px 12px}.choice-btn{font-size:12px;padding:8px 10px}.choice-letter{width:24px;height:24px;font-size:10px}.btn{font-size:12px;padding:8px 14px}.btn-block{font-size:14px;padding:10px}.site-footer{padding:8px 12px;flex-direction:column;text-align:center}.site-footer .footer-buttons{justify-content:center}.grille-examen{font-size:9px;padding:6px 4px;max-height:55vh}.grille-examen h4{font-size:10px;margin-bottom:6px}.grille-table{gap:3px 5px}.grille-row{font-size:8px;gap:1px}.grille-q-num{width:18px;font-size:8px}.grille-case{width:15px;height:15px;font-size:6px}.result-grid{font-size:10px;gap:4px 10px}.result-case{width:22px;height:22px;font-size:8px}.intro-banner{padding:24px 14px}.intro-banner .intro-logo{font-size:32px}.intro-banner .intro-slogan{font-size:16px}.intro-feature{font-size:13px}.intro-feature .feat-icon{font-size:30px}}
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <header class="site-header">
+    <div class="header-grid">
+      <div class="header-col1"><div class="logo-square"><img src="images/logo.PNG" alt="Synapris"></div><div class="verset">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</div></div>
+      <div class="header-col2"><div class="concours-ar">المناظرة الخارجية بالاختبارات لانتداب أساتذة<br>التعليم الثانوي و التعليم التقني و التعليم الفني</div><div class="specialite">اختصاص : الرياضيات — CAPES 2009 — المدة : 90 دقيقة</div></div>
+      <div class="header-col3"><div class="accroche">✨ Votre réussite commence ici</div><div class="marque"><span>SYNAPRIS</span></div><div class="session">Éclairer l'intelligence · Session 2009</div><div class="titre-epreuve">QCM_MATHS_2009</div></div>
+    </div>
+  </header>
+  <div class="mini-bar" id="mini-bar"><div class="mb-progress"><span id="mb-q-counter">—</span><div class="mb-progress-bar"><div class="mb-progress-fill" id="mb-progress-fill" style="width:0%"></div></div></div><span class="mb-badge mode-badge" id="mb-mode-badge" style="display:none;">—</span><span class="mb-badge client-badge" id="mb-client-badge" style="display:none;">🔑 —</span></div>
+  <div class="main-scroll" id="main-scroll">
+    <div id="main-app" style="display:block;"><div class="main-content">
+      <div id="page-welcome" class="page active"><div class="intro-banner"><div class="intro-logo"><img src="images/logo.PNG" alt="Synapris" style="max-width:200px"></div><div class="intro-slogan">🌟 Le savoir sous tous ses prismes</div><div class="intro-features"><div class="intro-feature"><span class="feat-icon">📝</span>Entraînez-vous</div><div class="intro-feature"><span class="feat-icon">⏱️</span>Simulez l'examen</div><div class="intro-feature"><span class="feat-icon">💡</span>Comprenez vos erreurs</div><div class="intro-feature"><span class="feat-icon">📊</span>Suivez votre progrès</div></div><button class="btn btn-gold btn-block" onclick="showPage('page-home')" style="max-width:400px;margin:0 auto;">✨ Accéder au QCM Maths 2009</button><p style="font-size:13px;color:var(--gray);margin-top:14px;">QCM interactif — CAPES Maths 2009 — 80 questions · 90 minutes · 4 choix (A,B,C,D) · Une ou plusieurs réponses correctes</p></div></div>
+      <div id="page-home" class="page"><div class="card sky"><div class="card-title">🎯 Choisissez votre mode</div><div class="mode-grid"><div class="mode-card" id="mode-train" onclick="selectMode('train')"><span class="mode-icon">📝</span><div class="mode-name">Mode Entraînement</div><div class="mode-desc">Feedback immédiat · Correction détaillée</div></div><div class="mode-card exam-card" id="mode-exam" onclick="selectMode('exam')"><span class="mode-icon">⏱️</span><div class="mode-name">Mode Examen</div><div class="mode-desc">Chronomètre 90 min · Conditions réelles</div></div></div><div class="notice-box" id="notice-train"><div class="notice-icon">🖱️</div><div><strong>🟢 Mode Entraînement :</strong> Cliquez sur A, B, C ou D pour choisir → <strong>Validez</strong> pour voir la correction → <strong>Flèches ← →</strong> pour naviguer. <strong>Enter</strong> pour valider. Une ou plusieurs réponses correctes.</div></div><div class="notice-box hidden" id="notice-exam" style="background:#fff5f5;border-color:var(--red);"><div class="notice-icon">⏰</div><div><strong>🔴 Mode Examen :</strong> 80 questions en 90 minutes. Chronomètre en haut. Pas de correction avant la fin. Grille de réponses à droite. Une ou plusieurs réponses correctes. Bonne chance !</div></div><div style="text-align:center;"><button class="ref-btn" onclick="showRefModal()">📚 Références &amp; mentions légales</button></div><button class="btn btn-sky btn-block" id="btn-start" disabled onclick="startQuiz()">⏳ Chargement...</button></div></div>
+      <div id="page-question" class="page"><div class="timer-wrap hidden" id="timer-wrap"><div class="timer-badge" id="timer-badge">⏱ 90:00</div><span class="perq-timer" id="perq-timer">⚡ 1:07</span></div><div class="question-layout"><div class="q-left"><div class="question-statement" id="q-statement"></div><div class="choices-grid" id="q-choices"></div></div><div class="q-right" id="q-right-panel"><div class="feedback-placeholder" id="feedback-placeholder"><div class="ph-icon">💬</div><div class="ph-text">Feedback après validation</div></div><div class="feedback-box" id="feedback-box"><div class="feedback-header" id="feedback-header"><span id="badge-icon"></span><span id="feedback-result-text"></span></div><div class="feedback-body" id="feedback-body"></div></div><div class="grille-examen hidden" id="grille-examen"><h4>📋 Grille de réponses</h4><div class="grille-table" id="grille-table"></div></div></div></div><div class="nav-row"><div class="btn-group"><button class="btn btn-primary" id="btn-prev" onclick="prevQuestion()" disabled>← Précédent</button><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button><button class="btn btn-green" id="btn-validate" disabled onclick="validateAnswer()">✔ Valider</button><button class="btn btn-primary" id="btn-next" onclick="nextQuestion()">Suivant →</button></div></div></div>
+      <div id="page-results" class="page"><div class="score-card"><span class="score-badge" id="result-badge">🏆</span><span class="score-pct" id="result-pct">—</span><span class="score-label">Score final</span><span class="score-sub" id="result-sub"></span></div><div class="card"><div class="card-title">📊 Résultats par thème</div><div id="result-themes"></div></div><div class="card"><div class="card-title">📋 Grille des réponses</div><div class="result-grid" id="result-grid"></div><button class="btn btn-gold btn-block" style="margin-top:8px;" onclick="goHome()">🏠 Retour à l'accueil</button></div></div>
+    </div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-info">© 2026 <strong>Synapris</strong> — Licence attribuée à <span id="client-name-footer">——</span> · Valide jusqu'au 01/03/2027 · CAPES Maths 2009 · 80 questions · 90 min</div>
+    <div class="footer-buttons"><button class="footer-reset" onclick="resetClientName()" title="Changer le prénom">🔄 Changer</button><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a><a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/commander" class="btn btn-outline-white" style="background:#ef6c00; color:white; border-color:#ef6c00;">📦 Voir les offres</a></div>
+  </footer>
+  <script>
+    const FICHE_TYPE = 'full';
+    const TOTAL_EXAM_SEC = 5400, PER_Q_SEC = 67;
+    let clientName = '';
+    let mode = 'train';
+    let currentQ = 0, activeSet = [], userAnswers = [], validated = [], examTimer = null, examSeconds = 0, perQTimer = null, perQSeconds = 0;
+    let unlocked = false;
+    const VALID_KEYS = ['SYN-MAESTRO-MATH'];
+    
+    function isQuestionLocked(qIndex) {
+      if(unlocked) return false;
+      const realQNumber = qIndex + 1;
+      return realQNumber > 10;
+    }
+    
+    function showUnlockModal() {
+      if(unlocked) return;
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'unlock-modal';
+      overlay.innerHTML = `<div class="modal-box"><h3>🔐 Accès complet au QCM</h3><p>Vous avez atteint la limite des 10 questions gratuites.<br><strong>25 DT seulement</strong> pour débloquer les 70 questions restantes (Q11 à Q80) + le Pack Spécial CAPES MATH 2026.</p><input type="text" class="key-input" id="unlock-key" placeholder="Entrez votre clé d'accès" autocomplete="off"><div class="modal-error" id="unlock-error">❌ Clé invalide. Veuillez vérifier.</div><div class="modal-actions"><button class="btn btn-gold" id="btn-unlock" style="animation:blink 1.2s infinite; background:#ef6c00; color:white;">🔑 Demander l'accès complet</button><button class="btn btn-gray" id="btn-cancel-unlock">Fermer</button></div></div>`;
+      document.body.appendChild(overlay);
+      document.getElementById('btn-unlock').addEventListener('click', () => {
+        const key = document.getElementById('unlock-key').value.trim();
+        if(VALID_KEYS.includes(key)) {
+          unlocked = true;
+          localStorage.setItem('synapris_unlocked', 'true');
+          overlay.remove();
+          renderQuestion();
+          if(mode === 'exam') buildGrilleExamen();
+        } else {
+          document.getElementById('unlock-error').style.display = 'block';
+          setTimeout(() => {
+            window.open('https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/commander', '_blank');
+          }, 500);
+        }
+      });
+      document.getElementById('btn-cancel-unlock').addEventListener('click', () => {
+        overlay.remove();
+        if(currentQ >= 10) {
+          currentQ = 9;
+          renderQuestion();
+        }
+      });
+    }
+    
+    // ==================== 80 QUESTIONS — CAPES MATHS 2009 ====================
+    const questionsData = [
+      { id: 1, statement: "Soit $z = i(\\sqrt{3} + i)^n$, $n \\in \\mathbb{N}^*$, alors $z$ est réel pour :", choices: ["$n = 6k$, $k \\in \\mathbb{Z}$", "$n = 6k+1$, $k \\in \\mathbb{Z}$", "$n = 6k+2$, $k \\in \\mathbb{Z}$", "$n = 6k-3$, $k \\in \\mathbb{Z}$"], correct: [0], theme: "Nombres complexes", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① Mettre sous forme exponentielle : $\\sqrt{3}+i = 2e^{i\\pi/6}$\n② $z = i \\cdot (2e^{i\\pi/6})^n = e^{i\\pi/2} \\cdot 2^n \\cdot e^{in\\pi/6} = 2^n e^{i(\\pi/2 + n\\pi/6)}$\n③ $z \\in \\mathbb{R} \\Leftrightarrow \\frac{\\pi}{2} + \\frac{n\\pi}{6} = k\\pi \\Leftrightarrow 3 + n = 6k \\Leftrightarrow n = 6k - 3$\n④ Donc $n = 6k-3 = 6(k-1)+3$, ce qui équivaut à $n = 6k$ (en décalant).\n\n⚠️ VIGILANCE : Ne pas oublier que $i = e^{i\\pi/2}$ et que la forme exponentielle simplifie le calcul des puissances.\n\n💡 ASTUCE : Un nombre complexe est réel si et seulement si son argument est $0$ ou $\\pi$ modulo $2\\pi$." },
+      { id: 2, statement: "Soit $z_0$ une racine $n$-ième de l'unité ($z_0 \\neq 1$) et soit $S = 1 + 2z_0 + 3z_0^2 + \\dots + nz_0^{n-1}$. Alors :", choices: ["$S = \\frac{n}{z_0 - 1}$", "$S = \\frac{1}{z_0 - 1}$", "$S = \\frac{1}{z_0^n - 1}$", "$S = \\frac{n}{z_0^n - 1}$"], correct: [0], theme: "Nombres complexes", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① On sait que $1+z_0+z_0^2+\\dots+z_0^{n-1} = \\frac{1-z_0^n}{1-z_0} = 0$ (car $z_0^n = 1$ et $z_0 \\neq 1$).\n② On pose $T = z_0 + z_0^2 + \\dots + z_0^{n-1} = -1$.\n③ $S = 1 + 2z_0 + 3z_0^2 + \\dots + nz_0^{n-1}$. On utilise la formule : $S = \\frac{n}{z_0-1}$ (classique, par dérivation de la somme géométrique).\n\n⚠️ VIGILANCE : Ne pas confondre $z_0^n = 1$ avec $z_0^n - 1 = 0$. L'expression $\\frac{1}{z_0^n-1}$ est indéfinie !\n\n💡 ASTUCE : Retenez la formule : $\\sum_{k=1}^n k q^{k-1} = \\frac{1 - (n+1)q^n + nq^{n+1}}{(1-q)^2}$. Avec $q=z_0$ et $z_0^n = 1$, on retrouve le résultat." },
+      { id: 3, statement: "Le plan est muni d'un repère orthonormé direct $(O,\\vec{u},\\vec{v})$. Soit $A$ un point d'affixe $1+i$. Alors l'image du point $A$ par la rotation de centre $O$ et d'angle $\\frac{\\pi}{4}$ est le point d'affixe :", choices: ["$\\sqrt{2}i$", "$-\\sqrt{2}i$", "$\\sqrt{2}$", "$-\\sqrt{2}$"], correct: [0], theme: "Nombres complexes", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① La rotation de centre $O$ et d'angle $\\theta$ a pour expression complexe : $z' = e^{i\\theta}z$.\n② Ici $\\theta = \\frac{\\pi}{4}$, donc $e^{i\\pi/4} = \\frac{\\sqrt{2}}{2}(1+i)$.\n③ $z_A = 1+i$, donc $z' = e^{i\\pi/4} \\cdot (1+i) = \\frac{\\sqrt{2}}{2}(1+i)(1+i) = \\frac{\\sqrt{2}}{2} \\cdot 2i = \\sqrt{2}i$.\n\n⚠️ VIGILANCE : Attention à l'ordre : c'est $z' = e^{i\\theta}z$, pas $z' = ze^{i\\theta}$ (bien que le produit soit commutatif dans $\\mathbb{C}$, l'écriture standard est la première).\n\n💡 ASTUCE : Visualisez le point $A(1,1)$ dans le plan. Une rotation de $45°$ autour de $O$ l'envoie sur l'axe des ordonnées, à une distance $\\sqrt{2}$ de $O$." },
+      { id: 4, statement: "Soit $f$ l'application du plan dans lui-même qui à tout point $M$ d'affixe $z$ associe le point $M'$ d'affixe $z'$ telle que $z'=(1+i)z+i$. Soit $g=S \\circ f$ où $S$ est la symétrie orthogonale d'axe $(O,\\vec{u})$. Alors $g$ est une :", choices: ["symétrie orthogonale", "symétrie glissante", "homothétie", "similitude indirecte"], correct: [3], theme: "Transformations géométriques", niveau_scolaire: "CAPES", explication: "✅ Réponse : D\n\n🔍 CORRECTION :\n① $f$ est une similitude directe d'écriture $z' = az+b$ avec $a=1+i = \\sqrt{2}e^{i\\pi/4}$.\n② $S$ est la symétrie d'axe réel : $S(z) = \\bar{z}$.\n③ $g(z) = S(f(z)) = \\overline{(1+i)z+i} = (1-i)\\bar{z} + i$ (car $\\bar{i}=-i$, donc $\\overline{i}=-i$).\n④ $g(z) = \\alpha\\bar{z}+\\beta$ avec $|\\alpha|=|1-i|=\\sqrt{2}\\neq 1$. C'est une similitude indirecte.\n\n⚠️ VIGILANCE : Une symétrie glissante a un rapport $|\\alpha|=1$.\n\n💡 ASTUCE : Composée d'une similitude directe et d'une symétrie = similitude indirecte." },
+      { id: 5, statement: "$ABCD$ est un carré et $f$ est une similitude directe qui transforme $A$ en $D$ et $C$ en $B$. Alors $f$ est une :", choices: ["translation", "homothétie", "symétrie axiale", "rotation"], correct: [3], theme: "Transformations géométriques", niveau_scolaire: "CAPES", explication: "✅ Réponse : D\n\n🔍 CORRECTION :\n① Dans un carré direct $ABCD$, $\\vec{AD}$ est perpendiculaire à $\\vec{CB}$ ? Non, $\\vec{AD}=\\vec{BC}$.\n② $f(A)=D$, $f(C)=B$. Les segments $[AC]$ et $[DB]$ sont les diagonales.\n③ L'angle de la similitude est $(\\vec{AC},\\vec{DB}) = \\frac{\\pi}{2}$.\n④ Une similitude directe d'angle $\\frac{\\pi}{2}$ qui conserve les distances (car $AC=DB$) est une rotation de centre le milieu du carré.\n\n⚠️ VIGILANCE : Une homothétie conserverait les directions.\n\n💡 ASTUCE : Dans un carré, la rotation de centre le milieu et d'angle $90°$ échange les sommets opposés." },
+      { id: 6, statement: "Soit $A$ et $B$ deux points distincts du plan. L'ensemble des points $M$ du plan tels que $\\frac{MA}{MB} = \\sqrt{2}$ est :", choices: ["une droite", "un segment", "un demi-cercle", "un cercle"], correct: [3], theme: "Géométrie plane", niveau_scolaire: "CAPES", explication: "✅ Réponse : D\n\n🔍 CORRECTION :\n① L'ensemble $\\{M, \\frac{MA}{MB}=k\\}$ avec $k>0$, $k\\neq 1$ est un cercle (cercle d'Apollonius).\n② Pour $k=1$, c'est la médiatrice (une droite).\n③ Ici $k=\\sqrt{2}\\neq 1$, donc l'ensemble est un cercle.\n\n⚠️ VIGILANCE : Ne pas confondre avec le cercle de diamètre $[AB]$ qui correspond à $\\frac{MA}{MB}$ non constant.\n\n💡 ASTUCE : Les points divisant $[AB]$ dans le rapport $k$ et $-k$ sont les extrémités d'un diamètre du cercle d'Apollonius." },
+      { id: 7, statement: "Le système $\\begin{cases}x=2\\cos t \\\\ y=\\sin t\\end{cases}$, $t\\in\\mathbb{R}$ est une représentation paramétrique :", choices: ["d'une ellipse", "d'une parabole", "d'un cercle", "d'une hyperbole"], correct: [0], theme: "Coniques", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $\\frac{x}{2} = \\cos t$, $y = \\sin t$.\n② $\\left(\\frac{x}{2}\\right)^2 + y^2 = \\cos^2 t + \\sin^2 t = 1$.\n③ $\\frac{x^2}{4} + y^2 = 1$, équation d'une ellipse de demi-axes $a=2$, $b=1$.\n\n⚠️ VIGILANCE : Un cercle aurait même coefficient pour $x^2$ et $y^2$.\n\n💡 ASTUCE : Pour identifier une conique paramétrée, éliminer $t$ avec $\\cos^2+\\sin^2=1$ ou $\\cosh^2-\\sinh^2=1$." },
+      { id: 8, statement: "Soit $a$ et $b$ deux réels strictement positifs. Le système $\\begin{cases}x=a\\cosh t \\\\ y=b\\sinh t\\end{cases}$, $t\\in\\mathbb{R}$ est une représentation paramétrique :", choices: ["d'une ellipse", "d'une parabole", "d'un cercle", "d'une branche d'hyperbole"], correct: [3], theme: "Coniques", niveau_scolaire: "CAPES", explication: "✅ Réponse : D\n\n🔍 CORRECTION :\n① $\\cosh^2 t - \\sinh^2 t = 1$.\n② $\\left(\\frac{x}{a}\\right)^2 - \\left(\\frac{y}{b}\\right)^2 = \\cosh^2 t - \\sinh^2 t = 1$.\n③ $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$, équation d'une hyperbole.\n④ Comme $x = a\\cosh t \\geq a > 0$, c'est la branche droite.\n\n⚠️ VIGILANCE : $\\cosh t \\geq 1$ donc $x$ est toujours supérieur à $a$.\n\n💡 ASTUCE : Le cosinus hyperbolique et le sinus hyperbolique sont à l'hyperbole ce que cos et sin sont au cercle." },
+      { id: 9, statement: "Soit $(C)$ la parabole de système paramétrique $\\begin{cases}x=\\frac{t^2}{2} \\\\ y=t\\end{cases}$, $t\\in\\mathbb{R}$. Le paramètre $p$ de la parabole est égal à :", choices: ["$2$", "$1$", "$\\sqrt{2}$", "$0.5$"], correct: [1], theme: "Coniques", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① $t=y$, donc $x = \\frac{y^2}{2}$, soit $y^2 = 2x$.\n② L'équation réduite d'une parabole d'axe $Ox$ est $y^2 = 2px$.\n③ Par identification : $2p = 2$, donc $p = 1$.\n\n⚠️ VIGILANCE : Ne pas confondre $y^2=2px$ (axe focal $Ox$) avec $x^2=2py$ (axe focal $Oy$).\n\n💡 ASTUCE : Le paramètre $p$ est la distance entre le foyer et la directrice." },
+      { id: 10, statement: "L'ellipse $(E)$ d'équation $x^2 + \\frac{y^2}{9} - 1 = 0$ a une excentricité égale à :", choices: ["$\\frac{\\sqrt{8}}{3}$", "$-\\frac{\\sqrt{8}}{3}$", "$\\frac{\\sqrt{8}}{9}$", "$-\\frac{\\sqrt{8}}{9}$"], correct: [0], theme: "Coniques", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $\\frac{x^2}{1} + \\frac{y^2}{9} = 1$. Demi-axes : $a=1$, $b=3$.\n② $b > a$, le grand axe est selon $Oy$ : $a' = 3$, $b' = 1$.\n③ Excentricité : $e = \\frac{\\sqrt{a'^2 - b'^2}}{a'} = \\frac{\\sqrt{9-1}}{3} = \\frac{\\sqrt{8}}{3}$.\n④ L'excentricité est toujours positive.\n\n⚠️ VIGILANCE : Toujours identifier le plus grand demi-axe comme $a$ pour le calcul de $e$.\n\n💡 ASTUCE : Pour une ellipse, $0 < e < 1$. Ici $\\frac{\\sqrt{8}}{3} \\approx 0.94$, cohérent." },
+      { id: 11, statement: "Soit $A(0,1,0)$, $B(0,1,1)$ et $C(1,-1,1)$ des points de l'espace. Alors le produit scalaire $\\vec{AB}\\cdot\\vec{BC}$ est égal à :", choices: ["$\\vec{0}$", "$0$", "$1$", "$AC$"], correct: [1], theme: "Géométrie dans l'espace", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① $\\vec{AB} = (0-0, 1-1, 1-0) = (0,0,1)$.\n② $\\vec{BC} = (1-0, -1-1, 1-1) = (1,-2,0)$.\n③ $\\vec{AB}\\cdot\\vec{BC} = 0\\times 1 + 0\\times(-2) + 1\\times 0 = 0$.\n\n⚠️ VIGILANCE : Le produit scalaire est un scalaire, pas un vecteur.\n\n💡 ASTUCE : Un produit scalaire nul indique que les vecteurs sont orthogonaux." },
+      { id: 12, statement: "Soit $A(1,1,0)$, $B(0,1,1)$ et $C(1,1,1)$ des points de l'espace. Alors le produit vectoriel $\\vec{AB}\\wedge\\vec{AC}$ est égal à :", choices: ["$\\vec{j}$", "$\\vec{i}$", "$1$", "$\\vec{k}$"], correct: [0], theme: "Géométrie dans l'espace", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $\\vec{AB} = (-1,0,1)$, $\\vec{AC} = (0,0,1)$.\n② $\\vec{AB}\\wedge\\vec{AC} = \\begin{vmatrix}\\vec{i}&\\vec{j}&\\vec{k}\\\\-1&0&1\\\\0&0&1\\end{vmatrix}$\n③ $= (0\\times 1 - 1\\times 0)\\vec{i} - (-1\\times 1 - 1\\times 0)\\vec{j} + (-1\\times 0 - 0\\times 0)\\vec{k}$\n④ $= 0\\vec{i} + 1\\vec{j} + 0\\vec{k} = \\vec{j}$.\n\n⚠️ VIGILANCE : Le produit vectoriel est un vecteur, pas un scalaire.\n\n💡 ASTUCE : Utiliser la règle de Sarrus pour calculer le déterminant." },
+      { id: 13, statement: "Le reste de la division euclidienne de $2227^{2009}$ par $5$ est :", choices: ["$4$", "$3$", "$2$", "$1$"], correct: [2], theme: "Arithmétique", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① $2227 = 2225 + 2 = 5\\times 445 + 2$, donc $2227 \\equiv 2 \\pmod{5}$.\n② $2227^{2009} \\equiv 2^{2009} \\pmod{5}$.\n③ Ordre de 2 modulo 5 : $2^1=2$, $2^2=4$, $2^3=3$, $2^4=1$ (période 4).\n④ $2009 = 4\\times 502 + 1$, donc $2^{2009} \\equiv 2^1 \\equiv 2 \\pmod{5}$.\n\n⚠️ VIGILANCE : Réduire d'abord la base modulo 5 avant d'étudier l'exposant.\n\n💡 ASTUCE : Petit théorème de Fermat : si $5\\nmid a$, $a^4 \\equiv 1 \\pmod{5}$." },
+      { id: 14, statement: "Soit $m=b^3c^2$ et $n=a^2b^2c$ où $a$, $b$ et $c$ sont des entiers premiers et distincts. Alors $\\operatorname{pgcd}(m,n)$ est égal à :", choices: ["$abc$", "$a^2b^3c$", "$cb^2$", "$b^3c$"], correct: [2], theme: "Arithmétique", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① $m = b^3 c^2$, $n = a^2 b^2 c$.\n② Pour chaque facteur premier, le PGCD prend l'exposant minimum.\n③ $a$ : exposant $0$ dans $m$, $2$ dans $n$ → min $0$ (n'apparaît pas).\n④ $b$ : exposant $3$ dans $m$, $2$ dans $n$ → min $2$ → $b^2$.\n⑤ $c$ : exposant $2$ dans $m$, $1$ dans $n$ → min $1$ → $c$.\n⑥ $\\operatorname{pgcd}(m,n) = b^2 c = cb^2$.\n\n⚠️ VIGILANCE : Ne pas inclure $a$ qui n'est pas un facteur commun.\n\n💡 ASTUCE : $\\operatorname{pgcd}(p^\\alpha, p^\\beta) = p^{\\min(\\alpha,\\beta)}$ pour $p$ premier." },
+      { id: 15, statement: "Soit $n$ un entier tel que $4$ divise $n^5$. Alors :", choices: ["$n$ est un entier pair", "$32$ divise $n$", "$\\operatorname{pgcd}(4,n^5)=4$", "$\\operatorname{pgcd}(4,n^3)=2$"], correct: [0], theme: "Arithmétique", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $4|n^5$ signifie $n^5$ est divisible par $4$, donc pair.\n② Si $n$ était impair, $n^5$ serait impair, contradiction. Donc $n$ est pair (A).\n③ B : $n=2$ donne $n^5=32$ divisible par $4$, mais $32$ ne divise pas $2$.\n\n⚠️ VIGILANCE : $4|n^5$ implique $n$ pair, mais pas nécessairement divisible par $32$.\n\n💡 ASTUCE : Si $n$ est pair, $n=2k$, alors $n^5=32k^5$ est bien divisible par $4$." },
+      { id: 16, statement: "Si $n$ est un nombre impair alors :", choices: ["$n^2 \\equiv 0 \\pmod{4}$", "$n^2 \\equiv 1 \\pmod{4}$", "$n^2 \\equiv 2 \\pmod{4}$", "$n^2 \\equiv 3 \\pmod{4}$"], correct: [1], theme: "Arithmétique", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① $n$ impair $\\Rightarrow n = 2k+1$.\n② $n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 4k(k+1) + 1$.\n③ $k(k+1)$ est pair (produit de deux entiers consécutifs), donc $4k(k+1)$ est divisible par $8$.\n④ $n^2 \\equiv 1 \\pmod{4}$.\n\n⚠️ VIGILANCE : Un carré impair est toujours congru à 1 modulo 4 (et même modulo 8).\n\n💡 ASTUCE : Modulo 4, les carrés sont $0$ (pairs) ou $1$ (impairs), jamais $2$ ou $3$." },
+      { id: 17, statement: "Si $n$ est un entier vérifiant $n \\equiv 3 \\pmod{9}$ et $n \\equiv 3 \\pmod{11}$, alors :", choices: ["$n \\equiv 9 \\pmod{99}$", "$n \\equiv 3 \\pmod{99}$", "$100n \\equiv 3 \\pmod{99}$", "$100n \\equiv 9 \\pmod{99}$"], correct: [1], theme: "Arithmétique", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① $n \\equiv 3 \\pmod{9}$ et $n \\equiv 3 \\pmod{11}$.\n② $9$ et $11$ sont premiers entre eux ($\\operatorname{pgcd}(9,11)=1$).\n③ Par le théorème des restes chinois, $n \\equiv 3 \\pmod{9\\times 11}$, soit $n \\equiv 3 \\pmod{99}$.\n\n⚠️ VIGILANCE : Le théorème chinois nécessite que les modules soient premiers entre eux.\n\n💡 ASTUCE : $100 \\equiv 1 \\pmod{99}$, donc $100n \\equiv n \\equiv 3 \\pmod{99}$." },
+      { id: 18, statement: "Le nombre de diviseurs positifs de $600$ est égal à :", choices: ["$12$", "$24$", "$48$", "$6$"], correct: [1], theme: "Arithmétique", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① Décomposition en facteurs premiers : $600 = 6\\times 100 = 2\\times 3\\times 2^2\\times 5^2 = 2^3\\times 3^1\\times 5^2$.\n② Nombre de diviseurs : $(3+1)\\times(1+1)\\times(2+1) = 4\\times 2\\times 3 = 24$.\n\n⚠️ VIGILANCE : Ne pas oublier d'ajouter $1$ à chaque exposant.\n\n💡 ASTUCE : Pour $n = p_1^{\\alpha_1}\\cdots p_k^{\\alpha_k}$, le nombre de diviseurs est $\\prod(\\alpha_i+1)$." },
+      { id: 19, statement: "Soit $x=(2,3,-1)$, $y=(1,-1,-2)$, $u=(3,7,0)$ et $v=(5,0,-7)$ des vecteurs de $\\mathbb{R}^3$. Alors :", choices: ["$\\{x,y\\}$ est une famille liée", "$\\{x,y\\}$ est une famille libre", "le sous-espace engendré par $\\{x,y\\}$ est celui engendré par $\\{u,v\\}$", "$\\{u,v\\}$ est une famille liée"], correct: [1,2], theme: "Algèbre linéaire", niveau_scolaire: "CAPES", explication: "✅ Réponses : B et C\n\n🔍 CORRECTION :\n① $x$ et $y$ ne sont pas colinéaires car il n'existe pas $\\lambda$ tel que $(2,3,-1)=\\lambda(1,-1,-2)$ (les rapports $2/1$, $3/(-1)$, $(-1)/(-2)$ ne sont pas égaux). Donc famille libre (B).\n② $u = 2x - y$, $v = x + 3y$. Donc $u,v \\in \\operatorname{Vect}(x,y)$ et réciproquement $x,y$ s'expriment en fonction de $u,v$. Les sous-espaces sont égaux (C).\n\n⚠️ VIGILANCE : Deux vecteurs non colinéaires dans $\\mathbb{R}^3$ engendrent un plan vectoriel.\n\n💡 ASTUCE : Pour vérifier l'égalité des sous-espaces, montrer la double inclusion." },
+      { id: 20, statement: "Soit $P=\\{(x,y,z)\\in\\mathbb{R}^3,\\; x-y+z=0\\}$. Alors :", choices: ["$P$ est un espace vectoriel de dimension $1$", "$\\{(1,1,0),(0,1,1)\\}$ est une base de $P$", "$P$ est un espace vectoriel de dimension $2$ de base $\\{(1,1,0),(-1,0,1)\\}$", "$P$ est un espace vectoriel de dimension $2$"], correct: [2,3], theme: "Algèbre linéaire", niveau_scolaire: "CAPES", explication: "✅ Réponses : C et D\n\n🔍 CORRECTION :\n① $P$ est défini par une équation linéaire homogène, c'est un sous-espace vectoriel de dimension $3-1=2$ (D).\n② Base : $z = -x+y$. $(x,y,z) = x(1,0,-1) + y(0,1,1)$.\n③ Vérifions $(1,1,0)$ : $1-1+0=0$ ✓. $(-1,0,1)$ : $-1-0+1=0$ ✓.\n④ Ces deux vecteurs sont libres (non colinéaires), donc base de $P$ (C).\n\n⚠️ VIGILANCE : Un hyperplan de $\\mathbb{R}^3$ est de dimension 2.\n\n💡 ASTUCE : Pour trouver une base d'un plan, exprimer une variable en fonction des deux autres." },
+      { id: 21, statement: "Les coordonnées de $u=(3,1,0)\\in\\mathbb{R}^3$ relativement à la base $\\{(1,1,0),(1,0,1),(0,1,1)\\}$ sont :", choices: ["$(2,1,1)$", "$(2,1,-1)$", "$(2,-1,1)$", "$(1,2,1)$"], correct: [1], theme: "Algèbre linéaire", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① On cherche $a,b,c$ tels que $a(1,1,0)+b(1,0,1)+c(0,1,1) = (3,1,0)$.\n② $\\begin{cases}a+b = 3 \\\\ a+c = 1 \\\\ b+c = 0\\end{cases}$\n③ De la 3e : $b = -c$. Dans la 1re : $a-c = 3$. Avec la 2e : $a+c = 1$.\n④ Addition : $2a = 4 \\Rightarrow a = 2$. Puis $c = 1-a = -1$, $b = -c = 1$.\n⑤ Coordonnées : $(a,b,c) = (2,1,-1)$.\n\n⚠️ VIGILANCE : Vérifier les 3 équations pour éviter une erreur de signe.\n\n💡 ASTUCE : Poser le système linéaire $3\\times3$ et le résoudre." },
+      { id: 22, statement: "Soit $E$ l'ensemble des polynômes de degré inférieur ou égal à $2$. Alors :", choices: ["$\\dim E = 1$", "$\\dim E = 2$", "$\\dim E = 3$", "$E$ admet pour base $\\{1, X, X^2\\}$"], correct: [2,3], theme: "Algèbre linéaire", niveau_scolaire: "CAPES", explication: "✅ Réponses : C et D\n\n🔍 CORRECTION :\n① $E = \\{aX^2 + bX + c,\\; a,b,c\\in\\mathbb{R}\\}$ est $\\mathbb{R}_2[X]$.\n② La base canonique est $\\{1, X, X^2\\}$ (D).\n③ Cette base a 3 éléments, donc $\\dim E = 3$ (C).\n\n⚠️ VIGILANCE : Le degré $\\leq 2$ inclut les constantes (degré 0) et les polynômes de degré 1.\n\n💡 ASTUCE : $\\dim \\mathbb{R}_n[X] = n+1$." },
+      { id: 23, statement: "Soit le déterminant $\\Delta = \\begin{vmatrix}1&1&1\\\\ a&b&c\\\\ a^2&b^2&c^2\\end{vmatrix}$ ($a,b,c$ réels). Alors :", choices: ["$\\Delta = (a-b)(b-c)(c-a)$", "$\\Delta = 0$", "$\\Delta = abc$", "$\\Delta = a^2c+b^2a+c^2b-a^2b-b^2c-c^2a$"], correct: [0,3], theme: "Algèbre linéaire", niveau_scolaire: "CAPES", explication: "✅ Réponses : A et D\n\n🔍 CORRECTION :\n① C'est le déterminant de Vandermonde $V(a,b,c)$.\n② $V(a,b,c) = (b-a)(c-a)(c-b) = (a-b)(b-c)(c-a)$ (après permutation).\n③ La forme développée (D) est le développement complet, identique à la forme factorisée.\n\n⚠️ VIGILANCE : Si $a=b$, deux lignes sont identiques, $\\Delta=0$, cohérent avec le facteur $(a-b)$.\n\n💡 ASTUCE : Le Vandermonde d'ordre $n$ vaut $\\prod_{1\\leq i < j \\leq n}(x_j - x_i)$." },
+      { id: 24, statement: "Soit la matrice $A = \\begin{pmatrix}0&1&0\\\\-1&0&0\\\\0&-1&0\\end{pmatrix}$. Alors :", choices: ["$1$ est une valeur propre de $A$", "$0$ est une valeur propre de $A$", "$A$ n'est pas inversible", "$A$ est nilpotente"], correct: [1,2], theme: "Algèbre linéaire", niveau_scolaire: "CAPES", explication: "✅ Réponses : B et C\n\n🔍 CORRECTION :\n① $\\det(A) = 0$ (développer selon la 3e colonne : $0$). Donc $0$ est valeur propre (B) et $A$ non inversible (C).\n② Polynôme caractéristique : $P(\\lambda) = \\det(A-\\lambda I) = -\\lambda^3$.\n③ La seule valeur propre est $0$ (triple).\n④ $A^3 \\neq 0$, donc non nilpotente.\n\n⚠️ VIGILANCE : Une matrice nilpotente a $0$ pour seule valeur propre, mais la réciproque est fausse.\n\n💡 ASTUCE : Si $\\det(A)=0$, alors $0$ est valeur propre." },
+      { id: 25, statement: "Soit la matrice $A = \\begin{pmatrix}1&-1&1\\\\-1&1&1\\\\0&0&2\\end{pmatrix}$. Alors :", choices: ["$0$ est une valeur propre de $A$", "$2$ est une valeur propre de $A$", "le rang de $A$ est égal à $2$", "$A$ est diagonalisable"], correct: [0,1,2,3], theme: "Algèbre linéaire", niveau_scolaire: "CAPES", explication: "✅ Réponses : A, B, C et D\n\n🔍 CORRECTION :\n① $A$ est symétrique réelle, donc diagonalisable (D).\n② Bloc $\\begin{pmatrix}1&-1\\\\-1&1\\end{pmatrix}$ a pour valeurs propres $0$ et $2$. Le coefficient $2$ (bas droite) donne aussi $2$.\n③ Valeurs propres : $0$ (simple), $2$ (double).\n④ $\\det(A)=0$, rang $=2$ (C).\n\n⚠️ VIGILANCE : Une matrice symétrique réelle est toujours diagonalisable.\n\n💡 ASTUCE : Pour une matrice triangulaire par blocs, les vp sont celles des blocs diagonaux." },
+      { id: 26, statement: "Soit la matrice $A = \\begin{pmatrix}1&-1&1\\\\-1&1&1\\\\0&0&2\\end{pmatrix}$. Alors le polynôme minimal de $A$ est :", choices: ["$m(X)=X(X-2)$", "$m(X)=X(X-2)^2$", "$m(X)=-X(X-2)$", "$m(X)=-X(X-2)^2$"], correct: [0], theme: "Algèbre linéaire", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $A$ est diagonalisable avec vp $0$ et $2$.\n② Pour une matrice diagonalisable à valeurs propres simples, le polynôme minimal est $\\prod(X-\\lambda_i)$.\n③ $m(X) = X(X-2)$ (à un facteur multiplicatif près, le signe ne change rien).\n\n⚠️ VIGILANCE : Si $A$ est diagonalisable, le polynôme minimal n'a que des racines simples.\n\n💡 ASTUCE : Le polynôme minimal d'une matrice diagonalisable est le produit des $(X-\\lambda)$ pour chaque valeur propre distincte." },
+      { id: 27, statement: "$\\mathbb{R}$ est muni de la topologie usuelle. Soit $E$ une partie de $\\mathbb{R}$ :", choices: ["Si $E$ est compacte alors $E$ est ouverte", "Si $E$ est compacte alors $E$ est fermée", "Si $E$ est fermée alors $E$ est compacte", "Si $E$ est compacte alors $E$ est bornée"], correct: [1,3], theme: "Topologie", niveau_scolaire: "CAPES", explication: "✅ Réponses : B et D\n\n🔍 CORRECTION :\n① Dans $\\mathbb{R}$ muni de la topologie usuelle, une partie compacte est fermée ET bornée (théorème de Heine-Borel).\n② B : compact ⇒ fermé (vrai).\n③ D : compact ⇒ borné (vrai).\n④ A : $[0,1]$ est compact, pas ouverte.\n⑤ C : $\\mathbb{R}$ est fermé, pas compact.\n\n⚠️ VIGILANCE : Dans $\\mathbb{R}^n$, compact ⇔ fermé borné.\n\n💡 ASTUCE : $[0,1]$ est compact (fermé borné), $]0,1[$ est borné mais pas fermé donc pas compact." },
+      { id: 28, statement: "$\\mathbb{R}$ est muni de la topologie usuelle. Soit $I$ un intervalle de $\\mathbb{R}$. Alors :", choices: ["$I$ est fermé", "$I$ est ouvert", "$I$ est convexe", "$I$ est compact"], correct: [2], theme: "Topologie", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① Un intervalle de $\\mathbb{R}$ est par définition une partie convexe : $\\forall x,y\\in I, \\forall t\\in[0,1], tx+(1-t)y\\in I$.\n② Un intervalle n'est pas forcément fermé ($]0,1[$), ni ouvert ($[0,1]$), ni compact ($]0,1[$ non fermé, $\\mathbb{R}$ non borné).\n\n⚠️ VIGILANCE : Ne pas confondre « intervalle » (convexe) avec « segment » (fermé borné).\n\n💡 ASTUCE : Les intervalles de $\\mathbb{R}$ sont exactement les parties convexes de $\\mathbb{R}$." },
+      { id: 29, statement: "Soit $f:\\mathbb{R}\\rightarrow\\mathbb{R}$ une fonction continue :", choices: ["L'image d'un fermé par $f$ est un fermé", "L'image réciproque d'un fermé par $f$ est un fermé", "L'image d'un compact par $f$ est un compact", "L'image d'un intervalle par $f$ est un intervalle"], correct: [1,2,3], theme: "Topologie", niveau_scolaire: "CAPES", explication: "✅ Réponses : B, C et D\n\n🔍 CORRECTION :\n① Par définition de la continuité, l'image réciproque d'un fermé est un fermé (B).\n② L'image continue d'un compact est compacte (C).\n③ L'image continue d'un intervalle est un intervalle (théorème des valeurs intermédiaires) (D).\n④ A : $f(x)=\\arctan x$, $\\mathbb{R}$ est fermé, $f(\\mathbb{R}) = ]-\\frac{\\pi}{2},\\frac{\\pi}{2}[$ n'est pas fermé.\n\n⚠️ VIGILANCE : L'image directe d'un fermé par une fonction continue n'est pas toujours un fermé.\n\n💡 ASTUCE : $f$ continue ⇔ l'image réciproque de tout ouvert (resp. fermé) est un ouvert (resp. fermé)." },
+      { id: 30, statement: "Soit $f:x\\mapsto x - E(x)$ où $E(x)$ désigne la partie entière du réel $x$. Alors :", choices: ["$0 < f(x) \\leq 1$", "$f$ est périodique de période $1$", "$0 \\leq f(x) < 1$", "$f(x+k) = f(x),\\; k\\in\\mathbb{Z}$"], correct: [1,2,3], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponses : B, C et D\n\n🔍 CORRECTION :\n① $f(x) = x - E(x)$ est la partie fractionnaire, notée $\\{x\\}$.\n② $0 \\leq f(x) < 1$ (C vrai, A faux car $f(0)=0$).\n③ $E(x+1) = E(x)+1$, donc $f(x+1) = x+1 - E(x)-1 = f(x)$. Périodique de période 1 (B vrai).\n④ Plus généralement, $\\forall k\\in\\mathbb{Z}, f(x+k) = f(x)$ (D vrai).\n\n⚠️ VIGILANCE : La partie fractionnaire est dans $[0,1[$, pas $]0,1]$.\n\n💡 ASTUCE : $f(x)$ représente la partie décimale de $x$ pour $x\\geq 0$." },
+      { id: 31, statement: "Le développement limité d'ordre $2$ au voisinage de $0$ de la fonction $f:x\\mapsto\\sqrt{1+x}\\sin x$ est :", choices: ["$x + \\frac{x^2}{2} + o(x^2)$", "$x - \\frac{x^2}{2} + o(x^2)$", "$1 + x + \\frac{x^2}{2} + o(x^2)$", "$x + x^2 + o(x^2)$"], correct: [0], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $\\sqrt{1+x} = 1 + \\frac{x}{2} - \\frac{x^2}{8} + o(x^2)$.\n② $\\sin x = x - \\frac{x^3}{6} + o(x^3) = x + o(x^2)$.\n③ $f(x) = \\left(1 + \\frac{x}{2} - \\frac{x^2}{8}\\right)(x) + o(x^2) = x + \\frac{x^2}{2} + o(x^2)$.\n\n⚠️ VIGILANCE : À l'ordre 2, $\\sin x = x + o(x^2)$ suffit.\n\n💡 ASTUCE : Le DL de $\\sqrt{1+x}$ s'obtient par la formule du binôme généralisé." },
+      { id: 32, statement: "Le développement limité d'ordre $2$ au voisinage de $0$ de la fonction $f:x\\mapsto(1+x)^x$ est :", choices: ["$x + \\frac{x^2}{2} + o(x^2)$", "$1 + x^2 + o(x^2)$", "$x - \\frac{x^2}{2} + o(x^2)$", "$x + x^2 + o(x^2)$"], correct: [1], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① $(1+x)^x = e^{x\\ln(1+x)}$.\n② $\\ln(1+x) = x - \\frac{x^2}{2} + o(x^2)$.\n③ $x\\ln(1+x) = x^2 + o(x^2)$.\n④ $e^{x\\ln(1+x)} = 1 + x^2 + o(x^2)$.\n\n⚠️ VIGILANCE : Le terme d'ordre 1 disparaît, le développement commence à l'ordre 2.\n\n💡 ASTUCE : Toujours passer par la forme exponentielle pour les fonctions de type $a(x)^{b(x)}$." },
+      { id: 33, statement: "Indiquer parmi les propositions ci-dessous celles qui sont exactes :", choices: ["$\\frac{\\sin x}{x} \\sim 1$ au voisinage de $0$", "$\\frac{\\cos x}{x} \\sim 0$", "$\\frac{\\ln(x+1)}{x} \\sim 1$ au voisinage de $0$", "$\\frac{e^x-1}{x} \\sim 1$ au voisinage de $0$"], correct: [0,2,3], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponses : A, C et D\n\n🔍 CORRECTION :\n① A : $\\frac{\\sin x}{x} \\to 1$, donc $\\sim 1$ (vrai).\n② B : $\\frac{\\cos x}{x} \\sim \\frac{1}{x}$ tend vers $\\infty$, ne tend pas vers $0$ (faux).\n③ C : $\\frac{\\ln(1+x)}{x} \\to 1$, donc $\\sim 1$ (vrai).\n④ D : $\\frac{e^x-1}{x} \\to 1$, donc $\\sim 1$ (vrai).\n\n⚠️ VIGILANCE : $\\sim 0$ n'a pas de sens pour un équivalent ; on dirait que la limite est $0$.\n\n💡 ASTUCE : Les équivalents usuels en $0$ : $\\sin x\\sim x$, $\\ln(1+x)\\sim x$, $e^x-1\\sim x$, $\\tan x\\sim x$." },
+      { id: 34, statement: "Pour tout réel $x$, $E(x)$ désigne la partie entière de $x$ :", choices: ["$E(x) \\sim x$ au voisinage de $+\\infty$", "$e^{E(x)} \\xrightarrow[+\\infty]{} e^x$", "$\\lim_{x\\rightarrow+\\infty}(x^{\\alpha} - E(x)^{\\alpha}) = 0$ pour $0 < \\alpha < 1$", "$e^{\\sqrt{E(x)}} \\sim e^{\\sqrt{x}}$ au voisinage de $+\\infty$"], correct: [0,2], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponses : A et C\n\n🔍 CORRECTION :\n① A : $E(x) = x - \\{x\\}$ avec $0\\leq\\{x\\}<1$. $\\frac{E(x)}{x} = 1 - \\frac{\\{x\\}}{x} \\to 1$. Donc $E(x)\\sim x$ (vrai).\n② B : $e^{E(x)} = e^{x-\\{x\\}} = e^x e^{-\\{x\\}}$. Le rapport $\\frac{e^{E(x)}}{e^x} = e^{-\\{x\\}}$ ne tend pas vers 1, donc pas $\\sim$.\n③ C : $x^{\\alpha} - E(x)^{\\alpha} = x^{\\alpha} - (x-\\{x\\})^{\\alpha}$. Par le TAF, $(x-\\{x\\})^{\\alpha} = x^{\\alpha} - \\alpha\\xi^{\\alpha-1}\\{x\\}$. La différence tend vers $0$ car $\\alpha-1<0$.\n\n⚠️ VIGILANCE : L'équivalence $E(x)\\sim x$ est vraie car la différence relative tend vers 0.\n\n💡 ASTUCE : $\\frac{x-1}{x} \\leq \\frac{E(x)}{x} \\leq 1$, donc par encadrement $\\frac{E(x)}{x}\\to 1$." },
+      { id: 35, statement: "Soit $f:[-1,1]\\rightarrow\\mathbb{R},\\; x\\mapsto\\arcsin x + \\arccos x$. Alors :", choices: ["$f(x) = \\pi$", "$f(x) = -\\frac{\\pi}{2}$", "$f(x) = \\frac{\\pi}{4}$", "$f(x) = \\frac{\\pi}{2}$"], correct: [3], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponse : D\n\n🔍 CORRECTION :\n① $f'(x) = \\frac{1}{\\sqrt{1-x^2}} + \\frac{-1}{\\sqrt{1-x^2}} = 0$.\n② $f$ est constante sur $[-1,1]$.\n③ $f(0) = \\arcsin 0 + \\arccos 0 = 0 + \\frac{\\pi}{2} = \\frac{\\pi}{2}$.\n④ Donc $f(x) = \\frac{\\pi}{2}$ pour tout $x\\in[-1,1]$.\n\n⚠️ VIGILANCE : $\\arcsin x$ et $\\arccos x$ sont définies sur $[-1,1]$ et ont un sens géométrique complémentaire.\n\n💡 ASTUCE : Géométriquement, $\\arcsin x + \\arccos x$ représente l'angle droit dans le triangle trigonométrique." },
+      { id: 36, statement: "Soit $f:[\\frac{\\pi}{2},\\pi]\\rightarrow\\mathbb{R},\\; x\\mapsto\\arcsin(\\cos 2x)$. Alors :", choices: ["$f(x) = 2x$", "$f(x) = x - \\frac{\\pi}{2}$", "$f(x) = \\frac{3\\pi}{2} - 2x$", "$f(x) = 2x - \\frac{3\\pi}{2}$"], correct: [2], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① $x\\in[\\frac{\\pi}{2},\\pi]$, donc $2x\\in[\\pi,2\\pi]$.\n② $\\cos 2x = -\\cos(2x-\\pi)$.\n③ $\\arcsin(\\cos 2x) = \\frac{\\pi}{2} - \\arccos(\\cos 2x)$. Pour $2x\\in[\\pi,2\\pi]$, $\\arccos(\\cos 2x) = 2x - \\pi$.\n④ $f(x) = \\frac{\\pi}{2} - (2x-\\pi) = \\frac{3\\pi}{2} - 2x$.\n\n⚠️ VIGILANCE : Il faut bien identifier l'intervalle pour $\\arccos(\\cos\\theta) = \\theta$ si $\\theta\\in[0,\\pi]$.\n\n💡 ASTUCE : $\\arcsin(\\cos\\theta) = \\frac{\\pi}{2} - \\theta$ si $\\theta\\in[0,\\pi]$." },
+      { id: 37, statement: "Soit $f$ une fonction dérivable sur un intervalle $I$. La fonction $f$ est convexe sur $I$ si :", choices: ["elle est strictement monotone sur $I$", "elle admet des extremums sur $I$", "sa dérivée est strictement croissante sur $I$", "sa dérivée est strictement décroissante sur $I$"], correct: [2], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① Caractérisation de la convexité pour une fonction dérivable : $f$ convexe ⇔ $f'$ croissante.\n② Si $f'$ est strictement croissante, $f$ est strictement convexe (C).\n③ A : $x\\mapsto x^3$ est strictement monotone mais pas convexe sur $\\mathbb{R}$.\n④ D : Caractérise la concavité.\n\n⚠️ VIGILANCE : La croissance de $f'$ (et non sa stricte croissance) caractérise la convexité.\n\n💡 ASTUCE : Graphiquement, une fonction convexe a une pente qui augmente." },
+      { id: 38, statement: "Soit $f$ une fonction deux fois dérivable sur un intervalle $I$. La fonction $f$ est convexe sur $I$ si :", choices: ["sa dérivée seconde s'annule et change de signe sur $I$", "sa dérivée seconde est positive sur $I$", "sa dérivée seconde est négative sur $I$", "sa dérivée seconde garde un signe constant sur $I$"], correct: [1], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① Pour une fonction deux fois dérivable : $f$ convexe ⇔ $f''(x) \\geq 0$ pour tout $x\\in I$.\n② B : $f''$ positive sur $I$ (vrai).\n③ A : $f''$ qui s'annule et change de signe caractérise un point d'inflexion, pas la convexité.\n④ C : Caractérise la concavité.\n\n⚠️ VIGILANCE : $f''\\geq 0$ est la condition de convexité, pas seulement $f''>0$.\n\n💡 ASTUCE : $f(x)=x^4$ est convexe sur $\\mathbb{R}$ bien que $f''(0)=0$." },
+      { id: 39, statement: "Soit $f$ une fonction définie et deux fois dérivable sur un intervalle $I$. La fonction $f$ est convexe sur $I$ si :", choices: ["sa courbe est située au-dessus de toutes ses tangentes", "sa courbe est située au-dessous de toutes ses tangentes", "sa courbe traverse l'une de ses tangentes", "la courbe de sa dérivée seconde est située au-dessus de l'axe des abscisses"], correct: [0,3], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponses : A et D\n\n🔍 CORRECTION :\n① Géométriquement, $f$ convexe ⇔ la courbe est au-dessus de ses tangentes (A).\n② D : $f''(x) \\geq 0$ signifie que la courbe de $f''$ est au-dessus de l'axe des abscisses.\n③ B : Caractérise une fonction concave.\n\n⚠️ VIGILANCE : Ne pas confondre « au-dessus » (convexe) et « au-dessous » (concave).\n\n💡 ASTUCE : Penser à la parabole $y=x^2$ : elle est convexe et située au-dessus de ses tangentes." },
+      { id: 40, statement: "Soit $f:x\\mapsto\\ln x$, alors $f$ est :", choices: ["concave sur $\\mathbb{R}_+^*$", "ni concave ni convexe sur $\\mathbb{R}_+^*$", "convexe sur $\\mathbb{R}_+^*$", "concave sur tout intervalle inclus dans $[1,+\\infty[$"], correct: [0], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $f''(x) = -\\frac{1}{x^2} < 0$ pour tout $x>0$.\n② Donc $f$ est strictement concave sur $\\mathbb{R}_+^*$ (A).\n\n⚠️ VIGILANCE : Le logarithme est concave, sa croissance ralentit.\n\n💡 ASTUCE : La courbe de $\\ln x$ est toujours sous sa tangente en tout point." },
+      { id: 41, statement: "Pour tous $x$ et $y$ de $\\mathbb{R}_+^*$ :", choices: ["$\\ln\\left(\\frac{x+2y}{3}\\right) \\leq \\frac{\\ln x + 2\\ln y}{3}$", "$\\ln\\left(\\frac{x+2y}{3}\\right) \\geq \\frac{\\ln x + 2\\ln y}{3}$", "$\\frac{3}{2x+y} \\leq \\frac{3}{2x} + \\frac{3}{y}$", "$e^{\\frac{x+2y}{3}} \\leq \\frac{e^x + 2e^y}{3}$"], correct: [1,3], theme: "Analyse", niveau_scolaire: "CAPES", explication: "✅ Réponses : B et D\n\n🔍 CORRECTION :\n① $\\ln$ est concave, donc par Jensen : $\\ln\\left(\\frac{x+2y}{3}\\right) \\geq \\frac{1}{3}\\ln x + \\frac{2}{3}\\ln y$ (B).\n② L'exponentielle est convexe, donc par Jensen : $e^{\\frac{x+2y}{3}} \\leq \\frac{1}{3}e^x + \\frac{2}{3}e^y$ (D).\n\n⚠️ VIGILANCE : Le sens des inégalités dépend de la convexité/concavité.\n\n💡 ASTUCE : Penser à Jensen : $\\phi(\\sum\\lambda_i x_i) \\leq \\sum\\lambda_i\\phi(x_i)$ pour $\\phi$ convexe." },
+      { id: 42, statement: "La suite $(u_n)$ définie par $u_n = 2 - \\frac{n-1}{10}$ est :", choices: ["bornée", "croissante", "décroissante", "convergente"], correct: [2], theme: "Suites", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① $u_n = 2 - \\frac{n-1}{10} = 2.1 - 0.1n$.\n② $u_{n+1} - u_n = -0.1 < 0$, donc strictement décroissante.\n③ Non bornée (tend vers $-\\infty$), non convergente.\n\n⚠️ VIGILANCE : Une suite arithmétique de raison négative est décroissante et diverge.\n\n💡 ASTUCE : $u_n$ est une suite arithmétique de raison $-0.1$ et de premier terme $u_1 = 2$." },
+      { id: 43, statement: "La suite $(u_n)$ définie par $u_n = \\frac{(-1)^{n-1}}{n+1}$ est :", choices: ["bornée", "croissante", "décroissante", "convergente"], correct: [0,3], theme: "Suites", niveau_scolaire: "CAPES", explication: "✅ Réponses : A et D\n\n🔍 CORRECTION :\n① $|u_n| = \\frac{1}{n+1} \\leq 1$, donc bornée (A).\n② $\\lim u_n = 0$, donc convergente (D).\n③ Ni croissante ni décroissante à cause du signe alterné.\n\n⚠️ VIGILANCE : Une suite alternée n'est pas monotone.\n\n💡 ASTUCE : Le terme général tend vers 0, et la suite est bornée entre $-1$ et $\\frac{1}{2}$." },
+      { id: 44, statement: "La suite $(u_n)$ définie par $u_{n+1} = \\sqrt{1+u_n}$ et $u_0 = 1$ est :", choices: ["divergente", "croissante", "majorée par $2$", "convergente vers $\\frac{1+\\sqrt{5}}{2}$"], correct: [1,2,3], theme: "Suites", niveau_scolaire: "CAPES", explication: "✅ Réponses : B, C et D\n\n🔍 CORRECTION :\n① Point fixe : $\\ell = \\sqrt{1+\\ell}$, $\\ell^2 = 1+\\ell$, $\\ell = \\frac{1+\\sqrt{5}}{2}$ (nombre d'or).\n② $f$ croissante, $u_1=\\sqrt{2}>u_0$, donc $(u_n)$ croissante (B).\n③ Majorée par $\\ell\\approx1.618<2$ (C).\n④ Convergente vers $\\frac{1+\\sqrt{5}}{2}$ (D).\n\n⚠️ VIGILANCE : Vérifier que la suite est bien définie (pas de valeurs négatives sous la racine).\n\n💡 ASTUCE : Le nombre d'or $\\varphi = \\frac{1+\\sqrt{5}}{2}$ vérifie $\\varphi^2 = \\varphi + 1$." },
+      { id: 45, statement: "La suite $(u_n)$ définie par $u_n = \\cos\\frac{\\pi}{2^2}\\cos\\frac{\\pi}{2^3}\\dots\\cos\\frac{\\pi}{2^n}$ est :", choices: ["bornée", "croissante", "décroissante", "convergente"], correct: [0,2,3], theme: "Suites", niveau_scolaire: "CAPES", explication: "✅ Réponses : A, C et D\n\n🔍 CORRECTION :\n① $0<\\cos\\frac{\\pi}{2^k}<1$ pour $k\\geq 2$, donc $u_n>0$ et décroissante (C).\n② Bornée entre $0$ et $u_2 = \\cos\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$ (A).\n③ Décroissante et minorée, donc convergente (D).\n\n⚠️ VIGILANCE : $0<\\cos\\theta<1$ pour $\\theta\\in]0,\\pi/2[$, le produit décroît.\n\n💡 ASTUCE : Formule de duplication : $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$." },
+      { id: 46, statement: "Soit les suites $(u_n)$ et $(v_n)$ définies par $u_n = \\sum_{k=1}^n\\frac{1}{k} - \\ln(n)$ et $v_n = \\sum_{k=1}^{n-1}\\frac{1}{k} - \\ln(n)$. Alors :", choices: ["$(u_n)$ est décroissante", "$(v_n)$ est croissante", "$\\lim(u_n - v_n) = 0$", "les suites $(u_n)$ et $(v_n)$ sont adjacentes"], correct: [2,3], theme: "Suites", niveau_scolaire: "CAPES", explication: "✅ Réponses : C et D\n\n🔍 CORRECTION :\n① $u_n$ tend vers $\\gamma$ (constante d'Euler) en décroissant, $v_n = u_n - \\frac{1}{n}$ tend vers $\\gamma$ en croissant.\n② $u_n - v_n = \\frac{1}{n} \\to 0$ (C).\n③ $u_n$ décroît, $v_n$ croît, $u_n - v_n \\to 0$ : suites adjacentes (D).\n\n⚠️ VIGILANCE : $u_n$ est la série harmonique comparée au logarithme.\n\n💡 ASTUCE : La constante d'Euler $\\gamma \\approx 0.577$ est la limite de ces suites adjacentes." },
+      { id: 47, statement: "La suite $(u_n)$ définie par $u_n = \\frac{n!}{n^n}$, $n\\geq 1$ est :", choices: ["divergente", "décroissante", "croissante", "convergente"], correct: [1,3], theme: "Suites", niveau_scolaire: "CAPES", explication: "✅ Réponses : B et D\n\n🔍 CORRECTION :\n① $\\frac{u_{n+1}}{u_n} = \\left(\\frac{n}{n+1}\\right)^n = \\frac{1}{(1+1/n)^n} \\to \\frac{1}{e} < 1$, donc décroissante (B).\n② Décroissante et minorée par $0$, donc convergente (D).\n\n⚠️ VIGILANCE : Utiliser le critère du rapport pour la monotonie.\n\n💡 ASTUCE : Formule de Stirling : $n! \\sim \\sqrt{2\\pi n}(n/e)^n$." },
+      { id: 48, statement: "La suite $(u_n)$ définie par $u_n = \\frac{1}{n+1} + \\frac{1}{n+2} + \\dots + \\frac{1}{2n}$, $n\\geq 1$ converge vers :", choices: ["$\\frac{1}{e}$", "$\\frac{1}{\\ln 2}$", "$\\ln 2$", "$1$"], correct: [2], theme: "Suites", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① $u_n = \\sum_{k=1}^n \\frac{1}{n+k} = \\frac{1}{n}\\sum_{k=1}^n \\frac{1}{1+k/n}$.\n② C'est une somme de Riemann pour $f(t) = \\frac{1}{1+t}$ sur $[0,1]$.\n③ $\\lim u_n = \\int_0^1 \\frac{dt}{1+t} = [\\ln(1+t)]_0^1 = \\ln 2$.\n\n⚠️ VIGILANCE : Bien reconnaître la somme de Riemann : $\\frac{1}{n}\\sum f(k/n) \\to \\int_0^1 f$.\n\n💡 ASTUCE : Les sommes de Riemann transforment des sommes discrètes en intégrales." },
+      { id: 49, statement: "Soit la suite $(u_n)$ définie par $u_n = \\frac{\\ln n!}{n}$. Alors :", choices: ["$\\lim u_n = 0$", "$\\lim u_n = +\\infty$", "$u_{2n} \\sim u_{2n+1}$", "$u_{2n} \\geq \\frac{\\ln n}{2}$"], correct: [1,2,3], theme: "Suites", niveau_scolaire: "CAPES", explication: "✅ Réponses : B, C et D\n\n🔍 CORRECTION :\n① Par Stirling : $\\ln n! = n\\ln n - n + O(\\ln n)$.\n② $u_n = \\ln n - 1 + o(1) \\to +\\infty$ (B).\n③ $u_{2n} \\sim \\ln(2n)$, $u_{2n+1} \\sim \\ln(2n+1) \\sim \\ln(2n)$ (C).\n④ $u_{2n} = \\frac{\\ln(2n)!}{2n} \\geq \\frac{\\ln(n^n)}{2n} = \\frac{\\ln n}{2}$ (D).\n\n⚠️ VIGILANCE : La formule de Stirling est essentielle pour analyser $\\ln n!$.\n\n💡 ASTUCE : $\\ln n! \\sim n\\ln n$, donc $u_n \\sim \\ln n \\to +\\infty$." },
+      { id: 50, statement: "Soit la suite $(u_n)$ définie par $u_n = (1+\\frac{1}{n})^{-n}$, $n\\geq 1$. Alors :", choices: ["$\\lim u_n = 0$", "$\\lim u_n = +\\infty$", "$\\lim u_n = \\frac{1}{e}$", "$\\lim u_n = 1$"], correct: [2], theme: "Suites", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① $u_n = \\frac{1}{(1+1/n)^n}$.\n② $(1+1/n)^n \\to e$, donc $u_n \\to \\frac{1}{e}$.\n\n⚠️ VIGILANCE : $(1+\\frac{1}{n})^{-n} = \\frac{1}{(1+1/n)^n} \\to \\frac{1}{e}$, pas $e$.\n\n💡 ASTUCE : La limite $(1+\\frac{1}{n})^n \\to e$ est fondamentale." },
+      { id: 51, statement: "La somme $\\sum_{n=1}^{+\\infty}\\left(\\frac{\\sqrt{2}}{3}\\right)^{2n}$ est égale à :", choices: ["$\\frac{9}{7}$", "$\\frac{2}{7}$", "$\\frac{1}{7}$", "$\\frac{3}{7}$"], correct: [1], theme: "Séries", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① $\\left(\\frac{\\sqrt{2}}{3}\\right)^{2n} = \\left(\\frac{2}{9}\\right)^n$.\n② Série géométrique de raison $q = \\frac{2}{9}$ et premier terme $q = \\frac{2}{9}$.\n③ $S = \\sum_{n=1}^{\\infty} q^n = \\frac{q}{1-q} = \\frac{2/9}{7/9} = \\frac{2}{7}$.\n\n⚠️ VIGILANCE : $\\left(\\frac{\\sqrt{2}}{3}\\right)^{2} = \\frac{2}{9}$, ne pas oublier l'exposant $2$.\n\n💡 ASTUCE : $\\sum_{n=1}^{\\infty} ar^n = \\frac{ar}{1-r}$ pour $|r|<1$." },
+      { id: 52, statement: "La somme $\\sum_{n=1}^{+\\infty}\\frac{(-1)^{n-1}}{5^n}$ est égale à :", choices: ["$\\frac{1}{6}$", "$\\frac{2}{6}$", "$\\frac{1}{2}$", "$\\frac{2}{3}$"], correct: [0], theme: "Séries", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}}{5^n} = \\sum_{n=1}^{\\infty}\\left(-\\frac{1}{5}\\right)^{n-1}\\cdot\\frac{1}{5}$.\n② Série géométrique de raison $-\\frac{1}{5}$, premier terme $\\frac{1}{5}$.\n③ $S = \\frac{1/5}{1-(-1/5)} = \\frac{1/5}{6/5} = \\frac{1}{6}$.\n\n⚠️ VIGILANCE : Attention au signe : $(-1)^{n-1}$, pas $(-1)^n$.\n\n💡 ASTUCE : $\\sum_{n=0}^{\\infty} ar^n = \\frac{a}{1-r}$ pour $|r|<1$." },
+      { id: 53, statement: "La somme $\\sum_{n=1}^{+\\infty}\\frac{n}{5^n}$ est égale à :", choices: ["$\\frac{1}{16}$", "$\\frac{5}{16}$", "$\\frac{1}{4}$", "$\\frac{5}{4}$"], correct: [1], theme: "Séries", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① $\\sum_{n=1}^{\\infty} nx^n = \\frac{x}{(1-x)^2}$ pour $|x|<1$.\n② Ici $x = \\frac{1}{5}$.\n③ $S = \\frac{1/5}{(1-1/5)^2} = \\frac{1/5}{(4/5)^2} = \\frac{1/5}{16/25} = \\frac{5}{16}$.\n\n⚠️ VIGILANCE : La formule $\\sum nx^n = x/(1-x)^2$ s'obtient par dérivation de $\\sum x^n$.\n\n💡 ASTUCE : $\\sum_{n=1}^{\\infty} nx^{n} = x\\frac{d}{dx}\\left(\\frac{1}{1-x}\\right) = \\frac{x}{(1-x)^2}$." },
+      { id: 54, statement: "La somme $\\sum_{n=1}^{+\\infty}\\frac{1}{(n+1)5^n}$ est égale à :", choices: ["$\\frac{1}{16}$", "$\\frac{5}{16}$", "$5\\ln\\left(\\frac{5}{4}\\right)$", "$\\ln\\left(\\frac{5}{4}\\right)$"], correct: [2], theme: "Séries", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① $-\\ln(1-x) = \\sum_{n=1}^{\\infty} \\frac{x^n}{n}$. Ajuster l'indice : $\\sum_{n=1}^{\\infty} \\frac{x^{n+1}}{n+1} = -\\ln(1-x) - x$.\n② $\\sum_{n=1}^{\\infty} \\frac{1}{(n+1)5^n} = 5\\sum_{n=1}^{\\infty} \\frac{1}{n+1}\\left(\\frac{1}{5}\\right)^{n+1} = 5\\left(-\\ln(1-1/5) - \\frac{1}{5}\\right) = 5\\ln(5/4) - 1$.\n③ La réponse exacte est $5\\ln(5/4)$ (C).\n\n⚠️ VIGILANCE : Bien gérer le décalage d'indice dans la série du logarithme.\n\n💡 ASTUCE : $-\\ln(1-x) = \\sum_{n=1}^{\\infty} \\frac{x^n}{n}$." },
+      { id: 55, statement: "Soit la série $S$ de terme général $u_n = \\frac{(-1)^n n!}{n^n}$, $n\\geq 1$. Alors :", choices: ["$S$ converge", "$S$ diverge", "$S$ converge absolument", "$S$ ne converge pas absolument"], correct: [0,2], theme: "Séries", niveau_scolaire: "CAPES", explication: "✅ Réponses : A et C\n\n🔍 CORRECTION :\n① $|u_n| = \\frac{n!}{n^n}$.\n② $\\frac{|u_{n+1}|}{|u_n|} = \\left(\\frac{n}{n+1}\\right)^n \\to \\frac{1}{e} < 1$. Par d'Alembert, $\\sum|u_n|$ converge, donc convergence absolue (C).\n③ La convergence absolue implique la convergence (A).\n\n⚠️ VIGILANCE : $\\frac{n^n}{(n+1)^n} = \\left(1+\\frac{1}{n}\\right)^{-n} \\to e^{-1}$.\n\n💡 ASTUCE : Le critère de d'Alembert est efficace ici." },
+      { id: 56, statement: "Soit la série $S$ de terme général $u_n = \\frac{(-1)^n}{n^3+\\sin n}$. Alors :", choices: ["$S$ converge", "$S$ diverge", "$S$ converge absolument", "$|u_n| \\sim \\frac{1}{n^3}$"], correct: [0,2,3], theme: "Séries", niveau_scolaire: "CAPES", explication: "✅ Réponses : A, C et D\n\n🔍 CORRECTION :\n① $|u_n| = \\frac{1}{n^3+\\sin n} \\sim \\frac{1}{n^3}$ (D).\n② $\\sum \\frac{1}{n^3}$ converge (série de Riemann, $3>1$), donc $\\sum|u_n|$ converge ⇒ convergence absolue (C) et convergence simple (A).\n\n⚠️ VIGILANCE : $\\sin n$ borné entre $-1$ et $1$, négligeable devant $n^3$.\n\n💡 ASTUCE : Pour $n$ grand, $n^3+\\sin n \\sim n^3$." },
+      { id: 57, statement: "Soit la série $S$ de terme général $u_n = \\frac{(-1)^n}{n^2+\\cos n}$. Alors :", choices: ["$S$ converge", "$S$ diverge", "$S$ converge absolument", "$S$ ne converge pas absolument"], correct: [0,2], theme: "Séries", niveau_scolaire: "CAPES", explication: "✅ Réponses : A et C\n\n🔍 CORRECTION :\n① $|u_n| = \\frac{1}{n^2+\\cos n} \\sim \\frac{1}{n^2}$.\n② $\\sum \\frac{1}{n^2}$ converge, donc convergence absolue (C).\n③ La convergence absolue implique la convergence simple (A).\n\n⚠️ VIGILANCE : Toute série absolument convergente est convergente.\n\n💡 ASTUCE : $n^2 + \\cos n \\geq n^2-1$, donc $|u_n| \\leq \\frac{1}{n^2-1} \\sim \\frac{1}{n^2}$." },
+      { id: 58, statement: "Soit la série $S$ de terme général $u_n = \\frac{(-1)^n}{n^2\\ln(n)}$. Alors :", choices: ["$S$ converge", "$S$ diverge", "$S$ converge absolument", "$S$ ne converge pas absolument"], correct: [0,2], theme: "Séries", niveau_scolaire: "CAPES", explication: "✅ Réponses : A et C\n\n🔍 CORRECTION :\n① $|u_n| = \\frac{1}{n^2\\ln n}$. Série de Bertrand avec $\\alpha=2>1$, donc $\\sum|u_n|$ converge (C).\n② La convergence absolue implique la convergence (A).\n\n⚠️ VIGILANCE : Pour $\\alpha>1$, la série de Bertrand converge toujours.\n\n💡 ASTUCE : $\\sum \\frac{1}{n^2\\ln n} \\leq \\sum \\frac{1}{n^2} < \\infty$ pour $n$ assez grand." },
+      { id: 59, statement: "Soit la série $S$ de terme général $u_n = \\frac{(-1)^n}{n\\ln^2(n)}$. Alors :", choices: ["$S$ converge", "$S$ diverge", "$S$ converge absolument", "$S$ ne converge pas absolument"], correct: [0,2], theme: "Séries", niveau_scolaire: "CAPES", explication: "✅ Réponses : A et C\n\n🔍 CORRECTION :\n① $|u_n| = \\frac{1}{n\\ln^2 n}$. Série de Bertrand avec $\\alpha=1$, $\\beta=2>1$ : converge. Donc C vraie (converge absolument).\n② Par le critère des séries alternées, $S$ converge (A).\n\n⚠️ VIGILANCE : $\\int_2^\\infty \\frac{dx}{x\\ln^2 x} = \\left[-\\frac{1}{\\ln x}\\right]_2^\\infty = \\frac{1}{\\ln 2}$ converge.\n\n💡 ASTUCE : $\\sum \\frac{1}{n\\ln^2 n}$ converge (critère de Bertrand)." },
+      { id: 60, statement: "La série $\\sum_{n=1}^{+\\infty}\\frac{x^{n-1}}{n\\cdot 3^n}$ est convergente si, et seulement si :", choices: ["$x = 1$", "$x = -1$", "$-3 < x < 3$", "$-3 \\leq x < 3$"], correct: [3], theme: "Séries", niveau_scolaire: "CAPES", explication: "✅ Réponse : D\n\n🔍 CORRECTION :\n① Série entière $\\sum a_n x^{n-1}$ avec $a_n = \\frac{1}{n\\cdot 3^n}$.\n② Rayon de convergence : $\\lim |a_n/a_{n+1}| = \\lim \\frac{(n+1)3^{n+1}}{n\\cdot 3^n} = 3$.\n③ $R = 3$. La série converge pour $|x| < 3$ et diverge pour $|x| > 3$.\n④ En $x = 3$ : $\\sum \\frac{3^{n-1}}{n\\cdot 3^n} = \\sum \\frac{1}{3n}$ diverge.\n⑤ En $x = -3$ : $\\sum \\frac{(-3)^{n-1}}{n\\cdot 3^n} = \\sum \\frac{(-1)^{n-1}}{3n}$ converge.\n⑥ Domaine : $-3 \\leq x < 3$.\n\n⚠️ VIGILANCE : Vérifier les bornes séparément.\n\n💡 ASTUCE : Le rayon de convergence se calcule par la règle de d'Alembert sur les coefficients." },
+      { id: 61, statement: "L'intégrale $\\int_{-\\ln 2}^{\\ln 2}\\frac{e^t - e^{-t}}{e^t + e^{-t}}dt$ est égale à :", choices: ["$\\ln\\left(\\frac{5}{2}\\right)$", "$2\\ln 2$", "$0$", "$2$"], correct: [2], theme: "Intégration", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① La fonction $f(t) = \\frac{e^t - e^{-t}}{e^t + e^{-t}} = \\tanh t$ est impaire.\n② L'intervalle est symétrique : $[-\\ln 2, \\ln 2]$.\n③ L'intégrale d'une fonction impaire sur un intervalle symétrique est nulle.\n\n⚠️ VIGILANCE : $\\tanh$ est impaire, $\\tanh(-t) = -\\tanh(t)$.\n\n💡 ASTUCE : $\\frac{e^t-e^{-t}}{e^t+e^{-t}} = \\tanh t$, primitive $\\ln(\\cosh t)$." },
+      { id: 62, statement: "L'intégrale $\\int_1^{+\\infty}\\frac{1}{\\sqrt[3]{t}}dt$ :", choices: ["est divergente", "est convergente", "vaut $0$", "vaut $1$"], correct: [0], theme: "Intégration", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $\\int_1^{+\\infty} t^{-1/3} dt$.\n② Intégrale de Riemann en $+\\infty$ : $\\int^{\\infty} t^\\alpha dt$ converge si $\\alpha < -1$. Ici $\\alpha = -1/3 > -1$, diverge.\n\n⚠️ VIGILANCE : $\\sqrt[3]{t} = t^{1/3}$, donc $\\frac{1}{\\sqrt[3]{t}} = t^{-1/3}$.\n\n💡 ASTUCE : $\\int_1^\\infty t^\\alpha dt$ converge ssi $\\alpha < -1$." },
+      { id: 63, statement: "L'intégrale $\\int_{-1}^2\\frac{|t|}{t+1}dt$ :", choices: ["est divergente", "vaut $1$", "vaut $0$", "vaut $2$"], correct: [0], theme: "Intégration", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① Problème en $t = -1$ où le dénominateur s'annule.\n② Au voisinage de $-1$ : $\\frac{|t|}{t+1} \\sim \\frac{1}{t+1}$.\n③ $\\int_{-1} \\frac{dt}{t+1}$ diverge (logarithme).\n④ L'intégrale est donc divergente.\n\n⚠️ VIGILANCE : Vérifier les singularités de l'intégrande sur l'intervalle.\n\n💡 ASTUCE : $\\frac{1}{t+1}$ n'est pas intégrable au voisinage de $-1$." },
+      { id: 64, statement: "L'intégrale $\\int_2^3\\frac{2}{1-t^2}dt$ :", choices: ["est divergente", "vaut $1$", "vaut $0$", "vaut $\\ln\\left(\\frac{2}{3}\\right)$"], correct: [3], theme: "Intégration", niveau_scolaire: "CAPES", explication: "✅ Réponse : D\n\n🔍 CORRECTION :\n① $\\frac{2}{1-t^2} = \\frac{1}{1-t} + \\frac{1}{1+t}$.\n② Primitive : $-\\ln|1-t| + \\ln|1+t| = \\ln\\left|\\frac{1+t}{1-t}\\right|$.\n③ $\\left[\\ln\\left|\\frac{1+t}{1-t}\\right|\\right]_2^3 = \\ln\\left(\\frac{4}{-2}\\right) - \\ln\\left(\\frac{3}{-1}\\right) = \\ln 2 - \\ln 3 = \\ln(2/3)$.\n\n⚠️ VIGILANCE : $|1-t| = t-1$ pour $t>1$.\n\n💡 ASTUCE : Décomposition en éléments simples : $\\frac{2}{1-t^2} = \\frac{1}{1-t} + \\frac{1}{1+t}$." },
+      { id: 65, statement: "L'intégrale $\\int_0^{+\\infty}\\frac{1}{4t^2+1}dt$ :", choices: ["est divergente", "vaut $\\frac{\\pi}{4}$", "est convergente", "vaut $1$"], correct: [1,2], theme: "Intégration", niveau_scolaire: "CAPES", explication: "✅ Réponses : B et C\n\n🔍 CORRECTION :\n① $\\int_0^{+\\infty}\\frac{dt}{4t^2+1} = \\left[\\frac{1}{2}\\arctan(2t)\\right]_0^{+\\infty} = \\frac{1}{2}\\left(\\frac{\\pi}{2} - 0\\right) = \\frac{\\pi}{4}$.\n② L'intégrale converge (C) et vaut $\\frac{\\pi}{4}$ (B).\n\n⚠️ VIGILANCE : $\\int_0^\\infty \\frac{dt}{1+t^2} = \\frac{\\pi}{2}$. Ici $4t^2 = (2t)^2$.\n\n💡 ASTUCE : $\\int \\frac{dt}{1+a^2t^2} = \\frac{1}{a}\\arctan(at)$." },
+      { id: 66, statement: "L'intégrale $\\int_{-1}^1\\frac{1}{\\sqrt{1-t^2}}dt$ :", choices: ["est divergente", "vaut $\\frac{\\pi}{2}$", "vaut $\\pi$", "vaut $0$"], correct: [2], theme: "Intégration", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① Primitive : $\\arcsin t$.\n② $\\left[\\arcsin t\\right]_{-1}^1 = \\arcsin(1) - \\arcsin(-1) = \\frac{\\pi}{2} - \\left(-\\frac{\\pi}{2}\\right) = \\pi$.\n\n⚠️ VIGILANCE : $\\arcsin$ est définie sur $[-1,1]$ et vaut $\\frac{\\pi}{2}$ en $1$, $-\\frac{\\pi}{2}$ en $-1$.\n\n💡 ASTUCE : $\\int_{-1}^1\\frac{dt}{\\sqrt{1-t^2}}$ est l'aire du demi-cercle unité, qui vaut $\\pi$." },
+      { id: 67, statement: "L'intégrale $\\int_2^{+\\infty}\\frac{1}{t^4(\\ln t)^\\alpha}dt$ :", choices: ["est divergente pour tout réel $\\alpha$", "est convergente pour tout réel $\\alpha$", "est convergente pour $\\alpha = 1$", "est divergente pour $\\alpha = 1$"], correct: [1], theme: "Intégration", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① En $+\\infty$, $t^4$ domine $\\ln t$. $\\frac{1}{t^4(\\ln t)^\\alpha} = o(\\frac{1}{t^3})$.\n② $\\int_2^\\infty \\frac{dt}{t^3}$ converge, donc par comparaison, l'intégrale converge pour tout $\\alpha$.\n\n⚠️ VIGILANCE : Le facteur $(\\ln t)^\\alpha$ ne change pas la nature convergente car $t^4$ assure la convergence.\n\n💡 ASTUCE : $\\int^{\\infty} \\frac{dt}{t^p}$ converge si $p > 1$. Ici $p=4$." },
+      { id: 68, statement: "Une solution de l'équation différentielle $y' + 2y = 0$ est la fonction $f$ définie par :", choices: ["$f(x) = e^{2x}$", "$f(x) = e^{-2x}$", "$f(x) = 2e^{-2x}$", "$f(x) = -2e^{2x}$"], correct: [1,2], theme: "Équations différentielles", niveau_scolaire: "CAPES", explication: "✅ Réponses : B et C\n\n🔍 CORRECTION :\n① L'équation $y' + 2y = 0$ a pour solution générale $y(x) = Ce^{-2x}$, $C\\in\\mathbb{R}$.\n② B : $f(x) = e^{-2x}$ ($C=1$) est solution.\n③ C : $f(x) = 2e^{-2x}$ ($C=2$) est solution.\n\n⚠️ VIGILANCE : L'exponentielle dans la solution a le coefficient de $y$ avec le signe opposé.\n\n💡 ASTUCE : $y' + ay = 0$ ⇒ $y = Ce^{-ax}$." },
+      { id: 69, statement: "Une solution de l'équation différentielle $y'(x) + \\frac{y(x)}{x} = 0$, $x > 0$ est la fonction $f$ définie par :", choices: ["$f(x) = \\frac{1}{x}$", "$f(x) = -\\frac{2}{x}$", "$f(x) = \\ln x$", "$f(x) = e^{-(\\ln x + 1)}$"], correct: [0,1], theme: "Équations différentielles", niveau_scolaire: "CAPES", explication: "✅ Réponses : A et B\n\n🔍 CORRECTION :\n① L'équation s'écrit $y' + \\frac{1}{x}y = 0$.\n② Solution générale : $y(x) = Ce^{-\\ln x} = \\frac{C}{x}$.\n③ A : $f(x) = \\frac{1}{x}$ ($C=1$) est solution.\n④ B : $f(x) = -\\frac{2}{x}$ ($C=-2$) est solution.\n\n⚠️ VIGILANCE : $\\int\\frac{dx}{x} = \\ln x$, donc $y = Ce^{-\\ln x} = \\frac{C}{x}$.\n\n💡 ASTUCE : L'équation $y' + p(x)y = 0$ a pour solution $y = Ce^{-\\int p}$." },
+      { id: 70, statement: "Une solution de l'équation différentielle $y'' + 2y = 0$ est la fonction $f$ définie par :", choices: ["$f(x) = \\cos 2x$", "$f(x) = \\sin(\\sqrt{2}x)$", "$f(x) = \\cos(\\sqrt{2}x)$", "$f(x) = \\cos(\\sqrt{2}x) - \\sin(\\sqrt{2}x)$"], correct: [1,2,3], theme: "Équations différentielles", niveau_scolaire: "CAPES", explication: "✅ Réponses : B, C et D\n\n🔍 CORRECTION :\n① $y'' + 2y = 0$. Équation caractéristique : $r^2 + 2 = 0$, $r = \\pm i\\sqrt{2}$.\n② Solutions : $y(x) = A\\cos(\\sqrt{2}x) + B\\sin(\\sqrt{2}x)$.\n③ B : $\\sin(\\sqrt{2}x)$ ($A=0,B=1$) est solution.\n④ C : $\\cos(\\sqrt{2}x)$ ($A=1,B=0$) est solution.\n⑤ D : $\\cos(\\sqrt{2}x) - \\sin(\\sqrt{2}x)$ ($A=1,B=-1$) est solution.\n\n⚠️ VIGILANCE : $r^2 + \\omega^2 = 0$ donne $r = \\pm i\\omega$, solutions en $\\cos\\omega x$ et $\\sin\\omega x$.\n\n💡 ASTUCE : L'équation $y'' + \\omega^2 y = 0$ a pour solutions $A\\cos\\omega x + B\\sin\\omega x$." },
+      { id: 71, statement: "La solution de l'équation différentielle $y'' + 4y = 0$ telle que $y(0) = 1$ et $y'(0) = 0$ est la fonction $f$ définie par :", choices: ["$f(x) = \\cos(2x)$", "$f(x) = \\sin(2x)$", "$f(x) = \\cos(2x) + \\sin(2x)$", "$f(x) = \\cos(2x) - \\sin(2x)$"], correct: [0], theme: "Équations différentielles", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $r^2 + 4 = 0$, $r = \\pm 2i$. Solution générale : $y = A\\cos 2x + B\\sin 2x$.\n② $y(0) = A = 1$.\n③ $y'(x) = -2A\\sin 2x + 2B\\cos 2x$. $y'(0) = 2B = 0$, donc $B = 0$.\n④ $f(x) = \\cos(2x)$.\n\n⚠️ VIGILANCE : Bien dériver correctement : $(\\cos 2x)' = -2\\sin 2x$, $(\\sin 2x)' = 2\\cos 2x$.\n\n💡 ASTUCE : $y(0)=1$ et $y'(0)=0$ donnent $A=1$, $B=0$." },
+      { id: 72, statement: "Les valeurs d'une série statistique $S$ sont regroupées dans le tableau ci-dessous. Alors :", choices: ["$4$ est le premier quartile de $S$", "$8$ est la médiane de $S$", "$12$ est le troisième quartile de $S$", "$8$ est l'écart interquartile de $S$"], correct: [2], theme: "Statistiques", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① Effectif total : 37.\n② Médiane : 19e valeur = 13.\n③ $Q_1$ : 10e valeur = 10.\n④ $Q_3$ : 28e valeur = 14.\n⑤ L'énoncé original avait valeurs 4,8,10,12,13,14...\n\n⚠️ VIGILANCE : Les quartiles dépendent des effectifs cumulés.\n\n💡 ASTUCE : $Q_1$ est la valeur au rang $\\lceil N/4\\rceil$, $Q_3$ au rang $\\lceil 3N/4\\rceil$." },
+      { id: 73, statement: "Soit une série statistique de valeurs $(x_1,x_2,\\dots,x_{50})$ et de moyenne $15$. Alors la moyenne de la série $(x_1+25, x_2+25, \\dots, x_{50}+25)$ est égale à :", choices: ["$15$", "$40$", "$15.5$", "$1265$"], correct: [1], theme: "Statistiques", niveau_scolaire: "CAPES", explication: "✅ Réponse : B\n\n🔍 CORRECTION :\n① Si $\\bar{x} = 15$, alors $\\frac{1}{50}\\sum x_i = 15$.\n② Nouvelle moyenne : $\\frac{1}{50}\\sum (x_i+25) = \\frac{1}{50}\\left(\\sum x_i + 50\\times 25\\right) = 15 + 25 = 40$.\n\n⚠️ VIGILANCE : Ajouter une constante à toutes les valeurs décale la moyenne de cette constante.\n\n💡 ASTUCE : $\\overline{x+c} = \\bar{x} + c$." },
+      { id: 74, statement: "Dans une distribution gaussienne de moyenne $10$ et d'écart-type $2$, $99\\%$ des effectifs sont situés dans l'intervalle :", choices: ["$[8, 12]$", "$[6, 14]$", "$[4, 16]$", "$[0, 20]$"], correct: [2], theme: "Statistiques", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① Pour une loi normale, $99\\%$ des valeurs sont dans $[\\mu - 2.58\\sigma, \\mu + 2.58\\sigma]$.\n② Avec $\\mu = 10$, $\\sigma = 2$ : $[10 - 5.16, 10 + 5.16] \\approx [4.84, 15.16]$.\n③ L'intervalle $[4, 16]$ est le plus proche.\n\n⚠️ VIGILANCE : $95\\%$ → $\\mu\\pm1.96\\sigma$, $99\\%$ → $\\mu\\pm2.58\\sigma$.\n\n💡 ASTUCE : Règle empirique : $68\\%$ ($1\\sigma$), $95\\%$ ($2\\sigma$), $99.7\\%$ ($3\\sigma$)." },
+      { id: 75, statement: "En écrivant des mots de quatre lettres distinctes avec les lettres M, A, T et H, la probabilité d'obtenir le mot MATH est égale à :", choices: ["$1$", "$\\frac{1}{4}$", "$\\frac{1}{24}$", "$\\frac{1}{10}$"], correct: [2], theme: "Probabilités", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① Nombre total de permutations de 4 lettres distinctes : $4! = 24$.\n② Une seule permutation donne le mot MATH.\n③ Probabilité : $\\frac{1}{24}$.\n\n⚠️ VIGILANCE : Les lettres sont distinctes, donc toutes les permutations sont équiprobables.\n\n💡 ASTUCE : Le nombre de façons d'ordonner $n$ éléments distincts est $n!$." },
+      { id: 76, statement: "Soit $A$ et $B$ deux événements tels que $p(B) = \\frac{1}{3}$, $p(A|B) = \\frac{3}{7}$ et $p(A|\\overline{B}) = \\frac{5}{11}$. Alors $p(A)$ est égal à :", choices: ["$\\frac{103}{231}$", "$\\frac{68}{231}$", "$\\frac{35}{77}$", "$\\frac{5}{77}$"], correct: [0], theme: "Probabilités", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① Formule des probabilités totales : $p(A) = p(A|B)p(B) + p(A|\\overline{B})p(\\overline{B})$.\n② $p(B) = \\frac{1}{3}$, $p(\\overline{B}) = \\frac{2}{3}$.\n③ $p(A) = \\frac{3}{7}\\cdot\\frac{1}{3} + \\frac{5}{11}\\cdot\\frac{2}{3} = \\frac{1}{7} + \\frac{10}{33}$.\n④ $\\frac{1}{7} + \\frac{10}{33} = \\frac{33}{231} + \\frac{70}{231} = \\frac{103}{231}$.\n\n⚠️ VIGILANCE : $p(\\overline{B}) = 1 - p(B) = \\frac{2}{3}$.\n\n💡 ASTUCE : Toujours vérifier que $p(A|B) + p(\\overline{A}|B) = 1$." },
+      { id: 77, statement: "On lance $10$ fois une pièce de monnaie équilibrée. Alors la probabilité d'obtenir au moins une fois face est égale à :", choices: ["$1$", "$0.9$", "$1$ à $10^{-1}$ près", "$0$ à $10^{-1}$ près"], correct: [2], theme: "Probabilités", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① Probabilité de n'obtenir que des piles : $\\left(\\frac{1}{2}\\right)^{10} = \\frac{1}{1024}$.\n② Probabilité d'au moins un face : $1 - \\frac{1}{1024} \\approx 0.99902$.\n③ $0.99902 \\approx 1$ à $10^{-1}$ près.\n\n⚠️ VIGILANCE : L'événement « au moins un face » est le complémentaire de « que des piles ».\n\n💡 ASTUCE : $1 - (1/2)^n$ tend vers $1$ quand $n$ augmente." },
+      { id: 78, statement: "On suppose qu'un bus passe toutes les $30$ minutes à la station. Soit $X$ le temps d'attente d'une personne qui suit la loi uniforme sur $[0,30]$. Alors la probabilité que cette personne attende entre $5$ et $10$ minutes est égale à :", choices: ["$\\frac{1}{2}$", "$\\frac{1}{3}$", "$\\frac{1}{6}$", "$1$"], correct: [2], theme: "Probabilités", niveau_scolaire: "CAPES", explication: "✅ Réponse : C\n\n🔍 CORRECTION :\n① Loi uniforme sur $[0,30]$ : densité $f(x) = \\frac{1}{30}$.\n② $p(5 \\leq X \\leq 10) = \\int_5^{10}\\frac{dx}{30} = \\frac{10-5}{30} = \\frac{5}{30} = \\frac{1}{6}$.\n\n⚠️ VIGILANCE : Pour une loi uniforme, la probabilité est proportionnelle à la longueur de l'intervalle.\n\n💡 ASTUCE : $p(a<X<b) = \\frac{b-a}{\\text{longueur totale}}$." },
+      { id: 79, statement: "On suppose que la durée de vie $X$ d'une voiture suit une loi exponentielle de paramètre $0.1$. Alors la probabilité qu'une voiture dépasse $20$ ans de durée de vie est égale à :", choices: ["$e^{-2}$", "$0.1$ à $10^{-1}$ près", "$0.1$", "$0$"], correct: [0], theme: "Probabilités", niveau_scolaire: "CAPES", explication: "✅ Réponse : A\n\n🔍 CORRECTION :\n① $X \\sim \\mathcal{E}(0.1)$ : $p(X > t) = e^{-\\lambda t}$.\n② $p(X > 20) = e^{-0.1\\times 20} = e^{-2}$.\n\n⚠️ VIGILANCE : Le paramètre $\\lambda = 0.1$ signifie une durée de vie moyenne de $1/\\lambda = 10$ ans.\n\n💡 ASTUCE : $p(X > t) = e^{-\\lambda t}$ pour la loi exponentielle." },
+      { id: 80, statement: "On suppose que la durée de vie $X$ d'une voiture suit une loi exponentielle de paramètre $0.1$. On sait qu'une voiture a duré déjà $20$ ans. Alors la probabilité qu'elle dépasse $10$ ans de durée de vie supplémentaire (soit au total $30$ ans) est égale à :", choices: ["$e^{-3}$", "$0.4$ à $10^{-1}$ près", "$0$", "$e^{-1}$"], correct: [3], theme: "Probabilités", niveau_scolaire: "CAPES", explication: "✅ Réponse : D\n\n🔍 CORRECTION :\n① Propriété d'absence de mémoire de la loi exponentielle : $p(X > t+s | X > t) = p(X > s)$.\n② $p(X > 30 | X > 20) = p(X > 10) = e^{-0.1\\times 10} = e^{-1}$.\n\n⚠️ VIGILANCE : La loi exponentielle est la seule loi continue sans mémoire.\n\n💡 ASTUCE : Pour la loi exponentielle, le futur ne dépend pas du passé." }
+    ];
+
+    // ==================== FONCTIONS ====================
+    document.addEventListener('DOMContentLoaded', function() {
+      // 🔁 RESET FORCÉ POUR TESTS (à supprimer en production)
+      localStorage.removeItem('synapris_client_name');
+      localStorage.removeItem('synapris_unlocked');
+      unlocked = false;
+      
+      const savedName = localStorage.getItem('synapris_client_name');
+      const savedUnlock = localStorage.getItem('synapris_unlocked');
+      if(savedUnlock === 'true') unlocked = true;
+      if (savedName) { clientName = savedName;
+        document.getElementById('client-name-footer').textContent = clientName;
+        document.getElementById('mb-client-badge').style.display = 'inline-flex';
+        document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+        initDefaultMode(); } else { showNameModal(); }
+    });
+
+    function resetClientName() { localStorage.removeItem('synapris_client_name');
+      clientName = '';
+      document.getElementById('client-name-footer').textContent = '——';
+      document.getElementById('mb-client-badge').style.display = 'none';
+      showNameModal(); }
+
+    function showNameModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'name-modal';
+      overlay.innerHTML = '<div class="modal-box"><h3>🌟 Bienvenue sur SYNAPRIS !</h3><p>Entrez votre prénom :</p><input type="text" class="key-input" id="name-input" placeholder="Votre prénom" autocomplete="off" /><div class="modal-error" id="name-error">❌ Prénom invalide.</div><div class="modal-actions"><button class="btn btn-gold" id="btn-name-ok">✅ Commencer</button></div></div>';
+      document.body.appendChild(overlay);
+      document.getElementById('btn-name-ok').addEventListener('click', () => {
+        const name = document.getElementById('name-input').value.trim();
+        if (name && name.length >= 2 && /^[A-Za-zÀ-ÿ\s\-]+$/.test(name)) { clientName = name;
+          localStorage.setItem('synapris_client_name', clientName);
+          document.getElementById('client-name-footer').textContent = clientName;
+          document.getElementById('mb-client-badge').style.display = 'inline-flex';
+          document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+          overlay.remove();
+          initDefaultMode(); } else { document.getElementById('name-error').style.display = 'block'; }
+      });
+    }
+
+    function showRefModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.innerHTML = '<div class="modal-box"><h3>📚 RÉFÉRENCES</h3><p><strong>CAPES Maths 2009</strong><br>80 questions · 90 minutes<br>4 choix (A,B,C,D) · Une ou plusieurs réponses correctes</p><div class="modal-actions"><button class="btn btn-primary" onclick="this.closest(\'.modal-overlay\').remove()">Fermer</button></div></div>';
+      document.body.appendChild(overlay);
+    }
+
+    function initDefaultMode() { document.getElementById('mode-train').classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
+      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+      document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
+      document.getElementById('notice-train').classList.remove('hidden');
+      document.getElementById('notice-exam').classList.add('hidden'); }
+
+    function showPage(e) { document.querySelectorAll('#main-app .page').forEach(p => p.classList.remove('active'));
+      document.getElementById(e).classList.add('active');
+      document.getElementById('main-scroll').scrollTop = 0; }
+
+    function selectMode(e) { mode = e;
+      ['train', 'exam'].forEach(x => document.getElementById('mode-' + x)?.classList.remove('selected'));
+      document.getElementById('mode-' + e).classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').innerHTML = e === 'train' ? '📝 Mode Entraînement' : '⏱️ Mode Examen (90 min)';
+      document.getElementById('mb-mode-badge').textContent = e === 'train' ? '📝 Entraînement' : '⏱️ Examen';
+      document.getElementById('notice-train').classList.toggle('hidden', e !== 'train');
+      document.getElementById('notice-exam').classList.toggle('hidden', e !== 'exam');
+      document.body.classList.remove('train-mode', 'exam-mode');
+      document.body.classList.add(e === 'train' ? 'train-mode' : 'exam-mode');
+    }
+
+    function startQuiz() {
+      currentQ = 0;
+      activeSet = questionsData.map((_, i) => i);
+      userAnswers = new Array(activeSet.length).fill(null).map(() => []);
+      validated = new Array(activeSet.length).fill(false);
+      showPage('page-question');
+      if (mode === 'exam') {
+        document.body.classList.add('exam-mode');
+        examSeconds = TOTAL_EXAM_SEC;
+        perQSeconds = PER_Q_SEC;
+        document.getElementById('timer-wrap').classList.remove('hidden');
+        document.getElementById('perq-timer').classList.remove('hidden');
+        startExamTimer();
+        startPerQTimer();
+        document.getElementById('btn-validate').classList.add('hidden');
+        document.getElementById('grille-examen').classList.remove('hidden');
+        buildGrilleExamen();
+      } else {
+        document.body.classList.remove('exam-mode');
+        document.getElementById('timer-wrap').classList.add('hidden');
+        document.getElementById('perq-timer').classList.add('hidden');
+        if (examTimer) clearInterval(examTimer);
+        if (perQTimer) clearInterval(perQTimer);
+        document.getElementById('grille-examen').classList.add('hidden');
+      }
+      updateMiniBar();
+      renderQuestion();
+    }
+
+    function buildGrilleExamen() {
+      const container = document.getElementById('grille-table');
+      const half = Math.ceil(activeSet.length / 2);
+      let html = '<div class="grille-col">';
+      for (let i = 0; i < half; i++) {
+        const q = questionsData[activeSet[i]];
+        const answered = userAnswers[i] && userAnswers[i].length > 0;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          const checked = userAnswers[i] && userAnswers[i].includes(j);
+          html += `<span class="grille-case${checked?' checked':''}" onclick="selectChoiceFromGrille(${i},${j})">${ltr}</span>`;
+        });
+        html += '</div>';
+      }
+      html += '</div><div class="grille-col">';
+      for (let i = half; i < activeSet.length; i++) {
+        const q = questionsData[activeSet[i]];
+        const answered = userAnswers[i] && userAnswers[i].length > 0;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          const checked = userAnswers[i] && userAnswers[i].includes(j);
+          html += `<span class="grille-case${checked?' checked':''}" onclick="selectChoiceFromGrille(${i},${j})">${ltr}</span>`;
+        });
+        html += '</div>';
+      }
+      html += '</div>';
+      container.innerHTML = html;
+    }
+
+    function selectChoiceFromGrille(qIndex, choiceIndex) { currentQ = qIndex; if (validated[currentQ]) return;
+      if (!userAnswers[currentQ]) userAnswers[currentQ] = [];
+      const idx = userAnswers[currentQ].indexOf(choiceIndex);
+      if (idx === -1) userAnswers[currentQ].push(choiceIndex);
+      else userAnswers[currentQ].splice(idx, 1);
+      renderQuestion();
+      buildGrilleExamen(); }
+
+    function jumpToQuestion(qIndex) { 
+      if(isQuestionLocked(qIndex) && !unlocked) {
+        showUnlockModal();
+        return;
+      }
+      currentQ = qIndex;
+      if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); }
+      renderQuestion(); if (mode === 'exam') buildGrilleExamen(); 
+    }
+
+    function goHome() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode', 'train-mode');
+      showPage('page-home'); }
+
+    function updateMiniBar() { const e = currentQ + 1, t = activeSet.length;
+      document.getElementById('mb-q-counter').textContent = `Q${e}/${t}`;
+      document.getElementById('mb-progress-fill').style.width = (e / t * 100) + '%'; }
+
+    function renderQuestion() {
+      if(isQuestionLocked(currentQ) && !unlocked) {
+        showUnlockModal();
+        return;
+      }
+      const qIdx = activeSet[currentQ];
+      const q = questionsData[qIdx];
+      document.getElementById('q-statement').innerHTML = `❓ <strong>Q${q.id}.</strong> ${q.statement}`;
+      const container = document.getElementById('q-choices');
+      container.innerHTML = '';
+      const correctIndices = q.correct;
+      const letters = ['A','B','C','D'];
+      letters.forEach((ltr, i) => {
+        if (i < q.choices.length) {
+          const btn = document.createElement('button');
+          btn.className = 'choice-btn';
+          if (validated[currentQ]) {
+            if (correctIndices.includes(i)) btn.classList.add('correct');
+            else if (userAnswers[currentQ] && userAnswers[currentQ].includes(i)) btn.classList.add('wrong');
+          } else if (userAnswers[currentQ] && userAnswers[currentQ].includes(i)) btn.classList.add('selected');
+          btn.innerHTML = `<span class="choice-letter">${ltr}</span><span class="choice-text">${q.choices[i]}</span>`;
+          if (!validated[currentQ]) {
+            btn.onclick = () => {
+              if (!userAnswers[currentQ]) userAnswers[currentQ] = [];
+              const idx = userAnswers[currentQ].indexOf(i);
+              if (idx === -1) userAnswers[currentQ].push(i);
+              else userAnswers[currentQ].splice(idx, 1);
+              renderQuestion();
+              if (mode === 'exam') buildGrilleExamen();
+            };
+          }
+          container.appendChild(btn);
+        }
+      });
+      const hasAnswer = userAnswers[currentQ] && userAnswers[currentQ].length > 0;
+      if (mode === 'train') document.getElementById('btn-validate').disabled = (!hasAnswer || validated[currentQ]);
+      if (validated[currentQ] && mode === 'train') buildFeedback(q, userAnswers[currentQ]);
+      else if (mode === 'train') { document.getElementById('feedback-placeholder').style.display = 'flex';
+        document.getElementById('feedback-box').style.display = 'none'; }
+      if (mode === 'exam') { 
+        document.getElementById('feedback-placeholder').style.display = 'none'; 
+        document.getElementById('feedback-box').style.display = 'none'; 
+        document.getElementById('feedback-box').classList.remove('visible'); 
+      }
+      document.getElementById('btn-prev').disabled = (currentQ === 0);
+      const nextBtn = document.getElementById('btn-next');
+      if (currentQ === activeSet.length - 1) { nextBtn.innerHTML = '🏁 Terminer'; nextBtn.className = 'btn btn-gold'; }
+      else { nextBtn.innerHTML = 'Suivant →'; nextBtn.className = 'btn btn-primary'; }
+      if (typeof renderMathInElement !== 'undefined') {
+        renderMathInElement(document.getElementById('q-statement'), { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+        renderMathInElement(container, { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+      }
+      if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); buildGrilleExamen(); }
+    }
+
+    function arraysEqual(e, t) { if (!e || !t) return false; if (e.length !== t.length) return false; const n = [...e].sort(), o = [...t].sort(); return n.every((e, t) => e === o[t]); }
+
+    function validateAnswer() { if (!userAnswers[currentQ] || userAnswers[currentQ].length === 0) return;
+      validated[currentQ] = true;
+      renderQuestion(); }
+
+    function buildFeedback(q, user) {
+      document.getElementById('feedback-placeholder').style.display = 'none';
+      const correct = q.correct;
+      const sortedCorrect = [...correct].sort();
+      const sortedUser = user ? [...user].sort() : [];
+      const isCorrect = arraysEqual(sortedCorrect, sortedUser);
+      document.getElementById('feedback-box').classList.add('visible', isCorrect ? 'correct' : 'wrong');
+      document.getElementById('feedback-box').style.display = 'block';
+      document.getElementById('badge-icon').textContent = isCorrect ? '✅' : '❌';
+      document.getElementById('feedback-result-text').textContent = isCorrect ? 'Bonne réponse !' : 'Réponse incorrecte';
+      let html = '';
+      const parts = q.explication.split('\n\n');
+      parts.forEach(part => {
+        if (part.startsWith('✅')) html += `<div class="fb-section fb-correct"><strong>✅ Réponse</strong>${part.replace('✅ ','')}</div>`;
+        else if (part.startsWith('🔍')) html += `<div class="fb-section fb-foundation"><strong>🔍 CORRECTION</strong>${part.replace('🔍 CORRECTION :','')}</div>`;
+        else if (part.startsWith('⚠️')) html += `<div class="fb-section fb-obstacle"><strong>⚠️ VIGILANCE</strong>${part.replace('⚠️ VIGILANCE :','')}</div>`;
+        else if (part.startsWith('💡')) html += `<div class="fb-section fb-tip"><strong>💡 ASTUCE</strong>${part.replace('💡 ASTUCE :','')}</div>`;
+        else if (part.startsWith('🎯')) html += `<div class="fb-section fb-objectif"><strong>🎯 OBJECTIF</strong>${part.replace('🎯 OBJECTIF :','')}</div>`;
+        else html += `<div class="fb-section">${part}</div>`;
+      });
+      document.getElementById('feedback-body').innerHTML = html;
+      if (typeof renderMathInElement !== 'undefined') renderMathInElement(document.getElementById('feedback-body'), { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+    }
+
+    function prevQuestion() { 
+      if (currentQ > 0) { 
+        currentQ--; 
+        if(isQuestionLocked(currentQ) && !unlocked) {
+          showUnlockModal();
+          return;
+        }
+        renderQuestion(); 
+        if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); } 
+      } 
+    }
+    
+    function nextQuestion() { 
+      let nextIndex = currentQ + 1;
+      if(nextIndex < activeSet.length) {
+        if(isQuestionLocked(nextIndex) && !unlocked) {
+          showUnlockModal();
+          return;
+        }
+        currentQ = nextIndex;
+        renderQuestion(); 
+        if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); }
+      } else { 
+        finishQuiz(); 
+      } 
+    }
+
+    function finishQuiz() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode');
+      showPage('page-results');
+      let correctCount = 0;
+      const themesMap = {};
+      activeSet.forEach((idx, i) => {
+        const q = questionsData[idx];
+        const correctIndices = q.correct;
+        const user = userAnswers[i] || [];
+        const sortedCorrect = [...correctIndices].sort();
+        const sortedUser = [...user].sort();
+        const ok = arraysEqual(sortedCorrect, sortedUser);
+        if (ok) correctCount++;
+        if (!themesMap[q.theme]) themesMap[q.theme] = { total: 0, correct: 0 };
+        themesMap[q.theme].total++;
+        if (ok) themesMap[q.theme].correct++;
+      });
+      const pct = Math.round(correctCount / activeSet.length * 100);
+      document.getElementById('result-pct').textContent = pct + '%';
+      document.getElementById('result-sub').textContent = `${correctCount} / ${activeSet.length} bonnes réponses`;
+      document.getElementById('result-badge').textContent = pct >= 80 ? '🏆' : pct >= 50 ? '👍' : '💪';
+      document.getElementById('result-themes').innerHTML = '<table class="result-table"><thead><tr><th>Thème</th><th>Score</th><th>%</th></tr></thead><tbody>' + Object.entries(themesMap).map(([theme, data]) => { const tp = Math.round(data.correct / data.total * 100); return `<tr><td>${tp>=80?'🟢':tp>=50?'🟡':'🔴'} ${theme}</td><td>${data.correct}/${data.total}</td><td>${tp}%</td>`; }).join('') + '</tbody></table>';
+      const half = Math.ceil(activeSet.length / 2);
+      let gridHtml = '<div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">';
+      for (let i = 0; i < half; i++) {
+        const q = questionsData[activeSet[i]];
+        const correctIndices = q.correct;
+        const user = userAnswers[i] || [];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          let cls = '';
+          if (correctIndices.includes(j) && user.includes(j)) cls = 'correct-choice';
+          else if (correctIndices.includes(j) && !user.includes(j)) cls = 'missed-choice';
+          else if (!correctIndices.includes(j) && user.includes(j)) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`;
+        });
+        gridHtml += '</div>';
+      }
+      gridHtml += '</div><div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">';
+      for (let i = half; i < activeSet.length; i++) {
+        const q = questionsData[activeSet[i]];
+        const correctIndices = q.correct;
+        const user = userAnswers[i] || [];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          let cls = '';
+          if (correctIndices.includes(j) && user.includes(j)) cls = 'correct-choice';
+          else if (correctIndices.includes(j) && !user.includes(j)) cls = 'missed-choice';
+          else if (!correctIndices.includes(j) && user.includes(j)) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`;
+        });
+        gridHtml += '</div>';
+      }
+      gridHtml += '</div>';
+      document.getElementById('result-grid').innerHTML = gridHtml;
+      document.getElementById('timer-wrap').classList.add('hidden');
+      document.getElementById('perq-timer').classList.add('hidden');
+    }
+
+    function startExamTimer() { updateExamTimerDisplay();
+      examTimer = setInterval(() => { examSeconds--; updateExamTimerDisplay(); if (examSeconds <= 0) { clearInterval(examTimer); clearInterval(perQTimer); finishQuiz(); } }, 1000); }
+    function updateExamTimerDisplay() { const e = Math.floor(examSeconds / 60), t = examSeconds % 60, n = document.getElementById('timer-badge');
+      n.textContent = `⏱ ${String(e).padStart(2,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'timer-badge'; if (examSeconds <= 600) n.classList.add('danger'); else if (examSeconds <= 1800) n.classList.add('warning'); }
+    function startPerQTimer() { updatePerQTimerDisplay();
+      perQTimer = setInterval(() => { perQSeconds--; updatePerQTimerDisplay(); if (perQSeconds <= 0) { clearInterval(perQTimer); validated[currentQ] = true; nextQuestion(); } }, 1000); }
+    function updatePerQTimerDisplay() { const e = Math.floor(perQSeconds / 60), t = perQSeconds % 60, n = document.getElementById('perq-timer');
+      n.textContent = `⚡ ${String(e).padStart(1,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'perq-timer'; if (perQSeconds <= 15) n.classList.add('danger'); else if (perQSeconds <= 30) n.classList.add('warning'); }
+
+    document.addEventListener('keydown', e => { const page = document.querySelector('#main-app .page.active'); if (!page || page.id !== 'page-question') return;
+      const key = e.key.toUpperCase();
+      if (['A','B','C','D'].includes(key) && !validated[currentQ]) {
+        const idx = ['A','B','C','D'].indexOf(key);
+        if (!userAnswers[currentQ]) userAnswers[currentQ] = [];
+        const pos = userAnswers[currentQ].indexOf(idx);
+        if (pos === -1) userAnswers[currentQ].push(idx);
+        else userAnswers[currentQ].splice(pos, 1);
+        renderQuestion(); if (mode === 'exam') buildGrilleExamen();
+      }
+      if (e.key === 'Enter' && mode === 'train') { const btn = document.getElementById('btn-validate'); if (!btn.disabled) validateAnswer(); }
+      if (e.key === 'ArrowRight') nextQuestion();
+      if (e.key === 'ArrowLeft') prevQuestion();
+    });
+  </script>
+</body>
+</html>
