@@ -330,22 +330,16 @@
       document.body.appendChild(overlay);
     }
 
-    function initDefaultMode() { 
-  document.getElementById('mode-train').classList.add('selected');
-  document.getElementById('btn-start').disabled = false;
-  document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
-  document.getElementById('mb-mode-badge').style.display = 'inline-flex';
-  document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
-  document.getElementById('notice-train').classList.remove('hidden');
-  document.getElementById('notice-exam').classList.add('hidden');
-  mode = 'train';
-}
+        function initDefaultMode() { 
+      document.getElementById('mode-train').classList.add('selected');
       document.getElementById('btn-start').disabled = false;
       document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
       document.getElementById('mb-mode-badge').style.display = 'inline-flex';
       document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
       document.getElementById('notice-train').classList.remove('hidden');
-      document.getElementById('notice-exam').classList.add('hidden'); }
+      document.getElementById('notice-exam').classList.add('hidden');
+      mode = 'train';
+    }
 
     function showPage(e) { document.querySelectorAll('#main-app .page').forEach(p => p.classList.remove('active'));
       document.getElementById(e).classList.add('active');
@@ -392,37 +386,22 @@ function showExamInstructionsModal() {
     updateMiniBar();
     renderQuestion(); });
 }
-    function startQuiz() {
-  if(mode === 'exam') { 
-    showExamInstructionsModal(); 
-    return; 
-  }
-  currentQ = 0;
-  // ... (reste du code identique)
-}
+        function startQuiz() {
+      if(mode === 'exam') { 
+        showExamInstructionsModal(); 
+        return; 
+      }
+      currentQ = 0;
       activeSet = questionsData.map((_, i) => i);
       userAnswers = new Array(activeSet.length).fill(null).map(() => []);
       validated = new Array(activeSet.length).fill(false);
       showPage('page-question');
-      if (mode === 'exam') {
-        document.body.classList.add('exam-mode');
-        examSeconds = TOTAL_EXAM_SEC;
-        perQSeconds = PER_Q_SEC;
-        document.getElementById('timer-wrap').classList.remove('hidden');
-        document.getElementById('perq-timer').classList.remove('hidden');
-        startExamTimer();
-        startPerQTimer();
-        document.getElementById('btn-validate').classList.add('hidden');
-        document.getElementById('grille-examen').classList.remove('hidden');
-        buildGrilleExamen();
-      } else {
-        document.body.classList.remove('exam-mode');
-        document.getElementById('timer-wrap').classList.add('hidden');
-        document.getElementById('perq-timer').classList.add('hidden');
-        if (examTimer) clearInterval(examTimer);
-        if (perQTimer) clearInterval(perQTimer);
-        document.getElementById('grille-examen').classList.add('hidden');
-      }
+      document.body.classList.remove('exam-mode');
+      document.getElementById('timer-wrap').classList.add('hidden');
+      document.getElementById('perq-timer').classList.add('hidden');
+      if (examTimer) clearInterval(examTimer);
+      if (perQTimer) clearInterval(perQTimer);
+      document.getElementById('grille-examen').classList.add('hidden');
       updateMiniBar();
       renderQuestion();
     }
