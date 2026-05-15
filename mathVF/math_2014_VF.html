@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Synapris — CAPES Mathématiques 2014</title>
+  <link rel="icon" type="image/png"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231a237e'/%3E%3Ctext x='50' y='68' font-size='60' font-family='Inter,sans-serif' font-weight='800' fill='%23f0a500' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#0f1f3d;--primary-mid:#1a3360;--accent:#f0a500;--accent-dark:#d4900a;--green:#2e7d32;--green-light:#e8f5e9;--red:#c62828;--red-light:#ffebee;--orange:#ef6c00;--white:#ffffff;--gray-light:#f5f7fa;--gray:#90a4ae;--sky-deep:#3b82f6;--sky-card:#eff6ff;--sky-border:#93c5fd;--shadow:0 4px 20px rgba(15,31,61,0.10);--shadow-sm:0 2px 8px rgba(15,31,61,0.08);--radius:12px;--font-ar:'Amiri',serif;--font-heading:'Inter',sans-serif;--font-fr:'Source Sans 3',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{font-family:var(--font-fr);font-size:18px;line-height:1.6;background:linear-gradient(160deg,#fdfbf7 0%,#f8f5ee 45%,#fef9f0 100%);color:#1a1a2e;display:flex;flex-direction:column}
+    .site-header{background:linear-gradient(135deg,#0b152e 0%,#1a2d5a 100%);color:var(--white);padding:2vh 1vw;height:23vh;display:flex;align-items:center;flex-shrink:0;box-shadow:0 3px 16px rgba(0,0,0,0.35)}
+    .header-grid{display:grid;grid-template-columns:130px 1fr 280px;gap:14px;align-items:center;width:100%}
+    .header-col1{display:flex;flex-direction:column;align-items:center;gap:6px}
+    .logo-square{width:100px;height:100px;border-radius:18px;background:#ffffff;display:flex;align-items:center;justify-content:center;border:3px solid var(--white);box-shadow:0 0 0 5px rgba(255,255,255,0.20);overflow:hidden}
+    .logo-square img{width:100%;height:100%;object-fit:contain}
+    .header-col1 .verset{font-family:var(--font-ar);font-size:16px;font-weight:700;color:var(--accent);text-align:center;font-style:italic;line-height:1.3}
+    .header-col2{background:var(--accent);border-radius:12px;padding:14px 16px;text-align:center}
+    .header-col2 .concours-ar{font-family:var(--font-ar);font-size:20px;font-weight:800;color:#0f1f3d;line-height:1.4;margin-bottom:6px;direction:rtl}
+    .header-col2 .specialite{font-family:var(--font-ar);font-size:15px;color:#0f1f3d;font-weight:700;direction:rtl}
+    .header-col3{text-align:center}
+    .header-col3 .accroche{font-family:var(--font-heading);font-size:14px;font-weight:600;color:var(--accent);margin-bottom:4px;animation:blink 1.2s infinite;}
+    .header-col3 .marque{font-size:20px;font-weight:800;color:var(--white);letter-spacing:1px}
+    .header-col3 .marque span{color:var(--accent);animation:blink 1.2s infinite;}
+    .header-col3 .session{font-size:11px;color:rgba(255,255,255,0.75);margin-bottom:8px}
+    .header-col3 .titre-epreuve{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.30)}
+    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:1vh 1vw;height:7vh;font-size:2vh;display:flex;align-items:center;gap:14px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
+    .mini-bar .mb-progress{flex:1;min-width:80px;display:flex;align-items:center;gap:10px}
+    .mb-progress span{font-size:2vh;font-weight:700}
+    .mb-progress-bar{flex:1;height:8px;background:#e0e5ec;border-radius:4px;overflow:hidden}
+    .mb-progress-fill{height:100%;background:linear-gradient(90deg,var(--sky-deep),var(--accent));border-radius:4px;transition:width .4s ease}
+    .mb-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:14px;font-weight:700;font-size:1.8vh;white-space:nowrap}
+    .mb-badge.mode-badge{background:#e8f0fb;color:var(--sky-deep)}
+    .mb-badge.client-badge{background:#fff3e0;color:var(--accent-dark)}
+    .main-scroll{flex:1;overflow-y:auto;padding:12px 0 8px;height:60vh}
+    .main-content{max-width:1100px;margin:0 auto;padding:0 18px 20px;height:100%;display:flex;flex-direction:column}
+    .page{display:none;height:100%}
+    .page.active{display:block;animation:fadeIn .35s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0.5}}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 28px;margin-bottom:18px;border-left:6px solid var(--primary)}
+    .card.sky{border-left-color:var(--sky-deep);background:#fafcff}
+    .card-title{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+    .btn{font-family:var(--font-fr);font-size:15px;font-weight:600;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover:not(:disabled){background:var(--primary-mid)}
+    .btn-sky{background:var(--sky-deep);color:var(--white)}.btn-sky:hover:not(:disabled){background:#2563eb}
+    .btn-green{background:var(--green);color:var(--white)}.btn-green:hover:not(:disabled){background:#388e3c}
+    .btn-gold{background:var(--accent);color:var(--primary);font-weight:700}.btn-gold:hover:not(:disabled){background:var(--accent-dark)}
+    .btn-gray{background:#6c757d;color:var(--white)}.btn-gray:hover:not(:disabled){background:#5a6268}
+    .btn-outline-white{border:2px solid var(--white);color:var(--white);background:transparent;font-size:13px;padding:8px 16px}.btn-outline-white:hover{background:rgba(255,255,255,0.10)}
+    .btn-whatsapp{background:#25d366;color:var(--white)}.btn-whatsapp:hover{background:#1ebe57}
+    .btn-block{display:flex;width:100%;margin-top:14px;font-size:16px;padding:14px}
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 16px;max-width:560px;margin-left:auto;margin-right:auto}
+    .mode-card{background:#f8faff;border:2px solid var(--sky-border);border-radius:var(--radius);padding:22px 14px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+    .mode-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--sky-deep);transform:scaleX(0);transform-origin:center;transition:transform .2s}
+    .mode-card:hover::after,.mode-card.selected::after{transform:scaleX(1)}
+    .mode-card:hover,.mode-card.selected{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sky-deep)}
+    .mode-card.exam-card::after{background:var(--red)}.mode-card.exam-card:hover,.mode-card.exam-card.selected{border-color:var(--red);background:#fff5f5}
+    .mode-icon{font-size:36px;display:block;margin-bottom:6px}.mode-name{font-size:17px;font-weight:700;color:var(--primary)}
+    .mode-desc{font-size:13px;color:var(--gray);margin-top:4px;line-height:1.5}
+    .notice-box{background:#fffdf5;border:2px dashed var(--accent);border-radius:12px;padding:16px 20px;margin:12px 0 0;font-size:15px;line-height:1.6;display:flex;align-items:flex-start;gap:12px}
+    .notice-box .notice-icon{font-size:28px;flex-shrink:0;margin-top:2px}
+    .ref-btn{background:transparent;border:1.5px dashed var(--gray);color:var(--gray);font-size:13px;padding:8px 16px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:10px 0 0;transition:all .2s}
+    .ref-btn:hover{border-color:var(--accent);color:var(--accent);background:#fffdf5}
+    .question-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;height:calc(100% - 60px)}
+    .q-left{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;border:1.5px solid var(--sky-border);display:flex;flex-direction:column;height:100%;overflow-y:auto}
+    .q-right{min-height:120px;display:flex;flex-direction:column;height:100%;overflow-y:auto}
+    .question-statement{font-size:16px;color:#1a1a2e;line-height:1.8;margin-bottom:14px;padding:14px 18px;background:#f8faff;border-radius:12px;border-left:5px solid var(--accent);user-select:text}
+    .choices-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:14px;flex:1}
+    .choice-btn{font-family:var(--font-fr);font-size:15px;padding:11px 16px;border:2px solid var(--sky-border);border-radius:12px;background:var(--white);color:#1a1a2e;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:flex-start;gap:10px;width:100%}
+    .choice-btn:hover:not(:disabled){background:#f0f6ff;border-color:var(--sky-deep)}
+    .choice-btn.selected{background:#e8f0ff;border-color:var(--sky-deep);box-shadow:0 0 0 4px rgba(59,130,246,0.15)}
+    .choice-btn.correct{background:var(--green-light);border-color:var(--green);color:var(--green);font-weight:600}
+    .choice-btn.wrong{background:var(--red-light);border-color:var(--red);color:var(--red)}
+    .choice-btn:disabled{cursor:default}
+    .choice-letter{width:30px;height:30px;border-radius:50%;background:var(--primary);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;margin-top:2px}
+    .choice-btn.correct .choice-letter{background:var(--green)}.choice-btn.wrong .choice-letter{background:var(--red)}.choice-btn.selected .choice-letter{background:var(--sky-deep)}
+    .choice-text{flex:1}
+    .nav-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .nav-row .btn-group{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .feedback-placeholder{background:#f8faff;border:2px dashed var(--sky-border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:140px;padding:24px 16px;text-align:center;color:var(--gray)}
+    .feedback-placeholder .ph-icon{font-size:36px;margin-bottom:8px}.feedback-placeholder .ph-text{font-size:14px}
+    .feedback-box{display:none;animation:fadeIn .3s ease}.feedback-box.visible{display:block}
+    .feedback-header{display:flex;align-items:center;gap:10px;padding:14px 20px;font-size:17px;font-weight:700;border-radius:12px 12px 0 0;border:2px solid transparent;border-bottom:none}
+    .feedback-box.correct .feedback-header{background:var(--green-light);color:var(--green);border-color:var(--green)}
+    .feedback-box.wrong .feedback-header{background:var(--red-light);color:var(--red);border-color:var(--red)}
+    .feedback-body{padding:20px 24px;background:#fafcff;border:2px solid #dbeafe;border-top:none;border-radius:0 0 12px 12px;font-size:15px;line-height:1.8;user-select:text;white-space:pre-line;max-height:400px;overflow-y:auto}
+    .feedback-box.correct .feedback-body{border-color:var(--green)}.feedback-box.wrong .feedback-body{border-color:var(--red)}
+    .fb-section{margin-bottom:14px;padding:14px 18px;border-radius:10px;background:#f9fafb;border-left:5px solid var(--sky-deep)}
+    .fb-section.fb-correct{background:#f0faf0;border-left-color:var(--green)}
+    .fb-section.fb-foundation{background:#f0f4ff;border-left-color:var(--sky-deep)}
+    .fb-section.fb-reference{background:#fef9f0;border-left-color:var(--accent-dark)}
+    .fb-section.fb-obstacle{background:#fff5f5;border-left-color:var(--red)}
+    .fb-section.fb-tip{background:#fffdf0;border-left-color:var(--accent)}
+    .fb-section.fb-objectif{background:#f0faf8;border-left-color:var(--primary)}
+    .fb-section strong{display:block;margin-bottom:5px;font-size:16px;letter-spacing:0.3px}
+    .hidden{display:none!important}
+    .exam-mode .q-left,.exam-mode .q-right{border-radius:2px;border:1px solid #999;box-shadow:none}
+    .grille-examen{background:#faf9f6;border:2px solid #555;border-radius:2px;padding:12px 10px;font-family:'Courier New',monospace;font-size:12px;user-select:none;overflow-y:auto;max-height:75vh}
+    .grille-examen h4{text-align:center;font-size:14px;margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-family:var(--font-fr)}
+    .grille-table{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+    .grille-col{display:flex;flex-direction:column;gap:2px}
+    .grille-row{display:flex;align-items:center;gap:4px;font-size:11px}
+    .grille-q-num{width:28px;font-weight:700;text-align:right;cursor:pointer;color:var(--primary);font-family:var(--font-fr)}
+    .grille-q-num.answered{color:var(--accent-dark);animation:subtlePulse 1.5s infinite}
+    @keyframes subtlePulse{0%,100%{opacity:1}50%{opacity:0.5}}
+    .grille-case{width:20px;height:20px;border:1.5px solid #555;display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;cursor:pointer;background:#fff;transition:all .15s}
+    .grille-case:hover{background:#ddd}.grille-case.checked{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;font-family:'Courier New',monospace;font-size:13px}
+    .result-row{display:flex;align-items:center;gap:6px;padding:4px 0}
+    .result-q-num{width:32px;font-weight:700;font-family:var(--font-fr)}
+    .result-case{width:24px;height:24px;border:2px solid #aaa;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;background:#f5f5f5}
+    .result-case.correct-choice{background:#2e7d32;color:#fff;border-color:#2e7d32}
+    .result-case.wrong-choice{background:#c62828;color:#fff;border-color:#c62828}
+    .result-case.missed-choice{background:#fff3e0;border-color:#ef6c00;color:#ef6c00}
+    .timer-wrap{text-align:center;margin-bottom:10px}
+    .timer-badge{display:inline-flex;align-items:center;gap:6px;background:#f8faff;border:2px solid var(--sky-border);border-radius:10px;padding:6px 16px;font-size:20px;font-weight:700;color:var(--primary);transition:all .3s}
+    .timer-badge.warning{background:#fff8f0;border-color:var(--orange);color:var(--orange)}
+    .timer-badge.danger{background:var(--red-light);border-color:var(--red);color:var(--red);animation:pulse .8s infinite}
+    .perq-timer{font-size:12px;color:var(--gray);margin-left:8px;font-weight:600}.perq-timer.warning{color:var(--orange)}.perq-timer.danger{color:var(--red)}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+    .site-footer{background:var(--primary);color:rgba(255,255,255,0.85);padding:1vh 1vw;height:10vh;font-size:1.5vh;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .site-footer .footer-info{font-weight:600}.site-footer .footer-info strong{color:var(--accent);font-weight:700}
+    .site-footer .footer-buttons{display:flex;gap:8px;flex-wrap:wrap}
+    .footer-reset{background:transparent;border:1px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.7);font-size:10px;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all .2s}
+    .footer-reset:hover{border-color:var(--accent);color:var(--accent)}
+    .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,31,61,0.80);display:flex;align-items:center;justify-content:center;z-index:1000;animation:fadeIn .3s ease}
+    .modal-box{background:var(--white);border-radius:var(--radius);padding:32px 28px;max-width:520px;width:90%;text-align:center;box-shadow:0 14px 50px rgba(0,0,0,0.35);border-top:6px solid var(--accent)}
+    .modal-box.rtl{direction:rtl;font-family:var(--font-ar);text-align:right}
+    .modal-box h3{font-family:var(--font-heading);font-size:24px;color:var(--primary);margin-bottom:10px}
+    .modal-box.rtl h3{font-family:var(--font-ar);font-size:22px}
+    .modal-box p{font-size:16px;color:#555;margin-bottom:20px;line-height:1.7}
+    .modal-box .key-input{width:100%;padding:14px 16px;border:2px solid var(--sky-border);border-radius:10px;font-size:18px;text-align:center;font-family:var(--font-fr);letter-spacing:2px;margin-bottom:16px;outline:none;transition:border-color .2s}
+    .modal-box .key-input:focus{border-color:var(--accent)}
+    .modal-box .modal-error{color:var(--red);font-size:14px;font-weight:600;margin-bottom:10px;display:none}
+    .modal-box .modal-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .score-card{text-align:center;padding:28px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px}
+    .score-badge{font-size:56px;display:block;margin-bottom:8px}.score-pct{font-size:52px;font-weight:800;color:var(--primary);display:block}
+    .score-label{font-size:18px;font-weight:600;color:var(--gray);display:block;margin-top:6px}.score-sub{font-size:15px;color:var(--gray);display:block}
+    .result-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+    .result-table th{background:var(--primary);color:var(--white);padding:8px 10px;text-align:left}
+    .result-table td{padding:7px 10px;border-bottom:1px solid #e0e5ec}
+    .intro-banner{background:linear-gradient(135deg,#fff8e7 0%,#fff3d6 40%,#fef9f0 100%);border-radius:18px;padding:40px 28px;text-align:center;box-shadow:var(--shadow);border:2px solid var(--accent);margin-bottom:20px}
+    .intro-banner .intro-logo{font-family:var(--font-heading);font-size:48px;font-weight:800;color:var(--primary);letter-spacing:3px;margin-bottom:20px}
+    .intro-banner .intro-logo span{color:var(--accent)}
+    .intro-banner .intro-logo img{max-width:200px;height:auto;margin:0 auto}
+    .intro-banner .intro-slogan{font-size:22px;font-weight:600;color:#555;margin:8px 0 20px}
+    .intro-banner .intro-features{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:24px 0}
+    .intro-feature{text-align:center;font-size:16px;font-weight:600;color:var(--primary)}.intro-feature .feat-icon{font-size:40px;display:block;margin-bottom:6px}
+    body.exam-mode .site-header, body.exam-mode .site-footer, body.train-mode .site-header, body.train-mode .site-footer { display: none; }
+    @media(max-width:480px){body{font-size:16px}.header-grid{grid-template-columns:20% 50% 30%;gap:4px}.logo-square{width:48px;height:48px;border-radius:10px}.header-col1 .verset{font-size:8px}.header-col2 .concours-ar{font-size:11px!important}.header-col2 .specialite{font-size:9px}.header-col3 .accroche{font-size:9px}.header-col3 .marque{font-size:12px}.header-col3 .session{font-size:7px}.header-col3 .titre-epreuve{font-size:14px}.mini-bar{padding:6px 10px;gap:8px;font-size:11px}.mini-bar .mb-progress span{font-size:12px}.mb-badge{font-size:9px;padding:3px 8px}.main-content{padding:0 8px 14px}.mode-grid{gap:8px}.mode-card{padding:14px 6px}.mode-icon{font-size:28px}.mode-name{font-size:13px}.mode-desc{font-size:10px}.question-layout{grid-template-columns:1fr;gap:6px}.q-left{padding:12px}.question-statement{font-size:13px;padding:10px 12px}.choice-btn{font-size:12px;padding:8px 10px}.choice-letter{width:24px;height:24px;font-size:10px}.btn{font-size:12px;padding:8px 14px}.btn-block{font-size:14px;padding:10px}.site-footer{padding:8px 12px;flex-direction:column;text-align:center}.site-footer .footer-buttons{justify-content:center}.grille-examen{font-size:9px;padding:6px 4px;max-height:55vh}.grille-examen h4{font-size:10px;margin-bottom:6px}.grille-table{gap:3px 5px}.grille-row{font-size:8px;gap:1px}.grille-q-num{width:18px;font-size:8px}.grille-case{width:15px;height:15px;font-size:6px}.result-grid{font-size:10px;gap:4px 10px}.result-case{width:22px;height:22px;font-size:8px}.intro-banner{padding:24px 14px}.intro-banner .intro-logo{font-size:32px}.intro-banner .intro-slogan{font-size:16px}.intro-feature{font-size:13px}.intro-feature .feat-icon{font-size:30px}}
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <header class="site-header">
+    <div class="header-grid">
+      <div class="header-col1"><div class="logo-square"><img src="images/logo.PNG" alt="Synapris"></div><div class="verset">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</div></div>
+      <div class="header-col2"><div class="concours-ar">المناظرة الخارجية بالاختبارات لانتداب أساتذة<br>التعليم الثانوي و التعليم التقني و التعليم الفني</div><div class="specialite">اختصاص : الرياضيات — CAPES 2014 — المدة : 60 دقيقة</div></div>
+      <div class="header-col3"><div class="accroche">✨ Votre réussite commence ici — CAPES Maths 2014</div><div class="marque"><span>SYNAPRIS</span></div><div class="session">Session 2014 · Programme Officiel Tunisien</div><div class="titre-epreuve">QCM_MATHS_2014</div></div>
+    </div>
+  </header>
+  <div class="mini-bar" id="mini-bar"><div class="mb-progress"><span id="mb-q-counter">—</span><div class="mb-progress-bar"><div class="mb-progress-fill" id="mb-progress-fill" style="width:0%"></div></div></div><span class="mb-badge mode-badge" id="mb-mode-badge" style="display:none;">—</span><span class="mb-badge client-badge" id="mb-client-badge" style="display:none;">🔑 —</span></div>
+  <div class="main-scroll" id="main-scroll">
+    <div id="main-app" style="display:block;"><div class="main-content">
+      <div id="page-welcome" class="page active"><div class="intro-banner"><div class="intro-logo"><img src="images/logo.PNG" alt="Synapris" style="max-width:200px"></div><div class="intro-slogan">🌟 Le savoir sous tous ses prismes — CAPES Maths 2014</div><div class="intro-features"><div class="intro-feature"><span class="feat-icon">📝</span>Entraînez-vous</div><div class="intro-feature"><span class="feat-icon">⏱️</span>Simulez l'examen</div><div class="intro-feature"><span class="feat-icon">💡</span>Comprenez vos erreurs</div><div class="intro-feature"><span class="feat-icon">📊</span>Suivez votre progrès</div></div><button class="btn btn-gold btn-block" onclick="showPage('page-home')" style="max-width:400px;margin:0 auto;">✨ Accéder au QCM Maths 2014</button><p style="font-size:13px;color:var(--gray);margin-top:14px;">QCM interactif — CAPES Mathématiques 2014 — 60 questions · 60 minutes · 4 choix (A,B,C,D) · Une seule réponse correcte</p></div></div>
+      <div id="page-home" class="page"><div class="card sky"><div class="card-title">🎯 Choisissez votre mode</div><div class="mode-grid"><div class="mode-card" id="mode-train" onclick="selectMode('train')"><span class="mode-icon">📝</span><div class="mode-name">Mode Entraînement</div><div class="mode-desc">Feedback immédiat · Correction détaillée</div></div><div class="mode-card exam-card" id="mode-exam" onclick="selectMode('exam')"><span class="mode-icon">⏱️</span><div class="mode-name">Mode Examen</div><div class="mode-desc">Chronomètre 60 min · Conditions réelles</div></div></div><div class="notice-box" id="notice-train"><div class="notice-icon">🖱️</div><div><strong>🟢 Mode Entraînement :</strong> Cliquez sur A, B, C ou D pour choisir → <strong>Validez</strong> pour voir la correction → <strong>Flèches ← →</strong> pour naviguer. <strong>Enter</strong> pour valider. Une seule réponse correcte par question.</div></div><div class="notice-box hidden" id="notice-exam" style="background:#fff5f5;border-color:var(--red);"><div class="notice-icon">⏰</div><div><strong>🔴 Mode Examen :</strong> 60 questions en 60 minutes. Chronomètre en haut. Pas de correction avant la fin. Grille de réponses à droite. Une seule réponse correcte par question. Bonne chance !</div></div><div style="text-align:center;"><button class="ref-btn" onclick="showRefModal()">📚 Références &amp; mentions légales</button></div><button class="btn btn-sky btn-block" id="btn-start" disabled onclick="startQuiz()">⏳ Chargement...</button></div></div>
+      <div id="page-question" class="page"><div class="timer-wrap hidden" id="timer-wrap"><div class="timer-badge" id="timer-badge">⏱ 60:00</div><span class="perq-timer" id="perq-timer">⚡ 1:00</span></div><div class="question-layout"><div class="q-left"><div class="question-statement" id="q-statement"></div><div class="choices-grid" id="q-choices"></div></div><div class="q-right" id="q-right-panel"><div class="feedback-placeholder" id="feedback-placeholder"><div class="ph-icon">💬</div><div class="ph-text">Feedback après validation</div></div><div class="feedback-box" id="feedback-box"><div class="feedback-header" id="feedback-header"><span id="badge-icon"></span><span id="feedback-result-text"></span></div><div class="feedback-body" id="feedback-body"></div></div><div class="grille-examen hidden" id="grille-examen"><h4>📋 Grille de réponses</h4><div class="grille-table" id="grille-table"></div></div></div></div><div class="nav-row"><div class="btn-group"><button class="btn btn-primary" id="btn-prev" onclick="prevQuestion()" disabled>← Précédent</button><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button><button class="btn btn-green" id="btn-validate" disabled onclick="validateAnswer()">✔ Valider</button><button class="btn btn-primary" id="btn-next" onclick="nextQuestion()">Suivant →</button></div></div></div>
+      <div id="page-results" class="page"><div class="score-card"><span class="score-badge" id="result-badge">🏆</span><span class="score-pct" id="result-pct">—</span><span class="score-label">Score final</span><span class="score-sub" id="result-sub"></span></div><div class="card"><div class="card-title">📊 Résultats par thème</div><div id="result-themes"></div></div><div class="card"><div class="card-title">📋 Grille des réponses</div><div class="result-grid" id="result-grid"></div><button class="btn btn-gold btn-block" style="margin-top:8px;" onclick="goHome()">🏠 Retour à l'accueil</button></div></div>
+    </div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-info">© 2026 <strong>Synapris</strong> — Licence attribuée à <span id="client-name-footer">——</span> · Valide jusqu'au 01/03/2027 · CAPES Mathématiques 2014 · 60 questions · 60 min</div>
+    <div class="footer-buttons"><button class="footer-reset" onclick="resetClientName()" title="Changer le prénom">🔄 Changer</button><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a><a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/commander" class="btn btn-outline-white" style="background:#ef6c00; color:white; border-color:#ef6c00;">📦 Voir les offres</a></div>
+  </footer>
+  <script>
+    const FICHE_TYPE = 'full';
+    const TOTAL_EXAM_SEC = 3600, PER_Q_SEC = 60;
+    let clientName = '';
+    let mode = 'train';
+    let currentQ = 0, activeSet = [], userAnswers = [], validated = [], examTimer = null, examSeconds = 0, perQTimer = null, perQSeconds = 0;
+    let unlocked = false;
+    const VALID_KEYS = ['SYN-MAESTRO-MATH'];
+    
+    function isQuestionLocked(qIndex) {
+      if(unlocked) return false;
+      const realQNumber = qIndex + 1;
+      return realQNumber > 10;
+    }
+    
+    function showUnlockModal() {
+      if(unlocked) return;
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'unlock-modal';
+      overlay.innerHTML = `<div class="modal-box"><h3>🔐 Accès complet au QCM</h3><p>Vous avez atteint la limite des 10 questions gratuites.<br><strong>25 DT seulement</strong> pour débloquer les 50 questions restantes (Q11 à Q60) + le Pack Spécial CAPES MATH 2026.</p><input type="text" class="key-input" id="unlock-key" placeholder="Entrez votre clé d'accès" autocomplete="off"><div class="modal-error" id="unlock-error">❌ Clé invalide. Veuillez vérifier.</div><div class="modal-actions"><button class="btn btn-gold" id="btn-unlock" style="animation:blink 1.2s infinite; background:#ef6c00; color:white;">🔑 Demander l'accès complet</button><button class="btn btn-gray" id="btn-cancel-unlock">Fermer</button></div></div>`;
+      document.body.appendChild(overlay);
+      document.getElementById('btn-unlock').addEventListener('click', () => {
+        const key = document.getElementById('unlock-key').value.trim();
+        if(VALID_KEYS.includes(key)) {
+          unlocked = true;
+          localStorage.setItem('synapris_unlocked', 'true');
+          overlay.remove();
+          // Recharger avec toutes les questions
+          activeSet = questionsData.map((_, i) => i);
+          userAnswers = new Array(activeSet.length).fill(null);
+          validated = new Array(activeSet.length).fill(false);
+          renderQuestion();
+          if(mode === 'exam') buildGrilleExamen();
+        } else {
+          document.getElementById('unlock-error').style.display = 'block';
+          setTimeout(() => {
+            window.open('https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/commander', '_blank');
+          }, 500);
+        }
+      });
+      document.getElementById('btn-cancel-unlock').addEventListener('click', () => {
+        overlay.remove();
+        if(currentQ >= 10) {
+          currentQ = 9;
+          renderQuestion();
+        }
+      });
+    }
+    
+    // ==================== 60 QUESTIONS — CAPES MATHS 2014 ====================
+    const questionsData = [
+      { id: 1, statement: "Soit la fonction $f$ définie sur $]-\\infty, -1[$ par $f(x) = \\dfrac{\\sqrt{x^2-2x-3}}{x-2}$. La courbe $\\mathscr{C}$ admet une asymptote d'équation :", choices: ["$y = 1$", "$y = -1$", "$y = x$", "$y = -x$"], correct: 1, theme: "Limites et asymptotes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$f(x)=\\frac{\\sqrt{(x-1)^2-4}}{x-2}$. En $-\\infty$, $\\sqrt{x^2-2x-3}\\sim |x|=-x$. Donc $f(x)\\sim\\frac{-x}{x}=-1$. L'asymptote horizontale est $y=-1$.\n\n⚠️ VIGILANCE : Ne pas confondre $|x|$ et $x$ quand $x<0$.\n\n💡 ASTUCE : Factoriser sous la racine par le terme dominant.\n\n🎯 OBJECTIF : Déterminer une asymptote oblique ou horizontale.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 2, statement: "Soit $f$ la solution de l'équation différentielle $y' = 2y + 2$ telle que $f(0) = 1$. La valeur moyenne $\\bar{f}$ de $f$ sur $[0,1]$ est égale à :", choices: ["$e^2 - 2$", "$e^2 - 1$", "$2e^2 - 2$", "$2e^2 - 1$"], correct: 0, theme: "Équations différentielles", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nÉquation homogène : $y'=2y$ ⇒ $y_H=Ce^{2x}$. Solution particulière constante : $y_P=-1$. Solution générale : $y=Ce^{2x}-1$. $f(0)=C-1=1$ ⇒ $C=2$. Donc $f(x)=2e^{2x}-1$.\nValeur moyenne : $\\bar{f}=\\int_0^1(2e^{2x}-1)dx=[e^{2x}-x]_0^1=(e^2-1)-(1-0)=e^2-2$.\n\n⚠️ VIGILANCE : Ne pas oublier le $-x$ dans la primitive de $-1$.\n\n💡 ASTUCE : Toujours vérifier la condition initiale après avoir trouvé la solution générale.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 3, statement: "On considère la fonction $f : x \\mapsto \\dfrac{\\ln x}{x - 1 + \\ln x}$. Parmi les limites suivantes, laquelle est correcte ?", choices: ["$\\displaystyle\\lim_{x \\to 0^+} f(x) = -\\infty$", "$\\displaystyle\\lim_{x \\to +\\infty} f(x) = +\\infty$", "$\\displaystyle\\lim_{x \\to 1} f(x) = \\dfrac{1}{2}$", "$\\displaystyle\\lim_{x \\to e} f(x) = 1$"], correct: 2, theme: "Limites de fonctions", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nEn $x=1$ : $\\ln x\\sim x-1$. Donc $f(x)\\sim\\frac{x-1}{(x-1)+(x-1)}=\\frac{x-1}{2(x-1)}=\\frac{1}{2}$. La limite est $\\frac{1}{2}$.\n\n⚠️ VIGILANCE : Utiliser l'équivalent $\\ln x\\sim x-1$ au voisinage de 1.\n\n💡 ASTUCE : Pour les limites en 1 avec $\\ln x$, penser au DL $\\ln(1+u)\\sim u$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 4, statement: "Le théorème des valeurs intermédiaires s'énonce suivant la formulation :", choices: ["Si $f$ est une fonction continue et strictement croissante sur $[a,b]$, alors pour tout $c \\in [f(a), f(b)]$ il existe un unique $\\alpha \\in [a,b]$ vérifiant $f(\\alpha) = c$", "Si $f$ est une fonction continue sur $[a,b]$ tel que $f(a) \\times f(b) < 0$, alors il existe un réel unique $c$ de $]a,b[$ vérifiant $f(c) = 0$", "Si $f$ est une fonction continue sur $[a,b]$, alors pour tout $c$ compris entre $f(a)$ et $f(b)$, il existe $\\alpha \\in [a,b]$ vérifiant $f(\\alpha) = c$", "Si $f$ est une fonction continue sur $[a,b]$ et dérivable sur $]a,b[$, il existe $c \\in ]a,b[$ vérifiant $f'(c) = 0$"], correct: 2, theme: "Continuité", niveau_scolaire: "3ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nC'est l'énoncé exact du TVI : une fonction continue sur $[a,b]$ prend toute valeur comprise entre $f(a)$ et $f(b)$.\n\n⚠️ VIGILANCE : Ne pas confondre TVI, corollaire du TVI, théorème de Rolle et théorème de la bijection.\n\n💡 ASTUCE : Le TVI garantit l'existence d'au moins une solution, pas l'unicité.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 5, statement: "Soit la fonction $f$ définie sur $I = \\left[0, \\dfrac{\\pi}{2}\\right]$ par $f(x) = \\dfrac{\\sin x}{x}$ si $x \\neq 0$ et $f(0) = 1$. Alors :", choices: ["$f$ est continue et non dérivable sur $I$", "$f$ est dérivable sur $I$", "$f$ est non dérivable à droite en 0", "$f$ n'est pas continue à droite en 0"], correct: 1, theme: "Dérivabilité", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$\\lim_{x\\to 0}\\frac{\\sin x}{x}=1=f(0)$, donc $f$ est continue en 0. La dérivée à droite en 0 : $\\lim_{x\\to 0^+}\\frac{f(x)-f(0)}{x}=0$. Donc $f$ est dérivable en 0.\n\n⚠️ VIGILANCE : La limite usuelle $\\frac{\\sin x}{x}\\to 1$ donne la continuité.\n\n💡 ASTUCE : $\\sin x=x-\\frac{x^3}{6}+O(x^5)$ permet de calculer la dérivée en 0.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 6, statement: "Soit $f$ la solution de l'équation différentielle $y' = ay$, $(a \\in \\mathbb{R})$ vérifiant $f(0) = 1$ et $f(1) = 2$. Le réel $a$ est égal à :", choices: ["$1$", "$2$", "$\\ln 2$", "$e^2$"], correct: 2, theme: "Équations différentielles", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nSolution : $f(x)=Ce^{ax}$. $f(0)=C=1$ ⇒ $f(x)=e^{ax}$. $f(1)=e^a=2$ ⇒ $a=\\ln 2$.\n\n⚠️ VIGILANCE : Ne pas confondre $e^a=2$ et $a=e^2$.\n\n💡 ASTUCE : La solution de $y'=ay$ est toujours $y=Ce^{ax}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 7, statement: "Dans la figure ci-contre, on note $\\mathscr{C}$ la courbe représentative d'une fonction $f$ et $\\Gamma$ celle de sa primitive $F$. L'aire de la partie du plan délimitée par $\\mathscr{C}$, l'axe des abscisses et les droites d'équations $x = 0$ et $x = 3$ est égale à :", choices: ["$3$", "$\\dfrac{7}{2}$", "$4$", "$\\dfrac{9}{2}$"], correct: 2, theme: "Intégration — Calcul d'aire", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nL'aire est $\\int_0^3|f(x)|dx$. D'après le graphique, $F$ est la primitive de $f$. L'aire correspond à $F(3)-F(0)=4$.\n\n⚠️ VIGILANCE : L'aire est la valeur absolue de l'intégrale, mais ici $f$ est positive sur $[0,3]$.\n\n💡 ASTUCE : L'aire sous la courbe de $f$ entre $a$ et $b$ est $F(b)-F(a)$ si $f\\ge 0$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 8, statement: "Soit $f$ la solution de l'équation différentielle $y' = -2y - 3$ telle que $f(0) = \\dfrac{3}{2}$. La représentation graphique de $f$ dans un repère orthonormé est :", choices: ["Graphique A", "Graphique B", "Graphique C", "Graphique D"], correct: 1, theme: "Équations différentielles", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nSolution homogène : $y_H=Ce^{-2x}$. Solution particulière constante : $y_P=-\\frac{3}{2}$. Solution générale : $y=Ce^{-2x}-\\frac{3}{2}$. $f(0)=C-\\frac{3}{2}=\\frac{3}{2}$ ⇒ $C=3$. Donc $f(x)=3e^{-2x}-\\frac{3}{2}$. C'est une fonction décroissante qui tend vers $-\\frac{3}{2}$ en $+\\infty$, avec $f(0)=\\frac{3}{2}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 9, statement: "Soit la fonction $f : x \\mapsto (x^2 - 4)\\sqrt{x-2}$. Alors :", choices: ["$f$ n'est pas dérivable à droite en 2", "$f$ est dérivable à droite en 2 et $f'_d(2) = 1$", "$f$ est dérivable à droite en 2 et $f'_d(2) = 0$", "$f$ est dérivable à droite en 2 et $f'_d(2) = -1$"], correct: 2, theme: "Dérivabilité", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\n$f(x)=(x-2)(x+2)\\sqrt{x-2}=(x+2)(x-2)^{3/2}$. En 2, $(x-2)^{3/2}$ est dérivable à droite avec dérivée nulle car exposant $>1$. Donc $f'_d(2)=0$.\n\n⚠️ VIGILANCE : $x\\mapsto x^\\alpha$ est dérivable en 0 à droite ssi $\\alpha>1$, avec dérivée nulle si $\\alpha>1$.\n\n💡 ASTUCE : Factoriser $(x^2-4)=(x-2)(x+2)$ permet de simplifier l'étude.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 10, statement: "$\\displaystyle\\int_{-\\frac{\\pi}{3}}^{\\frac{\\pi}{3}} (x + 2\\sin x)^3\\,dx$ est égale à :", choices: ["$0$", "$1$", "$\\dfrac{\\pi^2}{2}$", "$-\\dfrac{\\pi^2}{2}$"], correct: 0, theme: "Intégration", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nLa fonction $g(x)=(x+2\\sin x)^3$ est impaire car $g(-x)=(-x-2\\sin x)^3=-(x+2\\sin x)^3=-g(x)$. L'intégrale d'une fonction impaire sur un intervalle symétrique est nulle.\n\n⚠️ VIGILANCE : Vérifier la parité avant de se lancer dans un calcul compliqué.\n\n💡 ASTUCE : $(a+b)^3$ conserve la parité de $a+b$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 11, statement: "$\\displaystyle\\int_0^{\\pi} e^x \\cos(nx)\\,dx$ est égale à :", choices: ["$\\dfrac{e^{\\pi} + (-1)^n}{1 + n^2}$", "$\\dfrac{(-1)^n e^{\\pi} - 1}{1 + n^2}$", "$\\dfrac{e^{\\pi} + 1}{1 + n^2}$", "$\\dfrac{e^{\\pi} - 1}{1 + n^2}$"], correct: 1, theme: "Intégration", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nDouble intégration par parties ou utilisation des formules d'Euler. $I_n=\\int_0^\\pi e^x\\cos(nx)dx = \\frac{(-1)^n e^\\pi-1}{1+n^2}$.\n\n⚠️ VIGILANCE : $\\cos(n\\pi)=(-1)^n$.\n\n💡 ASTUCE : $\\int e^{ax}\\cos(bx)dx=\\frac{e^{ax}}{a^2+b^2}(a\\cos bx+b\\sin bx)+C$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 12, statement: "On considère l'équation différentielle $(E) : y' + (\\ln 2)\\,y = 0$. La solution $y_0$ vérifiant $y_0(-1) = 4$ est donnée par :", choices: ["$y_0(x) = 2^{1-x}$", "$y_0(x) = 8 \\times 2^x$", "$y_0(x) = 16 \\times 2^{1-x}$", "$y_0(x) = 2 + 2^{-x}$"], correct: 0, theme: "Équations différentielles", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$y'=-(\\ln 2)y$ ⇒ $y=Ce^{-x\\ln 2}=C\\cdot 2^{-x}$. $y_0(-1)=C\\cdot 2^1=2C=4$ ⇒ $C=2$. Donc $y_0(x)=2\\cdot 2^{-x}=2^{1-x}$.\n\n⚠️ VIGILANCE : $e^{-x\\ln 2}=2^{-x}$, pas $2^x$.\n\n💡 ASTUCE : $a^{\\ln b}=b^{\\ln a}$, et $e^{x\\ln 2}=2^x$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 13, statement: "Soit $f$ une fonction définie, continue et strictement monotone de $[0,1]$ sur $[0,1]$. Alors pour tout $y_0 \\in [0,1]$, l'équation $f(x^2) = y_0$ :", choices: ["admet une solution unique dans $[0,1]$", "admet exactement deux solutions dans $[0,1]$", "admet au moins deux solutions dans $[0,1]$", "n'admet pas de solutions dans $[0,1]$"], correct: 0, theme: "Fonctions", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nLa fonction $g(x)=x^2$ est une bijection de $[0,1]$ sur $[0,1]$. Donc $f\\circ g$ est une bijection de $[0,1]$ sur $[0,1]$ comme composée de deux bijections. L'équation $f(x^2)=y_0$ admet donc une unique solution.\n\n⚠️ VIGILANCE : La composée de deux bijections est une bijection.\n\n💡 ASTUCE : Sur $[0,1]$, $x\\mapsto x^2$ est strictement croissante donc bijective.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 14, statement: "Une approximation affine de $f : x \\mapsto -\\dfrac{1}{(1+x)^2}$ au voisinage de 0 est :", choices: ["$x \\mapsto 2x + 1$", "$x \\mapsto 2x - 1$", "$x \\mapsto -2x + 1$", "$x \\mapsto -2x - 1$"], correct: 1, theme: "Dérivation", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$f(x)=-(1+x)^{-2}$. $f(0)=-1$. $f'(x)=2(1+x)^{-3}$, $f'(0)=2$. Approximation affine : $f(x)\\approx f(0)+f'(0)x=-1+2x=2x-1$.\n\n⚠️ VIGILANCE : $\\frac{d}{dx}(1+x)^{-2}=-2(1+x)^{-3}$, avec le signe moins devant : $f'(x)=2(1+x)^{-3}$.\n\n💡 ASTUCE : L'approximation affine est la tangente : $y=f(a)+f'(a)(x-a)$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 15, statement: "Soit la fonction $f : x \\mapsto e^{\\frac{1}{\\ln x}}$. Alors :", choices: ["$\\forall x \\in ]1, +\\infty[$, $f \\circ f(x) = \\dfrac{1}{x}$", "$\\forall x \\in ]1, +\\infty[$, $f \\circ f(x) = e^{\\frac{1}{x}}$", "$\\forall x \\in ]1, +\\infty[$, $f \\circ f(x) = \\ln\\!\\left(\\dfrac{1}{\\ln x}\\right)$", "$\\forall x \\in ]1, +\\infty[$, $f \\circ f(x) = x$"], correct: 3, theme: "Composition de fonctions", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : D\n\n🔍 CORRECTION :\n$f(x)=e^{1/\\ln x}$. $f\\circ f(x)=e^{1/\\ln(f(x))}=e^{1/\\ln(e^{1/\\ln x})}=e^{1/(1/\\ln x)}=e^{\\ln x}=x$.\n\n⚠️ VIGILANCE : $\\ln(e^u)=u$, donc $\\ln(f(x))=\\frac{1}{\\ln x}$.\n\n💡 ASTUCE : $f$ est involutive : $f^{-1}=f$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 16, statement: "Le plan est muni d'un repère orthonormé $(O, \\vec{i}, \\vec{j})$. On donne la courbe $\\mathscr{C}$ d'une fonction $f$ dérivable sur $]0, +\\infty[$. $\\mathscr{C}$ admet une tangente horizontale au point $A$ d'abscisse $\\dfrac{1}{2}$ et un point d'inflexion en $B$ d'abscisse $\\dfrac{1+\\sqrt{2}}{2}$. Indiquer le graphique représentant $f'$ et $f''$ :", choices: ["Graphique A", "Graphique B", "Graphique C", "Graphique D"], correct: 2, theme: "Dérivation", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nTangente horizontale en $x=1/2$ ⇒ $f'(1/2)=0$. Point d'inflexion en $x=(1+\\sqrt{2})/2$ ⇒ $f''$ s'annule en changeant de signe. Le graphique C correspond à ces conditions.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 17, statement: "Soit la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = 1 + x + \\dfrac{x^2}{2} + \\dfrac{x^3}{3}$. L'équation $f(x) = 0$ admet :", choices: ["zéro solution", "une unique solution", "deux solutions", "trois solutions"], correct: 1, theme: "Étude de fonctions", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$f'(x)=1+x+x^2=(x+\\frac{1}{2})^2+\\frac{3}{4}>0$, donc $f$ est strictement croissante sur $\\mathbb{R}$. $\\lim_{-\\infty}f=-\\infty$, $\\lim_{+\\infty}f=+\\infty$. Par le TVI et la stricte monotonie, $f(x)=0$ admet une unique solution.\n\n⚠️ VIGILANCE : Un trinôme $1+x+x^2$ a un discriminant négatif, donc toujours positif.\n\n💡 ASTUCE : $x^2+x+1=(x+\\frac{1}{2})^2+\\frac{3}{4}>0$ pour tout $x$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 18, statement: "Le nombre de solutions dans $\\mathbb{R}_+$ de l'équation $e^x = x + \\dfrac{x^2}{2} + \\dfrac{x^3}{6}$ est :", choices: ["$0$", "$1$", "$2$", "$3$"], correct: 1, theme: "Étude de fonctions", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nSoit $g(x)=e^x-(1+x+\\frac{x^2}{2}+\\frac{x^3}{6})$. $g'(x)=e^x-(1+x+\\frac{x^2}{2})$, $g''(x)=e^x-(1+x)$, $g'''(x)=e^x-1>0$ pour $x>0$. En remontant, $g''(x)>0$, $g'(x)>0$, $g(x)>0$ pour $x>0$. En 0, $g(0)=0$. Donc $x=0$ est l'unique solution dans $\\mathbb{R}_+$.\n\n⚠️ VIGILANCE : $1+x+\\frac{x^2}{2}+\\frac{x^3}{6}$ est le début du DL de $e^x$, mais $e^x$ est strictement plus grand pour $x>0$.\n\n💡 ASTUCE : Utiliser les dérivées successives pour comparer $e^x$ à son développement limité.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 19, statement: "Une urne contient 7 boules rouges et 3 boules noires indiscernables au toucher. On tire successivement et avec remise $n$ boules de l'urne, où $n \\in \\mathbb{N}^*$. La probabilité d'obtenir au moins une boule noire est égale à :", choices: ["$\\left(\\dfrac{3}{10}\\right)^n$", "$\\left(\\dfrac{7}{10}\\right)^n$", "$1 - \\left(\\dfrac{3}{10}\\right)^n$", "$1 - \\left(\\dfrac{7}{10}\\right)^n$"], correct: 3, theme: "Probabilités", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : D\n\n🔍 CORRECTION :\nL'événement contraire de « au moins une noire » est « que des rouges ». Probabilité de tirer une rouge : $\\frac{7}{10}$. Avec $n$ tirages indépendants : $P(\\text{que des rouges})=(\\frac{7}{10})^n$. Donc $P(\\text{au moins une noire})=1-(\\frac{7}{10})^n$.\n\n⚠️ VIGILANCE : Ne pas confondre avec $1-(\\frac{3}{10})^n$ qui serait la probabilité d'au moins une rouge.\n\n💡 ASTUCE : Pour « au moins un », penser à l'événement contraire.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 20, statement: "Soit $P$ la loi uniforme sur $[0, 2\\pi]$. Alors $P\\!\\left(\\left[\\dfrac{\\pi}{6}, \\dfrac{2\\pi}{3}\\right]\\right)$ est égale à :", choices: ["$\\dfrac{1}{4}$", "$\\dfrac{1}{2}$", "$\\dfrac{\\pi}{4}$", "$\\dfrac{\\pi}{2}$"], correct: 0, theme: "Probabilités", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nLongueur de l'intervalle : $\\frac{2\\pi}{3}-\\frac{\\pi}{6}=\\frac{4\\pi-\\pi}{6}=\\frac{\\pi}{2}$. Probabilité = $\\frac{\\text{longueur}}{\\text{longueur totale}}=\\frac{\\pi/2}{2\\pi}=\\frac{1}{4}$.\n\n⚠️ VIGILANCE : Pour une loi uniforme, la probabilité est proportionnelle à la longueur.\n\n💡 ASTUCE : Simplifier les fractions avant de diviser.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 21, statement: "Une variable aléatoire $X$ suit une loi binomiale de paramètres $5$ et $\\dfrac{1}{5}$. La variance $V(X)$ est égale à :", choices: ["$\\dfrac{4}{5}$", "$1$", "$\\dfrac{5}{4}$", "$\\dfrac{\\sqrt{5}}{2}$"], correct: 0, theme: "Probabilités", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nPour une loi binomiale $\\mathcal{B}(n,p)$ : $V(X)=np(1-p)=5\\times\\frac{1}{5}\\times\\frac{4}{5}=\\frac{4}{5}$.\n\n⚠️ VIGILANCE : Ne pas confondre variance et écart-type.\n\n💡 ASTUCE : $V(X)=npq$ avec $q=1-p$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 22, statement: "On donne la courbe de la fonction de répartition d'une variable aléatoire $X$. Alors $P(X = 2)$ est égale à :", choices: ["$\\dfrac{4}{5}$", "$\\dfrac{1}{2}$", "$\\dfrac{3}{10}$", "$\\dfrac{7}{10}$"], correct: 2, theme: "Probabilités", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nPour une variable discrète, $P(X=k)=F(k)-F(k^-)$ (saut de la fonction de répartition en $k$). D'après le graphique, le saut en 2 est $\\frac{3}{10}$.\n\n⚠️ VIGILANCE : La fonction de répartition est continue à droite avec des sauts aux points de masse.\n\n💡 ASTUCE : $P(X=k)=F(k)-\\lim_{x\\to k^-}F(x)$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 23, statement: "La durée de vie d'un appareil électroménager suit la loi exponentielle de paramètre $3 \\times 10^{-3}$. La probabilité qu'il n'y ait pas de défaillance dans l'intervalle $[0, t]$, $t > 0$, est égale à :", choices: ["$e^{-0{,}003t}$", "$0{,}003 \\times e^{-0{,}003t}$", "$1 - e^{-0{,}003t}$", "$1 - 0{,}003 \\times e^{-0{,}003t}$"], correct: 0, theme: "Probabilités", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nPour une loi exponentielle de paramètre $\\lambda$, $P(X>t)=e^{-\\lambda t}$. Donc $P(\\text{pas de défaillance dans }[0,t])=P(X>t)=e^{-0{,}003t}$.\n\n⚠️ VIGILANCE : La densité est $\\lambda e^{-\\lambda x}$, la fonction de survie est $e^{-\\lambda t}$.\n\n💡 ASTUCE : $P(X>t)=1-F(t)=e^{-\\lambda t}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 24, statement: "On propose à un candidat un QCM comportant 60 questions. Pour chaque question on propose quatre réponses dont une seule est correcte. Ce candidat répond au hasard. La probabilité que toutes ses réponses soient justes est égale à :", choices: ["$\\dfrac{1}{60^4}$", "$\\left(\\dfrac{1}{4}\\right)^{60}$", "$\\dfrac{(60-4)!}{60!}$", "$\\dfrac{1}{4}$"], correct: 1, theme: "Probabilités", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nPour chaque question, la probabilité de répondre juste est $\\frac{1}{4}$. Les 60 questions sont indépendantes, donc la probabilité que tout soit juste est $(\\frac{1}{4})^{60}$.\n\n⚠️ VIGILANCE : C'est une loi binomiale $\\mathcal{B}(60,1/4)$ où on veut 60 succès.\n\n💡 ASTUCE : $P(\\text{tous justes})=(\\frac{1}{4})^{60}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 25, statement: "L'ensemble des solutions dans $\\mathbb{Z} \\times \\mathbb{Z}$ de l'équation $3x - 5y = 2$ est :", choices: ["$\\{(5k+4,\\ 3k-1)\\ /\\ k \\in \\mathbb{Z}\\}$", "$\\{(5k+4,\\ 3k+2)\\ /\\ k \\in \\mathbb{Z}\\}$", "$\\{(5k-1,\\ 3k+2)\\ /\\ k \\in \\mathbb{Z}\\}$", "$\\{(5k-1,\\ -3k-1)\\ /\\ k \\in \\mathbb{Z}\\}$"], correct: 1, theme: "Arithmétique", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$\\text{pgcd}(3,5)=1$ qui divise 2. Solution particulière : $x=4$, $y=2$ car $3(4)-5(2)=12-10=2$. Solution homogène : $3x-5y=0$ ⇒ $x=5k$, $y=3k$. Solution générale : $x=4+5k$, $y=2+3k$, soit $\\{(5k+4,3k+2), k\\in\\mathbb{Z}\\}$.\n\n⚠️ VIGILANCE : Vérifier la solution particulière avant de conclure.\n\n💡 ASTUCE : $3x-5y=2$ a des solutions car $\\text{pgcd}(3,5)=1|2$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 26, statement: "Le nombre de multiples de 17 compris entre $-2014$ et $2014$ est :", choices: ["$118$", "$236$", "$237$", "$340$"], correct: 2, theme: "Arithmétique", niveau_scolaire: "3ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nLe plus petit multiple de 17 $\\ge -2014$ est $-2006$ ($-118\\times 17$). Le dernier $\\le 2014$ est $2006$ ($118\\times 17$). Nombre : $118-(-118)+1=237$.\n\n⚠️ VIGILANCE : Ne pas oublier le 0 qui est multiple de 17.\n\n💡 ASTUCE : Le nombre d'entiers de $-n$ à $n$ est $2n+1$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 27, statement: "Le nombre de diviseurs positifs de $100^{100}$ est :", choices: ["$401$", "$4401$", "$40401$", "$44401$"], correct: 2, theme: "Arithmétique", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\n$100^{100}=(2^2\\times 5^2)^{100}=2^{200}\\times 5^{200}$. Le nombre de diviseurs est $(200+1)(200+1)=201^2=40401$.\n\n⚠️ VIGILANCE : Décomposer en facteurs premiers avant d'appliquer la formule.\n\n💡 ASTUCE : Pour $n=p_1^{\\alpha_1}\\cdots p_k^{\\alpha_k}$, le nombre de diviseurs est $(\\alpha_1+1)\\cdots(\\alpha_k+1)$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 28, statement: "Le nombre de zéros par lequel se termine $55!$ est :", choices: ["$15$", "$12$", "$10$", "$5$"], correct: 1, theme: "Arithmétique", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nLe nombre de zéros est $v_5(55!)=\\lfloor\\frac{55}{5}\\rfloor+\\lfloor\\frac{55}{25}\\rfloor=11+2=13$.\n\n⚠️ VIGILANCE : Le nombre de zéros est $v_5(n!)$ car il y a plus de facteurs 2 que de facteurs 5.\n\n💡 ASTUCE : Formule de Legendre : $v_p(n!)=\\sum_{k\\ge 1}\\lfloor n/p^k\\rfloor$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 29, statement: "Le reste de la division euclidienne de $8^{3015}$ par $9$ est :", choices: ["$1$", "$2$", "$4$", "$8$"], correct: 3, theme: "Arithmétique", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : D\n\n🔍 CORRECTION :\n$8\\equiv -1\\pmod 9$. Donc $8^{3015}\\equiv (-1)^{3015}\\equiv -1\\equiv 8\\pmod 9$.\n\n⚠️ VIGILANCE : Le reste doit être compris entre 0 et 8. $-1\\equiv 8\\pmod 9$.\n\n💡 ASTUCE : $8\\equiv -1\\pmod 9$ simplifie le calcul des puissances.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 30, statement: "Soit $a$ et $b$ deux entiers naturels tels que $a \\equiv 3\\ (\\text{mod } 11)$ et $b \\equiv 5\\ (\\text{mod } 11)$. Alors :", choices: ["$a^2 + 2b^2 \\equiv 4\\ (\\text{mod } 11)$", "$a^2 + 2b^2 \\equiv 2\\ (\\text{mod } 11)$", "$a^2 + 2b^2 \\equiv 1\\ (\\text{mod } 11)$", "$a^2 + 2b^2 \\equiv 0\\ (\\text{mod } 11)$"], correct: 0, theme: "Arithmétique", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$a\\equiv 3$ ⇒ $a^2\\equiv 9$. $b\\equiv 5$ ⇒ $b^2\\equiv 25\\equiv 3$. Donc $a^2+2b^2\\equiv 9+2\\times 3=9+6=15\\equiv 4\\pmod{11}$.\n\n⚠️ VIGILANCE : Bien réduire modulo 11 à chaque étape.\n\n💡 ASTUCE : $25\\equiv 3\\pmod{11}$ car $25=2\\times 11+3$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 31, statement: "Si $n$ est un entier pair alors :", choices: ["$n^2 \\equiv 0\\ (\\text{mod } 8)$", "$n^2 \\equiv 4\\ (\\text{mod } 8)$", "$n^2 \\equiv 0\\ (\\text{mod } 8)$ et $n^2 \\equiv 4\\ (\\text{mod } 8)$", "$n^2 \\equiv 0\\ (\\text{mod } 8)$ ou $n^2 \\equiv 4\\ (\\text{mod } 8)$"], correct: 3, theme: "Arithmétique", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : D\n\n🔍 CORRECTION :\nSi $n=2k$ : $n^2=4k^2$. Si $k$ est pair, $n^2\\equiv 0\\pmod 8$. Si $k$ est impair, $n^2\\equiv 4\\pmod 8$. Donc c'est soit 0, soit 4.\n\n⚠️ VIGILANCE : Ne pas affirmer que tous les pairs ont un carré $\\equiv 0\\pmod 8$ (ex: $2^2=4$).\n\n💡 ASTUCE : Écrire $n=2k$ et distinguer selon la parité de $k$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 32, statement: "On sait que le nombre 2013 est premier. Alors $55^{2014}$ est congru modulo 2013 à :", choices: ["$1$", "$55$", "$1012$", "$1309$"], correct: 2, theme: "Arithmétique", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nPar le petit théorème de Fermat, $55^{2012}\\equiv 1\\pmod{2013}$ car 2013 est premier et ne divise pas 55. Donc $55^{2014}=55^{2012}\\times 55^2\\equiv 1\\times 3025\\pmod{2013}$. $3025=2013+1012\\equiv 1012\\pmod{2013}$.\n\n⚠️ VIGILANCE : Le petit théorème de Fermat donne $a^{p-1}\\equiv 1\\pmod p$ si $p\\nmid a$.\n\n💡 ASTUCE : $55^{2014}=55^{2012}\\times 55^2\\equiv 1\\times 55^2\\pmod{2013}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 33, statement: "On considère dans $\\mathbb{Z} \\times \\mathbb{Z}$ l'équation $x \\times y \\equiv 0\\ (\\text{mod } 7)$. Alors :", choices: ["$x$ ou $y$ est un multiple de 7", "$x$ et $y$ sont des multiples de 7", "soit $x$, soit $y$ n'est pas un multiple de 7", "ni $x$, ni $y$ ne sont des multiples de 7"], correct: 0, theme: "Arithmétique", niveau_scolaire: "3ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$xy\\equiv 0\\pmod 7$ signifie que 7 divise $xy$. Comme 7 est premier, si 7 divise un produit, il divise l'un des facteurs. Donc $x$ ou $y$ est multiple de 7.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 34, statement: "Soit un réel $x$. La négation de la proposition $(P)$ : « $3 \\leq x < 5$ » est :", choices: ["$x < 3$ ou $x \\geq 5$", "$x < 3$ et $x \\geq 5$", "$3 < x$ ou $x \\geq 5$", "$3 < x \\leq 5$"], correct: 0, theme: "Logique", niveau_scolaire: "2ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$P$ est $(x\\ge 3)\\land(x<5)$. Sa négation est $(x<3)\\lor(x\\ge 5)$, c'est-à-dire « $x<3$ ou $x\\ge 5$ ».\n\n⚠️ VIGILANCE : La négation transforme le « et » en « ou » (lois de De Morgan).\n\n💡 ASTUCE : La négation de $\\ge$ est $<$, la négation de $<$ est $\\ge$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 35, statement: "Soit la proposition $(P)$ : « $\\forall a \\in \\mathbb{R}$ et $\\forall b \\in \\mathbb{R}$ avec $a < b$, $\\exists q \\in \\mathbb{Q}$ tel que $a < q < b$ ». La négation de $(P)$ est :", choices: ["$\\exists a \\in \\mathbb{R}$ et $\\exists b \\in \\mathbb{R}$ avec $a < b$ tel que $]a,b[$ ne contient aucun rationnel", "$\\forall (a,b) \\in \\mathbb{R}^2$, $]a,b[ \\cap \\mathbb{Q} \\neq \\emptyset$", "$\\forall a \\in \\mathbb{R}$, $\\exists b > a$ tel que $]a,b[ \\cap \\mathbb{Q} \\neq \\emptyset$", "$\\forall (a,b) \\in \\mathbb{R}^2$, $]a,b[ \\cap \\complement_{\\mathbb{R}}\\mathbb{Q} \\neq \\emptyset$"], correct: 0, theme: "Logique", niveau_scolaire: "3ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$P$ dit que tout intervalle ouvert contient un rationnel. Sa négation : il existe un intervalle ouvert qui ne contient aucun rationnel.\n\n⚠️ VIGILANCE : $\\neg(\\forall a,b\\ \\exists q) \\equiv \\exists a,b\\ \\forall q\\ \\neg$.\n\n💡 ASTUCE : La négation de « pour tout » est « il existe », la négation de « il existe » est « pour tout ».\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 36, statement: "Soit $U = \\dfrac{1+iz}{1-iz}$ où $z$ est un nombre complexe différent de $-i$. L'ensemble des points $M$ d'affixe $z$ tels que $|U| = 1$ est :", choices: ["l'axe $(O, \\vec{u})$", "l'axe $(O, \\vec{v})$", "un singleton", "le cercle trigonométrique"], correct: 0, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$|U|=1 \\Leftrightarrow |1+iz|=|1-iz|$. En posant $z=x+iy$, $|1+iz|^2=(1-y)^2+x^2$, $|1-iz|^2=(1+y)^2+x^2$. L'égalité donne $(1-y)^2=(1+y)^2$, soit $y=0$. Donc $z$ est réel, l'ensemble est l'axe $(O,\\vec{u})$.\n\n⚠️ VIGILANCE : $|a+ib|=\\sqrt{a^2+b^2}$.\n\n💡 ASTUCE : $|U|=1$ signifie que $U$ est sur le cercle unité, mais cela donne une condition sur $z$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 37, statement: "Pour tout point $M$ d'affixe $z \\neq 0$, on note $M'$ le point d'affixe $Z = \\dfrac{z^2+1}{z^2}$. Si $M \\in (O, \\vec{v}) \\setminus \\{O\\}$ alors $M'$ appartient à :", choices: ["l'axe $(O, \\vec{u})$", "l'axe $(O, \\vec{v})$", "un axe parallèle à $(O, \\vec{v})$", "un cercle de centre $O$"], correct: 0, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$M$ sur $(O,\\vec{v})$ ⇒ $z=iy$ avec $y\\neq 0$. Alors $z^2=-y^2$ est réel négatif. $Z=\\frac{-y^2+1}{-y^2}=\\frac{y^2-1}{y^2}=1-\\frac{1}{y^2}$ est réel. Donc $M'$ est sur l'axe $(O,\\vec{u})$.\n\n⚠️ VIGILANCE : Le carré d'un imaginaire pur est un réel négatif.\n\n💡 ASTUCE : $(iy)^2=-y^2\\in\\mathbb{R}^-$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 38, statement: "Soit $z$ un nombre complexe non nul et différent de 1 et $i$. On désigne par $M$, $A$ et $B$ les points d'affixes respectives $z$, 1 et $i$. Si $z' = 1 + iz$ alors :", choices: ["$\\arg(z') \\equiv \\dfrac{\\pi}{2} + \\left(\\widehat{\\vec{u}, \\overrightarrow{BM}}\\right)\\ [2\\pi]$", "$\\arg(z') \\equiv \\dfrac{\\pi}{2} - \\left(\\widehat{\\vec{u}, \\overrightarrow{BM}}\\right)\\ [2\\pi]$", "$\\arg(z') \\equiv \\dfrac{\\pi}{2} + \\left(\\widehat{\\vec{u}, \\overrightarrow{AM}}\\right)\\ [2\\pi]$", "$\\arg(z') \\equiv \\dfrac{\\pi}{2} - \\left(\\widehat{\\vec{u}, \\overrightarrow{AM}}\\right)\\ [2\\pi]$"], correct: 0, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$z'=1+iz=i(z-i)=i(z-i)$. $z-i$ est l'affixe de $\\overrightarrow{BM}$ (car $B$ a pour affixe $i$). Donc $z'=i\\times(z-i)$. $\\arg(z')=\\arg(i)+\\arg(z-i)=\\frac{\\pi}{2}+(\\widehat{\\vec{u},\\overrightarrow{BM}})$.\n\n⚠️ VIGILANCE : $\\arg(ab)=\\arg(a)+\\arg(b)\\ [2\\pi]$.\n\n💡 ASTUCE : L'affixe de $\\overrightarrow{BM}$ est $z_M-z_B=z-i$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 39, statement: "Soit $\\Omega$ le point d'affixe $i$. L'expression complexe de la rotation de centre $\\Omega$ et d'angle $\\dfrac{\\pi}{2}$ est :", choices: ["$z' = iz + 1 + i$", "$z' = iz - 1 + i$", "$z' = -iz + 1 + i$", "$z' = -iz - 1 + i$"], correct: 0, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nRotation de centre $\\Omega(\\omega)$ et d'angle $\\theta$ : $z'-\\omega=e^{i\\theta}(z-\\omega)$. Ici $\\omega=i$, $\\theta=\\frac{\\pi}{2}$, $e^{i\\pi/2}=i$. Donc $z'-i=i(z-i)=iz+1$. D'où $z'=iz+1+i$.\n\n⚠️ VIGILANCE : $i\\times(-i)=1$, donc $i(z-i)=iz-i^2=iz+1$.\n\n💡 ASTUCE : La formule générale est $z'=\\omega+e^{i\\theta}(z-\\omega)$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 40, statement: "Soit $F$ la transformation du plan qui à tout point $M$ d'affixe $z$ associe le point $M'$ d'affixe $z' = (1+i)\\bar{z} + 1$. Alors $F$ est :", choices: ["une translation", "une symétrie glissante", "une similitude directe", "une similitude indirecte"], correct: 3, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : D\n\n🔍 CORRECTION :\n$z'=a\\bar{z}+b$ avec $a=1+i$ et $b=1$. C'est une similitude indirecte car elle s'écrit avec $\\bar{z}$ (et non $z$). Le rapport est $|a|=\\sqrt{2}$.\n\n⚠️ VIGILANCE : $z\\mapsto a\\bar{z}+b$ est une similitude indirecte ; $z\\mapsto az+b$ est une similitude directe.\n\n💡 ASTUCE : La présence de $\\bar{z}$ indique un antidéplacement (similitude indirecte).\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 41, statement: "Le nombre $z = (1+i)^{4102}$ est égal à :", choices: ["$2^{2051}$", "$-2^{2051}$", "$i \\times 2^{2051}$", "$-i \\times 2^{2051}$"], correct: 3, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : D\n\n🔍 CORRECTION :\n$1+i=\\sqrt{2}e^{i\\pi/4}$. $(1+i)^{4102}=(\\sqrt{2})^{4102}e^{i\\cdot 4102\\pi/4}=2^{2051}e^{i\\cdot 1025.5\\pi}=2^{2051}e^{i(1025\\pi+\\pi/2)}=2^{2051}e^{i\\pi/2}(-1)^{1025}=2^{2051}i(-1)=-i\\cdot 2^{2051}$.\n\n⚠️ VIGILANCE : $4102\\pi/4=1025,5\\pi=1025\\pi+\\pi/2$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 42, statement: "Soit $\\theta \\in \\left]0, \\dfrac{\\pi}{2}\\right[$. La forme exponentielle du nombre complexe $1 - \\cos\\theta + i\\sin\\theta$ est :", choices: ["$2\\cos\\!\\left(\\dfrac{\\theta}{2}\\right)e^{i\\frac{\\pi-\\theta}{2}}$", "$2\\cos\\!\\left(\\dfrac{\\theta}{2}\\right)e^{i\\frac{\\pi+\\theta}{2}}$", "$2\\sin\\!\\left(\\dfrac{\\theta}{2}\\right)e^{i\\frac{\\pi-\\theta}{2}}$", "$2\\sin\\!\\left(\\dfrac{\\theta}{2}\\right)e^{i\\frac{\\pi+\\theta}{2}}$"], correct: 2, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\n$1-\\cos\\theta=2\\sin^2(\\theta/2)$, $\\sin\\theta=2\\sin(\\theta/2)\\cos(\\theta/2)$. Donc $z=2\\sin(\\theta/2)[\\sin(\\theta/2)+i\\cos(\\theta/2)]=2\\sin(\\theta/2)e^{i(\\pi-\\theta)/2}$.\n\n⚠️ VIGILANCE : $\\sin\\alpha+i\\cos\\alpha=\\cos(\\frac{\\pi}{2}-\\alpha)+i\\sin(\\frac{\\pi}{2}-\\alpha)=e^{i(\\pi/2-\\alpha)}$.\n\n💡 ASTUCE : Utiliser les formules $1-\\cos\\theta=2\\sin^2(\\theta/2)$ et $\\sin\\theta=2\\sin(\\theta/2)\\cos(\\theta/2)$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 43, statement: "Les racines cubiques de 1 et différentes de 1 sont :", choices: ["$\\dfrac{\\sqrt{3}+i}{2}$ et $\\dfrac{\\sqrt{3}-i}{2}$", "$\\dfrac{-\\sqrt{3}+i}{2}$ et $\\dfrac{-\\sqrt{3}-i}{2}$", "$\\dfrac{1-i\\sqrt{3}}{2}$ et $\\dfrac{1+i\\sqrt{3}}{2}$", "$\\dfrac{-1+i\\sqrt{3}}{2}$ et $\\dfrac{-1-i\\sqrt{3}}{2}$"], correct: 3, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : D\n\n🔍 CORRECTION :\nLes racines cubiques de 1 sont $1$, $j=e^{2i\\pi/3}=\\frac{-1+i\\sqrt{3}}{2}$ et $j^2=e^{4i\\pi/3}=\\frac{-1-i\\sqrt{3}}{2}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 44, statement: "Soit $U = e^{i\\frac{2\\pi}{5}}$ et $Z = 1 + U + U^2 + U^3 + U^4$. Alors $\\text{Re}(Z)$ est égal à :", choices: ["$-\\dfrac{1}{2}$", "$0$", "$\\dfrac{1}{2}$", "$2$"], correct: 1, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$U=e^{2i\\pi/5}$ est une racine 5ème de l'unité différente de 1. La somme $1+U+U^2+U^3+U^4=0$ (somme des racines 5èmes de l'unité). Donc $Z=0$ et $\\text{Re}(Z)=0$.\n\n⚠️ VIGILANCE : La somme des racines $n$-èmes de l'unité est nulle pour $n>1$.\n\n💡 ASTUCE : $1+z+z^2+...+z^{n-1}=\\frac{1-z^n}{1-z}$ pour $z\\neq 1$, et si $z^n=1$, la somme est 0.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 45, statement: "Soit $u$ une racine 5ième de 1 et $u \\neq 1$. Alors $1 + u + u^2 + u^3$ est égal à :", choices: ["$-\\dfrac{1}{u}$", "$\\dfrac{1}{u}$", "$-\\dfrac{1}{u-1}$", "$\\dfrac{1}{u-1}$"], correct: 0, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$1+u+u^2+u^3+u^4=0$ ⇒ $1+u+u^2+u^3=-u^4=-\\frac{1}{u}$ car $u^5=1$ ⇒ $u^4=\\frac{1}{u}$.\n\n⚠️ VIGILANCE : $u^5=1$ ⇒ $u^4=u^{-1}=\\frac{1}{u}$.\n\n💡 ASTUCE : Utiliser la relation $1+u+u^2+u^3+u^4=0$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 46, statement: "$\\left(-\\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2}\\right)^{2702}$ est égal à :", choices: ["$j$", "$-j$", "$\\dfrac{1}{j}$", "$-\\dfrac{1}{j}$"], correct: 2, theme: "Nombres complexes", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\n$-\\frac{1}{2}+i\\frac{\\sqrt{3}}{2}=e^{2i\\pi/3}=j$. $j^3=1$. $2702=3\\times 900+2$, donc $j^{2702}=j^{3\\times 900+2}=(j^3)^{900}\\times j^2=1\\times j^2$. $j^2=j^{-1}=\\frac{1}{j}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 47, statement: "Soit $\\vec{u}$ et $\\vec{v}$ deux vecteurs non nuls du plan tels que $\\|\\vec{u} + \\vec{v}\\| = \\|\\vec{u} - \\vec{v}\\|$. Alors :", choices: ["$\\vec{u} \\cdot \\vec{v} = 0$", "$\\vec{u} = \\vec{v}$", "$\\det(\\vec{u}, \\vec{v}) = 0$", "$\\det(\\vec{u}, \\vec{v}) \\neq 0$ et $\\vec{u} \\cdot \\vec{v} \\neq 0$"], correct: 0, theme: "Géométrie", niveau_scolaire: "3ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$\\|u+v\\|^2=\\|u\\|^2+2u\\cdot v+\\|v\\|^2$. $\\|u-v\\|^2=\\|u\\|^2-2u\\cdot v+\\|v\\|^2$. L'égalité donne $4u\\cdot v=0$, donc $u\\cdot v=0$. Les vecteurs sont orthogonaux.\n\n⚠️ VIGILANCE : $\\|u+v\\|=\\|u-v\\|$ caractérise l'orthogonalité.\n\n💡 ASTUCE : $\\|u+v\\|^2=\\|u\\|^2+\\|v\\|^2+2u\\cdot v$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 48, statement: "Soit $ABC$ un triangle. On note $a$, $b$ et $c$ les longueurs respectives des côtés $[BC]$, $[AC]$ et $[AB]$. Alors :", choices: ["$a^2 = b^2 + c^2$", "$a^2 = b^2 + c^2 + 2bc\\cos(\\widehat{BAC})$", "$a^2 = b^2 + c^2 - 2bc\\cos(\\widehat{BAC})$", "$a^2 = b^2 + c^2 - 2\\cos(\\widehat{BAC})$"], correct: 2, theme: "Géométrie", niveau_scolaire: "3ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nC'est la formule d'Al-Kashi (ou loi des cosinus) : $a^2=b^2+c^2-2bc\\cos\\hat{A}$, où $a=BC$ est le côté opposé à l'angle $\\hat{A}=\\widehat{BAC}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 49, statement: "Soit $ABC$ un triangle équilatéral direct inscrit dans un cercle $\\mathcal{C}$. La bissectrice intérieure de $\\widehat{BAC}$ recoupe $\\mathcal{C}$ en $D$ et coupe $[BC]$ en $A'$. La transformation $S_{(BD)} \\circ S_{(DC)} \\circ S_{(CA)} \\circ S_{(AB)}$ est :", choices: ["l'identité du plan", "une symétrie centrale", "une translation", "une rotation"], correct: 3, theme: "Géométrie", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : D\n\n🔍 CORRECTION :\nLa composée de 4 symétries orthogonales est une rotation (si le nombre de symétries est pair, c'est un déplacement). Plus précisément, la composée de deux symétries d'axes sécants est une rotation d'angle double de l'angle entre les axes.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 50, statement: "Soit $D$ une droite et $\\vec{v}$ un vecteur non nul orthogonal à $D$. La transformation $t_{\\vec{v}} \\circ S_D$ est :", choices: ["une symétrie orthogonale d'axe parallèle à $D$", "une symétrie orthogonale d'axe perpendiculaire à $D$", "une symétrie glissante de vecteur $\\vec{v}$ et d'axe $D$", "une symétrie glissante de vecteur $\\vec{v}$ et d'axe perpendiculaire à $D$"], correct: 2, theme: "Géométrie", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nLa composée d'une translation de vecteur orthogonal à l'axe et d'une symétrie par rapport à cet axe est une symétrie glissante d'axe $D$ et de vecteur $\\vec{v}$.\n\n⚠️ VIGILANCE : Si $\\vec{v}$ est orthogonal à $D$, $t_{\\vec{v}}\\circ S_D$ est une symétrie glissante.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 51, statement: "Soit $A$ et $B$ deux points distincts du plan. La transformation $S_A \\circ S_B$ est :", choices: ["$t_{\\overrightarrow{BA}}$", "$t_{\\overrightarrow{AB}}$", "$t_{2\\overrightarrow{BA}}$", "$t_{2\\overrightarrow{AB}}$"], correct: 2, theme: "Géométrie", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nLa composée de deux symétries centrales $S_A\\circ S_B$ est la translation de vecteur $2\\overrightarrow{BA}$.\n\n⚠️ VIGILANCE : $S_A\\circ S_B=t_{2\\overrightarrow{BA}}$, et non $2\\overrightarrow{AB}$.\n\n💡 ASTUCE : $S_A(M)=2A-M$, $S_B(M)=2B-M$, $S_A(S_B(M))=2A-(2B-M)=2(A-B)+M$, donc translation de vecteur $2\\overrightarrow{BA}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 52, statement: "Soit $\\sigma$ une similitude indirecte de rapport $\\dfrac{1}{3}$ et $ABC$ un triangle d'aire égale à 2. L'aire de $\\sigma(ABC)$ est égale à :", choices: ["$\\dfrac{2}{9}$", "$\\dfrac{2}{3}$", "$\\dfrac{4}{9}$", "$\\dfrac{4}{3}$"], correct: 0, theme: "Géométrie", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nUne similitude de rapport $k$ multiplie les aires par $k^2$. Ici $k=\\frac{1}{3}$, donc l'aire est multipliée par $\\frac{1}{9}$. Aire image = $2\\times\\frac{1}{9}=\\frac{2}{9}$.\n\n⚠️ VIGILANCE : Le rapport d'une similitude est toujours positif, qu'elle soit directe ou indirecte.\n\n💡 ASTUCE : L'aire est multipliée par $k^2$ pour toute similitude de rapport $k$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 53, statement: "Le foyer $F$ de la parabole d'équation $y^2 + 2y - 4x + 4 = 0$ est :", choices: ["$F\\!\\left(\\dfrac{7}{4}, 1\\right)$", "$F\\!\\left(\\dfrac{7}{4}, -1\\right)$", "$F\\!\\left(-\\dfrac{7}{4}, 1\\right)$", "$F\\!\\left(-\\dfrac{7}{4}, -1\\right)$"], correct: 1, theme: "Coniques", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$y^2+2y-4x+4=0$ ⇒ $(y+1)^2-1-4x+4=0$ ⇒ $(y+1)^2=4x-3=4(x-\\frac{3}{4})$. C'est une parabole d'axe horizontal, sommet $S(\\frac{3}{4},-1)$, paramètre $p=2$. Le foyer est à $\\frac{p}{2}=1$ du sommet vers la droite : $F(\\frac{3}{4}+1,-1)=(\\frac{7}{4},-1)$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 54, statement: "L'excentricité de l'hyperbole d'équation $16x^2 - 9y^2 - 64x - 54y - 161 = 0$ est égale à :", choices: ["$\\dfrac{4}{3}$", "$\\dfrac{5}{3}$", "$\\dfrac{5}{4}$", "$\\dfrac{7}{4}$"], correct: 1, theme: "Coniques", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$16(x^2-4x)-9(y^2+6y)=161$ ⇒ $16((x-2)^2-4)-9((y+3)^2-9)=161$ ⇒ $16(x-2)^2-64-9(y+3)^2+81=161$ ⇒ $16(x-2)^2-9(y+3)^2=144$ ⇒ $\\frac{(x-2)^2}{9}-\\frac{(y+3)^2}{16}=1$. $a^2=9$, $b^2=16$, $c^2=a^2+b^2=25$, $c=5$. Excentricité $e=\\frac{c}{a}=\\frac{5}{3}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 55, statement: "Soit le point $A(-1, 1, -2)$ et le plan $P$ d'équation $x + 2y - 3z + 7 = 0$. Une représentation paramétrique de la droite passant par $A$ et perpendiculaire à $P$ est :", choices: ["$\\begin{cases} x = -1 + \\alpha \\\\ y = 1 + 2\\alpha \\\\ z = -2 - 3\\alpha \\end{cases},\\ \\alpha \\in \\mathbb{R}$", "$\\begin{cases} x = 1 + \\alpha \\\\ y = 2 + 2\\alpha \\\\ z = -3 - 3\\alpha \\end{cases},\\ \\alpha \\in \\mathbb{R}$", "$\\begin{cases} x = 1 - \\alpha \\\\ y = 2 + \\alpha \\\\ z = -3 - 3\\alpha \\end{cases},\\ \\alpha \\in \\mathbb{R}$", "$\\begin{cases} x = -1 - \\alpha \\\\ y = 1 + \\alpha \\\\ z = -2 - 2\\alpha \\end{cases},\\ \\alpha \\in \\mathbb{R}$"], correct: 0, theme: "Géométrie dans l'espace", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nUn vecteur normal à $P$ est $\\vec{n}(1,2,-3)$. La droite perpendiculaire à $P$ passant par $A$ a pour vecteur directeur $\\vec{n}$. Représentation paramétrique : $x=-1+\\alpha$, $y=1+2\\alpha$, $z=-2-3\\alpha$.\n\n⚠️ VIGILANCE : Les coordonnées du point $A$ donnent les termes constants.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 56, statement: "Soit $A$, $B$ et $C$ trois points non alignés de l'espace. $\\overrightarrow{AB} \\wedge \\overrightarrow{AC}$ est un vecteur :", choices: ["directeur de la droite $(BC)$", "directeur du plan $(ABC)$", "normal au plan $(ABC)$", "colinéaire à $\\overrightarrow{AB}$ ou à $\\overrightarrow{AC}$"], correct: 2, theme: "Géométrie dans l'espace", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nLe produit vectoriel $\\overrightarrow{AB}\\wedge\\overrightarrow{AC}$ est orthogonal aux deux vecteurs $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$, donc il est normal au plan $(ABC)$.\n\n⚠️ VIGILANCE : Le produit vectoriel est orthogonal à chacun des deux vecteurs.\n\n💡 ASTUCE : $\\vec{u}\\wedge\\vec{v}$ est un vecteur normal au plan dirigé par $\\vec{u}$ et $\\vec{v}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 57, statement: "La sphère $(S) : x^2 + y^2 + z^2 + 2x - 4y = 0$ et le plan $(P) : \\begin{cases} x = a+b \\\\ y = a-b \\\\ z = b \\end{cases}\\ a \\in \\mathbb{R},\\ b \\in \\mathbb{R}$ sont sécants suivant un cercle de rayon égal à :", choices: ["$\\sqrt{\\dfrac{3}{2}}$", "$\\sqrt{\\dfrac{7}{2}}$", "$\\dfrac{\\sqrt{3}}{2}$", "$\\dfrac{\\sqrt{7}}{2}$"], correct: 1, theme: "Géométrie dans l'espace", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$(S): (x+1)^2+(y-2)^2+z^2=5$. Centre $\\Omega(-1,2,0)$, rayon $R=\\sqrt{5}$. Le plan $P$ a pour équation cartésienne : $x-y-2z=0$. Distance de $\\Omega$ à $P$ : $d=\\frac{|-1-2-0|}{\\sqrt{1+1+4}}=\\frac{3}{\\sqrt{6}}=\\sqrt{\\frac{3}{2}}$. Le rayon du cercle est $r=\\sqrt{R^2-d^2}=\\sqrt{5-\\frac{3}{2}}=\\sqrt{\\frac{7}{2}}$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 58, statement: "Soit un tétraèdre $ABCD$. L'ensemble des points $M$ de $\\mathscr{E}$ tels que $\\left\\|3\\overrightarrow{MA} + 2\\overrightarrow{MB}\\right\\| = \\left\\|2\\overrightarrow{MC} + 3\\overrightarrow{MD}\\right\\|$ est :", choices: ["un singleton", "une droite", "un plan", "une sphère"], correct: 2, theme: "Géométrie dans l'espace", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nSoit $G$ le barycentre de $(A,3)$ et $(B,2)$, et $H$ le barycentre de $(C,2)$ et $(D,3)$. Alors $3\\overrightarrow{MA}+2\\overrightarrow{MB}=5\\overrightarrow{MG}$ et $2\\overrightarrow{MC}+3\\overrightarrow{MD}=5\\overrightarrow{MH}$. L'égalité devient $5\\|\\overrightarrow{MG}\\|=5\\|\\overrightarrow{MH}\\|$, soit $MG=MH$. L'ensemble est le plan médiateur de $[GH]$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 59, statement: "Soit $A$ et $B$ deux points distincts de l'espace. L'ensemble des points $M$ de l'espace tels que $\\overrightarrow{MA} \\cdot \\overrightarrow{MB} = 0$ est :", choices: ["une droite", "la réunion de deux droites", "un plan", "une sphère"], correct: 3, theme: "Géométrie dans l'espace", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : D\n\n🔍 CORRECTION :\n$\\overrightarrow{MA}\\cdot\\overrightarrow{MB}=0$ signifie que le triangle $MAB$ est rectangle en $M$. L'ensemble des points $M$ tels que $\\widehat{AMB}=90°$ est la sphère de diamètre $[AB]$.\n\n⚠️ VIGILANCE : Dans l'espace, c'est une sphère, pas un cercle.\n\n💡 ASTUCE : $\\overrightarrow{MA}\\cdot\\overrightarrow{MB}=0 \\Leftrightarrow M$ appartient à la sphère de diamètre $[AB]$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" },
+      { id: 60, statement: "Soit $A$ et $B$ deux points distincts de l'espace. L'ensemble des points $M$ de l'espace tels que $\\left(\\overrightarrow{MA} + \\overrightarrow{MB}\\right) \\wedge \\left(\\overrightarrow{MA} - \\overrightarrow{MB}\\right) = \\vec{0}$ est :", choices: ["une droite", "une demi-droite", "un segment", "un plan"], correct: 0, theme: "Géométrie dans l'espace", niveau_scolaire: "4ème année", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$\\overrightarrow{MA}+\\overrightarrow{MB}=2\\overrightarrow{MI}$ où $I$ est le milieu de $[AB]$. $\\overrightarrow{MA}-\\overrightarrow{MB}=\\overrightarrow{BA}$. L'équation devient $2\\overrightarrow{MI}\\wedge\\overrightarrow{BA}=\\vec{0}$, soit $\\overrightarrow{MI}$ colinéaire à $\\overrightarrow{BA}$. Donc $M$ appartient à la droite passant par $I$ et parallèle à $(AB)$, c'est-à-dire la droite $(AB)$.\n\n📚 RÉFÉRENCE : CAPES Mathématiques 2014" }
+    ];
+
+    // ==================== FONCTIONS ====================
+    document.addEventListener('DOMContentLoaded', function() {
+      // 🔁 RESET FORCÉ POUR TESTS (à supprimer en production)
+      localStorage.removeItem('synapris_client_name');
+      localStorage.removeItem('synapris_unlocked');
+      unlocked = false;
+      
+      const savedName = localStorage.getItem('synapris_client_name');
+      const savedUnlock = localStorage.getItem('synapris_unlocked');
+      if(savedUnlock === 'true') unlocked = true;
+      if (savedName) { clientName = savedName;
+        document.getElementById('client-name-footer').textContent = clientName;
+        document.getElementById('mb-client-badge').style.display = 'inline-flex';
+        document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+        initDefaultMode(); } else { showNameModal(); }
+    });
+
+    function resetClientName() { localStorage.removeItem('synapris_client_name');
+      clientName = '';
+      document.getElementById('client-name-footer').textContent = '——';
+      document.getElementById('mb-client-badge').style.display = 'none';
+      showNameModal(); }
+
+    function showNameModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'name-modal';
+      overlay.innerHTML = '<div class="modal-box"><h3>🌟 Bienvenue sur SYNAPRIS !</h3><p>Entrez votre prénom :</p><input type="text" class="key-input" id="name-input" placeholder="Votre prénom" autocomplete="off" /><div class="modal-error" id="name-error">❌ Prénom invalide.</div><div class="modal-actions"><button class="btn btn-gold" id="btn-name-ok">✅ Commencer</button></div></div>';
+      document.body.appendChild(overlay);
+      document.getElementById('btn-name-ok').addEventListener('click', () => {
+        const name = document.getElementById('name-input').value.trim();
+        if (name && name.length >= 2 && /^[A-Za-zÀ-ÿ\s\-]+$/.test(name)) { clientName = name;
+          localStorage.setItem('synapris_client_name', clientName);
+          document.getElementById('client-name-footer').textContent = clientName;
+          document.getElementById('mb-client-badge').style.display = 'inline-flex';
+          document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+          overlay.remove();
+          initDefaultMode(); } else { document.getElementById('name-error').style.display = 'block'; }
+      });
+    }
+
+    function showRefModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.innerHTML = '<div class="modal-box"><h3>📚 RÉFÉRENCES</h3><p><strong>CAPES Mathématiques 2014</strong><br>60 questions · 60 minutes<br>4 choix (A,B,C,D) · Une seule réponse correcte</p><div class="modal-actions"><button class="btn btn-primary" onclick="this.closest(\'.modal-overlay\').remove()">Fermer</button></div></div>';
+      document.body.appendChild(overlay);
+    }
+
+    function initDefaultMode() { document.getElementById('mode-train').classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
+      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+      document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
+      document.getElementById('notice-train').classList.remove('hidden');
+      document.getElementById('notice-exam').classList.add('hidden'); }
+
+    function showPage(e) { document.querySelectorAll('#main-app .page').forEach(p => p.classList.remove('active'));
+      document.getElementById(e).classList.add('active');
+      document.getElementById('main-scroll').scrollTop = 0; }
+
+    function selectMode(e) { mode = e;
+      ['train', 'exam'].forEach(x => document.getElementById('mode-' + x)?.classList.remove('selected'));
+      document.getElementById('mode-' + e).classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').innerHTML = e === 'train' ? '📝 Mode Entraînement' : '⏱️ Mode Examen (60 min)';
+      document.getElementById('mb-mode-badge').textContent = e === 'train' ? '📝 Entraînement' : '⏱️ Examen';
+      document.getElementById('notice-train').classList.toggle('hidden', e !== 'train');
+      document.getElementById('notice-exam').classList.toggle('hidden', e !== 'exam');
+      document.body.classList.remove('train-mode', 'exam-mode');
+      document.body.classList.add(e === 'train' ? 'train-mode' : 'exam-mode');
+    }
+
+    function startQuiz() {
+      if(mode === 'exam') { showExamInstructionsModal(); return; }
+      currentQ = 0;
+      activeSet = questionsData.map((_, i) => i);
+      if(!unlocked && activeSet.length > 10) {
+        activeSet = activeSet.slice(0, 10);
+      }
+      userAnswers = new Array(activeSet.length).fill(null);
+      validated = new Array(activeSet.length).fill(false);
+      showPage('page-question');
+      if (mode === 'exam') {
+        document.body.classList.add('exam-mode');
+        examSeconds = TOTAL_EXAM_SEC;
+        perQSeconds = PER_Q_SEC;
+        document.getElementById('timer-wrap').classList.remove('hidden');
+        document.getElementById('perq-timer').classList.remove('hidden');
+        startExamTimer();
+        startPerQTimer();
+        document.getElementById('btn-validate').classList.add('hidden');
+        document.getElementById('grille-examen').classList.remove('hidden');
+        buildGrilleExamen();
+      } else {
+        document.body.classList.remove('exam-mode');
+        document.getElementById('timer-wrap').classList.add('hidden');
+        document.getElementById('perq-timer').classList.add('hidden');
+        if (examTimer) clearInterval(examTimer);
+        if (perQTimer) clearInterval(perQTimer);
+        document.getElementById('grille-examen').classList.add('hidden');
+      }
+      updateMiniBar();
+      renderQuestion();
+    }
+
+    function buildGrilleExamen() {
+      const container = document.getElementById('grille-table');
+      const half = Math.ceil(activeSet.length / 2);
+      let html = '<div class="grille-col">';
+      for (let i = 0; i < half; i++) {
+        const q = questionsData[activeSet[i]];
+        const answered = userAnswers[i] !== null;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          const checked = userAnswers[i] === j;
+          html += `<span class="grille-case${checked?' checked':''}" onclick="selectChoiceFromGrille(${i},${j})">${ltr}</span>`;
+        });
+        html += '</div>';
+      }
+      html += '</div><div class="grille-col">';
+      for (let i = half; i < activeSet.length; i++) {
+        const q = questionsData[activeSet[i]];
+        const answered = userAnswers[i] !== null;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          const checked = userAnswers[i] === j;
+          html += `<span class="grille-case${checked?' checked':''}" onclick="selectChoiceFromGrille(${i},${j})">${ltr}</span>`;
+        });
+        html += '</div>';
+      }
+      html += '</div>';
+      container.innerHTML = html;
+    }
+
+    function selectChoiceFromGrille(qIndex, choiceIndex) { currentQ = qIndex; if (validated[currentQ]) return;
+      userAnswers[currentQ] = choiceIndex;
+      renderQuestion();
+      buildGrilleExamen(); }
+
+    function jumpToQuestion(qIndex) { 
+      if(isQuestionLocked(qIndex) && !unlocked) {
+        showUnlockModal();
+        return;
+      }
+      currentQ = qIndex;
+      if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); }
+      renderQuestion(); if (mode === 'exam') buildGrilleExamen(); 
+    }
+
+    function goHome() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode', 'train-mode');
+      showPage('page-home'); }
+
+    function updateMiniBar() { const e = currentQ + 1, t = activeSet.length;
+      document.getElementById('mb-q-counter').textContent = `Q${e}/${t}`;
+      document.getElementById('mb-progress-fill').style.width = (e / t * 100) + '%'; }
+
+    function renderQuestion() {
+      if(isQuestionLocked(currentQ) && !unlocked) {
+        showUnlockModal();
+        return;
+      }
+      const qIdx = activeSet[currentQ];
+      const q = questionsData[qIdx];
+      document.getElementById('q-statement').innerHTML = `❓ <strong>Q${q.id}.</strong> ${q.statement}`;
+      const container = document.getElementById('q-choices');
+      container.innerHTML = '';
+      const correctIdx = q.correct;
+      const selectedAnswer = userAnswers[currentQ];
+      ['A','B','C','D'].forEach((ltr, i) => {
+        if (i < q.choices.length) {
+          const btn = document.createElement('button');
+          btn.className = 'choice-btn';
+          if (validated[currentQ]) {
+            if (correctIdx === i) btn.classList.add('correct');
+            else if (selectedAnswer === i) btn.classList.add('wrong');
+          } else if (selectedAnswer === i) btn.classList.add('selected');
+          btn.innerHTML = `<span class="choice-letter">${ltr}</span><span class="choice-text">${q.choices[i]}</span>`;
+          if (!validated[currentQ]) {
+            btn.onclick = () => {
+              userAnswers[currentQ] = i;
+              renderQuestion();
+              if (mode === 'exam') buildGrilleExamen();
+            };
+          }
+          container.appendChild(btn);
+        }
+      });
+      const hasAnswer = userAnswers[currentQ] !== null;
+      if (mode === 'train') document.getElementById('btn-validate').disabled = (!hasAnswer || validated[currentQ]);
+      if (validated[currentQ] && mode === 'train') buildFeedback(q, userAnswers[currentQ]);
+      else if (mode === 'train') { document.getElementById('feedback-placeholder').style.display = 'flex';
+        document.getElementById('feedback-box').style.display = 'none'; }
+      if (mode === 'exam') { 
+        document.getElementById('feedback-placeholder').style.display = 'none'; 
+        document.getElementById('feedback-box').style.display = 'none'; 
+        document.getElementById('feedback-box').classList.remove('visible'); 
+      }
+      document.getElementById('btn-prev').disabled = (currentQ === 0);
+      const nextBtn = document.getElementById('btn-next');
+      if (currentQ === activeSet.length - 1) { nextBtn.innerHTML = '🏁 Terminer'; nextBtn.className = 'btn btn-gold'; }
+      else { nextBtn.innerHTML = 'Suivant →'; nextBtn.className = 'btn btn-primary'; }
+      if (typeof renderMathInElement !== 'undefined') {
+        renderMathInElement(document.getElementById('q-statement'), { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+        renderMathInElement(container, { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+      }
+      if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); buildGrilleExamen(); }
+    }
+
+    function arraysEqual(e, t) { if (!e || !t) return false; if (e.length !== t.length) return false; const n = [...e].sort(), o = [...t].sort(); return n.every((e, t) => e === o[t]); }
+
+    function validateAnswer() { if (userAnswers[currentQ] === null) return;
+      validated[currentQ] = true;
+      renderQuestion(); }
+
+    function buildFeedback(q, user) {
+      document.getElementById('feedback-placeholder').style.display = 'none';
+      const correct = q.correct;
+      const isCorrect = (user === correct);
+      document.getElementById('feedback-box').classList.add('visible', isCorrect ? 'correct' : 'wrong');
+      document.getElementById('feedback-box').style.display = 'block';
+      document.getElementById('badge-icon').textContent = isCorrect ? '✅' : '❌';
+      document.getElementById('feedback-result-text').textContent = isCorrect ? 'Bonne réponse !' : 'Réponse incorrecte';
+      let html = '';
+      const parts = q.explication.split('\n\n');
+      parts.forEach(part => {
+        if (part.startsWith('✅')) html += `<div class="fb-section fb-correct"><strong>✅ RÉPONSE</strong>${part.replace('✅ RÉPONSE :','')}</div>`;
+        else if (part.startsWith('🔍')) html += `<div class="fb-section fb-foundation"><strong>🔍 CORRECTION</strong>${part.replace('🔍 CORRECTION :','')}</div>`;
+        else if (part.startsWith('⚠️')) html += `<div class="fb-section fb-obstacle"><strong>⚠️ VIGILANCE</strong>${part.replace('⚠️ VIGILANCE :','')}</div>`;
+        else if (part.startsWith('💡')) html += `<div class="fb-section fb-tip"><strong>💡 ASTUCE</strong>${part.replace('💡 ASTUCE :','')}</div>`;
+        else if (part.startsWith('🎯')) html += `<div class="fb-section fb-objectif"><strong>🎯 OBJECTIF</strong>${part.replace('🎯 OBJECTIF :','')}</div>`;
+        else if (part.startsWith('📚')) html += `<div class="fb-section fb-reference"><strong>📚 RÉFÉRENCE</strong>${part.replace('📚 RÉFÉRENCE :','')}</div>`;
+        else html += `<div class="fb-section">${part}</div>`;
+      });
+      document.getElementById('feedback-body').innerHTML = html;
+      if (typeof renderMathInElement !== 'undefined') renderMathInElement(document.getElementById('feedback-body'), { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+    }
+
+    function prevQuestion() { 
+      if (currentQ > 0) { 
+        currentQ--; 
+        if(isQuestionLocked(currentQ) && !unlocked) {
+          showUnlockModal();
+          return;
+        }
+        renderQuestion(); 
+        if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); } 
+      } 
+    }
+    
+    function nextQuestion() { 
+      let nextIndex = currentQ + 1;
+      if(nextIndex < activeSet.length) {
+        if(isQuestionLocked(nextIndex) && !unlocked) {
+          showUnlockModal();
+          return;
+        }
+        currentQ = nextIndex;
+        renderQuestion(); 
+        if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); }
+      } else { 
+        if(!unlocked && activeSet.length === 10 && activeSet.length < questionsData.length) {
+          showUnlockModal();
+        } else {
+          finishQuiz();
+        }
+      } 
+    }
+
+    function finishQuiz() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode');
+      showPage('page-results');
+      let correctCount = 0;
+      const themesMap = {};
+      activeSet.forEach((idx, i) => {
+        const q = questionsData[idx];
+        const correct = q.correct;
+        const ok = (userAnswers[i] === correct);
+        if (ok) correctCount++;
+        if (!themesMap[q.theme]) themesMap[q.theme] = { total: 0, correct: 0 };
+        themesMap[q.theme].total++;
+        if (ok) themesMap[q.theme].correct++;
+      });
+      const pct = Math.round(correctCount / activeSet.length * 100);
+      document.getElementById('result-pct').textContent = pct + '%';
+      document.getElementById('result-sub').textContent = `${correctCount} / ${activeSet.length} bonnes réponses`;
+      document.getElementById('result-badge').textContent = pct >= 80 ? '🏆' : pct >= 50 ? '👍' : '💪';
+      document.getElementById('result-themes').innerHTML = '<table class="result-table"><thead><tr><th>Thème</th><th>Score</th><th>%</th></tr></thead><tbody>' + Object.entries(themesMap).map(([theme, data]) => { const tp = Math.round(data.correct / data.total * 100); return `<tr><td>${tp>=80?'🟢':tp>=50?'🟡':'🔴'} ${theme}</td><td>${data.correct}/${data.total}</td><td>${tp}%</td>`; }).join('') + '</tbody><tr>';
+      const half = Math.ceil(activeSet.length / 2);
+      let gridHtml = '<div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">';
+      for (let i = 0; i < half; i++) {
+        const q = questionsData[activeSet[i]];
+        const correct = q.correct;
+        const user = userAnswers[i];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          let cls = '';
+          if (correct === j && user === j) cls = 'correct-choice';
+          else if (correct === j && user !== j) cls = 'missed-choice';
+          else if (correct !== j && user === j) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`;
+        });
+        gridHtml += '</div>';
+      }
+      gridHtml += '</div><div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">';
+      for (let i = half; i < activeSet.length; i++) {
+        const q = questionsData[activeSet[i]];
+        const correct = q.correct;
+        const user = userAnswers[i];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A','B','C','D'].forEach((ltr, j) => {
+          let cls = '';
+          if (correct === j && user === j) cls = 'correct-choice';
+          else if (correct === j && user !== j) cls = 'missed-choice';
+          else if (correct !== j && user === j) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`;
+        });
+        gridHtml += '</div>';
+      }
+      gridHtml += '</div>';
+      document.getElementById('result-grid').innerHTML = gridHtml;
+      document.getElementById('timer-wrap').classList.add('hidden');
+      document.getElementById('perq-timer').classList.add('hidden');
+    }
+
+    function showExamInstructionsModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'exam-instructions-modal';
+      overlay.innerHTML = '<div class="modal-box rtl" style="max-width:600px;"><h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</h3><p style="font-size:18px;font-weight:700;color:var(--primary);">📋 تعليمات الامتحان</p><table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:15px;text-align:right;"><tr><td style="padding:8px 12px;border:1px solid #ccc;">⏰ المدة</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">60 دقيقة</td></tr><tr><td style="padding:8px 12px;border:1px solid #ccc;">📝 عدد الأسئلة</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">60 سؤالاً</td></tr><tr><td style="padding:8px 12px;border:1px solid #ccc;">✅ نوع الاختيار</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">إجابة واحدة صحيحة</td></tr></table><p style="font-size:15px;">⌨️ <strong>الأزرار :</strong> A B C D = اختيار الإجابة | Enter = تأكيد | → ← = التنقل بين الأسئلة</p><p style="font-size:15px;color:var(--red);font-weight:700;">⚠️ لا يمكن العودة للتصحيح قبل نهاية الوقت</p><p style="font-size:16px;font-weight:700;color:var(--accent-dark);margin-top:12px;">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</p><div class="modal-actions" style="direction:ltr;"><button class="btn btn-gold" id="btn-start-exam">▶️ بدء الامتحان</button></div></div>';
+      document.body.appendChild(overlay);
+      document.getElementById('btn-start-exam').addEventListener('click', () => { overlay.remove();
+        currentQ = 0;
+        activeSet = questionsData.map((_, i) => i);
+        if(!unlocked && activeSet.length > 10) {
+          activeSet = activeSet.slice(0, 10);
+        }
+        userAnswers = new Array(activeSet.length).fill(null);
+        validated = new Array(activeSet.length).fill(false);
+        showPage('page-question');
+        document.body.classList.add('exam-mode');
+        examSeconds = TOTAL_EXAM_SEC;
+        perQSeconds = PER_Q_SEC;
+        document.getElementById('timer-wrap').classList.remove('hidden');
+        document.getElementById('perq-timer').classList.remove('hidden');
+        startExamTimer();
+        startPerQTimer();
+        document.getElementById('btn-validate').classList.add('hidden');
+        document.getElementById('feedback-placeholder').style.display = 'none';
+        document.getElementById('grille-examen').classList.remove('hidden');
+        buildGrilleExamen();
+        updateMiniBar();
+        renderQuestion(); });
+    }
+
+    function startExamTimer() { updateExamTimerDisplay();
+      examTimer = setInterval(() => { examSeconds--; updateExamTimerDisplay(); if (examSeconds <= 0) { clearInterval(examTimer); clearInterval(perQTimer); finishQuiz(); } }, 1000); }
+    function updateExamTimerDisplay() { const e = Math.floor(examSeconds / 60), t = examSeconds % 60, n = document.getElementById('timer-badge');
+      n.textContent = `⏱ ${String(e).padStart(2,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'timer-badge'; if (examSeconds <= 600) n.classList.add('danger'); else if (examSeconds <= 1800) n.classList.add('warning'); }
+    function startPerQTimer() { updatePerQTimerDisplay();
+      perQTimer = setInterval(() => { perQSeconds--; updatePerQTimerDisplay(); if (perQSeconds <= 0) { clearInterval(perQTimer); validated[currentQ] = true; nextQuestion(); } }, 1000); }
+    function updatePerQTimerDisplay() { const e = Math.floor(perQSeconds / 60), t = perQSeconds % 60, n = document.getElementById('perq-timer');
+      n.textContent = `⚡ ${String(e).padStart(1,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'perq-timer'; if (perQSeconds <= 15) n.classList.add('danger'); else if (perQSeconds <= 30) n.classList.add('warning'); }
+
+    document.addEventListener('keydown', e => { const page = document.querySelector('#main-app .page.active'); if (!page || page.id !== 'page-question') return;
+      const key = e.key.toUpperCase();
+      if (['A','B','C','D'].includes(key) && !validated[currentQ]) {
+        userAnswers[currentQ] = ['A','B','C','D'].indexOf(key);
+        renderQuestion(); if (mode === 'exam') buildGrilleExamen();
+      }
+      if (e.key === 'Enter' && mode === 'train') { const btn = document.getElementById('btn-validate'); if (!btn.disabled) validateAnswer(); }
+      if (e.key === 'ArrowRight') nextQuestion();
+      if (e.key === 'ArrowLeft') prevQuestion();
+    });
+  </script>
+</body>
+</html>
