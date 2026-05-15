@@ -179,7 +179,7 @@
   </div>
   <footer class="site-footer">
     <div class="footer-info">© 2026 <strong>Synapris</strong> — Licence attribuée à <span id="client-name-footer">——</span> · Valide jusqu'au 01/03/2027 · CAPES Physique 2008 · 50 questions · 60 min</div>
-    <div class="footer-buttons"><button class="footer-reset" onclick="resetClientName()" title="Changer le prénom">🔄 Changer</button><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a><a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/" class="btn btn-outline-white" style="background:#ef6c00; color:white; border-color:#ef6c00;">📦 Voir les offres</a></div>
+    <div class="footer-buttons"><button class="footer-reset" onclick="resetClientName()" title="Changer le prénom">🔄 Changer</button><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a><a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/commander" class="btn btn-outline-white" style="background:#ef6c00; color:white; border-color:#ef6c00;">📦 Voir les offres</a></div>
   </footer>
   <script>
     const FICHE_TYPE = 'full';
@@ -188,7 +188,7 @@
     let mode = 'train';
     let currentQ = 0, activeSet = [], userAnswers = [], validated = [], examTimer = null, examSeconds = 0, perQTimer = null, perQSeconds = 0;
     let unlocked = false;
-    const VALID_KEYS = ['SYN-PHYS-2026',''SYN-PHYS-CHAGRA'];
+    const VALID_KEYS = ['SYN-PHYS-2026', 'SYN-PHYS-CHAGRA'];
     
     function isQuestionLocked(qIndex) {
       if(unlocked) return false;
@@ -328,14 +328,16 @@
       document.body.appendChild(overlay);
     }
 
-    function initDefaultMode() { document.getElementById('mode-train').classList.add('selected');
-      document.getElementById('btn-start').disabled = false;
-      document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
-      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
-      document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
-      document.getElementById('notice-train').classList.remove('hidden');
-      document.getElementById('notice-exam').classList.add('hidden'); }
-
+    function initDefaultMode() { 
+  document.getElementById('mode-train').classList.add('selected');
+  document.getElementById('btn-start').disabled = false;
+  document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
+  document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+  document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
+  document.getElementById('notice-train').classList.remove('hidden');
+  document.getElementById('notice-exam').classList.add('hidden');
+  mode = 'train';
+}
     function showPage(e) { document.querySelectorAll('#main-app .page').forEach(p => p.classList.remove('active'));
       document.getElementById(e).classList.add('active');
       document.getElementById('main-scroll').scrollTop = 0; }
@@ -351,9 +353,41 @@
       document.body.classList.remove('train-mode', 'exam-mode');
       document.body.classList.add(e === 'train' ? 'train-mode' : 'exam-mode');
     }
-
+     function showExamInstructionsModal() {
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.id = 'exam-instructions-modal';
+  overlay.innerHTML = '<div class="modal-box rtl" style="max-width:600px;"><h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</h3><p style="font-size:18px;font-weight:700;color:var(--primary);">📋 تعليمات الامتحان</p><table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:15px;text-align:right;"><tr><td style="padding:8px 12px;border:1px solid #ccc;">⏰ المدة</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">60 دقيقة</td></tr><tr><td style="padding:8px 12px;border:1px solid #ccc;">📝 عدد الأسئلة</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">50 سؤالاً</td></tr><tr><td style="padding:8px 12px;border:1px solid #ccc;">✅ نوع الاختيار</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">إجابة أو أكثر صحيحة</td></tr></table><p style="font-size:15px;">⌨️ <strong>الأزرار :</strong> A B C D = اختيار الإجابة | Enter = تأكيد | → ← = التنقل بين الأسئلة</p><p style="font-size:15px;color:var(--red);font-weight:700;">⚠️ لا يمكن العودة للتصحيح قبل نهاية الوقت</p><p style="font-size:16px;font-weight:700;color:var(--accent-dark);margin-top:12px;">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</p><div class="modal-actions" style="direction:ltr;"><button class="btn btn-gold" id="btn-start-exam">▶️ بدء الامتحان</button></div></div>';
+  document.body.appendChild(overlay);
+  document.getElementById('btn-start-exam').addEventListener('click', () => { overlay.remove();
+    currentQ = 0;
+    activeSet = questionsData.map((_, i) => i);
+    if(!unlocked && activeSet.length > 10) {
+      activeSet = activeSet.slice(0, 10);
+    }
+    userAnswers = new Array(activeSet.length).fill(null).map(() => []);
+    validated = new Array(activeSet.length).fill(false);
+    showPage('page-question');
+    document.body.classList.add('exam-mode');
+    examSeconds = TOTAL_EXAM_SEC;
+    perQSeconds = PER_Q_SEC;
+    document.getElementById('timer-wrap').classList.remove('hidden');
+    document.getElementById('perq-timer').classList.remove('hidden');
+    startExamTimer();
+    startPerQTimer();
+    document.getElementById('btn-validate').classList.add('hidden');
+    document.getElementById('feedback-placeholder').style.display = 'none';
+    document.getElementById('grille-examen').classList.remove('hidden');
+    buildGrilleExamen();
+    updateMiniBar();
+    renderQuestion(); });
+}
     function startQuiz() {
-      currentQ = 0;
+  if(mode === 'exam') { 
+    showExamInstructionsModal(); 
+    return; 
+  }
+  currentQ = 0;
       activeSet = questionsData.map((_, i) => i);
       userAnswers = new Array(activeSet.length).fill(null).map(() => []);
       validated = new Array(activeSet.length).fill(false);
