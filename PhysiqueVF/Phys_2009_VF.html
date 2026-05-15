@@ -346,8 +346,37 @@
       document.getElementById('notice-exam').classList.toggle('hidden', e !== 'exam');
       document.body.classList.remove('train-mode', 'exam-mode');
       document.body.classList.add(e === 'train' ? 'train-mode' : 'exam-mode');
+                
     }
-
+function showExamInstructionsModal() {
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.id = 'exam-instructions-modal';
+  overlay.innerHTML = '<div class="modal-box rtl" style="max-width:600px;"><h3>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</h3><p style="font-size:18px;font-weight:700;color:var(--primary);">📋 تعليمات الامتحان</p><table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:15px;text-align:right;"><tr><td style="padding:8px 12px;border:1px solid #ccc;">⏰ المدة</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">60 دقيقة</td></tr><tr><td style="padding:8px 12px;border:1px solid #ccc;">📝 عدد الأسئلة</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">50 سؤالاً</td></tr><tr><td style="padding:8px 12px;border:1px solid #ccc;">✅ نوع الاختيار</td><td style="padding:8px 12px;border:1px solid #ccc;font-weight:700;">إجابة أو أكثر صحيحة</td></tr></table><p style="font-size:15px;">⌨️ <strong>الأزرار :</strong> A B C D = اختيار الإجابة | Enter = تأكيد | → ← = التنقل بين الأسئلة</p><p style="font-size:15px;color:var(--red);font-weight:700;">⚠️ لا يمكن العودة للتصحيح قبل نهاية الوقت</p><p style="font-size:16px;font-weight:700;color:var(--accent-dark);margin-top:12px;">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</p><div class="modal-actions" style="direction:ltr;"><button class="btn btn-gold" id="btn-start-exam">▶️ بدء الامتحان</button></div></div>';
+  document.body.appendChild(overlay);
+  document.getElementById('btn-start-exam').addEventListener('click', () => { overlay.remove();
+    currentQ = 0;
+    activeSet = questionsData.map((_, i) => i);
+    if(!unlocked && activeSet.length > 10) {
+      activeSet = activeSet.slice(0, 10);
+    }
+    userAnswers = new Array(activeSet.length).fill(null).map(() => []);
+    validated = new Array(activeSet.length).fill(false);
+    showPage('page-question');
+    document.body.classList.add('exam-mode');
+    examSeconds = TOTAL_EXAM_SEC;
+    perQSeconds = PER_Q_SEC;
+    document.getElementById('timer-wrap').classList.remove('hidden');
+    document.getElementById('perq-timer').classList.remove('hidden');
+    startExamTimer();
+    startPerQTimer();
+    document.getElementById('btn-validate').classList.add('hidden');
+    document.getElementById('feedback-placeholder').style.display = 'none';
+    document.getElementById('grille-examen').classList.remove('hidden');
+    buildGrilleExamen();
+    updateMiniBar();
+    renderQuestion(); });
+}
     function startQuiz() {
       currentQ = 0;
       activeSet = questionsData.map((_, i) => i);
