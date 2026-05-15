@@ -188,7 +188,7 @@
     let mode = 'train';
     let currentQ = 0, activeSet = [], userAnswers = [], validated = [], examTimer = null, examSeconds = 0, perQTimer = null, perQSeconds = 0;
     let unlocked = false;
-    const VALID_KEYS = ['SYN-PHYS-2026',''SYN-PHYS-CHAGRA'];
+    const VALID_KEYS = ['SYN-MAESTRO-PHYS'];
     
     function isQuestionLocked(qIndex) {
       if(unlocked) return false;
@@ -247,7 +247,8 @@
 
     // ==================== FONCTIONS ====================
     document.addEventListener('DOMContentLoaded', function() {
-     localStorage.removeItem('synapris_client_name');
+  // 🔁 RESET FORCÉ POUR TESTS (à supprimer en production)
+  localStorage.removeItem('synapris_client_name');
   localStorage.removeItem('synapris_unlocked');
   unlocked = false;
       const savedName = localStorage.getItem('synapris_client_name');
@@ -291,13 +292,16 @@
       document.body.appendChild(overlay);
     }
 
-    function initDefaultMode() { document.getElementById('mode-train').classList.add('selected');
-      document.getElementById('btn-start').disabled = false;
-      document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
-      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
-      document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
-      document.getElementById('notice-train').classList.remove('hidden');
-      document.getElementById('notice-exam').classList.add('hidden'); }
+    function initDefaultMode() { 
+  document.getElementById('mode-train').classList.add('selected');
+  document.getElementById('btn-start').disabled = false;
+  document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
+  document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+  document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
+  document.getElementById('notice-train').classList.remove('hidden');
+  document.getElementById('notice-exam').classList.add('hidden');
+  mode = 'train';
+}
 
     function showPage(e) { document.querySelectorAll('#main-app .page').forEach(p => p.classList.remove('active'));
       document.getElementById(e).classList.add('active');
