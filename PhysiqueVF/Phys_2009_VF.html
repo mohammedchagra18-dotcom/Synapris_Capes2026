@@ -283,7 +283,13 @@
 
     // ==================== FONCTIONS ====================
     document.addEventListener('DOMContentLoaded', function() {
-      const savedName = localStorage.getItem('synapris_client_name');
+  // 🔁 RESET FORCÉ POUR TESTS (à supprimer en production)
+  localStorage.removeItem('synapris_client_name');
+  localStorage.removeItem('synapris_unlocked');
+  unlocked = false;
+  
+  const savedName = localStorage.getItem('synapris_client_name');
+  // ...
       const savedUnlock = localStorage.getItem('synapris_unlocked');
       if(savedUnlock === 'true') unlocked = true;
       if (savedName) { clientName = savedName;
@@ -324,7 +330,16 @@
       document.body.appendChild(overlay);
     }
 
-    function initDefaultMode() { document.getElementById('mode-train').classList.add('selected');
+    function initDefaultMode() { 
+  document.getElementById('mode-train').classList.add('selected');
+  document.getElementById('btn-start').disabled = false;
+  document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
+  document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+  document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
+  document.getElementById('notice-train').classList.remove('hidden');
+  document.getElementById('notice-exam').classList.add('hidden');
+  mode = 'train';
+}
       document.getElementById('btn-start').disabled = false;
       document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
       document.getElementById('mb-mode-badge').style.display = 'inline-flex';
@@ -378,7 +393,13 @@ function showExamInstructionsModal() {
     renderQuestion(); });
 }
     function startQuiz() {
-      currentQ = 0;
+  if(mode === 'exam') { 
+    showExamInstructionsModal(); 
+    return; 
+  }
+  currentQ = 0;
+  // ... (reste du code identique)
+}
       activeSet = questionsData.map((_, i) => i);
       userAnswers = new Array(activeSet.length).fill(null).map(() => []);
       validated = new Array(activeSet.length).fill(false);
