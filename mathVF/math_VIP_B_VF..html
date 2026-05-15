@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Synapris — CAPES Mathématiques — Épreuve B VIP</title>
+  <link rel="icon" type="image/png"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231a237e'/%3E%3Ctext x='50' y='68' font-size='60' font-family='Inter,sans-serif' font-weight='800' fill='%23f0a500' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#0f1f3d;--primary-mid:#1a3360;--accent:#f0a500;--accent-dark:#d4900a;--green:#2e7d32;--green-light:#e8f5e9;--red:#c62828;--red-light:#ffebee;--orange:#ef6c00;--white:#ffffff;--gray-light:#f5f7fa;--gray:#90a4ae;--sky-deep:#3b82f6;--sky-card:#eff6ff;--sky-border:#93c5fd;--shadow:0 4px 20px rgba(15,31,61,0.10);--shadow-sm:0 2px 8px rgba(15,31,61,0.08);--radius:12px;--font-ar:'Amiri',serif;--font-heading:'Inter',sans-serif;--font-fr:'Source Sans 3',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow:hidden}
+    body{font-family:var(--font-fr);font-size:18px;line-height:1.6;background:linear-gradient(160deg,#fdfbf7 0%,#f8f5ee 45%,#fef9f0 100%);color:#1a1a2e;display:flex;flex-direction:column}
+    .site-header{background:linear-gradient(135deg,#0b152e 0%,#1a2d5a 100%);color:var(--white);padding:2vh 1vw;height:23vh;display:flex;align-items:center;flex-shrink:0;box-shadow:0 3px 16px rgba(0,0,0,0.35)}
+    .header-grid{display:grid;grid-template-columns:130px 1fr 280px;gap:14px;align-items:center;width:100%}
+    .header-col1{display:flex;flex-direction:column;align-items:center;gap:6px}
+    .logo-square{width:100px;height:100px;border-radius:18px;background:#ffffff;display:flex;align-items:center;justify-content:center;border:3px solid var(--white);box-shadow:0 0 0 5px rgba(255,255,255,0.20);overflow:hidden}
+    .logo-square img{width:100%;height:100%;object-fit:contain}
+    .header-col1 .verset{font-family:var(--font-ar);font-size:16px;font-weight:700;color:var(--accent);text-align:center;font-style:italic;line-height:1.3}
+    .header-col2{background:var(--accent);border-radius:12px;padding:14px 16px;text-align:center}
+    .header-col2 .concours-ar{font-family:var(--font-ar);font-size:20px;font-weight:800;color:#0f1f3d;line-height:1.4;margin-bottom:6px;direction:rtl}
+    .header-col2 .specialite{font-family:var(--font-ar);font-size:15px;color:#0f1f3d;font-weight:700;direction:rtl}
+    .header-col3{text-align:center}
+    .header-col3 .accroche{font-family:var(--font-heading);font-size:14px;font-weight:600;color:var(--accent);margin-bottom:4px;animation:blink 1.2s infinite;}
+    .header-col3 .marque{font-size:20px;font-weight:800;color:var(--white);letter-spacing:1px}
+    .header-col3 .marque span{color:var(--accent);animation:blink 1.2s infinite;}
+    .header-col3 .session{font-size:11px;color:rgba(255,255,255,0.75);margin-bottom:8px}
+    .header-col3 .titre-epreuve{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:2px;text-shadow:0 2px 4px rgba(0,0,0,0.30)}
+    .mini-bar{background:var(--white);border-bottom:1px solid #e0e5ec;padding:1vh 1vw;height:7vh;font-size:2vh;display:flex;align-items:center;gap:14px;font-weight:600;color:var(--primary);flex-shrink:0;flex-wrap:wrap}
+    .mini-bar .mb-progress{flex:1;min-width:80px;display:flex;align-items:center;gap:10px}
+    .mb-progress span{font-size:2vh;font-weight:700}
+    .mb-progress-bar{flex:1;height:8px;background:#e0e5ec;border-radius:4px;overflow:hidden}
+    .mb-progress-fill{height:100%;background:linear-gradient(90deg,var(--sky-deep),var(--accent));border-radius:4px;transition:width .4s ease}
+    .mb-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:14px;font-weight:700;font-size:1.8vh;white-space:nowrap}
+    .mb-badge.mode-badge{background:#e8f0fb;color:var(--sky-deep)}
+    .mb-badge.client-badge{background:#fff3e0;color:var(--accent-dark)}
+    .main-scroll{flex:1;overflow-y:auto;padding:12px 0 8px;height:60vh}
+    .main-content{max-width:1100px;margin:0 auto;padding:0 18px 20px;height:100%;display:flex;flex-direction:column}
+    .page{display:none;height:100%}
+    .page.active{display:block;animation:fadeIn .35s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0.5}}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 28px;margin-bottom:18px;border-left:6px solid var(--primary)}
+    .card.sky{border-left-color:var(--sky-deep);background:#fafcff}
+    .card-title{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+    .btn{font-family:var(--font-fr);font-size:15px;font-weight:600;padding:10px 20px;border:none;border-radius:10px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover:not(:disabled){background:var(--primary-mid)}
+    .btn-sky{background:var(--sky-deep);color:var(--white)}.btn-sky:hover:not(:disabled){background:#2563eb}
+    .btn-green{background:var(--green);color:var(--white)}.btn-green:hover:not(:disabled){background:#388e3c}
+    .btn-gold{background:var(--accent);color:var(--primary);font-weight:700}.btn-gold:hover:not(:disabled){background:var(--accent-dark)}
+    .btn-gray{background:#6c757d;color:var(--white)}.btn-gray:hover:not(:disabled){background:#5a6268}
+    .btn-outline-white{border:2px solid var(--white);color:var(--white);background:transparent;font-size:13px;padding:8px 16px}.btn-outline-white:hover{background:rgba(255,255,255,0.10)}
+    .btn-whatsapp{background:#25d366;color:var(--white)}.btn-whatsapp:hover{background:#1ebe57}
+    .btn-block{display:flex;width:100%;margin-top:14px;font-size:16px;padding:14px}
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 16px;max-width:560px;margin-left:auto;margin-right:auto}
+    .mode-card{background:#f8faff;border:2px solid var(--sky-border);border-radius:var(--radius);padding:22px 14px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+    .mode-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--sky-deep);transform:scaleX(0);transform-origin:center;transition:transform .2s}
+    .mode-card:hover::after,.mode-card.selected::after{transform:scaleX(1)}
+    .mode-card:hover,.mode-card.selected{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sky-deep)}
+    .mode-card.exam-card::after{background:var(--red)}.mode-card.exam-card:hover,.mode-card.exam-card.selected{border-color:var(--red);background:#fff5f5}
+    .mode-icon{font-size:36px;display:block;margin-bottom:6px}.mode-name{font-size:17px;font-weight:700;color:var(--primary)}
+    .mode-desc{font-size:13px;color:var(--gray);margin-top:4px;line-height:1.5}
+    .notice-box{background:#fffdf5;border:2px dashed var(--accent);border-radius:12px;padding:16px 20px;margin:12px 0 0;font-size:15px;line-height:1.6;display:flex;align-items:flex-start;gap:12px}
+    .notice-box .notice-icon{font-size:28px;flex-shrink:0;margin-top:2px}
+    .ref-btn{background:transparent;border:1.5px dashed var(--gray);color:var(--gray);font-size:13px;padding:8px 16px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:10px 0 0;transition:all .2s}
+    .ref-btn:hover{border-color:var(--accent);color:var(--accent);background:#fffdf5}
+    .question-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;height:calc(100% - 60px)}
+    .q-left{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;border:1.5px solid var(--sky-border);display:flex;flex-direction:column;height:100%;overflow-y:auto}
+    .q-right{min-height:120px;display:flex;flex-direction:column;height:100%;overflow-y:auto}
+    .question-statement{font-size:16px;color:#1a1a2e;line-height:1.8;margin-bottom:14px;padding:14px 18px;background:#f8faff;border-radius:12px;border-left:5px solid var(--accent);user-select:text}
+    .choices-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:14px;flex:1}
+    .choice-btn{font-family:var(--font-fr);font-size:15px;padding:11px 16px;border:2px solid var(--sky-border);border-radius:12px;background:var(--white);color:#1a1a2e;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:flex-start;gap:10px;width:100%}
+    .choice-btn:hover:not(:disabled){background:#f0f6ff;border-color:var(--sky-deep)}
+    .choice-btn.selected{background:#e8f0ff;border-color:var(--sky-deep);box-shadow:0 0 0 4px rgba(59,130,246,0.15)}
+    .choice-btn.correct{background:var(--green-light);border-color:var(--green);color:var(--green);font-weight:600}
+    .choice-btn.wrong{background:var(--red-light);border-color:var(--red);color:var(--red)}
+    .choice-btn:disabled{cursor:default}
+    .choice-letter{width:30px;height:30px;border-radius:50%;background:var(--primary);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;margin-top:2px}
+    .choice-btn.correct .choice-letter{background:var(--green)}.choice-btn.wrong .choice-letter{background:var(--red)}.choice-btn.selected .choice-letter{background:var(--sky-deep)}
+    .choice-text{flex:1}
+    .nav-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .nav-row .btn-group{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .feedback-placeholder{background:#f8faff;border:2px dashed var(--sky-border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:140px;padding:24px 16px;text-align:center;color:var(--gray)}
+    .feedback-placeholder .ph-icon{font-size:36px;margin-bottom:8px}.feedback-placeholder .ph-text{font-size:14px}
+    .feedback-box{display:none;animation:fadeIn .3s ease}.feedback-box.visible{display:block}
+    .feedback-header{display:flex;align-items:center;gap:10px;padding:14px 20px;font-size:17px;font-weight:700;border-radius:12px 12px 0 0;border:2px solid transparent;border-bottom:none}
+    .feedback-box.correct .feedback-header{background:var(--green-light);color:var(--green);border-color:var(--green)}
+    .feedback-box.wrong .feedback-header{background:var(--red-light);color:var(--red);border-color:var(--red)}
+    .feedback-body{padding:20px 24px;background:#fafcff;border:2px solid #dbeafe;border-top:none;border-radius:0 0 12px 12px;font-size:15px;line-height:1.8;user-select:text;white-space:pre-line;max-height:400px;overflow-y:auto}
+    .feedback-box.correct .feedback-body{border-color:var(--green)}.feedback-box.wrong .feedback-body{border-color:var(--red)}
+    .fb-section{margin-bottom:14px;padding:14px 18px;border-radius:10px;background:#f9fafb;border-left:5px solid var(--sky-deep)}
+    .fb-section.fb-correct{background:#f0faf0;border-left-color:var(--green)}
+    .fb-section.fb-foundation{background:#f0f4ff;border-left-color:var(--sky-deep)}
+    .fb-section.fb-reference{background:#fef9f0;border-left-color:var(--accent-dark)}
+    .fb-section.fb-obstacle{background:#fff5f5;border-left-color:var(--red)}
+    .fb-section.fb-tip{background:#fffdf0;border-left-color:var(--accent)}
+    .fb-section.fb-objectif{background:#f0faf8;border-left-color:var(--primary)}
+    .fb-section strong{display:block;margin-bottom:5px;font-size:16px;letter-spacing:0.3px}
+    .hidden{display:none!important}
+    .exam-mode .q-left,.exam-mode .q-right{border-radius:2px;border:1px solid #999;box-shadow:none}
+    .grille-examen{background:#faf9f6;border:2px solid #555;border-radius:2px;padding:12px 10px;font-family:'Courier New',monospace;font-size:12px;user-select:none;overflow-y:auto;max-height:75vh}
+    .grille-examen h4{text-align:center;font-size:14px;margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-family:var(--font-fr)}
+    .grille-table{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+    .grille-col{display:flex;flex-direction:column;gap:2px}
+    .grille-row{display:flex;align-items:center;gap:4px;font-size:11px}
+    .grille-q-num{width:28px;font-weight:700;text-align:right;cursor:pointer;color:var(--primary);font-family:var(--font-fr)}
+    .grille-q-num.answered{color:var(--accent-dark);animation:subtlePulse 1.5s infinite}
+    @keyframes subtlePulse{0%,100%{opacity:1}50%{opacity:0.5}}
+    .grille-case{width:20px;height:20px;border:1.5px solid #555;display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;cursor:pointer;background:#fff;transition:all .15s}
+    .grille-case:hover{background:#ddd}.grille-case.checked{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;font-family:'Courier New',monospace;font-size:13px}
+    .result-row{display:flex;align-items:center;gap:6px;padding:4px 0}
+    .result-q-num{width:32px;font-weight:700;font-family:var(--font-fr)}
+    .result-case{width:24px;height:24px;border:2px solid #aaa;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;background:#f5f5f5}
+    .result-case.correct-choice{background:#2e7d32;color:#fff;border-color:#2e7d32}
+    .result-case.wrong-choice{background:#c62828;color:#fff;border-color:#c62828}
+    .result-case.missed-choice{background:#fff3e0;border-color:#ef6c00;color:#ef6c00}
+    .timer-wrap{text-align:center;margin-bottom:10px}
+    .timer-badge{display:inline-flex;align-items:center;gap:6px;background:#f8faff;border:2px solid var(--sky-border);border-radius:10px;padding:6px 16px;font-size:20px;font-weight:700;color:var(--primary);transition:all .3s}
+    .timer-badge.warning{background:#fff8f0;border-color:var(--orange);color:var(--orange)}
+    .timer-badge.danger{background:var(--red-light);border-color:var(--red);color:var(--red);animation:pulse .8s infinite}
+    .perq-timer{font-size:12px;color:var(--gray);margin-left:8px;font-weight:600}.perq-timer.warning{color:var(--orange)}.perq-timer.danger{color:var(--red)}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+    .site-footer{background:var(--primary);color:rgba(255,255,255,0.85);padding:1vh 1vw;height:10vh;font-size:1.5vh;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .site-footer .footer-info{font-weight:600}.site-footer .footer-info strong{color:var(--accent);font-weight:700}
+    .site-footer .footer-buttons{display:flex;gap:8px;flex-wrap:wrap}
+    .footer-reset{background:transparent;border:1px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.7);font-size:10px;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all .2s}
+    .footer-reset:hover{border-color:var(--accent);color:var(--accent)}
+    .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,31,61,0.80);display:flex;align-items:center;justify-content:center;z-index:1000;animation:fadeIn .3s ease}
+    .modal-box{background:var(--white);border-radius:var(--radius);padding:32px 28px;max-width:520px;width:90%;text-align:center;box-shadow:0 14px 50px rgba(0,0,0,0.35);border-top:6px solid var(--accent)}
+    .modal-box.rtl{direction:rtl;font-family:var(--font-ar);text-align:right}
+    .modal-box h3{font-family:var(--font-heading);font-size:24px;color:var(--primary);margin-bottom:10px}
+    .modal-box.rtl h3{font-family:var(--font-ar);font-size:22px}
+    .modal-box p{font-size:16px;color:#555;margin-bottom:20px;line-height:1.7}
+    .modal-box .key-input{width:100%;padding:14px 16px;border:2px solid var(--sky-border);border-radius:10px;font-size:18px;text-align:center;font-family:var(--font-fr);letter-spacing:2px;margin-bottom:16px;outline:none;transition:border-color .2s}
+    .modal-box .key-input:focus{border-color:var(--accent)}
+    .modal-box .modal-error{color:var(--red);font-size:14px;font-weight:600;margin-bottom:10px;display:none}
+    .modal-box .modal-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .score-card{text-align:center;padding:28px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px}
+    .score-badge{font-size:56px;display:block;margin-bottom:8px}.score-pct{font-size:52px;font-weight:800;color:var(--primary);display:block}
+    .score-label{font-size:18px;font-weight:600;color:var(--gray);display:block;margin-top:6px}.score-sub{font-size:15px;color:var(--gray);display:block}
+    .result-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+    .result-table th{background:var(--primary);color:var(--white);padding:8px 10px;text-align:left}
+    .result-table td{padding:7px 10px;border-bottom:1px solid #e0e5ec}
+    .intro-banner{background:linear-gradient(135deg,#fff8e7 0%,#fff3d6 40%,#fef9f0 100%);border-radius:18px;padding:40px 28px;text-align:center;box-shadow:var(--shadow);border:2px solid var(--accent);margin-bottom:20px}
+    .intro-banner .intro-logo{font-family:var(--font-heading);font-size:48px;font-weight:800;color:var(--primary);letter-spacing:3px;margin-bottom:20px}
+    .intro-banner .intro-logo span{color:var(--accent)}
+    .intro-banner .intro-logo img{max-width:200px;height:auto;margin:0 auto}
+    .intro-banner .intro-slogan{font-size:22px;font-weight:600;color:#555;margin:8px 0 20px}
+    .intro-banner .intro-features{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:24px 0}
+    .intro-feature{text-align:center;font-size:16px;font-weight:600;color:var(--primary)}.intro-feature .feat-icon{font-size:40px;display:block;margin-bottom:6px}
+    body.exam-mode .site-header, body.exam-mode .site-footer, body.train-mode .site-header, body.train-mode .site-footer { display: none; }
+    @media(max-width:480px){body{font-size:16px}.header-grid{grid-template-columns:20% 50% 30%;gap:4px}.logo-square{width:48px;height:48px;border-radius:10px}.header-col1 .verset{font-size:8px}.header-col2 .concours-ar{font-size:11px!important}.header-col2 .specialite{font-size:9px}.header-col3 .accroche{font-size:9px}.header-col3 .marque{font-size:12px}.header-col3 .session{font-size:7px}.header-col3 .titre-epreuve{font-size:14px}.mini-bar{padding:6px 10px;gap:8px;font-size:11px}.mini-bar .mb-progress span{font-size:12px}.mb-badge{font-size:9px;padding:3px 8px}.main-content{padding:0 8px 14px}.mode-grid{gap:8px}.mode-card{padding:14px 6px}.mode-icon{font-size:28px}.mode-name{font-size:13px}.mode-desc{font-size:10px}.question-layout{grid-template-columns:1fr;gap:6px}.q-left{padding:12px}.question-statement{font-size:13px;padding:10px 12px}.choice-btn{font-size:12px;padding:8px 10px}.choice-letter{width:24px;height:24px;font-size:10px}.btn{font-size:12px;padding:8px 14px}.btn-block{font-size:14px;padding:10px}.site-footer{padding:8px 12px;flex-direction:column;text-align:center}.site-footer .footer-buttons{justify-content:center}.grille-examen{font-size:9px;padding:6px 4px;max-height:55vh}.grille-examen h4{font-size:10px;margin-bottom:6px}.grille-table{gap:3px 5px}.grille-row{font-size:8px;gap:1px}.grille-q-num{width:18px;font-size:8px}.grille-case{width:15px;height:15px;font-size:6px}.result-grid{font-size:10px;gap:4px 10px}.result-case{width:22px;height:22px;font-size:8px}.intro-banner{padding:24px 14px}.intro-banner .intro-logo{font-size:32px}.intro-banner .intro-slogan{font-size:16px}.intro-feature{font-size:13px}.intro-feature .feat-icon{font-size:30px}}
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <header class="site-header">
+    <div class="header-grid">
+      <div class="header-col1"><div class="logo-square"><img src="images/logo.PNG" alt="Synapris"></div><div class="verset">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ</div></div>
+      <div class="header-col2"><div class="concours-ar">المناظرة الخارجية بالاختبارات لانتداب أساتذة<br>التعليم الثانوي و التعليم التقني و التعليم الفني</div><div class="specialite">اختصاص : الرياضيات — CAPES 2026 — Épreuve B VIP — المدة : 60 دقيقة</div></div>
+      <div class="header-col3"><div class="accroche">✨ Votre réussite commence ici — Épreuve Spéciale VIP B</div><div class="marque"><span>SYNAPRIS</span></div><div class="session">Épreuve B VIP · Programme CAPES 2026</div><div class="titre-epreuve">QCM_MATHS_VIP_B</div></div>
+    </div>
+  </header>
+  <div class="mini-bar" id="mini-bar"><div class="mb-progress"><span id="mb-q-counter">—</span><div class="mb-progress-bar"><div class="mb-progress-fill" id="mb-progress-fill" style="width:0%"></div></div></div><span class="mb-badge mode-badge" id="mb-mode-badge" style="display:none;">—</span><span class="mb-badge client-badge" id="mb-client-badge" style="display:none;">🔑 —</span></div>
+  <div class="main-scroll" id="main-scroll">
+    <div id="main-app" style="display:block;"><div class="main-content">
+      <div id="page-welcome" class="page active"><div class="intro-banner"><div class="intro-logo"><img src="images/logo.PNG" alt="Synapris" style="max-width:200px"></div><div class="intro-slogan">🌟 Le savoir sous tous ses prismes — CAPES Maths VIP B</div><div class="intro-features"><div class="intro-feature"><span class="feat-icon">📝</span>Entraînez-vous</div><div class="intro-feature"><span class="feat-icon">⏱️</span>Simulez l'examen</div><div class="intro-feature"><span class="feat-icon">💡</span>Comprenez vos erreurs</div><div class="intro-feature"><span class="feat-icon">📊</span>Suivez votre progrès</div></div><button class="btn btn-gold btn-block" onclick="showPage('page-home')" style="max-width:400px;margin:0 auto;">✨ Accéder à l'Épreuve B VIP</button><p style="font-size:13px;color:var(--gray);margin-top:14px;">QCM interactif — CAPES Mathématiques — 50 questions · 60 minutes · 3 choix (A,B,C) · Une seule réponse correcte</p></div></div>
+      <div id="page-home" class="page"><div class="card sky"><div class="card-title">🎯 Choisissez votre mode</div><div class="mode-grid"><div class="mode-card" id="mode-train" onclick="selectMode('train')"><span class="mode-icon">📝</span><div class="mode-name">Mode Entraînement</div><div class="mode-desc">Feedback immédiat · Correction détaillée</div></div><div class="mode-card exam-card" id="mode-exam" onclick="selectMode('exam')"><span class="mode-icon">⏱️</span><div class="mode-name">Mode Examen</div><div class="mode-desc">Chronomètre 60 min · Conditions réelles</div></div></div><div class="notice-box" id="notice-train"><div class="notice-icon">🖱️</div><div><strong>🟢 Mode Entraînement :</strong> Cliquez sur A, B ou C pour choisir → <strong>Validez</strong> pour voir la correction → <strong>Flèches ← →</strong> pour naviguer. <strong>Enter</strong> pour valider. Une seule réponse correcte par question.</div></div><div class="notice-box hidden" id="notice-exam" style="background:#fff5f5;border-color:var(--red);"><div class="notice-icon">⏰</div><div><strong>🔴 Mode Examen :</strong> 50 questions en 60 minutes. Chronomètre en haut. Pas de correction avant la fin. Grille de réponses à droite. Une seule réponse correcte par question. Bonne chance !</div></div><div style="text-align:center;"><button class="ref-btn" onclick="showRefModal()">📚 Références &amp; mentions légales</button></div><button class="btn btn-sky btn-block" id="btn-start" disabled onclick="startQuiz()">⏳ Chargement...</button></div></div>
+      <div id="page-question" class="page"><div class="timer-wrap hidden" id="timer-wrap"><div class="timer-badge" id="timer-badge">⏱ 60:00</div><span class="perq-timer" id="perq-timer">⚡ 1:12</span></div><div class="question-layout"><div class="q-left"><div class="question-statement" id="q-statement"></div><div class="choices-grid" id="q-choices"></div></div><div class="q-right" id="q-right-panel"><div class="feedback-placeholder" id="feedback-placeholder"><div class="ph-icon">💬</div><div class="ph-text">Feedback après validation</div></div><div class="feedback-box" id="feedback-box"><div class="feedback-header" id="feedback-header"><span id="badge-icon"></span><span id="feedback-result-text"></span></div><div class="feedback-body" id="feedback-body"></div></div><div class="grille-examen hidden" id="grille-examen"><h4>📋 Grille de réponses</h4><div class="grille-table" id="grille-table"></div></div></div></div><div class="nav-row"><div class="btn-group"><button class="btn btn-primary" id="btn-prev" onclick="prevQuestion()" disabled>← Précédent</button><button class="btn btn-gold" onclick="goHome()">🏠 Accueil</button><button class="btn btn-green" id="btn-validate" disabled onclick="validateAnswer()">✔ Valider</button><button class="btn btn-primary" id="btn-next" onclick="nextQuestion()">Suivant →</button></div></div></div>
+      <div id="page-results" class="page"><div class="score-card"><span class="score-badge" id="result-badge">🏆</span><span class="score-pct" id="result-pct">—</span><span class="score-label">Score final</span><span class="score-sub" id="result-sub"></span></div><div class="card"><div class="card-title">📊 Résultats par thème</div><div id="result-themes"></div></div><div class="card"><div class="card-title">📋 Grille des réponses</div><div class="result-grid" id="result-grid"></div><button class="btn btn-gold btn-block" style="margin-top:8px;" onclick="goHome()">🏠 Retour à l'accueil</button></div></div>
+    </div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-info">© 2026 <strong>Synapris</strong> — Licence attribuée à <span id="client-name-footer">——</span> · Valide jusqu'au 01/03/2027 · CAPES Mathématiques · Épreuve B VIP · 50 questions · 60 min</div>
+    <div class="footer-buttons"><button class="footer-reset" onclick="resetClientName()" title="Changer le prénom">🔄 Changer</button><a href="https://wa.me/21620002520" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a><a href="https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/commander" class="btn btn-outline-white" style="background:#ef6c00; color:white; border-color:#ef6c00;">📦 Voir les offres</a></div>
+  </footer>
+  <script>
+    const FICHE_TYPE = 'full';
+    const TOTAL_EXAM_SEC = 3600, PER_Q_SEC = 72;
+    let clientName = '';
+    let mode = 'train';
+    let currentQ = 0, activeSet = [], userAnswers = [], validated = [], examTimer = null, examSeconds = 0, perQTimer = null, perQSeconds = 0;
+    let unlocked = false;
+    const VALID_KEYS = ['SYN-MAESTRO-MATH'];
+    
+    function isQuestionLocked(qIndex) {
+      if(unlocked) return false;
+      const realQNumber = qIndex + 1;
+      return realQNumber > 10;
+    }
+    
+    function showUnlockModal() {
+      if(unlocked) return;
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'unlock-modal';
+      overlay.innerHTML = `<div class="modal-box"><h3>🔐 Accès complet au QCM</h3><p>Vous avez atteint la limite des 10 questions gratuites.<br><strong>25 DT seulement</strong> pour débloquer les 40 questions restantes (Q11 à Q50) + le Pack Spécial CAPES MATH 2026.</p><input type="text" class="key-input" id="unlock-key" placeholder="Entrez votre clé d'accès" autocomplete="off"><div class="modal-error" id="unlock-error">❌ Clé invalide. Veuillez vérifier.</div><div class="modal-actions"><button class="btn btn-gold" id="btn-unlock" style="animation:blink 1.2s infinite; background:#ef6c00; color:white;">🔑 Demander l'accès complet</button><button class="btn btn-gray" id="btn-cancel-unlock">Fermer</button></div></div>`;
+      document.body.appendChild(overlay);
+      document.getElementById('btn-unlock').addEventListener('click', () => {
+        const key = document.getElementById('unlock-key').value.trim();
+        if(VALID_KEYS.includes(key)) {
+          unlocked = true;
+          localStorage.setItem('synapris_unlocked', 'true');
+          overlay.remove();
+          renderQuestion();
+          if(mode === 'exam') buildGrilleExamen();
+        } else {
+          document.getElementById('unlock-error').style.display = 'block';
+          setTimeout(() => {
+            window.open('https://mohammedchagra18-dotcom.github.io/Synapris_Capes2026/commander', '_blank');
+          }, 500);
+        }
+      });
+      document.getElementById('btn-cancel-unlock').addEventListener('click', () => {
+        overlay.remove();
+        if(currentQ >= 10) {
+          currentQ = 9;
+          renderQuestion();
+        }
+      });
+    }
+    
+    // ==================== 50 QUESTIONS — CAPES MATHS VIP ÉPREUVE B ====================
+    const questionsData = [
+      { id: 1, statement: "$\\displaystyle\\lim_{x \\to 0} \\dfrac{e^x - 1}{x}$ vaut :", choices: ["1", "0", "$+\\infty$"], correct: [0], theme: "Analyse — Limites", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nLimite remarquable fondamentale. Développement limité : $e^x = 1 + x + o(x)$, donc $(e^x-1)/x \\to 1$. Ou par définition de la dérivée de $e^x$ en 0.\n\n⚠️ VIGILANCE :\nNe pas confondre avec $(e^x-1)/x \\to 0$ ou $+\\infty$.\n\n💡 ASTUCE :\nCette limite est la définition même du nombre dérivé de $e^x$ en 0.\n\n🎯 OBJECTIF :\nProgramme CAPES — Limites et développements limités\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 2, statement: "La dérivée de $f(x) = \\ln(\\sin x)$ est :", choices: ["$f'(x) = \\dfrac{1}{\\sin x}$", "$f'(x) = \\dfrac{\\cos x}{\\sin x}$", "$f'(x) = -\\dfrac{\\cos x}{\\sin x}$"], correct: [1], theme: "Analyse — Dérivation", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nDérivée composée : $(\\ln u)' = u'/u$ avec $u = \\sin x$, $u' = \\cos x$. Donc $f'(x) = \\cos x / \\sin x = \\cot x$.\n\n⚠️ VIGILANCE :\nNe pas oublier le domaine de définition : $\\sin x > 0$ pour que $\\ln(\\sin x)$ soit défini.\n\n💡 ASTUCE :\nLa dérivée de $\\ln(u)$ est $u'/u$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Dérivation des fonctions composées\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 3, statement: "La série de Riemann $\\displaystyle\\sum_{n=1}^{+\\infty} \\dfrac{1}{n^2}$ est :", choices: ["Divergente", "Convergente vers $\\pi$", "Convergente"], correct: [2], theme: "Analyse — Séries", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nSérie de Riemann $\\sum 1/n^p$ converge $\\Leftrightarrow p > 1$. Ici $p = 2 > 1$ donc convergence. (Euler montre que la limite vaut $\\pi^2/6$, mais savoir si elle converge suffit ici.)\n\n⚠️ VIGILANCE :\nPour $p \\leq 1$, la série diverge (série harmonique pour $p=1$).\n\n💡 ASTUCE :\n$\\zeta(2) = \\pi^2/6$ est un résultat classique.\n\n🎯 OBJECTIF :\nProgramme CAPES — Séries de Riemann\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 4, statement: "$\\displaystyle\\int_0^{\\pi} \\sin x\\,dx$ vaut :", choices: ["2", "0", "1"], correct: [0], theme: "Analyse — Intégration", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$\\int \\sin x\\,dx = -\\cos x + C$. Donc $[-\\cos x]_0^\\pi = -\\cos\\pi + \\cos 0 = 1 + 1 = 2$.\n\n⚠️ VIGILANCE :\nNe pas oublier le signe moins dans la primitive.\n\n💡 ASTUCE :\n$\\int_0^\\pi \\sin x\\,dx$ représente l'aire sous la courbe de $\\sin x$ entre 0 et $\\pi$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Calcul intégral\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 5, statement: "La solution générale de $y'' + y = 0$ est :", choices: ["$y = Ce^{x} + De^{-x}$", "$y = A\\cos x + B\\sin x$", "$y = Ae^{x}$"], correct: [1], theme: "Analyse — Équations différentielles", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nÉquation caractéristique : $r^2 + 1 = 0 \\Rightarrow r = \\pm i$. Racines complexes conjuguées $\\alpha \\pm i\\beta$ avec $\\alpha = 0$, $\\beta = 1$ donnent $y = e^{0}(A\\cos x + B\\sin x)$.\n\n⚠️ VIGILANCE :\nPour les racines complexes $\\alpha \\pm i\\beta$, la solution est $y = e^{\\alpha x}(A\\cos\\beta x + B\\sin\\beta x)$.\n\n💡 ASTUCE :\n$y'' + y = 0$ est l'équation de l'oscillateur harmonique.\n\n🎯 OBJECTIF :\nProgramme CAPES — Équations différentielles linéaires\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 6, statement: "Le développement limité de $e^x$ à l'ordre 2 au voisinage de 0 est :", choices: ["$e^x = 1 + x + x^2 + o(x^2)$", "$e^x = 1 + x - \\dfrac{x^2}{2} + o(x^2)$", "$e^x = 1 + x + \\dfrac{x^2}{2} + o(x^2)$"], correct: [2], theme: "Analyse — Développements limités", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nSérie de Taylor de $e^x$ : $\\sum_{k=0}^{\\infty} x^k/k!$. Ordre 2 : $1 + x + x^2/2!$.\n\n⚠️ VIGILANCE :\nNe pas confondre avec le développement de $\\ln(1+x)$ ou $\\sin x$.\n\n💡 ASTUCE :\nLes factorielles au dénominateur sont essentielles.\n\n🎯 OBJECTIF :\nProgramme CAPES — Développements limités usuels\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 7, statement: "$\\displaystyle\\lim_{x \\to +\\infty} x\\,e^{-x}$ vaut :", choices: ["0", "1", "$+\\infty$"], correct: [0], theme: "Analyse — Limites", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nCroissances comparées : l'exponentielle l'emporte sur tout polynôme. $x/e^x \\to 0$ car $e^x$ croît plus vite que tout polynôme.\n\n⚠️ VIGILANCE :\nEn $+\\infty$, $e^x$ domine $x^n$ pour tout $n$.\n\n💡 ASTUCE :\n$\\lim_{x\\to+\\infty} x^\\alpha e^{-x} = 0$ pour tout $\\alpha$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Croissances comparées\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 8, statement: "La dérivée de $f(x) = \\arcsin x$ est :", choices: ["$f'(x) = \\dfrac{-1}{\\sqrt{1-x^2}}$", "$f'(x) = \\dfrac{1}{\\sqrt{1-x^2}}$", "$f'(x) = \\dfrac{1}{1+x^2}$"], correct: [1], theme: "Analyse — Dérivation", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nDérivation implicite de $\\sin(y) = x$ : $\\cos(y)\\cdot y' = 1$, or $\\cos(y) = \\sqrt{1-\\sin^2(y)} = \\sqrt{1-x^2}$, donc $y' = 1/\\sqrt{1-x^2}$.\n\n⚠️ VIGILANCE :\nLe domaine de définition est $x \\in [-1,1]$, et la dérivée n'est pas définie en $\\pm1$.\n\n💡 ASTUCE :\n$\\arcsin'(x) = 1/\\sqrt{1-x^2}$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Dérivées des fonctions réciproques\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 9, statement: "Règle de d'Alembert : si $\\left|\\dfrac{u_{n+1}}{u_n}\\right| \\to L > 1$, la série $\\sum u_n$ :", choices: ["Converge absolument", "Converge conditionnellement", "Diverge"], correct: [2], theme: "Analyse — Séries", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nSi $L > 1$, le terme général $u_n \\not\\to 0$ (il croît en module), donc la condition nécessaire de convergence n'est pas satisfaite : la série diverge.\n\n⚠️ VIGILANCE :\nSi $L = 1$, le critère ne permet pas de conclure.\n\n💡 ASTUCE :\nLe critère de d'Alembert est basé sur le rapport $u_{n+1}/u_n$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Règle de d'Alembert\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 10, statement: "La fonction $f(x) = e^{x^2}$ admet une primitive sur $\\mathbb{R}$ :", choices: ["Oui, car $f$ est continue sur $\\mathbb{R}$", "Non, car $f$ n'est pas dérivable", "Non, car $f$ n'est pas bornée"], correct: [0], theme: "Analyse — Primitives", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nThéorème fondamental : toute fonction continue sur un intervalle admet des primitives. $f$ est continue sur $\\mathbb{R}$ donc elle possède des primitives, même si elles ne s'expriment pas en termes de fonctions élémentaires.\n\n⚠️ VIGILANCE :\nUne fonction continue admet toujours une primitive.\n\n💡 ASTUCE :\nLa primitive peut ne pas être exprimable avec des fonctions usuelles (comme ici avec $e^{x^2}$).\n\n🎯 OBJECTIF :\nProgramme CAPES — Existence des primitives\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 11, statement: "$\\displaystyle\\int_0^1 \\dfrac{dx}{1+x^2}$ vaut :", choices: ["$\\dfrac{\\pi}{2}$", "$\\dfrac{\\pi}{4}$", "$\\ln 2$"], correct: [1], theme: "Analyse — Intégration", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$[\\arctan x]_0^1 = \\arctan(1) - \\arctan(0) = \\dfrac{\\pi}{4} - 0 = \\dfrac{\\pi}{4}$.\n\n⚠️ VIGILANCE :\n$\\arctan(1) = \\pi/4$, pas $\\pi/2$.\n\n💡 ASTUCE :\nLa primitive de $1/(1+x^2)$ est $\\arctan x$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Calcul d'intégrales\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 12, statement: "La suite $u_n = \\dfrac{(-1)^n}{n}$ :", choices: ["Diverge", "Converge vers 1", "Converge vers 0"], correct: [2], theme: "Analyse — Suites", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\n$|u_n| = 1/n \\to 0$, donc $u_n \\to 0$. La suite alterne de signe mais son module tend vers zéro : elle converge vers 0.\n\n⚠️ VIGILANCE :\nUne suite alternée peut converger vers 0 si son terme général tend vers 0.\n\n💡 ASTUCE :\nLe théorème des suites alternées garantit la convergence.\n\n🎯 OBJECTIF :\nProgramme CAPES — Suites numériques\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 13, statement: "Si $f$ est continue sur $[a,b]$ et dérivable sur $]a,b[$ avec $f'(x) > 0$ sur $]a,b[$, alors $f$ est :", choices: ["Strictement croissante sur $[a,b]$", "Constante sur $[a,b]$", "Strictement décroissante sur $[a,b]$"], correct: [0], theme: "Analyse — Monotonie", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nThéorème de la monotonie : $f' > 0$ sur $]a,b[$ $\\Rightarrow$ $f$ strictement croissante. La stricte inégalité est cruciale pour la stricte monotonie.\n\n⚠️ VIGILANCE :\nSi $f' \\geq 0$, $f$ est croissante (non nécessairement strictement).\n\n💡 ASTUCE :\nLe théorème des accroissements finis permet de démontrer ce résultat.\n\n🎯 OBJECTIF :\nProgramme CAPES — Lien dérivée-monotonie\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 14, statement: "Le théorème des valeurs intermédiaires s'applique à $f$ :", choices: ["Dérivable sur $]a,b[$", "Continue sur $[a,b]$", "Monotone sur $[a,b]$"], correct: [1], theme: "Analyse — Fonctions continues", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nHypothèse minimale : la continuité sur l'intervalle fermé borné. La dérivabilité n'est pas nécessaire (ex. $|x|$).\n\n⚠️ VIGILANCE :\nLa continuité est la condition suffisante.\n\n💡 ASTUCE :\nLe TVI permet de montrer qu'une fonction continue prend toutes les valeurs entre ses bornes.\n\n🎯 OBJECTIF :\nProgramme CAPES — Théorème des valeurs intermédiaires\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 15, statement: "La solution générale de $y' = y \\cdot f(x)$ (où $F$ est une primitive de $f$) est :", choices: ["$y = e^{F(x)}$", "$y = C \\cdot f(x)$", "$y = C \\cdot e^{F(x)}$"], correct: [2], theme: "Analyse — Équations différentielles", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nSéparation des variables : $dy/y = f(x)dx$ $\\Rightarrow$ $\\ln|y| = F(x) + K$ $\\Rightarrow$ $y = Ce^{F(x)}$.\n\n⚠️ VIGILANCE :\nNe pas oublier la constante d'intégration.\n\n💡 ASTUCE :\nC'est une équation différentielle linéaire du premier ordre sans second membre.\n\n🎯 OBJECTIF :\nProgramme CAPES — Équations différentielles\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 16, statement: "Le déterminant de $A = \\begin{pmatrix} 3 & 1 \\\\ 2 & 4 \\end{pmatrix}$ est :", choices: ["10", "-10", "14"], correct: [0], theme: "Algèbre linéaire — Déterminants", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$\\det(A) = 3 \\times 4 - 1 \\times 2 = 12 - 2 = 10$.\n\n⚠️ VIGILANCE :\nPour une matrice $2 \\times 2$, $\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix} = ad - bc$.\n\n💡 ASTUCE :\nLe déterminant est non nul, donc $A$ est inversible.\n\n🎯 OBJECTIF :\nProgramme CAPES — Déterminants\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 17, statement: "Une matrice carrée $A$ est inversible si et seulement si :", choices: ["$A$ est diagonale", "$\\det(A) \\neq 0$", "$A$ est symétrique"], correct: [1], theme: "Algèbre linéaire — Matrices inversibles", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nCritère fondamental d'inversibilité. Équivalent à : $0$ n'est pas valeur propre, le rang est maximal, le noyau est réduit à $\\{0\\}$.\n\n⚠️ VIGILANCE :\nUne matrice diagonale peut être non inversible si un coefficient diagonal est nul.\n\n💡 ASTUCE :\n$\\det(A) \\neq 0 \\iff A$ inversible.\n\n🎯 OBJECTIF :\nProgramme CAPES — Caractérisation de l'inversibilité\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 18, statement: "Le polynôme caractéristique de $A = \\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}$ est :", choices: ["$\\lambda^2 - 1$", "$\\lambda^2 + \\lambda + 1$", "$\\lambda^2 + 1$"], correct: [2], theme: "Algèbre linéaire — Valeurs propres", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\n$\\det(\\lambda I - A) = \\det\\begin{pmatrix} \\lambda & -1 \\\\ 1 & \\lambda \\end{pmatrix} = \\lambda^2 + 1$. Aucune valeur propre réelle.\n\n⚠️ VIGILANCE :\nLe polynôme caractéristique est $\\det(\\lambda I - A)$, pas $\\det(A - \\lambda I)$.\n\n💡 ASTUCE :\nLes valeurs propres sont $\\pm i$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Polynôme caractéristique\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 19, statement: "L'application $f : \\mathbb{R}^2 \\to \\mathbb{R}^2$ définie par $f(x,y) = (2x+y,\\; x-y)$ est :", choices: ["Linéaire", "Non linéaire car non injective", "Non linéaire car $f(0,0) \\neq (1,0)$"], correct: [0], theme: "Algèbre linéaire — Applications linéaires", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nVérification : $f(\\lambda u + \\mu v) = \\lambda f(u) + \\mu f(v)$. Toute application définie par une matrice est linéaire. Ici la matrice associée est $\\begin{pmatrix}2&1\\\\1&-1\\end{pmatrix}$.\n\n⚠️ VIGILANCE :\nL'image de $(0,0)$ est $(0,0)$ pour une application linéaire.\n\n💡 ASTUCE :\n$f$ est linéaire s'il existe une matrice $A$ telle que $f(X) = AX$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Applications linéaires\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 20, statement: "Pour une matrice $A$ carrée d'ordre $n$, $\\det(kA) = $ :", choices: ["$k \\cdot \\det(A)$", "$k^n \\cdot \\det(A)$", "$\\det(A)/k$"], correct: [1], theme: "Algèbre linéaire — Déterminants", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nEn factorisant $k$ de chacune des $n$ lignes de $kA$, on extrait $k^n$ devant le déterminant.\n\n⚠️ VIGILANCE :\n$\\det(kA) = k^n \\det(A)$, pas $k\\det(A)$ sauf si $n=1$.\n\n💡 ASTUCE :\nCette propriété découle de la multi-linéarité du déterminant.\n\n🎯 OBJECTIF :\nProgramme CAPES — Propriétés des déterminants\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 21, statement: "Si $A$ et $B$ sont deux matrices carrées inversibles de même taille, alors $(AB)^{-1} = $ :", choices: ["$A^{-1}B^{-1}$", "$AB^{-1}$", "$B^{-1}A^{-1}$"], correct: [2], theme: "Algèbre linéaire — Matrices inversibles", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nVérification : $(AB)(B^{-1}A^{-1}) = A(BB^{-1})A^{-1} = AIA^{-1} = I$. L'ordre s'inverse.\n\n⚠️ VIGILANCE :\nL'ordre est important car le produit matriciel n'est pas commutatif.\n\n💡 ASTUCE :\n$(AB)^{-1} = B^{-1}A^{-1}$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Inverse d'un produit de matrices\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 22, statement: "Un endomorphisme $f$ de $\\mathbb{R}^n$ est un isomorphisme si et seulement si :", choices: ["$0$ n'est pas valeur propre de $f$", "$f$ est symétrique", "$f$ est un projecteur"], correct: [0], theme: "Algèbre linéaire — Isomorphismes", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$f$ bijective $\\Leftrightarrow$ $\\ker(f) = \\{0\\}$ $\\Leftrightarrow$ $f(v) = 0 \\Rightarrow v = 0$ $\\Leftrightarrow$ $0$ n'est pas valeur propre.\n\n⚠️ VIGILANCE :\nUne symétrique peut être non bijective (ex : matrice nulle).\n\n💡 ASTUCE :\nUn isomorphisme est une application linéaire bijective.\n\n🎯 OBJECTIF :\nProgramme CAPES — Endomorphismes bijectifs\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 23, statement: "La dimension de l'espace vectoriel $\\mathbb{R}_n[X]$ (polynômes de degré $\\leq n$) est :", choices: ["$n$", "$n+1$", "$n-1$"], correct: [1], theme: "Algèbre linéaire — Espaces vectoriels", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nLa famille $\\{1, X, X^2, \\ldots, X^n\\}$ est une base de $\\mathbb{R}_n[X]$, elle contient $n+1$ éléments.\n\n⚠️ VIGILANCE :\nLe degré $\\leq n$ inclut les constantes (degré 0).\n\n💡 ASTUCE :\n$\\dim \\mathbb{R}_n[X] = n+1$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Dimension des espaces de polynômes\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 24, statement: "Si $\\lambda$ est valeur propre de $A$ de vecteur propre $v$, alors $\\lambda^2$ est valeur propre de :", choices: ["$2A$", "$A + \\lambda I$", "$A^2$"], correct: [2], theme: "Algèbre linéaire — Valeurs propres", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\n$Av = \\lambda v \\Rightarrow A^2v = A(\\lambda v) = \\lambda(Av) = \\lambda^2 v$. Donc $\\lambda^2$ est valeur propre de $A^2$.\n\n⚠️ VIGILANCE :\nLe vecteur propre est le même pour $A$ et $A^2$.\n\n💡 ASTUCE :\nPlus généralement, $p(A)v = p(\\lambda)v$ pour tout polynôme $p$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Polynômes de matrices\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 25, statement: "La norme euclidienne du vecteur $v = (3, 4)$ dans $\\mathbb{R}^2$ est :", choices: ["5", "7", "$\\sqrt{7}$"], correct: [0], theme: "Algèbre linéaire — Normes", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$\\|v\\| = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$ (triangle 3-4-5).\n\n⚠️ VIGILANCE :\nNe pas oublier la racine carrée.\n\n💡 ASTUCE :\nC'est le théorème de Pythagore.\n\n🎯 OBJECTIF :\nProgramme CAPES — Norme euclidienne\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 26, statement: "L'inégalité de Cauchy-Schwarz dans un espace euclidien stipule que :", choices: ["$|\\langle u, v \\rangle| \\geq \\|u\\| \\cdot \\|v\\|$", "$|\\langle u, v \\rangle| \\leq \\|u\\| \\cdot \\|v\\|$", "$\\langle u, v \\rangle = \\|u\\| \\cdot \\|v\\|$"], correct: [1], theme: "Algèbre linéaire — Produit scalaire", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nÉgalité si et seulement si $u$ et $v$ sont colinéaires. C'est l'inégalité fondamentale des espaces euclidiens.\n\n⚠️ VIGILANCE :\nLa norme est $\\|u\\| = \\sqrt{\\langle u, u \\rangle}$.\n\n💡 ASTUCE :\nCette inégalité permet de définir l'angle entre deux vecteurs.\n\n🎯 OBJECTIF :\nProgramme CAPES — Inégalité de Cauchy-Schwarz\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 27, statement: "La matrice de passage $P$ d'une ancienne base vers une nouvelle base est la matrice dont les colonnes sont :", choices: ["Les coordonnées des vecteurs de l'ancienne base dans la nouvelle", "Les valeurs propres ordonnées", "Les vecteurs de la nouvelle base exprimés dans l'ancienne"], correct: [2], theme: "Algèbre linéaire — Changement de base", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nConvention : $P = \\text{Mat}_{\\mathcal{B}_\\text{anc}}(\\mathcal{B}_\\text{nouv})$, dont les colonnes sont les coordonnées des nouveaux vecteurs de base dans l'ancienne base.\n\n⚠️ VIGILANCE :\nL'ordre des colonnes correspond à l'ordre des vecteurs de la nouvelle base.\n\n💡 ASTUCE :\n$P$ permet de passer des coordonnées dans la nouvelle base à celles dans l'ancienne.\n\n🎯 OBJECTIF :\nProgramme CAPES — Matrice de passage\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 28, statement: "$\\text{pgcd}(252,\\, 180)$ vaut :", choices: ["36", "18", "12"], correct: [0], theme: "Algèbre — Arithmétique", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$252 = 2^2 \\times 3^2 \\times 7$, $180 = 2^2 \\times 3^2 \\times 5$. $\\text{pgcd} = 2^2 \\times 3^2 = 4 \\times 9 = 36$.\n\n⚠️ VIGILANCE :\nPrendre les plus petits exposants des facteurs premiers communs.\n\n💡 ASTUCE :\nOn peut aussi utiliser l'algorithme d'Euclide.\n\n🎯 OBJECTIF :\nProgramme CAPES — PGCD\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 29, statement: "Dans $\\mathbb{Z}/6\\mathbb{Z}$, l'élément $\\bar{4}$ est :", choices: ["Inversible", "Diviseur de zéro", "Générateur du groupe"], correct: [1], theme: "Algèbre — Anneaux", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\n$4 \\times 3 = 12 \\equiv 0 \\pmod{6}$ avec $4 \\not\\equiv 0$ et $3 \\not\\equiv 0$. Donc $\\bar 4$ est bien un diviseur de zéro.\n\n⚠️ VIGILANCE :\nDans $\\mathbb{Z}/n\\mathbb{Z}$, les diviseurs de zéro sont les éléments non inversibles.\n\n💡 ASTUCE :\n$\\bar k$ est inversible ssi $\\text{pgcd}(k,n) = 1$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Anneaux $\\mathbb{Z}/n\\mathbb{Z}$\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 30, statement: "Un groupe fini d'ordre $p$ ($p$ premier) est nécessairement :", choices: ["Trivial", "Non abélien", "Cyclique"], correct: [2], theme: "Algèbre — Groupes", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nPar Lagrange, l'ordre de tout élément $g \\neq e$ divise $p$. Comme $p$ est premier, $\\text{ord}(g) = p$, donc $G = \\langle g \\rangle$ est cyclique (et abélien).\n\n⚠️ VIGILANCE :\nUn groupe d'ordre premier est toujours cyclique et donc abélien.\n\n💡 ASTUCE :\nTout groupe d'ordre premier est isomorphe à $\\mathbb{Z}/p\\mathbb{Z}$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Groupes finis\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 31, statement: "L'anneau $(\\mathbb{Z}, +, \\times)$ est :", choices: ["Un anneau intègre mais pas un corps", "Un corps", "Un anneau non commutatif"], correct: [0], theme: "Algèbre — Anneaux", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\n$\\mathbb{Z}$ est intègre (pas de diviseurs de zéro). Mais $2$ n'est pas inversible dans $\\mathbb{Z}$ ($2^{-1} \\notin \\mathbb{Z}$), donc ce n'est pas un corps.\n\n⚠️ VIGILANCE :\nUn corps nécessite que tout élément non nul soit inversible.\n\n💡 ASTUCE :\nLe corps des fractions de $\\mathbb{Z}$ est $\\mathbb{Q}$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Anneaux intègres et corps\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 32, statement: "Le nombre de solutions de $x^2 \\equiv 1 \\pmod{8}$ dans $\\mathbb{Z}/8\\mathbb{Z}$ est :", choices: ["2", "4", "1"], correct: [1], theme: "Algèbre — Congruences", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nTester $x = 0, \\ldots, 7$ : $1^2 \\equiv 1$, $3^2 = 9 \\equiv 1$, $5^2 = 25 \\equiv 1$, $7^2 = 49 \\equiv 1 \\pmod 8$. Quatre solutions : $\\{1, 3, 5, 7\\}$.\n\n⚠️ VIGILANCE :\nLes solutions sont les éléments $k$ avec $\\text{pgcd}(k,8) = 1$.\n\n💡 ASTUCE :\n$\\varphi(8) = 4$ solutions.\n\n🎯 OBJECTIF :\nProgramme CAPES — Congruences quadratiques\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 33, statement: "Le degré de $\\text{pgcd}(X^3-1,\\; X^2-1)$ dans $\\mathbb{R}[X]$ est :", choices: ["3", "2", "1"], correct: [2], theme: "Algèbre — Polynômes", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\n$X^3 - 1 = (X-1)(X^2+X+1)$ et $X^2 - 1 = (X-1)(X+1)$. Le pgcd est $X - 1$, de degré $1$.\n\n⚠️ VIGILANCE :\n$X-1$ est le seul facteur commun.\n\n💡 ASTUCE :\nL'algorithme d'Euclide fonctionne aussi pour les polynômes.\n\n🎯 OBJECTIF :\nProgramme CAPES — PGCD de polynômes\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 34, statement: "Le théorème chinois des restes : si $\\text{pgcd}(m,n) = 1$, le système $x \\equiv a \\pmod{m}$, $x \\equiv b \\pmod{n}$ possède :", choices: ["Exactement une solution modulo $mn$", "Aucune solution", "Exactement deux solutions modulo $mn$"], correct: [0], theme: "Algèbre — Théorème chinois", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nCRT : l'existence et l'unicité modulo $mn$ sont garanties dès que $\\text{pgcd}(m,n) = 1$. L'isomorphisme $\\mathbb{Z}/mn\\mathbb{Z} \\simeq \\mathbb{Z}/m\\mathbb{Z} \\times \\mathbb{Z}/n\\mathbb{Z}$ le confirme.\n\n⚠️ VIGILANCE :\nL'unicité est modulo $mn$, pas dans $\\mathbb{Z}$.\n\n💡 ASTUCE :\nC'est un outil fondamental en arithmétique modulaire.\n\n🎯 OBJECTIF :\nProgramme CAPES — Théorème chinois\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 35, statement: "Le groupe des unités (éléments inversibles) de $\\mathbb{Z}/8\\mathbb{Z}$ est :", choices: ["$\\{1, 3\\}$", "$\\{1, 3, 5, 7\\}$", "$\\{1, 2, 4, 6\\}$"], correct: [1], theme: "Algèbre — Groupes des unités", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nLes unités de $\\mathbb{Z}/n\\mathbb{Z}$ sont les $\\bar{k}$ tels que $\\text{pgcd}(k,n) = 1$. Ici : $\\text{pgcd}(1,8)=\\text{pgcd}(3,8)=\\text{pgcd}(5,8)=\\text{pgcd}(7,8)=1$. Ce groupe a $\\varphi(8) = 4$ éléments.\n\n⚠️ VIGILANCE :\n$2,4,6$ ne sont pas premiers avec 8.\n\n💡 ASTUCE :\n$\\varphi(n)$ est l'indicatrice d'Euler.\n\n🎯 OBJECTIF :\nProgramme CAPES — Groupes $\\mathbb{Z}/n\\mathbb{Z}^\\times$\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 36, statement: "Dans le plan complexe, l'image de $z = 3+i$ par la rotation d'angle $\\dfrac{\\pi}{2}$ d'origine $O$ est :", choices: ["$3 - i$", "$1 + 3i$", "$-1 + 3i$"], correct: [2], theme: "Géométrie — Nombres complexes", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nRotation d'angle $\\pi/2$ : multiplication par $e^{i\\pi/2} = i$. $z' = i(3+i) = 3i + i^2 = -1 + 3i$.\n\n⚠️ VIGILANCE :\n$i^2 = -1$, ne pas l'oublier.\n\n💡 ASTUCE :\nLa rotation de centre $O$ d'angle $\\theta$ se traduit par $z' = e^{i\\theta}z$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Rotations dans le plan complexe\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 37, statement: "L'ensemble des points $M$ du plan équidistants de deux points fixes $A$ et $B$ est :", choices: ["La médiatrice du segment $AB$", "Le segment $AB$", "Un cercle passant par $A$ et $B$"], correct: [0], theme: "Géométrie — Médiatrice", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nDéfinition de la médiatrice : $MA = MB \\Leftrightarrow M$ appartient à la médiatrice. C'est une droite perpendiculaire à $AB$ passant par son milieu.\n\n⚠️ VIGILANCE :\nLa médiatrice est une droite, pas un segment.\n\n💡 ASTUCE :\nC'est l'ensemble des points équidistants de $A$ et $B$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Médiatrice\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 38, statement: "Dans un triangle $ABC$ de côtés $a = BC$, $b = CA$, $c = AB$, la loi des cosinus donne :", choices: ["$a^2 = b^2 + c^2 + 2bc\\cos A$", "$a^2 = b^2 + c^2 - 2bc\\cos A$", "$a^2 = b^2 - c^2 + 2bc\\cos A$"], correct: [1], theme: "Géométrie — Trigonométrie", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nThéorème d'Al-Kashi (généralisation de Pythagore). Si $A = 90°$, $\\cos A = 0$ et on retrouve $a^2 = b^2 + c^2$.\n\n⚠️ VIGILANCE :\nLe signe est négatif devant $2bc\\cos A$.\n\n💡 ASTUCE :\n$a$ est le côté opposé à l'angle $A$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Loi des cosinus\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 39, statement: "L'aire du triangle de sommets $O(0,0)$, $B(1,0)$, $C(0,1)$ est :", choices: ["1", "$\\dfrac{\\sqrt{2}}{2}$", "$\\dfrac{1}{2}$"], correct: [2], theme: "Géométrie — Aire", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nTriangle rectangle en $O$, cathètes de longueur 1. Aire $= \\frac{1}{2} \\times 1 \\times 1 = \\frac{1}{2}$. Ou par la formule du déterminant : $\\frac{1}{2}|1 \\times 1 - 0 \\times 0| = \\frac{1}{2}$.\n\n⚠️ VIGILANCE :\nL'aire est positive, valeur absolue.\n\n💡 ASTUCE :\n$\\text{Aire} = \\frac{1}{2}|\\det(\\vec{OB}, \\vec{OC})|$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Calcul d'aire\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 40, statement: "L'équation $\\dfrac{x^2}{4} + \\dfrac{y^2}{9} = 1$ représente :", choices: ["Une ellipse de demi-axes $a = 2$ et $b = 3$", "Un cercle de rayon 3", "Une hyperbole"], correct: [0], theme: "Géométrie — Coniques", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nForme canonique de l'ellipse $x^2/a^2 + y^2/b^2 = 1$ avec $a = 2$, $b = 3$. Ce n'est pas un cercle car $a \\neq b$.\n\n⚠️ VIGILANCE :\nLe grand axe est selon $Oy$ car $b > a$.\n\n💡 ASTUCE :\nL'ellipse a pour foyers $(0, \\pm\\sqrt{b^2-a^2})$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Équations des coniques\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 41, statement: "La puissance d'un point $M$ par rapport à un cercle de centre $C$ et de rayon $r$ est :", choices: ["$p(M) = CM^2$", "$p(M) = CM^2 - r^2$", "$p(M) = r^2 - CM$"], correct: [1], theme: "Géométrie — Puissance d'un point", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nDéfinition. Si $M$ est extérieur au cercle, $p(M) > 0$. Si $M$ est sur le cercle, $p(M) = 0$. Si $M$ est intérieur, $p(M) < 0$.\n\n⚠️ VIGILANCE :\nNe pas confondre avec la définition d'un cercle.\n\n💡 ASTUCE :\n$p(M) = MA \\cdot MB$ pour toute corde passant par $M$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Puissance d'un point par rapport à un cercle\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 42, statement: "Deux droites de vecteurs directeurs $\\vec{u}$ et $\\vec{v}$ sont perpendiculaires si et seulement si :", choices: ["$\\vec{u} \\times \\vec{v} = \\vec{0}$", "$\\|\\vec{u}\\| = \\|\\vec{v}\\|$", "$\\vec{u} \\cdot \\vec{v} = 0$"], correct: [2], theme: "Géométrie — Produit scalaire", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nDéfinition de la perpendicularité par l'annulation du produit scalaire. Le produit vectoriel nul signerait le parallélisme, non la perpendicularité.\n\n⚠️ VIGILANCE :\nDans le plan, $\\vec{u} \\cdot \\vec{v} = 0 \\iff \\vec{u} \\perp \\vec{v}$.\n\n💡 ASTUCE :\nLe produit scalaire est nul pour des vecteurs orthogonaux.\n\n🎯 OBJECTIF :\nProgramme CAPES — Orthogonalité\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 43, statement: "Dans le plan, toute similitude directe qui n'est pas une translation est :", choices: ["La composée d'une homothétie et d'une rotation de même centre", "Une symétrie axiale", "Une réflexion"], correct: [0], theme: "Géométrie — Similitudes", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nThéorème de décomposition des similitudes directes : toute similitude directe de rapport $k \\neq 1$ est la composée d'une homothétie et d'une rotation (qui commutent si même centre).\n\n⚠️ VIGILANCE :\nLes similitudes indirectes impliquent une symétrie axiale.\n\n💡 ASTUCE :\nUne similitude directe conserve les angles orientés.\n\n🎯 OBJECTIF :\nProgramme CAPES — Similitudes directes\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 44, statement: "$X$ suit une loi géométrique de paramètre $p$ ($P(X=k) = (1-p)^{k-1}p$). Son espérance est :", choices: ["$E(X) = p$", "$E(X) = \\dfrac{1}{p}$", "$E(X) = \\dfrac{1-p}{p}$"], correct: [1], theme: "Probabilités — Lois usuelles", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nLa loi géométrique modélise le rang du premier succès. $E(X) = 1/p$, $V(X) = (1-p)/p^2$.\n\n⚠️ VIGILANCE :\nCertaines définitions de la loi géométrique commencent à $k=0$.\n\n💡 ASTUCE :\nL'espérance est $1/p$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Loi géométrique\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 45, statement: "Si $X$ et $Y$ sont deux variables aléatoires **indépendantes**, alors :", choices: ["$V(X+Y) = V(X) - V(Y)$", "$V(X+Y) = V(X) \\cdot V(Y)$", "$V(X+Y) = V(X) + V(Y)$"], correct: [2], theme: "Probabilités — Variance", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nL'indépendance annule la covariance : $\\text{Cov}(X,Y) = 0$, donc $V(X+Y) = V(X) + V(Y) + 2\\text{Cov}(X,Y) = V(X) + V(Y)$.\n\n⚠️ VIGILANCE :\nSi $X$ et $Y$ sont dépendants, $V(X+Y) = V(X) + V(Y) + 2\\text{Cov}(X,Y)$.\n\n💡 ASTUCE :\nLa variance d'une somme de variables indépendantes est la somme des variances.\n\n🎯 OBJECTIF :\nProgramme CAPES — Variance\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 46, statement: "Le coefficient de corrélation linéaire $\\rho_{XY}$ entre deux variables aléatoires vérifie :", choices: ["$-1 \\leq \\rho_{XY} \\leq 1$", "$0 \\leq \\rho_{XY} \\leq 1$", "$\\rho_{XY} \\geq 0$"], correct: [0], theme: "Probabilités — Corrélation", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nPar l'inégalité de Cauchy-Schwarz : $|\\text{Cov}(X,Y)| \\leq \\sigma_X \\sigma_Y$, donc $\\rho = \\text{Cov}/(\\sigma_X\\sigma_Y) \\in [-1,1]$.\n\n⚠️ VIGILANCE :\n$\\rho = 0$ signifie l'absence de corrélation linéaire, pas l'indépendance.\n\n💡 ASTUCE :\n$\\rho = 1$ ou $-1$ indique une relation affine parfaite.\n\n🎯 OBJECTIF :\nProgramme CAPES — Coefficient de corrélation\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 47, statement: "La loi faible des grands nombres (Khintchine) stipule que pour une suite i.i.d. $(X_n)$ d'espérance $\\mu$ :", choices: ["$X_n \\to \\mu$ presque sûrement", "$\\bar{X}_n = \\dfrac{1}{n}\\sum_{k=1}^n X_k \\to \\mu$ en probabilité", "$\\bar{X}_n \\to 0$ en loi"], correct: [1], theme: "Probabilités — Loi des grands nombres", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nConvergence en probabilité de la moyenne empirique vers l'espérance. La loi forte donne la convergence p.s., mais est plus difficile à établir.\n\n⚠️ VIGILANCE :\nLa loi faible (convergence en probabilité) est plus faible que la loi forte (convergence presque sûre).\n\n💡 ASTUCE :\nLa loi des grands nombres justifie la notion de moyenne.\n\n🎯 OBJECTIF :\nProgramme CAPES — Loi des grands nombres\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 48, statement: "Le théorème central limite (TCL) établit que $\\dfrac{\\sqrt{n}\\,(\\bar{X}_n - \\mu)}{\\sigma}$ converge :", choices: ["Presque sûrement vers $\\mu$", "En probabilité vers 1", "En loi vers $\\mathcal{N}(0,1)$"], correct: [2], theme: "Probabilités — Théorème central limite", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : C\n\n🔍 CORRECTION :\nRésultat fondamental de la statistique asymptotique. Justifie l'approximation normale des grandes sommes de v.a. i.i.d.\n\n⚠️ VIGILANCE :\nLa convergence est en loi, pas en probabilité.\n\n💡 ASTUCE :\nLe TCL est utilisé pour construire des intervalles de confiance.\n\n🎯 OBJECTIF :\nProgramme CAPES — Théorème central limite\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 49, statement: "Dans un test statistique, l'erreur de **première espèce** (type I) consiste à :", choices: ["Rejeter $H_0$ alors qu'elle est vraie", "Accepter $H_0$ alors qu'elle est fausse", "Rejeter systématiquement $H_0$"], correct: [0], theme: "Statistiques — Tests", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : A\n\n🔍 CORRECTION :\nLe niveau $\\alpha$ du test est exactement $P(\\text{rejet } H_0 | H_0 \\text{ vraie})$. L'erreur de type II est $\\beta = P(\\text{accepter } H_0 | H_0 \\text{ fausse})$.\n\n⚠️ VIGILANCE :\n$\\alpha$ et $\\beta$ sont liés : diminuer l'un augmente l'autre.\n\n💡 ASTUCE :\nL'erreur de première espèce est la plus grave.\n\n🎯 OBJECTIF :\nProgramme CAPES — Tests d'hypothèses\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" },
+      { id: 50, statement: "L'estimateur sans biais de la variance d'une population à partir d'un échantillon $(x_1, \\ldots, x_n)$ est :", choices: ["$s^2 = \\dfrac{1}{n}\\displaystyle\\sum_{i=1}^n (x_i - \\bar{x})^2$", "$s^2 = \\dfrac{1}{n-1}\\displaystyle\\sum_{i=1}^n (x_i - \\bar{x})^2$", "$s^2 = \\dfrac{1}{n+1}\\displaystyle\\sum_{i=1}^n (x_i - \\bar{x})^2$"], correct: [1], theme: "Statistiques — Estimation", niveau_scolaire: "CAPES", explication: "✅ RÉPONSE : B\n\n🔍 CORRECTION :\nCorrection de Bessel : le facteur $1/(n-1)$ compense le biais introduit par l'estimation de $\\mu$ par $\\bar{x}$. Avec $1/n$ on obtient la variance empirique biaisée.\n\n⚠️ VIGILANCE :\n$E[s^2] = \\sigma^2$ pour $s^2$ avec $1/(n-1)$.\n\n💡 ASTUCE :\nPour $n$ grand, $1/(n-1) \\approx 1/n$.\n\n🎯 OBJECTIF :\nProgramme CAPES — Estimateur sans biais\n\n📚 RÉFÉRENCE :\nCAPES Mathématiques 2026 — Épreuve B VIP" }
+    ];
+
+    // ==================== FONCTIONS ====================
+    document.addEventListener('DOMContentLoaded', function() {
+      // 🔁 RESET FORCÉ POUR TESTS (à supprimer en production)
+      localStorage.removeItem('synapris_client_name');
+      localStorage.removeItem('synapris_unlocked');
+      unlocked = false;
+      
+      const savedName = localStorage.getItem('synapris_client_name');
+      const savedUnlock = localStorage.getItem('synapris_unlocked');
+      if(savedUnlock === 'true') unlocked = true;
+      if (savedName) { clientName = savedName;
+        document.getElementById('client-name-footer').textContent = clientName;
+        document.getElementById('mb-client-badge').style.display = 'inline-flex';
+        document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+        initDefaultMode(); } else { showNameModal(); }
+    });
+
+    function resetClientName() { localStorage.removeItem('synapris_client_name');
+      clientName = '';
+      document.getElementById('client-name-footer').textContent = '——';
+      document.getElementById('mb-client-badge').style.display = 'none';
+      showNameModal(); }
+
+    function showNameModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'name-modal';
+      overlay.innerHTML = '<div class="modal-box"><h3>🌟 Bienvenue sur SYNAPRIS !</h3><p>Entrez votre prénom :</p><input type="text" class="key-input" id="name-input" placeholder="Votre prénom" autocomplete="off" /><div class="modal-error" id="name-error">❌ Prénom invalide.</div><div class="modal-actions"><button class="btn btn-gold" id="btn-name-ok">✅ Commencer</button></div></div>';
+      document.body.appendChild(overlay);
+      document.getElementById('btn-name-ok').addEventListener('click', () => {
+        const name = document.getElementById('name-input').value.trim();
+        if (name && name.length >= 2 && /^[A-Za-zÀ-ÿ\s\-]+$/.test(name)) { clientName = name;
+          localStorage.setItem('synapris_client_name', clientName);
+          document.getElementById('client-name-footer').textContent = clientName;
+          document.getElementById('mb-client-badge').style.display = 'inline-flex';
+          document.getElementById('mb-client-badge').textContent = '🔑 ' + clientName;
+          overlay.remove();
+          initDefaultMode(); } else { document.getElementById('name-error').style.display = 'block'; }
+      });
+    }
+
+    function showRefModal() {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.innerHTML = '<div class="modal-box"><h3>📚 RÉFÉRENCES</h3><p><strong>CAPES Mathématiques — Épreuve B VIP</strong><br>50 questions · 60 minutes<br>3 choix (A,B,C) · Une seule réponse correcte</p><div class="modal-actions"><button class="btn btn-primary" onclick="this.closest(\'.modal-overlay\').remove()">Fermer</button></div></div>';
+      document.body.appendChild(overlay);
+    }
+
+    function initDefaultMode() { document.getElementById('mode-train').classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').textContent = '📝 Mode Entraînement';
+      document.getElementById('mb-mode-badge').style.display = 'inline-flex';
+      document.getElementById('mb-mode-badge').textContent = '📝 Entraînement';
+      document.getElementById('notice-train').classList.remove('hidden');
+      document.getElementById('notice-exam').classList.add('hidden'); }
+
+    function showPage(e) { document.querySelectorAll('#main-app .page').forEach(p => p.classList.remove('active'));
+      document.getElementById(e).classList.add('active');
+      document.getElementById('main-scroll').scrollTop = 0; }
+
+    function selectMode(e) { mode = e;
+      ['train', 'exam'].forEach(x => document.getElementById('mode-' + x)?.classList.remove('selected'));
+      document.getElementById('mode-' + e).classList.add('selected');
+      document.getElementById('btn-start').disabled = false;
+      document.getElementById('btn-start').innerHTML = e === 'train' ? '📝 Mode Entraînement' : '⏱️ Mode Examen (60 min)';
+      document.getElementById('mb-mode-badge').textContent = e === 'train' ? '📝 Entraînement' : '⏱️ Examen';
+      document.getElementById('notice-train').classList.toggle('hidden', e !== 'train');
+      document.getElementById('notice-exam').classList.toggle('hidden', e !== 'exam');
+      document.body.classList.remove('train-mode', 'exam-mode');
+      document.body.classList.add(e === 'train' ? 'train-mode' : 'exam-mode');
+    }
+
+    function startQuiz() {
+      currentQ = 0;
+      activeSet = questionsData.map((_, i) => i);
+      userAnswers = new Array(activeSet.length).fill(null);
+      validated = new Array(activeSet.length).fill(false);
+      showPage('page-question');
+      if (mode === 'exam') {
+        document.body.classList.add('exam-mode');
+        examSeconds = TOTAL_EXAM_SEC;
+        perQSeconds = PER_Q_SEC;
+        document.getElementById('timer-wrap').classList.remove('hidden');
+        document.getElementById('perq-timer').classList.remove('hidden');
+        startExamTimer();
+        startPerQTimer();
+        document.getElementById('btn-validate').classList.add('hidden');
+        document.getElementById('grille-examen').classList.remove('hidden');
+        buildGrilleExamen();
+      } else {
+        document.body.classList.remove('exam-mode');
+        document.getElementById('timer-wrap').classList.add('hidden');
+        document.getElementById('perq-timer').classList.add('hidden');
+        if (examTimer) clearInterval(examTimer);
+        if (perQTimer) clearInterval(perQTimer);
+        document.getElementById('grille-examen').classList.add('hidden');
+      }
+      updateMiniBar();
+      renderQuestion();
+    }
+
+    function buildGrilleExamen() {
+      const container = document.getElementById('grille-table');
+      const half = Math.ceil(activeSet.length / 2);
+      let html = '<div class="grille-col">';
+      for (let i = 0; i < half; i++) {
+        const q = questionsData[activeSet[i]];
+        const answered = userAnswers[i] !== null && userAnswers[i] !== undefined;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A','B','C'].forEach((ltr, j) => {
+          const checked = userAnswers[i] === j;
+          html += `<span class="grille-case${checked?' checked':''}" onclick="selectChoiceFromGrille(${i},${j})">${ltr}</span>`;
+        });
+        html += '</div>';
+      }
+      html += '</div><div class="grille-col">';
+      for (let i = half; i < activeSet.length; i++) {
+        const q = questionsData[activeSet[i]];
+        const answered = userAnswers[i] !== null && userAnswers[i] !== undefined;
+        html += `<div class="grille-row"><span class="grille-q-num${answered?' answered':''}" onclick="jumpToQuestion(${i})">Q${q.id}</span>`;
+        ['A','B','C'].forEach((ltr, j) => {
+          const checked = userAnswers[i] === j;
+          html += `<span class="grille-case${checked?' checked':''}" onclick="selectChoiceFromGrille(${i},${j})">${ltr}</span>`;
+        });
+        html += '</div>';
+      }
+      html += '</div>';
+      container.innerHTML = html;
+    }
+
+    function selectChoiceFromGrille(qIndex, choiceIndex) { currentQ = qIndex; if (validated[currentQ]) return;
+      userAnswers[currentQ] = choiceIndex;
+      renderQuestion();
+      buildGrilleExamen(); }
+
+    function jumpToQuestion(qIndex) { 
+      if(isQuestionLocked(qIndex) && !unlocked) {
+        showUnlockModal();
+        return;
+      }
+      currentQ = qIndex;
+      if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); }
+      renderQuestion(); if (mode === 'exam') buildGrilleExamen(); 
+    }
+
+    function goHome() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode', 'train-mode');
+      showPage('page-home'); }
+
+    function updateMiniBar() { const e = currentQ + 1, t = activeSet.length;
+      document.getElementById('mb-q-counter').textContent = `Q${e}/${t}`;
+      document.getElementById('mb-progress-fill').style.width = (e / t * 100) + '%'; }
+
+    function renderQuestion() {
+      if(isQuestionLocked(currentQ) && !unlocked) {
+        showUnlockModal();
+        return;
+      }
+      const qIdx = activeSet[currentQ];
+      const q = questionsData[qIdx];
+      document.getElementById('q-statement').innerHTML = `❓ <strong>Q${q.id}.</strong> ${q.statement}`;
+      const container = document.getElementById('q-choices');
+      container.innerHTML = '';
+      const correctIndices = q.correct;
+      const selectedAnswer = userAnswers[currentQ];
+      ['A','B','C'].forEach((ltr, i) => {
+        if (i < q.choices.length) {
+          const btn = document.createElement('button');
+          btn.className = 'choice-btn';
+          if (validated[currentQ]) {
+            if (correctIndices.includes(i)) btn.classList.add('correct');
+            else if (selectedAnswer === i) btn.classList.add('wrong');
+          } else if (selectedAnswer === i) btn.classList.add('selected');
+          btn.innerHTML = `<span class="choice-letter">${ltr}</span><span class="choice-text">${q.choices[i]}</span>`;
+          if (!validated[currentQ]) {
+            btn.onclick = () => {
+              userAnswers[currentQ] = i;
+              renderQuestion();
+              if (mode === 'exam') buildGrilleExamen();
+            };
+          }
+          container.appendChild(btn);
+        }
+      });
+      const hasAnswer = userAnswers[currentQ] !== null && userAnswers[currentQ] !== undefined;
+      if (mode === 'train') document.getElementById('btn-validate').disabled = (!hasAnswer || validated[currentQ]);
+      if (validated[currentQ] && mode === 'train') buildFeedback(q, [userAnswers[currentQ]]);
+      else if (mode === 'train') { document.getElementById('feedback-placeholder').style.display = 'flex';
+        document.getElementById('feedback-box').style.display = 'none'; }
+      if (mode === 'exam') { 
+        document.getElementById('feedback-placeholder').style.display = 'none'; 
+        document.getElementById('feedback-box').style.display = 'none'; 
+        document.getElementById('feedback-box').classList.remove('visible'); 
+      }
+      document.getElementById('btn-prev').disabled = (currentQ === 0);
+      const nextBtn = document.getElementById('btn-next');
+      if (currentQ === activeSet.length - 1) { nextBtn.innerHTML = '🏁 Terminer'; nextBtn.className = 'btn btn-gold'; }
+      else { nextBtn.innerHTML = 'Suivant →'; nextBtn.className = 'btn btn-primary'; }
+      if (typeof renderMathInElement !== 'undefined') {
+        renderMathInElement(document.getElementById('q-statement'), { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+        renderMathInElement(container, { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+      }
+      if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); buildGrilleExamen(); }
+    }
+
+    function arraysEqual(e, t) { if (!e || !t) return false; if (e.length !== t.length) return false; const n = [...e].sort(), o = [...t].sort(); return n.every((e, t) => e === o[t]); }
+
+    function validateAnswer() { if (userAnswers[currentQ] === null || userAnswers[currentQ] === undefined) return;
+      validated[currentQ] = true;
+      renderQuestion(); }
+
+    function buildFeedback(q, user) {
+      document.getElementById('feedback-placeholder').style.display = 'none';
+      const correct = q.correct;
+      const isCorrect = user && user.length > 0 && correct.includes(user[0]);
+      document.getElementById('feedback-box').classList.add('visible', isCorrect ? 'correct' : 'wrong');
+      document.getElementById('feedback-box').style.display = 'block';
+      document.getElementById('badge-icon').textContent = isCorrect ? '✅' : '❌';
+      document.getElementById('feedback-result-text').textContent = isCorrect ? 'Bonne réponse !' : 'Réponse incorrecte';
+      let html = '';
+      const parts = q.explication.split('\n\n');
+      parts.forEach(part => {
+        if (part.startsWith('✅')) html += `<div class="fb-section fb-correct"><strong>✅ RÉPONSE</strong>${part.replace('✅ RÉPONSE :','')}</div>`;
+        else if (part.startsWith('🔍')) html += `<div class="fb-section fb-foundation"><strong>🔍 CORRECTION</strong>${part.replace('🔍 CORRECTION :','')}</div>`;
+        else if (part.startsWith('⚠️')) html += `<div class="fb-section fb-obstacle"><strong>⚠️ VIGILANCE</strong>${part.replace('⚠️ VIGILANCE :','')}</div>`;
+        else if (part.startsWith('💡')) html += `<div class="fb-section fb-tip"><strong>💡 ASTUCE</strong>${part.replace('💡 ASTUCE :','')}</div>`;
+        else if (part.startsWith('🎯')) html += `<div class="fb-section fb-objectif"><strong>🎯 OBJECTIF</strong>${part.replace('🎯 OBJECTIF :','')}</div>`;
+        else if (part.startsWith('📚')) html += `<div class="fb-section fb-reference"><strong>📚 RÉFÉRENCE</strong>${part.replace('📚 RÉFÉRENCE :','')}</div>`;
+        else html += `<div class="fb-section">${part}</div>`;
+      });
+      document.getElementById('feedback-body').innerHTML = html;
+      if (typeof renderMathInElement !== 'undefined') renderMathInElement(document.getElementById('feedback-body'), { delimiters: [{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}], throwOnError: false });
+    }
+
+    function prevQuestion() { 
+      if (currentQ > 0) { 
+        currentQ--; 
+        if(isQuestionLocked(currentQ) && !unlocked) {
+          showUnlockModal();
+          return;
+        }
+        renderQuestion(); 
+        if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); } 
+      } 
+    }
+    
+    function nextQuestion() { 
+      let nextIndex = currentQ + 1;
+      if(nextIndex < activeSet.length) {
+        if(isQuestionLocked(nextIndex) && !unlocked) {
+          showUnlockModal();
+          return;
+        }
+        currentQ = nextIndex;
+        renderQuestion(); 
+        if (mode === 'exam') { perQSeconds = PER_Q_SEC; updatePerQTimerDisplay(); }
+      } else { 
+        finishQuiz(); 
+      } 
+    }
+
+    function finishQuiz() { if (examTimer) clearInterval(examTimer); if (perQTimer) clearInterval(perQTimer);
+      document.body.classList.remove('exam-mode');
+      showPage('page-results');
+      let correctCount = 0;
+      const themesMap = {};
+      activeSet.forEach((idx, i) => {
+        const q = questionsData[idx];
+        const correctIndices = q.correct;
+        const user = userAnswers[i];
+        const ok = user !== null && correctIndices.includes(user);
+        if (ok) correctCount++;
+        if (!themesMap[q.theme]) themesMap[q.theme] = { total: 0, correct: 0 };
+        themesMap[q.theme].total++;
+        if (ok) themesMap[q.theme].correct++;
+      });
+      const pct = Math.round(correctCount / activeSet.length * 100);
+      document.getElementById('result-pct').textContent = pct + '%';
+      document.getElementById('result-sub').textContent = `${correctCount} / ${activeSet.length} bonnes réponses`;
+      document.getElementById('result-badge').textContent = pct >= 80 ? '🏆' : pct >= 50 ? '👍' : '💪';
+      document.getElementById('result-themes').innerHTML = '<table class="result-table"><thead><tr><th>Thème</th><th>Score</th><th>%</th></tr></thead><tbody>' + Object.entries(themesMap).map(([theme, data]) => { const tp = Math.round(data.correct / data.total * 100); return `<tr><td>${tp>=80?'🟢':tp>=50?'🟡':'🔴'} ${theme}</td><td>${data.correct}/${data.total}</td><td>${tp}%</td>`; }).join('') + '</tbody></table>';
+      const half = Math.ceil(activeSet.length / 2);
+      let gridHtml = '<div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">';
+      for (let i = 0; i < half; i++) {
+        const q = questionsData[activeSet[i]];
+        const correctIndices = q.correct;
+        const user = userAnswers[i];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A','B','C'].forEach((ltr, j) => {
+          let cls = '';
+          if (correctIndices.includes(j) && user === j) cls = 'correct-choice';
+          else if (correctIndices.includes(j) && user !== j) cls = 'missed-choice';
+          else if (!correctIndices.includes(j) && user === j) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`;
+        });
+        gridHtml += '</div>';
+      }
+      gridHtml += '</div><div class="grille-col" style="display:flex;flex-direction:column;gap:4px;">';
+      for (let i = half; i < activeSet.length; i++) {
+        const q = questionsData[activeSet[i]];
+        const correctIndices = q.correct;
+        const user = userAnswers[i];
+        gridHtml += `<div class="result-row"><span class="result-q-num">Q${q.id}</span>`;
+        ['A','B','C'].forEach((ltr, j) => {
+          let cls = '';
+          if (correctIndices.includes(j) && user === j) cls = 'correct-choice';
+          else if (correctIndices.includes(j) && user !== j) cls = 'missed-choice';
+          else if (!correctIndices.includes(j) && user === j) cls = 'wrong-choice';
+          gridHtml += `<span class="result-case${cls?' '+cls:''}">${cls?ltr:''}</span>`;
+        });
+        gridHtml += '</div>';
+      }
+      gridHtml += '</div>';
+      document.getElementById('result-grid').innerHTML = gridHtml;
+      document.getElementById('timer-wrap').classList.add('hidden');
+      document.getElementById('perq-timer').classList.add('hidden');
+    }
+
+    function startExamTimer() { updateExamTimerDisplay();
+      examTimer = setInterval(() => { examSeconds--; updateExamTimerDisplay(); if (examSeconds <= 0) { clearInterval(examTimer); clearInterval(perQTimer); finishQuiz(); } }, 1000); }
+    function updateExamTimerDisplay() { const e = Math.floor(examSeconds / 60), t = examSeconds % 60, n = document.getElementById('timer-badge');
+      n.textContent = `⏱ ${String(e).padStart(2,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'timer-badge'; if (examSeconds <= 600) n.classList.add('danger'); else if (examSeconds <= 1800) n.classList.add('warning'); }
+    function startPerQTimer() { updatePerQTimerDisplay();
+      perQTimer = setInterval(() => { perQSeconds--; updatePerQTimerDisplay(); if (perQSeconds <= 0) { clearInterval(perQTimer); validated[currentQ] = true; nextQuestion(); } }, 1000); }
+    function updatePerQTimerDisplay() { const e = Math.floor(perQSeconds / 60), t = perQSeconds % 60, n = document.getElementById('perq-timer');
+      n.textContent = `⚡ ${String(e).padStart(1,'0')}:${String(t).padStart(2,'0')}`;
+      n.className = 'perq-timer'; if (perQSeconds <= 15) n.classList.add('danger'); else if (perQSeconds <= 30) n.classList.add('warning'); }
+
+    document.addEventListener('keydown', e => { const page = document.querySelector('#main-app .page.active'); if (!page || page.id !== 'page-question') return;
+      const key = e.key.toUpperCase();
+      if (['A','B','C'].includes(key) && !validated[currentQ]) {
+        const idx = ['A','B','C'].indexOf(key);
+        userAnswers[currentQ] = idx;
+        renderQuestion(); if (mode === 'exam') buildGrilleExamen();
+      }
+      if (e.key === 'Enter' && mode === 'train') { const btn = document.getElementById('btn-validate'); if (!btn.disabled) validateAnswer(); }
+      if (e.key === 'ArrowRight') nextQuestion();
+      if (e.key === 'ArrowLeft') prevQuestion();
+    });
+  </script>
+</body>
+</html>
